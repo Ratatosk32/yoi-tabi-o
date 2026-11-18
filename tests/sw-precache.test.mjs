@@ -7,6 +7,9 @@ import { fileURLToPath } from 'node:url';
 const APP = fileURLToPath(new URL('../app/', import.meta.url));
 const sw = readFileSync(join(APP, 'sw.js'), 'utf8');
 const precache = [...sw.matchAll(/^\s+'([^']+)',$/gm)].map((m) => m[1]).filter((p) => p !== './');
+// Pages serves /index.html as / and /diag.html as /diag (308 redirects): the SW caches the final URLs.
+const ALIAS = { diag: 'diag.html' };
+const precacheFiles = [...precache.map((p) => ALIAS[p] || p), 'index.html'];
 
 function walk(dir) {
   return readdirSync(dir).flatMap((f) => {
@@ -17,13 +20,17 @@ function walk(dir) {
 
 test('SW: каждый файл из PRECACHE существует', () => {
   assert.ok(precache.length >= 30, 'файлов в прекеше: ' + precache.length);
-  for (const p of precache) assert.ok(existsSync(join(APP, p)), 'нет файла ' + p);
+  for (const p of precacheFiles) assert.ok(existsSync(join(APP, p)), 'нет файла ' + p);
 });
 
 test('SW: все ресурсы приложения есть в PRECACHE (офлайн ничего не потеряет)', () => {
   const need = walk(APP).filter((p) => /\.(html|js|css|json|woff2|png|svg|webmanifest)$/.test(p) && p !== 'sw.js');
-  const missing = need.filter((p) => !precache.includes(p));
+  const missing = need.filter((p) => !precacheFiles.includes(p));
   assert.deepEqual(missing, []);
+});
+
+test('SW: no precached URL that Cloudflare Pages redirects', () => {
+  assert.ok(!precache.some((p) => p.endsWith('.html')), 'precache must use / and /diag, not *.html');
 });
 
 test('index.html подключает стили дизайна и не ссылается на удалённый styles.css', () => {

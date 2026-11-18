@@ -1,12 +1,11 @@
 // Service Worker (same-origin, отдельный файл — Blob-SW запрещены, PLAN.md 2d).
 // При каждом изменении файлов приложения увеличивайте VERSION — браузер увидит новый sw.js
 // и предложит пользователю «Обновить» (без тихих перезагрузок).
-const VERSION = 'v4';
+const VERSION = 'v5';
 const CACHE = `jt-${VERSION}`;
 
 const PRECACHE = [
   './',
-  'index.html',
   'fonts/fonts.css',
   'fonts/shippori-mincho-500.kana.woff2',
   'fonts/shippori-mincho-500.kanji.woff2',
@@ -15,7 +14,7 @@ const PRECACHE = [
   'components.css',
   'app.js',
   'manifest.webmanifest',
-  'diag.html',
+  'diag',
   'modules/launchers.js',
   'modules/numbers.js',
   'modules/srs.js',
@@ -45,6 +44,8 @@ self.addEventListener('install', (event) => {
     const cache = await caches.open(CACHE);
     // cache: 'reload' — мимо HTTP-кеша, чтобы не закешировать старую версию файла
     await cache.addAll(PRECACHE.map((u) => new Request(u, { cache: 'reload' })));
+    // v5 replaces a broken v4 (redirected navigation responses): take over at once so the app can load at all.
+    await self.skipWaiting();
   })());
 });
 
@@ -70,8 +71,13 @@ self.addEventListener('fetch', (event) => {
   if (req.mode === 'navigate') {
     event.respondWith((async () => {
       const cache = await caches.open(CACHE);
-      const path = url.pathname.endsWith('/diag.html') ? 'diag.html' : 'index.html';
-      return (await cache.match(path)) || fetch(req);
+      // Cloudflare Pages redirects /index.html -> / and /diag.html -> /diag: cache the final URLs only,
+      // and never hand a redirected response to a navigation (Chrome rejects it).
+      const path = /\/diag(\.html)?$/.test(url.pathname) ? 'diag' : './';
+      let res = await cache.match(path);
+      if (res && res.redirected) res = new Response(await res.blob(), { headers: res.headers, status: 200 });
+      if (res) return res;
+      try { return await fetch(req); } catch (e) { return Response.error(); }
     })());
     return;
   }
