@@ -38,6 +38,9 @@ function append(el, children) {
   }
 }
 
+/** el.append() that skips null/false and flattens arrays (the native append prints the word "null"). */
+export function add(el, ...children) { append(el, children); return el; }
+
 export function clear(el) { while (el.firstChild) el.firstChild.remove(); return el; }
 
 /** Japanese text with furigana (<ruby>), always lang="ja". */
@@ -75,7 +78,7 @@ export function speakItem(item, rate = 1.0, text) {
   const t = text || ttsText(item);
   return tts.speak(t, rate).then((r) => {
     if (r === 'unsupported') toast('Speech is not available in this browser');
-    else if (r.startsWith('error') && !r.includes('interrupted') && !r.includes('canceled')) toast('Could not speak: ' + r.slice(6) + '. Check the Japanese voice in Tools.');
+    else if (r.startsWith('error') && !/interrupted|canceled|not-allowed/.test(r)) toast('Could not speak: ' + r.slice(6) + '. Check the Japanese voice in Tools.');
     return r;
   });
 }
@@ -166,13 +169,65 @@ export function closeFullscreen(fromPop = false) {
 }
 
 // Android "Back" closes the card instead of leaving the page
-window.addEventListener('popstate', () => { if (document.getElementById('fs')) closeFullscreen(true); });
+window.addEventListener('popstate', () => {
+  if (document.getElementById('sheet')) closeSheet(true);
+  else if (document.getElementById('fs')) closeFullscreen(true);
+});
 document.addEventListener('visibilitychange', () => {
   if (document.visibilityState === 'visible' && document.getElementById('fs')) lockScreen();
 });
 
 export function chip(label, active, onClick, extra = {}) {
   return h('button.chip' + (active ? '.on' : ''), { type: 'button', 'aria-pressed': active ? 'true' : 'false', on: { click: onClick }, ...extra }, label);
+}
+
+// ---------- Bottom sheet: pick one option from a grid (categories, groups). Nothing scrolls sideways. ----------
+let sheetKey = null;
+
+/** options: [{ id, label, icon?, count? }]. attr: data attribute put on each option (for tests and deep styling). */
+export function openSheet({ title, options, current, onPick, attr = 'data-opt' }) {
+  closeSheet();
+  const opener = document.activeElement;
+  const tiles = options.map((o) => h('button.opt-tile' + (o.id === current ? '.on' : ''), {
+    type: 'button', [attr]: o.id, 'aria-pressed': o.id === current ? 'true' : 'false',
+    on: { click: () => { closeSheet(); onPick(o.id); } },
+  },
+  o.icon ? h('span.ci', { lang: 'ja', 'aria-hidden': 'true' }, o.icon) : null,
+  h('span.opt-label', o.label),
+  o.count != null ? h('span.opt-count', String(o.count)) : null));
+  const wrap = h('div#sheet.sheet-wrap', { on: { click: (e) => { if (e.target === wrap) closeSheet(); } } },
+    h('div.sheet', { role: 'dialog', 'aria-modal': 'true', 'aria-label': title },
+      h('div.sheet-head', h('h2', title),
+        h('button.btn.icon.sheet-close', { type: 'button', 'aria-label': 'Close', on: { click: () => closeSheet() } }, ico('close'))),
+      h('div.sheet-grid', tiles)));
+  wrap.opener = opener;
+  document.body.append(wrap);
+  document.body.classList.add('noscroll');
+  sheetKey = (e) => { if (e.key === 'Escape') closeSheet(); };
+  document.addEventListener('keydown', sheetKey);
+  history.pushState({ sheet: true }, '');
+  (wrap.querySelector('.opt-tile.on') || tiles[0])?.focus({ preventScroll: true });
+  return wrap;
+}
+
+export function closeSheet(fromPop = false) {
+  const wrap = document.getElementById('sheet');
+  if (!wrap) return;
+  if (sheetKey) document.removeEventListener('keydown', sheetKey);
+  sheetKey = null;
+  wrap.remove();
+  if (!document.getElementById('fs')) document.body.classList.remove('noscroll');
+  if (wrap.opener?.isConnected) wrap.opener.focus({ preventScroll: true });
+  if (!fromPop && history.state && history.state.sheet) history.back();
+}
+
+/** The button that opens a picker sheet: icon, current value, count, chevron. */
+export function pickerButton({ id, icon, label, count, onClick, title }) {
+  return h('button.btn.picker', { type: 'button', id, 'aria-haspopup': 'dialog', 'aria-label': `${title}: ${label}. Change`, on: { click: onClick } },
+    icon ? h('span.ci', { lang: 'ja', 'aria-hidden': 'true' }, icon) : null,
+    h('span.picker-label', label),
+    count != null ? h('span.picker-count', String(count)) : null,
+    ico('chevron'));
 }
 
 export function shuffle(arr, rnd = Math.random) {

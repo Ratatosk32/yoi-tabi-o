@@ -121,7 +121,9 @@ async function main() {
     }
     check(`${vp.name}: the reply shows "Reply to: 袋はご利用ですか"`, await evaluate(`/袋はご利用ですか/.test(document.querySelector('[data-id="konbini.bag-none"] .reply-to')?.textContent || '')`));
     await shot(`${vp.name}-2-search`);
-    await click('[data-cat="hear"]');
+    await click('#cat-picker'); // categories live in a bottom sheet (no sideways-scrolling chip row)
+    await waitFor(`!!document.querySelector('#sheet [data-cat="hear"]')`, 3000);
+    await click('#sheet [data-cat="hear"]');
     check(`${vp.name}: staff phrases show "How to reply"`, await waitFor(`document.querySelectorAll('.phrase.hear .replies .reply').length >= 20`, 3000));
     await shot(`${vp.name}-2b-hear-replies`);
     // Speech without voices must not throw

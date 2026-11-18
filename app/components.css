@@ -293,18 +293,7 @@ h3 { font: 600 var(--fs-label)/var(--lh-ui) var(--font-ui); color: var(--ink-2);
 }
 
 /* ---------- 5. Chips (categories, sub-navigation) ---------- */
-.chips {
-  display: flex; gap: var(--sp-2);
-  overflow-x: auto;
-  margin: 0 calc(-1 * var(--gutter));
-  padding: var(--sp-1) var(--gutter) var(--sp-3);
-  scroll-padding-inline: var(--gutter);
-  scrollbar-width: none;
-  -webkit-overflow-scrolling: touch;
-  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 16px, #000 calc(100% - 28px), transparent 100%);
-  mask-image: linear-gradient(to right, transparent 0, #000 16px, #000 calc(100% - 28px), transparent 100%);
-}
-.chips::-webkit-scrollbar { display: none; }
+/* .chips: see section 17.2 (rows wrap; nothing scrolls sideways) */
 .chip {
   position: relative; flex: 0 0 auto;
   display: inline-flex; align-items: center; gap: .4em;
@@ -432,12 +421,8 @@ label:has(> input[type=radio]) { display: inline-flex; align-items: center; min-
 .small [lang="ja"], .hint [lang="ja"], .prompt [lang="ja"], .note [lang="ja"] { font-family: var(--font-ja-ui); font-weight: 400; color: var(--ink-2); }
 /* [NEW] a reading in kana under a big Japanese line */
 .kana-line { font-family: var(--font-ja-ui); font-weight: 400; font-size: var(--fs-label); letter-spacing: .04em; color: var(--ink-3); }
-.phrase .actions { margin-top: var(--sp-4); }
-.phrase .actions > .speak + .btn { margin-left: auto; }   /* show + favourite sit under the right thumb */
 
 /* [NEW] optional states. Without them every phrase shows everything (today's markup). */
-.phrase.is-collapsed { cursor: pointer; }
-.phrase.is-collapsed .note, .phrase.is-collapsed .actions { display: none; }
 .phrase.is-collapsed .en { color: var(--ink-2); }
 .phrase.open {
   margin: var(--sp-3) calc(-1 * var(--sp-3));
@@ -872,3 +857,208 @@ details.more summary { display: flex; align-items: center; min-height: var(--tap
   .tabbar, #toast, .banner { display: none; }
   body { background: #fff; }
 }
+
+/* ============================================================================
+ * 17. UX pass (see design/UX-AUDIT.md)
+ * Rules of this pass: every action is one tap away; nothing scrolls sideways;
+ * a failed load says so and offers Retry; an empty list never looks like a spinner.
+ * ============================================================================ */
+
+/* ---------- 17.1 Phrase row: text on the left, four always-visible actions on the right ----------
+ * A 2x2 cluster of 44px targets keeps a row about 120px tall, so 5 phrases fit on a
+ * 412x915 screen. Only "play" is inked; slow / show / favorite stay quiet.        */
+.phrase { padding: var(--sp-3) 0; }
+.phrase-head {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: var(--sp-3); align-items: start;
+}
+.phrase-text { min-width: 0; padding: 2px 0; border-radius: var(--r-sheet); cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.phrase-text:focus-visible { outline-offset: 4px; }
+.phrase .en { margin-top: var(--sp-1); line-height: 1.4; }
+.phrase .phrase-head .actions {
+  display: grid; grid-template-columns: 44px 44px; gap: 4px;
+  margin: 2px 0 0;
+}
+.phrase .actions .speak { display: contents; }
+.phrase .actions .btn.icon { width: 44px; height: 44px; min-width: 44px; min-height: 44px; }
+.phrase .actions > .speak + .btn { margin-left: 0; }
+.phrase .actions .btn.icon.slow,
+.phrase .actions > .btn.icon:not(.fav) { background: transparent; border-color: var(--line-strong); color: var(--ink-2); }
+.phrase .actions .btn.icon.slow { font-size: var(--fs-micro); }
+.phrase .actions .btn.icon:active { background: var(--fill); }
+.phrase .actions .speak > .btn.icon:first-child:active { background: var(--ink-2); }
+
+/* what a tap on the text will reveal */
+.more-hint {
+  display: inline-flex; align-items: center; gap: 1px;
+  margin-left: var(--sp-2); white-space: nowrap; vertical-align: 1px;
+  font: 500 var(--fs-micro)/1.3 var(--font-ui); letter-spacing: .02em;
+  color: var(--ink-3);
+}
+.more-hint .ico { width: 1.1em; height: 1.1em; transform: rotate(90deg); transition: transform var(--dur-2) var(--ease); }
+.phrase.open .more-hint .ico { transform: rotate(-90deg); }
+.phrase.is-collapsed .phrase-more { display: none; }
+.phrase.is-collapsed .en { color: var(--ink-2); }
+.phrase-more { margin-top: var(--sp-3); animation: reveal var(--dur-2) var(--ease); }
+.phrase-more > :first-child { margin-top: 0; }
+.phrase.open { padding: var(--sp-4) var(--sp-3) var(--sp-3); }
+.phrase.hear, .phrase.hear.open { padding-left: var(--sp-4); }
+
+/* "Reply to": one tappable chip per staff phrase */
+.reply-to { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-2); margin-top: var(--sp-3); }
+.reply-to-label { font: 600 var(--fs-micro)/var(--lh-ui) var(--font-ui); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
+.linklike {
+  min-height: 44px; padding: 0 12px; gap: 6px;
+  border: 1px solid var(--line-strong); border-radius: var(--r-sheet);
+  color: var(--ink); text-decoration: none; text-align: left;
+}
+.linklike .ico { width: 1em; height: 1em; color: var(--ai); }
+.linklike:active { background: var(--fill); }
+
+/* ---------- 17.2 No sideways scrolling: chip rows wrap ---------- */
+.chips {
+  display: flex; flex-wrap: wrap; gap: var(--sp-2);
+  margin: 0; padding: var(--sp-1) 0 var(--sp-3);
+  overflow: visible;
+  -webkit-mask-image: none; mask-image: none;
+}
+.chip { max-width: 100%; white-space: normal; text-align: left; line-height: 1.2; }
+.chips-label { margin: var(--sp-2) 0 0; font-size: var(--fs-small); color: var(--ink-2); }
+
+/* five (or fewer) equal segments that always fit: Study sub-tabs */
+.chips.seg { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 0; padding-bottom: var(--sp-4); }
+.seg .chip {
+  justify-content: center; min-height: 44px; padding: 0 2px;
+  border-radius: 0; margin-left: -1px;
+  font-size: var(--fs-small); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.seg .chip:first-child { margin-left: 0; border-radius: var(--r-sheet) 0 0 var(--r-sheet); }
+.seg .chip:last-child { border-radius: 0 var(--r-sheet) var(--r-sheet) 0; }
+.seg .chip.on { z-index: 1; }
+
+/* one row under the search field: [ category picker ............ ] [ favorites ] */
+.chips.toolbar { flex-wrap: nowrap; align-items: stretch; padding: 0 0 var(--sp-2); }
+.btn.picker {
+  flex: 1 1 auto; min-width: 0; justify-content: flex-start; gap: var(--sp-2);
+  padding: 0 var(--sp-3); font-size: var(--fs-body); font-weight: 500;
+}
+.picker .ci { font-family: var(--font-ja-display); font-size: 1.15em; color: var(--ink-3); }
+.picker-label { flex: 0 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.picker-count, .opt-count { flex: none; font-size: var(--fs-small); font-weight: 400; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.picker > .ico { margin-left: auto; width: 1.1em; height: 1.1em; transform: rotate(90deg); color: var(--ink-3); }
+.toolbar.is-off .picker { color: var(--ink-3); }
+.btn.fav-filter { flex: none; gap: 6px; padding: 0 var(--sp-3); color: var(--ink-2); }
+.btn.fav-filter .ico { color: var(--ink-3); }
+.btn.fav-filter.on { background: var(--ink); border-color: var(--ink); color: var(--on-ink); }
+.btn.fav-filter.on .ico { color: var(--shu); }
+
+/* bottom sheet with a grid of options */
+.sheet-wrap {
+  position: fixed; inset: 0; z-index: var(--z-show);
+  display: flex; align-items: flex-end; justify-content: center;
+  background: rgba(20, 16, 10, .42);
+  animation: fs-in var(--dur-2) var(--ease);
+}
+.sheet {
+  width: 100%; max-width: 560px; max-height: 86dvh; overflow-y: auto; overscroll-behavior: contain;
+  padding: var(--sp-3) calc(var(--gutter) + var(--safe-r)) calc(var(--sp-5) + var(--safe-b)) calc(var(--gutter) + var(--safe-l));
+  background: var(--surface);
+  border-top: 1px solid var(--line-strong); border-radius: 12px 12px 0 0;
+  box-shadow: var(--shadow-float);
+  animation: sheet-up var(--dur-2) var(--ease);
+}
+@keyframes sheet-up { from { transform: translateY(24px); opacity: 0; } }
+.sheet-head { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-3); margin-bottom: var(--sp-2); }
+.sheet-head h2 { margin: 0; font-size: var(--fs-h2); }
+.sheet-close { border-color: transparent; background: transparent; color: var(--ink-2); }
+.sheet-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sp-2); }
+.opt-tile {
+  display: flex; align-items: center; gap: var(--sp-2);
+  min-height: 56px; padding: var(--sp-2) var(--sp-3);
+  border: 1px solid var(--line-strong); border-radius: var(--r-sheet);
+  background: transparent; color: var(--ink);
+  font: 500 var(--fs-label)/1.25 var(--font-ui); text-align: left; cursor: pointer;
+}
+.opt-tile .ci { flex: none; width: 1.4em; text-align: center; font-family: var(--font-ja-display); font-size: 1.25rem; color: var(--ink-3); }
+.opt-label { flex: 1 1 auto; min-width: 0; }
+.opt-tile:active { background: var(--fill); }
+.opt-tile.on { background: var(--ink); border-color: var(--ink); color: var(--on-ink); }
+.opt-tile.on .ci, .opt-tile.on .opt-count { color: inherit; }
+
+/* ---------- 17.3 Empty, loading and error states ---------- */
+.empty::before { content: none; }                 /* the ring belongs to "loading" only */
+.empty { padding: var(--sp-6) var(--sp-4); }
+.empty p { margin: 0 0 var(--sp-2); }
+.empty p:first-child { font-size: var(--fs-lead); color: var(--ink-2); }
+.empty .btn { margin-top: var(--sp-3); }
+.empty.span, .kgrid .empty { grid-column: 1 / -1; }
+.card.error p { margin: 0 0 var(--sp-2); }
+.card.error .actions { margin-top: var(--sp-3); }
+.bad { color: var(--enji); }
+.feedback .bad::before { content: "× "; }
+.feedback .ok, .feedback .bad { font-weight: 600; }
+.card-head .ok { font-size: var(--fs-micro); font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+
+/* ---------- 17.4 Small consistency fixes ---------- */
+.actions.center { justify-content: center; }
+details.more { margin: 0; border-bottom: 1px solid var(--line); }
+details.more:last-child { border-bottom: 0; }
+details.more summary { list-style: none; gap: var(--sp-2); color: var(--ink); }
+details.more summary::-webkit-details-marker { display: none; }
+details.more summary::before {
+  content: ""; flex: none; width: 18px; height: 18px; background: var(--ink-3);
+  --i: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 5l7 7-7 7'/%3E%3C/svg%3E");
+  -webkit-mask: var(--i) center / contain no-repeat; mask: var(--i) center / contain no-repeat;
+  transition: transform var(--dur-2) var(--ease);
+}
+details.more[open] summary::before { transform: rotate(90deg); }
+details.more[open] { padding-bottom: var(--sp-3); }
+
+/* a select must look like one: chevron on the right */
+select {
+  padding-right: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23807a6c' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 12px center; background-size: 18px;
+}
+.field-label { margin: var(--sp-3) 0 0; font-size: var(--fs-small); color: var(--ink-2); }
+.field-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sp-3); }
+.field-row .field { margin: var(--sp-2) 0; }
+#user-reading { margin: calc(-1 * var(--sp-1)) 0 var(--sp-2); }
+.userlist { margin-top: var(--sp-4); }
+.userrow { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-3); padding: var(--sp-3) 0; border-top: 1px solid var(--line); }
+.userrow-text { min-width: 0; }
+.userrow-text [lang="ja"] { font-size: var(--fs-ja-sm); }
+
+/* emergency numbers: number, who answers, a phone mark; the long number stacks */
+.tel { align-items: center; gap: var(--sp-3); }
+.tel b { min-width: 4.4rem; }
+.tel span:not(.ico) { flex: 1 1 auto; min-width: 0; }
+.tel .ico { flex: none; color: var(--ink-3); }
+.tel.stack { display: grid; grid-template-columns: minmax(0, 1fr) auto; row-gap: 2px; }
+.tel.stack b { grid-column: 1; }
+.tel.stack span:not(.ico) { grid-column: 1; }
+.tel.stack .ico { grid-column: 2; grid-row: 1 / span 2; align-self: center; }
+
+/* trainers */
+.answer { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--sp-2) var(--sp-4); margin: var(--sp-2) 0; }
+.answer .price-big { margin: 0; font-size: 2rem; }
+.answer-ja { font-size: var(--fs-ja-lg); }
+.feedback .kana-line, .feedback .romaji { margin-top: 2px; }
+.feedback .actions { margin-top: var(--sp-4); }
+.score { margin: var(--sp-3) 0; font-family: var(--font-read); font-size: var(--fs-lead); }
+.score strong { font-size: 2.5rem; font-weight: 600; }
+#kana-quiz > h2.section:first-child, #num-card > h2.section:first-child, .card > h2.section:first-child { margin-top: 0; }
+.sess-head { flex-wrap: wrap; align-items: center; }
+
+/* Show: personal cards in the one-tap list */
+.showcard.mine .badge { color: var(--shu-text); }
+.showcard .badge { display: block; }
+.todo-card {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px var(--sp-3); align-items: center;
+  width: 100%; min-height: var(--tap-lg); text-align: left; cursor: pointer; color: var(--ink);
+  font: inherit; border-style: dashed; border-color: var(--line-strong); background: transparent; box-shadow: none;
+}
+.todo-card .warn { font-size: var(--fs-micro); font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.todo-card .small { grid-column: 1 / -1; margin: 0; }
+.todo-card:active { background: var(--fill); }
+section.block, .card.edit { scroll-margin-top: var(--sp-3); }
