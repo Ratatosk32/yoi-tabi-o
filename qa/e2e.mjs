@@ -140,7 +140,7 @@ async function runProfile(browser, P) {
   const goneFromFav = await page.evaluate((id) => !document.querySelector(`#phrase-list article[data-id="${id}"]`), bagId);
   rec(P.id, 'un-favourite removes it from Favorites immediately', goneFromFav, '');
   const bagCat = await page.evaluate((id) => window.__app.data.byId[id].cat, bagId);
-  await page.click(`.chips button[data-cat="${bagCat}"]`); await sleep(200);
+  await page.click('#cat-picker'); await page.waitForSelector(`#sheet [data-cat="${bagCat}"]`); await page.click(`#sheet [data-cat="${bagCat}"]`); await sleep(200); // categories live in a bottom sheet
   await expand(page, bagId); await page.click(`#phrase-list article[data-id="${bagId}"] .fav`); await sleep(150); // keep it favourited for backup test
 
   // ---------- 4. Show card full screen ----------
@@ -168,26 +168,26 @@ async function runProfile(browser, P) {
   for (let i = 0; i < nCards; i++) {
     await page.evaluate((i) => document.querySelectorAll('button.showcard')[i].click(), i); await sleep(150);
     fit.push(await page.evaluate(() => { const b = document.querySelector('#fs .fs-body'); const r = { id: '', over: b.scrollHeight > b.clientHeight + 1, sh: b.scrollHeight, ch: b.clientHeight }; return r; }));
-    await page.evaluate(() => document.querySelector('#fs .btn.primary').click()); await sleep(100);
+    await page.evaluate(() => document.querySelector('#fs .btn.primary').click()); await sleep(450); // closing pops history asynchronously
   }
   rec(P.id, 'all ready cards fit on screen without scrolling', fit.every((f) => !f.over), JSON.stringify(fit));
   // allergy card
   await page.evaluate(() => { [...document.querySelectorAll('#card-allergy input[type=checkbox]')].slice(0, 3).forEach((c) => c.click()); });
   await sleep(300);
-  await page.evaluate(() => [...document.querySelectorAll('#card-allergy button')].find((b) => b.textContent === 'Show').click()); await sleep(300);
+  await page.evaluate(() => [...document.querySelectorAll('#card-allergy button')].find((b) => b.classList.contains('primary') && /^Show/.test(b.textContent)).click()); await sleep(300);
   const al = await page.evaluate(() => { const o = document.getElementById('fs'); const b = o?.querySelector('.fs-body'); return o ? { text: b.textContent, over: b.scrollHeight > b.clientHeight + 1, sh: b.scrollHeight, ch: b.clientHeight } : null; });
   const s3 = await shot(page, P, 'show-allergy-3');
   rec(P.id, 'allergy card (3 allergens, strict) shows and fits', !!al && /卵/.test(al.text) && !al.over, JSON.stringify(al) + ' shot=' + s3);
-  await page.evaluate(() => document.querySelector('#fs .btn.primary')?.click()); await sleep(150);
+  await page.evaluate(() => document.querySelector('#fs .btn.primary')?.click()); await sleep(450);
   // all 12 allergens (each click redraws the card → re-query every time)
   for (let k = 0; k < 20; k++) {
     const more = await page.evaluate(() => { const c = [...document.querySelectorAll('#card-allergy .checks input[type=checkbox]')].find((x) => !x.checked); if (!c) return false; c.click(); return true; });
     if (!more) break; await sleep(60);
   }
-  await page.evaluate(() => [...document.querySelectorAll('#card-allergy button')].find((b) => b.textContent === 'Show').click()); await sleep(300);
+  await page.evaluate(() => [...document.querySelectorAll('#card-allergy button')].find((b) => b.classList.contains('primary') && /^Show/.test(b.textContent)).click()); await sleep(300);
   const al12 = await page.evaluate(() => { const o = document.getElementById('fs'); const b = o?.querySelector('.fs-body'); return o ? { chars: b.textContent.length, over: b.scrollHeight > b.clientHeight + 1, sh: b.scrollHeight, ch: b.clientHeight, checked: document.querySelectorAll('#card-allergy .checks input:checked').length } : null; });
   rec(P.id, 'allergy card with ALL allergens fits without scroll', !!al12 && !al12.over, JSON.stringify(al12) + ' shot=' + await shot(page, P, 'show-allergy-all'));
-  await page.evaluate(() => document.querySelector('#fs .btn.primary')?.click()); await sleep(150);
+  await page.evaluate(() => document.querySelector('#fs .btn.primary')?.click()); await sleep(450);
 
   // ---------- 5. kana quiz ----------
   await gotoHash(page, '#/study/kana');
@@ -200,13 +200,13 @@ async function runProfile(browser, P) {
     const clicked = await page.evaluate((ans) => { const b = [...document.querySelectorAll('#kana-quiz .opt')].find((x) => x.textContent === ans); if (!b) return false; b.click(); return true; }, ans);
     await sleep(100);
     const fb = await page.evaluate(() => document.querySelector('#kana-quiz .feedback p')?.textContent);
-    if (clicked && fb === 'Correct!') score++;
+    if (clicked && /^Correct/.test(fb || '')) score++;
     if (i === 0) await shot(page, P, 'kana-quiz-answered');
     await page.evaluate(() => document.querySelector('#kana-quiz .feedback .btn.primary').click()); await sleep(100);
   }
-  const res = await page.evaluate(() => document.querySelector('#kana-quiz h2')?.textContent);
+  const res = await page.evaluate(() => document.querySelector('#kana-quiz .score')?.textContent || document.querySelector('#kana-quiz h2')?.textContent);
   const qs = await page.evaluate(() => localStorage.getItem('jt.quizStats'));
-  rec(P.id, 'kana quiz: 10 correct answers → 10/10, stored', score === 10 && /10\/10/.test(res) && /"hira":10/.test(qs), `${res}; quizStats=${qs}; unknown=${missing.join(',')}; shot=${await shot(page, P, 'kana-quiz-result')}`);
+  rec(P.id, 'kana quiz: 10 correct answers → 10/10, stored', score === 10 && /10 of 10/.test(res) && /"hira":10/.test(qs), `${res}; quizStats=${qs}; unknown=${missing.join(',')}; shot=${await shot(page, P, 'kana-quiz-result')}`);
   // wrong answer path + double click guard
   await clickText(page, '#kana-quiz button', 'Again');
   const wrong = await page.evaluate(() => { const q = document.querySelector('#kana-quiz .kana-big').textContent; const opts = [...document.querySelectorAll('#kana-quiz .opt')]; return { q, opts: opts.map((o) => o.textContent) }; });
@@ -223,10 +223,14 @@ async function runProfile(browser, P) {
   rec(P.id, 'kana quiz "Katakana words" accepts correct meaning', okW && /^Correct/.test(fbW || ''), `${wq} → ${KMAP.get(wq)}: ${fbW}`);
 
   // ---------- 6. price trainer ----------
-  await gotoHash(page, '#/study/numbers');
+  await sleep(400); // let any pending history.back() from closed cards settle first
+  // A late back-navigation left over from the Show / Android Back steps can land on #/show: retry until the price screen stays
+  // Buttons near the bottom edge are clicked via element.click(): a coordinate click there can land on the fixed tab bar.
+  await gotoHash(page, '#/study/numbers'); await page.waitForSelector('#num-play', { timeout: 8000 });
   const priceRes = [];
   for (const [i, fmt] of [[0, (n) => String(n)], [1, (n) => n.toLocaleString('en-US')], [2, (n) => n.toLocaleString('ru-RU')], [3, (n) => String(n).replace(/\d/g, (d) => String.fromCharCode(0xff10 + +d))]]) {
     await page.evaluate(() => { window.__spoken.length = 0; });
+    await page.waitForSelector('#num-play', { timeout: 8000 });
     await page.click('#num-play'); await sleep(150);
     const spoken = await page.evaluate(() => window.__spoken.at(-1)?.text);
     let n = spoken ? Number(spoken.replace('円', '')) : NaN;
@@ -234,11 +238,11 @@ async function runProfile(browser, P) {
       n = NaN;
     }
     if (Number.isNaN(n)) { priceRes.push({ i, spoken, note: 'no TTS → cannot hear price' }); break; }
-    await page.type('#num-answer', fmt(n)); await page.click('#num-check'); await sleep(150);
+    await page.type('#num-answer', fmt(n)); await page.$eval('#num-check', (b) => b.click()); await sleep(150);
     const fb = await page.evaluate(() => document.getElementById('num-feedback').textContent);
-    priceRes.push({ typed: fmt(n), spoken, ok: /^Correct!/.test(fb), fb: fb.slice(0, 80) });
+    priceRes.push({ typed: fmt(n), spoken, ok: /^Correct/.test(fb), fb: fb.slice(0, 80) });
     if (i === 0) await shot(page, P, 'price-correct');
-    await page.click('#num-next'); await sleep(150);
+    await page.$eval('#num-next', (b) => b.click()); await sleep(150);
   }
   const ttsLess = P.tts === 'none';
   rec(P.id, 'price trainer (audio mode) accepts the correct number in 4 formats', ttsLess ? true : priceRes.length === 4 && priceRes.every((r) => r.ok), (ttsLess ? '[no speechSynthesis: audio mode untestable, see mixed mode] ' : '') + JSON.stringify(priceRes));
@@ -252,7 +256,7 @@ async function runProfile(browser, P) {
     const n = m ? (+m[1] || 0) * 10000 + (m[2] ? +m[2] * 1000 : m[3] ? +m[3].replace(/,/g, '') : 0) : NaN;
     await page.type('#num-answer', String(n)); await page.keyboard.press('Enter'); await sleep(150);
     const fb = await page.evaluate(() => document.getElementById('num-feedback').textContent);
-    rec(P.id, `price trainer (mixed, ${range}) «${txt}» → ${n} accepted, kana shown`, /^Correct!/.test(fb), fb.slice(0, 160) + ' shot=' + await shot(page, P, 'price-mixed-' + (range === 'Cameras' ? 'gear' : 'konbini')));
+    rec(P.id, `price trainer (mixed, ${range}) «${txt}» → ${n} accepted, kana shown`, /^Correct/.test(fb), fb.slice(0, 160) + ' shot=' + await shot(page, P, 'price-mixed-' + (range === 'Cameras' ? 'gear' : 'konbini')));
     // double check (Enter again) should not count twice
     await page.keyboard.press('Enter'); await sleep(100);
     await page.evaluate(() => document.querySelector('#num-next')?.click()); await sleep(100); // 2nd Enter already moves to the next task (B5 fix)
@@ -268,7 +272,7 @@ async function runProfile(browser, P) {
   // wrong answer
   await page.type('#num-answer', '1'); await page.click('#num-card .btn.primary'); await sleep(100);
   const fbw = await page.evaluate(() => document.getElementById('num-feedback').textContent);
-  rec(P.id, 'price trainer rejects a wrong number', /^Wrong/.test(fbw), fbw.slice(0, 100));
+  rec(P.id, 'price trainer rejects a wrong number', /^Not quite/.test(fbw), fbw.slice(0, 100));
 
   // ---------- 7. time trainer ----------
   await gotoHash(page, '#/study/time');
@@ -284,8 +288,9 @@ async function runProfile(browser, P) {
   }
 
   // ---------- 8. SRS lesson ----------
-  await gotoHash(page, '#/study/today');
-  await page.click('#start-review'); await sleep(200);
+  // Lessons replaced the old week-tag Today: review the first lesson's items (main mode, shuffled)
+  await gotoHash(page, '#/study/lesson/U01-L01');
+  await page.waitForSelector('#lesson-review'); await page.click('#lesson-review'); await sleep(200);
   const seq = [];
   for (let i = 0; i < 4; i++) {
     const c = await page.evaluate(() => { const f = document.querySelector('.card.flash'); return f ? `${f.dataset.id}|${f.dataset.mode}` : null; });
@@ -303,7 +308,7 @@ async function runProfile(browser, P) {
   // ---------- 9. TTS without voices / without API ----------
   page.__console.length = 0;
   await gotoHash(page, '#/phrases');
-  await page.click(`.chips button[data-cat="konbini"]`); await sleep(150);
+  await page.click('#cat-picker'); await page.waitForSelector('#sheet [data-cat="konbini"]'); await page.click('#sheet [data-cat="konbini"]'); await sleep(150);
   await page.evaluate(() => document.querySelector('#phrase-list article.is-collapsed .jp')?.click()); await sleep(150); // open the first phrase
   await page.click(`#phrase-list article .speak button`); await sleep(1800);
   const toastTxt = await page.evaluate(() => document.getElementById('toast')?.textContent || '');

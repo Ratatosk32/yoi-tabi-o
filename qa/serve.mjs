@@ -10,8 +10,15 @@ export function createServer(rootIn, port) {
   const root = path.resolve(rootIn);
   const log = [];
   const server = http.createServer((req, res) => {
-    let p = decodeURIComponent(new URL(req.url, 'http://x').pathname);
+    const u = new URL(req.url, 'http://x');
+    let p = decodeURIComponent(u.pathname);
+    // Like Cloudflare Pages: /x.html → 308 /x, /index.html → 308 /, /diag serves diag.html
+    if (p.endsWith('.html')) {
+      res.writeHead(308, { Location: (p.endsWith('/index.html') ? p.slice(0, -10) : p.slice(0, -5)) + u.search });
+      return res.end();
+    }
     if (p.endsWith('/')) p += 'index.html';
+    else if (!path.extname(p)) p += '.html';
     const file = path.join(root, p);
     if (!file.startsWith(root)) { res.writeHead(403); return res.end(); }
     fs.readFile(file, (err, buf) => {
