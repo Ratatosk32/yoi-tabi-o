@@ -284,6 +284,48 @@ async function main() {
     await click('#kanji-search-all');
     check(`${vp.name}: Search all groups widens the search`, await waitFor("/^Found: \\d+$/.test(document.querySelector('.found-line h2').textContent)"));
     await shot(`${vp.name}-9-kanji`);
+    check(`${vp.name}: Words tab (no 6th tab) with Signs / Dictionary segments`, await evaluate(
+      "document.querySelectorAll('.tabbar button').length === 5 && /Words/.test(document.querySelector('.tabbar [data-tab=\"kanji\"], .tabbar button:nth-child(4)').textContent) && document.querySelectorAll('.subnav.seg [data-sub]').length === 2"));
+
+    // Dictionary: four ways to type "coffee" all find コーヒー first
+    await click('.subnav.seg [data-sub="dict"]');
+    check(`${vp.name}: dictionary pane with search box and status line`, await waitFor("!!document.querySelector('#dict-search') && !!document.querySelector('#dict-status')"));
+    check(`${vp.name}: dictionary fully loaded (22,667 words ready)`, await waitFor("document.querySelector('#dict-status').textContent === 'Dictionary: 22,667 words ready'", 20000),
+      await evaluate("document.querySelector('#dict-status')?.textContent"));
+    for (const q of ['coffee', 'kohii', 'コーヒー', '珈琲']) {
+      await evaluate(`(() => { const i = document.querySelector('#dict-search'); i.value = ${JSON.stringify(q)}; i.dispatchEvent(new Event('input')); })()`);
+      check(`${vp.name}: dictionary "${q}" → コーヒー first`, await waitFor(
+        `(() => { const r = document.querySelector('#dict-results .dict-entry'); return !!r && r.querySelector('.ja').textContent === 'コーヒー' && document.querySelector('#dict-search').value === ${JSON.stringify(q)}; })()`, 3000));
+    }
+    check(`${vp.name}: dictionary row: ja, romaji kōhī, gloss, part of speech, play / show / favorite`, await evaluate(
+      "(() => { const r = document.querySelector('#dict-results .dict-entry'); return /kōhī/.test(r.querySelector('.romaji').textContent) && /coffee/.test(r.querySelector('.en').textContent) && /noun/.test(r.querySelector('.dict-meta').textContent) && r.querySelectorAll('.actions button').length === 3; })()"));
+    await shot(`${vp.name}-9b-dictionary`);
+    check(`${vp.name}: no horizontal scroll (dictionary)`, await noHScroll());
+    await evaluate("document.querySelector('#dict-results .dict-entry .fav').click()");
+    check(`${vp.name}: ★ saves the word to favorites`, await waitFor("JSON.parse(localStorage.getItem('jt.dictFavs') || '[]').some((x) => x.ja === 'コーヒー')"));
+    await evaluate("document.querySelector('#dict-results .dict-entry .actions button[aria-label=\"Show full screen\"]').click()");
+    check(`${vp.name}: show full screen opens the word`, await waitFor("!!document.querySelector('#fs') && /コーヒー/.test(document.querySelector('#fs').textContent)"));
+    await evaluate("document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }))");
+    await waitFor("!document.querySelector('#fs')", 2000);
+    // Phrases search shows dictionary matches under the phrases; favorites list the starred word
+    await navigate(BASE + '#/phrases');
+    await waitFor("!!document.querySelector('#phrase-search')");
+    await evaluate("(() => { const i = document.querySelector('#phrase-search'); i.value = 'coffee'; i.dispatchEvent(new Event('input')); })()");
+    check(`${vp.name}: Phrases search: Dictionary matches below the phrases`, await waitFor(
+      "!!document.querySelector('#dict-matches') && document.querySelector('#dict-matches .dict-entry .ja').textContent === 'コーヒー' && !!document.querySelector('#dict-more')", 3000));
+    await evaluate("(() => { const i = document.querySelector('#phrase-search'); i.value = ''; i.dispatchEvent(new Event('input')); })()");
+    await waitFor("!document.querySelector('#dict-matches')", 2000);
+    await click('.fav-filter');
+    check(`${vp.name}: Favorites lists starred dictionary words`, await waitFor("!!document.querySelector('#dict-favs .dict-entry')"));
+    await click('.fav-filter');
+    // Credits (licence screen) from Tools and from the dictionary
+    await navigate(BASE + '#/tools');
+    await waitFor("!!document.querySelector('#open-credits')");
+    await click('#open-credits');
+    check(`${vp.name}: Credits: JMdict / EDRDG attribution with links, CC BY-SA 4.0, OFL fonts, WanaKana MIT`, await waitFor(
+      "(() => { const t = document.querySelector('#view').textContent; const hrefs = [...document.querySelectorAll('#view a')].map((a) => a.href); return /property of the Electronic Dictionary Research and Development Group/.test(t) && /dictDate 2026-11-16/.test(t) && hrefs.includes('https://www.edrdg.org/edrdg/licence.html') && hrefs.includes('https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project') && hrefs.includes('https://creativecommons.org/licenses/by-sa/4.0/') && /SIL Open Font License/.test(t) && /Shippori Mincho/.test(t) && /Lora/.test(t) && /WanaKana/.test(t) && /MIT License/.test(t); })()"));
+    check(`${vp.name}: no horizontal scroll (credits)`, await noHScroll());
+    await shot(`${vp.name}-10b-credits`);
 
     // Tools
     await navigate(BASE + '#/tools');
@@ -379,8 +421,11 @@ async function main() {
   await waitFor("document.documentElement.dataset.ready === '1'");
   check('SW active and controls the page', await waitFor('navigator.serviceWorker.ready.then(() => !!navigator.serviceWorker.controller)', 10000) ||
     (await navigate(BASE + '#/phrases'), await waitFor('!!navigator.serviceWorker.controller', 5000)));
-  const cacheInfo = await evaluate("caches.keys().then(async (k) => { const c = await caches.open(k[0]); return { keys: k, n: (await c.keys()).length }; })");
+  await waitFor("caches.open('dict-2026-11-16').then((c) => c.keys()).then((k) => k.length === 2)", 15000);
+  const cacheInfo = await evaluate("caches.keys().then(async (k) => { const c = await caches.open(k.find((x) => x.startsWith('jt-'))); const shell = (await c.keys()).map((r) => r.url); const d = k.find((x) => x.startsWith('dict-')); const dict = d ? (await (await caches.open(d)).keys()).map((r) => new URL(r.url).pathname) : []; return { keys: k, n: shell.length, dictInShell: shell.some((u) => /dict-(core|rest)/.test(u)), dict }; })");
   check('jt-* cache filled', cacheInfo.keys.some((k) => k.startsWith('jt-')) && cacheInfo.n >= 25, JSON.stringify(cacheInfo));
+  check('dictionary in its own cache dict-2026-11-16 (core + rest), not in the shell cache',
+    cacheInfo.keys.includes('dict-2026-11-16') && cacheInfo.dict.length === 2 && !cacheInfo.dictInShell, JSON.stringify(cacheInfo));
 
   await new Promise((r) => server.close(r));
   server = null;
@@ -396,6 +441,10 @@ async function main() {
     check(`offline ${vp.name}: reload — app and data`, await waitFor("document.documentElement.dataset.ready === '1' && document.querySelectorAll('.phrase').length > 5", 8000));
     await navigate(BASE + '#/kanji');
     check(`offline ${vp.name}: kanji`, await waitFor("document.querySelectorAll('.kcell').length >= 60"));
+    await navigate(BASE + '#/kanji/dict/kohii');
+    check(`offline ${vp.name}: dictionary loads from its cache (22,667 words) and finds コーヒー`, await waitFor(
+      "document.querySelector('#dict-status')?.textContent === 'Dictionary: 22,667 words ready' && document.querySelector('#dict-results .dict-entry .ja')?.textContent === 'コーヒー'", 20000),
+      await evaluate("document.querySelector('#dict-status')?.textContent"));
     await navigate(BASE + '#/study/kana');
     check(`offline ${vp.name}: kana`, await waitFor("document.querySelectorAll('.kana').length >= 71"));
     await shot(`offline-${vp.name}`);
