@@ -1,0 +1,344 @@
+[
+ {
+  "file": "tools/content/kanji.src.mjs",
+  "id": "k.don",
+  "field": "ruby",
+  "old": "丼[どん]",
+  "new": "丼[どんぶり]",
+  "severity": "error",
+  "why": "Отдельно стоящий 丼 читается どんぶり; どん — только в составе (牛丼 ぎゅうどん)."
+ },
+ {
+  "file": "tools/content/kanji.src.mjs",
+  "id": "k.don",
+  "field": "romaji",
+  "old": "don",
+  "new": "donburi",
+  "severity": "error",
+  "why": "Следует за исправлением чтения."
+ },
+ {
+  "file": "tools/content/kanji.src.mjs",
+  "id": "k.don",
+  "field": "note",
+  "old": null,
+  "new": "В названиях блюд — ～どん: 牛丼 gyūdon, 親子丼 oyakodon, 天丼 tendon, かつ丼 katsudon.",
+  "severity": "error",
+  "why": "Объяснить, где читается どん."
+ },
+ {
+  "file": "tools/content/phrases.src.mjs",
+  "id": "hear.food.karasa",
+  "field": "ruby",
+  "old": "辛[から]さはどうしますか",
+  "new": "辛[から]さはどうなさいますか",
+  "severity": "warn",
+  "why": "Персонал говорит в кэйго: どうなさいますか (или いかがなさいますか); どうしますか — речь клиента."
+ },
+ {
+  "file": "tools/content/phrases.src.mjs",
+  "id": "hear.food.karasa",
+  "field": "romaji",
+  "old": "karasa wa dō shimasu ka",
+  "new": "karasa wa dō nasaimasu ka",
+  "severity": "warn",
+  "why": "Следует за ruby."
+ },
+ {
+  "file": "tools/content/phrases.src.mjs",
+  "id": "hear.food.karasa",
+  "field": "tts",
+  "old": null,
+  "new": "からさはどうなさいますか",
+  "severity": "warn",
+  "why": "辛さ TTS может прочитать つらさ; kana-override снимает риск."
+ },
+ {
+  "file": "tools/content/phrases.src.mjs",
+  "id": "food.not-spicy",
+  "field": "tts",
+  "old": null,
+  "new": "からくないものはありますか",
+  "severity": "warn",
+  "why": "辛くない TTS может прочитать つらくない; override безвреден."
+ },
+ {
+  "file": "tools/content/phrases.src.mjs",
+  "id": "food.no-spice",
+  "field": "tts",
+  "old": null,
+  "new": "からくしないでください",
+  "severity": "warn",
+  "why": "辛く TTS может прочитать つらく; override безвреден."
+ },
+ {
+  "file": "tools/content/phrases.src.mjs",
+  "id": "shop.passport",
+  "field": "ruby",
+  "old": "パスポートはこれです",
+  "new": "パスポートです",
+  "severity": "warn",
+  "why": "パスポートはこれです звучит как ответ на «какой из них паспорт?». Подавая паспорт, говорят «(はい、)パスポートです»."
+ },
+ {
+  "file": "tools/content/phrases.src.mjs",
+  "id": "shop.passport",
+  "field": "romaji",
+  "old": "pasupōto wa kore desu",
+  "new": "pasupōto desu",
+  "severity": "warn",
+  "why": "Следует за ruby."
+ },
+ {
+  "file": "tools/content/kanji.src.mjs",
+  "id": "k.tokkyu",
+  "field": "note",
+  "old": "Обычно нужен доп. билет.",
+  "new": "У JR и части частных линий (Odakyu Romancecar, Tobu, Seibu, Kintetsu) нужен доп. билет 特急券; у многих частных линий (Keio, Keikyu, Tokyu, Hankyu, Keihan) 特急 идёт без доплаты.",
+  "severity": "warn",
+  "why": "«Обычно нужен доп. билет» верно для JR, но у многих частных линий 特急 без доплаты."
+ },
+ {
+  "file": "tools/content/phrases.src.mjs",
+  "id": "food.itadakimasu",
+  "field": "ru",
+  "old": "(перед едой) Приятного аппетита / спасибо",
+  "new": "(перед едой) Спасибо за еду — приступаю",
+  "severity": "warn",
+  "why": "いただきます говорит сам едящий; это не пожелание другим «приятного аппетита»."
+ },
+ {
+  "file": "tools/content/phrases.src.mjs",
+  "id": "food.itadakimasu",
+  "field": "note",
+  "old": null,
+  "new": "Не «приятного аппетита» другим, а формула самого едящего.",
+  "severity": "warn",
+  "why": "Пояснение к переводу."
+ },
+ {
+  "file": "tools/content/phrases.src.mjs",
+  "id": "hear.food.drink",
+  "field": "ru",
+  "old": "Что будете пить?",
+  "new": "Что-нибудь из напитков?",
+  "severity": "warn",
+  "why": "お飲み物はいかがですか — «Не желаете напитки?»; «Что будете пить?» = お飲み物は何になさいますか."
+ },
+ {
+  "file": "tools/content/phrases.src.mjs",
+  "id": "hear.family.hoken",
+  "field": "ru",
+  "old": "У вас есть страховой полис?",
+  "new": "У вас есть медицинская страховка (полис)?",
+  "severity": "warn",
+  "why": "保険証 — японская карта медстрахования."
+ },
+ {
+  "file": "tools/content/phrases.src.mjs",
+  "id": "hear.family.hoken",
+  "field": "note",
+  "old": null,
+  "new": "保険証 — японский полис медстрахования; у туриста его нет. Ответ: 海外旅行保険に入っています — и показать полис.",
+  "severity": "warn",
+  "why": "Связать с family.insurance, иначе непонятно, что отвечать."
+ },
+ {
+  "file": "tools/content/phrases.src.mjs",
+  "id": "hear.hotel.floor",
+  "field": "note",
+  "old": null,
+  "new": "Число + 階: 1 いっかい, 3 さんがい, 6 ろっかい, 8 はっかい, 10 じゅっかい; 何階 なんがい. 地下1階 (ちか いっかい) = B1.",
+  "severity": "warn",
+  "why": "Ромадзи 〇-kai скрывает звуковые изменения — именно их не узнают на слух."
+ },
+ {
+  "file": "tools/content/phrases.src.mjs",
+  "id": "hear.shop.counter",
+  "field": "note",
+  "old": null,
+  "new": "Число + 階: 1 いっかい, 3 さんがい, 6 ろっかい, 8 はっかい, 10 じゅっかい. 地下 (ちか) — подземный этаж.",
+  "severity": "warn",
+  "why": "Звуковые изменения счётного 階."
+ },
+ {
+  "file": "tools/content/phrases.src.mjs",
+  "id": "hear.shop.hosho",
+  "field": "note",
+  "old": null,
+  "new": "Число + か月: 1 いっかげつ, 3 さんかげつ, 6 ろっかげつ, 10 じゅっかげつ; 1年 いちねん. 保証なし — без гарантии.",
+  "severity": "warn",
+  "why": "Типичные сроки гарантии б/у (1/3/6 мес.) звучат с изменениями."
+ },
+ {
+  "file": "tools/content/phrases.src.mjs",
+  "id": "hear.family.nansai",
+  "field": "note",
+  "old": null,
+  "new": "Часто вежливее: おいくつですか (oikutsu desu ka). Ответ: 〇歳です (〇-sai desu): 1 いっさい, 8 はっさい, 10 じゅっさい.",
+  "severity": "warn",
+  "why": "Персонал и врачи часто спрашивают おいくつですか; семье нужен ответ с возрастом ребёнка."
+ },
+ {
+  "file": "tools/content/phrases.src.mjs",
+  "id": "transport.tickets",
+  "field": "note",
+  "old": null,
+  "new": "Детский билет (小児, полцены) — 6–12 лет (младшая школа). До 6 лет — бесплатно (до двух детей на взрослого), если ребёнку не нужно отдельное место по брони.",
+  "severity": "warn",
+  "why": "Правила JR для детей — без них купят лишний билет или не купят нужный."
+ },
+ {
+  "file": "tools/content/kanji.src.mjs",
+  "id": "k.donichi",
+  "field": "note",
+  "old": null,
+  "new": "В расписаниях JR чаще 土休日 (どきゅうじつ) — сб, вс и праздники; 平日 (へいじつ) — будни.",
+  "severity": "warn",
+  "why": "На табло и в расписаниях JR стоит 土休日, а не 土日祝."
+ },
+ {
+  "file": "tools/content/kanji.src.mjs",
+  "id": "k.nyu",
+  "field": "note",
+  "old": null,
+  "new": "На этикетках — 乳成分 (にゅうせいぶん) или 乳.",
+  "severity": "warn",
+  "why": "В списках аллергенов на упаковке пишут 乳成分."
+ },
+ {
+  "file": "tools/content/phrases.src.mjs",
+  "id": "food.oishii",
+  "field": "ru",
+  "old": "Было очень вкусно",
+  "new": "Было вкусно",
+  "severity": "style",
+  "why": "В японском нет «очень» (とても)."
+ },
+ {
+  "file": "tools/content/phrases.src.mjs",
+  "id": "family.pediatric",
+  "field": "ru",
+  "old": "Где детский врач?",
+  "new": "Где педиатрия (детский врач)?",
+  "severity": "style",
+  "why": "小児科 — педиатрическое отделение/клиника."
+ },
+ {
+  "file": "tools/content/phrases.src.mjs",
+  "id": "transport.lost-ticket",
+  "field": "ru",
+  "old": "Я потерял билет",
+  "new": "Я потерял(а) билет",
+  "severity": "style",
+  "why": "Едет семья: фраза нужна и женщине."
+ },
+ {
+  "file": "tools/content/phrases.src.mjs",
+  "id": "transport.overshot",
+  "field": "ru",
+  "old": "Я проехал свою остановку",
+  "new": "Я проехал(а) свою остановку",
+  "severity": "style",
+  "why": "Род."
+ },
+ {
+  "file": "tools/content/phrases.src.mjs",
+  "id": "hotel.key",
+  "field": "ru",
+  "old": "Я оставил ключ в номере",
+  "new": "Я оставил(а) ключ в номере",
+  "severity": "style",
+  "why": "Род."
+ },
+ {
+  "file": "tools/content/phrases.src.mjs",
+  "id": "family.injury",
+  "field": "ru",
+  "old": "Я поранился / получил травму",
+  "new": "Я поранился(-ась) / получил(а) травму",
+  "severity": "style",
+  "why": "Род."
+ },
+ {
+  "file": "tools/content/phrases.src.mjs",
+  "id": "family.wallet",
+  "field": "ru",
+  "old": "Я потерял кошелёк",
+  "new": "Я потерял(а) кошелёк",
+  "severity": "style",
+  "why": "Род."
+ },
+ {
+  "file": "tools/content/phrases.src.mjs",
+  "id": "family.phone",
+  "field": "ru",
+  "old": "Я потерял телефон",
+  "new": "Я потерял(а) телефон",
+  "severity": "style",
+  "why": "Род."
+ },
+ {
+  "file": "tools/content/phrases.src.mjs",
+  "id": "card.lost-way",
+  "field": "ru",
+  "old": "Я заблудился. Мне нужно сюда.",
+  "new": "Я заблудился(-ась). Мне нужно сюда.",
+  "severity": "style",
+  "why": "Род."
+ },
+ {
+  "file": "tools/content/phrases.src.mjs",
+  "id": "hear.konbini.shiharai",
+  "field": "ruby",
+  "old": "お支払[しはら]い方法[ほうほう]は",
+  "new": "お支払[しはら]い方法[ほうほう]は？",
+  "severity": "style",
+  "why": "Фраза обрывается на は — без ？ непонятно, что это вопрос (в PLAN 4.9 знак был)."
+ },
+ {
+  "file": "tools/content/phrases.src.mjs",
+  "id": "hear.konbini.shiharai",
+  "field": "romaji",
+  "old": "oshiharai hōhō wa",
+  "new": "oshiharai hōhō wa?",
+  "severity": "style",
+  "why": "Следует за ruby."
+ },
+ {
+  "file": "tools/content/phrases.src.mjs",
+  "id": "hear.konbini.ikkatsu",
+  "field": "note",
+  "old": "Ответ: はい.",
+  "new": "Ответ: はい. Чаще в магазинах техники; вариант: お支払い回数は？ («Сколькими платежами?») → 一括で (ikkatsu de).",
+  "severity": "style",
+  "why": "В конбини почти не спрашивают; в фото/часовых магазинах — постоянно."
+ },
+ {
+  "file": "tools/content/phrases.src.mjs",
+  "id": "food.no-wasabi",
+  "field": "note",
+  "old": "Для ребёнка в суши-барах.",
+  "new": "Для ребёнка в суши-барах. Персонал говорит さび抜き (sabinuki).",
+  "severity": "style",
+  "why": "Узнавание на слух."
+ },
+ {
+  "file": "tools/content/phrases.src.mjs",
+  "id": "family.pharmacy",
+  "field": "note",
+  "old": null,
+  "new": "Обычные лекарства без рецепта проще найти в ドラッグストア (doraggusutoa).",
+  "severity": "style",
+  "why": "Туристу нужнее аптека-магазин, чем рецептурный 薬局."
+ },
+ {
+  "file": "tools/content/kana.src.mjs",
+  "id": "SPECIAL_NOTES[3]",
+  "field": "ru",
+  "old": "Дакутэн (озвончение: か→が) и handakuten (は→ぱ).",
+  "new": "Дакутэн (озвончение: か→が) и хандакутэн (は→ぱ).",
+  "severity": "style",
+  "why": "Термин латиницей посреди кириллицы."
+ }
+]
