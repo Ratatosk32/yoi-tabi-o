@@ -1136,3 +1136,15 @@ section.block, .card.edit { scroll-margin-top: var(--sp-3); }
   position: sticky; bottom: calc(var(--tabbar-h) + var(--safe-b) + var(--sp-2)); z-index: 2;
   background: var(--surface); padding: var(--sp-2) 0; margin-bottom: 0;
 }
+
+/* ---------- 18.2 Dictionary (Words → Dictionary, Phrases → Dictionary matches, Tools → Credits) ---------- */
+.dict-status { margin: var(--sp-2) 0 var(--sp-3); color: var(--ink-3); }
+.dict-status[data-state="ready"] { color: var(--matsu); }
+.dict-entry .en { overflow-wrap: anywhere; }
+.dict-meta { font-size: var(--fs-small); color: var(--ink-3); margin-top: var(--sp-1); }
+.dict-matches { margin-top: var(--sp-5); }
+.dict-matches #dict-more { margin-top: var(--sp-3); }
+.dict-credit { margin-top: var(--sp-5); color: var(--ink-3); }
+.credits p { overflow-wrap: anywhere; }
+.credits .mit { color: var(--ink-3); }
+#credits-back { margin-right: var(--sp-3); }

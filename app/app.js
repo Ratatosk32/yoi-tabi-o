@@ -10,6 +10,7 @@ import * as studyView from './modules/view-study.js';
 import * as showView from './modules/view-show.js';
 import * as kanjiView from './modules/view-kanji.js';
 import * as toolsView from './modules/view-tools.js';
+import * as dict from './modules/dict.js';
 
 export const APP_VERSION = '1.0.0';
 
@@ -17,7 +18,7 @@ const TABS = [
   { id: 'phrases', label: 'Phrases', glyph: '話', view: phrasesView },
   { id: 'study', label: 'Study', glyph: '学', view: studyView },
   { id: 'show', label: 'Show', glyph: '見', view: showView },
-  { id: 'kanji', label: 'Kanji', glyph: '字', view: kanjiView },
+  { id: 'kanji', label: 'Words', glyph: '語', view: kanjiView }, // Signs + Dictionary (route id kept for links and tests)
   { id: 'tools', label: 'Tools', glyph: '具', view: toolsView },
 ];
 
@@ -237,6 +238,9 @@ async function boot() {
   }
   route();
   document.documentElement.dataset.ready = '1';
+  // The dictionary loads after the first paint, when the browser is idle (core first, then the rest in chunks)
+  const idle = (fn) => (typeof requestIdleCallback === 'function' ? requestIdleCallback(fn, { timeout: 3000 }) : setTimeout(fn, 1500));
+  idle(() => dict.load().catch(() => { /* offline before the first download: retried when the dictionary is opened */ }));
 }
 
 async function start() {

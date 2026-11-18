@@ -91,7 +91,9 @@ export function renderDictionary(ctx, box, initial = '') {
   input.addEventListener('keydown', (e) => { if (e.key === 'Enter') input.blur(); });
   // results appear (or get fuller) as the dictionary loads
   const off = D.onChange(() => { if (!box.isConnected) { off(); return; } if (q) draw(); });
-  box.append(input, statusLine(), list);
+  box.append(input, statusLine(), list,
+    h('p.small.dict-credit', 'Dictionary data: JMdict © EDRDG, CC BY-SA 4.0. ',
+      h('button.linklike#dict-credits', { type: 'button', on: { click: () => ctx.go('#/tools/credits') } }, 'Credits')));
   draw();
   D.load().catch(() => { /* status line shows the error; the SW caches the files once online */ });
 }

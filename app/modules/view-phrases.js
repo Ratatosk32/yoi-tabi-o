@@ -2,6 +2,8 @@
 import { h, clear, rubyEl, speakButtons, speakItem, showFullscreen, toast, ico, openSheet, pickerButton, romajiEl } from './ui.js';
 import { romajiMode } from './curriculum.js';
 import { studyWeek, todayStr } from './srs.js';
+import { dictMatches, dictFavsSection } from './view-dict.js';
+import * as D from './dict.js';
 import { search } from './text.js';
 
 const SPECIAL = {
@@ -63,7 +65,18 @@ export function render(ctx, root, params) {
     return items.filter((it) => it.cat === cat);
   }
 
-  function draw() {
+  function draw() { drawPhrases(); drawExtras(); }
+
+  // Under the phrases: dictionary matches for a search, dictionary words in Favorites
+  function drawExtras() {
+    list.querySelector('#dict-matches')?.remove();
+    list.querySelector('#dict-favs')?.remove();
+    const extra = query ? dictMatches(ctx, query) : cat === 'fav' ? dictFavsSection(ctx) : null;
+    if (extra) list.append(extra);
+  }
+  const offDict = D.onChange(() => { if (!list.isConnected) { offDict(); return; } if (query) drawExtras(); });
+
+  function drawPhrases() {
     drawBar();
     clear(list);
     const arr = current();
@@ -76,6 +89,7 @@ export function render(ctx, root, params) {
         list.append(h('div.empty', h('p', `Nothing found for “${query}”.`), h('p.small', 'Try English, romaji or kana.'),
           h('button.btn', { type: 'button', on: { click: () => { query = ''; input.value = ''; draw(); input.focus(); } } }, 'Clear search')));
       } else if (cat === 'fav') {
+        if ((ctx.store.get('dictFavs', []) || []).length) return; // only dictionary words are starred
         list.append(h('div.empty', h('p', 'No favorites yet.'), h('p.small', 'Tap the star next to a phrase to keep it here.'),
           h('button.btn', { type: 'button', on: { click: () => setCat(lastCat) } }, 'Browse phrases')));
       } else list.append(h('div.empty', h('p', 'No phrases in this category.')));

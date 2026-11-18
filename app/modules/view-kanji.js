@@ -1,8 +1,21 @@
-// Kanji tab: cheat sheet for signs, price tags and menus.
-import { h, clear, rubyEl, speakItem, openSheet, pickerButton } from './ui.js';
+// Words tab: Signs (cheat sheet for signs, price tags and menus) and Dictionary (JMdict).
+import { h, clear, rubyEl, speakItem, openSheet, pickerButton, chip } from './ui.js';
+import { renderDictionary } from './view-dict.js';
 import { search } from './text.js';
 
-export function render(ctx, root) {
+export function render(ctx, root, params = []) {
+  const sub = params[0] === 'dict' ? 'dict' : 'signs';
+  // two equal segments (no sideways scrolling)
+  root.append(h('header.top', h('h1', 'Words')),
+    h('div.chips.subnav.seg', { 'aria-label': 'Words sections' },
+      chip('Signs', sub === 'signs', () => ctx.go('#/kanji'), { 'data-sub': 'signs' }),
+      chip('Dictionary', sub === 'dict', () => ctx.go('#/kanji/dict'), { 'data-sub': 'dict' })));
+  if (sub === 'dict') {
+    const box = h('div#dict-box');
+    root.append(box);
+    renderDictionary(ctx, box, params[1] || '');
+    return;
+  }
   const { groups, items } = ctx.data.kanji;
   let group = 'all';
   let query = '';
@@ -52,6 +65,6 @@ export function render(ctx, root) {
   }
   let t = null;
   input.addEventListener('input', () => { clearTimeout(t); t = setTimeout(() => { query = input.value.trim(); draw(); }, 120); });
-  root.append(h('header.top', h('h1', 'Kanji')), h('p.hint', 'Recognise, don’t write. Tap a sign to hear its reading. Unknown sign? Use Camera on the Tools tab.'), input, bar, grid);
+  root.append(h('p.hint', 'Recognise, don’t write. Tap a sign to hear its reading. Unknown sign? Use Camera on the Tools tab.'), input, bar, grid);
   draw();
 }
