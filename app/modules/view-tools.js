@@ -4,8 +4,10 @@ import * as L from './launchers.js';
 import * as tts from './tts.js';
 import { stats } from './srs.js';
 import { kanaToHepburn } from './text.js';
+import * as D from './dict.js';
 
-export function render(ctx, root) {
+export function render(ctx, root, params = []) {
+  if (params[0] === 'credits') { renderCredits(ctx, root); return; }
   const s = ctx.settings();
 
   // --- Camera / Lens ---
@@ -156,7 +158,40 @@ export function render(ctx, root) {
     h('p.small', `Data v${ctx.data.version}. Offline mode: ${sw.controlled ? 'on' : sw.supported ? 'on after a restart' : 'not supported'}.` +
       (ctx.persisted === true ? ' Storage is persistent.' : '')),
     h('p.small', 'Phrases: ' + ctx.data.items.length + ', kanji: ' + ctx.data.kanji.items.length + '.'),
+    h('p.small', D.progressText()),
+    h('button.btn.wide#open-credits', { type: 'button', on: { click: () => ctx.go('#/tools/credits') } }, 'Credits and licences'),
   ));
+}
+
+// ---------- Credits and licences (required by the JMdict / EDRDG licence: a separate screen reachable from a menu) ----------
+const A = (href, text) => h('a', { href, target: '_blank', rel: 'noopener' }, text || href);
+export function renderCredits(ctx, root) {
+  const st = D.status();
+  const date = st.dictDate || '2026-11-16';
+  root.append(
+    h('header.top', h('button.btn.small#credits-back', { type: 'button', 'aria-label': 'Back to Tools', on: { click: () => ctx.go('#/tools') } }, '‹ Tools'), h('h1', 'Credits')),
+    h('section.block.credits#credits-dict',
+      h('h2.section', 'Dictionary: JMdict'),
+      h('p', 'This app uses the ', A('https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project', 'JMdict/EDICT'),
+        ' dictionary files. These files are the property of the ', A('https://www.edrdg.org/', 'Electronic Dictionary Research and Development Group'),
+        ', and are used in conformance with the Group’s ',A('https://www.edrdg.org/edrdg/licence.html', 'licence'),
+        '. The dictionary data in this app is a selected, ranked and abridged version of JMdict and is available under ',
+        A('https://creativecommons.org/licenses/by-sa/4.0/', 'CC BY-SA 4.0'), '.'),
+      h('p.small', `JMdict version: dictDate ${date}. JSON conversion: `, A('https://github.com/scriptin/jmdict-simplified', 'jmdict-simplified'),
+        ' (CC BY-SA 4.0, same EDRDG terms). No copyright is claimed over the dictionary material.'),
+      h('p.small', D.progressText())),
+    h('section.block.credits#credits-fonts',
+      h('h2.section', 'Fonts'),
+      h('p', 'Shippori Mincho, Copyright 2021 The Shippori Mincho Project Authors (', A('https://github.com/fontdasu/ShipporiMincho', 'github.com/fontdasu/ShipporiMincho'), ').'),
+      h('p', 'Lora, Copyright 2011 The Lora Project Authors (', A('https://github.com/cyrealtype/Lora-Cyrillic', 'github.com/cyrealtype/Lora-Cyrillic'), '), Reserved Font Name "Lora".'),
+      h('p.small', 'Both are subsetted and licensed under the ', A('https://openfontlicense.org/', 'SIL Open Font License, Version 1.1'),
+        '. Full texts: ', A('fonts/LICENSE-ShipporiMincho-OFL.txt', 'Shippori Mincho licence'), ', ', A('fonts/LICENSE-Lora-OFL.txt', 'Lora licence'), '.')),
+    h('section.block.credits#credits-code',
+      h('h2.section', 'Code'),
+      h('p', A('https://github.com/WaniKani/WanaKana', 'WanaKana'), ' 5.3.1 (romaji to kana), The MIT License, Copyright (c) 2013 WaniKani Community Github.'),
+      h('p.small.mit', 'Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.')),
+  );
+  window.scrollTo(0, 0);
 }
 
 // ---------- My phrases (adding your own phrases; PLAN.md 3.5) ----------
