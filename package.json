@@ -9,6 +9,7 @@
     "serve": "node tools/serve.mjs",
     "e2e": "node --experimental-websocket tools/e2e.mjs",
     "check:cyrillic": "node tools/check-no-cyrillic.mjs",
-    "build:curriculum": "node tools/build-curriculum.mjs"
+    "build:curriculum": "node tools/build-curriculum.mjs",
+    "build:dict": "node tools/build-dict-app.mjs"
   }
 }
