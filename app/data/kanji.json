@@ -1,0 +1,999 @@
+{
+ "version": 1,
+ "groups": [
+  {
+   "id": "signs",
+   "ru": "Знаки и вывески"
+  },
+  {
+   "id": "station",
+   "ru": "Станция и поезд"
+  },
+  {
+   "id": "shop",
+   "ru": "Магазин и цены"
+  },
+  {
+   "id": "used",
+   "ru": "Б/у фото: состояние"
+  },
+  {
+   "id": "watch",
+   "ru": "Часы"
+  },
+  {
+   "id": "food",
+   "ru": "Меню и еда"
+  },
+  {
+   "id": "allergen",
+   "ru": "Аллергены (обязательная маркировка)"
+  }
+ ],
+ "items": [
+  {
+   "id": "k.iriguchi",
+   "group": "signs",
+   "ja": "入口",
+   "ruby": "入口[いりぐち]",
+   "kana": "いりぐち",
+   "romaji": "iriguchi",
+   "ru": "вход"
+  },
+  {
+   "id": "k.deguchi",
+   "group": "signs",
+   "ja": "出口",
+   "ruby": "出口[でぐち]",
+   "kana": "でぐち",
+   "romaji": "deguchi",
+   "ru": "выход"
+  },
+  {
+   "id": "k.hijoguchi",
+   "group": "signs",
+   "ja": "非常口",
+   "ruby": "非常口[ひじょうぐち]",
+   "kana": "ひじょうぐち",
+   "romaji": "hijōguchi",
+   "ru": "аварийный выход"
+  },
+  {
+   "id": "k.osu",
+   "group": "signs",
+   "ja": "押す",
+   "ruby": "押[お]す",
+   "kana": "おす",
+   "romaji": "osu",
+   "ru": "толкать (от себя)",
+   "note": "На дверях часто одним знаком: 押."
+  },
+  {
+   "id": "k.hiku",
+   "group": "signs",
+   "ja": "引く",
+   "ruby": "引[ひ]く",
+   "kana": "ひく",
+   "romaji": "hiku",
+   "ru": "тянуть (на себя)",
+   "note": "На дверях: 引."
+  },
+  {
+   "id": "k.otoko",
+   "group": "signs",
+   "ja": "男",
+   "ruby": "男[おとこ]",
+   "kana": "おとこ",
+   "romaji": "otoko",
+   "ru": "мужской (туалет)"
+  },
+  {
+   "id": "k.onna",
+   "group": "signs",
+   "ja": "女",
+   "ruby": "女[おんな]",
+   "kana": "おんな",
+   "romaji": "onna",
+   "ru": "женский (туалет)"
+  },
+  {
+   "id": "k.otearai",
+   "group": "signs",
+   "ja": "お手洗い",
+   "ruby": "お手洗[てあら]い",
+   "kana": "おてあらい",
+   "romaji": "otearai",
+   "ru": "туалет",
+   "note": "Также 化粧室 (けしょうしつ)."
+  },
+  {
+   "id": "k.kinen",
+   "group": "signs",
+   "ja": "禁煙",
+   "ruby": "禁煙[きんえん]",
+   "kana": "きんえん",
+   "romaji": "kin'en",
+   "ru": "не курить"
+  },
+  {
+   "id": "k.kitsuenjo",
+   "group": "signs",
+   "ja": "喫煙所",
+   "ruby": "喫煙所[きつえんじょ]",
+   "kana": "きつえんじょ",
+   "romaji": "kitsuenjo",
+   "ru": "место для курения"
+  },
+  {
+   "id": "k.tachiiri",
+   "group": "signs",
+   "ja": "立入禁止",
+   "ruby": "立入禁止[たちいりきんし]",
+   "kana": "たちいりきんし",
+   "romaji": "tachiiri kinshi",
+   "ru": "вход запрещён"
+  },
+  {
+   "id": "k.satsuei",
+   "group": "signs",
+   "ja": "撮影禁止",
+   "ruby": "撮影禁止[さつえいきんし]",
+   "kana": "さつえいきんし",
+   "romaji": "satsuei kinshi",
+   "ru": "съёмка запрещена"
+  },
+  {
+   "id": "k.eigyochu",
+   "group": "signs",
+   "ja": "営業中",
+   "ruby": "営業中[えいぎょうちゅう]",
+   "kana": "えいぎょうちゅう",
+   "romaji": "eigyōchū",
+   "ru": "открыто"
+  },
+  {
+   "id": "k.junbichu",
+   "group": "signs",
+   "ja": "準備中",
+   "ruby": "準備中[じゅんびちゅう]",
+   "kana": "じゅんびちゅう",
+   "romaji": "junbichū",
+   "ru": "закрыто (подготовка)"
+  },
+  {
+   "id": "k.teikyubi",
+   "group": "signs",
+   "ja": "定休日",
+   "ruby": "定休日[ていきゅうび]",
+   "kana": "ていきゅうび",
+   "romaji": "teikyūbi",
+   "ru": "выходной день заведения"
+  },
+  {
+   "id": "k.koshochu",
+   "group": "signs",
+   "ja": "故障中",
+   "ruby": "故障中[こしょうちゅう]",
+   "kana": "こしょうちゅう",
+   "romaji": "koshōchū",
+   "ru": "не работает (неисправно)"
+  },
+  {
+   "id": "k.kiken",
+   "group": "signs",
+   "ja": "危険",
+   "ruby": "危険[きけん]",
+   "kana": "きけん",
+   "romaji": "kiken",
+   "ru": "опасно"
+  },
+  {
+   "id": "k.nenmatsu",
+   "group": "signs",
+   "ja": "年末年始",
+   "ruby": "年末年始[ねんまつねんし]",
+   "kana": "ねんまつねんし",
+   "romaji": "nenmatsu nenshi",
+   "ru": "новогодние праздники",
+   "note": "Многое закрыто примерно 29.12–3.01."
+  },
+  {
+   "id": "k.eki",
+   "group": "station",
+   "ja": "駅",
+   "ruby": "駅[えき]",
+   "kana": "えき",
+   "romaji": "eki",
+   "ru": "станция"
+  },
+  {
+   "id": "k.kaisatsu",
+   "group": "station",
+   "ja": "改札",
+   "ruby": "改札[かいさつ]",
+   "kana": "かいさつ",
+   "romaji": "kaisatsu",
+   "ru": "турникеты"
+  },
+  {
+   "id": "k.bansen",
+   "group": "station",
+   "ja": "番線",
+   "ruby": "番線[ばんせん]",
+   "kana": "ばんせん",
+   "romaji": "bansen",
+   "ru": "платформа № (3番線 — 3-я)"
+  },
+  {
+   "id": "k.noriba",
+   "group": "station",
+   "ja": "乗り場",
+   "ruby": "乗[の]り場[ば]",
+   "kana": "のりば",
+   "romaji": "noriba",
+   "ru": "место посадки"
+  },
+  {
+   "id": "k.norikae",
+   "group": "station",
+   "ja": "乗換",
+   "ruby": "乗換[のりかえ]",
+   "kana": "のりかえ",
+   "romaji": "norikae",
+   "ru": "пересадка"
+  },
+  {
+   "id": "k.futsu",
+   "group": "station",
+   "ja": "普通",
+   "ruby": "普通[ふつう]",
+   "kana": "ふつう",
+   "romaji": "futsū",
+   "ru": "со всеми остановками"
+  },
+  {
+   "id": "k.kaisoku",
+   "group": "station",
+   "ja": "快速",
+   "ruby": "快速[かいそく]",
+   "kana": "かいそく",
+   "romaji": "kaisoku",
+   "ru": "скорый (пропускает часть станций)"
+  },
+  {
+   "id": "k.kyuko",
+   "group": "station",
+   "ja": "急行",
+   "ruby": "急行[きゅうこう]",
+   "kana": "きゅうこう",
+   "romaji": "kyūkō",
+   "ru": "экспресс"
+  },
+  {
+   "id": "k.tokkyu",
+   "group": "station",
+   "ja": "特急",
+   "ruby": "特急[とっきゅう]",
+   "kana": "とっきゅう",
+   "romaji": "tokkyū",
+   "ru": "лимитированный экспресс",
+   "note": "Обычно нужен доп. билет."
+  },
+  {
+   "id": "k.shiteiseki",
+   "group": "station",
+   "ja": "指定席",
+   "ruby": "指定席[していせき]",
+   "kana": "していせき",
+   "romaji": "shiteiseki",
+   "ru": "места по брони"
+  },
+  {
+   "id": "k.jiyuseki",
+   "group": "station",
+   "ja": "自由席",
+   "ruby": "自由席[じゆうせき]",
+   "kana": "じゆうせき",
+   "romaji": "jiyūseki",
+   "ru": "свободные места (без брони)"
+  },
+  {
+   "id": "k.seisanki",
+   "group": "station",
+   "ja": "精算機",
+   "ruby": "精算機[せいさんき]",
+   "kana": "せいさんき",
+   "romaji": "seisanki",
+   "ru": "автомат доплаты"
+  },
+  {
+   "id": "k.yusenseki",
+   "group": "station",
+   "ja": "優先席",
+   "ruby": "優先席[ゆうせんせき]",
+   "kana": "ゆうせんせき",
+   "romaji": "yūsenseki",
+   "ru": "места для пожилых, беременных, с детьми"
+  },
+  {
+   "id": "k.josei",
+   "group": "station",
+   "ja": "女性専用車",
+   "ruby": "女性専用車[じょせいせんようしゃ]",
+   "kana": "じょせいせんようしゃ",
+   "romaji": "josei sen'yōsha",
+   "ru": "вагон только для женщин (в часы пик)"
+  },
+  {
+   "id": "k.higashiguchi",
+   "group": "station",
+   "ja": "東口",
+   "ruby": "東口[ひがしぐち]",
+   "kana": "ひがしぐち",
+   "romaji": "higashiguchi",
+   "ru": "восточный выход"
+  },
+  {
+   "id": "k.nishiguchi",
+   "group": "station",
+   "ja": "西口",
+   "ruby": "西口[にしぐち]",
+   "kana": "にしぐち",
+   "romaji": "nishiguchi",
+   "ru": "западный выход"
+  },
+  {
+   "id": "k.minamiguchi",
+   "group": "station",
+   "ja": "南口",
+   "ruby": "南口[みなみぐち]",
+   "kana": "みなみぐち",
+   "romaji": "minamiguchi",
+   "ru": "южный выход"
+  },
+  {
+   "id": "k.kitaguchi",
+   "group": "station",
+   "ja": "北口",
+   "ruby": "北口[きたぐち]",
+   "kana": "きたぐち",
+   "romaji": "kitaguchi",
+   "ru": "северный выход"
+  },
+  {
+   "id": "k.shuden",
+   "group": "station",
+   "ja": "終電",
+   "ruby": "終電[しゅうでん]",
+   "kana": "しゅうでん",
+   "romaji": "shūden",
+   "ru": "последний поезд"
+  },
+  {
+   "id": "k.donichi",
+   "group": "station",
+   "ja": "土日祝",
+   "ruby": "土日祝[どにちしゅく]",
+   "kana": "どにちしゅく",
+   "romaji": "donichi-shuku",
+   "ru": "сб, вс и праздники (в расписаниях)"
+  },
+  {
+   "id": "k.zeikomi",
+   "group": "shop",
+   "ja": "税込",
+   "ruby": "税込[ぜいこみ]",
+   "kana": "ぜいこみ",
+   "romaji": "zeikomi",
+   "ru": "с налогом"
+  },
+  {
+   "id": "k.zeinuki",
+   "group": "shop",
+   "ja": "税抜",
+   "ruby": "税抜[ぜいぬき]",
+   "kana": "ぜいぬき",
+   "romaji": "zeinuki",
+   "ru": "без налога"
+  },
+  {
+   "id": "k.menzei",
+   "group": "shop",
+   "ja": "免税",
+   "ruby": "免税[めんぜい]",
+   "kana": "めんぜい",
+   "romaji": "menzei",
+   "ru": "tax-free"
+  },
+  {
+   "id": "k.genkin",
+   "group": "shop",
+   "ja": "現金のみ",
+   "ruby": "現金[げんきん]のみ",
+   "kana": "げんきんのみ",
+   "romaji": "genkin nomi",
+   "ru": "только наличные"
+  },
+  {
+   "id": "k.kadoka",
+   "group": "shop",
+   "ja": "カード可",
+   "ruby": "カード可[か]",
+   "kana": "カードか",
+   "romaji": "kādo-ka",
+   "ru": "карты принимаются"
+  },
+  {
+   "id": "k.waribiki",
+   "group": "shop",
+   "ja": "割引",
+   "ruby": "割引[わりびき]",
+   "kana": "わりびき",
+   "romaji": "waribiki",
+   "ru": "скидка"
+  },
+  {
+   "id": "k.hangaku",
+   "group": "shop",
+   "ja": "半額",
+   "ruby": "半額[はんがく]",
+   "kana": "はんがく",
+   "romaji": "hangaku",
+   "ru": "половина цены (−50%)"
+  },
+  {
+   "id": "k.nesage",
+   "group": "shop",
+   "ja": "値下げ",
+   "ruby": "値下[ねさ]げ",
+   "kana": "ねさげ",
+   "romaji": "nesage",
+   "ru": "уценка"
+  },
+  {
+   "id": "k.urikire",
+   "group": "shop",
+   "ja": "売切",
+   "ruby": "売切[うりきれ]",
+   "kana": "うりきれ",
+   "romaji": "urikire",
+   "ru": "распродано"
+  },
+  {
+   "id": "k.zaiko",
+   "group": "shop",
+   "ja": "在庫",
+   "ruby": "在庫[ざいこ]",
+   "kana": "ざいこ",
+   "romaji": "zaiko",
+   "ru": "наличие на складе"
+  },
+  {
+   "id": "k.kaikei",
+   "group": "shop",
+   "ja": "会計",
+   "ruby": "会計[かいけい]",
+   "kana": "かいけい",
+   "romaji": "kaikei",
+   "ru": "касса, оплата"
+  },
+  {
+   "id": "k.muryo",
+   "group": "shop",
+   "ja": "無料",
+   "ruby": "無料[むりょう]",
+   "kana": "むりょう",
+   "romaji": "muryō",
+   "ru": "бесплатно"
+  },
+  {
+   "id": "k.yuryo",
+   "group": "shop",
+   "ja": "有料",
+   "ruby": "有料[ゆうりょう]",
+   "kana": "ゆうりょう",
+   "romaji": "yūryō",
+   "ru": "платно"
+  },
+  {
+   "id": "k.shichaku",
+   "group": "shop",
+   "ja": "試着室",
+   "ruby": "試着室[しちゃくしつ]",
+   "kana": "しちゃくしつ",
+   "romaji": "shichakushitsu",
+   "ru": "примерочная"
+  },
+  {
+   "id": "k.chuko",
+   "group": "used",
+   "ja": "中古",
+   "ruby": "中古[ちゅうこ]",
+   "kana": "ちゅうこ",
+   "romaji": "chūko",
+   "ru": "б/у"
+  },
+  {
+   "id": "k.shinpin",
+   "group": "used",
+   "ja": "新品",
+   "ruby": "新品[しんぴん]",
+   "kana": "しんぴん",
+   "romaji": "shinpin",
+   "ru": "новое"
+  },
+  {
+   "id": "k.mishiyo",
+   "group": "used",
+   "ja": "未使用",
+   "ruby": "未使用[みしよう]",
+   "kana": "みしよう",
+   "romaji": "mishiyō",
+   "ru": "не использовалось"
+  },
+  {
+   "id": "k.bihin",
+   "group": "used",
+   "ja": "美品",
+   "ruby": "美品[びひん]",
+   "kana": "びひん",
+   "romaji": "bihin",
+   "ru": "отличное состояние"
+  },
+  {
+   "id": "k.ryohin",
+   "group": "used",
+   "ja": "良品",
+   "ruby": "良品[りょうひん]",
+   "kana": "りょうひん",
+   "romaji": "ryōhin",
+   "ru": "хорошее состояние"
+  },
+  {
+   "id": "k.namihin",
+   "group": "used",
+   "ja": "並品",
+   "ruby": "並品[なみひん]",
+   "kana": "なみひん",
+   "romaji": "namihin",
+   "ru": "среднее, заметны следы использования"
+  },
+  {
+   "id": "k.nanari",
+   "group": "used",
+   "ja": "難あり",
+   "ruby": "難[なん]あり",
+   "kana": "なんあり",
+   "romaji": "nan-ari",
+   "ru": "с дефектом"
+  },
+  {
+   "id": "k.janku",
+   "group": "used",
+   "ja": "ジャンク",
+   "ruby": "ジャンク",
+   "kana": "ジャンク",
+   "romaji": "janku",
+   "ru": "«как есть»: не работает или не проверено",
+   "note": "Без гарантии и возврата."
+  },
+  {
+   "id": "k.genjo",
+   "group": "used",
+   "ja": "現状品",
+   "ruby": "現状品[げんじょうひん]",
+   "kana": "げんじょうひん",
+   "romaji": "genjōhin",
+   "ru": "продаётся как есть"
+  },
+  {
+   "id": "k.dosazumi",
+   "group": "used",
+   "ja": "動作確認済み",
+   "ruby": "動作確認済[どうさかくにんず]み",
+   "kana": "どうさかくにんずみ",
+   "romaji": "dōsa kakunin-zumi",
+   "ru": "работа проверена"
+  },
+  {
+   "id": "k.dosami",
+   "group": "used",
+   "ja": "動作未確認",
+   "ruby": "動作未確認[どうさみかくにん]",
+   "kana": "どうさみかくにん",
+   "romaji": "dōsa mikakunin",
+   "ru": "работа не проверена"
+  },
+  {
+   "id": "k.fuzoku",
+   "group": "used",
+   "ja": "付属品",
+   "ruby": "付属品[ふぞくひん]",
+   "kana": "ふぞくひん",
+   "romaji": "fuzokuhin",
+   "ru": "комплект, аксессуары"
+  },
+  {
+   "id": "k.motobako",
+   "group": "used",
+   "ja": "元箱",
+   "ruby": "元箱[もとばこ]",
+   "kana": "もとばこ",
+   "romaji": "motobako",
+   "ru": "родная коробка"
+  },
+  {
+   "id": "k.hosho",
+   "group": "used",
+   "ja": "保証",
+   "ruby": "保証[ほしょう]",
+   "kana": "ほしょう",
+   "romaji": "hoshō",
+   "ru": "гарантия"
+  },
+  {
+   "id": "k.kabi",
+   "group": "used",
+   "ja": "カビ",
+   "ruby": "カビ",
+   "kana": "カビ",
+   "romaji": "kabi",
+   "ru": "грибок (в оптике)"
+  },
+  {
+   "id": "k.kumori",
+   "group": "used",
+   "ja": "クモリ",
+   "ruby": "クモリ",
+   "kana": "クモリ",
+   "romaji": "kumori",
+   "ru": "помутнение (в оптике)"
+  },
+  {
+   "id": "k.kizu",
+   "group": "used",
+   "ja": "キズ",
+   "ruby": "キズ",
+   "kana": "キズ",
+   "romaji": "kizu",
+   "ru": "царапины"
+  },
+  {
+   "id": "k.sure",
+   "group": "used",
+   "ja": "スレ",
+   "ruby": "スレ",
+   "kana": "スレ",
+   "romaji": "sure",
+   "ru": "потёртости"
+  },
+  {
+   "id": "k.chiri",
+   "group": "used",
+   "ja": "チリ・ホコリ",
+   "ruby": "チリ・ホコリ",
+   "kana": "チリ・ホコリ",
+   "romaji": "chiri hokori",
+   "ru": "пылинки внутри объектива",
+   "note": "Мелкие пылинки обычно не влияют на снимок."
+  },
+  {
+   "id": "k.gaikan",
+   "group": "used",
+   "ja": "外観",
+   "ruby": "外観[がいかん]",
+   "kana": "がいかん",
+   "romaji": "gaikan",
+   "ru": "внешний вид (косметика)"
+  },
+  {
+   "id": "k.kogaku",
+   "group": "used",
+   "ja": "光学",
+   "ruby": "光学[こうがく]",
+   "kana": "こうがく",
+   "romaji": "kōgaku",
+   "ru": "оптика (состояние стёкол)"
+  },
+  {
+   "id": "k.bunkai",
+   "group": "used",
+   "ja": "分解清掃済み",
+   "ruby": "分解清掃済[ぶんかいせいそうず]み",
+   "kana": "ぶんかいせいそうずみ",
+   "romaji": "bunkai seisō-zumi",
+   "ru": "после разборки и чистки (CLA)"
+  },
+  {
+   "id": "k.jidomaki",
+   "group": "watch",
+   "ja": "自動巻",
+   "ruby": "自動巻[じどうまき]",
+   "kana": "じどうまき",
+   "romaji": "jidōmaki",
+   "ru": "автоподзавод"
+  },
+  {
+   "id": "k.temaki",
+   "group": "watch",
+   "ja": "手巻",
+   "ruby": "手巻[てまき]",
+   "kana": "てまき",
+   "romaji": "temaki",
+   "ru": "ручной завод"
+  },
+  {
+   "id": "k.quartz",
+   "group": "watch",
+   "ja": "クォーツ",
+   "ruby": "クォーツ",
+   "kana": "クォーツ",
+   "romaji": "kuōtsu",
+   "ru": "кварц"
+  },
+  {
+   "id": "k.seiki",
+   "group": "watch",
+   "ja": "正規品",
+   "ruby": "正規品[せいきひん]",
+   "kana": "せいきひん",
+   "romaji": "seikihin",
+   "ru": "официальный ввоз"
+  },
+  {
+   "id": "k.heiko",
+   "group": "watch",
+   "ja": "並行輸入",
+   "ruby": "並行輸入[へいこうゆにゅう]",
+   "kana": "へいこうゆにゅう",
+   "romaji": "heikō yunyū",
+   "ru": "параллельный импорт"
+  },
+  {
+   "id": "k.kokusai",
+   "group": "watch",
+   "ja": "国際保証",
+   "ruby": "国際保証[こくさいほしょう]",
+   "kana": "こくさいほしょう",
+   "romaji": "kokusai hoshō",
+   "ru": "международная гарантия"
+  },
+  {
+   "id": "k.hoshosho",
+   "group": "watch",
+   "ja": "保証書",
+   "ruby": "保証書[ほしょうしょ]",
+   "kana": "ほしょうしょ",
+   "romaji": "hoshōsho",
+   "ru": "гарантийный талон"
+  },
+  {
+   "id": "k.oh",
+   "group": "watch",
+   "ja": "OH済み",
+   "ruby": "{OH|オーバーホール}済[ず]み",
+   "kana": "オーバーホールずみ",
+   "romaji": "ōbāhōru-zumi",
+   "ru": "после обслуживания (overhaul)"
+  },
+  {
+   "id": "k.nissa",
+   "group": "watch",
+   "ja": "日差",
+   "ruby": "日差[にっさ]",
+   "kana": "にっさ",
+   "romaji": "nissa",
+   "ru": "суточный ход (точность)",
+   "note": "Пример: 日差+5秒 — уходит вперёд на 5 секунд в сутки."
+  },
+  {
+   "id": "k.bosui",
+   "group": "watch",
+   "ja": "防水",
+   "ruby": "防水[ぼうすい]",
+   "kana": "ぼうすい",
+   "romaji": "bōsui",
+   "ru": "водозащита"
+  },
+  {
+   "id": "k.teishoku",
+   "group": "food",
+   "ja": "定食",
+   "ruby": "定食[ていしょく]",
+   "kana": "ていしょく",
+   "romaji": "teishoku",
+   "ru": "комплексный обед (сет)"
+  },
+  {
+   "id": "k.don",
+   "group": "food",
+   "ja": "丼",
+   "ruby": "丼[どん]",
+   "kana": "どん",
+   "romaji": "don",
+   "ru": "миска риса с топпингом"
+  },
+  {
+   "id": "k.omori",
+   "group": "food",
+   "ja": "大盛",
+   "ruby": "大盛[おおもり]",
+   "kana": "おおもり",
+   "romaji": "ōmori",
+   "ru": "большая порция"
+  },
+  {
+   "id": "k.nami",
+   "group": "food",
+   "ja": "並",
+   "ruby": "並[なみ]",
+   "kana": "なみ",
+   "romaji": "nami",
+   "ru": "обычная порция"
+  },
+  {
+   "id": "k.karakuchi",
+   "group": "food",
+   "ja": "辛口",
+   "ruby": "辛口[からくち]",
+   "kana": "からくち",
+   "romaji": "karakuchi",
+   "ru": "острый"
+  },
+  {
+   "id": "k.amakuchi",
+   "group": "food",
+   "ja": "甘口",
+   "ruby": "甘口[あまくち]",
+   "kana": "あまくち",
+   "romaji": "amakuchi",
+   "ru": "мягкий, неострый"
+  },
+  {
+   "id": "k.shokken",
+   "group": "food",
+   "ja": "食券",
+   "ruby": "食券[しょっけん]",
+   "kana": "しょっけん",
+   "romaji": "shokken",
+   "ru": "талон из автомата"
+  },
+  {
+   "id": "k.mochikaeri",
+   "group": "food",
+   "ja": "持ち帰り",
+   "ruby": "持[も]ち帰[かえ]り",
+   "kana": "もちかえり",
+   "romaji": "mochikaeri",
+   "ru": "навынос"
+  },
+  {
+   "id": "k.tennai",
+   "group": "food",
+   "ja": "店内",
+   "ruby": "店内[てんない]",
+   "kana": "てんない",
+   "romaji": "tennai",
+   "ru": "в зале"
+  },
+  {
+   "id": "k.buta",
+   "group": "food",
+   "ja": "豚",
+   "ruby": "豚[ぶた]",
+   "kana": "ぶた",
+   "romaji": "buta",
+   "ru": "свинина"
+  },
+  {
+   "id": "k.gyu",
+   "group": "food",
+   "ja": "牛",
+   "ruby": "牛[ぎゅう]",
+   "kana": "ぎゅう",
+   "romaji": "gyū",
+   "ru": "говядина"
+  },
+  {
+   "id": "k.tori",
+   "group": "food",
+   "ja": "鶏",
+   "ruby": "鶏[とり]",
+   "kana": "とり",
+   "romaji": "tori",
+   "ru": "курица"
+  },
+  {
+   "id": "k.sakana",
+   "group": "food",
+   "ja": "魚",
+   "ruby": "魚[さかな]",
+   "kana": "さかな",
+   "romaji": "sakana",
+   "ru": "рыба"
+  },
+  {
+   "id": "k.nama",
+   "group": "food",
+   "ja": "生",
+   "ruby": "生[なま]",
+   "kana": "なま",
+   "romaji": "nama",
+   "ru": "сырое",
+   "note": "Также 生ビール — разливное пиво."
+  },
+  {
+   "id": "k.tamago",
+   "group": "allergen",
+   "ja": "卵",
+   "ruby": "卵[たまご]",
+   "kana": "たまご",
+   "romaji": "tamago",
+   "ru": "яйцо"
+  },
+  {
+   "id": "k.nyu",
+   "group": "allergen",
+   "ja": "乳",
+   "ruby": "乳[にゅう]",
+   "kana": "にゅう",
+   "romaji": "nyū",
+   "ru": "молоко (молочные продукты)"
+  },
+  {
+   "id": "k.komugi",
+   "group": "allergen",
+   "ja": "小麦",
+   "ruby": "小麦[こむぎ]",
+   "kana": "こむぎ",
+   "romaji": "komugi",
+   "ru": "пшеница"
+  },
+  {
+   "id": "k.soba",
+   "group": "allergen",
+   "ja": "そば",
+   "ruby": "そば",
+   "kana": "そば",
+   "romaji": "soba",
+   "ru": "гречиха"
+  },
+  {
+   "id": "k.rakkasei",
+   "group": "allergen",
+   "ja": "落花生",
+   "ruby": "落花生[らっかせい]",
+   "kana": "らっかせい",
+   "romaji": "rakkasei",
+   "ru": "арахис",
+   "note": "Также ピーナッツ."
+  },
+  {
+   "id": "k.ebi",
+   "group": "allergen",
+   "ja": "えび",
+   "ruby": "えび",
+   "kana": "えび",
+   "romaji": "ebi",
+   "ru": "креветки"
+  },
+  {
+   "id": "k.kani",
+   "group": "allergen",
+   "ja": "かに",
+   "ruby": "かに",
+   "kana": "かに",
+   "romaji": "kani",
+   "ru": "краб"
+  },
+  {
+   "id": "k.kurumi",
+   "group": "allergen",
+   "ja": "くるみ",
+   "ruby": "くるみ",
+   "kana": "くるみ",
+   "romaji": "kurumi",
+   "ru": "грецкий орех"
+  }
+ ]
+}

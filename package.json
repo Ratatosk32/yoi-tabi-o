@@ -1,0 +1,12 @@
+{
+  "name": "japan-trip",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:data": "node tools/build-data.mjs",
+    "validate": "node tools/validate.mjs",
+    "test": "node --test tests/",
+    "serve": "node tools/serve.mjs",
+    "e2e": "node --experimental-websocket tools/e2e.mjs"
+  }
+}

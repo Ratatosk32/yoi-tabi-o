@@ -1,0 +1,3569 @@
+{
+ "version": 1,
+ "categories": [
+  {
+   "id": "basics",
+   "ru": "Вежливые формулы",
+   "icon": "🙇",
+   "week": 1
+  },
+  {
+   "id": "patterns",
+   "ru": "Шаблоны",
+   "icon": "🧩",
+   "week": 2
+  },
+  {
+   "id": "konbini",
+   "ru": "Конбини и супермаркет",
+   "icon": "🏪",
+   "week": 1
+  },
+  {
+   "id": "food",
+   "ru": "Ресторан и еда",
+   "icon": "🍜",
+   "week": 2
+  },
+  {
+   "id": "transport",
+   "ru": "Поезда и такси",
+   "icon": "🚃",
+   "week": 2
+  },
+  {
+   "id": "hotel",
+   "ru": "Отель",
+   "icon": "🏨",
+   "week": 3
+  },
+  {
+   "id": "shop",
+   "ru": "Покупки: фото, часы, tax-free",
+   "icon": "📷",
+   "week": 3
+  },
+  {
+   "id": "family",
+   "ru": "Ребёнок, здоровье, экстренное",
+   "icon": "🧒",
+   "week": 3
+  },
+  {
+   "id": "numbers",
+   "ru": "Числа, время, счёт",
+   "icon": "🔢",
+   "week": 1
+  },
+  {
+   "id": "cards",
+   "ru": "Карточки «показать»",
+   "icon": "🪧",
+   "week": 3
+  }
+ ],
+ "items": [
+  {
+   "id": "basics.sumimasen",
+   "cat": "basics",
+   "kind": "say",
+   "ru": "Извините / простите",
+   "ja": "すみません",
+   "ruby": "すみません",
+   "kana": "すみません",
+   "romaji": "sumimasen",
+   "note": "Универсальный ключ: позвать официанта, протиснуться, извиниться, поблагодарить за хлопоты.",
+   "tags": [
+    "w1",
+    "core"
+   ]
+  },
+  {
+   "id": "basics.arigato",
+   "cat": "basics",
+   "kind": "say",
+   "ru": "Спасибо",
+   "ja": "ありがとうございます",
+   "ruby": "ありがとうございます",
+   "kana": "ありがとうございます",
+   "romaji": "arigatō gozaimasu",
+   "tags": [
+    "w1",
+    "core"
+   ]
+  },
+  {
+   "id": "basics.onegai",
+   "cat": "basics",
+   "kind": "say",
+   "ru": "Пожалуйста (прошу)",
+   "ja": "お願いします",
+   "ruby": "お願[ねが]いします",
+   "kana": "おねがいします",
+   "romaji": "onegai shimasu",
+   "note": "Добавляйте к любому слову: «Kore, onegai shimasu» — «Вот это, пожалуйста».",
+   "tags": [
+    "w1",
+    "core"
+   ]
+  },
+  {
+   "id": "basics.daijobu",
+   "cat": "basics",
+   "kind": "say",
+   "ru": "Не нужно, спасибо / всё в порядке",
+   "ja": "大丈夫です",
+   "ruby": "大丈夫[だいじょうぶ]です",
+   "kana": "だいじょうぶです",
+   "romaji": "daijōbu desu",
+   "note": "Мягкий отказ: на «Пакет нужен?», «Подогреть?».",
+   "tags": [
+    "w1",
+    "core"
+   ]
+  },
+  {
+   "id": "basics.kekko",
+   "cat": "basics",
+   "kind": "say",
+   "ru": "Нет, спасибо (твёрже)",
+   "ja": "いいえ、結構です",
+   "ruby": "いいえ、結構[けっこう]です",
+   "kana": "いいえ、けっこうです",
+   "romaji": "iie, kekkō desu",
+   "tags": [
+    "w1",
+    "core"
+   ]
+  },
+  {
+   "id": "basics.hai",
+   "cat": "basics",
+   "kind": "say",
+   "ru": "Да",
+   "ja": "はい",
+   "ruby": "はい",
+   "kana": "はい",
+   "romaji": "hai",
+   "tags": [
+    "w1",
+    "core"
+   ]
+  },
+  {
+   "id": "basics.iie",
+   "cat": "basics",
+   "kind": "say",
+   "ru": "Нет",
+   "ja": "いいえ",
+   "ruby": "いいえ",
+   "kana": "いいえ",
+   "romaji": "iie",
+   "tags": [
+    "w1",
+    "core"
+   ]
+  },
+  {
+   "id": "basics.wakarimasen",
+   "cat": "basics",
+   "kind": "say",
+   "ru": "Не понимаю",
+   "ja": "わかりません",
+   "ruby": "わかりません",
+   "kana": "わかりません",
+   "romaji": "wakarimasen",
+   "tags": [
+    "w1",
+    "core"
+   ]
+  },
+  {
+   "id": "basics.wakarimashita",
+   "cat": "basics",
+   "kind": "say",
+   "ru": "Понятно / понял(а)",
+   "ja": "わかりました",
+   "ruby": "わかりました",
+   "kana": "わかりました",
+   "romaji": "wakarimashita",
+   "tags": [
+    "w1",
+    "core"
+   ]
+  },
+  {
+   "id": "basics.mouichido",
+   "cat": "basics",
+   "kind": "say",
+   "ru": "Ещё раз, пожалуйста",
+   "ja": "もう一度お願いします",
+   "ruby": "もう一度[いちど]お願[ねが]いします",
+   "kana": "もういちどおねがいします",
+   "romaji": "mō ichido onegai shimasu",
+   "tags": [
+    "w1",
+    "core"
+   ]
+  },
+  {
+   "id": "basics.yukkuri",
+   "cat": "basics",
+   "kind": "say",
+   "ru": "Говорите медленнее, пожалуйста",
+   "ja": "ゆっくり話してください",
+   "ruby": "ゆっくり話[はな]してください",
+   "kana": "ゆっくりはなしてください",
+   "romaji": "yukkuri hanashite kudasai",
+   "tags": [
+    "w1",
+    "core"
+   ]
+  },
+  {
+   "id": "basics.eigo",
+   "cat": "basics",
+   "kind": "say",
+   "ru": "Вы говорите по-английски?",
+   "ja": "英語は話せますか",
+   "ruby": "英語[えいご]は話[はな]せますか",
+   "kana": "えいごははなせますか",
+   "romaji": "eigo wa hanasemasu ka",
+   "tags": [
+    "w1",
+    "core"
+   ]
+  },
+  {
+   "id": "basics.sukoshi",
+   "cat": "basics",
+   "kind": "say",
+   "ru": "Я немного говорю по-японски",
+   "ja": "日本語は少しだけ話せます",
+   "ruby": "日本語[にほんご]は少[すこ]しだけ話[はな]せます",
+   "kana": "にほんごはすこしだけはなせます",
+   "romaji": "nihongo wa sukoshi dake hanasemasu",
+   "tags": [
+    "w1",
+    "core"
+   ]
+  },
+  {
+   "id": "basics.kaite",
+   "cat": "basics",
+   "kind": "say",
+   "ru": "Можете здесь написать?",
+   "ja": "ここに書いてもらえますか",
+   "ruby": "ここに書[か]いてもらえますか",
+   "kana": "ここにかいてもらえますか",
+   "romaji": "koko ni kaite moraemasu ka",
+   "note": "Протянуть телефон/блокнот — цифры и названия проще прочитать.",
+   "tags": [
+    "w1",
+    "core"
+   ]
+  },
+  {
+   "id": "basics.chotto",
+   "cat": "basics",
+   "kind": "say",
+   "ru": "Подождите минутку",
+   "ja": "ちょっと待ってください",
+   "ruby": "ちょっと待[ま]ってください",
+   "kana": "ちょっとまってください",
+   "romaji": "chotto matte kudasai",
+   "tags": [
+    "w1",
+    "core"
+   ]
+  },
+  {
+   "id": "basics.konnichiwa",
+   "cat": "basics",
+   "kind": "say",
+   "ru": "Здравствуйте (днём)",
+   "ja": "こんにちは",
+   "ruby": "こんにちは",
+   "kana": "こんにちは",
+   "romaji": "konnichiwa",
+   "note": "は в конце читается «ва».",
+   "tags": [
+    "w1",
+    "core"
+   ]
+  },
+  {
+   "id": "basics.ohayo",
+   "cat": "basics",
+   "kind": "say",
+   "ru": "Доброе утро",
+   "ja": "おはようございます",
+   "ruby": "おはようございます",
+   "kana": "おはようございます",
+   "romaji": "ohayō gozaimasu",
+   "tags": [
+    "w1",
+    "core"
+   ]
+  },
+  {
+   "id": "basics.konbanwa",
+   "cat": "basics",
+   "kind": "say",
+   "ru": "Добрый вечер",
+   "ja": "こんばんは",
+   "ruby": "こんばんは",
+   "kana": "こんばんは",
+   "romaji": "konbanwa",
+   "note": "は в конце читается «ва».",
+   "tags": [
+    "w1",
+    "core"
+   ]
+  },
+  {
+   "id": "basics.shitsurei",
+   "cat": "basics",
+   "kind": "say",
+   "ru": "Извините за беспокойство (входя/выходя)",
+   "ja": "失礼します",
+   "ruby": "失礼[しつれい]します",
+   "kana": "しつれいします",
+   "romaji": "shitsurei shimasu",
+   "tags": [
+    "w1",
+    "core"
+   ]
+  },
+  {
+   "id": "basics.gomen",
+   "cat": "basics",
+   "kind": "say",
+   "ru": "Простите (личное извинение)",
+   "ja": "ごめんなさい",
+   "ruby": "ごめんなさい",
+   "kana": "ごめんなさい",
+   "romaji": "gomen nasai",
+   "note": "С персоналом чаще すみません.",
+   "tags": [
+    "w1",
+    "core"
+   ]
+  },
+  {
+   "id": "basics.dozo",
+   "cat": "basics",
+   "kind": "say",
+   "ru": "Пожалуйста (проходите / берите)",
+   "ja": "どうぞ",
+   "ruby": "どうぞ",
+   "kana": "どうぞ",
+   "romaji": "dōzo",
+   "tags": [
+    "w1",
+    "core"
+   ]
+  },
+  {
+   "id": "basics.korede",
+   "cat": "basics",
+   "kind": "say",
+   "ru": "Вот это подойдёт / так нормально",
+   "ja": "これでいいです",
+   "ruby": "これでいいです",
+   "kana": "これでいいです",
+   "romaji": "kore de ii desu",
+   "tags": [
+    "w1",
+    "core"
+   ]
+  },
+  {
+   "id": "patterns.kudasai",
+   "cat": "patterns",
+   "kind": "pattern",
+   "ru": "Дайте, пожалуйста, это",
+   "ja": "これをください",
+   "ruby": "これをください",
+   "kana": "これをください",
+   "romaji": "kore o kudasai",
+   "note": "～をください — «дайте ～».",
+   "pattern": "～をください",
+   "tags": [
+    "w2",
+    "core"
+   ]
+  },
+  {
+   "id": "patterns.onegai",
+   "cat": "patterns",
+   "kind": "pattern",
+   "ru": "Счёт, пожалуйста",
+   "ja": "お会計をお願いします",
+   "ruby": "お会計[かいけい]をお願[ねが]いします",
+   "kana": "おかいけいをおねがいします",
+   "romaji": "okaikei o onegai shimasu",
+   "note": "～をお願いします — универсальнее, чем ください: и для вещей, и для действий.",
+   "pattern": "～をお願いします",
+   "tags": [
+    "w2",
+    "core"
+   ]
+  },
+  {
+   "id": "patterns.doko",
+   "cat": "patterns",
+   "kind": "pattern",
+   "ru": "Где туалет?",
+   "ja": "トイレはどこですか",
+   "ruby": "トイレはどこですか",
+   "kana": "トイレはどこですか",
+   "romaji": "toire wa doko desu ka",
+   "note": "～はどこですか — «где ～?»",
+   "pattern": "～はどこですか",
+   "tags": [
+    "w2",
+    "core"
+   ]
+  },
+  {
+   "id": "patterns.arimasu",
+   "cat": "patterns",
+   "kind": "pattern",
+   "ru": "Есть меню на английском?",
+   "ja": "英語のメニューはありますか",
+   "ruby": "英語[えいご]のメニューはありますか",
+   "kana": "えいごのメニューはありますか",
+   "romaji": "eigo no menyū wa arimasu ka",
+   "note": "～はありますか — «есть ли ～?»",
+   "pattern": "～はありますか",
+   "tags": [
+    "w2",
+    "core"
+   ]
+  },
+  {
+   "id": "patterns.temoii",
+   "cat": "patterns",
+   "kind": "pattern",
+   "ru": "Можно сфотографировать?",
+   "ja": "写真を撮ってもいいですか",
+   "ruby": "写真[しゃしん]を撮[と]ってもいいですか",
+   "kana": "しゃしんをとってもいいですか",
+   "romaji": "shashin o totte mo ii desu ka",
+   "note": "～てもいいですか — «можно ли ～?»",
+   "pattern": "～てもいいですか",
+   "tags": [
+    "w2",
+    "core"
+   ]
+  },
+  {
+   "id": "patterns.dekimasu",
+   "cat": "patterns",
+   "kind": "pattern",
+   "ru": "Можно оформить tax-free?",
+   "ja": "免税手続きはできますか",
+   "ruby": "免税手続[めんぜいてつづ]きはできますか",
+   "kana": "めんぜいてつづきはできますか",
+   "romaji": "menzei tetsuzuki wa dekimasu ka",
+   "note": "～できますか — «можно ли сделать ～?»",
+   "pattern": "～できますか",
+   "tags": [
+    "w2",
+    "core"
+   ]
+  },
+  {
+   "id": "patterns.tsukaemasu",
+   "cat": "patterns",
+   "kind": "pattern",
+   "ru": "Эту карту принимаете?",
+   "ja": "このカードは使えますか",
+   "ruby": "このカードは使[つか]えますか",
+   "kana": "このカードはつかえますか",
+   "romaji": "kono kādo wa tsukaemasu ka",
+   "note": "～は使えますか — «можно ли использовать ～?»",
+   "pattern": "～は使えますか",
+   "tags": [
+    "w2",
+    "core"
+   ]
+  },
+  {
+   "id": "patterns.ikura",
+   "cat": "patterns",
+   "kind": "pattern",
+   "ru": "Сколько это стоит?",
+   "ja": "これはいくらですか",
+   "ruby": "これはいくらですか",
+   "kana": "これはいくらですか",
+   "romaji": "kore wa ikura desu ka",
+   "note": "～はいくらですか",
+   "pattern": "～はいくらですか",
+   "tags": [
+    "w2",
+    "core"
+   ]
+  },
+  {
+   "id": "patterns.sagashite",
+   "cat": "patterns",
+   "kind": "pattern",
+   "ru": "Ищу б/у объектив",
+   "ja": "中古のレンズを探しています",
+   "ruby": "中古[ちゅうこ]のレンズを探[さが]しています",
+   "kana": "ちゅうこのレンズをさがしています",
+   "romaji": "chūko no renzu o sagashite imasu",
+   "note": "～を探しています — «ищу ～».",
+   "pattern": "～を探しています",
+   "tags": [
+    "w2",
+    "core"
+   ]
+  },
+  {
+   "id": "patterns.moraemasu",
+   "cat": "patterns",
+   "kind": "pattern",
+   "ru": "Можете показать?",
+   "ja": "見せてもらえますか",
+   "ruby": "見[み]せてもらえますか",
+   "kana": "みせてもらえますか",
+   "romaji": "misete moraemasu ka",
+   "note": "～てもらえますか — вежливая просьба «не могли бы вы ～?»",
+   "pattern": "～てもらえますか",
+   "tags": [
+    "w2",
+    "core"
+   ]
+  },
+  {
+   "id": "patterns.ikitai",
+   "cat": "patterns",
+   "kind": "pattern",
+   "ru": "Хочу поехать в Сибую",
+   "ja": "渋谷に行きたいです",
+   "ruby": "渋谷[しぶや]に行[い]きたいです",
+   "kana": "しぶやにいきたいです",
+   "romaji": "Shibuya ni ikitai desu",
+   "note": "～に行きたいです — «хочу в ～».",
+   "pattern": "～に行きたいです",
+   "tags": [
+    "w2",
+    "core"
+   ]
+  },
+  {
+   "id": "patterns.irimasen",
+   "cat": "patterns",
+   "kind": "pattern",
+   "ru": "Пакет не нужен",
+   "ja": "袋はいりません",
+   "ruby": "袋[ふくろ]はいりません",
+   "kana": "ふくろはいりません",
+   "romaji": "fukuro wa irimasen",
+   "note": "～はいりません — «～ не нужно».",
+   "pattern": "～はいりません",
+   "tags": [
+    "w2",
+    "core"
+   ]
+  },
+  {
+   "id": "patterns.taberaremasen",
+   "cat": "patterns",
+   "kind": "pattern",
+   "ru": "Не может есть яйца",
+   "ja": "卵が食べられません",
+   "ruby": "卵[たまご]が食[た]べられません",
+   "kana": "たまごがたべられません",
+   "romaji": "tamago ga taberaremasen",
+   "note": "～が食べられません — «нельзя/не может есть ～».",
+   "pattern": "～が食べられません",
+   "tags": [
+    "w2",
+    "core"
+   ]
+  },
+  {
+   "id": "konbini.kore",
+   "cat": "konbini",
+   "kind": "say",
+   "ru": "Вот это, пожалуйста",
+   "ja": "これをください",
+   "ruby": "これをください",
+   "kana": "これをください",
+   "romaji": "kore o kudasai",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "konbini.kore-two",
+   "cat": "konbini",
+   "kind": "say",
+   "ru": "Вот этого два, пожалуйста",
+   "ja": "これを二つください",
+   "ruby": "これを二[ふた]つください",
+   "kana": "これをふたつください",
+   "romaji": "kore o futatsu kudasai",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "konbini.bag-none",
+   "cat": "konbini",
+   "kind": "say",
+   "ru": "Пакет не нужен",
+   "ja": "袋はいりません",
+   "ruby": "袋[ふくろ]はいりません",
+   "kana": "ふくろはいりません",
+   "romaji": "fukuro wa irimasen",
+   "note": "Ответ на 袋はご利用ですか.",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "konbini.bag-yes",
+   "cat": "konbini",
+   "kind": "say",
+   "ru": "Пакет, пожалуйста",
+   "ja": "袋をお願いします",
+   "ruby": "袋[ふくろ]をお願[ねが]いします",
+   "kana": "ふくろをおねがいします",
+   "romaji": "fukuro o onegai shimasu",
+   "note": "Пакеты платные — несколько иен.",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "konbini.heat",
+   "cat": "konbini",
+   "kind": "say",
+   "ru": "Подогрейте, пожалуйста",
+   "ja": "温めてください",
+   "ruby": "温[あたた]めてください",
+   "kana": "あたためてください",
+   "romaji": "atatamete kudasai",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "konbini.no-heat",
+   "cat": "konbini",
+   "kind": "say",
+   "ru": "Греть не нужно",
+   "ja": "温めなくて大丈夫です",
+   "ruby": "温[あたた]めなくて大丈夫[だいじょうぶ]です",
+   "kana": "あたためなくてだいじょうぶです",
+   "romaji": "atatamenakute daijōbu desu",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "konbini.chopsticks",
+   "cat": "konbini",
+   "kind": "say",
+   "ru": "Две пары палочек, пожалуйста",
+   "ja": "お箸を二つください",
+   "ruby": "お箸[はし]を二[ふた]つください",
+   "kana": "おはしをふたつください",
+   "romaji": "ohashi o futatsu kudasai",
+   "note": "Разговорно; формальный счёт палочек — 膳 (ぜん).",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "konbini.spoon",
+   "cat": "konbini",
+   "kind": "say",
+   "ru": "Ложку, пожалуйста",
+   "ja": "スプーンをください",
+   "ruby": "スプーンをください",
+   "kana": "スプーンをください",
+   "romaji": "supūn o kudasai",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "konbini.card",
+   "cat": "konbini",
+   "kind": "say",
+   "ru": "Можно оплатить картой?",
+   "ja": "カードで払えますか",
+   "ruby": "カードで払[はら]えますか",
+   "kana": "カードではらえますか",
+   "romaji": "kādo de haraemasu ka",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "konbini.ic",
+   "cat": "konbini",
+   "kind": "say",
+   "ru": "Заплачу транспортной картой",
+   "ja": "交通系ICで払います",
+   "ruby": "交通系[こうつうけい]{IC|アイシー}で払[はら]います",
+   "kana": "こうつうけいアイシーではらいます",
+   "romaji": "kōtsūkei aishī de haraimasu",
+   "note": "Проще: «Suica de» (スイカで).",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "konbini.cash",
+   "cat": "konbini",
+   "kind": "say",
+   "ru": "Заплачу наличными",
+   "ja": "現金で払います",
+   "ruby": "現金[げんきん]で払[はら]います",
+   "kana": "げんきんではらいます",
+   "romaji": "genkin de haraimasu",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "konbini.atm",
+   "cat": "konbini",
+   "kind": "say",
+   "ru": "Здесь есть банкомат?",
+   "ja": "ATMはありますか",
+   "ruby": "{ATM|エーティーエム}はありますか",
+   "kana": "エーティーエムはありますか",
+   "romaji": "ētīemu wa arimasu ka",
+   "note": "Банкоматы в 7-Eleven принимают иностранные карты.",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "konbini.toilet",
+   "cat": "konbini",
+   "kind": "say",
+   "ru": "Можно воспользоваться туалетом?",
+   "ja": "トイレを借りてもいいですか",
+   "ruby": "トイレを借[か]りてもいいですか",
+   "kana": "トイレをかりてもいいですか",
+   "romaji": "toire o karite mo ii desu ka",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "konbini.water",
+   "cat": "konbini",
+   "kind": "say",
+   "ru": "Где вода?",
+   "ja": "水はどこですか",
+   "ruby": "水[みず]はどこですか",
+   "kana": "みずはどこですか",
+   "romaji": "mizu wa doko desu ka",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "konbini.receipt-no",
+   "cat": "konbini",
+   "kind": "say",
+   "ru": "Чек не нужен",
+   "ja": "レシートは大丈夫です",
+   "ruby": "レシートは大丈夫[だいじょうぶ]です",
+   "kana": "レシートはだいじょうぶです",
+   "romaji": "reshīto wa daijōbu desu",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "konbini.receipt-yes",
+   "cat": "konbini",
+   "kind": "say",
+   "ru": "Дайте чек, пожалуйста",
+   "ja": "レシートをください",
+   "ruby": "レシートをください",
+   "kana": "レシートをください",
+   "romaji": "reshīto o kudasai",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "konbini.no-point",
+   "cat": "konbini",
+   "kind": "say",
+   "ru": "Бонусной карты нет",
+   "ja": "ポイントカードは持っていません",
+   "ruby": "ポイントカードは持[も]っていません",
+   "kana": "ポイントカードはもっていません",
+   "romaji": "pointo kādo wa motte imasen",
+   "note": "Ответ на ポイントカードはお持ちですか. Можно короче: いいえ.",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "hear.irasshaimase",
+   "cat": "konbini",
+   "kind": "hear",
+   "ru": "Добро пожаловать",
+   "ja": "いらっしゃいませ",
+   "ruby": "いらっしゃいませ",
+   "kana": "いらっしゃいませ",
+   "romaji": "irasshaimase",
+   "note": "Отвечать не нужно — достаточно кивнуть.",
+   "tags": [
+    "w2",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.konbini.bag",
+   "cat": "konbini",
+   "kind": "hear",
+   "ru": "Пакет нужен?",
+   "ja": "袋はご利用ですか",
+   "ruby": "袋[ふくろ]はご利用[りよう]ですか",
+   "kana": "ふくろはごりようですか",
+   "romaji": "fukuro wa go-riyō desu ka",
+   "note": "Ответ: 大丈夫です (не нужно) / お願いします (да). Вариант: レジ袋はご利用ですか.",
+   "tags": [
+    "w2",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.konbini.point",
+   "cat": "konbini",
+   "kind": "hear",
+   "ru": "Есть бонусная карта?",
+   "ja": "ポイントカードはお持ちですか",
+   "ruby": "ポイントカードはお持[も]ちですか",
+   "kana": "ポイントカードはおもちですか",
+   "romaji": "pointo kādo wa omochi desu ka",
+   "note": "Ответ: いいえ / 持っていません.",
+   "tags": [
+    "w2",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.konbini.heat",
+   "cat": "konbini",
+   "kind": "hear",
+   "ru": "Бэнто подогреть?",
+   "ja": "お弁当は温めますか",
+   "ruby": "お弁当[べんとう]は温[あたた]めますか",
+   "kana": "おべんとうはあたためますか",
+   "romaji": "obentō wa atatamemasu ka",
+   "note": "Часто коротко: 温めますか. Ответ: お願いします / 大丈夫です.",
+   "tags": [
+    "w2",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.konbini.hashi",
+   "cat": "konbini",
+   "kind": "hear",
+   "ru": "Палочки положить?",
+   "ja": "お箸はお付けしますか",
+   "ruby": "お箸[はし]はお付[つ]けしますか",
+   "kana": "おはしはおつけしますか",
+   "romaji": "ohashi wa otsuke shimasu ka",
+   "note": "Ответ: お願いします / 大丈夫です.",
+   "tags": [
+    "w2",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.konbini.ijo",
+   "cat": "konbini",
+   "kind": "hear",
+   "ru": "Это всё?",
+   "ja": "以上でよろしいですか",
+   "ruby": "以上[いじょう]でよろしいですか",
+   "kana": "いじょうでよろしいですか",
+   "romaji": "ijō de yoroshii desu ka",
+   "note": "Ответ: はい.",
+   "tags": [
+    "w2",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.konbini.shiharai",
+   "cat": "konbini",
+   "kind": "hear",
+   "ru": "Как будете платить?",
+   "ja": "お支払い方法は",
+   "ruby": "お支払[しはら]い方法[ほうほう]は",
+   "kana": "おしはらいほうほうは",
+   "romaji": "oshiharai hōhō wa",
+   "note": "Часто: お支払いは？ Ответ: カードで / 現金で / Suicaで.",
+   "tags": [
+    "w2",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.konbini.ikkatsu",
+   "cat": "konbini",
+   "kind": "hear",
+   "ru": "Одним платежом? (картой)",
+   "ja": "一括払いでよろしいですか",
+   "ruby": "一括払[いっかつばら]いでよろしいですか",
+   "kana": "いっかつばらいでよろしいですか",
+   "romaji": "ikkatsu-barai de yoroshii desu ka",
+   "note": "Ответ: はい.",
+   "tags": [
+    "w2",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.konbini.pin",
+   "cat": "konbini",
+   "kind": "hear",
+   "ru": "Введите ПИН-код, пожалуйста",
+   "ja": "暗証番号の入力をお願いします",
+   "ruby": "暗証番号[あんしょうばんごう]の入力[にゅうりょく]をお願[ねが]いします",
+   "kana": "あんしょうばんごうのにゅうりょくをおねがいします",
+   "romaji": "anshō bangō no nyūryoku o onegai shimasu",
+   "tags": [
+    "w2",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.konbini.receipt",
+   "cat": "konbini",
+   "kind": "hear",
+   "ru": "Чек нужен?",
+   "ja": "レシートはご入用ですか",
+   "ruby": "レシートはご入用[にゅうよう]ですか",
+   "kana": "レシートはごにゅうようですか",
+   "romaji": "reshīto wa go-nyūyō desu ka",
+   "note": "Ответ: お願いします / 大丈夫です.",
+   "tags": [
+    "w2",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.konbini.azukari",
+   "cat": "konbini",
+   "kind": "hear",
+   "ru": "Принимаю 1000 иен",
+   "ja": "千円お預かりします",
+   "ruby": "千円[せんえん]お預[あず]かりします",
+   "kana": "せんえんおあずかりします",
+   "romaji": "sen-en oazukari shimasu",
+   "note": "Так кассир подтверждает сумму, которую вы дали.",
+   "tags": [
+    "w2",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.konbini.okaeshi",
+   "cat": "konbini",
+   "kind": "hear",
+   "ru": "Ваша сдача — 200 иен",
+   "ja": "二百円のお返しです",
+   "ruby": "二百円[にひゃくえん]のお返[かえ]しです",
+   "kana": "にひゃくえんのおかえしです",
+   "romaji": "nihyaku-en no okaeshi desu",
+   "tags": [
+    "w2",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.konbini.nenrei",
+   "cat": "konbini",
+   "kind": "hear",
+   "ru": "Подтвердите возраст — нажмите на экран",
+   "ja": "年齢確認のため、画面のタッチをお願いします",
+   "ruby": "年齢確認[ねんれいかくにん]のため、画面[がめん]のタッチをお願[ねが]いします",
+   "kana": "ねんれいかくにんのため、がめんのタッチをおねがいします",
+   "romaji": "nenrei kakunin no tame, gamen no tatchi o onegai shimasu",
+   "note": "При покупке алкоголя: нажать «はい» на экране кассы.",
+   "tags": [
+    "w2",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.konbini.gokei",
+   "cat": "konbini",
+   "kind": "hear",
+   "ru": "Итого 〇〇 иен",
+   "ja": "合計〇〇円になります",
+   "ruby": "合計[ごうけい]〇〇円[えん]になります",
+   "kana": "ごうけい〇〇えんになります",
+   "romaji": "gōkei 〇〇-en ni narimasu",
+   "tags": [
+    "w2",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.konbini.otsugi",
+   "cat": "konbini",
+   "kind": "hear",
+   "ru": "Следующий, пожалуйста",
+   "ja": "お次の方どうぞ",
+   "ruby": "お次[つぎ]の方[かた]どうぞ",
+   "kana": "おつぎのかたどうぞ",
+   "romaji": "otsugi no kata dōzo",
+   "tags": [
+    "w2",
+    "hear"
+   ]
+  },
+  {
+   "id": "food.party",
+   "cat": "food",
+   "kind": "say",
+   "ru": "Нас трое",
+   "ja": "三人です",
+   "ruby": "三人[さんにん]です",
+   "kana": "さんにんです",
+   "romaji": "sannin desu",
+   "note": "Ответ на 何名様ですか. Можно показать пальцы.",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "food.party-detail",
+   "cat": "food",
+   "kind": "say",
+   "ru": "Двое взрослых и один ребёнок",
+   "ja": "大人二人と子ども一人です",
+   "ruby": "大人[おとな]二人[ふたり]と子[こ]ども一人[ひとり]です",
+   "kana": "おとなふたりとこどもひとりです",
+   "romaji": "otona futari to kodomo hitori desu",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "food.english-menu",
+   "cat": "food",
+   "kind": "say",
+   "ru": "Есть меню на английском?",
+   "ja": "英語のメニューはありますか",
+   "ruby": "英語[えいご]のメニューはありますか",
+   "kana": "えいごのメニューはありますか",
+   "romaji": "eigo no menyū wa arimasu ka",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "food.photo-menu",
+   "cat": "food",
+   "kind": "say",
+   "ru": "Есть меню с картинками?",
+   "ja": "写真付きのメニューはありますか",
+   "ruby": "写真[しゃしん]付[つ]きのメニューはありますか",
+   "kana": "しゃしんつきのメニューはありますか",
+   "romaji": "shashin-tsuki no menyū wa arimasu ka",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "food.osusume",
+   "cat": "food",
+   "kind": "say",
+   "ru": "Что посоветуете?",
+   "ja": "おすすめは何ですか",
+   "ruby": "おすすめは何[なん]ですか",
+   "kana": "おすすめはなんですか",
+   "romaji": "osusume wa nan desu ka",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "food.this-one",
+   "cat": "food",
+   "kind": "say",
+   "ru": "Вот это одно, пожалуйста",
+   "ja": "これを一つください",
+   "ruby": "これを一[ひと]つください",
+   "kana": "これをひとつください",
+   "romaji": "kore o hitotsu kudasai",
+   "note": "Показывая пальцем в меню.",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "food.this-and-this",
+   "cat": "food",
+   "kind": "say",
+   "ru": "Это — одно, а это — два, пожалуйста",
+   "ja": "これを一つと、これを二つください",
+   "ruby": "これを一[ひと]つと、これを二[ふた]つください",
+   "kana": "これをひとつと、これをふたつください",
+   "romaji": "kore o hitotsu to, kore o futatsu kudasai",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "food.same",
+   "cat": "food",
+   "kind": "say",
+   "ru": "То же самое, пожалуйста",
+   "ja": "同じものをください",
+   "ruby": "同[おな]じものをください",
+   "kana": "おなじものをください",
+   "romaji": "onaji mono o kudasai",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "food.water",
+   "cat": "food",
+   "kind": "say",
+   "ru": "Воды, пожалуйста",
+   "ja": "お水をください",
+   "ruby": "お水[みず]をください",
+   "kana": "おみずをください",
+   "romaji": "omizu o kudasai",
+   "note": "Вода и чай обычно бесплатно.",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "food.kids-chair",
+   "cat": "food",
+   "kind": "say",
+   "ru": "Есть детский стул?",
+   "ja": "子ども用の椅子はありますか",
+   "ruby": "子[こ]ども用[よう]の椅子[いす]はありますか",
+   "kana": "こどもようのいすはありますか",
+   "romaji": "kodomo-yō no isu wa arimasu ka",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "food.kids-menu",
+   "cat": "food",
+   "kind": "say",
+   "ru": "Есть детское меню?",
+   "ja": "お子様メニューはありますか",
+   "ruby": "お子様[こさま]メニューはありますか",
+   "kana": "おこさまメニューはありますか",
+   "romaji": "okosama menyū wa arimasu ka",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "food.small-plates",
+   "cat": "food",
+   "kind": "say",
+   "ru": "Дайте маленькие тарелки (поделить)",
+   "ja": "取り皿をください",
+   "ruby": "取[と]り皿[ざら]をください",
+   "kana": "とりざらをください",
+   "romaji": "torizara o kudasai",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "food.fork",
+   "cat": "food",
+   "kind": "say",
+   "ru": "Можно вилку?",
+   "ja": "フォークをもらえますか",
+   "ruby": "フォークをもらえますか",
+   "kana": "フォークをもらえますか",
+   "romaji": "fōku o moraemasu ka",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "food.not-spicy",
+   "cat": "food",
+   "kind": "say",
+   "ru": "Есть что-нибудь не острое?",
+   "ja": "辛くないものはありますか",
+   "ruby": "辛[から]くないものはありますか",
+   "kana": "からくないものはありますか",
+   "romaji": "karakunai mono wa arimasu ka",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "food.no-spice",
+   "cat": "food",
+   "kind": "say",
+   "ru": "Не делайте острым, пожалуйста",
+   "ja": "辛くしないでください",
+   "ruby": "辛[から]くしないでください",
+   "kana": "からくしないでください",
+   "romaji": "karaku shinaide kudasai",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "food.no-wasabi",
+   "cat": "food",
+   "kind": "say",
+   "ru": "Без васаби, пожалуйста",
+   "ja": "わさび抜きでお願いします",
+   "ruby": "わさび抜[ぬ]きでお願[ねが]いします",
+   "kana": "わさびぬきでおねがいします",
+   "romaji": "wasabi-nuki de onegai shimasu",
+   "note": "Для ребёнка в суши-барах.",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "food.allergen-list",
+   "cat": "food",
+   "kind": "say",
+   "ru": "Есть таблица аллергенов?",
+   "ja": "アレルギー表はありますか",
+   "ruby": "アレルギー表[ひょう]はありますか",
+   "kana": "アレルギーひょうはありますか",
+   "romaji": "arerugī-hyō wa arimasu ka",
+   "note": "В сетевых ресторанах обычно есть.",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "food.share",
+   "cat": "food",
+   "kind": "say",
+   "ru": "Можно поделить порцию с ребёнком?",
+   "ja": "子どもと分けて食べてもいいですか",
+   "ruby": "子[こ]どもと分[わ]けて食[た]べてもいいですか",
+   "kana": "こどもとわけてたべてもいいですか",
+   "romaji": "kodomo to wakete tabete mo ii desu ka",
+   "note": "В некоторых местах требуют заказ на каждого.",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "food.takeout",
+   "cat": "food",
+   "kind": "say",
+   "ru": "Можно навынос?",
+   "ja": "持ち帰りできますか",
+   "ruby": "持[も]ち帰[かえ]りできますか",
+   "kana": "もちかえりできますか",
+   "romaji": "mochikaeri dekimasu ka",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "food.wait",
+   "cat": "food",
+   "kind": "say",
+   "ru": "Сколько ждать?",
+   "ja": "どのくらい待ちますか",
+   "ruby": "どのくらい待[ま]ちますか",
+   "kana": "どのくらいまちますか",
+   "romaji": "dono kurai machimasu ka",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "food.not-yet",
+   "cat": "food",
+   "kind": "say",
+   "ru": "Подождите ещё немного (мы выбираем)",
+   "ja": "もう少し待ってください",
+   "ruby": "もう少[すこ]し待[ま]ってください",
+   "kana": "もうすこしまってください",
+   "romaji": "mō sukoshi matte kudasai",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "food.check",
+   "cat": "food",
+   "kind": "say",
+   "ru": "Счёт, пожалуйста",
+   "ja": "お会計をお願いします",
+   "ruby": "お会計[かいけい]をお願[ねが]いします",
+   "kana": "おかいけいをおねがいします",
+   "romaji": "okaikei o onegai shimasu",
+   "note": "Во многих местах платят на кассе у выхода.",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "food.card",
+   "cat": "food",
+   "kind": "say",
+   "ru": "Карты принимаете?",
+   "ja": "カードは使えますか",
+   "ruby": "カードは使[つか]えますか",
+   "kana": "カードはつかえますか",
+   "romaji": "kādo wa tsukaemasu ka",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "food.ticket",
+   "cat": "food",
+   "kind": "say",
+   "ru": "Где купить талон на еду?",
+   "ja": "食券はどこで買いますか",
+   "ruby": "食券[しょっけん]はどこで買[か]いますか",
+   "kana": "しょっけんはどこでかいますか",
+   "romaji": "shokken wa doko de kaimasu ka",
+   "note": "В раменных и столовых — автомат у входа.",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "food.itadakimasu",
+   "cat": "food",
+   "kind": "say",
+   "ru": "(перед едой) Приятного аппетита / спасибо",
+   "ja": "いただきます",
+   "ruby": "いただきます",
+   "kana": "いただきます",
+   "romaji": "itadakimasu",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "food.oishii",
+   "cat": "food",
+   "kind": "say",
+   "ru": "Было очень вкусно",
+   "ja": "おいしかったです",
+   "ruby": "おいしかったです",
+   "kana": "おいしかったです",
+   "romaji": "oishikatta desu",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "food.gochiso",
+   "cat": "food",
+   "kind": "say",
+   "ru": "Спасибо за угощение (уходя)",
+   "ja": "ごちそうさまでした",
+   "ruby": "ごちそうさまでした",
+   "kana": "ごちそうさまでした",
+   "romaji": "gochisōsama deshita",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "hear.food.nanmei",
+   "cat": "food",
+   "kind": "hear",
+   "ru": "Сколько вас?",
+   "ja": "何名様ですか",
+   "ruby": "何名様[なんめいさま]ですか",
+   "kana": "なんめいさまですか",
+   "romaji": "nanmei-sama desu ka",
+   "note": "Ответ: 三人です (или показать пальцы).",
+   "tags": [
+    "w2",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.food.kochira",
+   "cat": "food",
+   "kind": "hear",
+   "ru": "Проходите сюда",
+   "ja": "こちらへどうぞ",
+   "ruby": "こちらへどうぞ",
+   "kana": "こちらへどうぞ",
+   "romaji": "kochira e dōzo",
+   "tags": [
+    "w2",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.food.shosho",
+   "cat": "food",
+   "kind": "hear",
+   "ru": "Подождите немного",
+   "ja": "少々お待ちください",
+   "ruby": "少々[しょうしょう]お待[ま]ちください",
+   "kana": "しょうしょうおまちください",
+   "romaji": "shōshō omachi kudasai",
+   "tags": [
+    "w2",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.food.order",
+   "cat": "food",
+   "kind": "hear",
+   "ru": "Готовы заказать?",
+   "ja": "ご注文はお決まりですか",
+   "ruby": "ご注文[ちゅうもん]はお決[き]まりですか",
+   "kana": "ごちゅうもんはおきまりですか",
+   "romaji": "go-chūmon wa okimari desu ka",
+   "note": "Ответ: はい / もう少し待ってください.",
+   "tags": [
+    "w2",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.food.drink",
+   "cat": "food",
+   "kind": "hear",
+   "ru": "Что будете пить?",
+   "ja": "お飲み物はいかがですか",
+   "ruby": "お飲[の]み物[もの]はいかがですか",
+   "kana": "おのみものはいかがですか",
+   "romaji": "onomimono wa ikaga desu ka",
+   "tags": [
+    "w2",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.food.eatin",
+   "cat": "food",
+   "kind": "hear",
+   "ru": "Будете есть здесь?",
+   "ja": "店内でお召し上がりですか",
+   "ruby": "店内[てんない]でお召[め]し上[あ]がりですか",
+   "kana": "てんないでおめしあがりですか",
+   "romaji": "tennai de omeshiagari desu ka",
+   "note": "Ответ: はい / 持ち帰りで (mochikaeri de) — навынос.",
+   "tags": [
+    "w2",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.food.karasa",
+   "cat": "food",
+   "kind": "hear",
+   "ru": "Какую остроту сделать?",
+   "ja": "辛さはどうしますか",
+   "ruby": "辛[から]さはどうしますか",
+   "kana": "からさはどうしますか",
+   "romaji": "karasa wa dō shimasu ka",
+   "tags": [
+    "w2",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.food.kashikomari",
+   "cat": "food",
+   "kind": "hear",
+   "ru": "Понятно, будет сделано (ответ персонала на заказ)",
+   "ja": "かしこまりました",
+   "ruby": "かしこまりました",
+   "kana": "かしこまりました",
+   "romaji": "kashikomarimashita",
+   "tags": [
+    "w2",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.food.omatase",
+   "cat": "food",
+   "kind": "hear",
+   "ru": "Извините за ожидание (подают заказ)",
+   "ja": "お待たせしました",
+   "ruby": "お待[ま]たせしました",
+   "kana": "おまたせしました",
+   "romaji": "omatase shimashita",
+   "tags": [
+    "w2",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.food.manseki",
+   "cat": "food",
+   "kind": "hear",
+   "ru": "Сейчас все места заняты",
+   "ja": "ただいま満席です",
+   "ruby": "ただいま満席[まんせき]です",
+   "kana": "ただいままんせきです",
+   "romaji": "tadaima manseki desu",
+   "note": "Ответ: 待ちます (machimasu) — подождём.",
+   "tags": [
+    "w2",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.food.lastorder",
+   "cat": "food",
+   "kind": "hear",
+   "ru": "Последний заказ",
+   "ja": "ラストオーダーです",
+   "ruby": "ラストオーダーです",
+   "kana": "ラストオーダーです",
+   "romaji": "rasuto ōdā desu",
+   "tags": [
+    "w2",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.food.urikire",
+   "cat": "food",
+   "kind": "hear",
+   "ru": "Извините, закончилось",
+   "ja": "申し訳ございません、売り切れです",
+   "ruby": "申[もう]し訳[わけ]ございません、売[う]り切[き]れです",
+   "kana": "もうしわけございません、うりきれです",
+   "romaji": "mōshiwake gozaimasen, urikire desu",
+   "tags": [
+    "w2",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.food.reji",
+   "cat": "food",
+   "kind": "hear",
+   "ru": "Оплата на кассе, пожалуйста",
+   "ja": "お会計はレジでお願いします",
+   "ruby": "お会計[かいけい]はレジでお願[ねが]いします",
+   "kana": "おかいけいはレジでおねがいします",
+   "romaji": "okaikei wa reji de onegai shimasu",
+   "tags": [
+    "w2",
+    "hear"
+   ]
+  },
+  {
+   "id": "transport.station",
+   "cat": "transport",
+   "kind": "say",
+   "ru": "Где станция 〇〇?",
+   "ja": "〇〇駅はどこですか",
+   "ruby": "〇〇駅[えき]はどこですか",
+   "kana": "〇〇えきはどこですか",
+   "romaji": "〇〇-eki wa doko desu ka",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "transport.this-train",
+   "cat": "transport",
+   "kind": "say",
+   "ru": "Этот поезд идёт до 〇〇?",
+   "ja": "この電車は〇〇に行きますか",
+   "ruby": "この電車[でんしゃ]は〇〇に行[い]きますか",
+   "kana": "このでんしゃは〇〇にいきますか",
+   "romaji": "kono densha wa 〇〇 ni ikimasu ka",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "transport.platform",
+   "cat": "transport",
+   "kind": "say",
+   "ru": "С какой платформы поезд до 〇〇?",
+   "ja": "〇〇行きは何番線ですか",
+   "ruby": "〇〇行[い]きは何番線[なんばんせん]ですか",
+   "kana": "〇〇いきはなんばんせんですか",
+   "romaji": "〇〇-iki wa nanbansen desu ka",
+   "note": "В объявлениях 行き часто звучит как ゆき (yuki).",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "transport.transfer",
+   "cat": "transport",
+   "kind": "say",
+   "ru": "Где пересадка?",
+   "ja": "乗り換えはどこですか",
+   "ruby": "乗[の]り換[か]えはどこですか",
+   "kana": "のりかえはどこですか",
+   "romaji": "norikae wa doko desu ka",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "transport.tickets",
+   "cat": "transport",
+   "kind": "say",
+   "ru": "До 〇〇: два взрослых и один детский билет",
+   "ja": "〇〇まで大人二枚、子ども一枚お願いします",
+   "ruby": "〇〇まで大人[おとな]二枚[にまい]、子[こ]ども一枚[いちまい]お願[ねが]いします",
+   "kana": "〇〇までおとなにまい、こどもいちまいおねがいします",
+   "romaji": "〇〇 made otona nimai, kodomo ichimai onegai shimasu",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "transport.next-train",
+   "cat": "transport",
+   "kind": "say",
+   "ru": "Во сколько следующий поезд?",
+   "ja": "次の電車は何時ですか",
+   "ruby": "次[つぎ]の電車[でんしゃ]は何時[なんじ]ですか",
+   "kana": "つぎのでんしゃはなんじですか",
+   "romaji": "tsugi no densha wa nanji desu ka",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "transport.how-to",
+   "cat": "transport",
+   "kind": "say",
+   "ru": "Как добраться до 〇〇?",
+   "ja": "〇〇へはどうやって行けばいいですか",
+   "ruby": "〇〇へはどうやって行[い]けばいいですか",
+   "kana": "〇〇へはどうやっていけばいいですか",
+   "romaji": "〇〇 e wa dō yatte ikeba ii desu ka",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "transport.bus-stop",
+   "cat": "transport",
+   "kind": "say",
+   "ru": "Этот автобус останавливается у 〇〇?",
+   "ja": "このバスは〇〇に止まりますか",
+   "ruby": "このバスは〇〇に止[と]まりますか",
+   "kana": "このバスは〇〇にとまりますか",
+   "romaji": "kono basu wa 〇〇 ni tomarimasu ka",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "transport.exit",
+   "cat": "transport",
+   "kind": "say",
+   "ru": "Где восточный выход?",
+   "ja": "東口はどこですか",
+   "ruby": "東口[ひがしぐち]はどこですか",
+   "kana": "ひがしぐちはどこですか",
+   "romaji": "higashiguchi wa doko desu ka",
+   "note": "Выходы: 東口 восточный, 西口 западный, 南口 южный, 北口 северный.",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "transport.charge",
+   "cat": "transport",
+   "kind": "say",
+   "ru": "Где пополнить карту?",
+   "ja": "チャージはどこでできますか",
+   "ruby": "チャージはどこでできますか",
+   "kana": "チャージはどこでできますか",
+   "romaji": "chāji wa doko de dekimasu ka",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "transport.lost-ticket",
+   "cat": "transport",
+   "kind": "say",
+   "ru": "Я потерял билет",
+   "ja": "切符をなくしました",
+   "ruby": "切符[きっぷ]をなくしました",
+   "kana": "きっぷをなくしました",
+   "romaji": "kippu o nakushimashita",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "transport.overshot",
+   "cat": "transport",
+   "kind": "say",
+   "ru": "Я проехал свою остановку",
+   "ja": "乗り過ごしました",
+   "ruby": "乗[の]り過[す]ごしました",
+   "kana": "のりすごしました",
+   "romaji": "norisugoshimashita",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "transport.reserved",
+   "cat": "transport",
+   "kind": "say",
+   "ru": "Хочу забронировать места",
+   "ja": "指定席を予約したいです",
+   "ruby": "指定席[していせき]を予約[よやく]したいです",
+   "kana": "していせきをよやくしたいです",
+   "romaji": "shiteiseki o yoyaku shitai desu",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "transport.together",
+   "cat": "transport",
+   "kind": "say",
+   "ru": "Можно сесть втроём рядом?",
+   "ja": "三人並んで座れますか",
+   "ruby": "三人[さんにん]並[なら]んで座[すわ]れますか",
+   "kana": "さんにんならんですわれますか",
+   "romaji": "sannin narande suwaremasu ka",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "transport.stroller",
+   "cat": "transport",
+   "kind": "say",
+   "ru": "Можно сесть, не складывая коляску?",
+   "ja": "ベビーカーのまま乗れますか",
+   "ruby": "ベビーカーのまま乗[の]れますか",
+   "kana": "ベビーカーのままのれますか",
+   "romaji": "bebīkā no mama noremasu ka",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "transport.locker",
+   "cat": "transport",
+   "kind": "say",
+   "ru": "Где камеры хранения?",
+   "ja": "コインロッカーはどこですか",
+   "ruby": "コインロッカーはどこですか",
+   "kana": "コインロッカーはどこですか",
+   "romaji": "koin rokkā wa doko desu ka",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "transport.elevator",
+   "cat": "transport",
+   "kind": "say",
+   "ru": "Где лифт?",
+   "ja": "エレベーターはどこですか",
+   "ruby": "エレベーターはどこですか",
+   "kana": "エレベーターはどこですか",
+   "romaji": "erebētā wa doko desu ka",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "transport.taxi-address",
+   "cat": "transport",
+   "kind": "say",
+   "ru": "(Такси) По этому адресу, пожалуйста",
+   "ja": "この住所までお願いします",
+   "ruby": "この住所[じゅうしょ]までお願[ねが]いします",
+   "kana": "このじゅうしょまでおねがいします",
+   "romaji": "kono jūsho made onegai shimasu",
+   "note": "Показать карточку адреса отеля.",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "transport.taxi-time",
+   "cat": "transport",
+   "kind": "say",
+   "ru": "Сколько ехать до 〇〇?",
+   "ja": "〇〇までどのくらいかかりますか",
+   "ruby": "〇〇までどのくらいかかりますか",
+   "kana": "〇〇までどのくらいかかりますか",
+   "romaji": "〇〇 made dono kurai kakarimasu ka",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "transport.taxi-stop",
+   "cat": "transport",
+   "kind": "say",
+   "ru": "Остановите здесь, пожалуйста",
+   "ja": "ここで止めてください",
+   "ruby": "ここで止[と]めてください",
+   "kana": "ここでとめてください",
+   "romaji": "koko de tomete kudasai",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "transport.taxi-trunk",
+   "cat": "transport",
+   "kind": "say",
+   "ru": "Откройте, пожалуйста, багажник",
+   "ja": "トランクを開けてもらえますか",
+   "ruby": "トランクを開[あ]けてもらえますか",
+   "kana": "トランクをあけてもらえますか",
+   "romaji": "toranku o akete moraemasu ka",
+   "tags": [
+    "w2"
+   ]
+  },
+  {
+   "id": "hear.transport.mamonaku",
+   "cat": "transport",
+   "kind": "hear",
+   "ru": "Скоро прибудет поезд",
+   "ja": "まもなく電車が参ります",
+   "ruby": "まもなく電車[でんしゃ]が参[まい]ります",
+   "kana": "まもなくでんしゃがまいります",
+   "romaji": "mamonaku densha ga mairimasu",
+   "tags": [
+    "w3",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.transport.kiiroi",
+   "cat": "transport",
+   "kind": "hear",
+   "ru": "Отойдите за жёлтую линию",
+   "ja": "黄色い線の内側までお下がりください",
+   "ruby": "黄色[きいろ]い線[せん]の内側[うちがわ]までお下[さ]がりください",
+   "kana": "きいろいせんのうちがわまでおさがりください",
+   "romaji": "kiiroi sen no uchigawa made osagari kudasai",
+   "tags": [
+    "w3",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.transport.doa",
+   "cat": "transport",
+   "kind": "hear",
+   "ru": "Двери закрываются",
+   "ja": "ドアが閉まります",
+   "ruby": "ドアが閉[し]まります",
+   "kana": "ドアがしまります",
+   "romaji": "doa ga shimarimasu",
+   "tags": [
+    "w3",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.transport.tsugi",
+   "cat": "transport",
+   "kind": "hear",
+   "ru": "Следующая станция — 〇〇",
+   "ja": "次は〇〇、〇〇です",
+   "ruby": "次[つぎ]は〇〇、〇〇です",
+   "kana": "つぎは〇〇、〇〇です",
+   "romaji": "tsugi wa 〇〇, 〇〇 desu",
+   "tags": [
+    "w3",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.transport.deguchi",
+   "cat": "transport",
+   "kind": "hear",
+   "ru": "Выход справа",
+   "ja": "お出口は右側です",
+   "ruby": "お出口[でぐち]は右側[みぎがわ]です",
+   "kana": "おでぐちはみぎがわです",
+   "romaji": "odeguchi wa migigawa desu",
+   "note": "Левая сторона — 左側 (hidarigawa).",
+   "tags": [
+    "w3",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.transport.norikae",
+   "cat": "transport",
+   "kind": "hear",
+   "ru": "Здесь пересадка на линию 〇〇",
+   "ja": "〇〇線はお乗り換えです",
+   "ruby": "〇〇線[せん]はお乗[の]り換[か]えです",
+   "kana": "〇〇せんはおのりかえです",
+   "romaji": "〇〇-sen wa onorikae desu",
+   "tags": [
+    "w3",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.transport.shuten",
+   "cat": "transport",
+   "kind": "hear",
+   "ru": "Конечная станция",
+   "ja": "終点です",
+   "ruby": "終点[しゅうてん]です",
+   "kana": "しゅうてんです",
+   "romaji": "shūten desu",
+   "tags": [
+    "w3",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.transport.okure",
+   "cat": "transport",
+   "kind": "hear",
+   "ru": "Поезд задерживается",
+   "ja": "電車が遅れています",
+   "ruby": "電車[でんしゃ]が遅[おく]れています",
+   "kana": "でんしゃがおくれています",
+   "romaji": "densha ga okurete imasu",
+   "tags": [
+    "w3",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.taxi.dochira",
+   "cat": "transport",
+   "kind": "hear",
+   "ru": "(Такси) Куда едем?",
+   "ja": "どちらまでですか",
+   "ruby": "どちらまでですか",
+   "kana": "どちらまでですか",
+   "romaji": "dochira made desu ka",
+   "note": "Ответ: показать адрес + この住所までお願いします.",
+   "tags": [
+    "w3",
+    "hear"
+   ]
+  },
+  {
+   "id": "hotel.checkin",
+   "cat": "hotel",
+   "kind": "say",
+   "ru": "Заселение, пожалуйста. Бронь на имя 〇〇",
+   "ja": "チェックインをお願いします。予約した〇〇です",
+   "ruby": "チェックインをお願[ねが]いします。予約[よやく]した〇〇です",
+   "kana": "チェックインをおねがいします。よやくした〇〇です",
+   "romaji": "chekkuin o onegai shimasu. yoyaku shita 〇〇 desu",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "hotel.luggage",
+   "cat": "hotel",
+   "kind": "say",
+   "ru": "Можно оставить у вас багаж?",
+   "ja": "荷物を預かってもらえますか",
+   "ruby": "荷物[にもつ]を預[あず]かってもらえますか",
+   "kana": "にもつをあずかってもらえますか",
+   "romaji": "nimotsu o azukatte moraemasu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "hotel.breakfast",
+   "cat": "hotel",
+   "kind": "say",
+   "ru": "Со скольки завтрак?",
+   "ja": "朝食は何時からですか",
+   "ruby": "朝食[ちょうしょく]は何時[なんじ]からですか",
+   "kana": "ちょうしょくはなんじからですか",
+   "romaji": "chōshoku wa nanji kara desu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "hotel.checkout",
+   "cat": "hotel",
+   "kind": "say",
+   "ru": "Во сколько выезд?",
+   "ja": "チェックアウトは何時ですか",
+   "ruby": "チェックアウトは何時[なんじ]ですか",
+   "kana": "チェックアウトはなんじですか",
+   "romaji": "chekkuauto wa nanji desu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "hotel.late-checkout",
+   "cat": "hotel",
+   "kind": "say",
+   "ru": "Можно выехать попозже?",
+   "ja": "チェックアウトを遅くできますか",
+   "ruby": "チェックアウトを遅[おそ]くできますか",
+   "kana": "チェックアウトをおそくできますか",
+   "romaji": "chekkuauto o osoku dekimasu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "hotel.wifi",
+   "cat": "hotel",
+   "kind": "say",
+   "ru": "Скажите, пожалуйста, пароль от Wi-Fi",
+   "ja": "Wi-Fiのパスワードを教えてください",
+   "ruby": "{Wi-Fi|ワイファイ}のパスワードを教[おし]えてください",
+   "kana": "ワイファイのパスワードをおしえてください",
+   "romaji": "waifai no pasuwādo o oshiete kudasai",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "hotel.towel",
+   "cat": "hotel",
+   "kind": "say",
+   "ru": "Ещё одно полотенце, пожалуйста",
+   "ja": "タオルをもう一枚お願いします",
+   "ruby": "タオルをもう一枚[いちまい]お願[ねが]いします",
+   "kana": "タオルをもういちまいおねがいします",
+   "romaji": "taoru o mō ichimai onegai shimasu",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "hotel.futon",
+   "cat": "hotel",
+   "kind": "say",
+   "ru": "Ещё один комплект футона, пожалуйста",
+   "ja": "布団をもう一組お願いします",
+   "ruby": "布団[ふとん]をもう一組[ひとくみ]お願[ねが]いします",
+   "kana": "ふとんをもうひとくみおねがいします",
+   "romaji": "futon o mō hitokumi onegai shimasu",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "hotel.crib",
+   "cat": "hotel",
+   "kind": "say",
+   "ru": "Есть детская кроватка?",
+   "ja": "ベビーベッドはありますか",
+   "ruby": "ベビーベッドはありますか",
+   "kana": "ベビーベッドはありますか",
+   "romaji": "bebī beddo wa arimasu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "hotel.aircon",
+   "cat": "hotel",
+   "kind": "say",
+   "ru": "Кондиционер не включается",
+   "ja": "エアコンがつきません",
+   "ruby": "エアコンがつきません",
+   "kana": "エアコンがつきません",
+   "romaji": "eakon ga tsukimasen",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "hotel.key",
+   "cat": "hotel",
+   "kind": "say",
+   "ru": "Я оставил ключ в номере",
+   "ja": "鍵を部屋に忘れました",
+   "ruby": "鍵[かぎ]を部屋[へや]に忘[わす]れました",
+   "kana": "かぎをへやにわすれました",
+   "romaji": "kagi o heya ni wasuremashita",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "hotel.laundry",
+   "cat": "hotel",
+   "kind": "say",
+   "ru": "Есть прачечная самообслуживания?",
+   "ja": "コインランドリーはありますか",
+   "ruby": "コインランドリーはありますか",
+   "kana": "コインランドリーはありますか",
+   "romaji": "koin randorī wa arimasu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "hotel.taxi",
+   "cat": "hotel",
+   "kind": "say",
+   "ru": "Вызовите, пожалуйста, такси",
+   "ja": "タクシーを呼んでもらえますか",
+   "ruby": "タクシーを呼[よ]んでもらえますか",
+   "kana": "タクシーをよんでもらえますか",
+   "romaji": "takushī o yonde moraemasu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "hear.hotel.passport",
+   "cat": "hotel",
+   "kind": "hear",
+   "ru": "Паспорт, пожалуйста",
+   "ja": "パスポートをお願いします",
+   "ruby": "パスポートをお願[ねが]いします",
+   "kana": "パスポートをおねがいします",
+   "romaji": "pasupōto o onegai shimasu",
+   "tags": [
+    "w3",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.hotel.name",
+   "cat": "hotel",
+   "kind": "hear",
+   "ru": "Ваше имя, пожалуйста",
+   "ja": "お名前をお願いします",
+   "ruby": "お名前[なまえ]をお願[ねが]いします",
+   "kana": "おなまえをおねがいします",
+   "romaji": "onamae o onegai shimasu",
+   "tags": [
+    "w3",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.hotel.kinyu",
+   "cat": "hotel",
+   "kind": "hear",
+   "ru": "Заполните здесь, пожалуйста",
+   "ja": "こちらにご記入ください",
+   "ruby": "こちらにご記入[きにゅう]ください",
+   "kana": "こちらにごきにゅうください",
+   "romaji": "kochira ni go-kinyū kudasai",
+   "tags": [
+    "w3",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.hotel.floor",
+   "cat": "hotel",
+   "kind": "hear",
+   "ru": "Ваш номер на 〇 этаже",
+   "ja": "お部屋は〇階です",
+   "ruby": "お部屋[へや]は〇階[かい]です",
+   "kana": "おへやは〇かいです",
+   "romaji": "oheya wa 〇-kai desu",
+   "tags": [
+    "w3",
+    "hear"
+   ]
+  },
+  {
+   "id": "shop.used-floor",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "Где отдел б/у камер?",
+   "ja": "中古カメラの売り場はどこですか",
+   "ruby": "中古[ちゅうこ]カメラの売[う]り場[ば]はどこですか",
+   "kana": "ちゅうこカメラのうりばはどこですか",
+   "romaji": "chūko kamera no uriba wa doko desu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "shop.floor",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "На каком этаже 〇〇?",
+   "ja": "〇〇は何階ですか",
+   "ruby": "〇〇は何階[なんがい]ですか",
+   "kana": "〇〇はなんがいですか",
+   "romaji": "〇〇 wa nangai desu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "shop.looking-lens",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "Ищу объектив 〇〇",
+   "ja": "〇〇のレンズを探しています",
+   "ruby": "〇〇のレンズを探[さが]しています",
+   "kana": "〇〇のレンズをさがしています",
+   "romaji": "〇〇 no renzu o sagashite imasu",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "shop.looking-body",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "Ищу корпус (тушку) 〇〇",
+   "ja": "〇〇のボディを探しています",
+   "ruby": "〇〇のボディを探[さが]しています",
+   "kana": "〇〇のボディをさがしています",
+   "romaji": "〇〇 no bodi o sagashite imasu",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "shop.film",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "Есть плёнка?",
+   "ja": "フィルムはありますか",
+   "ruby": "フィルムはありますか",
+   "kana": "フィルムはありますか",
+   "romaji": "firumu wa arimasu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "shop.show",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "Можете показать это?",
+   "ja": "これを見せてもらえますか",
+   "ruby": "これを見[み]せてもらえますか",
+   "kana": "これをみせてもらえますか",
+   "romaji": "kore o misete moraemasu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "shop.touch",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "Можно взять в руки?",
+   "ja": "手に取ってもいいですか",
+   "ruby": "手[て]に取[と]ってもいいですか",
+   "kana": "てにとってもいいですか",
+   "romaji": "te ni totte mo ii desu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "shop.test-shot",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "Можно сделать пробный снимок?",
+   "ja": "試し撮りしてもいいですか",
+   "ruby": "試[ため]し撮[ど]りしてもいいですか",
+   "kana": "ためしどりしてもいいですか",
+   "romaji": "tameshidori shite mo ii desu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "shop.own-card",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "Можно проверить со своей картой памяти?",
+   "ja": "自分のメモリーカードで試してもいいですか",
+   "ruby": "自分[じぶん]のメモリーカードで試[ため]してもいいですか",
+   "kana": "じぶんのメモリーカードでためしてもいいですか",
+   "romaji": "jibun no memorī kādo de tameshite mo ii desu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "shop.fungus",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "Есть грибок или помутнение (в линзах)?",
+   "ja": "カビやクモリはありますか",
+   "ruby": "カビやクモリはありますか",
+   "kana": "カビやクモリはありますか",
+   "romaji": "kabi ya kumori wa arimasu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "shop.checked",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "Работоспособность проверена?",
+   "ja": "動作確認済みですか",
+   "ruby": "動作確認済[どうさかくにんず]みですか",
+   "kana": "どうさかくにんずみですか",
+   "romaji": "dōsa kakunin-zumi desu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "shop.shutter",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "Известен пробег затвора?",
+   "ja": "シャッター回数はわかりますか",
+   "ruby": "シャッター回数[かいすう]はわかりますか",
+   "kana": "シャッターかいすうはわかりますか",
+   "romaji": "shattā kaisū wa wakarimasu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "shop.warranty",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "Гарантия сколько месяцев?",
+   "ja": "保証は何か月ですか",
+   "ruby": "保証[ほしょう]は何[なん]か月[げつ]ですか",
+   "kana": "ほしょうはなんかげつですか",
+   "romaji": "hoshō wa nankagetsu desu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "shop.accessories",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "Что в комплекте?",
+   "ja": "付属品は何がありますか",
+   "ruby": "付属品[ふぞくひん]は何[なに]がありますか",
+   "kana": "ふぞくひんはなにがありますか",
+   "romaji": "fuzokuhin wa nani ga arimasu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "shop.box-papers",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "(Часы) Есть коробка и гарантийный талон?",
+   "ja": "箱と保証書はありますか",
+   "ruby": "箱[はこ]と保証書[ほしょうしょ]はありますか",
+   "kana": "はことほしょうしょはありますか",
+   "romaji": "hako to hoshōsho wa arimasu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "shop.intl-warranty",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "Есть международная гарантия?",
+   "ja": "国際保証は付いていますか",
+   "ruby": "国際保証[こくさいほしょう]は付[つ]いていますか",
+   "kana": "こくさいほしょうはついていますか",
+   "romaji": "kokusai hoshō wa tsuite imasu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "shop.genuine",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "Это официальный ввоз?",
+   "ja": "正規品ですか",
+   "ruby": "正規品[せいきひん]ですか",
+   "kana": "せいきひんですか",
+   "romaji": "seikihin desu ka",
+   "note": "Альтернатива — 並行輸入 (параллельный импорт).",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "shop.overhaul",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "(Часы) Обслуживание сделано?",
+   "ja": "オーバーホール済みですか",
+   "ruby": "オーバーホール済[ず]みですか",
+   "kana": "オーバーホールずみですか",
+   "romaji": "ōbāhōru-zumi desu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "shop.battery",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "Можно заменить батарейку?",
+   "ja": "電池交換はできますか",
+   "ruby": "電池交換[でんちこうかん]はできますか",
+   "kana": "でんちこうかんはできますか",
+   "romaji": "denchi kōkan wa dekimasu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "shop.bracelet",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "Можете подогнать браслет/ремешок?",
+   "ja": "ベルトの調整をお願いできますか",
+   "ruby": "ベルトの調整[ちょうせい]をお願[ねが]いできますか",
+   "kana": "ベルトのちょうせいをおねがいできますか",
+   "romaji": "beruto no chōsei o onegai dekimasu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "shop.taxfree",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "Можно оформить tax-free?",
+   "ja": "免税手続きはできますか",
+   "ruby": "免税手続[めんぜいてつづ]きはできますか",
+   "kana": "めんぜいてつづきはできますか",
+   "romaji": "menzei tetsuzuki wa dekimasu ka",
+   "note": "С 1.11.2026 платите полную цену, налог возвращают после таможни при вылете.",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "shop.passport",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "Вот паспорт",
+   "ja": "パスポートはこれです",
+   "ruby": "パスポートはこれです",
+   "kana": "パスポートはこれです",
+   "romaji": "pasupōto wa kore desu",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "shop.zeikomi",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "Цена с налогом?",
+   "ja": "税込みですか",
+   "ruby": "税込[ぜいこ]みですか",
+   "kana": "ぜいこみですか",
+   "romaji": "zeikomi desu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "shop.ikura",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "Сколько это стоит?",
+   "ja": "これはいくらですか",
+   "ruby": "これはいくらですか",
+   "kana": "これはいくらですか",
+   "romaji": "kore wa ikura desu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "shop.discount",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "Можно чуть дешевле?",
+   "ja": "少し安くなりますか",
+   "ruby": "少[すこ]し安[やす]くなりますか",
+   "kana": "すこしやすくなりますか",
+   "romaji": "sukoshi yasuku narimasu ka",
+   "note": "В сетевых магазинах торг обычно не принят; в маленьких б/у лавках иногда можно.",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "shop.other-color",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "Есть другой цвет?",
+   "ja": "他の色はありますか",
+   "ruby": "他[ほか]の色[いろ]はありますか",
+   "kana": "ほかのいろはありますか",
+   "romaji": "hoka no iro wa arimasu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "shop.stock",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "Есть в наличии?",
+   "ja": "在庫はありますか",
+   "ruby": "在庫[ざいこ]はありますか",
+   "kana": "ざいこはありますか",
+   "romaji": "zaiko wa arimasu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "shop.card",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "Эту карту принимаете?",
+   "ja": "このカードは使えますか",
+   "ruby": "このカードは使[つか]えますか",
+   "kana": "このカードはつかえますか",
+   "romaji": "kono kādo wa tsukaemasu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "shop.gift",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "Можете упаковать как подарок?",
+   "ja": "プレゼント用に包んでもらえますか",
+   "ruby": "プレゼント用[よう]に包[つつ]んでもらえますか",
+   "kana": "プレゼントようにつつんでもらえますか",
+   "romaji": "purezento-yō ni tsutsunde moraemasu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "shop.take",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "Беру это",
+   "ja": "これにします",
+   "ruby": "これにします",
+   "kana": "これにします",
+   "romaji": "kore ni shimasu",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "shop.think",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "Я подумаю",
+   "ja": "ちょっと考えます",
+   "ruby": "ちょっと考[かんが]えます",
+   "kana": "ちょっとかんがえます",
+   "romaji": "chotto kangaemasu",
+   "note": "Вежливый способ уйти без покупки.",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "shop.looking",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "Просто смотрю",
+   "ja": "見ているだけです",
+   "ruby": "見[み]ているだけです",
+   "kana": "みているだけです",
+   "romaji": "mite iru dake desu",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "hear.shop.sagashi",
+   "cat": "shop",
+   "kind": "hear",
+   "ru": "Что-нибудь ищете?",
+   "ja": "何かお探しですか",
+   "ruby": "何[なに]かお探[さが]しですか",
+   "kana": "なにかおさがしですか",
+   "romaji": "nanika osagashi desu ka",
+   "note": "Ответ: 〇〇を探しています / 見ているだけです.",
+   "tags": [
+    "w3",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.shop.passport",
+   "cat": "shop",
+   "kind": "hear",
+   "ru": "Покажите паспорт, пожалуйста",
+   "ja": "パスポートをお見せください",
+   "ruby": "パスポートをお見[み]せください",
+   "kana": "パスポートをおみせください",
+   "romaji": "pasupōto o omise kudasai",
+   "tags": [
+    "w3",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.shop.satsuei",
+   "cat": "shop",
+   "kind": "hear",
+   "ru": "Съёмка запрещена",
+   "ja": "撮影はご遠慮ください",
+   "ruby": "撮影[さつえい]はご遠慮[えんりょ]ください",
+   "kana": "さつえいはごえんりょください",
+   "romaji": "satsuei wa go-enryo kudasai",
+   "note": "«ご遠慮ください» — вежливый запрет, а не просьба.",
+   "tags": [
+    "w3",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.shop.fureru",
+   "cat": "shop",
+   "kind": "hear",
+   "ru": "Пожалуйста, не трогайте руками",
+   "ja": "お手を触れないでください",
+   "ruby": "お手[て]を触[ふ]れないでください",
+   "kana": "おてをふれないでください",
+   "romaji": "ote o furenaide kudasai",
+   "tags": [
+    "w3",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.shop.zaiko",
+   "cat": "shop",
+   "kind": "hear",
+   "ru": "Нет в наличии",
+   "ja": "在庫がございません",
+   "ruby": "在庫[ざいこ]がございません",
+   "kana": "ざいこがございません",
+   "romaji": "zaiko ga gozaimasen",
+   "tags": [
+    "w3",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.shop.hosho",
+   "cat": "shop",
+   "kind": "hear",
+   "ru": "Гарантия 〇 месяцев",
+   "ja": "保証は〇か月です",
+   "ruby": "保証[ほしょう]は〇か月[げつ]です",
+   "kana": "ほしょうは〇かげつです",
+   "romaji": "hoshō wa 〇-kagetsu desu",
+   "tags": [
+    "w3",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.shop.counter",
+   "cat": "shop",
+   "kind": "hear",
+   "ru": "Стойка tax-free на 〇 этаже",
+   "ja": "免税カウンターは〇階です",
+   "ruby": "免税[めんぜい]カウンターは〇階[かい]です",
+   "kana": "めんぜいカウンターは〇かいです",
+   "romaji": "menzei kauntā wa 〇-kai desu",
+   "tags": [
+    "w3",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.shop.tsutsumi",
+   "cat": "shop",
+   "kind": "hear",
+   "ru": "Упаковать?",
+   "ja": "お包みしますか",
+   "ruby": "お包[つつ]みしますか",
+   "kana": "おつつみしますか",
+   "romaji": "otsutsumi shimasu ka",
+   "tags": [
+    "w3",
+    "hear"
+   ]
+  },
+  {
+   "id": "family.allergy",
+   "cat": "family",
+   "kind": "say",
+   "ru": "У ребёнка аллергия на яйца",
+   "ja": "子どもは卵アレルギーです",
+   "ruby": "子[こ]どもは卵[たまご]アレルギーです",
+   "kana": "こどもはたまごアレルギーです",
+   "romaji": "kodomo wa tamago arerugī desu",
+   "note": "Замените 卵 на нужный аллерген. Карточка «Аллергия» — во вкладке «Показать».",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "family.contains",
+   "cat": "family",
+   "kind": "say",
+   "ru": "В этом есть яйца?",
+   "ja": "これに卵は入っていますか",
+   "ruby": "これに卵[たまご]は入[はい]っていますか",
+   "kana": "これにたまごははいっていますか",
+   "romaji": "kore ni tamago wa haitte imasu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "family.dairy",
+   "cat": "family",
+   "kind": "say",
+   "ru": "Ребёнку нельзя молочное",
+   "ja": "子どもは乳製品が食べられません",
+   "ruby": "子[こ]どもは乳製品[にゅうせいひん]が食[た]べられません",
+   "kana": "こどもはにゅうせいひんがたべられません",
+   "romaji": "kodomo wa nyūseihin ga taberaremasen",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "family.lost",
+   "cat": "family",
+   "kind": "say",
+   "ru": "Ребёнок потерялся",
+   "ja": "子どもが迷子になりました",
+   "ruby": "子[こ]どもが迷子[まいご]になりました",
+   "kana": "こどもがまいごになりました",
+   "romaji": "kodomo ga maigo ni narimashita",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "family.hospital",
+   "cat": "family",
+   "kind": "say",
+   "ru": "Рядом есть больница?",
+   "ja": "近くに病院はありますか",
+   "ruby": "近[ちか]くに病院[びょういん]はありますか",
+   "kana": "ちかくにびょういんはありますか",
+   "romaji": "chikaku ni byōin wa arimasu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "family.pediatric",
+   "cat": "family",
+   "kind": "say",
+   "ru": "Где детский врач?",
+   "ja": "小児科はどこですか",
+   "ruby": "小児科[しょうにか]はどこですか",
+   "kana": "しょうにかはどこですか",
+   "romaji": "shōnika wa doko desu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "family.pharmacy",
+   "cat": "family",
+   "kind": "say",
+   "ru": "Где аптека?",
+   "ja": "薬局はどこですか",
+   "ruby": "薬局[やっきょく]はどこですか",
+   "kana": "やっきょくはどこですか",
+   "romaji": "yakkyoku wa doko desu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "family.kids-medicine",
+   "cat": "family",
+   "kind": "say",
+   "ru": "Есть лекарство для детей?",
+   "ja": "子ども用の薬はありますか",
+   "ruby": "子[こ]ども用[よう]の薬[くすり]はありますか",
+   "kana": "こどもようのくすりはありますか",
+   "romaji": "kodomo-yō no kusuri wa arimasu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "family.fever",
+   "cat": "family",
+   "kind": "say",
+   "ru": "У ребёнка поднялась температура",
+   "ja": "子どもが熱を出しました",
+   "ruby": "子[こ]どもが熱[ねつ]を出[だ]しました",
+   "kana": "こどもがねつをだしました",
+   "romaji": "kodomo ga netsu o dashimashita",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "family.stomach",
+   "cat": "family",
+   "kind": "say",
+   "ru": "Болит живот",
+   "ja": "お腹が痛いです",
+   "ruby": "お腹[なか]が痛[いた]いです",
+   "kana": "おなかがいたいです",
+   "romaji": "onaka ga itai desu",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "family.sick",
+   "cat": "family",
+   "kind": "say",
+   "ru": "Мне плохо",
+   "ja": "気分が悪いです",
+   "ruby": "気分[きぶん]が悪[わる]いです",
+   "kana": "きぶんがわるいです",
+   "romaji": "kibun ga warui desu",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "family.injury",
+   "cat": "family",
+   "kind": "say",
+   "ru": "Я поранился / получил травму",
+   "ja": "けがをしました",
+   "ruby": "けがをしました",
+   "kana": "けがをしました",
+   "romaji": "kega o shimashita",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "family.insurance",
+   "cat": "family",
+   "kind": "say",
+   "ru": "У меня есть туристическая страховка",
+   "ja": "海外旅行保険に入っています",
+   "ruby": "海外旅行保険[かいがいりょこうほけん]に入[はい]っています",
+   "kana": "かいがいりょこうほけんにはいっています",
+   "romaji": "kaigai ryokō hoken ni haitte imasu",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "family.ambulance",
+   "cat": "family",
+   "kind": "say",
+   "ru": "Вызовите скорую!",
+   "ja": "救急車を呼んでください",
+   "ruby": "救急車[きゅうきゅうしゃ]を呼[よ]んでください",
+   "kana": "きゅうきゅうしゃをよんでください",
+   "romaji": "kyūkyūsha o yonde kudasai",
+   "note": "Телефон: 119.",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "family.police",
+   "cat": "family",
+   "kind": "say",
+   "ru": "Вызовите полицию!",
+   "ja": "警察を呼んでください",
+   "ruby": "警察[けいさつ]を呼[よ]んでください",
+   "kana": "けいさつをよんでください",
+   "romaji": "keisatsu o yonde kudasai",
+   "note": "Телефон: 110.",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "family.help",
+   "cat": "family",
+   "kind": "say",
+   "ru": "Помогите!",
+   "ja": "助けてください",
+   "ruby": "助[たす]けてください",
+   "kana": "たすけてください",
+   "romaji": "tasukete kudasai",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "family.koban",
+   "cat": "family",
+   "kind": "say",
+   "ru": "Где полицейский пост?",
+   "ja": "交番はどこですか",
+   "ruby": "交番[こうばん]はどこですか",
+   "kana": "こうばんはどこですか",
+   "romaji": "kōban wa doko desu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "family.diaper",
+   "cat": "family",
+   "kind": "say",
+   "ru": "Где можно поменять подгузник?",
+   "ja": "おむつを替える場所はありますか",
+   "ruby": "おむつを替[か]える場所[ばしょ]はありますか",
+   "kana": "おむつをかえるばしょはありますか",
+   "romaji": "omutsu o kaeru basho wa arimasu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "family.nursing",
+   "cat": "family",
+   "kind": "say",
+   "ru": "Есть комната матери и ребёнка?",
+   "ja": "授乳室はありますか",
+   "ruby": "授乳室[じゅにゅうしつ]はありますか",
+   "kana": "じゅにゅうしつはありますか",
+   "romaji": "junyūshitsu wa arimasu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "family.kid-toilet",
+   "cat": "family",
+   "kind": "say",
+   "ru": "Ребёнку нужно в туалет",
+   "ja": "子どもがトイレに行きたいです",
+   "ruby": "子[こ]どもがトイレに行[い]きたいです",
+   "kana": "こどもがトイレにいきたいです",
+   "romaji": "kodomo ga toire ni ikitai desu",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "family.wallet",
+   "cat": "family",
+   "kind": "say",
+   "ru": "Я потерял кошелёк",
+   "ja": "財布をなくしました",
+   "ruby": "財布[さいふ]をなくしました",
+   "kana": "さいふをなくしました",
+   "romaji": "saifu o nakushimashita",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "family.phone",
+   "cat": "family",
+   "kind": "say",
+   "ru": "Я потерял телефон",
+   "ja": "スマホをなくしました",
+   "ruby": "スマホをなくしました",
+   "kana": "スマホをなくしました",
+   "romaji": "sumaho o nakushimashita",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "hear.family.dou",
+   "cat": "family",
+   "kind": "hear",
+   "ru": "Что случилось?",
+   "ja": "どうしましたか",
+   "ruby": "どうしましたか",
+   "kana": "どうしましたか",
+   "romaji": "dō shimashita ka",
+   "tags": [
+    "w3",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.family.itai",
+   "cat": "family",
+   "kind": "hear",
+   "ru": "Где болит?",
+   "ja": "どこが痛いですか",
+   "ruby": "どこが痛[いた]いですか",
+   "kana": "どこがいたいですか",
+   "romaji": "doko ga itai desu ka",
+   "tags": [
+    "w3",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.family.nansai",
+   "cat": "family",
+   "kind": "hear",
+   "ru": "Сколько лет (ребёнку)?",
+   "ja": "何歳ですか",
+   "ruby": "何歳[なんさい]ですか",
+   "kana": "なんさいですか",
+   "romaji": "nansai desu ka",
+   "tags": [
+    "w3",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.family.hoken",
+   "cat": "family",
+   "kind": "hear",
+   "ru": "У вас есть страховой полис?",
+   "ja": "保険証はお持ちですか",
+   "ruby": "保険証[ほけんしょう]はお持[も]ちですか",
+   "kana": "ほけんしょうはおもちですか",
+   "romaji": "hokenshō wa omochi desu ka",
+   "tags": [
+    "w3",
+    "hear"
+   ]
+  },
+  {
+   "id": "numbers.ikura",
+   "cat": "numbers",
+   "kind": "say",
+   "ru": "Сколько стоит?",
+   "ja": "いくらですか",
+   "ruby": "いくらですか",
+   "kana": "いくらですか",
+   "romaji": "ikura desu ka",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "numbers.zenbu",
+   "cat": "numbers",
+   "kind": "say",
+   "ru": "Сколько всего?",
+   "ja": "全部でいくらですか",
+   "ruby": "全部[ぜんぶ]でいくらですか",
+   "kana": "ぜんぶでいくらですか",
+   "romaji": "zenbu de ikura desu ka",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "numbers.300",
+   "cat": "numbers",
+   "kind": "say",
+   "ru": "300 иен",
+   "ja": "三百円",
+   "ruby": "三百円[さんびゃくえん]",
+   "kana": "さんびゃくえん",
+   "romaji": "sanbyaku-en",
+   "note": "Звуковое изменение: さん + ひゃく → さんびゃく.",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "numbers.600",
+   "cat": "numbers",
+   "kind": "say",
+   "ru": "600 иен",
+   "ja": "六百円",
+   "ruby": "六百円[ろっぴゃくえん]",
+   "kana": "ろっぴゃくえん",
+   "romaji": "roppyaku-en",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "numbers.800",
+   "cat": "numbers",
+   "kind": "say",
+   "ru": "800 иен",
+   "ja": "八百円",
+   "ruby": "八百円[はっぴゃくえん]",
+   "kana": "はっぴゃくえん",
+   "romaji": "happyaku-en",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "numbers.1000",
+   "cat": "numbers",
+   "kind": "say",
+   "ru": "1 000 иен",
+   "ja": "千円",
+   "ruby": "千円[せんえん]",
+   "kana": "せんえん",
+   "romaji": "sen-en",
+   "note": "Не «いちせん» — просто せん.",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "numbers.3000",
+   "cat": "numbers",
+   "kind": "say",
+   "ru": "3 000 иен",
+   "ja": "三千円",
+   "ruby": "三千円[さんぜんえん]",
+   "kana": "さんぜんえん",
+   "romaji": "sanzen-en",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "numbers.8000",
+   "cat": "numbers",
+   "kind": "say",
+   "ru": "8 000 иен",
+   "ja": "八千円",
+   "ruby": "八千円[はっせんえん]",
+   "kana": "はっせんえん",
+   "romaji": "hassen-en",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "numbers.10000",
+   "cat": "numbers",
+   "kind": "say",
+   "ru": "10 000 иен",
+   "ja": "一万円",
+   "ruby": "一万円[いちまんえん]",
+   "kana": "いちまんえん",
+   "romaji": "ichiman-en",
+   "note": "Японцы считают по 4 разряда: 万 = 10 000.",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "numbers.128000",
+   "cat": "numbers",
+   "kind": "say",
+   "ru": "128 000 иен",
+   "ja": "十二万八千円",
+   "ruby": "十二万八千円[じゅうにまんはっせんえん]",
+   "kana": "じゅうにまんはっせんえん",
+   "romaji": "jūniman hassen-en",
+   "note": "12万8千 = 12 × 10 000 + 8 × 1 000.",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "numbers.nanji",
+   "cat": "numbers",
+   "kind": "say",
+   "ru": "Который час? / Во сколько?",
+   "ja": "何時ですか",
+   "ruby": "何時[なんじ]ですか",
+   "kana": "なんじですか",
+   "romaji": "nanji desu ka",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "numbers.ima",
+   "cat": "numbers",
+   "kind": "say",
+   "ru": "Сколько сейчас времени?",
+   "ja": "今何時ですか",
+   "ruby": "今[いま]何時[なんじ]ですか",
+   "kana": "いまなんじですか",
+   "romaji": "ima nanji desu ka",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "numbers.4ji",
+   "cat": "numbers",
+   "kind": "say",
+   "ru": "4 часа",
+   "ja": "四時",
+   "ruby": "四時[よじ]",
+   "kana": "よじ",
+   "romaji": "yoji",
+   "note": "Не よんじ.",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "numbers.7ji",
+   "cat": "numbers",
+   "kind": "say",
+   "ru": "7 часов",
+   "ja": "七時",
+   "ruby": "七時[しちじ]",
+   "kana": "しちじ",
+   "romaji": "shichiji",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "numbers.9ji-han",
+   "cat": "numbers",
+   "kind": "say",
+   "ru": "Половина десятого (9:30)",
+   "ja": "九時半",
+   "ruby": "九時半[くじはん]",
+   "kana": "くじはん",
+   "romaji": "kuji han",
+   "note": "Не きゅうじ.",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "numbers.10fun",
+   "cat": "numbers",
+   "kind": "say",
+   "ru": "10 минут",
+   "ja": "十分",
+   "ruby": "十分[じゅっぷん]",
+   "kana": "じゅっぷん",
+   "romaji": "juppun",
+   "tts": "じゅっぷん",
+   "note": "Также じっぷん. Не путать с 十分 (じゅうぶん) — «достаточно».",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "numbers.akimasu",
+   "cat": "numbers",
+   "kind": "say",
+   "ru": "Во сколько открываетесь?",
+   "ja": "何時に開きますか",
+   "ruby": "何時[なんじ]に開[あ]きますか",
+   "kana": "なんじにあきますか",
+   "romaji": "nanji ni akimasu ka",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "numbers.made",
+   "cat": "numbers",
+   "kind": "say",
+   "ru": "До скольки работаете?",
+   "ja": "何時までですか",
+   "ruby": "何時[なんじ]までですか",
+   "kana": "なんじまでですか",
+   "romaji": "nanji made desu ka",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "numbers.gozen",
+   "cat": "numbers",
+   "kind": "say",
+   "ru": "До полудня и после полудня",
+   "ja": "午前と午後",
+   "ruby": "午前[ごぜん]と午後[ごご]",
+   "kana": "ごぜんとごご",
+   "romaji": "gozen to gogo",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "numbers.kyou",
+   "cat": "numbers",
+   "kind": "say",
+   "ru": "Сегодня",
+   "ja": "今日",
+   "ruby": "今日[きょう]",
+   "kana": "きょう",
+   "romaji": "kyō",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "numbers.ashita",
+   "cat": "numbers",
+   "kind": "say",
+   "ru": "Завтра",
+   "ja": "明日",
+   "ruby": "明日[あした]",
+   "kana": "あした",
+   "romaji": "ashita",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "numbers.kinou",
+   "cat": "numbers",
+   "kind": "say",
+   "ru": "Вчера",
+   "ja": "昨日",
+   "ruby": "昨日[きのう]",
+   "kana": "きのう",
+   "romaji": "kinō",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "numbers.mainichi",
+   "cat": "numbers",
+   "kind": "say",
+   "ru": "Каждый день",
+   "ja": "毎日",
+   "ruby": "毎日[まいにち]",
+   "kana": "まいにち",
+   "romaji": "mainichi",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "numbers.donichi",
+   "cat": "numbers",
+   "kind": "say",
+   "ru": "Выходные (суббота и воскресенье)",
+   "ja": "土日",
+   "ruby": "土日[どにち]",
+   "kana": "どにち",
+   "romaji": "donichi",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "numbers.december",
+   "cat": "numbers",
+   "kind": "say",
+   "ru": "Декабрь",
+   "ja": "十二月",
+   "ruby": "十二月[じゅうにがつ]",
+   "kana": "じゅうにがつ",
+   "romaji": "jūnigatsu",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "numbers.tsu",
+   "cat": "numbers",
+   "kind": "say",
+   "ru": "Одна, две, три (штуки)",
+   "ja": "一つ、二つ、三つ",
+   "ruby": "一[ひと]つ、二[ふた]つ、三[みっ]つ",
+   "kana": "ひとつ、ふたつ、みっつ",
+   "romaji": "hitotsu, futatsu, mittsu",
+   "note": "Общий счёт: подходит почти для всего при заказе.",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "numbers.nin",
+   "cat": "numbers",
+   "kind": "say",
+   "ru": "Один, два, три человека",
+   "ja": "一人、二人、三人",
+   "ruby": "一人[ひとり]、二人[ふたり]、三人[さんにん]",
+   "kana": "ひとり、ふたり、さんにん",
+   "romaji": "hitori, futari, sannin",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "numbers.hon",
+   "cat": "numbers",
+   "kind": "say",
+   "ru": "1, 2, 3 (бутылки, зонты)",
+   "ja": "一本、二本、三本",
+   "ruby": "一本[いっぽん]、二本[にほん]、三本[さんぼん]",
+   "kana": "いっぽん、にほん、さんぼん",
+   "romaji": "ippon, nihon, sanbon",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "numbers.mai",
+   "cat": "numbers",
+   "kind": "say",
+   "ru": "1, 2, 3 (билеты, полотенца)",
+   "ja": "一枚、二枚、三枚",
+   "ruby": "一枚[いちまい]、二枚[にまい]、三枚[さんまい]",
+   "kana": "いちまい、にまい、さんまい",
+   "romaji": "ichimai, nimai, sanmai",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "numbers.ko",
+   "cat": "numbers",
+   "kind": "say",
+   "ru": "1, 2, 3 (мелкие предметы)",
+   "ja": "一個、二個、三個",
+   "ruby": "一個[いっこ]、二個[にこ]、三個[さんこ]",
+   "kana": "いっこ、にこ、さんこ",
+   "romaji": "ikko, niko, sanko",
+   "tags": [
+    "w1"
+   ]
+  },
+  {
+   "id": "card.intro",
+   "cat": "cards",
+   "kind": "card",
+   "ru": "Извините, я плохо говорю по-японски. Посмотрите, пожалуйста, на экран.",
+   "ja": "すみません、日本語があまり話せません。この画面を見ていただけますか。",
+   "ruby": "すみません、日本語[にほんご]があまり話[はな]せません。この画面[がめん]を見[み]ていただけますか。",
+   "kana": "すみません、にほんごがあまりはなせません。このがめんをみていただけますか。",
+   "romaji": "sumimasen, nihongo ga amari hanasemasen. kono gamen o mite itadakemasu ka.",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "card.slow",
+   "cat": "cards",
+   "kind": "card",
+   "ru": "Пожалуйста, медленно и простым японским.",
+   "ja": "ゆっくり、簡単な日本語でお願いします。",
+   "ruby": "ゆっくり、簡単[かんたん]な日本語[にほんご]でお願[ねが]いします。",
+   "kana": "ゆっくり、かんたんなにほんごでおねがいします。",
+   "romaji": "yukkuri, kantan na nihongo de onegai shimasu.",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "card.taxfree",
+   "cat": "cards",
+   "kind": "card",
+   "ru": "Оформите, пожалуйста, tax-free на этот товар.",
+   "ja": "この商品の免税手続きをお願いします。",
+   "ruby": "この商品[しょうひん]の免税手続[めんぜいてつづ]きをお願[ねが]いします。",
+   "kana": "このしょうひんのめんぜいてつづきをおねがいします。",
+   "romaji": "kono shōhin no menzei tetsuzuki o onegai shimasu.",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "card.photo",
+   "cat": "cards",
+   "kind": "card",
+   "ru": "Можно сфотографировать?",
+   "ja": "写真を撮ってもいいですか。",
+   "ruby": "写真[しゃしん]を撮[と]ってもいいですか。",
+   "kana": "しゃしんをとってもいいですか。",
+   "romaji": "shashin o totte mo ii desu ka.",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "card.lost-way",
+   "cat": "cards",
+   "kind": "card",
+   "ru": "Я заблудился. Мне нужно сюда.",
+   "ja": "道に迷いました。ここに行きたいです。",
+   "ruby": "道[みち]に迷[まよ]いました。ここに行[い]きたいです。",
+   "kana": "みちにまよいました。ここにいきたいです。",
+   "romaji": "michi ni mayoimashita. koko ni ikitai desu.",
+   "note": "Показать вместе с картой/адресом.",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "card.thanks",
+   "cat": "cards",
+   "kind": "card",
+   "ru": "Спасибо за вашу доброту!",
+   "ja": "ご親切にありがとうございました。",
+   "ruby": "ご親切[しんせつ]にありがとうございました。",
+   "kana": "ごしんせつにありがとうございました。",
+   "romaji": "go-shinsetsu ni arigatō gozaimashita.",
+   "tags": [
+    "w3"
+   ]
+  }
+ ]
+}
