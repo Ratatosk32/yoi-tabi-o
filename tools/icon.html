@@ -1,0 +1,16 @@
+<!doctype html><meta charset="utf-8">
+<style>
+  html,body{margin:0;width:100vw;height:100vh;overflow:hidden;background:#14161c}
+  .c{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border-radius:50%;background:#e8574a;
+     display:flex;align-items:center;justify-content:center;color:#fff;
+     font-family:"Yu Gothic UI","Yu Gothic","Meiryo","Noto Sans JP",sans-serif;font-weight:700;line-height:1}
+</style>
+<div class="c" id="c">旅</div>
+<script>
+  const p = new URLSearchParams(location.search);
+  const s = innerWidth, m = p.get('m') === '1';
+  const d = Math.round(s * (m ? 0.56 : 0.78));
+  const c = document.getElementById('c');
+  c.style.width = c.style.height = d + 'px';
+  c.style.fontSize = Math.round(d * 0.56) + 'px';
+</script>

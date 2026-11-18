@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Диагностика · Japan Trip</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#14161c">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    #view { padding-bottom: calc(40px + env(safe-area-inset-bottom)); }
+    .t { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; margin: var(--space-2) 0; }
+    .res { font-size: 13px; color: var(--color-text-2); word-break: break-word; }
+    #log { width: 100%; min-height: 160px; font: 12px/1.4 var(--font-mono); }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th, td { border-bottom: 1px solid var(--color-line); padding: 6px 4px; text-align: left; vertical-align: middle; }
+    th { color: var(--color-text-2); font-weight: 600; }
+    td.col { width: 96px; text-align: center; }
+    td.col.off { color: var(--color-muted); }
+    .yn { display: inline-flex; gap: 4px; }
+  </style>
+</head>
+<body>
+<main id="view">
+  <header class="top"><h1>Диагностика</h1><a class="btn small" href="./">← В приложение</a></header>
+  <p class="hint">Откройте эту страницу на каждом телефоне. Сначала нажмите кнопки-тесты, потом отметьте результат в колонке своего устройства и нажмите «Скопировать отчёт».</p>
+  <p class="small">Устройство: <strong id="plat"></strong></p>
+
+  <section class="card">
+    <h2 class="section">1. Японский голос (TTS)</h2>
+    <div class="t"><button class="btn" id="voices">Показать голоса</button><span class="res" id="voices-res"></span></div>
+    <div id="voices-table"></div>
+    <div class="t">
+      <button class="btn" data-say="袋はご利用ですか">▶ 袋はご利用ですか</button>
+      <button class="btn" data-say="12800円">▶ 12800円</button>
+      <button class="btn" data-say="じゅっぷん">▶ じゅっぷん</button>
+    </div>
+    <p class="small">12800円 должно звучать «итиман нисэн хаппяку эн» (いちまんにせんはっぴゃくえん). Затем включите авиарежим и повторите.</p>
+  </section>
+
+  <section class="card">
+    <h2 class="section">2. Google Lens / камера</h2>
+    <div class="t" id="lens-links"></div>
+  </section>
+
+  <section class="card">
+    <h2 class="section">3. Google Переводчик</h2>
+    <div class="t" id="tr-links"></div>
+  </section>
+
+  <section class="card">
+    <h2 class="section">4. MyMemory (CORS, только онлайн)</h2>
+    <div class="t"><button class="btn" id="mm">Проверить запрос</button><span class="res" id="mm-res"></span></div>
+  </section>
+
+  <section class="card">
+    <h2 class="section">5. Экран, офлайн, хранилище</h2>
+    <div class="t"><button class="btn" id="wl">Wake Lock на 2 минуты</button><span class="res" id="wl-res"></span></div>
+    <div class="t"><button class="btn" id="sw">Статус Service Worker</button><span class="res" id="sw-res"></span></div>
+    <div class="t"><button class="btn" id="st">Хранилище</button><span class="res" id="st-res"></span></div>
+  </section>
+
+  <section class="card">
+    <h2 class="section">Результаты</h2>
+    <table id="checks"><thead><tr><th>Проверка</th><th>Pixel</th><th>iPhone</th></tr></thead><tbody></tbody></table>
+  </section>
+
+  <section class="card">
+    <h2 class="section">Отчёт</h2>
+    <textarea id="log" readonly></textarea>
+    <div class="t"><button class="btn primary" id="copy">Скопировать отчёт</button></div>
+  </section>
+</main>
+<script type="module">
+  import * as tts from './modules/tts.js';
+  import * as L from './modules/launchers.js';
+
+  const $ = (s) => document.querySelector(s);
+  const PLAT = L.PLATFORM; // 'android' | 'ios' | 'other'
+  const COL = PLAT === 'ios' ? 'iphone' : 'pixel';
+  $('#plat').textContent = PLAT === 'ios' ? 'iPhone (Safari)' : PLAT === 'android' ? 'Android (Chrome)' : 'другое (' + navigator.platform + ')';
+  const standalone = matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+  const report = { platform: PLAT, standalone, ua: navigator.userAgent, time: new Date().toISOString(), checks: {}, notes: {} };
+  const log = () => { $('#log').value = JSON.stringify(report, null, 1); };
+  const note = (k, v) => { report.notes[k] = v; log(); };
+
+  // Таблица проверок: [ключ, текст, где применимо]
+  const CHECKS = [
+    ['tts-online', 'Японский голос звучит (онлайн)', ['pixel', 'iphone']],
+    ['tts-offline', 'Японский голос звучит в авиарежиме', ['pixel', 'iphone']],
+    ['tts-12800', '12800円 читается правильно', ['pixel', 'iphone']],
+    ['lens-1', 'Lens: вариант 1 открыл камеру', ['pixel', 'iphone']],
+    ['lens-2', 'Lens: вариант 2 открыл камеру', ['pixel', 'iphone']],
+    ['lens-3', 'Lens: вариант 3 полезен', ['pixel']],
+    ['live-text', 'Камера → Live Text → «Перевести» японский', ['iphone']],
+    ['circle', 'Circle to Search переводит экран', ['pixel']],
+    ['tr-web', 'Ссылка Переводчика открыла ПРИЛОЖЕНИЕ', ['pixel', 'iphone']],
+    ['tr-app', 'Кнопка «приложение» открыла Переводчик с текстом', ['pixel', 'iphone']],
+    ['tr-share', '«Поделиться» показал Переводчик', ['pixel', 'iphone']],
+    ['wakelock', 'Экран не гас 2 минуты (Wake Lock)', ['pixel', 'iphone']],
+    ['install', 'Установлено на домашний экран', ['pixel', 'iphone']],
+    ['offline-start', 'С иконки открывается в авиарежиме', ['pixel', 'iphone']],
+    ['backup', 'Копия прогресса скачалась и восстановилась', ['pixel', 'iphone']],
+  ];
+  const tbody = $('#checks tbody');
+  for (const [key, label, where] of CHECKS) {
+    const tr = document.createElement('tr');
+    const td = document.createElement('td'); td.textContent = label; tr.append(td);
+    for (const col of ['pixel', 'iphone']) {
+      const c = document.createElement('td'); c.className = 'col';
+      if (!where.includes(col)) { c.textContent = 'н/п'; c.classList.add('off'); }
+      else if (col !== COL) { c.textContent = '—'; c.classList.add('off'); c.title = 'Отметьте на другом устройстве'; }
+      else {
+        const box = document.createElement('span'); box.className = 'yn';
+        for (const [v, l] of [['yes', 'Да'], ['no', 'Нет']]) {
+          const b = document.createElement('button'); b.className = 'btn small'; b.textContent = l;
+          b.onclick = () => { report.checks[`${col}:${key}`] = v; box.querySelectorAll('button').forEach((x) => x.classList.remove('primary')); b.classList.add('primary'); log(); };
+          box.append(b);
+        }
+        c.append(box);
+      }
+      tr.append(c);
+    }
+    tbody.append(tr);
+  }
+
+  // 1. TTS
+  $('#voices').onclick = async () => {
+    const st = await tts.init();
+    const list = tts.listVoices();
+    $('#voices-res').textContent = `голосов: ${list.length}; японский: ${st.hasJapanese ? st.jaVoiceName : 'НЕ НАЙДЕН'}`;
+    const ja = list.filter((v) => /^ja/i.test(v.lang));
+    const rows = (ja.length ? ja : list.slice(0, 15));
+    $('#voices-table').innerHTML = '<table>' + rows.map((v) => `<tr><td>${v.name.replace(/</g, '&lt;')}</td><td>${v.lang}</td><td>${v.local ? 'local' : 'network'}</td></tr>`).join('') + '</table>';
+    note('tts', { ...st, ja });
+  };
+  document.querySelectorAll('[data-say]').forEach((b) => {
+    b.onclick = () => { tts.speak(b.dataset.say, 1.0).then((r) => note('speak:' + b.dataset.say, r)); };
+  });
+
+  // 2. Lens — варианты текущей платформы
+  const lens = $('#lens-links');
+  Object.entries(L.LENS_VARIANTS).forEach(([k, v], i) => {
+    const a = document.createElement('a');
+    a.className = 'btn'; a.href = v.url(); a.textContent = `${i + 1}. ${v.label}`;
+    a.onclick = () => note('lens-click', k);
+    lens.append(a);
+  });
+
+  // 3. Translate
+  const sample = 'Где здесь туалет?';
+  const tr = $('#tr-links');
+  const link = (label, href, blank) => { const a = document.createElement('a'); a.className = 'btn'; a.href = href; a.textContent = label; if (blank) { a.target = '_blank'; a.rel = 'noopener'; } tr.append(a); };
+  link('Ссылка translate.google.com', L.translateUrl(sample), true);
+  link(PLAT === 'ios' ? 'Приложение (googletranslate://)' : 'Приложение (intent)', L.translateAppUrl(sample), false);
+  const sb = document.createElement('button'); sb.className = 'btn'; sb.textContent = 'Поделиться…';
+  sb.onclick = async () => note('share', await L.shareText(sample)); tr.append(sb);
+
+  // 4. MyMemory
+  $('#mm').onclick = async () => {
+    try {
+      const r = await fetch('https://api.mymemory.translated.net/get?q=' + encodeURIComponent('Где туалет?') + '&langpair=ru|ja');
+      const j = await r.json();
+      const txt = j?.responseData?.translatedText;
+      $('#mm-res').textContent = `OK (CORS разрешён): ${txt}`;
+      note('mymemory', { ok: true, status: r.status, txt, quota: j?.quotaFinished });
+    } catch (e) {
+      $('#mm-res').textContent = 'Ошибка: ' + e.message;
+      note('mymemory', { ok: false, error: String(e) });
+    }
+  };
+
+  // 5. Wake lock, SW, storage
+  $('#wl').onclick = async () => {
+    if (!('wakeLock' in navigator)) { $('#wl-res').textContent = 'API нет в этом браузере'; note('wakeLock', 'unsupported'); return; }
+    try {
+      const lock = await navigator.wakeLock.request('screen');
+      $('#wl-res').textContent = 'включён — экран не должен гаснуть 2 минуты';
+      note('wakeLock', 'ok');
+      setTimeout(() => lock.release(), 120000);
+    } catch (e) { $('#wl-res').textContent = 'нет: ' + e.message; note('wakeLock', String(e)); }
+  };
+  $('#sw').onclick = async () => {
+    const reg = await navigator.serviceWorker?.getRegistration();
+    const keys = 'caches' in self ? await caches.keys() : [];
+    const s = { supported: 'serviceWorker' in navigator, controlled: !!navigator.serviceWorker?.controller, active: !!reg?.active, caches: keys, standalone };
+    $('#sw-res').textContent = JSON.stringify(s);
+    note('sw', s);
+  };
+  $('#st').onclick = async () => {
+    const est = await navigator.storage?.estimate?.();
+    const persisted = await navigator.storage?.persisted?.();
+    const s = { persisted, usageKB: est ? Math.round(est.usage / 1024) : null, quotaMB: est ? Math.round(est.quota / 1048576) : null };
+    $('#st-res').textContent = JSON.stringify(s);
+    note('storage', s);
+  };
+  $('#copy').onclick = async () => {
+    log();
+    try { await navigator.clipboard.writeText($('#log').value); $('#copy').textContent = 'Скопировано'; }
+    catch { $('#log').select(); }
+  };
+  log();
+</script>
+</body>
+</html>

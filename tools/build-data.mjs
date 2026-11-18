@@ -18,8 +18,8 @@ const out = (name, data) => {
 
 const VERSION = 1;
 const weekOf = Object.fromEntries(CATEGORIES.map((c) => [c.id, c.week]));
-// Фразы персонала конбини и ресторана слушаем со 2-й недели, остальное — с 3-й
-const HEAR_WEEK = { konbini: 2, food: 2, transport: 3, hotel: 3, shop: 3, family: 3 };
+// Слушание: касса конбини — с 1-й недели, ресторан — со 2-й, остальное — с 3-й
+const HEAR_WEEK = { konbini: 1, food: 2, transport: 3, hotel: 3, shop: 3, family: 3 };
 
 function row([id, ruby, romaji, ru, note, more], extra) {
   const it = completeItem({ id, ...extra, ru, ruby, romaji });

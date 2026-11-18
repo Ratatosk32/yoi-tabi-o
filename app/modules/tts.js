@@ -62,7 +62,10 @@ export function speak(text, rate = 1.0) {
   if (!s || !text) return Promise.resolve('unsupported');
   return new Promise((resolve) => {
     try {
-      s.cancel();
+      // На iOS/WebKit cancel() непосредственно перед speak() может «проглотить» новую фразу,
+      // поэтому отменяем только если что-то реально звучит.
+      if (s.speaking || s.pending) s.cancel();
+      if (!voices.length) refresh(); // iOS отдаёт голоса лениво — пробуем ещё раз в момент жеста
       const u = new SpeechSynthesisUtterance(text);
       u.lang = 'ja-JP';
       if (jaVoice) u.voice = jaVoice;

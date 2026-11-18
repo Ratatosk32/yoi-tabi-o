@@ -4,61 +4,61 @@
   {
    "id": "basics",
    "ru": "Вежливые формулы",
-   "icon": "🙇",
+   "icon": "礼",
    "week": 1
   },
   {
    "id": "patterns",
    "ru": "Шаблоны",
-   "icon": "🧩",
+   "icon": "型",
    "week": 2
   },
   {
    "id": "konbini",
    "ru": "Конбини и супермаркет",
-   "icon": "🏪",
+   "icon": "店",
    "week": 1
   },
   {
    "id": "food",
    "ru": "Ресторан и еда",
-   "icon": "🍜",
+   "icon": "食",
    "week": 2
   },
   {
    "id": "transport",
    "ru": "Поезда и такси",
-   "icon": "🚃",
+   "icon": "駅",
    "week": 2
   },
   {
    "id": "hotel",
    "ru": "Отель",
-   "icon": "🏨",
+   "icon": "宿",
    "week": 3
   },
   {
    "id": "shop",
    "ru": "Покупки: фото, часы, tax-free",
-   "icon": "📷",
+   "icon": "買",
    "week": 3
   },
   {
    "id": "family",
    "ru": "Ребёнок, здоровье, экстренное",
-   "icon": "🧒",
+   "icon": "子",
    "week": 3
   },
   {
    "id": "numbers",
    "ru": "Числа, время, счёт",
-   "icon": "🔢",
+   "icon": "数",
    "week": 1
   },
   {
    "id": "cards",
    "ru": "Карточки «показать»",
-   "icon": "🪧",
+   "icon": "示",
    "week": 3
   }
  ],
@@ -824,7 +824,7 @@
    "romaji": "irasshaimase",
    "note": "Отвечать не нужно — достаточно кивнуть.",
    "tags": [
-    "w2",
+    "w1",
     "hear"
    ]
   },
@@ -839,7 +839,7 @@
    "romaji": "fukuro wa go-riyō desu ka",
    "note": "Ответ: 大丈夫です (не нужно) / お願いします (да). Вариант: レジ袋はご利用ですか.",
    "tags": [
-    "w2",
+    "w1",
     "hear"
    ]
   },
@@ -854,7 +854,7 @@
    "romaji": "pointo kādo wa omochi desu ka",
    "note": "Ответ: いいえ / 持っていません.",
    "tags": [
-    "w2",
+    "w1",
     "hear"
    ]
   },
@@ -869,7 +869,7 @@
    "romaji": "obentō wa atatamemasu ka",
    "note": "Часто коротко: 温めますか. Ответ: お願いします / 大丈夫です.",
    "tags": [
-    "w2",
+    "w1",
     "hear"
    ]
   },
@@ -884,7 +884,7 @@
    "romaji": "ohashi wa otsuke shimasu ka",
    "note": "Ответ: お願いします / 大丈夫です.",
    "tags": [
-    "w2",
+    "w1",
     "hear"
    ]
   },
@@ -899,7 +899,7 @@
    "romaji": "ijō de yoroshii desu ka",
    "note": "Ответ: はい.",
    "tags": [
-    "w2",
+    "w1",
     "hear"
    ]
   },
@@ -914,7 +914,7 @@
    "romaji": "oshiharai hōhō wa",
    "note": "Часто: お支払いは？ Ответ: カードで / 現金で / Suicaで.",
    "tags": [
-    "w2",
+    "w1",
     "hear"
    ]
   },
@@ -929,7 +929,7 @@
    "romaji": "ikkatsu-barai de yoroshii desu ka",
    "note": "Ответ: はい.",
    "tags": [
-    "w2",
+    "w1",
     "hear"
    ]
   },
@@ -943,7 +943,7 @@
    "kana": "あんしょうばんごうのにゅうりょくをおねがいします",
    "romaji": "anshō bangō no nyūryoku o onegai shimasu",
    "tags": [
-    "w2",
+    "w1",
     "hear"
    ]
   },
@@ -958,7 +958,7 @@
    "romaji": "reshīto wa go-nyūyō desu ka",
    "note": "Ответ: お願いします / 大丈夫です.",
    "tags": [
-    "w2",
+    "w1",
     "hear"
    ]
   },
@@ -973,7 +973,7 @@
    "romaji": "sen-en oazukari shimasu",
    "note": "Так кассир подтверждает сумму, которую вы дали.",
    "tags": [
-    "w2",
+    "w1",
     "hear"
    ]
   },
@@ -987,7 +987,7 @@
    "kana": "にひゃくえんのおかえしです",
    "romaji": "nihyaku-en no okaeshi desu",
    "tags": [
-    "w2",
+    "w1",
     "hear"
    ]
   },
@@ -1002,7 +1002,7 @@
    "romaji": "nenrei kakunin no tame, gamen no tatchi o onegai shimasu",
    "note": "При покупке алкоголя: нажать «はい» на экране кассы.",
    "tags": [
-    "w2",
+    "w1",
     "hear"
    ]
   },
@@ -1016,7 +1016,7 @@
    "kana": "ごうけい〇〇えんになります",
    "romaji": "gōkei 〇〇-en ni narimasu",
    "tags": [
-    "w2",
+    "w1",
     "hear"
    ]
   },
@@ -1030,7 +1030,7 @@
    "kana": "おつぎのかたどうぞ",
    "romaji": "otsugi no kata dōzo",
    "tags": [
-    "w2",
+    "w1",
     "hear"
    ]
   },

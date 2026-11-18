@@ -6,16 +6,16 @@
 //   〇〇 — плейсхолдер (подставьте своё: станцию, марку и т.п.), TTS его пропускает.
 
 export const CATEGORIES = [
-  { id: 'basics', ru: 'Вежливые формулы', icon: '🙇', week: 1 },
-  { id: 'patterns', ru: 'Шаблоны', icon: '🧩', week: 2 },
-  { id: 'konbini', ru: 'Конбини и супермаркет', icon: '🏪', week: 1 },
-  { id: 'food', ru: 'Ресторан и еда', icon: '🍜', week: 2 },
-  { id: 'transport', ru: 'Поезда и такси', icon: '🚃', week: 2 },
-  { id: 'hotel', ru: 'Отель', icon: '🏨', week: 3 },
-  { id: 'shop', ru: 'Покупки: фото, часы, tax-free', icon: '📷', week: 3 },
-  { id: 'family', ru: 'Ребёнок, здоровье, экстренное', icon: '🧒', week: 3 },
-  { id: 'numbers', ru: 'Числа, время, счёт', icon: '🔢', week: 1 },
-  { id: 'cards', ru: 'Карточки «показать»', icon: '🪧', week: 3 },
+  { id: 'basics', ru: 'Вежливые формулы', icon: '礼', week: 1 },
+  { id: 'patterns', ru: 'Шаблоны', icon: '型', week: 2 },
+  { id: 'konbini', ru: 'Конбини и супермаркет', icon: '店', week: 1 },
+  { id: 'food', ru: 'Ресторан и еда', icon: '食', week: 2 },
+  { id: 'transport', ru: 'Поезда и такси', icon: '駅', week: 2 },
+  { id: 'hotel', ru: 'Отель', icon: '宿', week: 3 },
+  { id: 'shop', ru: 'Покупки: фото, часы, tax-free', icon: '買', week: 3 },
+  { id: 'family', ru: 'Ребёнок, здоровье, экстренное', icon: '子', week: 3 },
+  { id: 'numbers', ru: 'Числа, время, счёт', icon: '数', week: 1 },
+  { id: 'cards', ru: 'Карточки «показать»', icon: '示', week: 3 },
 ];
 
 // kind: say — говорить; hear — услышите от персонала (узнавание); pattern — шаблон; card — показать японцу.
