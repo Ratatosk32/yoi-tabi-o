@@ -1,7 +1,7 @@
 // Card session engine (CURRICULUM §3.1): cue → attempt (say it / think it) → answer with furigana and audio →
 // three self-grades (Forgot / Hard / Knew). Used by Today, lessons, situation runs and the pre-flight run.
 import { h, clear, rubyEl, speakButtons, speakItem, ico, romajiEl, toast } from './ui.js';
-import { grade, todayStr, MODES, studyWeek } from './srs.js';
+import { grade, todayStr, MODES, studyWeek, addDays, INTERVALS } from './srs.js';
 import { romajiMode } from './curriculum.js';
 import { replyBlock } from './view-phrases.js';
 
@@ -27,12 +27,15 @@ export function currentRomajiMode(ctx) {
 /**
  * Run a session in `box`.
  * opts: title, queue [{ key, id, mode, item, isNew }], onDone(counts), onExit(),
- *       kind: 'srs' (default) | 'pretest' (Got it / Not yet; a correct guess goes to box 2) | 'trip' (no SRS; misses → favorites)
+ *       kind: 'srs' (default) | 'pretest' (Knew → box 3, the lesson skips it; Hard / Forgot → the lesson teaches it)
+ *             | 'trip' (no SRS; misses → favorites)
+ * Every card: before the answer "I know it" (3) and "Show answer" (1, Enter, Space); after it Forgot / Hard / Knew (1 / 2 / 3).
  */
 export function runSession(ctx, box, opts) {
   const ses = { ...opts, queue: opts.queue.slice(), idx: 0, revealed: false, counts: { again: 0, hard: 0, good: 0 }, requeued: new Set(), spoken: new Set() };
   ses.kind = ses.kind || 'srs';
   const draw = () => renderCard(ctx, box, ses, draw);
+  bindKeys(box);
   if (!ses.queue.length) { toast('Nothing to study here right now.'); opts.onDone?.(ses.counts); return; }
   draw();
 }
@@ -81,23 +84,20 @@ function renderCard(ctx, box, ses, draw) {
   }
   card.append(back);
 
-  let actions;
-  if (!ses.revealed) {
-    actions = h('div.grade', h('button.btn.primary.wide.big#reveal', { type: 'button', on: { click: () => {
-      ses.revealed = true;
-      draw();
-      if (cur.mode === 'en2ja') speakItem(it, 1.0);
-    } } }, 'Show answer'));
-  } else if (ses.kind === 'pretest') {
-    actions = h('div.grade.two',
-      h('button.btn.again', { type: 'button', on: { click: () => answer(ctx, ses, 'miss', draw) } }, 'Not yet'),
-      h('button.btn.good', { type: 'button', on: { click: () => answer(ctx, ses, 'got', draw) } }, 'Got it'));
-  } else {
-    actions = h('div.grade',
-      h('button.btn.again', { type: 'button', on: { click: () => answer(ctx, ses, 'again', draw) } }, 'Forgot'),
-      h('button.btn.hard', { type: 'button', on: { click: () => answer(ctx, ses, 'hard', draw) } }, 'Hard'),
-      h('button.btn.good', { type: 'button', on: { click: () => answer(ctx, ses, 'good', draw) } }, 'Knew'));
-  }
+  const reveal = (early) => {
+    ses.revealed = true;
+    ses.early = early;
+    draw();
+    if (cur.mode === 'en2ja') speakItem(it, 1.0);
+    if (early) { // "I know it": a short look at the answer, then it counts as Knew unless corrected
+      const at = ses.idx;
+      clearTimeout(ses.timer);
+      ses.timer = setTimeout(() => { if (ses.idx === at && ses.revealed && box.isConnected) answer(ctx, ses, 'good', draw); }, KNOW_IT_MS);
+    }
+  };
+  const actions = ses.revealed
+    ? gradeButtons((r) => { clearTimeout(ses.timer); answer(ctx, ses, r, draw); }, { early: ses.early })
+    : revealButtons(() => reveal(false), () => reveal(true));
   box.append(head, card, actions);
 
   if (cur.mode === 'audio' && !ses.revealed && !ses.spoken.has(ses.idx)) {
@@ -110,12 +110,12 @@ function answer(ctx, ses, result, draw) {
   const cur = ses.queue[ses.idx];
   const today = todayStr();
   if (ses.kind === 'pretest') {
-    // R8: a correct guess goes straight to box 2; a miss stays new and is learned in the lesson
-    if (result === 'got') {
-      ctx.store.update('srs', {}, (st) => ({ ...st, [cur.key]: grade(st[cur.key], 'good', today) }));
+    // R8: known already → box 3 (the lesson skips it, light review in 2 days); Hard / Forgot → the lesson teaches it
+    if (result === 'good') {
+      ctx.store.update('srs', {}, (st) => ({ ...st, [cur.key]: { box: 3, due: addDays(today, INTERVALS[2]), seen: 1, lapses: 0 } }));
       noteActivity(ctx, cur.id, true);
-      ses.counts.good += 1;
-    } else ses.counts.again += 1;
+    }
+    ses.counts[result] += 1;
   } else if (ses.kind === 'trip') {
     if (result === 'again') ctx.store.update('favs', [], (f) => (f.includes(cur.id) ? f : [...f, cur.id])); // "Trip favorites"
     ses.counts[result] += 1;
@@ -132,7 +132,43 @@ function answer(ctx, ses, result, draw) {
   }
   ses.idx += 1;
   ses.revealed = false;
+  ses.early = false;
   draw();
+}
+
+export const KNOW_IT_MS = 1800;
+
+/** Before the answer: "I know it" and "Show answer", side by side, large one-handed targets. */
+export function revealButtons(onShow, onKnow) {
+  return h('div.grade.two.reveal-row',
+    h('button.btn.good.big#know-it', { type: 'button', 'data-key': '3', on: { click: onKnow } }, 'I know it'),
+    h('button.btn.primary.big#reveal', { type: 'button', 'data-key': '1', on: { click: onShow } }, 'Show answer'));
+}
+
+/** After the answer: Forgot / Hard / Knew. early = came from "I know it" (Knew is pre-selected and applies by itself). */
+export function gradeButtons(onGrade, { early = false } = {}) {
+  const el = h('div.grade' + (early ? '.early' : ''),
+    h('button.btn.again.big', { type: 'button', 'data-key': '1', on: { click: () => onGrade('again') } }, 'Forgot'),
+    h('button.btn.hard.big', { type: 'button', 'data-key': '2', on: { click: () => onGrade('hard') } }, 'Hard'),
+    h('button.btn.good.big' + (early ? '.preselected' : ''), { type: 'button', 'data-key': '3', on: { click: () => onGrade('good') } }, 'Knew'));
+  return early ? h('div', el, h('p.small.center.early-note', 'Counts as Knew in a moment. Tap Forgot or Hard if you were wrong.')) : el;
+}
+
+/** Keys 1 / 2 / 3 (and Enter / Space = Show answer) press the matching button in this box. */
+export function bindKeys(box) {
+  if (box.__keys) return;
+  box.__keys = true;
+  const onKey = (e) => {
+    if (!box.isConnected) { document.removeEventListener('keydown', onKey); box.__keys = false; return; }
+    if (e.target && /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) return;
+    if (e.ctrlKey || e.metaKey || e.altKey || document.getElementById('fs') || document.getElementById('sheet')) return;
+    let key = e.key;
+    if ((key === 'Enter' || key === ' ') && box.querySelector('#reveal')) key = '1';
+    if (!/^[123]$/.test(key)) return;
+    const btn = box.querySelector(`button[data-key="${key}"]`);
+    if (btn) { e.preventDefault(); btn.click(); }
+  };
+  document.addEventListener('keydown', onKey);
 }
 
 /** A small summary card after a session. */

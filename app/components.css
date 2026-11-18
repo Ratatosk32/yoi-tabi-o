@@ -1126,3 +1126,13 @@ section.block, .card.edit { scroll-margin-top: var(--sp-3); }
 .trip-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sp-2); }
 .found-line { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--sp-2); }
 .found-line h2.section { flex: 1 1 auto; margin-bottom: 0; }
+
+/* ---------- 18.1 Self-check row: "I know it" / "Show answer", then Forgot / Hard / Knew ---------- */
+.reveal-row .btn, .grade .btn.big { min-height: var(--tap-lg); font-size: var(--fs-body); }
+.grade .btn.preselected { background: var(--matsu-wash); border-color: var(--matsu); }
+.early-note { margin: var(--sp-2) 0 0; color: var(--ink-3); }
+/* The answer can be long (note, reply links): keep the buttons under the thumb, above the tab bar */
+.reveal-row, .card.flash + .grade, .card.flash + div:has(> .grade.early), .self-check {
+  position: sticky; bottom: calc(var(--tabbar-h) + var(--safe-b) + var(--sp-2)); z-index: 2;
+  background: var(--surface); padding: var(--sp-2) 0; margin-bottom: 0;
+}

@@ -143,11 +143,21 @@ async function main() {
     await click('#start-morning');
     check(`${vp.name}: morning starts with a pretest card (audio, no Japanese text before the answer)`,
       await waitFor("!!document.querySelector('.flash[data-mode=\"audio\"]') && !document.querySelector('.flash .jp')"));
-    await click('#reveal');
-    check(`${vp.name}: answer revealed with furigana and Got it / Not yet`, await waitFor("!!document.querySelector('.flash .back .jp') && document.querySelectorAll('.grade.two .btn').length === 2"));
+    // Every retrieval card: "I know it" and "Show answer" side by side, large targets
+    check(`${vp.name}: pretest card has I know it + Show answer side by side (one row, >= 48 px)`, await evaluate(`(() => {
+      const k = document.querySelector('#know-it'), r = document.querySelector('#reveal');
+      if (!k || !r) return false;
+      const a = k.getBoundingClientRect(), b = r.getBoundingClientRect();
+      return Math.abs(a.top - b.top) < 2 && a.height >= 48 && b.height >= 48 && a.right <= b.left + 1;
+    })()`));
+    await click('#know-it');
+    check(`${vp.name}: I know it shows the answer briefly with Forgot / Hard / Knew`, await waitFor("!!document.querySelector('.flash .back .jp') && document.querySelectorAll('.grade .btn').length === 3 && !!document.querySelector('.grade .good.preselected')"));
     await shot(`${vp.name}-4-study-card`);
-    await click('.grade .good');
-    check(`${vp.name}: pretest guess saved to SRS (box 2)`, await waitFor("Object.values(JSON.parse(localStorage.getItem('jt.srs') || '{}')).some((v) => v.box === 2)"));
+    check(`${vp.name}: I know it counts as Knew: next card, item in box 3 (the lesson skips it)`, await waitFor("document.querySelector('.sess-head').textContent.includes(' 2/5') && Object.values(JSON.parse(localStorage.getItem('jt.srs') || '{}')).some((v) => v.box === 3)", 5000));
+    await evaluate("document.dispatchEvent(new KeyboardEvent('keydown', { key: '1', bubbles: true }))");
+    check(`${vp.name}: key 1 = Show answer; pretest gets the same three grades`, await waitFor("!!document.querySelector('.flash .back .jp') && document.querySelectorAll('.grade .btn').length === 3 && /Knew/.test(document.querySelector('.grade .good').textContent)"));
+    await evaluate("document.dispatchEvent(new KeyboardEvent('keydown', { key: '2', bubbles: true }))");
+    check(`${vp.name}: key 2 = Hard (next card; not marked known)`, await waitFor("document.querySelector('.sess-head').textContent.includes(' 3/5') && !!document.querySelector('#know-it') && Object.keys(JSON.parse(localStorage.getItem('jt.srs') || '{}')).length === 1"));
     check(`${vp.name}: lesson U01-L01 marked as started today`, await waitFor("!!(JSON.parse(localStorage.getItem('jt.lessons') || '{}').started || {})['U01-L01']"));
     check(`${vp.name}: no horizontal scroll (study)`, await noHScroll());
 

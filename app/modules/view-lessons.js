@@ -3,7 +3,22 @@
 import { h, clear, rubyEl, speakItem, ico, toast, jaText, shuffle } from './ui.js';
 import { todayStr, keyOf } from './srs.js';
 import * as C from './curriculum.js';
-import { runSession, noteActivity, doneCard } from './study-session.js';
+import { runSession, noteActivity, doneCard, revealButtons, gradeButtons, bindKeys, KNOW_IT_MS } from './study-session.js';
+
+/** Self-graded question: "I know it" / "Show answer", then Forgot / Hard / Knew (keys 1 2 3). */
+function selfCheck(box, showAnswer, onGrade) {
+  let timer = null, done = false;
+  const slot = h('div.self-check');
+  const finish = (r) => { if (done) return; done = true; clearTimeout(timer); onGrade(r); };
+  const reveal = (early) => {
+    showAnswer();
+    slot.replaceChildren(gradeButtons(finish, { early }));
+    if (early) timer = setTimeout(() => { if (slot.isConnected) finish('good'); }, KNOW_IT_MS);
+  };
+  slot.append(revealButtons(() => reveal(false), () => reveal(true)));
+  bindKeys(box);
+  return slot;
+}
 import { phraseCard } from './view-phrases.js';
 
 const PATH_INFO = {
@@ -165,13 +180,8 @@ export function runQuiz(ctx, box, code, onDone) {
     } else {
       // EN → JA aloud, self-graded
       card.append(h('div.en.big.center', it.en), h('p.prompt', 'Say it in Japanese out loud.'),
-        h('div.grade', h('button.btn.primary.wide.big', { type: 'button', on: { click: (e) => {
-          e.currentTarget.parentElement.replaceWith(h('div.grade.two',
-            h('button.btn.again', { type: 'button', on: { click: () => { i += 1; step(); } } }, 'Didn’t know'),
-            h('button.btn.good', { type: 'button', on: { click: () => { score += 1; i += 1; step(); } } }, 'Knew')));
-          card.append(h('div.back', h('div.jp.center', rubyEl(it.ruby, { furigana: true }))));
-          speakItem(it, 1.0);
-        } } }, 'Show answer')));
+        selfCheck(box, () => { card.append(h('div.back', h('div.jp.center', rubyEl(it.ruby, { furigana: true })))); speakItem(it, 1.0); },
+          (r) => { if (r === 'good') score += 1; i += 1; step(); }));
     }
     box.append(head, card);
   };
@@ -205,13 +215,10 @@ export function runTestOut(ctx, box, code, onDone) {
       ? h('div.actions.center', h('button.btn.big.primary.listen', { type: 'button', on: { click: () => speakItem(it, 1.0) } }, ico('play'), 'Listen'))
       : h('div.en.big.center', it.en),
     h('p.prompt', audio ? 'What does it mean?' : 'Say it in Japanese out loud.'));
-    const grade = h('div.grade', h('button.btn.primary.wide.big#reveal', { type: 'button', on: { click: () => {
+    const grade = selfCheck(box, () => {
       card.append(h('div.back', h('div.jp.center', rubyEl(it.ruby, { furigana: true })), h('div.en.center', it.en)));
-      grade.replaceWith(h('div.grade.two',
-        h('button.btn.again', { type: 'button', on: { click: () => { i += 1; step(); } } }, 'Didn’t know'),
-        h('button.btn.good', { type: 'button', on: { click: () => { correct.push(it); i += 1; step(); } } }, 'Knew')));
       if (!audio) speakItem(it, 1.0);
-    } } }, 'Show answer'));
+    }, (r) => { if (r === 'good') correct.push(it); i += 1; step(); });
     box.append(h('div.sess-head', h('span', `Test out · ${i + 1}/${pick.length}`), h('span', `knew: ${correct.length}`)), card, grade);
     if (audio) setTimeout(() => speakItem(it, 1.0), 0);
   };
