@@ -139,14 +139,61 @@ async function main() {
     await navigate(BASE + '#/study/today');
     check(`${vp.name}: Today tiles`, await waitFor("document.querySelectorAll('.tile').length === 4"));
     await shot(`${vp.name}-3-study-today`);
-    await click('#start-review');
-    check(`${vp.name}: SRS card shown`, await waitFor("!!document.querySelector('.flash')"));
+    // Morning session on a fresh profile: no reviews → pretest of U01-L01 (audio first, no text before the answer)
+    await click('#start-morning');
+    check(`${vp.name}: morning starts with a pretest card (audio, no Japanese text before the answer)`,
+      await waitFor("!!document.querySelector('.flash[data-mode=\"audio\"]') && !document.querySelector('.flash .jp')"));
     await click('#reveal');
-    check(`${vp.name}: answer revealed`, await waitFor("!!document.querySelector('.grade .good')"));
+    check(`${vp.name}: answer revealed with furigana and Got it / Not yet`, await waitFor("!!document.querySelector('.flash .back .jp') && document.querySelectorAll('.grade.two .btn').length === 2"));
     await shot(`${vp.name}-4-study-card`);
     await click('.grade .good');
-    check(`${vp.name}: grade saved to SRS`, await waitFor("Object.keys(JSON.parse(localStorage.getItem('jt.srs') || '{}')).length > 0"));
+    check(`${vp.name}: pretest guess saved to SRS (box 2)`, await waitFor("Object.values(JSON.parse(localStorage.getItem('jt.srs') || '{}')).some((v) => v.box === 2)"));
+    check(`${vp.name}: lesson U01-L01 marked as started today`, await waitFor("!!(JSON.parse(localStorage.getItem('jt.lessons') || '{}').started || {})['U01-L01']"));
     check(`${vp.name}: no horizontal scroll (study)`, await noHScroll());
+
+    // Lessons: units → 79 lessons, the second core lesson locked on a fresh profile
+    await navigate(BASE + '#/study/lessons');
+    check(`${vp.name}: lessons list (79 rows, U01-L02 locked, U08 open)`, await waitFor(
+      "document.querySelectorAll('.lesson-row').length === 79 && document.querySelector('[data-lesson=\"U01-L02\"]').classList.contains('locked') && !document.querySelector('[data-lesson=\"U08-L05\"]').classList.contains('locked')"));
+    check(`${vp.name}: no horizontal scroll (lessons)`, await noHScroll());
+    await shot(`${vp.name}-4b-lessons`);
+    await click('[data-lesson="U01-L01"]');
+    check(`${vp.name}: lesson page with Learn / Review / Quiz / Test out`, await waitFor("!!document.querySelector('#lesson-learn') && !!document.querySelector('#lesson-quiz') && !!document.querySelector('#lesson-testout') && document.querySelectorAll('.lesson-card ~ .list .phrase').length >= 10"));
+    await shot(`${vp.name}-4c-lesson`);
+    await click('#lesson-learn');
+    check(`${vp.name}: learning starts EN → JA with three self-grades after the answer`, await waitFor("!!document.querySelector('.flash[data-mode=\"en2ja\"] .en.big')"));
+    await click('#reveal');
+    check(`${vp.name}: Forgot / Hard / Knew`, await waitFor("document.querySelectorAll('.grade .btn').length === 3 && /Knew/.test(document.querySelector('.grade .good').textContent)"));
+    await click('.grade .good');
+    await evaluate("window.__app.go('#/study/lesson/U01-L01')"); // same hash: re-render like the app's own End button
+    await waitFor("!!document.querySelector('#lesson-quiz')");
+    await click('#lesson-quiz');
+    check(`${vp.name}: lesson quiz question`, await waitFor("!!document.querySelector('#lesson-quiz-card')"));
+    await shot(`${vp.name}-4d-quiz`);
+    await evaluate("window.__app.go('#/study/lesson/U01-L01')");
+    await waitFor("!!document.querySelector('#lesson-testout')");
+    await click('#lesson-testout');
+    check(`${vp.name}: test-out card`, await waitFor("!!document.querySelector('#testout-card') && /Test out · 1\\/10/.test(document.querySelector('.sess-head').textContent)"));
+    // Reply chain from a lesson with staff lines
+    await navigate(BASE + '#/study/lesson/U01-L05');
+    check(`${vp.name}: U01-L05 has a reply chain`, await waitFor("!!document.querySelector('#lesson-chain')"));
+    await click('#lesson-chain');
+    check(`${vp.name}: chain card: staff line, 3 s timer, reply options in Japanese`, await waitFor("!!document.querySelector('#chain-card .countdown') && document.querySelectorAll('#chain-card .opt').length >= 2"));
+    await evaluate("document.querySelector('#chain-card .opt').click()");
+    check(`${vp.name}: chain gives feedback and a Next button`, await waitFor("!!document.querySelector('#chain-next')"));
+    await shot(`${vp.name}-4e-chain`);
+    check(`${vp.name}: no horizontal scroll (chain)`, await noHScroll());
+    // Scene sheet and the pre-flight run from Today
+    await navigate(BASE + '#/study/today');
+    await waitFor("!!document.querySelector('#pick-scene')");
+    await click('#pick-scene');
+    check(`${vp.name}: scene sheet`, await waitFor("document.querySelectorAll('#sheet [data-scene]').length >= 5"));
+    await click('#sheet [data-scene="konbini"]');
+    check(`${vp.name}: konbini scene chain starts`, await waitFor("!!document.querySelector('#chain-card')"));
+    await evaluate("window.__app.go('#/study/today')");
+    await waitFor("!!document.querySelector('#start-preflight')");
+    await click('#start-preflight');
+    check(`${vp.name}: pre-flight run (audio, all core)`, await waitFor("!!document.querySelector('.flash[data-mode=\"audio\"]') && /Pre-flight · 1\\/2\\d\\d/.test(document.querySelector('.sess-head').textContent)"));
 
     await navigate(BASE + '#/study/kana');
     check(`${vp.name}: kana table`, await waitFor("document.querySelectorAll('.kana').length >= 46 + 25"));
@@ -255,13 +302,16 @@ async function main() {
     const t2 = await evaluate("[document.documentElement.dataset.theme, localStorage.getItem('theme')]");
     check(`${vp.name}: theme toggle switches and remembers the theme`, t1[0] && t1[0] === t1[1] && t2[0] === t2[1] && t1[0] !== t2[0], JSON.stringify([t1, t2]));
 
-    const TABS = [['phrases', '#/phrases'], ['hear', '#/phrases/hear'], ['study', '#/study/today'], ['session', null], ['kana', '#/study/kana'],
+    const TABS = [['phrases', '#/phrases'], ['hear', '#/phrases/hear'], ['study', '#/study/today'], ['lessons', '#/study/lessons'], ['lesson', '#/study/lesson/U01-L01'], ['morning', 'click:#/study/today|#start-morning'], ['quiz', 'click:#/study/lesson/U01-L01|#lesson-quiz'], ['chain', 'click:#/study/lesson/U01-L05|#lesson-chain'], ['session', null], ['kana', '#/study/kana'],
       ['numbers', '#/study/numbers'], ['time', '#/study/time'], ['show', '#/show'], ['kanji', '#/kanji'], ['tools', '#/tools']];
     for (const theme of ['light', 'dark']) {
       await evaluate(`localStorage.setItem('theme', '${theme}'); document.documentElement.dataset.theme = '${theme}'`);
       for (const [name, hash] of TABS) {
-        if (hash) await navigate(BASE + hash);
-        else { await navigate(BASE + '#/study/today'); await waitFor("!!document.querySelector('#start-review')"); await click('#start-review'); await click('#reveal'); }
+        if (hash && hash.startsWith('click:')) {
+          const [route, sel] = hash.slice(6).split('|');
+          await evaluate(`window.__app.go('${route}')`); await waitFor(`!!document.querySelector('${sel}')`); await click(sel); await sleep(300);
+        } else if (hash) await navigate(BASE + hash);
+        else { await navigate(BASE + '#/study/lesson/U01-L01'); await waitFor("!!document.querySelector('#lesson-review')"); await click('#lesson-review'); await click('#reveal'); }
         await waitFor("document.documentElement.dataset.ready === '1' && document.querySelector('#view').children.length > 1");
         if (name === 'phrases') await click('.phrase.is-collapsed .jp'); // open one phrase
         await sleep(150);
