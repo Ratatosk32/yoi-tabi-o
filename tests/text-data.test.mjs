@@ -54,8 +54,8 @@ test('поиск: ふくろ / пакет / fukuro находят фразу пр
   assert.deepEqual(search(phrases.items, ''), []);
 });
 
-test('ttsText: плейсхолдеры не озвучиваются, override tts', () => {
-  assert.equal(ttsText({ ja: '〇〇駅はどこですか' }), '駅はどこですか');
+test('ttsText: плейсхолдеры читаются まるまる, override tts', () => {
+  assert.equal(ttsText({ ja: '〇〇駅はどこですか' }), 'まるまる駅はどこですか');
   assert.equal(ttsText({ ja: '十分', tts: 'じゅっぷん' }), 'じゅっぷん');
 });
 

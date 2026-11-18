@@ -55,7 +55,8 @@ export function completeItem(item) {
 /** Текст для TTS: без плейсхолдеров 〇〇. */
 export function ttsText(item) {
   const t = item.tts || item.ja || '';
-  return t.replace(/〇+/g, '、').replace(/^[、\s]+/, '').replace(/、{2,}/g, '、');
+  // 〇〇 вслух японцы читают «まるまる» — фраза-шаблон звучит целиком, а не обрывается
+  return t.replace(/〇〇/g, 'まるまる').replace(/〇/g, 'まる');
 }
 
 // ---------- Поиск ----------
@@ -71,7 +72,8 @@ export function normalize(s) {
   let t = String(s).normalize('NFKC').toLowerCase().replace(/ё/g, 'е');
   t = kataToHira(t).replace(/ー/g, '');
   t = t.replace(/[āīūēōâîûêô]/g, (c) => MACRON[c]);
-  t = t.replace(/ou/g, 'o').replace(/oo/g, 'o').replace(/uu/g, 'u');
+  // долгие гласные без макронов: kohii / koohii / kōhī, raamen / rāmen, takushii / takushī (B10)
+  t = t.replace(/ou/g, 'o').replace(/oo/g, 'o').replace(/uu/g, 'u').replace(/aa/g, 'a').replace(/ii/g, 'i').replace(/ee/g, 'e');
   t = t.replace(/[\s\-'’.,!?！？。、・「」『』()（）〜～:：;；"“”«»…]/g, '');
   return t;
 }

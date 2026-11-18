@@ -331,14 +331,17 @@ function renderNumbers(ctx, box) {
         h('div.actions', h('button.btn', { type: 'button', on: { click: () => tts.speak(`${n}円`, 0.8) } }, ico('play'), 'ещё раз'),
           h('button.btn.primary#num-next', { type: 'button', on: { click: next } }, 'Следующее')));
     };
+    let answered = false; // один ответ — один зачёт (B5)
     const check = () => {
+      if (answered) return;
       const v = N.parseDigits(input.value);
       if (Number.isNaN(v)) { toast('Введите число цифрами'); return; }
+      answered = true;
       const ok = v === n;
       numState.total += 1; if (ok) numState.ok += 1;
       reveal(ok);
     };
-    input.addEventListener('keydown', (e) => { if (e.key === 'Enter') check(); });
+    input.addEventListener('keydown', (e) => { if (e.key === 'Enter') { if (answered) next(); else check(); } });
     card.append(h('div.sess-head', h('span', `Верно ${numState.ok} из ${numState.total}`), h('span.small', N.PRICE_RANGES[numState.range].label)));
     if (numState.mode === 'audio') {
       card.append(h('div.center',
@@ -355,7 +358,7 @@ function renderNumbers(ctx, box) {
     card.append(fb);
   }
   box.append(
-    h('div.chips', Object.entries(N.PRICE_RANGES).map(([k, v]) => chip(v.label, numState.range === k, () => { numState.range = k; ctx.rerender(); }))),
+    h('div.chips', Object.entries(N.PRICE_RANGES).map(([k, v]) => chip(v.label, numState.range === k, () => { numState.range = k; numState.n = N.randomPrice(k); ctx.rerender(); }))), // B4
     h('div.chips', [['audio', 'На слух → цифры'], ['mixed', '12万8千円 → цифры'], ['say', 'Цифры → сказать']].map(([k, v]) => chip(v, numState.mode === k, () => { numState.mode = k; ctx.rerender(); }))),
     card,
     h('p.small.muted', 'Подсказка: 万 = 10 000. 128 000 = 12万8千 = じゅうにまん はっせん. Звуковые изменения: 300 さんびゃく, 600 ろっぴゃく, 800 はっぴゃく, 3000 さんぜん, 8000 はっせん.'),
@@ -388,14 +391,17 @@ function renderTime(ctx, box) {
       h('p', ok === true ? 'Верно! ' : ok === false ? 'Неверно. ' : '', h('strong', label), ' = ', jaText(speakTime(t))),
       h('p', jaText(r.kana), ' — ', h('span.romaji', r.romaji)),
       h('div.actions', h('button.btn.primary', { type: 'button', on: { click: next } }, 'Следующее')));
+    let answered = false; // один ответ — один зачёт (B5)
     const check = () => {
+      if (answered) return;
       const v = parseTime(input.value);
       if (!v) { toast('Формат: 9:30'); return; }
+      answered = true;
       const ok = v.h === t.h && v.m === t.m;
       timeState.total += 1; if (ok) timeState.ok += 1;
       reveal(ok);
     };
-    input.addEventListener('keydown', (e) => { if (e.key === 'Enter') check(); });
+    input.addEventListener('keydown', (e) => { if (e.key === 'Enter') { if (answered) next(); else check(); } });
     card.append(h('div.sess-head', h('span', `Верно ${timeState.ok} из ${timeState.total}`)));
     if (timeState.mode === 'audio') {
       card.append(h('div.center', h('button.btn.big.primary', { type: 'button', on: { click: () => tts.speak(speakTime(t), 1.0) } }, ico('play'), 'Слушать время'),

@@ -67,6 +67,7 @@ export function translateUrl(text, sl = 'ru', tl = 'ja') {
 /** Открыть именно приложение Переводчика: Android — intent с пакетом; iOS — схема googletranslate:// [неофициальная]. */
 export function translateAppUrl(text, sl = 'ru', tl = 'ja', platform = PLATFORM) {
   if (platform === 'ios') return `googletranslate://?sl=${sl}&tl=${tl}&text=${enc(text || '')}`;
+  if (platform !== 'android') return translateUrl(text, sl, tl); // десктоп: без intent:// (B14)
   const web = translateUrl(text, sl, tl);
   return `intent://translate.google.com/?sl=${sl}&tl=${tl}&text=${enc(text || '')}&op=translate#Intent;scheme=https;package=com.google.android.apps.translate;S.browser_fallback_url=${enc(web)};end`;
 }

@@ -26,7 +26,8 @@ export function allergyText(card) {
   const list = chosen.map((a) => a.ruby).join('・');
   const lines = [
     `${who}には${list}のアレルギーがあります。`,
-    `${list}が入[はい]った料理[りょうり]は食[た]べられません。`,
+    // при нескольких аллергенах не повторяем список — короче и помещается на экран (B3)
+    `${chosen.length > 1 ? 'これら' : list}が入[はい]った料理[りょうり]は食[た]べられません。`,
   ];
   if (card.strict) lines.push('少量[しょうりょう]でも危険[きけん]です。');
   lines.push('入[はい]っているかどうか確認[かくにん]していただけますか。');

@@ -120,15 +120,45 @@ export function showFullscreen({ lines, caption, speakText }) {
   document.body.append(ov);
   document.body.classList.add('noscroll');
   lockScreen();
-  const onKey = (e) => { if (e.key === 'Escape') closeFullscreen(); };
-  document.addEventListener('keydown', onKey, { once: true });
+  fitFullscreen(ov, size);
+  fsResize = () => fitFullscreen(ov, size);
+  window.addEventListener('resize', fsResize);
+  // Esc закрывает всегда, а не только до первой другой клавиши (B15)
+  fsKey = (e) => { if (e.key === 'Escape') closeFullscreen(); };
+  document.addEventListener('keydown', fsKey);
   history.pushState({ fs: true }, '');
   return ov;
+}
+
+let fsKey = null, fsResize = null;
+
+/** Уменьшать --fs-n, пока весь текст (и подпись) не поместится над панелью кнопок (B3, B16). */
+export function fitFullscreen(ov, start) {
+  const body = ov.querySelector('.fs-body');
+  const bar = ov.querySelector('.fs-bar');
+  const cap = ov.querySelector('.fs-caption');
+  let n = start;
+  const fits = () => {
+    const barTop = bar.getBoundingClientRect().top;
+    const limit = barTop > window.innerHeight / 2 ? barTop : window.innerHeight; // в альбомной панель сбоку
+    const bottom = (cap || body).getBoundingClientRect().bottom;
+    return body.scrollHeight <= body.clientHeight + 1 && bottom <= limit + 1;
+  };
+  body.style.setProperty('--fs-n', String(n));
+  for (let i = 0; i < 60 && n > 3 && !fits(); i++) {
+    n = Math.round((n - 0.5) * 10) / 10;
+    body.style.setProperty('--fs-n', String(n));
+  }
+  ov.dataset.fsN = String(n);
+  return n;
 }
 
 export function closeFullscreen(fromPop = false) {
   const ov = document.getElementById('fs');
   if (!ov) return;
+  if (fsKey) document.removeEventListener('keydown', fsKey);
+  if (fsResize) window.removeEventListener('resize', fsResize);
+  fsKey = fsResize = null;
   ov.remove();
   document.body.classList.remove('noscroll');
   unlockScreen();

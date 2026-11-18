@@ -70,9 +70,15 @@ export function speak(text, rate = 1.0) {
       u.lang = 'ja-JP';
       if (jaVoice) u.voice = jaVoice;
       u.rate = rate;
-      u.onend = () => resolve('end');
-      u.onerror = (e) => resolve('error:' + (e && e.error ? e.error : 'unknown'));
+      // Некоторые движки не присылают ни onend, ни onerror — страхуемся опросом и таймаутом (заметка QA)
+      let done = false, poll = null, hard = null;
+      const finish = (r) => { if (done) return; done = true; clearInterval(poll); clearTimeout(hard); resolve(r); };
+      u.onend = () => finish('end');
+      u.onerror = (e) => finish('error:' + (e && e.error ? e.error : 'unknown'));
       s.speak(u);
+      const t0 = Date.now();
+      poll = setInterval(() => { if (Date.now() - t0 > 800 && !s.speaking && !s.pending) finish('end'); }, 250);
+      hard = setTimeout(() => finish('timeout'), 4000 + text.length * 400);
       // Chrome иногда «засыпает» на паузе — страховка
       if (s.paused) s.resume();
     } catch (e) {

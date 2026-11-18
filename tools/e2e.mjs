@@ -161,6 +161,22 @@ async function main() {
     await evaluate("(() => { const i = document.querySelector('#num-answer'); i.value = '12800'; document.querySelector('#num-check').click(); })()");
     check(`${vp.name}: проверка цены даёт ответ с каной`, n === 1 && await waitFor("/えん/.test(document.querySelector('#num-feedback').textContent)"));
     await shot(`${vp.name}-6-numbers`);
+    // B5: второй Enter не засчитывает ответ повторно (переходит к следующему заданию)
+    await navigate(BASE + '#/study/time');
+    await waitFor("!!document.querySelector('#time-card input')");
+    // счётчик «из N» до и после двух Enter: должен вырасти ровно на 1
+    const twoEnters = (card, input, value) => evaluate(`(() => {
+      const total = () => Number((document.querySelector('${card} .sess-head').textContent.match(/из (\\d+)/) || [])[1]);
+      const before = total();
+      const i = document.querySelector('${input}'); i.value = '${value}';
+      const enter = () => document.querySelector('${input}').dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
+      enter(); enter();
+      return [before, total()]; })()`);
+    const tc = await twoEnters('#time-card', '#time-card input', '9:30');
+    await navigate(BASE + '#/study/numbers');
+    await waitFor("!!document.querySelector('#num-answer')");
+    const nc = await twoEnters('#num-card', '#num-answer', '100');
+    check(`${vp.name}: B5 двойной Enter = один ответ`, tc[1] === tc[0] + 1 && nc[1] === nc[0] + 1, JSON.stringify({ time: tc, numbers: nc }));
 
     await navigate(BASE + '#/study/time');
     check(`${vp.name}: время и счёт`, await waitFor("document.querySelectorAll('.cnt').length > 30"));
@@ -177,6 +193,21 @@ async function main() {
     await shot(`${vp.name}-8-fullscreen`);
     await click('#fs .btn.primary');
     check(`${vp.name}: карточка закрывается`, await waitFor("!document.querySelector('#fs')"));
+    // B3/B16: все 12 аллергенов — текст ужимается и целиком помещается над панелью кнопок; Esc закрывает и после других клавиш (B15)
+    await evaluate("document.querySelectorAll('#card-allergy .checks input').forEach((c) => { if (!c.checked) c.click(); })");
+    await waitFor("document.querySelectorAll('#card-allergy .checks input:checked').length === 12");
+    await evaluate("[...document.querySelectorAll('#card-allergy .btn.primary')].pop().click()");
+    await waitFor("!!document.querySelector('#fs .fs-line')");
+    const fit = await evaluate(`(() => { const ov = document.querySelector('#fs'); const lines = [...ov.querySelectorAll('.fs-line')];
+      const bottom = Math.max(...lines.map((l) => l.getBoundingClientRect().bottom), ov.querySelector('.fs-caption')?.getBoundingClientRect().bottom || 0);
+      return { bottom: Math.round(bottom), barTop: Math.round(ov.querySelector('.fs-bar').getBoundingClientRect().top), n: ov.dataset.fsN,
+        last: lines[lines.length - 1].textContent }; })()`);
+    check(`${vp.name}: B3 аллергия из 12 пунктов помещается целиком`, fit.bottom <= fit.barTop + 1 && /確認していただけますか/.test(fit.last), JSON.stringify(fit));
+    await shot(`${vp.name}-8b-allergy-12`);
+    for (const key of ['a', 'Shift']) await cdp.send('Input.dispatchKeyEvent', { type: 'keyDown', key });
+    await cdp.send('Input.dispatchKeyEvent', { type: 'keyDown', key: 'Escape', code: 'Escape', windowsVirtualKeyCode: 27 });
+    check(`${vp.name}: B15 Esc закрывает карточку после других клавиш`, await waitFor("!document.querySelector('#fs')", 2000));
+    await evaluate("document.querySelectorAll('#card-allergy .checks input').forEach((c) => { if (c.checked) c.click(); })");
     check(`${vp.name}: личные данные не выдуманы (отель пуст)`, await evaluate("/НЕ ЗАПОЛНЕНО/.test(document.querySelector('#card-hotel').textContent)"));
 
     // Кандзи

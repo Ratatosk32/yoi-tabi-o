@@ -57,14 +57,19 @@ export function createStore(backend) {
     return out;
   }
 
-  /** Импорт: объект или JSON-строка формата exportAll(). mode: 'replace' | 'merge'. */
+  /** Импорт: объект или JSON-строка формата exportAll(). mode: 'replace' | 'merge'.
+   *  Поля неверного типа пропускаются (B6), пустые массивы не стирают текущие данные (B1). */
   function importAll(input, mode = 'merge') {
-    const obj = typeof input === 'string' ? JSON.parse(input) : input;
-    if (!obj || obj.app !== 'japan-trip' || typeof obj.data !== 'object') throw new Error('Не похоже на экспорт Japan Trip');
+    let obj;
+    try { obj = typeof input === 'string' ? JSON.parse(input) : input; } catch { obj = null; }
+    if (!obj || obj.app !== 'japan-trip' || !obj.data || typeof obj.data !== 'object' || Array.isArray(obj.data)) {
+      throw new Error('This file is not a Japan Trip backup');
+    }
     const changed = [];
     for (const k of KEYS) {
       if (!(k in obj.data)) continue;
       const incoming = obj.data[k];
+      if (!typeOk(k, incoming)) continue;
       if (mode === 'merge' && isPlainObject(incoming) && isPlainObject(get(k, undefined))) {
         set(k, { ...get(k, {}), ...incoming });
       } else if (mode === 'merge' && Array.isArray(incoming) && Array.isArray(get(k, undefined))) {
@@ -80,11 +85,25 @@ export function createStore(backend) {
   return { get, set, update, exportAll, importAll };
 }
 
-function isPlainObject(v) { return v && typeof v === 'object' && !Array.isArray(v); }
+function isPlainObject(v) { return !!v && typeof v === 'object' && !Array.isArray(v); }
+
+// Ожидаемые типы полей резервной копии
+const ARRAY_KEYS = new Set(['favs', 'userItems', 'history']);
+function typeOk(key, v) {
+  if (ARRAY_KEYS.has(key)) {
+    if (!Array.isArray(v)) return false;
+    if (key === 'userItems') return v.every((x) => isPlainObject(x) && typeof x.id === 'string');
+    return v.every((x) => typeof x === 'string');
+  }
+  return isPlainObject(v);
+}
+
+const hasIds = (arr) => arr.length > 0 && arr.every((x) => isPlainObject(x) && 'id' in x);
 
 function mergeArrays(a, b) {
-  // элементы с id — слияние по id; примитивы — объединение без повторов
-  if (b.every((x) => x && typeof x === 'object' && 'id' in x)) {
+  if (!b.length) return a; // пустой массив в копии не стирает текущие данные
+  // элементы с id — слияние по id (только если оба массива из объектов с id); примитивы — объединение без повторов
+  if (hasIds(b) && (a.length === 0 || hasIds(a))) {
     const m = new Map(a.filter((x) => x && x.id).map((x) => [x.id, x]));
     for (const x of b) m.set(x.id, x);
     return [...m.values()];

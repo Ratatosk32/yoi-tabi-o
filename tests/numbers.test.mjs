@@ -47,7 +47,7 @@ test('yenReading: цены и 4円 = よえん', () => {
 test('yenMixed: запись с 万', () => {
   assert.equal(N.yenMixed(128000), '12万8千円');
   assert.equal(N.yenMixed(125500), '12万5,500円');
-  assert.equal(N.yenMixed(3000), '3千円');
+  assert.equal(N.yenMixed(3000), '3,000円');
   assert.equal(N.yenMixed(250000), '25万円');
   assert.equal(N.yenMixed(980), '980円');
 });

@@ -85,8 +85,9 @@ export function yenReading(n) {
   return { kana: kana + 'えん', romaji: romaji + '-en' };
 }
 
-/** Запись цены «как на ценнике/в речи»: 128000 → "12万8千円", 125500 → "12万5,500円", 3000 → "3千円". */
+/** Запись цены: меньше 万 — как на ценнике (1,000円, 980円); от 万 — с 万 (128000 → "12万8千円", 125500 → "12万5,500円"). */
 export function yenMixed(n) {
+  if (n < 10000) return n.toLocaleString('en-US') + '円';
   const man = Math.floor(n / 10000), rest = n % 10000;
   let s = '';
   if (man) s += man + '万';
@@ -169,7 +170,8 @@ export const WEEKDAYS = [ // getDay(): 0 = воскресенье
 
 export function dateReading(month, day) {
   const mo = MONTH[month], d = DAY[day];
-  if (!mo || !d) throw new RangeError(`date ${month}/${day}`);
+  const maxDay = [0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][month]; // 29.02 допустим (високосный год)
+  if (!mo || !d || day > maxDay) throw new RangeError(`date ${month}/${day}`);
   return { kana: mo[0] + d[0], romaji: mo[1] + ' ' + d[1] };
 }
 
@@ -225,5 +227,9 @@ export function randomTime(rnd = Math.random) {
 /** Разбор ответа пользователя: "12,800" / "12 800" / "１２８００" → 12800. */
 export function parseDigits(s) {
   const t = String(s).normalize('NFKC').replace(/[\s,.'’円¥]/g, '');
-  return /^\d+$/.test(t) ? Number(t) : NaN;
+  if (/^\d+$/.test(t)) return Number(t);
+  // запись с 万 / 千: 12万8千 → 128000, 12万5500 → 125500, 3千 → 3000 (B13)
+  const m = t.match(/^(?:(\d+)万)?(?:(\d+)千)?(\d*)$/);
+  if (m && (m[1] || m[2])) return Number(m[1] || 0) * 10000 + Number(m[2] || 0) * 1000 + Number(m[3] || 0);
+  return NaN;
 }
