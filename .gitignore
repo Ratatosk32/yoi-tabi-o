@@ -2,3 +2,8 @@ node_modules/
 **/.venv/
 *.log
 tools/out/
+design/shots/
+design/fonts/src/
+design/tools/.venv/
+qa/node_modules/
+qa/shots/
