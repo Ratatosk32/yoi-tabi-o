@@ -1124,3 +1124,5 @@ section.block, .card.edit { scroll-margin-top: var(--sp-3); }
 
 .today-line { display: flex; flex-wrap: wrap; gap: var(--sp-1) var(--sp-3); align-items: baseline; }
 .trip-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sp-2); }
+.found-line { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--sp-2); }
+.found-line h2.section { flex: 1 1 auto; margin-bottom: 0; }

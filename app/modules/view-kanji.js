@@ -15,6 +15,8 @@ export function render(ctx, root) {
     const inGroup = (id) => (id === 'all' ? items : items.filter((it) => it.group === id));
     const name = (id) => (id === 'all' ? 'All groups' : groups.find((g) => g.id === id).en);
     const setGroup = (id) => { group = id; query = ''; input.value = ''; draw(); window.scrollTo(0, 0); };
+    // long groups (food has ~100 entries): search works inside the selected group
+    input.placeholder = group === 'all' ? 'Search: exit, chūko, 中古…' : `Search in ${name(group)}…`;
     bar.append(pickerButton({
       id: 'kanji-picker', title: 'Group', label: name(group), count: inGroup(group).length,
       onClick: () => openSheet({
@@ -24,7 +26,7 @@ export function render(ctx, root) {
     }));
     bar.classList.toggle('is-off', !!query);
     clear(grid);
-    const arr = query ? search(items, query) : items.filter((it) => group === 'all' || it.group === group);
+    const arr = query ? search(inGroup(group), query) : inGroup(group);
     let lastGroup = null;
     for (const it of arr) {
       if (!query && group === 'all' && it.group !== lastGroup) {
@@ -41,7 +43,10 @@ export function render(ctx, root) {
       h('div.en', it.en),
       it.note ? h('div.note', it.note) : null));
     }
-    if (query) grid.prepend(h('h2.section.span', `Found: ${arr.length}`));
+    if (query) {
+      grid.prepend(h('div.span.found-line', h('h2.section', group === 'all' ? `Found: ${arr.length}` : `Found: ${arr.length} in ${name(group)}`),
+        group === 'all' ? null : h('button.btn.small#kanji-search-all', { type: 'button', on: { click: () => { const q = query; group = 'all'; input.value = q; query = q; draw(); } } }, 'Search all groups')));
+    }
     if (!arr.length) grid.append(h('div.empty.span', h('p', `Nothing found for “${query}”.`), h('p.small', 'Try English, romaji or the kanji itself.'),
       h('button.btn', { type: 'button', on: { click: () => { query = ''; input.value = ''; draw(); input.focus(); } } }, 'Clear search')));
   }

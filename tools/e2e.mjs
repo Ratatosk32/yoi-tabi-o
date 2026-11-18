@@ -263,6 +263,16 @@ async function main() {
     await navigate(BASE + '#/kanji');
     check(`${vp.name}: kanji cheat sheet`, await waitFor("document.querySelectorAll('.kcell').length >= 60"));
     check(`${vp.name}: no horizontal scroll (kanji)`, await noHScroll());
+    // Long groups stay usable: pick Food (98 entries) in the sheet and search inside it
+    await click('#kanji-picker');
+    await waitFor("!!document.querySelector('#sheet [data-group=\"food\"]')");
+    await click('#sheet [data-group="food"]');
+    check(`${vp.name}: kanji Food group has 90+ entries and a scoped search box`, await waitFor("document.querySelectorAll('.kcell').length >= 90 && /Search in/.test(document.querySelector('#view input.search').placeholder)"));
+    await evaluate("(() => { const i = document.querySelector('#view input.search'); i.value = 'ramen'; i.dispatchEvent(new Event('input')); })()");
+    check(`${vp.name}: search inside Food finds ramen, all results from Food, Search all groups offered`, await waitFor(
+      "document.querySelectorAll('.kcell').length >= 1 && [...document.querySelectorAll('.kcell')].every((c) => window.__app.data.kanji.items.find((k) => k.id === c.dataset.id).group === 'food') && !!document.querySelector('#kanji-search-all')", 3000));
+    await click('#kanji-search-all');
+    check(`${vp.name}: Search all groups widens the search`, await waitFor("/^Found: \\d+$/.test(document.querySelector('.found-line h2').textContent)"));
     await shot(`${vp.name}-9-kanji`);
 
     // Tools
