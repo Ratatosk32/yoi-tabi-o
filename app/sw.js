@@ -1,7 +1,7 @@
 // Service Worker (same-origin separate file — Blob SWs are not allowed, PLAN.md 2d).
 // Bump VERSION whenever app files change — the browser sees a new sw.js
 // and the app offers "Update" (no silent reloads).
-const VERSION = 'v6';
+const VERSION = 'v7';
 const CACHE = `jt-${VERSION}`;
 
 const PRECACHE = [

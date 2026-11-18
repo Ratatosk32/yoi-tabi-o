@@ -33,12 +33,26 @@
   <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="stylesheet" href="tokens.css">
   <link rel="stylesheet" href="components.css">
+  <script>
+    // Boot watchdog: if the app has not started (a script failed to load, a stale cache…),
+    // replace "Loading…" with an error and a Retry button instead of spinning forever.
+    window.__bootFail = function (why) {
+      if (document.documentElement.dataset.ready === '1') return;
+      var v = document.getElementById('view');
+      if (!v || v.querySelector('.card.error')) return;
+      v.innerHTML = '<div class="card error" id="boot-error" role="alert"><p><strong>The app did not start.</strong></p>' +
+        '<p class="small">' + (why || 'Loading takes too long.') + ' Check the connection and try again.</p>' +
+        '<div class="actions"><button class="btn primary" type="button" id="boot-retry">Retry</button></div></div>';
+      document.getElementById('boot-retry').onclick = function () { location.reload(); };
+    };
+    window.__bootTimer = setTimeout(function () { window.__bootFail(); }, 15000);
+  </script>
   <script src="vendor/wanakana.min.js" defer></script>
-  <script type="module" src="app.js"></script>
+  <script type="module" src="app.js" onerror="window.__bootFail('A part of the app could not be downloaded.')"></script>
 </head>
 <body>
   <div id="app">
-    <main id="view"><p class="loading">Loading…</p></main>
+    <main id="view"><p class="loading" role="status">Loading…</p></main>
   </div>
   <noscript><p class="loading">JavaScript is required.</p></noscript>
 </body>

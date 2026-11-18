@@ -48,10 +48,22 @@ const ctx = {
   },
 };
 
+const LOAD_TIMEOUT_MS = 12000;
+
+/** fetch + JSON with a timeout: a stalled request must end in an error the user can retry, not an endless spinner. */
 async function loadJson(path) {
-  const r = await fetch(path);
-  if (!r.ok) throw new Error(`${path}: HTTP ${r.status}`);
-  return r.json();
+  const ctl = new AbortController();
+  const timer = setTimeout(() => ctl.abort(), LOAD_TIMEOUT_MS);
+  try {
+    const r = await fetch(path, { signal: ctl.signal });
+    if (!r.ok) throw new Error(`${path}: HTTP ${r.status}`);
+    return await r.json();
+  } catch (e) {
+    if (e.name === 'AbortError') throw new Error(`${path}: no response in ${LOAD_TIMEOUT_MS / 1000} s`);
+    throw e;
+  } finally {
+    clearTimeout(timer);
+  }
 }
 
 async function loadData() {
@@ -176,30 +188,64 @@ export function swInfo() {
 }
 
 // ---------- Start ----------
-async function start() {
-  document.documentElement.dataset.platform = PLATFORM;
-  buildShell();
-  const s = ctx.settings();
-  store.migrate(); // data saved by older versions (SRS mode keys, user phrases ru → en)
-  if (!s.startDate) ctx.setSetting('startDate', todayStr());
+function showLoading() {
+  clear(document.getElementById('view')).append(h('p.loading', { role: 'status' }, 'Loading…'));
+}
+
+/** A failed start always ends here: what happened, what to do, and a Retry button. */
+function showLoadError(e) {
+  console.error(e);
+  clearTimeout(window.__bootTimer);
+  const view = clear(document.getElementById('view'));
+  view.append(h('div.card.error#load-error', { role: 'alert' },
+    h('p', h('strong', 'The app could not load its data.')),
+    h('p.small', navigator.onLine === false
+      ? 'You are offline and the phrases are not saved on this device yet. Connect once and tap Retry.'
+      : 'Check the connection and tap Retry. Open the app once while online so it is saved for offline use.'),
+    h('p.small.muted', String(e?.message || e)),
+    h('div.actions.wrap',
+      h('button.btn.primary#retry-load', { type: 'button', on: { click: () => boot() } }, 'Retry'),
+      h('button.btn', { type: 'button', on: { click: () => location.reload() } }, 'Reload the app'))));
+}
+
+let booted = false;
+async function boot() {
+  showLoading();
   try {
     ctx.data = await loadData();
   } catch (e) {
-    document.getElementById('view').append(h('div.card.error',
-      h('p', 'Could not load data: ' + e.message),
-      h('p', 'Open the app once while online so it is saved for offline use.')));
+    showLoadError(e);
     return;
   }
-  window.addEventListener('hashchange', route);
+  clearTimeout(window.__bootTimer);
+  if (!booted) {
+    booted = true;
+    window.addEventListener('hashchange', route);
+    tts.init().then((st) => {
+      ctx.ttsStatus = st;
+      if (st.supported && !st.hasJapanese && !sessionStorageGet('ttsWarned')) {
+        sessionStorageSet('ttsWarned', '1');
+        toast('No Japanese voice found — see Tools → Speech', 4000);
+      }
+    });
+  }
   route();
   document.documentElement.dataset.ready = '1';
-  tts.init().then((st) => {
-    ctx.ttsStatus = st;
-    if (st.supported && !st.hasJapanese && !sessionStorageGet('ttsWarned')) {
-      sessionStorageSet('ttsWarned', '1');
-      toast('No Japanese voice found — see Tools → Speech', 4000);
-    }
-  });
+}
+
+async function start() {
+  document.documentElement.dataset.platform = PLATFORM;
+  try {
+    buildShell();
+    const s = ctx.settings();
+    store.migrate(); // data saved by older versions (SRS mode keys, user phrases ru → en)
+    if (!s.startDate) ctx.setSetting('startDate', todayStr());
+  } catch (e) {
+    // e.g. storage blocked: the shell is up, so say what happened instead of hanging on "Loading…"
+    showLoadError(e);
+    return;
+  }
+  await boot();
   registerSW();
   try { if (navigator.storage?.persist) ctx.persisted = await navigator.storage.persist(); } catch { /* ignore */ }
 }
