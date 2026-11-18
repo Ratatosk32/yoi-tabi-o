@@ -13,12 +13,15 @@ const imp = (p) => import(pathToFileURL(join(cur, 'src', p)).href);
 
 const { UNITS, CATEGORIES } = await imp('units.mjs');
 const { EN } = await imp('existing-en.mjs');
-const LESSON_FILES = ['u01-u04.mjs', 'u05-u07.mjs', 'u08-u10.mjs', 'u11-u14.mjs'];
+const LESSON_FILES = ['u01-u04.mjs', 'u05-u07.mjs', 'u08-u10.mjs', 'u11-u14.mjs', 'pharmacy-phrases.mjs'];
 const lessons = [];
 for (const f of LESSON_FILES) {
   try { lessons.push(...(await imp(f)).LESSONS); }
   catch (e) { if (e.code !== 'ERR_MODULE_NOT_FOUND') throw e; console.warn('missing source file', f); }
 }
+
+// Study order = lesson code order (extra lesson files slot into their unit).
+lessons.sort((a, b) => a.code.localeCompare(b.code));
 
 const src = JSON.parse(readFileSync(join(root, 'app', 'data', 'phrases.json'), 'utf8'));
 const old = new Map(src.items.map((it) => [it.id, it]));

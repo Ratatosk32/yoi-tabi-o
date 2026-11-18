@@ -1,4 +1,4 @@
-# Phrasebook curriculum: ~1000 items, 79 lessons
+# Phrasebook curriculum: ~1000 items, 80 lessons
 
 Author: linguist / Japanese teacher. Date: 2026-11-18.
 Data: `curriculum/data/curriculum.json`, built from `curriculum/src/*.mjs` by `curriculum/tools/build.mjs`; checked by `curriculum/tools/validate.mjs`; counts in `curriculum/SUMMARY.md` (generated). Open questions: `curriculum/QUESTIONS.md`.
@@ -12,7 +12,7 @@ Learner: a beginner who studied a little long ago and has forgotten almost every
   - **CORE** — units U01–U04: **20 lessons, 248 items**, one lesson a day before the flight. Covers what the family needs at a konbini, restaurant, station, hotel, camera shop and tax-free counter, plus an SOS minimum. About a quarter of the core is staff speech (`hear`): it only has to be **recognized by ear**, which is much cheaper than producing it.
   - **MINIMUM, if you fall behind** — 8 lessons: U01-L01…L05, U02-L01, U03-L05 (SOS), U04-L05 (paying and tax-free). About 100 items, enough not to get lost.
   - **EXTENDED (ext)** — U05–U11, 43 lessons, 553 items. Study **by situation**: the evening before a camera-shop day do U08; before the shinkansen, U07-L01; before an onsen, U09-L03. Good for the plane and evenings during the trip.
-  - **REFERENCE (ref)** — U12–U14, 16 lessons, 202 items: health and emergencies in detail, small talk, long exchanges, show-to-staff cards. **Searched, not studied**: search by English, kana or romaji, and the full-screen "show" button.
+  - **REFERENCE (ref)** — U12–U14, 17 lessons, 214 items: health and emergencies in detail, small talk, long exchanges, show-to-staff cards. **Searched, not studied**: search by English, kana or romaji, and the full-screen "show" button.
 - The goal of the core is not to "know Japanese" but to recognize a familiar staff line within 2–3 seconds and answer with a ready-made chunk. Grammar is not taught separately; it lives inside the patterns.
 
 ## 1. Progression
@@ -46,7 +46,7 @@ A lesson is 10–15 items, about 20 minutes. Lesson fields: code (`U03-L02`), ti
 | U09 Hotel and daily life+ | ext | 3–4 | 5 | requests; room problems; ryokan and onsen; money, laundry, post; phone and front desk |
 | U10 With a child+ | ext | 2–4 | 5 | a child's needs; parks and museums; when people talk to your child; words for the child; if the child gets lost |
 | U11 Sightseeing | ext | 3–4 | 6 | tickets and hours; temples and shrines; photo etiquette; "take our photo" and tips; December: lights and New Year; weather |
-| U12 Health and emergencies+ | ref | 4–5 | 6 | symptoms; at the clinic; pharmacy; lost items and police; earthquakes and alerts; paperwork and paying |
+| U12 Health and emergencies+ | ref | 4–5 | 7 | symptoms; at the clinic; pharmacy; lost items and police; earthquakes and alerts; paperwork and paying; pharmacy II (by symptom, who it is for) |
 | U13 Small talk | ref | 4 | 5 | about yourself; the trip; compliments and thanks; family talk; declining and apologizing |
 | U14 Long exchanges and cards | ref | 5 | 5 | the whole konbini exchange; the whole restaurant exchange; buying a used lens; tax-free; show-to-staff cards |
 
@@ -140,3 +140,7 @@ If the trip comes sooner, move U04-L01…L05 into days −3…0 instead of the p
 - **Lessons UI:** list of units → lessons (title, goal, count, progress bar = share of items in box ≥ 2); "Lesson of the day" button; lock icon on CORE lessons until unlocked; "Test out" button on every lesson.
 - **Search:** keep searching `en`, `ja`, `kana`, `romaji`, `note`, `pattern`; the corpus is the reference for the trip.
 - **TTS:** use `tts` when present (it overrides kanji readings such as 辛 = から, 十分 = じゅっぷん).
+
+## 6. Extra content files (for the builder to merge)
+- `src/kanji-extra.mjs` exports `KANJI_EXTRA` (247 items, exactly the kanji.json item fields `id, group, ja, ruby, kana, romaji, en, note?`) and `GROUPS_EXTRA` (new group `pharmacy`, suggested after `allergen`). Append each group's items after the existing items of that group; rows are ordered most frequent first. Check: `node curriculum/tools/validate-kanji-extra.mjs`.
+- `src/pharmacy-phrases.mjs` adds lesson U12-L07 (12 items) to the curriculum and lists the existing pharmacy items it reuses (`REUSED`). It is already part of `curriculum.json`.

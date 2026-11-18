@@ -16,3 +16,9 @@ Items I was not sure enough about to put into `curriculum.json`, plus decisions 
 ## Recommended before freezing
 8. **Native-speaker pass on the 732 new items**, especially staff keigo in U06–U14 (hear items) and the long two-part exchanges in U14. I wrote them to the same standard as the v1 review, but one pass by a native speaker is the best remaining check (PLAN section 4 already suggests this).
 9. **TTS on device.** Possible misreadings already have a `tts` override (辛 → から, 十分 → じゅっぷん). Overrides were also added for 一日 = ついたち (`numbers.tsuitachi`, `sights.open-jan1`). Spot-check on the Pixel: 生もの (なまもの), 何色 (なにいろ), 一日三回 (いちにち, `hear.family.dosage`), 明日 (あした), 大人 (おとな), 方 in お次の方 (かた). Add `tts` overrides wherever the voice gets them wrong.
+
+## Kanji cheat-sheet extra (`src/kanji-extra.mjs`)
+10. **Recommended allergen list.** I used the current list of 20 as I know it: マカダミアナッツ added and まつたけ removed in 2024, くるみ moved to the mandatory 8 in 2023. Worth a quick check against the Consumer Affairs Agency page before freezing.
+11. **Elevator buttons.** The buttons print only 開 and 閉; the cheat sheet teaches them through the verbs 開く (hiraku) and 閉まる (shimaru), with a note. I did not add a "reading" for the bare characters on the buttons.
+12. **Battery sizes.** Packs print 単3 / 単4 with Arabic digits; the item is written 単三 (tansan) so the kana field stays kana-only, with a note about the printed form.
+13. **バルサム切れ.** `app/data/kanji.json` now ships it as バルサムぎれ (barusamu-gire). This matches my best guess (see item 1), but I have not confirmed the reading.

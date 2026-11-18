@@ -1895,6 +1895,32 @@
    ]
   },
   {
+   "code": "U12-L07",
+   "unit": "U12",
+   "title": "Pharmacy II: symptoms and who it is for",
+   "goal": "Ask for a remedy by symptom; answer the pharmacist.",
+   "level": 4,
+   "path": "ref",
+   "patterns": [
+    "～に効く薬はありますか"
+   ],
+   "count": 12,
+   "ids": [
+    "family.headache-med",
+    "family.runny-nose-med",
+    "family.cough-med",
+    "family.motion-sick",
+    "family.eye-drops",
+    "hear.family.symptoms",
+    "family.runny-nose",
+    "hear.family.who-uses",
+    "family.for-child",
+    "family.for-me",
+    "hear.family.other-meds",
+    "hear.family.no-pharmacist"
+   ]
+  },
+  {
    "code": "U13-L01",
    "unit": "U13",
    "title": "About yourself",
@@ -2298,7 +2324,8 @@
     "hear.family.shougakusei",
     "hear.family.fever-q",
     "hear.family.medicine-q",
-    "hear.family.drug-allergy"
+    "hear.family.drug-allergy",
+    "hear.family.other-meds"
    ],
    "tags": [
     "core"
@@ -2491,6 +2518,7 @@
     "hear.sights.new-year-closed",
     "hear.family.dosage",
     "hear.family.full-cost",
+    "hear.family.no-pharmacist",
     "hear.shop.full-b",
     "hear.shop.tf-c"
    ],
@@ -7690,7 +7718,8 @@
    "romaji": "ato de mata kimasu",
    "note": "A polite way to leave a shop.",
    "replyTo": [
-    "hear.shop.adjust-time"
+    "hear.shop.adjust-time",
+    "hear.family.no-pharmacist"
    ],
    "tags": [
     "ext"
@@ -16770,6 +16799,9 @@
    "romaji": "atama ga itai desu",
    "note": "～が痛いです = \"my ～ hurts\".",
    "pattern": "～が痛いです",
+   "replyTo": [
+    "hear.family.symptoms"
+   ],
    "tags": [
     "ref"
    ],
@@ -16787,6 +16819,9 @@
    "ruby": "のどが痛[いた]いです",
    "kana": "のどがいたいです",
    "romaji": "nodo ga itai desu",
+   "replyTo": [
+    "hear.family.symptoms"
+   ],
    "tags": [
     "ref"
    ],
@@ -16804,6 +16839,9 @@
    "ruby": "咳[せき]が出[で]ます",
    "kana": "せきがでます",
    "romaji": "seki ga demasu",
+   "replyTo": [
+    "hear.family.symptoms"
+   ],
    "tags": [
     "ref"
    ],
@@ -17088,7 +17126,8 @@
    "kana": "このくすりをのんでいます",
    "romaji": "kono kusuri o nonde imasu",
    "replyTo": [
-    "hear.family.medicine-q"
+    "hear.family.medicine-q",
+    "hear.family.other-meds"
    ],
    "tags": [
     "ref"
@@ -18142,6 +18181,240 @@
    "src": "new"
   },
   {
+   "id": "family.headache-med",
+   "cat": "family",
+   "kind": "say",
+   "en": "Do you have medicine for a headache?",
+   "ja": "頭痛薬はありますか",
+   "ruby": "頭痛薬[ずつうやく]はありますか",
+   "kana": "ずつうやくはありますか",
+   "romaji": "zutsūyaku wa arimasu ka",
+   "tags": [
+    "ref"
+   ],
+   "lesson": "U12-L07",
+   "level": 4,
+   "order": 880,
+   "src": "new"
+  },
+  {
+   "id": "family.runny-nose-med",
+   "cat": "family",
+   "kind": "pattern",
+   "en": "Do you have something for a runny nose?",
+   "ja": "鼻水に効く薬はありますか",
+   "ruby": "鼻水[はなみず]に効[き]く薬[くすり]はありますか",
+   "kana": "はなみずにきくくすりはありますか",
+   "romaji": "hanamizu ni kiku kusuri wa arimasu ka",
+   "note": "～に効く薬はありますか = \"do you have medicine for ～?\"",
+   "pattern": "～に効く薬はありますか",
+   "tags": [
+    "ref"
+   ],
+   "lesson": "U12-L07",
+   "level": 4,
+   "order": 881,
+   "src": "new"
+  },
+  {
+   "id": "family.cough-med",
+   "cat": "family",
+   "kind": "say",
+   "en": "Do you have cough medicine?",
+   "ja": "せき止めはありますか",
+   "ruby": "せき止[ど]めはありますか",
+   "kana": "せきどめはありますか",
+   "romaji": "sekidome wa arimasu ka",
+   "tags": [
+    "ref"
+   ],
+   "lesson": "U12-L07",
+   "level": 4,
+   "order": 882,
+   "src": "new"
+  },
+  {
+   "id": "family.motion-sick",
+   "cat": "family",
+   "kind": "say",
+   "en": "Do you have motion-sickness medicine?",
+   "ja": "酔い止めはありますか",
+   "ruby": "酔[よ]い止[ど]めはありますか",
+   "kana": "よいどめはありますか",
+   "romaji": "yoidome wa arimasu ka",
+   "tags": [
+    "ref"
+   ],
+   "lesson": "U12-L07",
+   "level": 4,
+   "order": 883,
+   "src": "new"
+  },
+  {
+   "id": "family.eye-drops",
+   "cat": "family",
+   "kind": "say",
+   "en": "Do you have eye drops?",
+   "ja": "目薬はありますか",
+   "ruby": "目薬[めぐすり]はありますか",
+   "kana": "めぐすりはありますか",
+   "romaji": "megusuri wa arimasu ka",
+   "tags": [
+    "ref"
+   ],
+   "lesson": "U12-L07",
+   "level": 4,
+   "order": 884,
+   "src": "new"
+  },
+  {
+   "id": "hear.family.symptoms",
+   "cat": "family",
+   "kind": "hear",
+   "en": "What are your symptoms?",
+   "ja": "どんな症状ですか",
+   "ruby": "どんな症状[しょうじょう]ですか",
+   "kana": "どんなしょうじょうですか",
+   "romaji": "donna shōjō desu ka",
+   "replies": [
+    "family.headache",
+    "family.throat",
+    "family.cough",
+    "family.runny-nose"
+   ],
+   "tags": [
+    "ref"
+   ],
+   "lesson": "U12-L07",
+   "level": 4,
+   "order": 885,
+   "src": "new"
+  },
+  {
+   "id": "family.runny-nose",
+   "cat": "family",
+   "kind": "say",
+   "en": "I have a runny nose",
+   "ja": "鼻水が出ます",
+   "ruby": "鼻水[はなみず]が出[で]ます",
+   "kana": "はなみずがでます",
+   "romaji": "hanamizu ga demasu",
+   "replyTo": [
+    "hear.family.symptoms"
+   ],
+   "tags": [
+    "ref"
+   ],
+   "lesson": "U12-L07",
+   "level": 4,
+   "order": 886,
+   "src": "new"
+  },
+  {
+   "id": "hear.family.who-uses",
+   "cat": "family",
+   "kind": "hear",
+   "en": "Who will be using it?",
+   "ja": "どなたがお使いになりますか",
+   "ruby": "どなたがお使[つか]いになりますか",
+   "kana": "どなたがおつかいになりますか",
+   "romaji": "donata ga otsukai ni narimasu ka",
+   "replies": [
+    "family.for-child",
+    "family.for-me"
+   ],
+   "tags": [
+    "ref"
+   ],
+   "lesson": "U12-L07",
+   "level": 4,
+   "order": 887,
+   "src": "new"
+  },
+  {
+   "id": "family.for-child",
+   "cat": "family",
+   "kind": "say",
+   "en": "It's for my child",
+   "ja": "子どもが使います",
+   "ruby": "子[こ]どもが使[つか]います",
+   "kana": "こどもがつかいます",
+   "romaji": "kodomo ga tsukaimasu",
+   "replyTo": [
+    "hear.family.who-uses"
+   ],
+   "tags": [
+    "ref"
+   ],
+   "lesson": "U12-L07",
+   "level": 4,
+   "order": 888,
+   "src": "new"
+  },
+  {
+   "id": "family.for-me",
+   "cat": "family",
+   "kind": "say",
+   "en": "It's for me",
+   "ja": "私が使います",
+   "ruby": "私[わたし]が使[つか]います",
+   "kana": "わたしがつかいます",
+   "romaji": "watashi ga tsukaimasu",
+   "replyTo": [
+    "hear.family.who-uses"
+   ],
+   "tags": [
+    "ref"
+   ],
+   "lesson": "U12-L07",
+   "level": 4,
+   "order": 889,
+   "src": "new"
+  },
+  {
+   "id": "hear.family.other-meds",
+   "cat": "family",
+   "kind": "hear",
+   "en": "Are you taking any other medicine?",
+   "ja": "ほかに飲んでいるお薬はありますか",
+   "ruby": "ほかに飲[の]んでいるお薬[くすり]はありますか",
+   "kana": "ほかにのんでいるおくすりはありますか",
+   "romaji": "hoka ni nonde iru okusuri wa arimasu ka",
+   "replies": [
+    "basics.iie",
+    "family.taking-this"
+   ],
+   "tags": [
+    "ref"
+   ],
+   "lesson": "U12-L07",
+   "level": 4,
+   "order": 890,
+   "src": "new"
+  },
+  {
+   "id": "hear.family.no-pharmacist",
+   "cat": "family",
+   "kind": "hear",
+   "en": "The pharmacist is out, so we can't sell Class 1 medicines right now",
+   "ja": "ただいま薬剤師が不在のため、第一類医薬品は販売できません",
+   "ruby": "ただいま薬剤師[やくざいし]が不在[ふざい]のため、第一類医薬品[だいいちるいいやくひん]は販売[はんばい]できません",
+   "kana": "ただいまやくざいしがふざいのため、だいいちるいいやくひんははんばいできません",
+   "romaji": "tadaima yakuzaishi ga fuzai no tame, daiichirui iyakuhin wa hanbai dekimasen",
+   "note": "Class 1 (第1類) needs a pharmacist; ask for a Class 2 alternative or come back later.",
+   "replies": [
+    "basics.wakarimashita",
+    "basics.ato-de"
+   ],
+   "tags": [
+    "ref"
+   ],
+   "lesson": "U12-L07",
+   "level": 4,
+   "order": 891,
+   "src": "new"
+  },
+  {
    "id": "talk.hajimemashite",
    "cat": "talk",
    "kind": "say",
@@ -18155,7 +18428,7 @@
    ],
    "lesson": "U13-L01",
    "level": 4,
-   "order": 880,
+   "order": 892,
    "src": "new"
   },
   {
@@ -18172,7 +18445,7 @@
    ],
    "lesson": "U13-L01",
    "level": 4,
-   "order": 881,
+   "order": 893,
    "src": "new"
   },
   {
@@ -18192,7 +18465,7 @@
    ],
    "lesson": "U13-L01",
    "level": 4,
-   "order": 882,
+   "order": 894,
    "src": "new"
   },
   {
@@ -18209,7 +18482,7 @@
    ],
    "lesson": "U13-L01",
    "level": 4,
-   "order": 883,
+   "order": 895,
    "src": "new"
   },
   {
@@ -18226,7 +18499,7 @@
    ],
    "lesson": "U13-L01",
    "level": 4,
-   "order": 884,
+   "order": 896,
    "src": "new"
   },
   {
@@ -18243,7 +18516,7 @@
    ],
    "lesson": "U13-L01",
    "level": 4,
-   "order": 885,
+   "order": 897,
    "src": "new"
   },
   {
@@ -18263,7 +18536,7 @@
    ],
    "lesson": "U13-L01",
    "level": 4,
-   "order": 886,
+   "order": 898,
    "src": "new"
   },
   {
@@ -18280,7 +18553,7 @@
    ],
    "lesson": "U13-L01",
    "level": 4,
-   "order": 887,
+   "order": 899,
    "src": "new"
   },
   {
@@ -18297,7 +18570,7 @@
    ],
    "lesson": "U13-L01",
    "level": 4,
-   "order": 888,
+   "order": 900,
    "src": "new"
   },
   {
@@ -18314,7 +18587,7 @@
    ],
    "lesson": "U13-L01",
    "level": 4,
-   "order": 889,
+   "order": 901,
    "src": "new"
   },
   {
@@ -18334,7 +18607,7 @@
    ],
    "lesson": "U13-L01",
    "level": 4,
-   "order": 890,
+   "order": 902,
    "src": "new"
   },
   {
@@ -18354,7 +18627,7 @@
    ],
    "lesson": "U13-L01",
    "level": 4,
-   "order": 891,
+   "order": 903,
    "src": "new"
   },
   {
@@ -18374,7 +18647,7 @@
    ],
    "lesson": "U13-L01",
    "level": 4,
-   "order": 892,
+   "order": 904,
    "src": "new"
   },
   {
@@ -18394,7 +18667,7 @@
    ],
    "lesson": "U13-L02",
    "level": 4,
-   "order": 893,
+   "order": 905,
    "src": "new"
   },
   {
@@ -18415,7 +18688,7 @@
    ],
    "lesson": "U13-L02",
    "level": 4,
-   "order": 894,
+   "order": 906,
    "src": "new"
   },
   {
@@ -18435,7 +18708,7 @@
    ],
    "lesson": "U13-L02",
    "level": 4,
-   "order": 895,
+   "order": 907,
    "src": "new"
   },
   {
@@ -18455,7 +18728,7 @@
    ],
    "lesson": "U13-L02",
    "level": 4,
-   "order": 896,
+   "order": 908,
    "src": "new"
   },
   {
@@ -18475,7 +18748,7 @@
    ],
    "lesson": "U13-L02",
    "level": 4,
-   "order": 897,
+   "order": 909,
    "src": "new"
   },
   {
@@ -18492,7 +18765,7 @@
    ],
    "lesson": "U13-L02",
    "level": 4,
-   "order": 898,
+   "order": 910,
    "src": "new"
   },
   {
@@ -18512,7 +18785,7 @@
    ],
    "lesson": "U13-L02",
    "level": 4,
-   "order": 899,
+   "order": 911,
    "src": "new"
   },
   {
@@ -18532,7 +18805,7 @@
    ],
    "lesson": "U13-L02",
    "level": 4,
-   "order": 900,
+   "order": 912,
    "src": "new"
   },
   {
@@ -18549,7 +18822,7 @@
    ],
    "lesson": "U13-L02",
    "level": 4,
-   "order": 901,
+   "order": 913,
    "src": "new"
   },
   {
@@ -18566,7 +18839,7 @@
    ],
    "lesson": "U13-L02",
    "level": 4,
-   "order": 902,
+   "order": 914,
    "src": "new"
   },
   {
@@ -18583,7 +18856,7 @@
    ],
    "lesson": "U13-L02",
    "level": 4,
-   "order": 903,
+   "order": 915,
    "src": "new"
   },
   {
@@ -18600,7 +18873,7 @@
    ],
    "lesson": "U13-L02",
    "level": 4,
-   "order": 904,
+   "order": 916,
    "src": "new"
   },
   {
@@ -18617,7 +18890,7 @@
    ],
    "lesson": "U13-L02",
    "level": 4,
-   "order": 905,
+   "order": 917,
    "src": "new"
   },
   {
@@ -18634,7 +18907,7 @@
    ],
    "lesson": "U13-L03",
    "level": 4,
-   "order": 906,
+   "order": 918,
    "src": "new"
   },
   {
@@ -18651,7 +18924,7 @@
    ],
    "lesson": "U13-L03",
    "level": 4,
-   "order": 907,
+   "order": 919,
    "src": "new"
   },
   {
@@ -18668,7 +18941,7 @@
    ],
    "lesson": "U13-L03",
    "level": 4,
-   "order": 908,
+   "order": 920,
    "src": "new"
   },
   {
@@ -18685,7 +18958,7 @@
    ],
    "lesson": "U13-L03",
    "level": 4,
-   "order": 909,
+   "order": 921,
    "src": "new"
   },
   {
@@ -18702,7 +18975,7 @@
    ],
    "lesson": "U13-L03",
    "level": 4,
-   "order": 910,
+   "order": 922,
    "src": "new"
   },
   {
@@ -18719,7 +18992,7 @@
    ],
    "lesson": "U13-L03",
    "level": 4,
-   "order": 911,
+   "order": 923,
    "src": "new"
   },
   {
@@ -18736,7 +19009,7 @@
    ],
    "lesson": "U13-L03",
    "level": 4,
-   "order": 912,
+   "order": 924,
    "src": "new"
   },
   {
@@ -18753,7 +19026,7 @@
    ],
    "lesson": "U13-L03",
    "level": 4,
-   "order": 913,
+   "order": 925,
    "src": "new"
   },
   {
@@ -18770,7 +19043,7 @@
    ],
    "lesson": "U13-L03",
    "level": 4,
-   "order": 914,
+   "order": 926,
    "src": "new"
   },
   {
@@ -18787,7 +19060,7 @@
    ],
    "lesson": "U13-L03",
    "level": 4,
-   "order": 915,
+   "order": 927,
    "src": "new"
   },
   {
@@ -18805,7 +19078,7 @@
    ],
    "lesson": "U13-L03",
    "level": 4,
-   "order": 916,
+   "order": 928,
    "src": "new"
   },
   {
@@ -18823,7 +19096,7 @@
    ],
    "lesson": "U13-L03",
    "level": 4,
-   "order": 917,
+   "order": 929,
    "src": "new"
   },
   {
@@ -18843,7 +19116,7 @@
    ],
    "lesson": "U13-L03",
    "level": 4,
-   "order": 918,
+   "order": 930,
    "src": "new"
   },
   {
@@ -18864,7 +19137,7 @@
    ],
    "lesson": "U13-L04",
    "level": 4,
-   "order": 919,
+   "order": 931,
    "src": "new"
   },
   {
@@ -18881,7 +19154,7 @@
    ],
    "lesson": "U13-L04",
    "level": 4,
-   "order": 920,
+   "order": 932,
    "src": "new"
   },
   {
@@ -18898,7 +19171,7 @@
    ],
    "lesson": "U13-L04",
    "level": 4,
-   "order": 921,
+   "order": 933,
    "src": "new"
   },
   {
@@ -18915,7 +19188,7 @@
    ],
    "lesson": "U13-L04",
    "level": 4,
-   "order": 922,
+   "order": 934,
    "src": "new"
   },
   {
@@ -18932,7 +19205,7 @@
    ],
    "lesson": "U13-L04",
    "level": 4,
-   "order": 923,
+   "order": 935,
    "src": "new"
   },
   {
@@ -18949,7 +19222,7 @@
    ],
    "lesson": "U13-L04",
    "level": 4,
-   "order": 924,
+   "order": 936,
    "src": "new"
   },
   {
@@ -18969,7 +19242,7 @@
    ],
    "lesson": "U13-L04",
    "level": 4,
-   "order": 925,
+   "order": 937,
    "src": "new"
   },
   {
@@ -18986,7 +19259,7 @@
    ],
    "lesson": "U13-L04",
    "level": 4,
-   "order": 926,
+   "order": 938,
    "src": "new"
   },
   {
@@ -19006,7 +19279,7 @@
    ],
    "lesson": "U13-L04",
    "level": 4,
-   "order": 927,
+   "order": 939,
    "src": "new"
   },
   {
@@ -19026,7 +19299,7 @@
    ],
    "lesson": "U13-L04",
    "level": 4,
-   "order": 928,
+   "order": 940,
    "src": "new"
   },
   {
@@ -19043,7 +19316,7 @@
    ],
    "lesson": "U13-L04",
    "level": 4,
-   "order": 929,
+   "order": 941,
    "src": "new"
   },
   {
@@ -19063,7 +19336,7 @@
    ],
    "lesson": "U13-L04",
    "level": 4,
-   "order": 930,
+   "order": 942,
    "src": "new"
   },
   {
@@ -19081,7 +19354,7 @@
    ],
    "lesson": "U13-L05",
    "level": 4,
-   "order": 931,
+   "order": 943,
    "src": "new"
   },
   {
@@ -19098,7 +19371,7 @@
    ],
    "lesson": "U13-L05",
    "level": 4,
-   "order": 932,
+   "order": 944,
    "src": "new"
   },
   {
@@ -19115,7 +19388,7 @@
    ],
    "lesson": "U13-L05",
    "level": 4,
-   "order": 933,
+   "order": 945,
    "src": "new"
   },
   {
@@ -19132,7 +19405,7 @@
    ],
    "lesson": "U13-L05",
    "level": 4,
-   "order": 934,
+   "order": 946,
    "src": "new"
   },
   {
@@ -19149,7 +19422,7 @@
    ],
    "lesson": "U13-L05",
    "level": 4,
-   "order": 935,
+   "order": 947,
    "src": "new"
   },
   {
@@ -19166,7 +19439,7 @@
    ],
    "lesson": "U13-L05",
    "level": 4,
-   "order": 936,
+   "order": 948,
    "src": "new"
   },
   {
@@ -19183,7 +19456,7 @@
    ],
    "lesson": "U13-L05",
    "level": 4,
-   "order": 937,
+   "order": 949,
    "src": "new"
   },
   {
@@ -19200,7 +19473,7 @@
    ],
    "lesson": "U13-L05",
    "level": 4,
-   "order": 938,
+   "order": 950,
    "src": "new"
   },
   {
@@ -19217,7 +19490,7 @@
    ],
    "lesson": "U13-L05",
    "level": 4,
-   "order": 939,
+   "order": 951,
    "src": "new"
   },
   {
@@ -19234,7 +19507,7 @@
    ],
    "lesson": "U13-L05",
    "level": 4,
-   "order": 940,
+   "order": 952,
    "src": "new"
   },
   {
@@ -19252,7 +19525,7 @@
    ],
    "lesson": "U13-L05",
    "level": 4,
-   "order": 941,
+   "order": 953,
    "src": "new"
   },
   {
@@ -19272,7 +19545,7 @@
    ],
    "lesson": "U13-L05",
    "level": 4,
-   "order": 942,
+   "order": 954,
    "src": "new"
   },
   {
@@ -19292,7 +19565,7 @@
    ],
    "lesson": "U13-L05",
    "level": 4,
-   "order": 943,
+   "order": 955,
    "src": "new"
   },
   {
@@ -19309,7 +19582,7 @@
    ],
    "lesson": "U14-L01",
    "level": 5,
-   "order": 944,
+   "order": 956,
    "src": "new"
   },
   {
@@ -19329,7 +19602,7 @@
    ],
    "lesson": "U14-L01",
    "level": 5,
-   "order": 945,
+   "order": 957,
    "src": "new"
   },
   {
@@ -19349,7 +19622,7 @@
    ],
    "lesson": "U14-L01",
    "level": 5,
-   "order": 946,
+   "order": 958,
    "src": "new"
   },
   {
@@ -19369,7 +19642,7 @@
    ],
    "lesson": "U14-L01",
    "level": 5,
-   "order": 947,
+   "order": 959,
    "src": "new"
   },
   {
@@ -19389,7 +19662,7 @@
    ],
    "lesson": "U14-L01",
    "level": 5,
-   "order": 948,
+   "order": 960,
    "src": "new"
   },
   {
@@ -19410,7 +19683,7 @@
    ],
    "lesson": "U14-L01",
    "level": 5,
-   "order": 949,
+   "order": 961,
    "src": "new"
   },
   {
@@ -19430,7 +19703,7 @@
    ],
    "lesson": "U14-L01",
    "level": 5,
-   "order": 950,
+   "order": 962,
    "src": "new"
   },
   {
@@ -19450,7 +19723,7 @@
    ],
    "lesson": "U14-L01",
    "level": 5,
-   "order": 951,
+   "order": 963,
    "src": "new"
   },
   {
@@ -19470,7 +19743,7 @@
    ],
    "lesson": "U14-L01",
    "level": 5,
-   "order": 952,
+   "order": 964,
    "src": "new"
   },
   {
@@ -19491,7 +19764,7 @@
    ],
    "lesson": "U14-L01",
    "level": 5,
-   "order": 953,
+   "order": 965,
    "src": "new"
   },
   {
@@ -19508,7 +19781,7 @@
    ],
    "lesson": "U14-L01",
    "level": 5,
-   "order": 954,
+   "order": 966,
    "src": "new"
   },
   {
@@ -19526,7 +19799,7 @@
    ],
    "lesson": "U14-L01",
    "level": 5,
-   "order": 955,
+   "order": 967,
    "src": "new"
   },
   {
@@ -19546,7 +19819,7 @@
    ],
    "lesson": "U14-L02",
    "level": 5,
-   "order": 956,
+   "order": 968,
    "src": "new"
   },
   {
@@ -19566,7 +19839,7 @@
    ],
    "lesson": "U14-L02",
    "level": 5,
-   "order": 957,
+   "order": 969,
    "src": "new"
   },
   {
@@ -19583,7 +19856,7 @@
    ],
    "lesson": "U14-L02",
    "level": 5,
-   "order": 958,
+   "order": 970,
    "src": "new"
   },
   {
@@ -19601,7 +19874,7 @@
    ],
    "lesson": "U14-L02",
    "level": 5,
-   "order": 959,
+   "order": 971,
    "src": "new"
   },
   {
@@ -19618,7 +19891,7 @@
    ],
    "lesson": "U14-L02",
    "level": 5,
-   "order": 960,
+   "order": 972,
    "src": "new"
   },
   {
@@ -19638,7 +19911,7 @@
    ],
    "lesson": "U14-L02",
    "level": 5,
-   "order": 961,
+   "order": 973,
    "src": "new"
   },
   {
@@ -19659,7 +19932,7 @@
    ],
    "lesson": "U14-L02",
    "level": 5,
-   "order": 962,
+   "order": 974,
    "src": "new"
   },
   {
@@ -19679,7 +19952,7 @@
    ],
    "lesson": "U14-L02",
    "level": 5,
-   "order": 963,
+   "order": 975,
    "src": "new"
   },
   {
@@ -19700,7 +19973,7 @@
    ],
    "lesson": "U14-L02",
    "level": 5,
-   "order": 964,
+   "order": 976,
    "src": "new"
   },
   {
@@ -19720,7 +19993,7 @@
    ],
    "lesson": "U14-L02",
    "level": 5,
-   "order": 965,
+   "order": 977,
    "src": "new"
   },
   {
@@ -19740,7 +20013,7 @@
    ],
    "lesson": "U14-L02",
    "level": 5,
-   "order": 966,
+   "order": 978,
    "src": "new"
   },
   {
@@ -19760,7 +20033,7 @@
    ],
    "lesson": "U14-L02",
    "level": 5,
-   "order": 967,
+   "order": 979,
    "src": "new"
   },
   {
@@ -19777,7 +20050,7 @@
    ],
    "lesson": "U14-L03",
    "level": 5,
-   "order": 968,
+   "order": 980,
    "src": "new"
   },
   {
@@ -19797,7 +20070,7 @@
    ],
    "lesson": "U14-L03",
    "level": 5,
-   "order": 969,
+   "order": 981,
    "src": "new"
   },
   {
@@ -19817,7 +20090,7 @@
    ],
    "lesson": "U14-L03",
    "level": 5,
-   "order": 970,
+   "order": 982,
    "src": "new"
   },
   {
@@ -19834,7 +20107,7 @@
    ],
    "lesson": "U14-L03",
    "level": 5,
-   "order": 971,
+   "order": 983,
    "src": "new"
   },
   {
@@ -19851,7 +20124,7 @@
    ],
    "lesson": "U14-L03",
    "level": 5,
-   "order": 972,
+   "order": 984,
    "src": "new"
   },
   {
@@ -19871,7 +20144,7 @@
    ],
    "lesson": "U14-L03",
    "level": 5,
-   "order": 973,
+   "order": 985,
    "src": "new"
   },
   {
@@ -19888,7 +20161,7 @@
    ],
    "lesson": "U14-L03",
    "level": 5,
-   "order": 974,
+   "order": 986,
    "src": "new"
   },
   {
@@ -19908,7 +20181,7 @@
    ],
    "lesson": "U14-L03",
    "level": 5,
-   "order": 975,
+   "order": 987,
    "src": "new"
   },
   {
@@ -19925,7 +20198,7 @@
    ],
    "lesson": "U14-L03",
    "level": 5,
-   "order": 976,
+   "order": 988,
    "src": "new"
   },
   {
@@ -19945,7 +20218,7 @@
    ],
    "lesson": "U14-L03",
    "level": 5,
-   "order": 977,
+   "order": 989,
    "src": "new"
   },
   {
@@ -19962,7 +20235,7 @@
    ],
    "lesson": "U14-L03",
    "level": 5,
-   "order": 978,
+   "order": 990,
    "src": "new"
   },
   {
@@ -19979,7 +20252,7 @@
    ],
    "lesson": "U14-L03",
    "level": 5,
-   "order": 979,
+   "order": 991,
    "src": "new"
   },
   {
@@ -19996,7 +20269,7 @@
    ],
    "lesson": "U14-L04",
    "level": 5,
-   "order": 980,
+   "order": 992,
    "src": "new"
   },
   {
@@ -20017,7 +20290,7 @@
    ],
    "lesson": "U14-L04",
    "level": 5,
-   "order": 981,
+   "order": 993,
    "src": "new"
   },
   {
@@ -20037,7 +20310,7 @@
    ],
    "lesson": "U14-L04",
    "level": 5,
-   "order": 982,
+   "order": 994,
    "src": "new"
   },
   {
@@ -20057,7 +20330,7 @@
    ],
    "lesson": "U14-L04",
    "level": 5,
-   "order": 983,
+   "order": 995,
    "src": "new"
   },
   {
@@ -20077,7 +20350,7 @@
    ],
    "lesson": "U14-L04",
    "level": 5,
-   "order": 984,
+   "order": 996,
    "src": "new"
   },
   {
@@ -20097,7 +20370,7 @@
    ],
    "lesson": "U14-L04",
    "level": 5,
-   "order": 985,
+   "order": 997,
    "src": "new"
   },
   {
@@ -20114,7 +20387,7 @@
    ],
    "lesson": "U14-L04",
    "level": 5,
-   "order": 986,
+   "order": 998,
    "src": "new"
   },
   {
@@ -20131,7 +20404,7 @@
    ],
    "lesson": "U14-L04",
    "level": 5,
-   "order": 987,
+   "order": 999,
    "src": "new"
   },
   {
@@ -20149,7 +20422,7 @@
    ],
    "lesson": "U14-L04",
    "level": 5,
-   "order": 988,
+   "order": 1000,
    "src": "new"
   },
   {
@@ -20166,7 +20439,7 @@
    ],
    "lesson": "U14-L04",
    "level": 5,
-   "order": 989,
+   "order": 1001,
    "src": "new"
   },
   {
@@ -20183,7 +20456,7 @@
    ],
    "lesson": "U14-L04",
    "level": 5,
-   "order": 990,
+   "order": 1002,
    "src": "new"
   },
   {
@@ -20200,7 +20473,7 @@
    ],
    "lesson": "U14-L04",
    "level": 5,
-   "order": 991,
+   "order": 1003,
    "src": "new"
   },
   {
@@ -20217,7 +20490,7 @@
    ],
    "lesson": "U14-L05",
    "level": 5,
-   "order": 992,
+   "order": 1004,
    "src": "v1"
   },
   {
@@ -20234,7 +20507,7 @@
    ],
    "lesson": "U14-L05",
    "level": 5,
-   "order": 993,
+   "order": 1005,
    "src": "v1"
   },
   {
@@ -20251,7 +20524,7 @@
    ],
    "lesson": "U14-L05",
    "level": 5,
-   "order": 994,
+   "order": 1006,
    "src": "v1"
   },
   {
@@ -20268,7 +20541,7 @@
    ],
    "lesson": "U14-L05",
    "level": 5,
-   "order": 995,
+   "order": 1007,
    "src": "v1"
   },
   {
@@ -20286,7 +20559,7 @@
    ],
    "lesson": "U14-L05",
    "level": 5,
-   "order": 996,
+   "order": 1008,
    "src": "v1"
   },
   {
@@ -20303,7 +20576,7 @@
    ],
    "lesson": "U14-L05",
    "level": 5,
-   "order": 997,
+   "order": 1009,
    "src": "v1"
   },
   {
@@ -20321,7 +20594,7 @@
    ],
    "lesson": "U14-L05",
    "level": 5,
-   "order": 998,
+   "order": 1010,
    "src": "new"
   },
   {
@@ -20339,7 +20612,7 @@
    ],
    "lesson": "U14-L05",
    "level": 5,
-   "order": 999,
+   "order": 1011,
    "src": "new"
   },
   {
@@ -20356,7 +20629,7 @@
    ],
    "lesson": "U14-L05",
    "level": 5,
-   "order": 1000,
+   "order": 1012,
    "src": "new"
   },
   {
@@ -20374,7 +20647,7 @@
    ],
    "lesson": "U14-L05",
    "level": 5,
-   "order": 1001,
+   "order": 1013,
    "src": "new"
   },
   {
@@ -20391,7 +20664,7 @@
    ],
    "lesson": "U14-L05",
    "level": 5,
-   "order": 1002,
+   "order": 1014,
    "src": "new"
   },
   {
@@ -20408,7 +20681,7 @@
    ],
    "lesson": "U14-L05",
    "level": 5,
-   "order": 1003,
+   "order": 1015,
    "src": "new"
   }
  ]
