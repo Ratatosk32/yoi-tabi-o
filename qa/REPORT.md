@@ -17,7 +17,7 @@ Rerun: `cd qa; node selfcheck-oracle.mjs; node compare-numbers.mjs; node unit.mj
 - B6 Low store.js:61-63 importAll: no type checks; data:null shows a raw JS error toast.
 - B7 Low srs.js:37-46 grade: box null → due "NaN-NaN-NaN"; box "3" concatenates to "31".
 - B8 Low srs.js:74 stats: box 7 creates 7 buckets.
-- B9 Low srs.js:80 studyWeek: future start date shows "День -6".
+- B9 Low srs.js:80 studyWeek: future start date shows "Day -6".
 - B10 Low text.js:74 normalize: kohii/koohii/takushii/raamen don't match kōhī/takushī/rāmen (only ō/ū folded).
 - B11 Trivial diag.html: 404 /favicon.ico.
 - B12 Trivial numbers.js:170 dateReading accepts 2/30, 4/31.

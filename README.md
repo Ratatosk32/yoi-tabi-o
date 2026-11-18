@@ -1,100 +1,115 @@
-# Japan Trip: PWA для поездки в Японию
+# Japan Trip: a PWA for a trip to Japan
 
-Одно приложение на телефоне (Pixel/Chrome и iPhone/Safari) для двух задач:
-1. **Учёба** за 3 недели до поездки: кана, фразы, цены и числа, понимание персонала на слух (SRS по Leitner).
-2. **В Японии**: офлайн-разговорник, карточки «показать японцу» (аллергия, адрес отеля), шпаргалка кандзи, запуск Lens / Google Переводчика / карт, экстренные номера.
+One app on the phone (Pixel/Chrome and iPhone/Safari) for two jobs:
+1. **Study** during the 3 weeks before the trip: kana, phrases, prices and numbers, understanding staff by ear (Leitner SRS).
+2. **In Japan**: an offline phrasebook, "show to a Japanese person" cards (allergy, hotel address), a kanji cheat sheet, launchers for Lens / Google Translate / maps, emergency numbers.
 
-Без сборки: vanilla JS (ES-модули), свой CSS, офлайн через отдельный same-origin Service Worker. План и обоснования: [PLAN.md](PLAN.md).
+The app is English-only (JA<->EN). No build step: vanilla JS (ES modules), custom CSS, offline support through a separate same-origin Service Worker. Plan and rationale: [PLAN.md](PLAN.md).
 
-## Структура
+Live site: https://yoi-tabi-o.noetx.com
+
+## Structure
 
 ```
-app/                  ← корень деплоя (только эта папка уходит на хостинг)
-  index.html, app.js, styles.css, sw.js, manifest.webmanifest, _headers, diag.html
+app/                  ← deploy root (only this folder goes to hosting)
+  index.html, app.js, sw.js, manifest.webmanifest, _headers, diag.html
+  tokens.css, components.css, fonts/   ← design system (source in design/)
   modules/            ← numbers, srs, store, text, tts, launchers, ui, view-*.js
-  data/               ← phrases.json (271), kana.json, kanji.json (115), REVIEW.md
-  vendor/             ← wanakana 5.3.1 (закреплённая версия, MIT)
+  data/               ← phrases.json (271), kana.json, kanji.json (115)
+  vendor/             ← wanakana 5.3.1 (pinned version, MIT)
   icons/              ← 192, 512, maskable 512, apple-touch-icon 180
 tools/
-  content/*.src.mjs   ← ИСХОДНИК фраз, каны, кандзи
-  build-data.mjs      ← исходник → app/data/*.json
-  validate.mjs        ← схема, уникальные id, ruby↔ja↔kana, ромадзи↔кана
-  serve.mjs           ← локальный сервер (127.0.0.1)
-  e2e.mjs             ← e2e в headless Chrome через CDP
-tests/                ← unit-тесты (node --test)
+  content/*.src.mjs   ← SOURCE of phrases, kana, kanji
+  build-data.mjs      ← source → app/data/*.json
+  validate.mjs        ← schema, unique ids, ruby↔ja↔kana, romaji↔kana
+  serve.mjs           ← local server (127.0.0.1)
+  e2e.mjs             ← e2e in headless Chrome via CDP
+  check-no-cyrillic.mjs ← repo rule: no Cyrillic in tracked files
+tests/                ← unit tests (node --test)
+qa/                   ← independent QA suite and report (qa/REPORT.md)
+.github/workflows/deploy.yml ← tests + deploy on push to main
 ```
 
-## Запуск локально
+## Running locally
 
-Нужен Node 20+. Ничего устанавливать не нужно.
+Requires Node 20+. Nothing to install.
 
 ```bash
 cd D:\japan-trip
 node tools/serve.mjs            # http://localhost:8787/
-npm test                        # unit-тесты (числа/время, SRS, хранилище, поиск, данные)
-npm run validate                # проверка данных
-npm run e2e                     # e2e: 412x915 (Pixel) и 430x932 (iPhone), офлайн; скриншоты в tools/out/
+npm test                        # unit tests (numbers/time, SRS, storage, search, data)
+npm run validate                # data checks
+npm run e2e                     # e2e: 412x915 (Pixel) and 430x932 (iPhone), offline; screenshots in tools/out/
+node tools/check-no-cyrillic.mjs  # repo rule: English only
 ```
 
-Service Worker работает только на `localhost` или по HTTPS, поэтому открывать `index.html` как файл (file://) нельзя.
+The Service Worker only works on `localhost` or over HTTPS, so you cannot open `index.html` as a file (file://).
 
-## Как добавить фразы
+## Adding phrases
 
-1. **В исходнике (основной путь)**: `tools/content/phrases.src.mjs`, строка вида
-   `['shop.film', 'フィルムはありますか', 'firumu wa arimasu ka', 'Есть плёнка?', 'заметка']`.
-   Поле ruby: `袋[ふくろ]` — чтение для группы кандзи перед скобками, `{ATM|エーティーエム}` — явная пара. Поля `ja` и `kana` строятся из ruby автоматически.
-   Ромадзи: модифицированный Хэпбёрн с макронами (ō, ū, ā, ī, ē); частицы は/を/へ → wa/o/e; суффиксы через дефис (sen-en, 〇〇-eki).
-   Затем: `npm run build:data && npm run validate && npm test`, увеличить `VERSION` в `app/sw.js`, задеплоить.
-2. **В приложении**: «Инструменты» → «Мои фразы». Чтение можно ввести ромадзи (`kasa wa arimasu ka` → かさはありますか). Фразы хранятся локально и попадают в резервную копию.
-3. **Импорт**: «Инструменты» → «Восстановить из файла» (JSON из «Скачать копию»).
+1. **In the source (main path)**: `tools/content/phrases.src.mjs`, a line like
+   `['shop.film', 'フィルムはありますか', 'firumu wa arimasu ka', 'Do you have film?', 'note']`.
+   The ruby field: `袋[ふくろ]` is the reading for the kanji run before the brackets, `{ATM|エーティーエム}` is an explicit pair. The `ja` and `kana` fields are built from ruby automatically.
+   Romaji: modified Hepburn with macrons (ō, ū, ā, ī, ē); particles は/を/へ → wa/o/e; suffixes with a hyphen (sen-en, 〇〇-eki).
+   Then: `npm run build:data && npm run validate && npm test`, bump `VERSION` in `app/sw.js`, commit and push to `main` (see Deploy).
+2. **In the app**: "Tools" → "My phrases". The reading can be typed in romaji (`kasa wa arimasu ka` → かさはありますか). Phrases are stored locally and included in the backup.
+3. **Import**: "Tools" → "Restore from file" (the JSON from "Download backup").
 
-## Деплой на japanese.noetx.com (делаете вы)
+## Deploy to yoi-tabi-o.noetx.com
 
-Отдельный проект Cloudflare Pages, **не** маршрут внутри проекта noetx. Поддомен — отдельный origin, поэтому SW, localStorage и кеш изолированы от noetx.com. `C:\conq\wrangler.toml` не трогать.
+Deployment is automatic: every push to `main` runs [.github/workflows/deploy.yml](.github/workflows/deploy.yml) on GitHub Actions, which runs the unit tests and data validation and then deploys the `app/` folder to the Cloudflare Pages project **`yoi-tabi-o`** (`wrangler pages deploy app --project-name=yoi-tabi-o --branch=main`). A failed test means no deploy. The workflow can also be started by hand (Actions → Deploy → Run workflow).
 
-1. Cloudflare → Workers & Pages → Create → Pages → **Direct Upload** → имя проекта, например `japan-trip` → загрузить папку `D:\japan-trip\app`.
-   Или из консоли (wrangler у вас есть): `npx wrangler pages deploy D:\japan-trip\app --project-name japan-trip` (первый раз спросит логин и создаст проект).
-2. Проект → **Custom domains** → Set up a domain → `japanese.noetx.com` → подтвердить. Зона noetx.com уже в Cloudflare, поэтому CNAME создастся сам. **Не создавайте CNAME вручную заранее**, иначе будет ошибка 522.
-3. Проверка: `curl -I https://japanese.noetx.com/sw.js` → `Cache-Control: no-cache`; `X-Robots-Tag: noindex` (из `app/_headers`).
-4. Обновления: изменили файлы → подняли `VERSION` в `app/sw.js` → деплой. На телефоне появится «Доступна новая версия → Обновить». Откат — в Pages → Deployments (rollback).
-5. Перед поездкой — **заморозка**: последний деплой не позже ~6 декабря; в поездке менять только данные.
+It is a separate Cloudflare Pages project, **not** a route inside the noetx project. The subdomain is a separate origin, so the SW, localStorage and cache are isolated from noetx.com. Do not touch `C:\conq\wrangler.toml`.
 
-## Установка на телефон
+One-time setup (already done for the live site; needed only for a fresh repo or account):
+1. Repository → Settings → Secrets and variables → Actions: add `CLOUDFLARE_API_TOKEN` (a token with the "Cloudflare Pages: Edit" permission) and `CLOUDFLARE_ACCOUNT_ID`. Without them the workflow still runs the checks but skips the deploy with a warning.
+2. The first run creates the `yoi-tabi-o` Pages project itself (`wrangler pages project create`).
+3. Cloudflare → Workers & Pages → `yoi-tabi-o` → **Custom domains** → Set up a domain → `yoi-tabi-o.noetx.com` → confirm. The noetx.com zone is already in Cloudflare, so the CNAME is created automatically. **Do not create the CNAME by hand beforehand**, or you will get error 522.
 
-- **Pixel (Chrome)**: открыть https://japanese.noetx.com → меню ⋮ → «Установить приложение» / «Добавить на главный экран».
-- **iPhone (Safari)**: открыть сайт → «Поделиться» → «На экран «Домой»». Запускать с иконки (так данные защищены лучше: Safari может стереть данные сайта, если его не открывали 7 дней).
-- Затем один раз открыть все вкладки с интернетом и проверить в **авиарежиме**.
+Routine updates:
+1. Change files → bump `VERSION` in `app/sw.js` → commit → push to `main`. Watch the run in the repository's Actions tab.
+2. Check: `curl -I https://yoi-tabi-o.noetx.com/sw.js` → `Cache-Control: no-cache`; `X-Robots-Tag: noindex` (from `app/_headers`).
+3. On the phone the banner "A new version of the app is available." → "Update" appears. Rollback: Pages → `yoi-tabi-o` → Deployments → rollback (or revert the commit and push).
+4. Before the trip, **freeze**: last deploy no later than ~December 6; during the trip change only data.
 
-## Что проверить на телефонах (Фаза 0)
+Manual fallback (only if GitHub Actions is unavailable): `npx wrangler pages deploy app --project-name=yoi-tabi-o --branch=main` from the repo root (asks for a login the first time). Cloudflare's dashboard Direct Upload is no longer used.
 
-Откройте `https://japanese.noetx.com/diag.html` на каждом телефоне, нажмите тесты, отметьте «Да/Нет» в колонке своего устройства и нажмите «Скопировать отчёт».
+## Installing on the phone
 
-| Проверка | Pixel | iPhone |
+- **Pixel (Chrome)**: open https://yoi-tabi-o.noetx.com → menu ⋮ → "Install app" / "Add to Home screen".
+- **iPhone (Safari)**: open the site → "Share" → "Add to Home Screen". Launch it from the icon (data is better protected that way: Safari may erase a site's data if it has not been opened for 7 days).
+- Then open every tab once while online, and check it in **airplane mode**.
+
+## What to check on the phones (Phase 0)
+
+Open `https://yoi-tabi-o.noetx.com/diag.html` on each phone, run the tests, mark "Yes/No" in your device's column and press "Copy report".
+
+| Check | Pixel | iPhone |
 |---|---|---|
-| Японский голос звучит онлайн («Инструменты» → Озвучка → тест) | ☐ | ☐ |
-| …и в **авиарежиме** (иначе установить голос: Android — Speech Services by Google → Install voice data → 日本語; iPhone — Настройки → Универсальный доступ → Устный контент → Голоса → Японский) | ☐ | ☐ |
-| `12800円` читается «итиман нисэн хаппяку эн» | ☐ | ☐ |
-| Кнопка Lens открывает камеру Lens (варианты на diag-странице; выбрать рабочий в «Настройках») | ☐ | ☐ |
-| Запасной путь: Circle to Search (Pixel) / Камера → Live Text → «Перевести» (iPhone) | ☐ | ☐ |
-| «Открыть в Переводчике» открывает **приложение** с текстом; «Поделиться» показывает Переводчик | ☐ | ☐ |
-| Google Переводчик: скачан офлайн-пакет японского; камера и «Разговор» работают в авиарежиме | ☐ | ☐ |
-| Приложение установлено на домашний экран и открывается **в авиарежиме** | ☐ | ☐ |
-| Карточка «Показать»: экран не гаснет 2 минуты (Wake Lock) | ☐ | ☐ |
-| Заполнены карточки «Аллергия» и «Адрес отеля» (японский адрес из брони) | ☐ | ☐ |
-| «Скачать копию» → файл сохранился; «Восстановить из файла» работает | ☐ | ☐ |
-| MyMemory (diag, только онлайн): запрос проходит (CORS) — информативно, в приложении не используется | ☐ | ☐ |
+| The Japanese voice works online ("Tools" → Speech → test) | ☐ | ☐ |
+| …and in **airplane mode** (otherwise install the voice: Android — Speech Services by Google → Install voice data → 日本語; iPhone — Settings → Accessibility → Spoken Content → Voices → Japanese) | ☐ | ☐ |
+| `12800円` is read as "ichiman nisen happyaku en" | ☐ | ☐ |
+| The Lens button opens the Lens camera (variants on the diag page; pick the working one in "Settings") | ☐ | ☐ |
+| Fallback: Circle to Search (Pixel) / Camera → Live Text → "Translate" (iPhone) | ☐ | ☐ |
+| "Open in Translate" opens the **app** with the text; "Share" offers Translate | ☐ | ☐ |
+| Google Translate: the offline Japanese pack is downloaded; camera and "Conversation" work in airplane mode | ☐ | ☐ |
+| The app is installed on the home screen and opens **in airplane mode** | ☐ | ☐ |
+| "Show" card: the screen stays on for 2 minutes (Wake Lock) | ☐ | ☐ |
+| The "Allergy" and "Hotel address" cards are filled in (the Japanese address from the booking) | ☐ | ☐ |
+| "Download backup" → the file is saved; "Restore from file" works | ☐ | ☐ |
+| MyMemory (diag, online only): the request goes through (CORS) — informational, not used in the app | ☐ | ☐ |
 
-## Ежедневный режим (20–30 минут)
+## Daily routine (20–30 minutes)
 
-«Учёба» → «Сегодня»: повторение (5–10 мин) → слушание (5 мин) → цены (3–5 мин) → тема недели. Неделя считается от даты первого запуска (меняется в «Настройках»).
+"Study" → "Today": review (5–10 min) → listening (5 min) → prices (3–5 min) → topic of the week. The week is counted from the date of first launch (can be changed in "Settings").
 
-## Дизайн
+## Design
 
-Все цвета, шрифты, радиусы, отступы и тени заданы CSS-переменными в начале `app/styles.css` (сейчас стоит нейтральная тёмная/светлая тема-заглушка). Тему дизайнера (`design/tokens.css`) можно подключить переопределением этих переменных, разметку менять не нужно.
+All colours, fonts, radii, spacing and shadows are CSS variables in `app/tokens.css`; component styles are in `app/components.css`. The design source and rationale live in `design/` ([design/DESIGN.md](design/DESIGN.md)). A theme can be changed by overriding these variables; the markup does not need to change.
 
-## Известные ограничения
+## Known limitations
 
-- Распознавания японской речи нет: для диалога используйте режим «Разговор» в Google Переводчике.
-- Машинного перевода внутри приложения нет (MyMemory ненадёжен по качеству и приватности): перевод через Google Переводчик.
-- Ссылки на приложения Lens/Translate не подтверждены документацией. Что реально работает, показывает diag.html; надёжные запасные пути описаны в «Инструментах».
-- Языковые пункты для проверки носителем: [app/data/REVIEW.md](app/data/REVIEW.md).
+- No Japanese speech recognition: for a dialogue use the "Conversation" mode in Google Translate.
+- No machine translation inside the app (MyMemory is unreliable in quality and privacy): translate through Google Translate.
+- The links to the Lens/Translate apps are not confirmed by documentation. What actually works is shown by diag.html; reliable fallbacks are described in "Tools".
+- Language items for a native speaker to check: [REVIEW.md](REVIEW.md); the proofreading report is in [review/content-review.md](review/content-review.md).

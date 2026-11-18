@@ -6,7 +6,7 @@
   "old": "丼[どん]",
   "new": "丼[どんぶり]",
   "severity": "error",
-  "why": "Отдельно стоящий 丼 читается どんぶり; どん — только в составе (牛丼 ぎゅうどん)."
+  "why": "Standalone 丼 is read どんぶり; どん occurs only in compounds (牛丼 ぎゅうどん)."
  },
  {
   "file": "tools/content/kanji.src.mjs",
@@ -15,16 +15,16 @@
   "old": "don",
   "new": "donburi",
   "severity": "error",
-  "why": "Следует за исправлением чтения."
+  "why": "Follows the reading fix."
  },
  {
   "file": "tools/content/kanji.src.mjs",
   "id": "k.don",
   "field": "note",
   "old": null,
-  "new": "В названиях блюд — ～どん: 牛丼 gyūdon, 親子丼 oyakodon, 天丼 tendon, かつ丼 katsudon.",
+  "new": "In dish names it is ～どん: 牛丼 gyūdon, 親子丼 oyakodon, 天丼 tendon, かつ丼 katsudon.",
   "severity": "error",
-  "why": "Объяснить, где читается どん."
+  "why": "Explain where it is read どん."
  },
  {
   "file": "tools/content/phrases.src.mjs",
@@ -33,7 +33,7 @@
   "old": "辛[から]さはどうしますか",
   "new": "辛[から]さはどうなさいますか",
   "severity": "warn",
-  "why": "Персонал говорит в кэйго: どうなさいますか (или いかがなさいますか); どうしますか — речь клиента."
+  "why": "Staff speak in keigo: どうなさいますか (or いかがなさいますか); どうしますか is how a customer talks."
  },
  {
   "file": "tools/content/phrases.src.mjs",
@@ -42,7 +42,7 @@
   "old": "karasa wa dō shimasu ka",
   "new": "karasa wa dō nasaimasu ka",
   "severity": "warn",
-  "why": "Следует за ruby."
+  "why": "Follows the ruby."
  },
  {
   "file": "tools/content/phrases.src.mjs",
@@ -51,7 +51,7 @@
   "old": null,
   "new": "からさはどうなさいますか",
   "severity": "warn",
-  "why": "辛さ TTS может прочитать つらさ; kana-override снимает риск."
+  "why": "TTS may read 辛さ as つらさ; a kana override removes the risk."
  },
  {
   "file": "tools/content/phrases.src.mjs",
@@ -60,7 +60,7 @@
   "old": null,
   "new": "からくないものはありますか",
   "severity": "warn",
-  "why": "辛くない TTS может прочитать つらくない; override безвреден."
+  "why": "TTS may read 辛くない as つらくない; the override is harmless."
  },
  {
   "file": "tools/content/phrases.src.mjs",
@@ -69,7 +69,7 @@
   "old": null,
   "new": "からくしないでください",
   "severity": "warn",
-  "why": "辛く TTS может прочитать つらく; override безвреден."
+  "why": "TTS may read 辛く as つらく; the override is harmless."
  },
  {
   "file": "tools/content/phrases.src.mjs",
@@ -78,7 +78,7 @@
   "old": "パスポートはこれです",
   "new": "パスポートです",
   "severity": "warn",
-  "why": "パスポートはこれです звучит как ответ на «какой из них паспорт?». Подавая паспорт, говорят «(はい、)パスポートです»."
+  "why": "パスポートはこれです sounds like an answer to \"which one is the passport?\". When handing over a passport people say \"(はい、)パスポートです\"."
  },
  {
   "file": "tools/content/phrases.src.mjs",
@@ -87,205 +87,205 @@
   "old": "pasupōto wa kore desu",
   "new": "pasupōto desu",
   "severity": "warn",
-  "why": "Следует за ruby."
+  "why": "Follows the ruby."
  },
  {
   "file": "tools/content/kanji.src.mjs",
   "id": "k.tokkyu",
   "field": "note",
-  "old": "Обычно нужен доп. билет.",
-  "new": "У JR и части частных линий (Odakyu Romancecar, Tobu, Seibu, Kintetsu) нужен доп. билет 特急券; у многих частных линий (Keio, Keikyu, Tokyu, Hankyu, Keihan) 特急 идёт без доплаты.",
+  "old": "Usually needs an extra ticket.",
+  "new": "JR and some private lines (Odakyu Romancecar, Tobu, Seibu, Kintetsu) need an extra 特急券 ticket; many private lines (Keio, Keikyu, Tokyu, Hankyu, Keihan) run 特急 at no extra charge.",
   "severity": "warn",
-  "why": "«Обычно нужен доп. билет» верно для JR, но у многих частных линий 特急 без доплаты."
+  "why": "\"Usually needs an extra ticket\" is true for JR, but on many private lines 特急 has no surcharge."
  },
  {
   "file": "tools/content/phrases.src.mjs",
   "id": "food.itadakimasu",
-  "field": "ru",
-  "old": "(перед едой) Приятного аппетита / спасибо",
-  "new": "(перед едой) Спасибо за еду — приступаю",
+  "field": "ru (historical, glossed in English)",
+  "old": "(before eating) Enjoy your meal / thank you",
+  "new": "(before eating) Thank you for the food - I'm starting",
   "severity": "warn",
-  "why": "いただきます говорит сам едящий; это не пожелание другим «приятного аппетита»."
+  "why": "いただきます is said by the person eating; it is not a wish of \"enjoy your meal\" to others."
  },
  {
   "file": "tools/content/phrases.src.mjs",
   "id": "food.itadakimasu",
   "field": "note",
   "old": null,
-  "new": "Не «приятного аппетита» другим, а формула самого едящего.",
+  "new": "Not \"enjoy your meal\" to others, but a formula said by the person eating.",
   "severity": "warn",
-  "why": "Пояснение к переводу."
+  "why": "Explains the translation."
  },
  {
   "file": "tools/content/phrases.src.mjs",
   "id": "hear.food.drink",
-  "field": "ru",
-  "old": "Что будете пить?",
-  "new": "Что-нибудь из напитков?",
+  "field": "ru (historical, glossed in English)",
+  "old": "What will you drink?",
+  "new": "Anything to drink?",
   "severity": "warn",
-  "why": "お飲み物はいかがですか — «Не желаете напитки?»; «Что будете пить?» = お飲み物は何になさいますか."
+  "why": "お飲み物はいかがですか means \"Would you like something to drink?\"; \"What will you drink?\" would be お飲み物は何になさいますか."
  },
  {
   "file": "tools/content/phrases.src.mjs",
   "id": "hear.family.hoken",
-  "field": "ru",
-  "old": "У вас есть страховой полис?",
-  "new": "У вас есть медицинская страховка (полис)?",
+  "field": "ru (historical, glossed in English)",
+  "old": "Do you have an insurance policy?",
+  "new": "Do you have health insurance (a policy)?",
   "severity": "warn",
-  "why": "保険証 — японская карта медстрахования."
+  "why": "保険証 is the Japanese health insurance card."
  },
  {
   "file": "tools/content/phrases.src.mjs",
   "id": "hear.family.hoken",
   "field": "note",
   "old": null,
-  "new": "保険証 — японский полис медстрахования; у туриста его нет. Ответ: 海外旅行保険に入っています — и показать полис.",
+  "new": "保険証 is the Japanese health insurance card; tourists don't have one. Reply: 海外旅行保険に入っています - and show your policy.",
   "severity": "warn",
-  "why": "Связать с family.insurance, иначе непонятно, что отвечать."
+  "why": "Link to family.insurance, otherwise it is unclear what to answer."
  },
  {
   "file": "tools/content/phrases.src.mjs",
   "id": "hear.hotel.floor",
   "field": "note",
   "old": null,
-  "new": "Число + 階: 1 いっかい, 3 さんがい, 6 ろっかい, 8 はっかい, 10 じゅっかい; 何階 なんがい. 地下1階 (ちか いっかい) = B1.",
+  "new": "Number + 階: 1 いっかい, 3 さんがい, 6 ろっかい, 8 はっかい, 10 じゅっかい; 何階 なんがい. 地下1階 (ちか いっかい) = B1.",
   "severity": "warn",
-  "why": "Ромадзи 〇-kai скрывает звуковые изменения — именно их не узнают на слух."
+  "why": "The romaji 〇-kai hides the sound changes, and those are exactly what people fail to recognise by ear."
  },
  {
   "file": "tools/content/phrases.src.mjs",
   "id": "hear.shop.counter",
   "field": "note",
   "old": null,
-  "new": "Число + 階: 1 いっかい, 3 さんがい, 6 ろっかい, 8 はっかい, 10 じゅっかい. 地下 (ちか) — подземный этаж.",
+  "new": "Number + 階: 1 いっかい, 3 さんがい, 6 ろっかい, 8 はっかい, 10 じゅっかい. 地下 (ちか) - basement.",
   "severity": "warn",
-  "why": "Звуковые изменения счётного 階."
+  "why": "Sound changes of the counter 階."
  },
  {
   "file": "tools/content/phrases.src.mjs",
   "id": "hear.shop.hosho",
   "field": "note",
   "old": null,
-  "new": "Число + か月: 1 いっかげつ, 3 さんかげつ, 6 ろっかげつ, 10 じゅっかげつ; 1年 いちねん. 保証なし — без гарантии.",
+  "new": "Number + か月: 1 いっかげつ, 3 さんかげつ, 6 ろっかげつ, 10 じゅっかげつ; 1年 いちねん. 保証なし - no warranty.",
   "severity": "warn",
-  "why": "Типичные сроки гарантии б/у (1/3/6 мес.) звучат с изменениями."
+  "why": "Typical used-goods warranty periods (1/3/6 months) are pronounced with sound changes."
  },
  {
   "file": "tools/content/phrases.src.mjs",
   "id": "hear.family.nansai",
   "field": "note",
   "old": null,
-  "new": "Часто вежливее: おいくつですか (oikutsu desu ka). Ответ: 〇歳です (〇-sai desu): 1 いっさい, 8 はっさい, 10 じゅっさい.",
+  "new": "Often politer: おいくつですか (oikutsu desu ka). Reply: 〇歳です (〇-sai desu): 1 いっさい, 8 はっさい, 10 じゅっさい.",
   "severity": "warn",
-  "why": "Персонал и врачи часто спрашивают おいくつですか; семье нужен ответ с возрастом ребёнка."
+  "why": "Staff and doctors often ask おいくつですか; the family needs an answer with the child's age."
  },
  {
   "file": "tools/content/phrases.src.mjs",
   "id": "transport.tickets",
   "field": "note",
   "old": null,
-  "new": "Детский билет (小児, полцены) — 6–12 лет (младшая школа). До 6 лет — бесплатно (до двух детей на взрослого), если ребёнку не нужно отдельное место по брони.",
+  "new": "Child ticket (小児, half price): ages 6-12 (primary school). Under 6: free (up to two children per adult) unless the child needs a separate reserved seat.",
   "severity": "warn",
-  "why": "Правила JR для детей — без них купят лишний билет или не купят нужный."
+  "why": "JR rules for children - without them people buy an extra ticket or fail to buy a needed one."
  },
  {
   "file": "tools/content/kanji.src.mjs",
   "id": "k.donichi",
   "field": "note",
   "old": null,
-  "new": "В расписаниях JR чаще 土休日 (どきゅうじつ) — сб, вс и праздники; 平日 (へいじつ) — будни.",
+  "new": "JR timetables more often say 土休日 (どきゅうじつ) - Sat, Sun and holidays; 平日 (へいじつ) - weekdays.",
   "severity": "warn",
-  "why": "На табло и в расписаниях JR стоит 土休日, а не 土日祝."
+  "why": "Departure boards and JR timetables show 土休日, not 土日祝."
  },
  {
   "file": "tools/content/kanji.src.mjs",
   "id": "k.nyu",
   "field": "note",
   "old": null,
-  "new": "На этикетках — 乳成分 (にゅうせいぶん) или 乳.",
+  "new": "On labels: 乳成分 (にゅうせいぶん) or 乳.",
   "severity": "warn",
-  "why": "В списках аллергенов на упаковке пишут 乳成分."
+  "why": "Allergen lists on packaging write 乳成分."
  },
  {
   "file": "tools/content/phrases.src.mjs",
   "id": "food.oishii",
-  "field": "ru",
-  "old": "Было очень вкусно",
-  "new": "Было вкусно",
+  "field": "ru (historical, glossed in English)",
+  "old": "It was very delicious",
+  "new": "It was delicious",
   "severity": "style",
-  "why": "В японском нет «очень» (とても)."
+  "why": "The Japanese has no \"very\" (とても)."
  },
  {
   "file": "tools/content/phrases.src.mjs",
   "id": "family.pediatric",
-  "field": "ru",
-  "old": "Где детский врач?",
-  "new": "Где педиатрия (детский врач)?",
+  "field": "ru (historical, glossed in English)",
+  "old": "Where is a children's doctor?",
+  "new": "Where is pediatrics (a children's doctor)?",
   "severity": "style",
-  "why": "小児科 — педиатрическое отделение/клиника."
+  "why": "小児科 is a pediatric department/clinic."
  },
  {
   "file": "tools/content/phrases.src.mjs",
   "id": "transport.lost-ticket",
-  "field": "ru",
-  "old": "Я потерял билет",
-  "new": "Я потерял(а) билет",
+  "field": "ru (historical, glossed in English)",
+  "old": "I lost the ticket (masculine verb form only)",
+  "new": "I lost the ticket (masculine/feminine verb forms)",
   "severity": "style",
-  "why": "Едет семья: фраза нужна и женщине."
+  "why": "A family is travelling: a woman needs the phrase too."
  },
  {
   "file": "tools/content/phrases.src.mjs",
   "id": "transport.overshot",
-  "field": "ru",
-  "old": "Я проехал свою остановку",
-  "new": "Я проехал(а) свою остановку",
+  "field": "ru (historical, glossed in English)",
+  "old": "I rode past my stop (masculine verb form only)",
+  "new": "I rode past my stop (masculine/feminine verb forms)",
   "severity": "style",
-  "why": "Род."
+  "why": "Grammatical gender."
  },
  {
   "file": "tools/content/phrases.src.mjs",
   "id": "hotel.key",
-  "field": "ru",
-  "old": "Я оставил ключ в номере",
-  "new": "Я оставил(а) ключ в номере",
+  "field": "ru (historical, glossed in English)",
+  "old": "I left the key in the room (masculine verb form only)",
+  "new": "I left the key in the room (masculine/feminine verb forms)",
   "severity": "style",
-  "why": "Род."
+  "why": "Grammatical gender."
  },
  {
   "file": "tools/content/phrases.src.mjs",
   "id": "family.injury",
-  "field": "ru",
-  "old": "Я поранился / получил травму",
-  "new": "Я поранился(-ась) / получил(а) травму",
+  "field": "ru (historical, glossed in English)",
+  "old": "I hurt myself / got injured (masculine verb forms only)",
+  "new": "I hurt myself / got injured (masculine/feminine verb forms)",
   "severity": "style",
-  "why": "Род."
+  "why": "Grammatical gender."
  },
  {
   "file": "tools/content/phrases.src.mjs",
   "id": "family.wallet",
-  "field": "ru",
-  "old": "Я потерял кошелёк",
-  "new": "Я потерял(а) кошелёк",
+  "field": "ru (historical, glossed in English)",
+  "old": "I lost my wallet (masculine verb form only)",
+  "new": "I lost my wallet (masculine/feminine verb forms)",
   "severity": "style",
-  "why": "Род."
+  "why": "Grammatical gender."
  },
  {
   "file": "tools/content/phrases.src.mjs",
   "id": "family.phone",
-  "field": "ru",
-  "old": "Я потерял телефон",
-  "new": "Я потерял(а) телефон",
+  "field": "ru (historical, glossed in English)",
+  "old": "I lost my phone (masculine verb form only)",
+  "new": "I lost my phone (masculine/feminine verb forms)",
   "severity": "style",
-  "why": "Род."
+  "why": "Grammatical gender."
  },
  {
   "file": "tools/content/phrases.src.mjs",
   "id": "card.lost-way",
-  "field": "ru",
-  "old": "Я заблудился. Мне нужно сюда.",
-  "new": "Я заблудился(-ась). Мне нужно сюда.",
+  "field": "ru (historical, glossed in English)",
+  "old": "I'm lost. I need to get here. (masculine verb form only)",
+  "new": "I'm lost. I need to get here. (masculine/feminine verb forms)",
   "severity": "style",
-  "why": "Род."
+  "why": "Grammatical gender."
  },
  {
   "file": "tools/content/phrases.src.mjs",
@@ -294,7 +294,7 @@
   "old": "お支払[しはら]い方法[ほうほう]は",
   "new": "お支払[しはら]い方法[ほうほう]は？",
   "severity": "style",
-  "why": "Фраза обрывается на は — без ？ непонятно, что это вопрос (в PLAN 4.9 знак был)."
+  "why": "The phrase breaks off at は - without ？ it is not clear that it is a question (PLAN 4.9 had the mark)."
  },
  {
   "file": "tools/content/phrases.src.mjs",
@@ -303,42 +303,42 @@
   "old": "oshiharai hōhō wa",
   "new": "oshiharai hōhō wa?",
   "severity": "style",
-  "why": "Следует за ruby."
+  "why": "Follows the ruby."
  },
  {
   "file": "tools/content/phrases.src.mjs",
   "id": "hear.konbini.ikkatsu",
   "field": "note",
-  "old": "Ответ: はい.",
-  "new": "Ответ: はい. Чаще в магазинах техники; вариант: お支払い回数は？ («Сколькими платежами?») → 一括で (ikkatsu de).",
+  "old": "Reply: はい.",
+  "new": "Reply: はい. More common in electronics shops; variant: お支払い回数は？ (\"In how many payments?\") → 一括で (ikkatsu de).",
   "severity": "style",
-  "why": "В конбини почти не спрашивают; в фото/часовых магазинах — постоянно."
+  "why": "Convenience stores hardly ever ask this; camera and watch shops ask it all the time."
  },
  {
   "file": "tools/content/phrases.src.mjs",
   "id": "food.no-wasabi",
   "field": "note",
-  "old": "Для ребёнка в суши-барах.",
-  "new": "Для ребёнка в суши-барах. Персонал говорит さび抜き (sabinuki).",
+  "old": "For a child at sushi bars.",
+  "new": "For a child at sushi bars. Staff say さび抜き (sabinuki).",
   "severity": "style",
-  "why": "Узнавание на слух."
+  "why": "Recognition by ear."
  },
  {
   "file": "tools/content/phrases.src.mjs",
   "id": "family.pharmacy",
   "field": "note",
   "old": null,
-  "new": "Обычные лекарства без рецепта проще найти в ドラッグストア (doraggusutoa).",
+  "new": "Ordinary over-the-counter medicine is easier to find at a ドラッグストア (doraggusutoa).",
   "severity": "style",
-  "why": "Туристу нужнее аптека-магазин, чем рецептурный 薬局."
+  "why": "A tourist needs a drugstore more than a prescription pharmacy 薬局."
  },
  {
   "file": "tools/content/kana.src.mjs",
   "id": "SPECIAL_NOTES[3]",
-  "field": "ru",
-  "old": "Дакутэн (озвончение: か→が) и handakuten (は→ぱ).",
-  "new": "Дакутэн (озвончение: か→が) и хандакутэн (は→ぱ).",
+  "field": "ru (historical, glossed in English)",
+  "old": "Dakuten (voicing: か→が) and handakuten (は→ぱ). (the term 'handakuten' was written in Latin script inside the Cyrillic text)",
+  "new": "Dakuten (voicing: か→が) and handakuten (は→ぱ). (both terms in Cyrillic script)",
   "severity": "style",
-  "why": "Термин латиницей посреди кириллицы."
+  "why": "A Latin-script term in the middle of Cyrillic text."
  }
 ]
