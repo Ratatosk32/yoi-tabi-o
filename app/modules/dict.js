@@ -55,6 +55,8 @@ export function load({ base = 'data/' } = {}) {
         idle(step);
       });
       state.status = 'ready'; emit();
+      // Offline from now on, even if the files were fetched before the service worker took control
+      globalThis.navigator?.serviceWorker?.ready.then((reg) => reg.active?.postMessage('cacheDict')).catch(() => {});
     } catch (e) {
       state.status = state.index ? 'core' : 'error';
       state.error = String(e && e.message || e);

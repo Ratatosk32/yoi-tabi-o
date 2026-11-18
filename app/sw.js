@@ -70,7 +70,22 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('message', (event) => {
   if (event.data === 'skipWaiting') self.skipWaiting();
+  // The page loaded the dictionary (maybe before this SW controlled it): make sure both files are in the
+  // dictionary cache, so it works offline from now on. Usually a no-op or an HTTP-cache hit.
+  if (event.data === 'cacheDict') event.waitUntil(fillDict());
 });
+
+async function fillDict() {
+  const cache = await caches.open(DICT_CACHE);
+  for (const f of ['data/dict-core.json', 'data/dict-rest.json']) {
+    const url = new URL(f, self.registration.scope).href;
+    if (await cache.match(url)) continue;
+    try {
+      const res = await fetch(url);
+      if (res.ok) await cache.put(url, res);
+    } catch { /* offline: try again next time */ }
+  }
+}
 
 self.addEventListener('fetch', (event) => {
   const req = event.request;
