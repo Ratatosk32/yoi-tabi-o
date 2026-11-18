@@ -3,6 +3,7 @@ import { h, clear, toast, downloadJson } from './ui.js';
 import * as L from './launchers.js';
 import * as tts from './tts.js';
 import { stats } from './srs.js';
+import { kanaToHepburn } from './text.js';
 
 export function render(ctx, root) {
   const s = ctx.settings();
@@ -108,6 +109,9 @@ export function render(ctx, root) {
     h('label.toggle', h('input', { type: 'checkbox', checked: s.furigana, on: { change: (e) => ctx.setSetting('furigana', e.target.checked) } }), h('span', 'Показывать фуригану')),
   ));
 
+  // --- Мои фразы ---
+  root.append(userPhrases(ctx));
+
   // --- Резервная копия ---
   const st = stats(ctx.store.get('srs', {}));
   const imp = h('input', { type: 'file', accept: 'application/json,.json', on: { change: async (e) => {
@@ -141,4 +145,70 @@ export function render(ctx, root) {
       (ctx.persisted === true ? ' Хранилище закреплено.' : '')),
     h('p.small', 'Фраз: ' + ctx.data.items.length + ', кандзи: ' + ctx.data.kanji.items.length + '.'),
   ));
+}
+
+// ---------- Мои фразы (добавление своих фраз; PLAN.md 3.5) ----------
+/**
+ * Чтение для своей фразы. Кана → ромадзи по Хэпбёрну (с макронами).
+ * Ромадзи → кана через wanakana; отдельные слова-частицы wa / o / e → は / を / へ,
+ * а сами ромадзи сохраняются как введены (с пробелами).
+ */
+export function readingFrom(input) {
+  const s = String(input || '').trim();
+  if (!s) return { kana: '', romaji: '' };
+  const wk = globalThis.wanakana;
+  if (/[a-z]/i.test(s) && wk) {
+    const PARTICLE = { wa: 'ha', o: 'wo', e: 'he' };
+    const tokens = s.toLowerCase().split(/\s+/);
+    const kana = tokens.map((t, i) => (i > 0 && PARTICLE[t] ? PARTICLE[t] : t)).map((t) => wk.toHiragana(t)).join('');
+    return { kana, romaji: tokens.join(' ') };
+  }
+  return { kana: s.replace(/\s+/g, ''), romaji: kanaToHepburn(s.replace(/\s+/g, '')) };
+}
+
+function userPhrases(ctx) {
+  const box = h('section.block#user-phrases');
+  const draw = () => {
+    clear(box);
+    const list = ctx.store.get('userItems', []);
+    const cats = ctx.data.categories.filter((c) => c.id !== 'cards');
+    const ru = h('input', { type: 'text', placeholder: 'По-русски', 'aria-label': 'Перевод' });
+    const ja = h('input', { type: 'text', lang: 'ja', placeholder: 'По-японски (как пишется)', 'aria-label': 'Японский текст' });
+    const kana = h('input', { type: 'text', lang: 'ja', placeholder: 'Чтение каной или ромадзи: kasa wa arimasu ka', 'aria-label': 'Чтение' });
+    const preview = h('div.small#user-reading');
+    const cat = h('select', { 'aria-label': 'Категория' }, cats.map((c) => h('option', { value: c.id }, c.ru)));
+    const kind = h('select', { 'aria-label': 'Тип' }, h('option', { value: 'say' }, 'Говорю я'), h('option', { value: 'hear' }, 'Скажет персонал'));
+    const upd = () => {
+      const r = readingFrom(kana.value);
+      preview.textContent = r.kana ? `${r.kana} — ${r.romaji}` : 'Ромадзи: слова через пробел, частицы wa / o / e станут は / を / へ.';
+    };
+    upd();
+    kana.addEventListener('input', upd);
+    box.append(
+      h('h2.section', 'Мои фразы'),
+      h('p.small', 'Добавленные фразы появятся во «Фразах», в поиске и в карточках «Учёбы». Хранятся в копии прогресса.'),
+      ru, h('div', { style: { height: '8px' } }), ja, h('div', { style: { height: '8px' } }), kana, preview,
+      h('div.actions.wrap', cat, kind),
+      h('div.actions', h('button.btn.primary#add-phrase', { type: 'button', on: { click: () => {
+        const r = ru.value.trim(), j = ja.value.trim();
+        const rd = readingFrom(kana.value);
+        const k = rd.kana || j;
+        if (!r || !j) { toast('Нужны русский и японский текст'); return; }
+        const hasKanji = /[㐀-鿿]/.test(j);
+        const item = {
+          id: 'u.' + Date.now().toString(36), cat: cat.value, kind: kind.value, ru: r, ja: j, kana: k,
+          ruby: hasKanji && k !== j ? `{${j}|${k}}` : j,
+          romaji: rd.romaji || kanaToHepburn(k), tags: ['w1', 'user'],
+        };
+        ctx.store.update('userItems', [], (arr) => [...arr, item]);
+        toast('Добавлено');
+        draw();
+      } } }, 'Добавить')),
+      list.length ? h('div', list.map((it) => h('div.card.userrow',
+        h('div', { lang: 'ja' }, it.ja), h('div.small', `${it.romaji} — ${it.ru}`),
+        h('button.btn.small', { type: 'button', on: { click: () => { ctx.store.update('userItems', [], (arr) => arr.filter((x) => x.id !== it.id)); draw(); } } }, 'Удалить')))) : null,
+    );
+  };
+  draw();
+  return box;
 }

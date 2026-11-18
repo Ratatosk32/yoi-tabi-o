@@ -189,6 +189,20 @@ async function main() {
     check(`${vp.name}: нет горизонтальной прокрутки (инструменты)`, await noHScroll());
     await shot(`${vp.name}-10-tools`);
 
+    // Мои фразы: ромадзи → кана (wanakana), сохранение, поиск
+    await evaluate(`(() => {
+      const box = document.querySelector('#user-phrases');
+      const [ru, ja, kana] = box.querySelectorAll('input');
+      ru.value = 'Тестовая фраза зонтик'; ja.value = '傘はありますか'; kana.value = 'kasa wa arimasu ka';
+      kana.dispatchEvent(new Event('input'));
+      document.querySelector('#add-phrase').click();
+    })()`);
+    const ui = await evaluate("JSON.parse(localStorage.getItem('jt.userItems') || '[]')[0] || {}");
+    check(`${vp.name}: своя фраза: ромадзи → кана, частица wa → は`, ui.kana === 'かさはありますか' && ui.romaji === 'kasa wa arimasu ka', JSON.stringify(ui));
+    await navigate(BASE + '#/phrases');
+    await evaluate(`(() => { const i = document.querySelector('#phrase-search'); i.value = 'зонтик'; i.dispatchEvent(new Event('input')); })()`);
+    check(`${vp.name}: своя фраза находится поиском`, await waitFor("[...document.querySelectorAll('.phrase')].some((p) => p.dataset.id.startsWith('u.'))", 3000));
+
     // diag
     await navigate(BASE + 'diag.html');
     check(`${vp.name}: diag.html — таблица Pixel/iPhone`, await waitFor("document.querySelectorAll('#checks tbody tr').length >= 10 && document.querySelectorAll('#checks .yn').length > 0"));
