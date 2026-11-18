@@ -38,10 +38,15 @@ function under10000(n, { manBlock = false } = {}) {
   return parts;
 }
 
+/** Склейка ромадзи по Хэпбёрну: n перед гласной/y → n' (1001 = sen'ichi). */
+export function joinRomaji(pieces, sep = '') {
+  return pieces.reduce((acc, p) => (acc && sep === '' && /n$/.test(acc) && /^[aiueoy]/.test(p) ? acc + "'" + p : acc + (acc && sep ? sep : '') + p), '');
+}
+
 function join(parts, sep = '') {
   return {
     kana: parts.map((p) => p[0]).join(''),
-    romaji: parts.map((p) => p[1]).join(sep),
+    romaji: sep ? parts.map((p) => p[1]).join(sep) : joinRomaji(parts.map((p) => p[1])),
   };
 }
 
@@ -56,11 +61,11 @@ export function numberParts(n) {
   const groups = [];
   if (man) {
     const mp = under10000(man, { manBlock: true });
-    groups.push([mp.map((p) => p[0]).join('') + 'まん', mp.map((p) => p[1]).join('') + 'man']);
+    groups.push([mp.map((p) => p[0]).join('') + 'まん', joinRomaji(mp.map((p) => p[1])) + 'man']);
   }
   if (rest) {
     const rp = under10000(rest);
-    groups.push([rp.map((p) => p[0]).join(''), rp.map((p) => p[1]).join('')]);
+    groups.push([rp.map((p) => p[0]).join(''), joinRomaji(rp.map((p) => p[1]))]);
   }
   return groups;
 }
