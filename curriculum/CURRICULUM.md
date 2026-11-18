@@ -74,7 +74,7 @@ Aligned with `research/LEARNING-RESEARCH.md`, section 4 (recommendation numbers 
 - **Evening, 8–10 min:** review of today's new items + **price listening**.
 - **Price listening: 2–3 min every day, mandatory** (generator `numbers.js`: audio → type the digits, realistic prices, speed 1.0).
 - If more than 60 reviews are due, do not offer a new lesson.
-- Reminders: not PWA notifications, but a screen "set 2 alarms in your Calendar" with ready-made text and the app link (R13).
+- Reminders: **not planned** (decision 2026-11-18: no alarm / calendar-reminder screen). R13 is left to the learner.
 
 ### 3.3 Leitner boxes and unlocking (R14) [UI]
 - 5 boxes, intervals 0 / 1 / 2 / 4 / 7 days (PLAN 3.4). Forgot → box 1, Hard → stays, Knew → +1. Progress is per (id, mode).
