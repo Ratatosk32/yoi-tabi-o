@@ -107,12 +107,16 @@ export function render(ctx, root) {
   const lensSel = h('select#lens-variant', { on: { change: (e) => { ctx.setSetting('lensVariant', e.target.value); ctx.rerender(); } } },
     Object.entries(L.LENS_VARIANTS).map(([k, v]) => h('option', { value: k }, v.label)));
   lensSel.value = s.lensVariant;
-  const newSel = h('input', { type: 'number', min: 3, max: 40, value: String(s.newPerDay), on: { change: (e) => ctx.setSetting('newPerDay', Math.max(3, Math.min(40, Number(e.target.value) || 12))) } });
+  const romajiSel = h('select#romaji-mode', { on: { change: (e) => ctx.setSetting('romaji', e.target.value) } },
+    [['auto', 'Week 1 shown, then tap to show'], ['show', 'Always shown'], ['hide', 'Hidden, tap to show']].map(([v, l]) => h('option', { value: v }, l)));
+  romajiSel.value = s.romaji || 'auto';
+  const tripIn = h('input#trip-date', { type: 'date', value: s.tripDate || '', on: { change: (e) => ctx.setSetting('tripDate', e.target.value || null) } });
   const startIn = h('input', { type: 'date', value: s.startDate || '', on: { change: (e) => e.target.value && ctx.setSetting('startDate', e.target.value) } });
   root.append(h('section.block#settings',
     h('h2.section', 'Settings'),
     h('label.field', h('span', 'How to launch Lens'), lensSel),
-    h('label.field', h('span', 'New cards per day'), newSel),
+    h('label.field', h('span', 'Romaji'), romajiSel),
+    h('label.field', h('span', 'Flight date (pre-flight run on the last 3 days)'), tripIn),
     h('label.field', h('span', 'Study start date (for the weekly plan)'), startIn),
     h('label.toggle', h('input', { type: 'checkbox', checked: s.furigana, on: { change: (e) => ctx.setSetting('furigana', e.target.checked) } }), h('span', 'Show furigana (readings above kanji)')),
   ));

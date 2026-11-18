@@ -243,3 +243,17 @@ export function downloadJson(obj, filename) {
   document.body.append(a); a.click(); a.remove();
   setTimeout(() => URL.revokeObjectURL(url), 2000);
 }
+
+/**
+ * Romaji line (CURRICULUM §3.6): mode 'show' → small romaji; 'tap' → a "Show romaji" button that reveals it.
+ * Search by romaji works either way.
+ */
+export function romajiEl(text, mode = 'show', cls = 'romaji') {
+  if (!text) return null;
+  if (mode !== 'tap') return h('div.' + cls, text);
+  const btn = h('button.romaji-tap', {
+    type: 'button', 'aria-label': 'Show romaji',
+    on: { click: (e) => { e.stopPropagation(); btn.replaceWith(h('div.' + cls, text)); } },
+  }, 'Show romaji');
+  return btn;
+}

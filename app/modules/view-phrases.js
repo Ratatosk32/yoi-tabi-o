@@ -1,5 +1,7 @@
 // Phrases tab: categories, search in en/ja/kana/romaji, favourites, speech, "show".
-import { h, clear, rubyEl, speakButtons, speakItem, showFullscreen, toast, ico, openSheet, pickerButton } from './ui.js';
+import { h, clear, rubyEl, speakButtons, speakItem, showFullscreen, toast, ico, openSheet, pickerButton, romajiEl } from './ui.js';
+import { romajiMode } from './curriculum.js';
+import { studyWeek, todayStr } from './srs.js';
 import { search } from './text.js';
 
 const SPECIAL = {
@@ -139,7 +141,7 @@ export function phraseCard(ctx, it, isFav, onChange, { collapsed = true } = {}) 
   const text = h('div.phrase-text',
     it.kind === 'hear' ? h('div.badge', 'You will hear') : it.kind === 'pattern' && it.pattern ? h('div.badge.pat', { lang: 'ja' }, it.pattern) : null,
     h('div.jp', rubyEl(it.ruby, { furigana: s.furigana })),
-    h('div.romaji', it.romaji),
+    romajiEl(it.romaji, romajiMode(s.romaji || 'auto', studyWeek(s.startDate || todayStr()).week)), // §3.6: week 1 shown, then tap
     h('div.en', it.en, collapsed && hasMore
       ? h('span.more-hint', { 'aria-hidden': 'true' }, it.kind === 'hear' && reply ? 'replies' : reply ? 'reply to' : 'note', ico('chevron'))
       : null));
