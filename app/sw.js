@@ -1,8 +1,12 @@
 // Service Worker (same-origin separate file — Blob SWs are not allowed, PLAN.md 2d).
 // Bump VERSION whenever app files change — the browser sees a new sw.js
 // and the app offers "Update" (no silent reloads).
-const VERSION = 'v11';
+const VERSION = 'v12';
 const CACHE = `jt-${VERSION}`;
+// Dictionary (JMdict) files: their own cache, cache-first, NOT part of the shell precache. Bump with the data
+// (dictDate) only: a shell update does not re-download the dictionary, a dictionary update does not touch the shell.
+const DICT_CACHE = 'dict-2026-11-16';
+const DICT_FILES = /\/data\/dict-(core|rest)\.json$/;
 
 const PRECACHE = [
   './',
@@ -16,6 +20,9 @@ const PRECACHE = [
   'manifest.webmanifest',
   'diag',
   'modules/curriculum.js',
+  'modules/dict-search.js',
+  'modules/dict.js',
+  'modules/view-dict.js',
   'modules/launchers.js',
   'modules/numbers.js',
   'modules/srs.js',
@@ -56,7 +63,7 @@ self.addEventListener('install', (event) => {
 self.addEventListener('activate', (event) => {
   event.waitUntil((async () => {
     const keys = await caches.keys();
-    await Promise.all(keys.filter((k) => k.startsWith('jt-') && k !== CACHE).map((k) => caches.delete(k)));
+    await Promise.all(keys.filter((k) => (k.startsWith('jt-') && k !== CACHE) || (k.startsWith('dict-') && k !== DICT_CACHE)).map((k) => caches.delete(k)));
     await self.clients.claim();
   })());
 });
@@ -82,6 +89,19 @@ self.addEventListener('fetch', (event) => {
       if (res && res.redirected) res = new Response(await res.blob(), { headers: res.headers, status: 200 });
       if (res) return res;
       try { return await fetch(req); } catch (e) { return Response.error(); }
+    })());
+    return;
+  }
+
+  // Dictionary: cache-first in its own cache (downloaded once, then offline)
+  if (DICT_FILES.test(url.pathname)) {
+    event.respondWith((async () => {
+      const cache = await caches.open(DICT_CACHE);
+      const cached = await cache.match(req, { ignoreSearch: true });
+      if (cached) return cached;
+      const res = await fetch(req);
+      if (res.ok) await cache.put(req, res.clone());
+      return res;
     })());
     return;
   }

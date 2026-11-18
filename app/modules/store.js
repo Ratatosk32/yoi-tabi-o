@@ -3,7 +3,7 @@
 import { migrateSrsKeys } from './srs.js';
 
 const PREFIX = 'jt.';
-export const KEYS = ['favs', 'srs', 'settings', 'cards', 'userItems', 'history', 'quizStats', 'lessons', 'learned', 'activity'];
+export const KEYS = ['favs', 'srs', 'settings', 'cards', 'userItems', 'history', 'quizStats', 'lessons', 'learned', 'activity', 'dictFavs'];
 
 function memoryBackend() {
   const m = new Map();
@@ -122,11 +122,12 @@ export function createStore(backend) {
 function isPlainObject(v) { return !!v && typeof v === 'object' && !Array.isArray(v); }
 
 // Expected types of backup fields
-const ARRAY_KEYS = new Set(['favs', 'userItems', 'history', 'activity']);
+const ARRAY_KEYS = new Set(['favs', 'userItems', 'history', 'activity', 'dictFavs']);
 function typeOk(key, v) {
   if (ARRAY_KEYS.has(key)) {
     if (!Array.isArray(v)) return false;
     if (key === 'userItems') return v.every((x) => isPlainObject(x) && typeof x.id === 'string');
+    if (key === 'dictFavs') return v.every((x) => isPlainObject(x) && Number.isInteger(x.id) && typeof x.ja === 'string'); // dictionary words (JMdict ids)
     return v.every((x) => typeof x === 'string');
   }
   return isPlainObject(v);
