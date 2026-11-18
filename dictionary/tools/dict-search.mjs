@@ -1,0 +1,90 @@
+// Reference search for the dictionary (pure functions, no DOM, no dependencies) - meant to be copied
+// into the app as-is. `normalize` is injected: pass the app's normalize() from app/modules/text.js so
+// readings and romaji fold macrons, long vowels, katakana and case exactly like the phrasebook search.
+//
+//   const idx = createDictIndex(core.fields, core.rows, normalize);   // core tier: ~35 ms laptop, ~150-200 ms phone
+//   idx.search('kohi')  -> [{ row, tier }]  (row = the original array; read fields via idx.F)
+//   // later, without blocking the UI: feed the rest tier in chunks (requestIdleCallback / setTimeout)
+//   for (let i = 0; i < rest.rows.length; i += 500) idx.add(rest.rows.slice(i, i + 500)); // ~5 ms laptop / ~25 ms phone per chunk
+// Rows must be added in rank order (core first, then rest) so ties sort by rank.
+//
+// Matching (best tier wins, ties keep dictionary rank order):
+//   0 exact: headword / alt form / reading / romaji, or a whole English gloss (parenthetical notes
+//     ignored) equals the query
+//   1 prefix of the reading or romaji, or of a whole English gloss
+//   2 prefix of any English word inside a gloss ("rice" finds "cooked rice", "ice cream" finds
+//     "soft-serve ice cream")
+//   3 Japanese query (2+ chars) found inside the headword / alt forms / reading
+// A Latin query is tried both as romaji and as English; a Japanese query against headword/reading.
+
+// Characters treated as Japanese (hiragana, katakana, CJK); built from code points to keep the file ASCII.
+const HAS_JA = new RegExp(`[${String.fromCharCode(0x3040)}-${String.fromCharCode(0x30ff)}${String.fromCharCode(0x3400)}-${String.fromCharCode(0x9fff)}]`);
+const MACRON = { 'ā': 'a', 'ī': 'i', 'ū': 'u', 'ē': 'e', 'ō': 'o' };
+
+/** Cheap English fold used for BOTH the index and the query (keeps word boundaries as spaces). */
+export function foldEn(s) {
+  return String(s).toLowerCase()
+    .replace(/[āīūēō]/g, (c) => MACRON[c])
+    .replace(/['’]/g, '')
+    .replace(/ou/g, 'o').replace(/oo/g, 'o').replace(/uu/g, 'u').replace(/aa/g, 'a').replace(/ii/g, 'i').replace(/ee/g, 'e')
+    .replace(/[^a-z0-9;()À-ɏ]+/g, ' ');
+}
+const squeeze = (s) => s.replace(/\s+/g, ' ').trim();
+
+export function createDictIndex(fields, rows, normalize) {
+  const F = Object.fromEntries(fields.map((f, i) => [f, i]));
+  const all = [], ja = [], alt = [], kana = [], romaji = [], exact = [], whole = [], spaced = [];
+  let n = 0;
+
+  function add(chunk) {
+    for (const r of chunk) {
+      const i = n++;
+      all[i] = r;
+      ja[i] = r[F.ja];
+      alt[i] = r[F.alt] ? r[F.alt].split(',') : [];
+      kana[i] = normalize(r[F.kana]);
+      romaji[i] = normalize(r[F.romaji]);
+      const ex = [], wh = [];
+      let sp = '';
+      for (const g of foldEn(r[F.en]).split(';')) {
+        const full = squeeze(g.replace(/[()]/g, ' '));
+        const bare = squeeze(g.replace(/\([^)]*\)/g, ' '));
+        if (!full) continue;
+        wh.push(full);
+        ex.push(full);
+        if (bare && bare !== full) ex.push(bare);
+        sp += ' ' + full + ' ;';
+      }
+      exact[i] = ex; whole[i] = wh; spaced[i] = sp;
+    }
+  }
+  add(rows);
+
+  function search(query, limit = 50) {
+    const raw = String(query || '').trim().normalize('NFKC');
+    if (!raw) return [];
+    const isJa = HAS_JA.test(raw);
+    const q = normalize(raw);
+    const qe = squeeze(foldEn(raw).replace(/[;()]/g, ' '));
+    if (!q && !qe) return [];
+    const qeWord = ' ' + qe;
+    const hits = [];
+    for (let i = 0; i < n; i++) {
+      let t = 9;
+      if (isJa) {
+        if (ja[i] === raw || kana[i] === q || alt[i].includes(raw)) t = 0;
+        else if (kana[i].startsWith(q) || ja[i].startsWith(raw)) t = 1;
+        else if (raw.length >= 2 && (ja[i].includes(raw) || kana[i].includes(q) || alt[i].some((a) => a.includes(raw)))) t = 3;
+      } else {
+        if (romaji[i] === q || exact[i].includes(qe)) t = 0;
+        else if (romaji[i].startsWith(q) || whole[i].some((g) => g.startsWith(qe))) t = 1;
+        else if (qe && spaced[i].includes(qeWord)) t = 2;
+      }
+      if (t < 9) hits.push(i * 4 + t); // pack (row, tier); rows are already in rank order
+    }
+    hits.sort((a, b) => (a & 3) - (b & 3) || a - b);
+    return hits.slice(0, limit).map((h) => ({ row: all[h >> 2], tier: h & 3 }));
+  }
+
+  return { search, add, F, get size() { return n; } };
+}

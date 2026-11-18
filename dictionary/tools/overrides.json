@@ -1,0 +1,6 @@
+{
+  "comment": "Manual adjustments applied after ranking. core: JMdict ids forced into the core tier (from the travel-word audit, tools/check-travel.mjs, plus the beginner basics suki, jouzu, heta). add: ids taken from the FULL JMdict (not marked common) because travellers need them; they are forced into core too. demote: ids whose JMdict priority tags look misattributed for a learner (score -30).",
+  "core": [1272500, 1277450, 1353320, 1185200, 1562870, 1476410, 1260490, 1227500, 1463520, 1435650, 1002500, 1270550, 1270590, 1508750, 1582120, 1595020, 1595650, 1242130, 1338850, 1332960, 1500100, 1580600, 1177800, 1343460, 1347750, 1532750, 1584460, 1582820, 1184270, 1045340, 1553820, 1270830, 1546640, 1195670, 1053280, 1077560, 1077570, 1145130, 1440780, 2641300, 1119840, 1586330, 1601340, 1602340, 1188770, 1770030, 1334390, 1596250, 1253020, 1644870, 1173450, 1250690],
+  "add": [2423940, 1132000, 1038090, 1002510, 1931310, 1648050, 1309930, 1318790, 1344400, 1570430, 1466430, 1334400],
+  "demote": {"1611000": "生る 'to bear fruit' carries nf07 in JMdict while 成る 'to become' has nf34; without this a search for naru would list 'to bear fruit' first"}
+}
