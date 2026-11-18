@@ -10,6 +10,9 @@ const precache = [...sw.matchAll(/^\s+'([^']+)',$/gm)].map((m) => m[1]).filter((
 // Pages serves /index.html as / and /diag.html as /diag (308 redirects): the SW caches the final URLs.
 const ALIAS = { diag: 'diag.html' };
 const precacheFiles = [...precache.map((p) => ALIAS[p] || p), 'index.html'];
+// Data built ahead of its UI: not loaded by the app yet, so not precached yet. Remove from this list
+// (and add to PRECACHE in app/sw.js) in the same commit that wires the curriculum into the UI.
+const NOT_YET_WIRED = ['data/curriculum.json'];
 
 function walk(dir) {
   return readdirSync(dir).flatMap((f) => {
@@ -25,7 +28,7 @@ test('SW: every PRECACHE file exists', () => {
 
 test('SW: every app resource is in PRECACHE (nothing missing offline)', () => {
   const need = walk(APP).filter((p) => /\.(html|js|css|json|woff2|png|svg|webmanifest)$/.test(p) && p !== 'sw.js');
-  const missing = need.filter((p) => !precacheFiles.includes(p));
+  const missing = need.filter((p) => !precacheFiles.includes(p) && !NOT_YET_WIRED.includes(p));
   assert.deepEqual(missing, []);
 });
 
@@ -39,4 +42,9 @@ test('index.html loads the design styles and not the removed styles.css', () => 
   assert.ok(!html.includes('styles.css'));
   assert.ok(/name="color-scheme" content="light dark"/.test(html));
   assert.equal((html.match(/name="theme-color"/g) || []).length, 2);
+});
+
+test('files listed as not yet wired are really unused by the app (otherwise they must be precached)', () => {
+  const code = walk(APP).filter((p) => /\.(js|html)$/.test(p) && !p.startsWith('vendor/')).map((p) => readFileSync(join(APP, p), 'utf8')).join('\n');
+  for (const f of NOT_YET_WIRED) assert.ok(!code.includes(f.split('/').pop()), f + ' is referenced by the app but not precached');
 });

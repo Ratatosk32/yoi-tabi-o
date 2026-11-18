@@ -8,6 +8,7 @@
     "test": "node --test tests/ && node tools/check-no-cyrillic.mjs",
     "serve": "node tools/serve.mjs",
     "e2e": "node --experimental-websocket tools/e2e.mjs",
-    "check:cyrillic": "node tools/check-no-cyrillic.mjs"
+    "check:cyrillic": "node tools/check-no-cyrillic.mjs",
+    "build:curriculum": "node tools/build-curriculum.mjs"
   }
 }
