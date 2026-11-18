@@ -211,13 +211,16 @@ import { normalize } from './text.js';
 import { createDictIndex } from './dict-search.js';
 const idx = createDictIndex(core.fields, core.rows, normalize);
 for (let i = 0; i < rest.rows.length; i += 500) idx.add(rest.rows.slice(i, i + 500)); // in idle chunks
-idx.search('kohi', 30); // [{ row, tier }]: tier 0 exact, 1 prefix, 2 English word prefix, 3 Japanese substring
+idx.search('kohi', 30); // [{ row, tier }]: tier = bucket 0 exact core, 1 head core, 2 exact rest, 3 head rest, 4 prefix, 5 English word prefix, 6 Japanese substring
 ```
 
 It matches romaji and readings (macrons and long vowels folded: *kohi*, *koohii* and *kōhī* all find
 コーヒー), English glosses (whole gloss, prefix, or the start of any word: *rice* finds "cooked rice"),
 exact kanji or kana (`駅`, `ぎゅうにゅう`), alt spellings (`珈琲`), and Japanese substrings. Results
-are sorted by match tier, then rank.
+are sorted by bucket, then rank. A *head* match is a two-word first gloss ending in the query word
+("cooked rice", "new rice", "hot water"); exact and head matches of core words come before exact
+matches of rarer words, so *rice* lists 米, 飯, 新米, ご飯, then ライス, 米穀 (before this, ご飯 was #33, behind
+"rice field" and "rice planting"), and *station* puts 駅 second instead of outside the top 5.
 
 Measured in Node 20 on the build laptop (`node dictionary/tools/bench-search.mjs`, 30 queries, all
 22,667 entries). The phone estimate is 5x:

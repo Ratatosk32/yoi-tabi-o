@@ -11,10 +11,14 @@
 // Matching (best tier wins, ties keep dictionary rank order):
 //   0 exact: headword / alt form / reading / romaji, or a whole English gloss (parenthetical notes
 //     ignored) equals the query
-//   1 prefix of the reading or romaji, or of a whole English gloss
-//   2 prefix of any English word inside a gloss ("rice" finds "cooked rice", "ice cream" finds
+//   1 head: the first gloss is two words ending in the query word ("rice" finds "cooked rice", "new rice")
+//   2 prefix of the reading or romaji, or of a whole English gloss
+//   3 prefix of any English word inside a gloss ("rice" finds "rice field", "ice cream" finds
 //     "soft-serve ice cream")
-//   3 Japanese query (2+ chars) found inside the headword / alt forms / reading
+//   4 Japanese query (2+ chars) found inside the headword / alt forms / reading
+// Results are sorted by bucket, then rank: exact core, head core, exact rest, head rest, then tiers 2-4
+// (so "rice" lists 米, 飯, 新米, ご飯 before the rarer exact matches ライス, 米穀). `tier` in a result is the
+// bucket: 0 exact core, 1 head core, 2 exact rest, 3 head rest, 4 prefix, 5 word prefix, 6 Japanese substring.
 // A Latin query is tried both as romaji and as English; a Japanese query against headword/reading.
 
 // Characters treated as Japanese (hiragana, katakana, CJK); built from code points to keep the file ASCII.
@@ -33,7 +37,7 @@ const squeeze = (s) => s.replace(/\s+/g, ' ').trim();
 
 export function createDictIndex(fields, rows, normalize) {
   const F = Object.fromEntries(fields.map((f, i) => [f, i]));
-  const all = [], ja = [], alt = [], kana = [], romaji = [], exact = [], whole = [], spaced = [];
+  const all = [], ja = [], alt = [], kana = [], romaji = [], exact = [], whole = [], spaced = [], head = [], core = [];
   let n = 0;
 
   function add(chunk) {
@@ -56,6 +60,9 @@ export function createDictIndex(fields, rows, normalize) {
         sp += ' ' + full + ' ;';
       }
       exact[i] = ex; whole[i] = wh; spaced[i] = sp;
+      core[i] = r[F.core] ? 1 : 0;
+      const first = ex.length ? ex[ex.length > 1 && ex[1] !== wh[1] ? 1 : 0].split(' ') : [];
+      head[i] = first.length === 2 ? first[1] : ''; // "cooked rice" -> rice (the noun the gloss is about)
     }
   }
   add(rows);
@@ -77,13 +84,18 @@ export function createDictIndex(fields, rows, normalize) {
         else if (raw.length >= 2 && (ja[i].includes(raw) || kana[i].includes(q) || alt[i].some((a) => a.includes(raw)))) t = 3;
       } else {
         if (romaji[i] === q || exact[i].includes(qe)) t = 0;
-        else if (romaji[i].startsWith(q) || whole[i].some((g) => g.startsWith(qe))) t = 1;
-        else if (qe && spaced[i].includes(qeWord)) t = 2;
+        else if (qe && head[i] === qe) t = 1;
+        else if (romaji[i].startsWith(q) || whole[i].some((g) => g.startsWith(qe))) t = 2;
+        else if (qe && spaced[i].includes(qeWord)) t = 3;
       }
-      if (t < 9) hits.push(i * 4 + t); // pack (row, tier); rows are already in rank order
+      if (isJa && t > 0) t += 1; // Japanese: no head tier (1 prefix -> 2, 3 substring -> 4)
+      if (t < 9) {
+        const b = t <= 1 ? t + (core[i] ? 0 : 2) : t + 2; // exact core, head core, exact rest, head rest, then 4..6
+        hits.push(i * 8 + b); // pack (row, bucket); rows are already in rank order
+      }
     }
-    hits.sort((a, b) => (a & 3) - (b & 3) || a - b);
-    return hits.slice(0, limit).map((h) => ({ row: all[h >> 2], tier: h & 3 }));
+    hits.sort((a, b) => (a & 7) - (b & 7) || a - b);
+    return hits.slice(0, limit).map((h) => ({ row: all[h >> 3], tier: h & 7 }));
   }
 
   return { search, add, F, get size() { return n; } };

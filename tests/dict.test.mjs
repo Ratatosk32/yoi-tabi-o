@@ -52,7 +52,10 @@ test('search: kanji, kana, romaji, English word prefix, Japanese substring', () 
   assert.equal(top('えき')[0], '駅');
   assert.equal(top('eki')[0], '駅');
   assert.equal(top('rice')[0], '米');
-  assert.ok(top('rice', 40).includes('ご飯'), 'rice → ご飯 within the 40 results the UI shows');
+  assert.ok(top('rice', 5).includes('ご飯'), 'rice → ご飯 in the top 5 (head match: cooked rice)');
+  assert.ok(top('station', 3).includes('駅'), 'station → 駅 in the top 3 (railway station)');
+  assert.ok(top('water', 5).includes('お湯'), 'water → お湯 in the top 5 (hot water)');
+  assert.deepEqual(top('rice', 3), ['米', '飯', '新米'], 'core exact, then core head matches, then rarer exact matches');
   assert.ok(top('cooked rice', 3).includes('ご飯'));
   assert.equal(top('toire')[0], 'トイレ');
   assert.ok(idx.search('切符', 5).some(({ row }) => row[idx.F.ja] === '切符'));
