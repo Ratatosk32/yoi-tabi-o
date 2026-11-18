@@ -104,7 +104,7 @@ export const KANJI = {
   watch: [
     ['k.jidomaki', '自動巻[じどうまき]', 'jidōmaki', 'automatic (self-winding)'],
     ['k.temaki', '手巻[てまき]', 'temaki', 'manual wind'],
-    ['k.quartz', 'クォーツ', 'kuōtsu', 'quartz'],
+    ['k.quartz', 'クォーツ', 'kwōtsu', 'quartz'],
     ['k.seiki', '正規品[せいきひん]', 'seikihin', 'official import'],
     ['k.heiko', '並行輸入[へいこうゆにゅう]', 'heikō yunyū', 'gray-market import'],
     ['k.kokusai', '国際保証[こくさいほしょう]', 'kokusai hoshō', 'international warranty'],
