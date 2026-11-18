@@ -49,8 +49,11 @@ export async function launch() {
   const once = (method) => new Promise((res) => waiters.push({ method, res }));
   await send('Page.enable');
 
-  /** Screenshot `url` in a phone-sized, touch, DPR-`scale` viewport. */
-  async function shoot(url, out, { width, height, scale = 2, mobile = true, dark = false, transparent = false } = {}) {
+  /**
+   * Screenshot `url` in a phone-sized, touch, DPR-`scale` viewport.
+   * run: JS expression evaluated (awaited) after load, before the capture; full: capture the whole page height.
+   */
+  async function shoot(url, out, { width, height, scale = 2, mobile = true, dark = false, transparent = false, run = null, full = false } = {}) {
     await send('Emulation.setDeviceMetricsOverride', { width, height, deviceScaleFactor: scale, mobile });
     await send('Emulation.setEmulatedMedia', { features: [{ name: 'prefers-color-scheme', value: dark ? 'dark' : 'light' }] });
     await send('Emulation.setDefaultBackgroundColorOverride', transparent ? { color: { r: 0, g: 0, b: 0, a: 0 } } : {});
@@ -58,13 +61,28 @@ export async function launch() {
     await send('Page.navigate', { url });
     await loaded;
     await send('Runtime.evaluate', { expression: 'document.fonts.ready.then(() => new Promise((r) => setTimeout(r, 350)))', awaitPromise: true });
-    const { data } = await send('Page.captureScreenshot', { format: 'png' });
+    if (run) {
+      const r = await send('Runtime.evaluate', { expression: `(async () => { ${run} })()`, awaitPromise: true });
+      if (r.exceptionDetails) console.warn('run failed:', r.exceptionDetails.exception?.description || r.exceptionDetails.text);
+      await sleep(250);
+    }
+    let clip;
+    if (full) {
+      const { result } = await send('Runtime.evaluate', { expression: 'Math.max(document.documentElement.scrollHeight, document.body.scrollHeight)', returnByValue: true });
+      clip = { x: 0, y: 0, width, height: Math.min(result.value, 6000), scale: 1 };
+    }
+    const { data } = await send('Page.captureScreenshot', { format: 'png', ...(clip ? { clip, captureBeyondViewport: true } : {}) });
     writeFileSync(out, Buffer.from(data, 'base64'));
+  }
+  /** Evaluate an expression in the current page and return its value. */
+  async function evaluate(expression) {
+    const r = await send('Runtime.evaluate', { expression: `(async () => { ${expression} })()`, awaitPromise: true, returnByValue: true });
+    return r.result?.value;
   }
   async function close() {
     try { await send('Browser.close'); } catch { /* already gone */ }
     await sleep(300); proc.kill();
     try { rmSync(profile, { recursive: true, force: true }); } catch { /* temp dir, best effort */ }
   }
-  return { shoot, close };
+  return { shoot, evaluate, send, close };
 }
