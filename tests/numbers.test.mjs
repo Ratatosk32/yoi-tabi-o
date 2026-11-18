@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import * as N from '../app/modules/numbers.js';
 
-// Контрольный набор из задания + краевые случаи
+// Control set from the task + edge cases
 const NUMBERS = [
   [1, 'いち', 'ichi'],
   [4, 'よん', 'yon'],
@@ -27,7 +27,7 @@ const NUMBERS = [
   [99999, 'きゅうまんきゅうせんきゅうひゃくきゅうじゅうきゅう', 'kyūman kyūsenkyūhyakukyūjūkyū'],
 ];
 
-test('numberReading: контрольный набор', () => {
+test('numberReading: control set', () => {
   for (const [n, kana, romaji] of NUMBERS) {
     const r = N.numberReading(n);
     assert.equal(r.kana, kana, `kana ${n}`);
@@ -35,7 +35,7 @@ test('numberReading: контрольный набор', () => {
   }
 });
 
-test('yenReading: цены и 4円 = よえん', () => {
+test('yenReading: prices and 4円 = よえん', () => {
   assert.deepEqual(N.yenReading(300), { kana: 'さんびゃくえん', romaji: 'sanbyaku-en' });
   assert.deepEqual(N.yenReading(1000), { kana: 'せんえん', romaji: 'sen-en' });
   assert.deepEqual(N.yenReading(128000), { kana: 'じゅうにまんはっせんえん', romaji: 'jūniman hassen-en' });
@@ -44,7 +44,7 @@ test('yenReading: цены и 4円 = よえん', () => {
   assert.deepEqual(N.yenReading(40), { kana: 'よんじゅうえん', romaji: 'yonjū-en' });
 });
 
-test('yenMixed: запись с 万', () => {
+test('yenMixed: written form with 万', () => {
   assert.equal(N.yenMixed(128000), '12万8千円');
   assert.equal(N.yenMixed(125500), '12万5,500円');
   assert.equal(N.yenMixed(3000), '3,000円');
@@ -52,7 +52,7 @@ test('yenMixed: запись с 万', () => {
   assert.equal(N.yenMixed(980), '980円');
 });
 
-test('timeReading: часы и минуты', () => {
+test('timeReading: hours and minutes', () => {
   const T = [
     [[4, 0], 'よじ', 'yoji'],
     [[7, 0], 'しちじ', 'shichiji'],
@@ -75,7 +75,7 @@ test('timeReading: часы и минуты', () => {
   assert.equal(N.timeReading(9, 30, { half: false }).kana, 'くじさんじゅっぷん');
 });
 
-test('minuteReading: 1, 3, 6, 8, 10 минут', () => {
+test('minuteReading: 1, 3, 6, 8, 10 minutes', () => {
   assert.equal(N.minuteReading(1).kana, 'いっぷん');
   assert.equal(N.minuteReading(3).kana, 'さんぷん');
   assert.equal(N.minuteReading(6).kana, 'ろっぷん');
@@ -85,7 +85,7 @@ test('minuteReading: 1, 3, 6, 8, 10 минут', () => {
   assert.equal(N.minuteReading(59).kana, 'ごじゅうきゅうふん');
 });
 
-test('dateReading и счётные суффиксы', () => {
+test('dateReading and counters', () => {
   assert.equal(N.dateReading(12, 1).kana, 'じゅうにがつついたち');
   assert.equal(N.dateReading(4, 20).kana, 'しがつはつか');
   assert.equal(N.dateReading(9, 14).kana, 'くがつじゅうよっか');
@@ -96,7 +96,7 @@ test('dateReading и счётные суффиксы', () => {
   assert.equal(N.counterReading('tsu', 10).kana, 'とお');
 });
 
-test('randomPrice в пределах диапазона; parseDigits', () => {
+test('randomPrice within range; parseDigits', () => {
   for (const key of Object.keys(N.PRICE_RANGES)) {
     for (let i = 0; i < 300; i++) {
       const p = N.randomPrice(key);
@@ -111,7 +111,7 @@ test('randomPrice в пределах диапазона; parseDigits', () => {
   assert.ok(Number.isNaN(N.parseDigits('abc')));
 });
 
-test('ошибки диапазона', () => {
+test('range errors', () => {
   assert.throws(() => N.numberReading(-1));
   assert.throws(() => N.numberReading(1.5));
   assert.throws(() => N.minuteReading(0));

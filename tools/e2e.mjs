@@ -1,8 +1,8 @@
-// E2E-проверка в headless Chrome через Chrome DevTools Protocol (без puppeteer).
-// Запуск: node --experimental-websocket tools/e2e.mjs
-// Проверяет на 412x915 (UA Pixel) и 430x932 (UA iPhone): все вкладки рисуются, нет исключений,
-// нет горизонтальной прокрутки, поиск, SRS, квиз, карточки; SW ставится; после ОСТАНОВКИ сервера
-// приложение перезагружается офлайн. Скриншоты → tools/out/.
+// E2E check in headless Chrome via the Chrome DevTools Protocol (no puppeteer).
+// Run: node --experimental-websocket tools/e2e.mjs
+// At 412x915 (Pixel UA) and 430x932 (iPhone UA): every tab renders, no exceptions,
+// no horizontal scroll, search, SRS, quiz, cards; the SW installs; after the server is STOPPED
+// the app reloads offline. Screenshots → tools/out/.
 import { spawn } from 'node:child_process';
 import { mkdirSync, writeFileSync, rmSync } from 'node:fs';
 import { join, dirname } from 'node:path';
@@ -65,9 +65,9 @@ async function main() {
     try {
       const list = await (await fetch(`http://127.0.0.1:${DEBUG_PORT}/json/list`)).json();
       target = list.find((t) => t.type === 'page');
-    } catch { /* chrome ещё стартует */ }
+    } catch { /* chrome still starting */ }
   }
-  if (!target) throw new Error('Chrome не запустился');
+  if (!target) throw new Error('Chrome did not start');
   const cdp = await cdpConnect(target.webSocketDebuggerUrl);
   const errors = [];
   cdp.on((m) => {
@@ -86,7 +86,7 @@ async function main() {
   };
   const waitFor = async (expr, timeout = 8000) => {
     const t0 = Date.now();
-    while (Date.now() - t0 < timeout) { try { if (await evaluate(expr)) return true; } catch { /* страница грузится */ } await sleep(100); }
+    while (Date.now() - t0 < timeout) { try { if (await evaluate(expr)) return true; } catch { /* page loading */ } await sleep(100); }
     return false;
   };
   const navigate = async (url) => { await cdp.send('Page.navigate', { url }); await sleep(300); };
@@ -106,65 +106,65 @@ async function main() {
 
     await navigate(BASE + '#/phrases');
     await waitFor("document.documentElement.dataset.ready === '1'");
-    await evaluate('localStorage.clear()'); // каждый вьюпорт — с чистого состояния
+    await evaluate('localStorage.clear()'); // each viewport starts from a clean state
     await cdp.send('Page.reload');
     await sleep(300);
-    check(`${vp.name}: приложение загрузилось`, await waitFor("document.documentElement.dataset.ready === '1'"));
-    check(`${vp.name}: платформа определена как ${vp.platform}`, (await evaluate('document.documentElement.dataset.platform')) === vp.platform);
-    check(`${vp.name}: фразы отрисованы`, await waitFor("document.querySelectorAll('.phrase').length > 5"));
-    check(`${vp.name}: нет горизонтальной прокрутки (фразы)`, await noHScroll());
+    check(`${vp.name}: app loaded`, await waitFor("document.documentElement.dataset.ready === '1'"));
+    check(`${vp.name}: platform detected as ${vp.platform}`, (await evaluate('document.documentElement.dataset.platform')) === vp.platform);
+    check(`${vp.name}: phrases rendered`, await waitFor("document.querySelectorAll('.phrase').length > 5"));
+    check(`${vp.name}: no horizontal scroll (phrases)`, await noHScroll());
     await shot(`${vp.name}-1-phrases`);
 
     for (const q of ['ふくろ', 'bag', 'fukuro']) {
       await evaluate(`(() => { const i = document.querySelector('#phrase-search'); i.value = ${JSON.stringify(q)}; i.dispatchEvent(new Event('input')); })()`);
-      check(`${vp.name}: поиск «${q}» находит «Пакет не нужен»`, await waitFor(`!!document.querySelector('[data-id="konbini.bag-none"]') && document.querySelector('#phrase-list h2').textContent.startsWith('Found')`, 3000));
+      check(`${vp.name}: search "${q}" finds "I don’t need a bag"`, await waitFor(`!!document.querySelector('[data-id="konbini.bag-none"]') && document.querySelector('#phrase-list h2').textContent.startsWith('Found')`, 3000));
     }
-    check(`${vp.name}: у ответа есть «Ответ на: 袋はご利用ですか»`, await evaluate(`/袋はご利用ですか/.test(document.querySelector('[data-id="konbini.bag-none"] .reply-to')?.textContent || '')`));
+    check(`${vp.name}: the reply shows "Reply to: 袋はご利用ですか"`, await evaluate(`/袋はご利用ですか/.test(document.querySelector('[data-id="konbini.bag-none"] .reply-to')?.textContent || '')`));
     await shot(`${vp.name}-2-search`);
     await click('[data-cat="hear"]');
-    check(`${vp.name}: фразы персонала — блок «Как ответить»`, await waitFor(`document.querySelectorAll('.phrase.hear .replies .reply').length >= 20`, 3000));
+    check(`${vp.name}: staff phrases show "How to reply"`, await waitFor(`document.querySelectorAll('.phrase.hear .replies .reply').length >= 20`, 3000));
     await shot(`${vp.name}-2b-hear-replies`);
-    // Озвучка без голосов не должна бросать исключения
+    // Speech without voices must not throw
     await evaluate("document.querySelector('.phrase .speak .btn')?.click()");
     await sleep(300);
-    // избранное
+    // favorites
     await evaluate(`(() => { const i = document.querySelector('#phrase-search'); i.value=''; i.dispatchEvent(new Event('input')); })()`);
     await sleep(250);
     await click('.phrase .fav');
-    check(`${vp.name}: избранное сохраняется`, await waitFor("JSON.parse(localStorage.getItem('jt.favs') || '[]').length > 0"));
+    check(`${vp.name}: favorite is saved`, await waitFor("JSON.parse(localStorage.getItem('jt.favs') || '[]').length > 0"));
 
-    // Учёба
+    // Study
     await navigate(BASE + '#/study/today');
-    check(`${vp.name}: «Сегодня» — плитки`, await waitFor("document.querySelectorAll('.tile').length === 4"));
+    check(`${vp.name}: Today tiles`, await waitFor("document.querySelectorAll('.tile').length === 4"));
     await shot(`${vp.name}-3-study-today`);
     await click('#start-review');
-    check(`${vp.name}: SRS-карточка показана`, await waitFor("!!document.querySelector('.flash')"));
+    check(`${vp.name}: SRS card shown`, await waitFor("!!document.querySelector('.flash')"));
     await click('#reveal');
-    check(`${vp.name}: ответ открыт`, await waitFor("!!document.querySelector('.grade .good')"));
+    check(`${vp.name}: answer revealed`, await waitFor("!!document.querySelector('.grade .good')"));
     await shot(`${vp.name}-4-study-card`);
     await click('.grade .good');
-    check(`${vp.name}: оценка записана в SRS`, await waitFor("Object.keys(JSON.parse(localStorage.getItem('jt.srs') || '{}')).length > 0"));
-    check(`${vp.name}: нет горизонтальной прокрутки (учёба)`, await noHScroll());
+    check(`${vp.name}: grade saved to SRS`, await waitFor("Object.keys(JSON.parse(localStorage.getItem('jt.srs') || '{}')).length > 0"));
+    check(`${vp.name}: no horizontal scroll (study)`, await noHScroll());
 
     await navigate(BASE + '#/study/kana');
-    check(`${vp.name}: таблица каны`, await waitFor("document.querySelectorAll('.kana').length >= 46 + 25"));
+    check(`${vp.name}: kana table`, await waitFor("document.querySelectorAll('.kana').length >= 46 + 25"));
     await click('[data-set="hira"]');
-    check(`${vp.name}: квиз каны — 4 варианта`, await waitFor("document.querySelectorAll('.opt').length === 4"));
+    check(`${vp.name}: kana quiz — 4 options`, await waitFor("document.querySelectorAll('.opt').length === 4"));
     await click('.opt');
-    check(`${vp.name}: квиз — обратная связь`, await waitFor("!!document.querySelector('.opt.right')"));
+    check(`${vp.name}: quiz feedback`, await waitFor("!!document.querySelector('.opt.right')"));
     await shot(`${vp.name}-5-kana`);
 
     await navigate(BASE + '#/study/numbers');
-    check(`${vp.name}: тренажёр цен`, await waitFor("!!document.querySelector('#num-play')"));
+    check(`${vp.name}: price trainer`, await waitFor("!!document.querySelector('#num-play')"));
     const n = await evaluate("(() => { const st = document.querySelector('#num-card'); return st ? 1 : 0; })()");
-    // вводим заведомо верный ответ из состояния модуля нельзя — вводим число и проверяем, что появилась обратная связь
+    // the correct answer lives in module state — type any number and check that feedback appears
     await evaluate("(() => { const i = document.querySelector('#num-answer'); i.value = '12800'; document.querySelector('#num-check').click(); })()");
-    check(`${vp.name}: проверка цены даёт ответ с каной`, n === 1 && await waitFor("/えん/.test(document.querySelector('#num-feedback').textContent)"));
+    check(`${vp.name}: price check shows the kana reading`, n === 1 && await waitFor("/えん/.test(document.querySelector('#num-feedback').textContent)"));
     await shot(`${vp.name}-6-numbers`);
-    // B5: второй Enter не засчитывает ответ повторно (переходит к следующему заданию)
+    // B5: a second Enter does not count the answer again (it moves to the next task)
     await navigate(BASE + '#/study/time');
     await waitFor("!!document.querySelector('#time-card input')");
-    // счётчик «из N» до и после двух Enter: должен вырасти ровно на 1
+    // the "of N" counter before and after two Enters must grow by exactly 1
     const twoEnters = (card, input, value) => evaluate(`(() => {
       const total = () => Number((document.querySelector('${card} .sess-head').textContent.match(/of (\\d+)/) || [])[1]);
       const before = total();
@@ -176,24 +176,24 @@ async function main() {
     await navigate(BASE + '#/study/numbers');
     await waitFor("!!document.querySelector('#num-answer')");
     const nc = await twoEnters('#num-card', '#num-answer', '100');
-    check(`${vp.name}: B5 двойной Enter = один ответ`, tc[1] === tc[0] + 1 && nc[1] === nc[0] + 1, JSON.stringify({ time: tc, numbers: nc }));
+    check(`${vp.name}: B5 double Enter = one answer`, tc[1] === tc[0] + 1 && nc[1] === nc[0] + 1, JSON.stringify({ time: tc, numbers: nc }));
 
     await navigate(BASE + '#/study/time');
-    check(`${vp.name}: время и счёт`, await waitFor("document.querySelectorAll('.cnt').length > 30"));
-    check(`${vp.name}: нет горизонтальной прокрутки (время)`, await noHScroll());
+    check(`${vp.name}: time & counting`, await waitFor("document.querySelectorAll('.cnt').length > 30"));
+    check(`${vp.name}: no horizontal scroll (time)`, await noHScroll());
 
-    // Показать
+    // Show
     await navigate(BASE + '#/show');
-    check(`${vp.name}: карточка аллергии — «НЕ ЗАПОЛНЕНО»`, await waitFor("/NOT FILLED IN/.test(document.querySelector('#card-allergy').textContent)"));
+    check(`${vp.name}: allergy card says NOT FILLED IN`, await waitFor("/NOT FILLED IN/.test(document.querySelector('#card-allergy').textContent)"));
     await evaluate("document.querySelector('#card-allergy .checks input').click()");
-    check(`${vp.name}: аллергия → японский текст`, await waitFor("/アレルギーがあります/.test(document.querySelector('#card-allergy .preview')?.textContent || '')"));
+    check(`${vp.name}: allergy → Japanese text`, await waitFor("/アレルギーがあります/.test(document.querySelector('#card-allergy .preview')?.textContent || '')"));
     await shot(`${vp.name}-7-show`);
     await evaluate("[...document.querySelectorAll('#card-allergy .btn.primary')].pop().click()");
-    check(`${vp.name}: полноэкранная карточка`, await waitFor("!!document.querySelector('#fs .fs-line')"));
+    check(`${vp.name}: full-screen card`, await waitFor("!!document.querySelector('#fs .fs-line')"));
     await shot(`${vp.name}-8-fullscreen`);
     await click('#fs .btn.primary');
-    check(`${vp.name}: карточка закрывается`, await waitFor("!document.querySelector('#fs')"));
-    // B3/B16: все 12 аллергенов — текст ужимается и целиком помещается над панелью кнопок; Esc закрывает и после других клавиш (B15)
+    check(`${vp.name}: card closes`, await waitFor("!document.querySelector('#fs')"));
+    // B3/B16: all 12 allergens — text shrinks and fits above the button bar; Esc closes even after other keys (B15)
     await evaluate("document.querySelectorAll('#card-allergy .checks input').forEach((c) => { if (!c.checked) c.click(); })");
     await waitFor("document.querySelectorAll('#card-allergy .checks input:checked').length === 12");
     await evaluate("[...document.querySelectorAll('#card-allergy .btn.primary')].pop().click()");
@@ -202,29 +202,29 @@ async function main() {
       const bottom = Math.max(...lines.map((l) => l.getBoundingClientRect().bottom), ov.querySelector('.fs-caption')?.getBoundingClientRect().bottom || 0);
       return { bottom: Math.round(bottom), barTop: Math.round(ov.querySelector('.fs-bar').getBoundingClientRect().top), n: ov.dataset.fsN,
         last: lines[lines.length - 1].textContent }; })()`);
-    check(`${vp.name}: B3 аллергия из 12 пунктов помещается целиком`, fit.bottom <= fit.barTop + 1 && /確認していただけますか/.test(fit.last), JSON.stringify(fit));
+    check(`${vp.name}: B3 12-item allergy card fits`, fit.bottom <= fit.barTop + 1 && /確認していただけますか/.test(fit.last), JSON.stringify(fit));
     await shot(`${vp.name}-8b-allergy-12`);
     for (const key of ['a', 'Shift']) await cdp.send('Input.dispatchKeyEvent', { type: 'keyDown', key });
     await cdp.send('Input.dispatchKeyEvent', { type: 'keyDown', key: 'Escape', code: 'Escape', windowsVirtualKeyCode: 27 });
-    check(`${vp.name}: B15 Esc закрывает карточку после других клавиш`, await waitFor("!document.querySelector('#fs')", 2000));
+    check(`${vp.name}: B15 Esc closes the card after other keys`, await waitFor("!document.querySelector('#fs')", 2000));
     await evaluate("document.querySelectorAll('#card-allergy .checks input').forEach((c) => { if (c.checked) c.click(); })");
-    check(`${vp.name}: личные данные не выдуманы (отель пуст)`, await evaluate("/NOT FILLED IN/.test(document.querySelector('#card-hotel').textContent)"));
+    check(`${vp.name}: no invented personal data (hotel empty)`, await evaluate("/NOT FILLED IN/.test(document.querySelector('#card-hotel').textContent)"));
 
-    // Кандзи
+    // Kanji
     await navigate(BASE + '#/kanji');
-    check(`${vp.name}: шпаргалка кандзи`, await waitFor("document.querySelectorAll('.kcell').length >= 60"));
-    check(`${vp.name}: нет горизонтальной прокрутки (кандзи)`, await noHScroll());
+    check(`${vp.name}: kanji cheat sheet`, await waitFor("document.querySelectorAll('.kcell').length >= 60"));
+    check(`${vp.name}: no horizontal scroll (kanji)`, await noHScroll());
     await shot(`${vp.name}-9-kanji`);
 
-    // Инструменты
+    // Tools
     await navigate(BASE + '#/tools');
-    check(`${vp.name}: инструменты`, await waitFor("!!document.querySelector('#lens-btn')"));
+    check(`${vp.name}: tools`, await waitFor("!!document.querySelector('#lens-btn')"));
     const lensHref = await evaluate("document.querySelector('#lens-btn').getAttribute('href')");
-    check(`${vp.name}: Lens-ссылка для платформы`, vp.platform === 'ios' ? lensHref.startsWith('google://') : lensHref.startsWith('intent://'), lensHref.slice(0, 60));
-    check(`${vp.name}: нет горизонтальной прокрутки (инструменты)`, await noHScroll());
+    check(`${vp.name}: Lens link for the platform`, vp.platform === 'ios' ? lensHref.startsWith('google://') : lensHref.startsWith('intent://'), lensHref.slice(0, 60));
+    check(`${vp.name}: no horizontal scroll (tools)`, await noHScroll());
     await shot(`${vp.name}-10-tools`);
 
-    // Мои фразы: ромадзи → кана (wanakana), сохранение, поиск
+    // My phrases: romaji → kana (wanakana), saving, search
     await evaluate(`(() => {
       const box = document.querySelector('#user-phrases');
       const [ru, ja, kana] = box.querySelectorAll('input');
@@ -233,17 +233,17 @@ async function main() {
       document.querySelector('#add-phrase').click();
     })()`);
     const ui = await evaluate("JSON.parse(localStorage.getItem('jt.userItems') || '[]')[0] || {}");
-    check(`${vp.name}: своя фраза: ромадзи → кана, частица wa → は`, ui.kana === 'かさはありますか' && ui.romaji === 'kasa wa arimasu ka', JSON.stringify(ui));
+    check(`${vp.name}: user phrase: romaji → kana, particle wa → は`, ui.kana === 'かさはありますか' && ui.romaji === 'kasa wa arimasu ka', JSON.stringify(ui));
     await navigate(BASE + '#/phrases');
     await evaluate(`(() => { const i = document.querySelector('#phrase-search'); i.value = 'umbrella'; i.dispatchEvent(new Event('input')); })()`);
-    check(`${vp.name}: своя фраза находится поиском`, await waitFor("[...document.querySelectorAll('.phrase')].some((p) => p.dataset.id.startsWith('u.'))", 3000));
+    check(`${vp.name}: user phrase is found by search`, await waitFor("[...document.querySelectorAll('.phrase')].some((p) => p.dataset.id.startsWith('u.'))", 3000));
 
     // diag
     await navigate(BASE + 'diag.html');
-    check(`${vp.name}: diag.html — таблица Pixel/iPhone`, await waitFor("document.querySelectorAll('#checks tbody tr').length >= 10 && document.querySelectorAll('#checks .yn').length > 0"));
+    check(`${vp.name}: diag.html — Pixel/iPhone table`, await waitFor("document.querySelectorAll('#checks tbody tr').length >= 10 && document.querySelectorAll('#checks .yn').length > 0"));
     await shot(`${vp.name}-11-diag`);
 
-    // ---------- Темы: переключатель, скриншоты всех вкладок в светлой и тёмной, таб-бар ничего не перекрывает ----------
+    // ---------- Themes: toggle, screenshots of every tab in light and dark, tab bar covers nothing ----------
     await navigate(BASE + '#/phrases');
     await waitFor("document.documentElement.dataset.ready === '1'");
     await evaluate("localStorage.removeItem('theme'); document.documentElement.removeAttribute('data-theme')");
@@ -251,7 +251,7 @@ async function main() {
     const t1 = await evaluate("[document.documentElement.dataset.theme, localStorage.getItem('theme')]");
     await click('header.top .theme-toggle');
     const t2 = await evaluate("[document.documentElement.dataset.theme, localStorage.getItem('theme')]");
-    check(`${vp.name}: переключатель темы меняет и запоминает тему`, t1[0] && t1[0] === t1[1] && t2[0] === t2[1] && t1[0] !== t2[0], JSON.stringify([t1, t2]));
+    check(`${vp.name}: theme toggle switches and remembers the theme`, t1[0] && t1[0] === t1[1] && t2[0] === t2[1] && t1[0] !== t2[0], JSON.stringify([t1, t2]));
 
     const TABS = [['phrases', '#/phrases'], ['hear', '#/phrases/hear'], ['study', '#/study/today'], ['session', null], ['kana', '#/study/kana'],
       ['numbers', '#/study/numbers'], ['time', '#/study/time'], ['show', '#/show'], ['kanji', '#/kanji'], ['tools', '#/tools']];
@@ -261,12 +261,12 @@ async function main() {
         if (hash) await navigate(BASE + hash);
         else { await navigate(BASE + '#/study/today'); await waitFor("!!document.querySelector('#start-review')"); await click('#start-review'); await click('#reveal'); }
         await waitFor("document.documentElement.dataset.ready === '1' && document.querySelector('#view').children.length > 1");
-        if (name === 'phrases') await click('.phrase.is-collapsed .jp'); // раскрыть одну фразу
+        if (name === 'phrases') await click('.phrase.is-collapsed .jp'); // open one phrase
         await sleep(150);
         const st = await evaluate(`(() => {
           const de = document.documentElement, cs = getComputedStyle(document.body);
           const tb = document.querySelector('.tabbar').getBoundingClientRect();
-          // низ контента в координатах документа должен быть выше таб-бара при прокрутке до конца
+          // the bottom of the content (document coordinates) must stay above the tab bar when scrolled to the end
           const view = document.querySelector('#view');
           const last = [...view.querySelectorAll('*')].filter((e) => e.offsetParent && e.getBoundingClientRect().height > 0 && !(e.closest('details:not([open])') && !e.closest('summary')))
             .reduce((m, e) => Math.max(m, e.getBoundingClientRect().bottom + scrollY), 0);
@@ -281,39 +281,39 @@ async function main() {
         })()`);
         const expectBg = theme === 'light' ? 'rgb(245, 241, 231)' : 'rgb(23, 22, 19)';
         const ok = st.theme === theme && st.bg === expectBg && st.lastBottom <= st.tbTop + 1 && !st.tiny.length && !st.serif && !st.hscroll;
-        check(`${vp.name} ${theme} ${name}: тема, фон, таб-бар не перекрывает, контролы оформлены`, ok, ok ? '' : JSON.stringify(st));
+        check(`${vp.name} ${theme} ${name}: theme, background, tab bar not overlapping, controls styled`, ok, ok ? '' : JSON.stringify(st));
         await shot(`theme-${vp.name}-${theme}-${name}`);
       }
-      // полноэкранная карточка в теме (всегда белая)
+      // full-screen card in each theme (always white)
       await navigate(BASE + '#/show');
       await waitFor("!!document.querySelector('.showcard')");
       await click('.showcard');
       const fsBg = await evaluate("getComputedStyle(document.querySelector('#fs')).backgroundColor");
-      check(`${vp.name} ${theme}: карточка «показать» белая в любой теме`, fsBg === 'rgb(255, 255, 255)', fsBg);
+      check(`${vp.name} ${theme}: show card is white in any theme`, fsBg === 'rgb(255, 255, 255)', fsBg);
       await shot(`theme-${vp.name}-${theme}-fullscreen`);
       await click('#fs .fs-bar .btn.primary');
     }
     await evaluate("localStorage.removeItem('theme')");
 
     const newErr = errors.slice(e0);
-    check(`${vp.name}: нет исключений и console.error`, newErr.length === 0, newErr.join(' | '));
+    check(`${vp.name}: no exceptions or console.error`, newErr.length === 0, newErr.join(' | '));
   }
 
   for (const vp of VIEWPORTS) await runViewport(vp);
 
-  // ---------- Service Worker и офлайн ----------
-  console.log('\n=== Service Worker / офлайн ===');
+  // ---------- Service Worker and offline ----------
+  console.log('\n=== Service Worker / offline ===');
   await navigate(BASE + '#/phrases');
   await waitFor("document.documentElement.dataset.ready === '1'");
-  check('SW активен и контролирует страницу', await waitFor('navigator.serviceWorker.ready.then(() => !!navigator.serviceWorker.controller)', 10000) ||
+  check('SW active and controls the page', await waitFor('navigator.serviceWorker.ready.then(() => !!navigator.serviceWorker.controller)', 10000) ||
     (await navigate(BASE + '#/phrases'), await waitFor('!!navigator.serviceWorker.controller', 5000)));
   const cacheInfo = await evaluate("caches.keys().then(async (k) => { const c = await caches.open(k[0]); return { keys: k, n: (await c.keys()).length }; })");
-  check('кеш jt-* заполнен', cacheInfo.keys.some((k) => k.startsWith('jt-')) && cacheInfo.n >= 25, JSON.stringify(cacheInfo));
+  check('jt-* cache filled', cacheInfo.keys.some((k) => k.startsWith('jt-')) && cacheInfo.n >= 25, JSON.stringify(cacheInfo));
 
   await new Promise((r) => server.close(r));
   server = null;
   const reachable = await fetch(BASE).then(() => true, () => false);
-  check('сервер действительно остановлен', !reachable);
+  check('server really stopped', !reachable);
 
   for (const vp of VIEWPORTS) {
     await cdp.send('Emulation.setDeviceMetricsOverride', { width: vp.width, height: vp.height, deviceScaleFactor: 1, mobile: true });
@@ -321,21 +321,21 @@ async function main() {
     await navigate(BASE + '#/phrases');
     await cdp.send('Page.reload', { ignoreCache: false });
     await sleep(300);
-    check(`офлайн ${vp.name}: перезагрузка — приложение и данные`, await waitFor("document.documentElement.dataset.ready === '1' && document.querySelectorAll('.phrase').length > 5", 8000));
+    check(`offline ${vp.name}: reload — app and data`, await waitFor("document.documentElement.dataset.ready === '1' && document.querySelectorAll('.phrase').length > 5", 8000));
     await navigate(BASE + '#/kanji');
-    check(`офлайн ${vp.name}: кандзи`, await waitFor("document.querySelectorAll('.kcell').length >= 60"));
+    check(`offline ${vp.name}: kanji`, await waitFor("document.querySelectorAll('.kcell').length >= 60"));
     await navigate(BASE + '#/study/kana');
-    check(`офлайн ${vp.name}: кана`, await waitFor("document.querySelectorAll('.kana').length >= 71"));
+    check(`offline ${vp.name}: kana`, await waitFor("document.querySelectorAll('.kana').length >= 71"));
     await shot(`offline-${vp.name}`);
   }
   await navigate(BASE + 'diag.html');
-  check('офлайн: diag.html открывается', await waitFor("!!document.querySelector('#checks')"));
+  check('offline: diag.html opens', await waitFor("!!document.querySelector('#checks')"));
 
   cdp.close();
   chrome.kill();
   const failed = results.filter((r) => !r.ok);
   writeFileSync(join(OUT, 'e2e-results.json'), JSON.stringify({ when: new Date().toISOString(), results }, null, 1));
-  console.log(`\nИтого: ${results.length - failed.length}/${results.length} PASS${failed.length ? `, FAIL: ${failed.length}` : ''}`);
+  console.log(`\nTotal: ${results.length - failed.length}/${results.length} PASS${failed.length ? `, FAIL: ${failed.length}` : ''}`);
   process.exit(failed.length ? 1 : 0);
 }
 

@@ -26,11 +26,11 @@ test('stored data and old backups migrate (srs keys, user phrases ru → en)', (
   const mem = new Map();
   const be = { getItem: (k) => (mem.has(k) ? mem.get(k) : null), setItem: (k, v) => mem.set(k, String(v)), removeItem: (k) => mem.delete(k) };
   be.setItem('jt.srs', JSON.stringify({ 'a|ja2ru': { box: 2, due: '2026-11-20' } }));
-  be.setItem('jt.userItems', JSON.stringify([{ id: 'u.1', ru: 'Зонт', ja: '傘' }]));
+  be.setItem('jt.userItems', JSON.stringify([{ id: 'u.1', ru: 'Umbrella', ja: '傘' }]));
   const s = createStore(be);
   assert.deepEqual(s.migrate().sort(), ['srs', 'userItems']);
   assert.ok(s.get('srs')['a|ja2en']);
-  assert.equal(s.get('userItems')[0].en, 'Зонт');
+  assert.equal(s.get('userItems')[0].en, 'Umbrella');
   assert.ok(!('ru' in s.get('userItems')[0]));
   // a format-1 backup is migrated on import
   const t = createStore({ getItem: () => null, setItem() {}, removeItem() {} });

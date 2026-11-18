@@ -12,6 +12,14 @@ const APP = path.resolve(here, '..', 'app');
 const SHOTS = path.join(here, 'shots');
 const OUT = path.join(here, 'out');
 fs.mkdirSync(SHOTS, { recursive: true }); fs.mkdirSync(OUT, { recursive: true });
+// Phrases are collapsed by default since the design integration: tap the phrase to open it first (like a user).
+async function expand(page, id) {
+  await page.evaluate((pid) => {
+    const a = document.querySelector('#phrase-list article[data-id="' + pid + '"]');
+    if (a && a.classList.contains('is-collapsed')) a.querySelector('.jp').click();
+  }, id);
+  await new Promise((r) => setTimeout(r, 120));
+}
 const PORT = 8765;
 const BASE = `http://127.0.0.1:${PORT}/`;
 const CHROME = process.env.CHROME || 'C:/Program Files/Google/Chrome/Application/chrome.exe';
@@ -121,22 +129,22 @@ async function runProfile(browser, P) {
   }
 
   // ---------- 3. favourite persists ----------
-  await page.click(`#phrase-list article[data-id="${bagId}"] .fav`); await sleep(200);
+  await expand(page, bagId); await page.click(`#phrase-list article[data-id="${bagId}"] .fav`); await sleep(200);
   const favLS = await page.evaluate(() => localStorage.getItem('jt.favs'));
   await page.reload({ waitUntil: 'load' }); await ready(page);
   await gotoHash(page, '#/phrases'); await page.click('.chips button[data-cat="fav"]'); await sleep(300);
   const favOk = await page.evaluate((id) => !!document.querySelector(`#phrase-list article[data-id="${id}"] .fav.on`), bagId);
   rec(P.id, 'favourite ★ persists after reload', favOk, `localStorage jt.favs=${favLS}; shot=${await shot(page, P, 'fav-after-reload')}`);
   // un-favourite in the fav list (list should update)
-  await page.click(`#phrase-list article[data-id="${bagId}"] .fav`); await sleep(250);
+  await expand(page, bagId); await page.click(`#phrase-list article[data-id="${bagId}"] .fav`); await sleep(250);
   const goneFromFav = await page.evaluate((id) => !document.querySelector(`#phrase-list article[data-id="${id}"]`), bagId);
   rec(P.id, 'un-favourite removes it from Избранное immediately', goneFromFav, '');
   const bagCat = await page.evaluate((id) => window.__app.data.byId[id].cat, bagId);
   await page.click(`.chips button[data-cat="${bagCat}"]`); await sleep(200);
-  await page.click(`#phrase-list article[data-id="${bagId}"] .fav`); await sleep(150); // keep it favourited for backup test
+  await expand(page, bagId); await page.click(`#phrase-list article[data-id="${bagId}"] .fav`); await sleep(150); // keep it favourited for backup test
 
   // ---------- 4. Show card full screen ----------
-  await page.click(`#phrase-list article[data-id="${bagId}"] button[aria-label="Show full screen"]`); await sleep(400);
+  await expand(page, bagId); await page.click(`#phrase-list article[data-id="${bagId}"] button[aria-label="Show full screen"]`); await sleep(400);
   const fs1 = await page.evaluate(() => { const o = document.getElementById('fs'); if (!o) return null; const r = o.getBoundingClientRect(); const b = o.querySelector('.fs-body'); const cs = getComputedStyle(o);
     return { x: r.x, y: r.y, w: r.width, h: r.height, vw: innerWidth, vh: innerHeight, text: o.querySelector('.fs-ja')?.textContent, rt: o.querySelectorAll('rt').length, bg: cs.backgroundColor, color: getComputedStyle(o.querySelector('.fs-ja')).color, fontPx: parseFloat(getComputedStyle(o.querySelector('.fs-ja')).fontSize), bodyOverflow: b.scrollHeight > b.clientHeight + 1, lang: o.querySelector('[lang="ja"]') ? 'ja' : 'none' }; });
   const fsShot = await shot(page, P, 'show-fullscreen');
@@ -247,7 +255,7 @@ async function runProfile(browser, P) {
     rec(P.id, `price trainer (mixed, ${range}) «${txt}» → ${n} accepted, kana shown`, /^Correct!/.test(fb), fb.slice(0, 160) + ' shot=' + await shot(page, P, 'price-mixed-' + (range === 'Cameras' ? 'gear' : 'konbini')));
     // double check (Enter again) should not count twice
     await page.keyboard.press('Enter'); await sleep(100);
-    await page.click('#num-next'); await sleep(100);
+    await page.evaluate(() => document.querySelector('#num-next')?.click()); await sleep(100); // 2nd Enter already moves to the next task (B5 fix)
     const head = await page.evaluate(() => document.querySelector('#num-card .sess-head span').textContent);
     const after = Number((/of (\d+)/.exec(head) || [])[1]);
     rec(P.id, `price trainer: one answer + Enter pressed again counts once (${range})`, after === before + 1, `before: total ${before}; after 1 answer + repeated Enter: «${head}»`);
@@ -296,6 +304,7 @@ async function runProfile(browser, P) {
   page.__console.length = 0;
   await gotoHash(page, '#/phrases');
   await page.click(`.chips button[data-cat="konbini"]`); await sleep(150);
+  await page.evaluate(() => document.querySelector('#phrase-list article.is-collapsed .jp')?.click()); await sleep(150); // open the first phrase
   await page.click(`#phrase-list article .speak button`); await sleep(1800);
   const toastTxt = await page.evaluate(() => document.getElementById('toast')?.textContent || '');
   const jsErr = await page.evaluate(() => window.__errors);

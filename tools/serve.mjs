@@ -1,6 +1,6 @@
-// Локальный статический сервер для app/ (только 127.0.0.1). Не для продакшена.
-// Запуск: node tools/serve.mjs [port]   → http://localhost:8787/
-// Примерно повторяет app/_headers (no-cache для sw.js, index.html, data/*).
+// Local static server for app/ (127.0.0.1 only). Not for production.
+// Run: node tools/serve.mjs [port]   → http://localhost:8787/
+// Roughly mirrors app/_headers (no-cache for sw.js, index.html, data/*) and Cloudflare Pages pretty URLs.
 import { createServer } from 'node:http';
 import { readFile, stat } from 'node:fs/promises';
 import { extname, join, normalize, sep, dirname } from 'node:path';

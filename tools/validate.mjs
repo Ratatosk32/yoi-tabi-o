@@ -14,7 +14,7 @@ const load = (n) => JSON.parse(readFileSync(join(APP, 'data', n), 'utf8'));
 const KINDS = new Set(['say', 'hear', 'pattern', 'card']);
 const KANA_ONLY = /^[぀-ゟ゠-ヿ〇、。・？！ 　ー]+$/u;
 const ROMAJI_OK = /^[A-Za-zāīūēō'’ \-,.?!〇]+$/u;
-const CYRILLIC = /[Ѐ-ӿ]/u;
+const CYRILLIC = /[\u0400-\u04FF]/u;
 const TEXT_EXT = new Set(['.html', '.js', '.mjs', '.css', '.json', '.webmanifest', '.md', '.txt', '.svg', '']);
 
 function checkJapanese(it, where, errors, warnings) {

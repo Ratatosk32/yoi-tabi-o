@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { grade, buildSession, addDays, studyWeek, stats, modesFor, keyOf } from '../app/modules/srs.js';
 import { createStore } from '../app/modules/store.js';
 
-test('Leitner: интервалы и коробки', () => {
+test('Leitner: intervals and boxes', () => {
   const d = '2026-11-20';
   let s = grade(undefined, 'good', d);
   assert.deepEqual(s, { box: 2, due: '2026-11-21', seen: 1, lapses: 0 });
@@ -17,12 +17,12 @@ test('Leitner: интервалы и коробки', () => {
   assert.throws(() => grade(s, 'bogus'));
 });
 
-test('addDays через границу месяца/года', () => {
+test('addDays across month/year boundaries', () => {
   assert.equal(addDays('2026-11-30', 1), '2026-12-01');
   assert.equal(addDays('2026-12-31', 1), '2027-01-01');
 });
 
-test('buildSession: должные раньше новых, лимит новых, режимы по kind', () => {
+test('buildSession: due before new, new limit, modes by kind', () => {
   const items = [
     { id: 'a', kind: 'say' }, { id: 'b', kind: 'say' }, { id: 'c', kind: 'hear' }, { id: 'd', kind: 'card' },
   ];
@@ -34,12 +34,12 @@ test('buildSession: должные раньше новых, лимит новы�
   assert.equal(q[0].isNew, false);
   assert.equal(q.filter((x) => x.isNew).length, 2);
   assert.ok(!q.some((x) => x.id === 'd'));
-  // не должные (due в будущем) не попадают
+  // not due (due in the future) are excluded
   const q2 = buildSession({ items, state: { 'a|ja2en': { box: 3, due: '2026-12-01' } }, modes: ['ja2en'], today: '2026-11-20', newLimit: 0 });
   assert.equal(q2.length, 0);
 });
 
-test('studyWeek и stats', () => {
+test('studyWeek and stats', () => {
   assert.deepEqual(studyWeek('2026-11-18', '2026-11-18'), { day: 1, week: 1 });
   assert.deepEqual(studyWeek('2026-11-18', '2026-11-25'), { day: 8, week: 2 });
   assert.deepEqual(studyWeek('2026-11-18', '2026-12-20'), { day: 33, week: 3 });
@@ -52,7 +52,7 @@ function memBackend() {
   return { getItem: (k) => (m.has(k) ? m.get(k) : null), setItem: (k, v) => m.set(k, String(v)), removeItem: (k) => m.delete(k), _m: m };
 }
 
-test('store: get/set/update, повреждённые данные', () => {
+test('store: get/set/update, corrupted data', () => {
   const be = memBackend();
   const s = createStore(be);
   assert.deepEqual(s.get('favs', []), []);
@@ -62,7 +62,7 @@ test('store: get/set/update, повреждённые данные', () => {
   assert.deepEqual(createStore(be).get('srs', {}), {});
 });
 
-test('store: экспорт/импорт с merge', () => {
+test('store: export/import with merge', () => {
   const a = createStore(memBackend());
   a.set('srs', { 'k|ja2en': { box: 2, due: '2026-11-20' } });
   a.set('favs', ['p1']);
