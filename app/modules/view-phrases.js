@@ -1,5 +1,5 @@
 // Вкладка «Фразы»: категории, поиск по ru/ja/kana/romaji, избранное, озвучка, «показать».
-import { h, clear, rubyEl, speakButtons, chip, showFullscreen, toast } from './ui.js';
+import { h, clear, rubyEl, speakButtons, speakItem, chip, showFullscreen, toast } from './ui.js';
 import { search } from './text.js';
 
 const SPECIAL = {
@@ -99,8 +99,32 @@ export function phraseCard(ctx, it, isFav, onChange) {
     h('div.romaji', it.romaji),
     h('div.ru', it.ru),
     it.note ? h('div.note', it.note) : null,
+    replyBlock(ctx, it),
     h('div.actions', speakButtons(it), showBtn, favBtn),
   );
+}
+
+/** «Как ответить» под фразой персонала и «Ответ на: …» под фразой-ответом. */
+export function replyBlock(ctx, it) {
+  const byId = ctx.data.byId;
+  const s = ctx.settings();
+  if (it.kind === 'hear' && it.replies?.length) {
+    return h('div.replies', { 'data-for': it.id },
+      h('div.replies-title', 'Как ответить:'),
+      it.replies.map((rid) => byId[rid]).filter(Boolean).map((r) => h('div.reply', { 'data-id': r.id },
+        h('div.reply-text',
+          h('span.jp', rubyEl(r.ruby, { furigana: s.furigana })),
+          h('span.romaji', r.romaji),
+          h('span.ru', r.ru)),
+        speakButtons(r))));
+  }
+  if (it.replyTo?.length) {
+    const qs = it.replyTo.map((qid) => byId[qid]).filter(Boolean);
+    return h('div.reply-to', 'Ответ на: ', qs.map((q, i) => [i ? ', ' : '',
+      h('button.linklike', { type: 'button', title: q.ru, on: { click: (e) => { e.stopPropagation(); speakItem(q, 1.0); } } },
+        h('span', { lang: 'ja' }, q.ja), ' ▶')]));
+  }
+  return null;
 }
 
 export function copyOrToast(text) {

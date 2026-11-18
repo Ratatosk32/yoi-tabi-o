@@ -119,7 +119,11 @@ async function main() {
       await evaluate(`(() => { const i = document.querySelector('#phrase-search'); i.value = ${JSON.stringify(q)}; i.dispatchEvent(new Event('input')); })()`);
       check(`${vp.name}: поиск «${q}» находит «Пакет не нужен»`, await waitFor(`!!document.querySelector('[data-id="konbini.bag-none"]') && document.querySelector('#phrase-list h2').textContent.startsWith('Найдено')`, 3000));
     }
+    check(`${vp.name}: у ответа есть «Ответ на: 袋はご利用ですか»`, await evaluate(`/袋はご利用ですか/.test(document.querySelector('[data-id="konbini.bag-none"] .reply-to')?.textContent || '')`));
     await shot(`${vp.name}-2-search`);
+    await click('[data-cat="hear"]');
+    check(`${vp.name}: фразы персонала — блок «Как ответить»`, await waitFor(`document.querySelectorAll('.phrase.hear .replies .reply').length >= 20`, 3000));
+    await shot(`${vp.name}-2b-hear-replies`);
     // Озвучка без голосов не должна бросать исключения
     await evaluate("document.querySelector('.phrase .speak .btn')?.click()");
     await sleep(300);

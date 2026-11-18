@@ -1,7 +1,7 @@
 // Service Worker (same-origin, отдельный файл — Blob-SW запрещены, PLAN.md 2d).
 // При каждом изменении файлов приложения увеличивайте VERSION — браузер увидит новый sw.js
 // и предложит пользователю «Обновить» (без тихих перезагрузок).
-const VERSION = 'v1';
+const VERSION = 'v2';
 const CACHE = `jt-${VERSION}`;
 
 const PRECACHE = [

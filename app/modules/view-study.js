@@ -3,6 +3,7 @@ import { h, clear, rubyEl, jaText, speakButtons, speakItem, chip, shuffle, toast
 import { buildSession, grade, todayStr, studyWeek, stats, MODES } from './srs.js';
 import * as N from './numbers.js';
 import * as tts from './tts.js';
+import { replyBlock } from './view-phrases.js';
 
 const SUBS = [
   { id: 'today', label: 'Сегодня' },
@@ -151,6 +152,8 @@ function renderSession(ctx, box) {
     back.append(h('div.romaji.center', it.romaji));
     if (cur.mode !== 'ru2ja') back.append(h('div.ru.center', it.ru));
     if (it.note) back.append(h('div.note', it.note));
+    const rb = replyBlock(ctx, it);
+    if (rb) back.append(rb);
   }
   card.append(back);
 

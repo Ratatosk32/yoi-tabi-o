@@ -325,3 +325,16 @@ ol.small, ul { padding-left: 20px; }
   .kgrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .tiles { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
+
+/* ---------- Ответы на фразы персонала ---------- */
+.replies { margin-top: var(--space-2); padding: var(--space-2) var(--space-3); background: var(--color-surface-2); border-radius: var(--radius-sm); }
+.replies-title { font-size: var(--text-xs); color: var(--color-text-2); margin-bottom: var(--space-1); }
+.reply { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); padding: var(--space-1) 0; border-top: 1px solid var(--color-line); }
+.reply:first-of-type { border-top: 0; }
+.reply-text { display: flex; flex-direction: column; min-width: 0; }
+.reply-text .jp { font-size: 18px; line-height: 1.8; }
+.reply-text .romaji { font-size: 13px; }
+.reply-text .ru { font-size: 13.5px; }
+.reply .speak .btn { min-height: 38px; min-width: 38px; }
+.reply-to { margin-top: 6px; font-size: 13px; color: var(--color-text-2); }
+.linklike { background: none; border: 0; padding: 2px 0; color: var(--color-accent); cursor: pointer; font-size: 14px; min-height: 32px; }
