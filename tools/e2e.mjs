@@ -406,6 +406,54 @@ async function main() {
       check(`${vp.name} ${theme}: show card is white in any theme`, fsBg === 'rgb(255, 255, 255)', fsBg);
       await shot(`theme-${vp.name}-${theme}-fullscreen`);
       await click('#fs .fs-bar .btn.primary');
+      // Kana quiz, every set, all 10 questions: the cue text stays inside its box, the box stays above the options;
+      // single kana in the practice square, yoon and words on one line (font >= 32 px)
+      for (const set of ['hira', 'kata', 'dakuyoon', 'words']) {
+        await evaluate("window.__app.go('#/study/kana')"); // same hash: re-render
+        await waitFor(`!!document.querySelector('[data-set="${set}"]')`);
+        await click(`[data-set="${set}"]`);
+        await waitFor("!!document.querySelector('.kana-big')");
+        const res = await evaluate(`(async () => {
+          const bad = []; let words = 0, maxLines = 1;
+          for (let i = 0; i < 10; i++) {
+            const b = document.querySelector('.kana-big'), o = document.querySelector('.opts');
+            if (!b || !o) { bad.push('no cue at ' + i); break; }
+            const text = b.textContent, n = [...text].length, r = b.getBoundingClientRect();
+            const rg = document.createRange(); rg.selectNodeContents(b); const t = rg.getBoundingClientRect();
+            const fs = parseFloat(getComputedStyle(b).fontSize);
+            const lines = Math.round(t.height / (fs * 1.15)) || 1;
+            if (n > 1) { words++; maxLines = Math.max(maxLines, lines); }
+            if (t.left < r.left - 1 || t.right > r.right + 1 || t.top < r.top - 1 || t.bottom > r.bottom + 1) bad.push(text + ': text outside the box');
+            if (r.bottom > o.getBoundingClientRect().top - 4) bad.push(text + ': box overlaps the options');
+            if (b.classList.contains('is-word') !== (n > 1)) bad.push(text + ': grid only for single kana');
+            if (n > 1 && fs < 32) bad.push(text + ': font ' + fs);
+            if (n > 1 && lines > 1) bad.push(text + ': wraps (' + lines + ' lines at ' + fs + ' px)');
+            if (document.documentElement.scrollWidth > innerWidth) bad.push(text + ': horizontal scroll');
+            o.querySelector('.opt').click();
+            await new Promise((ok) => setTimeout(ok, 30));
+            document.querySelector('#quiz-next')?.click();
+            await new Promise((ok) => setTimeout(ok, 30));
+          }
+          return { bad, words };
+        })()`);
+        check(`${vp.name} ${theme}: kana quiz ${set}: cue inside its box, above the options, words on one line`, res && !res.bad.length, JSON.stringify(res));
+      }
+      await evaluate("window.__app.go('#/study/kana')");
+      await waitFor('!!document.querySelector(\'[data-set="words"]\')');
+      await click('[data-set="words"]');
+      await waitFor("!!document.querySelector('.kana-big.is-word')");
+      // the quiz picks 10 random words: also check the longest one (8 kana) deterministically
+      const longest = await evaluate(`(() => {
+        const w = window.__app.data.kana.words.map((x) => x.k).sort((a, b) => [...b].length - [...a].length)[0];
+        const b = document.querySelector('.kana-big.is-word'), q = b.parentElement;
+        b.textContent = w; q.style.setProperty('--n', String([...w].length));
+        const r = b.getBoundingClientRect(), rg = document.createRange(); rg.selectNodeContents(b); const t = rg.getBoundingClientRect();
+        const fs = parseFloat(getComputedStyle(b).fontSize);
+        return { w, fs, inside: t.left >= r.left - 1 && t.right <= r.right + 1 && t.bottom <= r.bottom + 1, oneLine: t.height < fs * 1.6,
+          above: r.bottom <= document.querySelector('.opts').getBoundingClientRect().top - 4 };
+      })()`);
+      check(`${vp.name} ${theme}: longest kana word fits on one line, >= 32 px, above the options`, longest.inside && longest.oneLine && longest.above && longest.fs >= 32, JSON.stringify(longest));
+      await shot(`theme-${vp.name}-${theme}-kana-words`);
     }
     await evaluate("localStorage.removeItem('theme')");
 

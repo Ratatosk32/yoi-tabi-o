@@ -1148,3 +1148,14 @@ section.block, .card.edit { scroll-margin-top: var(--sp-3); }
 .credits p { overflow-wrap: anywhere; }
 .credits .mit { color: var(--ink-3); }
 #credits-back { margin-right: var(--sp-3); }
+
+/* ---------- 18.3 Kana quiz: yoon and words on one line (the practice square is for single kana only) ---------- */
+.quiz-q.is-word { container-type: inline-size; grid-template-columns: minmax(0, 1fr); gap: var(--sp-2); }
+.kana-big.is-word {
+  grid-column: 1; min-width: 0; height: auto; min-height: 120px; padding: var(--sp-3) var(--sp-3);
+  background: none; /* no practice cross */
+  text-align: center; line-break: strict; overflow-wrap: anywhere; /* wraps only when even 32 px does not fit */
+  /* fit the line: (cue width - padding - borders) / characters; 32 px .. hero */
+  font-size: clamp(32px, calc((100cqw - var(--sp-3) * 2 - 4px) / var(--n, 4)), var(--fs-ja-hero));
+}
+.quiz-q.is-word .btn.icon { grid-column: 1; justify-self: center; } /* under the word: the word gets the full width */

@@ -236,6 +236,9 @@ function renderKana(ctx, box) {
 // Confusable pairs from CURRICULUM §3.5
 const LOOKALIKES = [['シ', 'ツ'], ['ソ', 'ン'], ['ク', 'ケ'], ['ぬ', 'め'], ['は', 'ほ'], ['る', 'ろ'], ['わ', 'ね', 'れ']];
 
+const isWord = (s) => [...s].length > 1;
+/** --n = number of characters: CSS fits a word into the width (container units), min 32 px. */
+const quizCue = (el, text) => { el.style.setProperty('--n', String([...text].length)); return el; };
 const KANA_SETS = {
   hira: { label: 'Hiragana', pick: (K) => cells(K.gojuon).map((c) => ({ q: c.h, a: c.r })) },
   kata: { label: 'Katakana', pick: (K) => cells(K.gojuon).map((c) => ({ q: c.k, a: c.r })) },
@@ -280,7 +283,8 @@ function runKanaQuiz(ctx, quizBox, K, setKey) {
     const t0 = performance.now();
     quizBox.append(
       h('div.sess-head', h('span', `${KANA_SETS[setKey].label} · ${i + 1}/10`), h('span', `correct: ${score}`)),
-      h('div.quiz-q', jaText(q.q, 'kana-big'), h('button.btn.icon', { type: 'button', 'aria-label': 'Play', on: { click: () => tts.speak(q.q, 0.9) } }, ico('play'))),
+      // one kana: the practice square; yoon (きゃ) and words (レシート): one line, font fitted to the width
+      quizCue(h('div.quiz-q' + (isWord(q.q) ? '.is-word' : ''), jaText(q.q, 'kana-big' + (isWord(q.q) ? ' is-word' : '')), h('button.btn.icon', { type: 'button', 'aria-label': 'Play', on: { click: () => tts.speak(q.q, 0.9) } }, ico('play'))), q.q),
       h('div.opts', opts.map((o) => h('button.btn.opt', { type: 'button', on: { click: (e) => {
         if (quizBox.dataset.answered) return;
         quizBox.dataset.answered = '1';
