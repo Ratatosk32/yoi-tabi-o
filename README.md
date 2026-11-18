@@ -12,7 +12,7 @@
 app/                  ← корень деплоя (только эта папка уходит на хостинг)
   index.html, app.js, styles.css, sw.js, manifest.webmanifest, _headers, diag.html
   modules/            ← numbers, srs, store, text, tts, launchers, ui, view-*.js
-  data/               ← phrases.json (256), kana.json, kanji.json (106), REVIEW.md
+  data/               ← phrases.json (271), kana.json, kanji.json (115), REVIEW.md
   vendor/             ← wanakana 5.3.1 (закреплённая версия, MIT)
   icons/              ← 192, 512, maskable 512, apple-touch-icon 180
 tools/
