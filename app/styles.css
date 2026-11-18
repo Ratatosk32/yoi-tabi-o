@@ -92,7 +92,9 @@ body {
   overflow-x: hidden;
 }
 body.noscroll { overflow: hidden; }
-[lang="ja"], .ja { font-family: var(--font-ja); }
+[lang="ja"], .ja { font-family: var(--font-ja); line-break: strict; }
+/* японские переносы: не начинать строку с ー、。っ; в Chrome — по смысловым словам (BudouX) */
+[lang="ja"] { word-break: auto-phrase; }
 button, input, select, textarea { font: inherit; color: inherit; }
 a { color: inherit; }
 
@@ -224,7 +226,7 @@ rt { font-size: .5em; color: var(--color-text-2); }
     calc(96px + env(safe-area-inset-bottom)) calc(20px + env(safe-area-inset-left));
 }
 .fs-body { width: 100%; max-height: 100%; overflow: auto; text-align: center; }
-.fs-line { margin: .2em 0; font-size: var(--fs, 8vmin); line-height: 1.35; font-weight: 700; word-break: break-word; }
+.fs-line { margin: .2em 0; font-size: var(--fs, 8vmin); line-height: 1.35; font-weight: 700; overflow-wrap: anywhere; line-break: strict; }
 .fs-line.small { font-size: calc(var(--fs, 8vmin) * .7); font-weight: 600; }
 .fs .fs-ja { font-family: var(--font-ja); }
 .fs-caption { color: var(--color-show-muted); font-size: 15px; margin-top: var(--space-4); text-align: center; }
