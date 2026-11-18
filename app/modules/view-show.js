@@ -1,6 +1,6 @@
 // Show tab: full-screen cards for Japanese people.
 // Personal data (allergy, hotel address) are PLACEHOLDERS the user fills in; stored only in this browser.
-import { h, clear, showFullscreen, rubyEl, toast } from './ui.js';
+import { h, add, clear, showFullscreen, rubyEl, toast } from './ui.js';
 
 export const ALLERGENS = [
   { id: 'tamago', ja: '卵', ruby: '卵[たまご]', en: 'egg' },
@@ -50,10 +50,38 @@ export function render(ctx, root) {
   const saveCard = (key, val) => ctx.store.update('cards', {}, (c) => ({ ...c, [key]: val }));
 
   root.append(h('header.top', h('h1', 'Show')),
-    h('p.hint', 'Cards open full screen and keep the screen on. Back closes the card.'));
+    h('p.hint', 'Tap a card: it opens full screen in large type and keeps the screen on. Back closes it.'));
 
-  // --- My cards ---
-  const mine = h('section.block', h('h2.section', 'My cards'));
+  // --- One-tap list: your filled-in cards first, then the ready-made ones ---
+  const quick = h('section.block#show-cards');
+  root.append(quick);
+  const showAllergy = (gen) => showFullscreen({ lines: gen.lines.map((ruby) => ({ ruby })), caption: gen.en });
+  const showHotel = (gen) => showFullscreen({ lines: gen.lines.map((t, i) => (i === 0 ? { ruby: t } : { text: t, small: i > 1 })), caption: gen.en });
+  const showFree = (v) => showFullscreen({ lines: [{ text: v }], speakText: v });
+  const jumpTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  function drawQuick() {
+    clear(quick);
+    const c = cards();
+    const a = allergyText(c.allergy), ho = hotelText(c.hotel), free = (c.free || '').trim();
+    const mineCard = (label, id, preview, onShow, formId) => (preview
+      ? h('button.card.showcard.mine', { type: 'button', 'data-card': id, on: { click: onShow } },
+        h('div.badge', label), h('div.jp', { lang: 'ja' }, preview))
+      : h('button.card.todo-card', { type: 'button', 'data-card': id, on: { click: () => jumpTo(formId) } },
+        h('strong', label), h('span.warn', 'Not filled in'), h('span.small', 'Fill it in below')));
+    add(quick,
+      h('h2.section', 'Cards'),
+      mineCard('Allergy', 'allergy', a && rubyEl(a.lines[0], { furigana: false }), () => showAllergy(a), 'card-allergy'),
+      mineCard('Hotel address (taxi)', 'hotel', ho && (c.hotel.name || c.hotel.address), () => showHotel(ho), 'card-hotel'),
+      free ? mineCard('Your own text', 'free', free.length > 60 ? free.slice(0, 60) + '…' : free, () => showFree(free), 'card-free') : null,
+      ctx.allItems().filter((x) => x.kind === 'card').map((it) => h('button.card.showcard', {
+        type: 'button', 'data-id': it.id,
+        on: { click: () => showFullscreen({ lines: [{ ruby: it.ruby }], caption: it.en, speakText: it.ja }) },
+      }, h('div.jp', rubyEl(it.ruby, { furigana: false })), h('div.en', it.en))));
+  }
+
+  // --- Forms for the personal cards ---
+  const mine = h('section.block', h('h2.section', 'Edit my cards'),
+    h('p.hint', 'Stored only on this phone. Fill these in before the trip.'));
   root.append(mine);
 
   // Allergy
@@ -64,10 +92,12 @@ export function render(ctx, root) {
     const c = cards().allergy || { who: 'child', allergens: [], strict: true };
     const gen = allergyText(c);
     allergyBox.append(
-      h('div.card-head', h('strong', 'Allergy'), gen ? null : h('span.warn', 'NOT FILLED IN')),
+      h('div.card-head', h('strong', 'Allergy'), gen ? h('span.ok', 'Ready') : h('span.warn', 'NOT FILLED IN')),
+      h('div.field-label', 'Who has the allergy?'),
       h('div.row',
         h('label', h('input', { type: 'radio', name: 'who', checked: c.who !== 'me', on: { change: () => { saveCard('allergy', { ...c, who: 'child' }); drawAllergy(); } } }), ' my child'),
         h('label', h('input', { type: 'radio', name: 'who', checked: c.who === 'me', on: { change: () => { saveCard('allergy', { ...c, who: 'me' }); drawAllergy(); } } }), ' me')),
+      h('div.field-label', 'Allergic to'),
       h('div.checks', ALLERGENS.map((a) => h('label.check',
         h('input', { type: 'checkbox', checked: c.allergens.includes(a.id), on: { change: (e) => {
           const set = new Set(c.allergens);
@@ -79,8 +109,9 @@ export function render(ctx, root) {
       h('label.check', h('input', { type: 'checkbox', checked: !!c.strict, on: { change: (e) => { saveCard('allergy', { ...c, strict: e.target.checked }); drawAllergy(); } } }), ' even a small amount is dangerous'),
       gen ? h('div.preview', gen.lines.map((l) => h('p', rubyEl(l, { furigana: true })))) : h('p.hint', 'Tick the allergens — the Japanese text is built automatically.'),
       h('div.actions',
-        h('button.btn.primary', { type: 'button', disabled: !gen, on: { click: () => gen && showFullscreen({ lines: gen.lines.map((ruby) => ({ ruby })), caption: gen.en }) } }, 'Show')),
+        h('button.btn.primary', { type: 'button', disabled: !gen, on: { click: () => gen && showAllergy(gen) } }, 'Show full screen')),
     );
+    drawQuick();
   }
   drawAllergy();
 
@@ -96,41 +127,39 @@ export function render(ctx, root) {
       return h('label.field', h('span', label), multiline ? h('textarea', { rows: 3, ...attrs }) : h('input', { type: 'text', ...attrs }));
     };
     hotelBox.append(
-      h('div.card-head', h('strong', 'Hotel address (for taxis)'), gen ? null : h('span.warn', 'NOT FILLED IN')),
+      h('div.card-head', h('strong', 'Hotel address (for taxis)'), gen ? h('span.ok', 'Ready') : h('span.warn', 'NOT FILLED IN')),
       h('p.hint', 'Copy the name and address IN JAPANESE from your booking confirmation or the hotel website (Google Maps → hotel page).'),
       field('name', 'Hotel name (in Japanese)', 'e.g. 〇〇ホテル新宿'),
       field('address', 'Address (in Japanese)', '〒000-0000 東京都…', true),
-      field('phone', 'Hotel phone', '03-0000-0000'),
+      field('phone', 'Hotel phone (optional)', '03-0000-0000'),
       h('div.actions',
-        h('button.btn.primary', { type: 'button', disabled: !gen, on: { click: () => gen && showFullscreen({ lines: gen.lines.map((t, i) => (i === 0 ? { ruby: t } : { text: t, small: i > 1 })), caption: gen.en }) } }, 'Show')),
+        h('button.btn.primary', { type: 'button', disabled: !gen, on: { click: () => gen && showHotel(gen) } }, 'Show full screen')),
     );
+    drawQuick();
   }
   drawHotel();
 
   // Free text
   const free = cards().free || '';
   const ta = h('textarea#free-text', { rows: 3, lang: 'ja', placeholder: 'Paste Japanese text (e.g. from Google Translate)', value: free });
-  mine.append(h('div.card.edit',
+  ta.setAttribute('aria-label', 'Japanese text to show');
+  ta.addEventListener('change', () => { saveCard('free', ta.value.trim()); drawQuick(); });
+  mine.append(h('div.card.edit#card-free',
     h('div.card-head', h('strong', 'Your own text')),
+    h('p.hint', 'Paste a translation from Google Translate and show it large.'),
     ta,
     h('div.actions',
       h('button.btn.primary', { type: 'button', on: { click: () => {
         const v = ta.value.trim();
         saveCard('free', v);
+        drawQuick();
         if (!v) return toast('Paste some text first');
-        showFullscreen({ lines: [{ text: v }], speakText: v });
-      } } }, 'Show'),
+        showFree(v);
+      } } }, 'Show full screen'),
       h('button.btn', { type: 'button', on: { click: async () => {
-        try { ta.value = await navigator.clipboard.readText(); saveCard('free', ta.value.trim()); } catch { toast('No clipboard access — long-press to paste'); }
+        try { ta.value = await navigator.clipboard.readText(); saveCard('free', ta.value.trim()); drawQuick(); } catch { toast('No clipboard access — long-press to paste'); }
       } } }, 'Paste from clipboard')),
   ));
 
-  // --- Ready-made cards ---
-  const ready = h('section.block', h('h2.section', 'Ready-made cards'));
-  for (const it of ctx.allItems().filter((x) => x.kind === 'card')) {
-    ready.append(h('button.card.showcard', { type: 'button', 'data-id': it.id, on: { click: () => showFullscreen({ lines: [{ ruby: it.ruby }], caption: it.en, speakText: it.ja }) } },
-      h('div.jp', rubyEl(it.ruby, { furigana: false })),
-      h('div.en', it.en)));
-  }
-  root.append(ready);
+  drawQuick();
 }

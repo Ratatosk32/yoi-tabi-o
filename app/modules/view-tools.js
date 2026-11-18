@@ -1,5 +1,5 @@
 // Tools tab: Lens, Google Translate, maps, emergency numbers, speech, settings, backup.
-import { h, clear, toast, downloadJson, ico } from './ui.js';
+import { h, add, clear, toast, downloadJson, ico } from './ui.js';
 import * as L from './launchers.js';
 import * as tts from './tts.js';
 import { stats } from './srs.js';
@@ -11,9 +11,16 @@ export function render(ctx, root) {
   // --- Camera / Lens ---
   const variant = L.lensVariant(s.lensVariant);
   const fallbacks = L.CAMERA_FALLBACKS[L.PLATFORM] || L.CAMERA_FALLBACKS.other;
+  // This page is long: a row of jump links keeps every section (emergency numbers first) one tap away
+  const JUMPS = [['emergency', 'Emergency'], ['lens', 'Camera'], ['translate', 'Translate'], ['maps', 'Maps'], ['tts-box', 'Speech'],
+    ['settings', 'Settings'], ['user-phrases', 'My phrases'], ['backup', 'Backup']];
   root.append(
     h('header.top', h('h1', 'Tools')),
-    h('section.block',
+    h('nav.chips.jump', { 'aria-label': 'On this page' }, JUMPS.map(([id, label]) => h('button.chip', {
+      type: 'button', 'data-jump': id,
+      on: { click: () => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' }) },
+    }, label))),
+    h('section.block#lens',
       h('h2.section', 'Camera: read a sign'),
       h('a.btn.big.primary#lens-btn', { href: variant.url(), rel: 'noopener', 'data-platform': L.PLATFORM }, ico('camera'), 'Open Google Lens'),
       h('details.more', { open: L.PLATFORM === 'ios' },
@@ -34,10 +41,10 @@ export function render(ctx, root) {
     clear(histBox);
     const arr = ctx.store.get('history', []);
     if (!arr.length) return;
-    histBox.append(h('div.small', 'Recent:'));
+    histBox.append(h('div.small.chips-label', 'Recent'));
     for (const t of arr.slice(0, 8)) histBox.append(h('button.chip', { type: 'button', on: { click: () => { ta.value = t; } } }, t.length > 40 ? t.slice(0, 40) + '…' : t));
   };
-  root.append(h('section.block',
+  root.append(h('section.block#translate',
     h('h2.section', 'Translate EN → JA'),
     h('p.hint', 'Google Translate does the translation (download the offline Japanese pack). Copy the result and paste it into Show → Your own text.'),
     ta,
@@ -52,7 +59,7 @@ export function render(ctx, root) {
 
   // --- Maps ---
   const q = h('input#maps-q', { type: 'text', placeholder: 'Station, address or place', 'aria-label': 'Place' });
-  root.append(h('section.block',
+  root.append(h('section.block#maps',
     h('h2.section', 'Maps'),
     q,
     h('div.actions.wrap',
@@ -61,13 +68,14 @@ export function render(ctx, root) {
   ));
 
   // --- Emergency numbers ---
-  root.append(h('section.block',
+  root.append(h('section.block#emergency',
     h('h2.section', 'Emergency numbers'),
     h('div.tels',
-      h('a.tel', { href: 'tel:110' }, h('b', '110'), h('span', 'Police')),
-      h('a.tel', { href: 'tel:119' }, h('b', '119'), h('span', 'Ambulance / fire')),
-      h('a.tel', { href: 'tel:05038162787' }, h('b.long', '050-3816-2787'), h('span', 'Japan Visitor Hotline'), h('small', 'JNTO, 24/7, English'))),
-    h('p.hint', 'JNTO hotline: 24/7 in English, Chinese and Korean. Phrases are in “Child, health, emergencies”.'),
+      h('a.tel', { href: 'tel:110' }, h('b', '110'), h('span', 'Police'), ico('phone')),
+      h('a.tel', { href: 'tel:119' }, h('b', '119'), h('span', 'Ambulance / fire'), ico('phone')),
+      h('a.tel.stack', { href: 'tel:05038162787' }, h('b.long', '050-3816-2787'),
+        h('span', 'Japan Visitor Hotline', h('small', 'JNTO · 24/7 · English, Chinese, Korean')), ico('phone'))),
+    h('p.hint', 'Tap a number to call. Emergency phrases are in Phrases → “Child, health, emergencies”.'),
   ));
 
   // --- Speech ---
@@ -101,12 +109,12 @@ export function render(ctx, root) {
   lensSel.value = s.lensVariant;
   const newSel = h('input', { type: 'number', min: 3, max: 40, value: String(s.newPerDay), on: { change: (e) => ctx.setSetting('newPerDay', Math.max(3, Math.min(40, Number(e.target.value) || 12))) } });
   const startIn = h('input', { type: 'date', value: s.startDate || '', on: { change: (e) => e.target.value && ctx.setSetting('startDate', e.target.value) } });
-  root.append(h('section.block',
+  root.append(h('section.block#settings',
     h('h2.section', 'Settings'),
     h('label.field', h('span', 'How to launch Lens'), lensSel),
     h('label.field', h('span', 'New cards per day'), newSel),
     h('label.field', h('span', 'Study start date (for the weekly plan)'), startIn),
-    h('label.toggle', h('input', { type: 'checkbox', checked: s.furigana, on: { change: (e) => ctx.setSetting('furigana', e.target.checked) } }), h('span', 'Show furigana')),
+    h('label.toggle', h('input', { type: 'checkbox', checked: s.furigana, on: { change: (e) => ctx.setSetting('furigana', e.target.checked) } }), h('span', 'Show furigana (readings above kanji)')),
   ));
 
   // --- My phrases ---
@@ -134,7 +142,7 @@ export function render(ctx, root) {
         ctx.setSetting('lastBackup', new Date().toISOString());
         toast('Backup saved to Downloads / Files');
       } } }, 'Download backup (JSON)'),
-      h('label.btn', 'Restore from file', h('span.visually-hidden', imp))),
+      h('label.btn', { tabindex: '0', role: 'button', on: { keydown: (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); imp.click(); } } } }, 'Restore from file', h('span.visually-hidden', imp))),
   ));
 
   // --- About ---
@@ -172,41 +180,49 @@ function userPhrases(ctx) {
     clear(box);
     const list = ctx.store.get('userItems', []);
     const cats = ctx.data.categories.filter((c) => c.id !== 'cards');
-    const en = h('input', { type: 'text', placeholder: 'In English', 'aria-label': 'Translation' });
-    const ja = h('input', { type: 'text', lang: 'ja', placeholder: 'In Japanese (as written)', 'aria-label': 'Japanese text' });
-    const kana = h('input', { type: 'text', lang: 'ja', placeholder: 'Reading in kana or romaji: kasa wa arimasu ka', 'aria-label': 'Reading' });
+    const en = h('input', { type: 'text', placeholder: 'Do you have an umbrella?' });
+    const ja = h('input', { type: 'text', lang: 'ja', placeholder: '傘はありますか' });
+    const kana = h('input', { type: 'text', lang: 'ja', placeholder: 'kasa wa arimasu ka', autocapitalize: 'off', autocomplete: 'off' });
     const preview = h('div.small#user-reading');
-    const cat = h('select', { 'aria-label': 'Category' }, cats.map((c) => h('option', { value: c.id }, c.en)));
-    const kind = h('select', { 'aria-label': 'Type' }, h('option', { value: 'say' }, 'I say it'), h('option', { value: 'hear' }, 'Staff will say it'));
+    const cat = h('select', cats.map((c) => h('option', { value: c.id }, c.en)));
+    const kind = h('select', h('option', { value: 'say' }, 'I say it'), h('option', { value: 'hear' }, 'Staff say it'));
     const upd = () => {
       const r = readingFrom(kana.value);
       preview.textContent = r.kana ? `${r.kana} — ${r.romaji}` : 'Romaji: words separated by spaces; particles wa / o / e become は / を / へ.';
     };
     upd();
     kana.addEventListener('input', upd);
-    box.append(
+    const field = (label, control) => h('label.field', h('span', label), control);
+    add(box,
       h('h2.section', 'My phrases'),
       h('p.small', 'Your phrases appear in Phrases, in search and in Study cards. They are included in the backup.'),
-      en, h('div', { style: { height: '8px' } }), ja, h('div', { style: { height: '8px' } }), kana, preview,
-      h('div.actions.wrap', cat, kind),
+      field('Meaning in English', en),
+      field('Japanese (as written)', ja),
+      field('Reading (kana or romaji)', kana),
+      preview,
+      h('div.field-row', field('Category', cat), field('Who says it', kind)),
       h('div.actions', h('button.btn.primary#add-phrase', { type: 'button', on: { click: () => {
         const r = en.value.trim(), j = ja.value.trim();
         const rd = readingFrom(kana.value);
         const k = rd.kana || j;
-        if (!r || !j) { toast('Both English and Japanese text are required'); return; }
-        const hasKanji = /[㐀-鿿]/.test(j);
+        if (!r || !j) { toast('Both English and Japanese text are required'); (r ? ja : en).focus(); return; }
+        const hasKanji = /[\u3400-\u9fff]/.test(j);
         const item = {
           id: 'u.' + Date.now().toString(36), cat: cat.value, kind: kind.value, en: r, ja: j, kana: k,
           ruby: hasKanji && k !== j ? `{${j}|${k}}` : j,
           romaji: rd.romaji || kanaToHepburn(k), tags: ['w1', 'user'],
         };
         ctx.store.update('userItems', [], (arr) => [...arr, item]);
-        toast('Added');
+        toast('Added to ' + (ctx.data.catById[item.cat]?.en || 'Phrases'));
         draw();
-      } } }, 'Add')),
-      list.length ? h('div', list.map((it) => h('div.card.userrow',
-        h('div', { lang: 'ja' }, it.ja), h('div.small', `${it.romaji} — ${it.en}`),
-        h('button.btn.small', { type: 'button', on: { click: () => { ctx.store.update('userItems', [], (arr) => arr.filter((x) => x.id !== it.id)); draw(); } } }, 'Delete')))) : null,
+      } } }, 'Add phrase')),
+      list.length ? h('div.userlist', h('div.small.chips-label', `Added: ${list.length}`), list.map((it) => h('div.userrow',
+        h('div.userrow-text', h('div', { lang: 'ja' }, it.ja), h('div.small', `${it.romaji} — ${it.en}`)),
+        h('button.btn.small', { type: 'button', 'aria-label': `Delete: ${it.en}`, on: { click: () => {
+          ctx.store.update('userItems', [], (arr) => arr.filter((x) => x.id !== it.id));
+          toast('Deleted');
+          draw();
+        } } }, 'Delete')))) : null,
     );
   };
   draw();

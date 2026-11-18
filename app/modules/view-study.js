@@ -1,5 +1,5 @@
 // Study tab: today's lesson, SRS (Leitner), kana (tables + quiz), price and time trainers.
-import { h, clear, rubyEl, jaText, speakButtons, speakItem, chip, shuffle, toast, ico } from './ui.js';
+import { h, add, clear, rubyEl, jaText, speakButtons, speakItem, chip, shuffle, toast, ico } from './ui.js';
 import { buildSession, grade, todayStr, studyWeek, stats, MODES } from './srs.js';
 import * as N from './numbers.js';
 import * as tts from './tts.js';
@@ -10,7 +10,7 @@ const SUBS = [
   { id: 'cards', label: 'Cards' },
   { id: 'kana', label: 'Kana' },
   { id: 'numbers', label: 'Prices' },
-  { id: 'time', label: 'Time & counting' },
+  { id: 'time', label: 'Time', title: 'Time, dates and counting' },
 ];
 
 const WEEK_FOCUS = {
@@ -23,10 +23,10 @@ let session = null; // current SRS session (lives while the tab is open)
 
 export function render(ctx, root, params) {
   const sub = SUBS.find((s) => s.id === params[0]) ? params[0] : 'today';
-  root.append(
-    h('header.top', h('h1', 'Study')),
-    h('div.chips.subnav', SUBS.map((s) => chip(s.label, s.id === sub, () => { session = null; ctx.go('#/study/' + s.id); }))),
-  );
+  // Five equal segments that always fit the width (no sideways scrolling)
+  const subnav = h('div.chips.subnav.seg', { 'aria-label': 'Study sections' },
+    SUBS.map((s) => chip(s.label, s.id === sub, () => { session = null; ctx.go('#/study/' + s.id); }, { 'data-sub': s.id, title: s.title || s.label })));
+  root.append(h('header.top', h('h1', 'Study')), subnav);
   const box = h('div.study#study-box');
   root.append(box);
   ({ today: renderToday, cards: renderCustom, kana: renderKana, numbers: renderNumbers, time: renderTime })[sub](ctx, box);
@@ -136,7 +136,7 @@ function renderSession(ctx, box) {
       h('span.small', (cur.isNew ? 'new · ' : '') + MODES[cur.mode], ' ',
         h('span.leitner', { title: boxNo ? `Box ${boxNo} of 5` : 'New card', 'aria-label': boxNo ? `Box ${boxNo} of 5` : 'New card' },
           [1, 2, 3, 4, 5].map((i) => h('i' + (i <= boxNo ? '.on' : ''))))),
-      h('button.btn.small', { type: 'button', on: { click: () => { session = null; clear(box); renderToday(ctx, box); } } }, 'Exit')),
+      h('button.btn.small', { type: 'button', 'aria-label': 'End the session', on: { click: () => { session = null; clear(box); renderToday(ctx, box); } } }, 'End')),
     h('div.progress', { role: 'progressbar', 'aria-valuemin': '0', 'aria-valuemax': String(total), 'aria-valuenow': String(session.idx) },
       h('span', { style: { width: `${Math.round((session.idx / total) * 100)}%` } })));
   const card = h('div.card.flash', { 'data-mode': cur.mode, 'data-id': it.id });
@@ -147,8 +147,8 @@ function renderSession(ctx, box) {
   } else if (cur.mode === 'en2ja') {
     card.append(h('div.en.big.center', it.en), h('p.prompt', 'Say it in Japanese out loud, then reveal the answer.'));
   } else {
-    card.append(h('div.center', h('button.btn.big.primary', { type: 'button', on: { click: () => speakItem(it, 1.0) } }, ico('play'), 'Listen'),
-      h('button.btn', { type: 'button', on: { click: () => speakItem(it, 0.7) } }, '0.7×')),
+    card.append(h('div.actions.center', h('button.btn.big.primary', { type: 'button', on: { click: () => speakItem(it, 1.0) } }, ico('play'), 'Listen'),
+      h('button.btn.icon.slow', { type: 'button', title: 'Slow (0.7×)', 'aria-label': 'Play slowly', on: { click: () => speakItem(it, 0.7) } }, '0.7×')),
     h('p.prompt', it.kind === 'hear' ? 'What did they say? How will you reply?' : 'What does it mean?'));
   }
 
@@ -173,6 +173,7 @@ function renderSession(ctx, box) {
       renderSession(ctx, box);
       if (cur.mode === 'en2ja') speakItem(it, 1.0);
     } } }, 'Show answer'));
+  actions.querySelector('#reveal')?.classList.add('big');
 
   box.append(head, card, actions);
   if (cur.mode === 'audio' && !session.revealed && !session.spoken?.has(cur.key + session.idx)) {
@@ -207,10 +208,10 @@ function renderCustom(ctx, box) {
     form.append(
       h('h2.section', 'Custom training'),
       h('p.small', 'Ignores the week plan: any categories and modes. Progress is shared with Today.'),
-      h('div.small', 'Category'),
-      h('div.chips', chip('All', cat === 'all', () => { cat = 'all'; draw(); }), chip('Staff will say', cat === 'hear', () => { cat = 'hear'; draw(); }),
-        cats.map((c) => chip(c.en, cat === c.id, () => { cat = c.id; draw(); }))),
-      h('div.small', 'Mode'),
+      h('label.field', h('span', 'Category'),
+        h('select#custom-cat', { on: { change: (e) => { cat = e.target.value; draw(); } } },
+          [['all', 'All'], ['hear', 'Staff will say'], ...cats.map((c) => [c.id, c.en])].map(([id, label]) => h('option', { value: id, selected: cat === id }, label)))),
+      h('div.small.chips-label', 'Mode'),
       h('div.chips', Object.entries(MODES).map(([k, v]) => chip(v, mode === k, () => { mode = k; draw(); }))),
       h('label.check', h('input', { type: 'checkbox', checked: onlyFav, on: { change: (e) => { onlyFav = e.target.checked; draw(); } } }), ' favorites only'),
     );
@@ -247,7 +248,9 @@ function renderKana(ctx, box) {
   }
   function drawTables() {
     clear(tables);
-    tables.append(
+    add(tables,
+      h('h2.section', 'Kana tables'),
+      h('p.small', 'Tap a kana to hear it.'),
       h('div.chips', chip('Hiragana', kanaScript === 'h', () => { kanaScript = 'h'; drawTables(); }), chip('Katakana', kanaScript === 'k', () => { kanaScript = 'k'; drawTables(); })),
       table('Gojūon', K.gojuon, 5),
       table('Dakuten and handakuten', K.dakuten, 5),
@@ -284,7 +287,7 @@ function runQuiz(ctx, quizBox, K, setKey) {
     clear(quizBox);
     if (i >= qs.length) {
       ctx.store.update('quizStats', {}, (st) => ({ ...st, kana: { ...(st.kana || {}), [setKey]: score } }));
-      quizBox.append(h('h2.section', `Score: ${score}/10`),
+      quizBox.append(h('h2.section', 'Kana quiz'), h('p.score', h('strong', `${score}`), ` of ${qs.length} correct`),
         h('div.actions', h('button.btn.primary', { type: 'button', on: { click: () => runQuiz(ctx, quizBox, K, setKey) } }, 'Again'),
           h('button.btn', { type: 'button', on: { click: () => drawQuizStart(ctx, quizBox, K) } }, 'Another set')));
       return;
@@ -303,9 +306,9 @@ function runQuiz(ctx, quizBox, K, setKey) {
         if (ok) score += 1;
         e.currentTarget.classList.add(ok ? 'right' : 'wrong');
         quizBox.querySelectorAll('.opt').forEach((b) => { if (b.textContent === q.a) b.classList.add('right'); });
-        feedback.append(h('p', ok ? 'Correct!' : 'Answer: ' + q.a, q.sub ? ` (${q.sub})` : ''));
+        feedback.append(h('p' + (ok ? '.ok' : '.bad'), ok ? 'Correct' : 'Answer: ' + q.a, q.sub ? ` (${q.sub})` : ''));
         tts.speak(q.q, 0.9);
-        feedback.append(h('button.btn.primary', { type: 'button', on: { click: () => { delete quizBox.dataset.answered; i += 1; step(); } } }, 'Next'));
+        feedback.append(h('button.btn.primary.big.wide#quiz-next', { type: 'button', on: { click: () => { delete quizBox.dataset.answered; i += 1; step(); } } }, i + 1 < qs.length ? 'Next' : 'See the score'));
       } } }, o))),
       feedback,
     );
@@ -325,10 +328,11 @@ function renderNumbers(ctx, box) {
     const input = h('input.num-input#num-answer', { type: 'text', inputmode: 'numeric', autocomplete: 'off', placeholder: 'Digits, e.g. 12800', 'aria-label': 'Answer in digits' });
     const fb = h('div.feedback#num-feedback');
     const reveal = (ok) => {
-      clear(fb).append(
-        h('p', ok === true ? 'Correct!' : ok === false ? 'Wrong.' : '', ' ', h('strong', `¥${n.toLocaleString('en-US')}`), ' = ', jaText(N.yenMixed(n))),
-        h('p', jaText(r.kana), ' — ', h('span.romaji', r.romaji)),
-        h('div.actions', h('button.btn', { type: 'button', on: { click: () => tts.speak(`${n}円`, 0.8) } }, ico('play'), 'again'),
+      add(clear(fb),
+        ok == null ? null : h('p' + (ok ? '.ok' : '.bad'), ok ? 'Correct' : 'Not quite'),
+        h('div.answer', h('strong.price-big', `¥${n.toLocaleString('en-US')}`), jaText(N.yenMixed(n), 'ja answer-ja')),
+        h('div.kana-line', { lang: 'ja' }, r.kana), h('div.romaji', r.romaji),
+        h('div.actions', h('button.btn', { type: 'button', on: { click: () => tts.speak(`${n}円`, 0.8) } }, ico('play'), 'Play again'),
           h('button.btn.primary#num-next', { type: 'button', on: { click: next } }, 'Next')));
     };
     let answered = false; // one answer counts once (QA B5)
@@ -344,21 +348,23 @@ function renderNumbers(ctx, box) {
     input.addEventListener('keydown', (e) => { if (e.key === 'Enter') { if (answered) next(); else check(); } });
     card.append(h('div.sess-head', h('span', `Correct ${numState.ok} of ${numState.total}`), h('span.small', N.PRICE_RANGES[numState.range].label)));
     if (numState.mode === 'audio') {
-      card.append(h('div.center',
+      card.append(h('div.actions.center',
         h('button.btn.big.primary#num-play', { type: 'button', on: { click: () => tts.speak(`${n}円`, 1.0) } }, ico('play'), 'Listen to the price'),
-        h('button.btn', { type: 'button', on: { click: () => tts.speak(`${n}円`, 0.7) } }, '0.7×')),
-      input, h('div.actions', h('button.btn.primary#num-check', { type: 'button', on: { click: check } }, 'Check'), h('button.btn', { type: 'button', on: { click: () => reveal(null) } }, 'Give up')));
+        h('button.btn.icon.slow', { type: 'button', title: 'Slow (0.7×)', 'aria-label': 'Play slowly', on: { click: () => tts.speak(`${n}円`, 0.7) } }, '0.7×')),
+      input, h('div.actions', h('button.btn.primary#num-check', { type: 'button', on: { click: check } }, 'Check'), h('button.btn', { type: 'button', on: { click: () => reveal(null) } }, 'Show answer')));
     } else if (numState.mode === 'mixed') {
       card.append(h('div.center', jaText(N.yenMixed(n), 'price-big')), h('p.prompt', 'What is it in digits?'),
-        input, h('div.actions', h('button.btn.primary', { type: 'button', on: { click: check } }, 'Check'), h('button.btn', { type: 'button', on: { click: () => reveal(null) } }, 'Give up')));
+        input, h('div.actions', h('button.btn.primary', { type: 'button', on: { click: check } }, 'Check'), h('button.btn', { type: 'button', on: { click: () => reveal(null) } }, 'Show answer')));
     } else {
       card.append(h('div.center', h('div.price-big', `¥${n.toLocaleString('en-US')}`)), h('p.prompt', 'Say it out loud in Japanese, then check yourself.'),
-        h('div.actions', h('button.btn.primary', { type: 'button', on: { click: () => { reveal(null); tts.speak(`${n}円`, 1.0); } } }, 'Check')));
+        h('div.actions', h('button.btn.primary', { type: 'button', on: { click: () => { reveal(null); tts.speak(`${n}円`, 1.0); } } }, 'Show answer')));
     }
     card.append(fb);
   }
   box.append(
+    h('div.small.chips-label', 'Price range'),
     h('div.chips', Object.entries(N.PRICE_RANGES).map(([k, v]) => chip(v.label, numState.range === k, () => { numState.range = k; numState.n = N.randomPrice(k); ctx.rerender(); }))), // B4
+    h('div.small.chips-label', 'Exercise'),
     h('div.chips', [['audio', 'Listen → digits'], ['mixed', '12万8千円 → digits'], ['say', 'Digits → say it']].map(([k, v]) => chip(v, numState.mode === k, () => { numState.mode = k; ctx.rerender(); }))),
     card,
     h('p.small.muted', 'Tip: 万 = 10,000. 128,000 = 12万8千 = じゅうにまん はっせん. Sound changes: 300 さんびゃく, 600 ろっぴゃく, 800 はっぴゃく, 3000 さんぜん, 8000 はっせん.'),
@@ -387,10 +393,12 @@ function renderTime(ctx, box) {
     const label = `${t.h}:${String(t.m).padStart(2, '0')}`;
     const fb = h('div.feedback');
     const input = h('input.num-input', { type: 'text', inputmode: 'numeric', placeholder: 'e.g. 9:30', 'aria-label': 'Time' });
-    const reveal = (ok) => clear(fb).append(
-      h('p', ok === true ? 'Correct! ' : ok === false ? 'Wrong. ' : '', h('strong', label), ' = ', jaText(speakTime(t))),
-      h('p', jaText(r.kana), ' — ', h('span.romaji', r.romaji)),
-      h('div.actions', h('button.btn.primary', { type: 'button', on: { click: next } }, 'Next')));
+    const reveal = (ok) => add(clear(fb),
+      ok == null ? null : h('p' + (ok ? '.ok' : '.bad'), ok ? 'Correct' : 'Not quite'),
+      h('div.answer', h('strong.price-big', label), jaText(speakTime(t), 'ja answer-ja')),
+      h('div.kana-line', { lang: 'ja' }, r.kana), h('div.romaji', r.romaji),
+      h('div.actions', h('button.btn', { type: 'button', on: { click: () => tts.speak(speakTime(t), 0.8) } }, ico('play'), 'Play again'),
+        h('button.btn.primary', { type: 'button', on: { click: next } }, 'Next')));
     let answered = false; // one answer counts once (QA B5)
     const check = () => {
       if (answered) return;
@@ -404,12 +412,12 @@ function renderTime(ctx, box) {
     input.addEventListener('keydown', (e) => { if (e.key === 'Enter') { if (answered) next(); else check(); } });
     card.append(h('div.sess-head', h('span', `Correct ${timeState.ok} of ${timeState.total}`)));
     if (timeState.mode === 'audio') {
-      card.append(h('div.center', h('button.btn.big.primary', { type: 'button', on: { click: () => tts.speak(speakTime(t), 1.0) } }, ico('play'), 'Listen to the time'),
-        h('button.btn', { type: 'button', on: { click: () => tts.speak(speakTime(t), 0.7) } }, '0.7×')),
-      input, h('div.actions', h('button.btn.primary', { type: 'button', on: { click: check } }, 'Check'), h('button.btn', { type: 'button', on: { click: () => reveal(null) } }, 'Give up')));
+      card.append(h('div.actions.center', h('button.btn.big.primary', { type: 'button', on: { click: () => tts.speak(speakTime(t), 1.0) } }, ico('play'), 'Listen to the time'),
+        h('button.btn.icon.slow', { type: 'button', title: 'Slow (0.7×)', 'aria-label': 'Play slowly', on: { click: () => tts.speak(speakTime(t), 0.7) } }, '0.7×')),
+      input, h('div.actions', h('button.btn.primary', { type: 'button', on: { click: check } }, 'Check'), h('button.btn', { type: 'button', on: { click: () => reveal(null) } }, 'Show answer')));
     } else {
       card.append(h('div.center', h('div.price-big', label)), h('p.prompt', 'Say it in Japanese, then check.'),
-        h('div.actions', h('button.btn.primary', { type: 'button', on: { click: () => { reveal(null); tts.speak(speakTime(t), 1.0); } } }, 'Check')));
+        h('div.actions', h('button.btn.primary', { type: 'button', on: { click: () => { reveal(null); tts.speak(speakTime(t), 1.0); } } }, 'Show answer')));
     }
     card.append(fb);
   }
@@ -417,6 +425,7 @@ function renderTime(ctx, box) {
 
   const counters = h('div.card',
     h('h2.section', 'Counters'),
+    h('p.small', 'Open a list and tap a word to hear it.'),
     Object.entries(N.COUNTERS).map(([k, c]) => h('details.more',
       h('summary', c.label),
       h('div.ctable', c.items.map(([kana, romaji], i) => h('button.cnt', { type: 'button', on: { click: () => tts.speak(kana, 0.9) } },

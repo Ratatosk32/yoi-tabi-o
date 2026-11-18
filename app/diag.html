@@ -14,8 +14,10 @@
   <link rel="stylesheet" href="components.css">
   <style>
     #view { padding-bottom: calc(40px + env(safe-area-inset-bottom)); }
-    .t { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; margin: var(--space-2) 0; }
-    .res { font-size: 13px; color: var(--color-text-2); word-break: break-word; }
+    .t { display: flex; flex-wrap: wrap; gap: var(--sp-2); align-items: center; margin: var(--sp-2) 0; }
+    .res { flex: 1 1 100%; font-size: var(--fs-small); color: var(--ink-2); word-break: break-word; }
+    .res:empty { display: none; }
+    .card > h2.section:first-child { margin-top: 0; }
     #log { width: 100%; min-height: 160px; font: 12px/1.4 ui-monospace, Menlo, Consolas, monospace; }
     table { width: 100%; border-collapse: collapse; font-size: 13px; }
     th, td { border-bottom: 1px solid var(--color-line); padding: 6px 4px; text-align: left; vertical-align: middle; }
