@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Japan Trip — макет «бумага и тушь»</title>
+<meta name="theme-color" content="#f5f1e7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#171613" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="components.css">
+<style>
+/* ---- Mock-only scaffolding. Nothing below belongs in the app. ---- */
+.mock-bar { max-width: 1400px; margin: 0 auto; padding: 28px 24px 8px; display: flex; align-items: center; gap: 16px; }
+.mock-bar h1 { font-size: 1.5rem; }
+.mock-bar p { margin: 0; color: var(--ink-3); font-size: var(--fs-small); flex: 1; }
+.gallery { max-width: 1400px; margin: 0 auto; padding: 16px 24px 80px; display: grid; grid-template-columns: repeat(auto-fill, 412px); gap: 40px 32px; justify-content: center; }
+.screen > .cap { font: 600 var(--fs-micro)/1.4 var(--font-ui); letter-spacing: .09em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 10px; }
+.device {
+  position: relative; width: 412px; height: 915px; overflow: hidden;
+  transform: translateZ(0);            /* contains position:fixed children */
+  background-color: var(--paper); background-image: var(--paper-grain), var(--paper-fibre); background-size: 240px 240px, 480px 320px;
+  border: 1px solid var(--line-strong); border-radius: 28px; box-shadow: var(--shadow-float);
+}
+.device > .scroll { height: 100%; overflow-y: auto; scrollbar-width: none; }
+.device > .scroll::-webkit-scrollbar { display: none; }
+/* single-screen mode (?s=phrases): the screen IS the page — used for screenshots */
+body.single .mock-bar, body.single .cap { display: none; }
+body.single .gallery { display: block; padding: 0; max-width: none; }
+body.single .screen { display: none; }
+body.single .screen.current { display: block; }
+body.single .device { width: auto; height: auto; min-height: 100dvh; overflow: visible; transform: none; border: 0; border-radius: 0; box-shadow: none; background: none; }
+body.single .device > .scroll { height: auto; overflow: visible; }
+</style>
+</head>
+<body>
+
+<div class="mock-bar">
+  <h1>Japan Trip — макет</h1>
+  <p>Статический макет на tokens.css + components.css. Один экран на весь размер окна: <code>?s=phrases</code> · тема: <code>&amp;theme=dark</code></p>
+  <button class="theme-toggle" type="button" aria-label="Переключить тему"></button>
+</div>
+
+<div class="gallery">
+
+<!-- 1. ФРАЗЫ: список категории -->
+<section class="screen" id="s-phrases">
+  <p class="cap">1 · Фразы — категория «Конбини»</p>
+  <div class="device"><div class="scroll"><main class="view" data-tab="phrases">
+    <header class="top">
+      <h1>Фразы</h1>
+      <label class="toggle"><input type="checkbox" checked><span>фуригана</span></label>
+      <button class="theme-toggle" type="button" aria-label="Переключить тему"></button>
+    </header>
+    <input class="search" type="search" placeholder="Поиск: пакет, fukuro, ふくろ…" aria-label="Поиск фраз">
+    <div class="chips" role="tablist" aria-label="Категории">
+      <button class="chip" type="button"><span class="ci">★</span> Избранное</button>
+      <button class="chip" type="button">Основное</button>
+      <button class="chip on" type="button" aria-selected="true">Конбини</button>
+      <button class="chip" type="button">Еда</button>
+      <button class="chip" type="button">Транспорт</button>
+      <button class="chip" type="button">Отель</button>
+      <button class="chip" type="button">Покупки</button>
+    </div>
+    <div class="list">
+      <h2 class="section">Конбини · 30</h2>
+      <article class="phrase is-collapsed">
+        <div class="jp"><span class="ja" lang="ja" data-ruby="これをください"></span></div>
+        <div class="romaji">kore o kudasai</div>
+        <div class="ru">Вот это, пожалуйста</div>
+      </article>
+      <article class="phrase is-collapsed">
+        <div class="jp"><span class="ja" lang="ja" data-ruby="袋[ふくろ]はいりません"></span></div>
+        <div class="romaji">fukuro wa irimasen</div>
+        <div class="ru">Пакет не нужен</div>
+      </article>
+      <article class="phrase is-collapsed">
+        <div class="jp"><span class="ja" lang="ja" data-ruby="温[あたた]めてください"></span></div>
+        <div class="romaji">atatamete kudasai</div>
+        <div class="ru">Подогрейте, пожалуйста</div>
+      </article>
+      <article class="phrase hear is-collapsed">
+        <div class="badge">Вы услышите</div>
+        <div class="jp"><span class="ja" lang="ja" data-ruby="袋[ふくろ]はご利用[りよう]ですか"></span></div>
+        <div class="romaji">fukuro wa go-riyō desu ka</div>
+        <div class="ru">Пакет нужен?</div>
+      </article>
+      <article class="phrase is-collapsed">
+        <div class="jp"><span class="ja" lang="ja" data-ruby="カードで払[はら]えますか"></span></div>
+        <div class="romaji">kādo de haraemasu ka</div>
+        <div class="ru">Можно оплатить картой?</div>
+      </article>
+      <article class="phrase is-collapsed">
+        <div class="jp"><span class="ja" lang="ja" data-ruby="お箸[はし]を二[ふた]つください"></span></div>
+        <div class="romaji">ohashi o futatsu kudasai</div>
+        <div class="ru">Две пары палочек</div>
+      </article>
+    </div>
+  </main></div><nav class="tabbar" data-on="phrases"></nav></div>
+</section>
+
+<!-- 2. ФРАЗА РАСКРЫТА -->
+<section class="screen" id="s-phrase-open">
+  <p class="cap">2 · Фраза раскрыта</p>
+  <div class="device"><div class="scroll"><main class="view" data-tab="phrases">
+    <header class="top">
+      <h1>Фразы</h1>
+      <label class="toggle"><input type="checkbox" checked><span>фуригана</span></label>
+      <button class="theme-toggle" type="button" aria-label="Переключить тему"></button>
+    </header>
+    <input class="search" type="search" placeholder="Поиск: пакет, fukuro, ふくろ…" aria-label="Поиск фраз">
+    <div class="chips" role="tablist" aria-label="Категории">
+      <button class="chip" type="button"><span class="ci">★</span> Избранное</button>
+      <button class="chip" type="button">Основное</button>
+      <button class="chip on" type="button" aria-selected="true">Конбини</button>
+      <button class="chip" type="button">Еда</button>
+      <button class="chip" type="button">Транспорт</button>
+      <button class="chip" type="button">Отель</button>
+    </div>
+    <div class="list">
+      <h2 class="section">Конбини · 30</h2>
+      <article class="phrase is-collapsed">
+        <div class="jp"><span class="ja" lang="ja" data-ruby="これをください"></span></div>
+        <div class="romaji">kore o kudasai</div>
+        <div class="ru">Вот это, пожалуйста</div>
+      </article>
+      <article class="phrase open">
+        <div class="jp"><span class="ja" lang="ja" data-ruby="袋[ふくろ]はいりません"></span></div>
+        <div class="romaji">fukuro wa irimasen</div>
+        <div class="ru">Пакет не нужен</div>
+        <div class="note">Ответ на <span lang="ja">袋はご利用ですか</span> — «Пакет нужен?»</div>
+        <div class="actions">
+          <span class="speak">
+            <button class="btn icon" type="button" aria-label="Произнести"><span class="ico ico-play"></span></button>
+            <button class="btn icon slow" type="button" aria-label="Медленно">0.7×</button>
+          </span>
+          <button class="btn icon" type="button" aria-label="Показать на весь экран"><span class="ico ico-show"></span></button>
+          <button class="btn icon fav on" type="button" aria-label="Избранное" aria-pressed="true"><span class="ico ico-star-fill"></span></button>
+        </div>
+      </article>
+      <article class="phrase is-collapsed">
+        <div class="jp"><span class="ja" lang="ja" data-ruby="袋[ふくろ]をお願[ねが]いします"></span></div>
+        <div class="romaji">fukuro o onegai shimasu</div>
+        <div class="ru">Пакет, пожалуйста</div>
+      </article>
+      <article class="phrase hear open">
+        <div class="badge">Вы услышите</div>
+        <div class="jp"><span class="ja" lang="ja" data-ruby="温[あたた]めますか"></span></div>
+        <div class="romaji">atatamemasu ka</div>
+        <div class="ru">Подогреть?</div>
+        <div class="replies">
+          <div class="replies-title">Как ответить</div>
+          <div class="reply">
+            <div class="reply-text"><span class="jp"><span class="ja" lang="ja" data-ruby="お願[ねが]いします"></span></span><span class="romaji">onegai shimasu</span><span class="ru">Пожалуйста (да)</span></div>
+            <span class="speak"><button class="btn icon" type="button" aria-label="Произнести"><span class="ico ico-play"></span></button></span>
+          </div>
+          <div class="reply">
+            <div class="reply-text"><span class="jp"><span class="ja" lang="ja" data-ruby="大丈夫[だいじょうぶ]です"></span></span><span class="romaji">daijōbu desu</span><span class="ru">Не нужно</span></div>
+            <span class="speak"><button class="btn icon" type="button" aria-label="Произнести"><span class="ico ico-play"></span></button></span>
+          </div>
+        </div>
+        <div class="actions">
+          <span class="speak">
+            <button class="btn icon" type="button" aria-label="Произнести"><span class="ico ico-play"></span></button>
+            <button class="btn icon slow" type="button" aria-label="Медленно">0.7×</button>
+          </span>
+          <button class="btn icon" type="button" aria-label="Показать на весь экран"><span class="ico ico-show"></span></button>
+          <button class="btn icon fav" type="button" aria-label="Избранное" aria-pressed="false"><span class="ico ico-star"></span></button>
+        </div>
+      </article>
+    </div>
+  </main></div><nav class="tabbar" data-on="phrases"></nav></div>
+</section>
+
+<!-- 3. ПОКАЗАТЬ: полноэкранная карточка -->
+<section class="screen" id="s-show">
+  <p class="cap">3 · «Показать японцу» — полный экран</p>
+  <div class="device">
+    <div class="fs" role="dialog" aria-modal="true" aria-label="Карточка для показа">
+      <div class="fs-body" style="--fs-n: 11">
+        <p class="fs-line"><span class="fs-ja" lang="ja">すみません、日本語があまり話せません。</span></p>
+        <p class="fs-line"><span class="fs-ja" lang="ja">この画面を見ていただけますか。</span></p>
+      </div>
+      <p class="fs-caption">Извините, я плохо говорю по-японски. Посмотрите, пожалуйста, на экран.</p>
+      <div class="fs-bar">
+        <button class="btn" type="button"><span class="ico ico-sound"></span> Озвучить</button>
+        <button class="btn" type="button"><span class="ico ico-rotate"></span> Повернуть</button>
+        <button class="btn primary" type="button"><span class="ico ico-close"></span> Закрыть</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. ПОКАЗАТЬ: список карточек -->
+<section class="screen" id="s-show-list">
+  <p class="cap">4 · Показать — готовые карточки</p>
+  <div class="device"><div class="scroll"><main class="view" data-tab="show">
+    <header class="top"><h1>Показать</h1><button class="theme-toggle" type="button" aria-label="Переключить тему"></button></header>
+    <p class="hint">Нажмите карточку — она откроется на весь экран: белая бумага, чёрный текст. Экран не погаснет.</p>
+    <h2 class="section">Готовые</h2>
+    <button class="card showcard" type="button">
+      <span class="jp" lang="ja">すみません、日本語があまり話せません。この画面を見ていただけますか。</span>
+      <span class="ru">Извините, я плохо говорю по-японски. Посмотрите, пожалуйста, на экран.</span>
+    </button>
+    <button class="card showcard" type="button">
+      <span class="jp" lang="ja">この商品の免税手続きをお願いします。</span>
+      <span class="ru">Tax-free для этого товара, пожалуйста.</span>
+    </button>
+    <button class="card showcard" type="button">
+      <span class="jp" lang="ja">写真を撮ってもいいですか。</span>
+      <span class="ru">Можно сфотографировать?</span>
+    </button>
+    <h2 class="section">Заполнить</h2>
+    <div class="card edit">
+      <div class="card-head"><strong>Адрес отеля</strong><span class="warn">не заполнено</span></div>
+      <label class="field"><span>Название и адрес по-японски (из брони)</span><textarea rows="2" placeholder="Вставьте адрес"></textarea></label>
+      <div class="preview"><p lang="ja">このホテルまでお願いします。</p></div>
+      <div class="actions"><button class="btn primary" type="button">Показать</button><button class="btn" type="button">Сохранить</button></div>
+    </div>
+  </main></div><nav class="tabbar" data-on="show"></nav></div>
+</section>
+
+<!-- 5. УЧЁБА: урок дня -->
+<section class="screen" id="s-study">
+  <p class="cap">5 · Учёба — урок дня</p>
+  <div class="device"><div class="scroll"><main class="view" data-tab="study">
+    <header class="top"><h1>Учёба</h1><button class="theme-toggle" type="button" aria-label="Переключить тему"></button></header>
+    <div class="chips subnav">
+      <button class="chip on" type="button">Урок дня</button>
+      <button class="chip" type="button">Кана</button>
+      <button class="chip" type="button">Числа и время</button>
+    </div>
+    <div class="card today">
+      <div class="dayline"><strong>День 4</strong><span> · неделя 1 из 3</span></div>
+      <p class="small">20–30 минут: повторение, слушание, цены.</p>
+      <div class="progress" aria-hidden="true"><span style="width: 19%"></span></div>
+      <button class="btn primary big wide" type="button">Начать урок</button>
+    </div>
+    <div class="tiles">
+      <button class="tile" type="button"><strong>Повторение</strong><span>к повторению 12 · новых 10</span><small>JA→RU и RU→JA вслух</small></button>
+      <button class="tile" type="button"><strong>Слушание</strong><span>к повторению 6 · новых 5</span><small>Сначала звук, потом смысл</small></button>
+      <button class="tile" type="button"><strong>Цены</strong><span>10 заданий</span><small>Цена на слух → цифры</small></button>
+      <button class="tile" type="button"><strong>Кана</strong><span>таблицы и квиз</span><small>Неделя 1: главное</small></button>
+    </div>
+  </main></div><nav class="tabbar" data-on="study"></nav></div>
+</section>
+
+<!-- 6. КАНА: таблица -->
+<section class="screen" id="s-kana">
+  <p class="cap">6 · Кана — таблица</p>
+  <div class="device"><div class="scroll"><main class="view" data-tab="study">
+    <header class="top"><h1>Кана</h1><button class="theme-toggle" type="button" aria-label="Переключить тему"></button></header>
+    <div class="chips subnav">
+      <button class="chip on" type="button"><span class="ci" lang="ja">あ</span> Хирагана</button>
+      <button class="chip" type="button"><span class="ci" lang="ja">ア</span> Катакана</button>
+      <button class="chip" type="button">Квиз</button>
+    </div>
+    <div class="kana-table">
+      <div class="kgrid5" style="--cols: 5" data-kana></div>
+    </div>
+  </main></div><nav class="tabbar" data-on="study"></nav></div>
+</section>
+
+<!-- 7. КАНА: квиз -->
+<section class="screen" id="s-quiz">
+  <p class="cap">7 · Квиз по кане — ответ дан</p>
+  <div class="device"><div class="scroll"><main class="view" data-tab="study">
+    <header class="top"><h1>Кана</h1><button class="theme-toggle" type="button" aria-label="Переключить тему"></button></header>
+    <div class="chips subnav">
+      <button class="chip" type="button"><span class="ci" lang="ja">あ</span> Хирагана</button>
+      <button class="chip" type="button"><span class="ci" lang="ja">ア</span> Катакана</button>
+      <button class="chip on" type="button">Квиз</button>
+    </div>
+    <div class="card" id="kana-quiz">
+      <div class="sess-head"><span>Хирагана · 4/10</span><span>верно: 3</span></div>
+      <div class="progress" aria-hidden="true"><span style="width: 40%"></span></div>
+      <div class="quiz-q">
+        <span class="kana-big" lang="ja">ぬ</span>
+        <button class="btn icon" type="button" aria-label="Произнести"><span class="ico ico-play"></span></button>
+      </div>
+      <div class="opts">
+        <button class="btn opt wrong" type="button">me</button>
+        <button class="btn opt" type="button">ne</button>
+        <button class="btn opt right" type="button">nu</button>
+        <button class="btn opt" type="button">wa</button>
+      </div>
+      <div class="feedback">
+        <p>Правильно: nu</p>
+        <button class="btn primary wide" type="button">Дальше</button>
+      </div>
+    </div>
+  </main></div><nav class="tabbar" data-on="study"></nav></div>
+</section>
+
+<!-- 8. КАРТОЧКА (Leitner) -->
+<section class="screen" id="s-flash">
+  <p class="cap">8 · Карточка — ответ открыт</p>
+  <div class="device"><div class="scroll"><main class="view" data-tab="study">
+    <header class="top"><h1>Повторение</h1><button class="theme-toggle" type="button" aria-label="Переключить тему"></button></header>
+    <div class="sess-head"><span>6 из 22</span><span>коробка <span class="leitner" aria-label="2 из 5"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></span></div>
+    <div class="progress" aria-hidden="true"><span style="width: 27%"></span></div>
+    <div class="card flash">
+      <div class="jp center"><span class="ja" lang="ja" data-ruby="温[あたた]めてください"></span></div>
+      <div class="center"><span class="speak">
+        <button class="btn icon" type="button" aria-label="Произнести"><span class="ico ico-play"></span></button>
+        <button class="btn icon slow" type="button" aria-label="Медленно">0.7×</button>
+      </span></div>
+      <p class="prompt">Что это значит?</p>
+      <div class="back">
+        <div class="romaji center">atatamete kudasai</div>
+        <div class="ru big center">Подогрейте, пожалуйста</div>
+      </div>
+    </div>
+    <div class="grade">
+      <button class="btn again" type="button">Не помню</button>
+      <button class="btn hard" type="button">С трудом</button>
+      <button class="btn good" type="button">Знаю</button>
+    </div>
+    <p class="prompt">«Знаю» — вернётся через 2 дня</p>
+  </main></div><nav class="tabbar" data-on="study"></nav></div>
+</section>
+
+<!-- 9. ЦЕНЫ -->
+<section class="screen" id="s-price">
+  <p class="cap">9 · Тренажёр цен — проверено</p>
+  <div class="device"><div class="scroll"><main class="view" data-tab="study">
+    <header class="top"><h1>Цены</h1><button class="theme-toggle" type="button" aria-label="Переключить тему"></button></header>
+    <div class="chips subnav">
+      <button class="chip" type="button">Конбини</button>
+      <button class="chip" type="button">Кафе</button>
+      <button class="chip on" type="button">Техника</button>
+      <button class="chip" type="button">Время</button>
+    </div>
+    <div class="card" id="num-card">
+      <div class="sess-head"><span>Верно 6 из 7</span><span>20 000 – 250 000 ¥</span></div>
+      <p class="prompt">Послушайте цену и введите её цифрами</p>
+      <div class="actions" style="justify-content: center">
+        <button class="btn big primary" type="button"><span class="ico ico-sound"></span> Прослушать</button>
+        <button class="btn icon slow" type="button" aria-label="Медленно">0.7×</button>
+      </div>
+      <input class="num-input" type="text" inputmode="numeric" value="128000" aria-label="Ответ цифрами">
+      <div class="feedback center">
+        <p class="ok">Верно — ¥128 000</p>
+        <div><span class="price-big ja" lang="ja">十二万八千円</span></div>
+        <div class="kana-line" lang="ja">じゅうにまんはっせんえん</div>
+        <div class="romaji">jūniman hassen-en</div>
+        <button class="btn primary wide" type="button" style="margin-top: 20px">Дальше</button>
+      </div>
+    </div>
+  </main></div><nav class="tabbar" data-on="study"></nav></div>
+</section>
+
+<!-- 10. КАНДЗИ -->
+<section class="screen" id="s-kanji">
+  <p class="cap">10 · Шпаргалка кандзи</p>
+  <div class="device"><div class="scroll"><main class="view" data-tab="kanji">
+    <header class="top"><h1>Кандзи</h1><button class="theme-toggle" type="button" aria-label="Переключить тему"></button></header>
+    <input class="search" type="search" placeholder="Поиск: выход, deguchi, 出口…" aria-label="Поиск кандзи">
+    <div class="chips">
+      <button class="chip on" type="button">Знаки</button>
+      <button class="chip" type="button">Станция</button>
+      <button class="chip" type="button">Магазин</button>
+      <button class="chip" type="button">Б/у фото</button>
+      <button class="chip" type="button">Часы</button>
+      <button class="chip" type="button">Еда</button>
+    </div>
+    <div class="kgrid" data-kanji></div>
+  </main></div><nav class="tabbar" data-on="kanji"></nav></div>
+</section>
+
+<!-- 11. ИНСТРУМЕНТЫ -->
+<section class="screen" id="s-tools">
+  <p class="cap">11 · Инструменты</p>
+  <div class="device"><div class="scroll"><main class="view" data-tab="tools">
+    <header class="top"><h1>Инструменты</h1><button class="theme-toggle" type="button" aria-label="Переключить тему"></button></header>
+    <section class="block">
+      <h2 class="section">Камера: прочитать надпись</h2>
+      <a class="btn big primary" href="#"><span class="ico ico-camera"></span> Открыть Google Lens</a>
+      <p class="hint">Наведите камеру на вывеску, меню или ценник.</p>
+    </section>
+    <section class="block">
+      <h2 class="section">Перевод RU → JA</h2>
+      <textarea rows="2" aria-label="Текст для перевода">Где ближайшая аптека?</textarea>
+      <div class="actions">
+        <button class="btn primary" type="button">Открыть Переводчик</button>
+        <button class="btn" type="button"><span class="ico ico-share"></span> Поделиться</button>
+      </div>
+    </section>
+    <section class="block">
+      <h2 class="section">Карты</h2>
+      <div class="actions" style="margin-top: 0">
+        <input type="text" placeholder="Место или адрес" aria-label="Место">
+        <button class="btn" type="button"><span class="ico ico-map"></span> Найти</button>
+      </div>
+    </section>
+    <section class="block">
+      <h2 class="section">Экстренные номера</h2>
+      <a class="tel" href="tel:110"><b>110</b><span>Полиция</span></a>
+      <a class="tel" href="tel:119"><b>119</b><span>Скорая / пожарные</span></a>
+      <a class="tel" href="tel:05038162787"><b class="long">050-3816-2787</b><span>Japan Visitor Hotline<small>JNTO, 24/7, англ./кит./кор.</small></span></a>
+    </section>
+  </main></div><nav class="tabbar" data-on="tools"></nav></div>
+</section>
+
+<!-- 12. СОСТОЯНИЯ: пусто, тост -->
+<section class="screen" id="s-states">
+  <p class="cap">12 · Пустое состояние и тост</p>
+  <div class="device"><div class="scroll"><main class="view" data-tab="phrases">
+    <header class="top">
+      <h1>Фразы</h1>
+      <label class="toggle"><input type="checkbox"><span>фуригана</span></label>
+      <button class="theme-toggle" type="button" aria-label="Переключить тему"></button>
+    </header>
+    <input class="search" type="search" placeholder="Поиск: пакет, fukuro, ふくろ…" aria-label="Поиск фраз">
+    <div class="chips" role="tablist" aria-label="Категории">
+      <button class="chip on" type="button" aria-selected="true"><span class="ci">★</span> Избранное</button>
+      <button class="chip" type="button">Основное</button>
+      <button class="chip" type="button">Конбини</button>
+      <button class="chip" type="button">Еда</button>
+      <button class="chip" type="button">Транспорт</button>
+    </div>
+    <div class="list">
+      <h2 class="section">Избранное</h2>
+      <p class="empty">Пока пусто.<br>Нажмите ☆ у фразы, чтобы добавить.</p>
+    </div>
+  </main></div>
+  <div class="toast show" role="status">Убрано из избранного</div>
+  <nav class="tabbar" data-on="phrases"></nav></div>
+</section>
+
+<!-- 13. ФРАЗЫ: разметка сборщика как есть (без .is-collapsed / .open) -->
+<section class="screen" id="s-phrases-flat">
+  <p class="cap">13 · Фразы — текущая разметка, всё раскрыто</p>
+  <div class="device"><div class="scroll"><main class="view" data-tab="phrases">
+    <header class="top">
+      <h1>Фразы</h1>
+      <label class="toggle"><input type="checkbox" checked><span>фуригана</span></label>
+      <button class="theme-toggle" type="button" aria-label="Переключить тему"></button>
+    </header>
+    <input class="search" type="search" placeholder="Поиск: пакет, fukuro, ふくろ…" aria-label="Поиск фраз">
+    <div class="chips" role="tablist" aria-label="Категории">
+      <button class="chip" type="button"><span class="ci">★</span> Избранное</button>
+      <button class="chip" type="button"><span class="ci" lang="ja">聞</span> Скажет персонал</button>
+      <button class="chip on" type="button" aria-selected="true">Еда</button>
+      <button class="chip" type="button">Транспорт</button>
+    </div>
+    <div class="list">
+      <h2 class="section">Ресторан и еда</h2>
+      <article class="phrase">
+        <div class="jp"><span class="ja" lang="ja" data-ruby="お水[みず]をください"></span></div>
+        <div class="romaji">omizu o kudasai</div>
+        <div class="ru">Воды, пожалуйста</div>
+        <div class="actions">
+          <span class="speak">
+            <button class="btn icon" type="button" aria-label="Произнести"><span class="ico ico-play"></span></button>
+            <button class="btn icon slow" type="button" aria-label="Медленно">0.7×</button>
+          </span>
+          <button class="btn icon" type="button" aria-label="Показать на весь экран"><span class="ico ico-show"></span></button>
+          <button class="btn icon fav on" type="button" aria-label="Избранное"><span class="ico ico-star-fill"></span></button>
+        </div>
+      </article>
+      <article class="phrase">
+        <div class="jp"><span class="ja" lang="ja" data-ruby="お会計[かいけい]をお願[ねが]いします"></span></div>
+        <div class="romaji">okaikei o onegai shimasu</div>
+        <div class="ru">Счёт, пожалуйста</div>
+        <div class="actions">
+          <span class="speak">
+            <button class="btn icon" type="button" aria-label="Произнести"><span class="ico ico-play"></span></button>
+            <button class="btn icon slow" type="button" aria-label="Медленно">0.7×</button>
+          </span>
+          <button class="btn icon" type="button" aria-label="Показать на весь экран"><span class="ico ico-show"></span></button>
+          <button class="btn icon fav" type="button" aria-label="Избранное"><span class="ico ico-star"></span></button>
+        </div>
+      </article>
+      <article class="phrase hear">
+        <div class="badge">Вы услышите</div>
+        <div class="jp"><span class="ja" lang="ja" data-ruby="ご注文[ちゅうもん]はお決[き]まりですか"></span></div>
+        <div class="romaji">go-chūmon wa okimari desu ka</div>
+        <div class="ru">Готовы заказать?</div>
+        <div class="actions">
+          <span class="speak">
+            <button class="btn icon" type="button" aria-label="Произнести"><span class="ico ico-play"></span></button>
+            <button class="btn icon slow" type="button" aria-label="Медленно">0.7×</button>
+          </span>
+          <button class="btn icon" type="button" aria-label="Показать на весь экран"><span class="ico ico-show"></span></button>
+          <button class="btn icon fav" type="button" aria-label="Избранное"><span class="ico ico-star"></span></button>
+        </div>
+      </article>
+    </div>
+  </main></div><nav class="tabbar" data-on="phrases"></nav></div>
+</section>
+
+</div>
+
+<script>
+// Mock-only helpers. They mirror what app/modules/ui.js already does.
+const q = new URLSearchParams(location.search);
+const root = document.documentElement;
+if (q.get('theme')) root.dataset.theme = q.get('theme');
+document.querySelectorAll('.theme-toggle').forEach((b) => b.addEventListener('click', () => {
+  const dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  root.dataset.theme = dark ? 'light' : 'dark';
+}));
+// 袋[ふくろ]は… → <ruby>
+document.querySelectorAll('[data-ruby]').forEach((el) => {
+  el.innerHTML = el.dataset.ruby.replace(/([㐀-鿿々]+)\[([^\]]+)\]/g, '<ruby>$1<rp>(</rp><rt>$2</rt><rp>)</rp></ruby>');
+});
+const TABS = [['phrases', '話', 'Фразы'], ['study', '学', 'Учёба'], ['show', '見', 'Показать'], ['kanji', '字', 'Кандзи'], ['tools', '具', 'Инструменты']];
+document.querySelectorAll('.tabbar').forEach((nav) => {
+  nav.setAttribute('aria-label', 'Разделы');
+  nav.innerHTML = TABS.map(([id, g, l]) => `<button type="button" class="${id === nav.dataset.on ? 'on' : ''}"${id === nav.dataset.on ? ' aria-current="page"' : ''}><span class="glyph" lang="ja" aria-hidden="true">${g}</span><span class="lbl">${l}</span></button>`).join('');
+});
+const KANA = 'あa いi うu えe おo かka きki くku けke こko さsa しshi すsu せse そso たta ちchi つtsu てte とto なna にni ぬnu ねne のno はha ひhi ふfu へhe ほho まma みmi むmu めme もmo やya - ゆyu - よyo らra りri るru れre ろro わwa - - - をo んn'.split(' ');
+document.querySelectorAll('[data-kana]').forEach((g) => {
+  g.innerHTML = KANA.map((c) => c === '-' ? '<span class="kcell-empty"></span>'
+    : `<button class="kana" type="button"><span class="kch" lang="ja">${c[0]}</span><span class="kr">${c.slice(1)}</span></button>`).join('')
+    + '<span class="kcell-empty"></span>'.repeat(4);
+});
+const KANJI = [['入口', 'いりぐち', 'iriguchi', 'вход'], ['出口', 'でぐち', 'deguchi', 'выход'], ['非常口', 'ひじょうぐち', 'hijōguchi', 'аварийный выход'], ['お手洗い', 'おてあらい', 'otearai', 'туалет'], ['押', 'おす', 'osu', 'от себя'], ['引', 'ひく', 'hiku', 'на себя'], ['禁煙', 'きんえん', 'kin’en', 'не курить'], ['喫煙所', 'きつえんじょ', 'kitsuenjo', 'место для курения'], ['営業中', 'えいぎょうちゅう', 'eigyōchū', 'открыто'], ['準備中', 'じゅんびちゅう', 'junbichū', 'закрыто / подготовка'], ['定休日', 'ていきゅうび', 'teikyūbi', 'выходной день'], ['故障中', 'こしょうちゅう', 'koshōchū', 'не работает']];
+document.querySelectorAll('[data-kanji]').forEach((g) => {
+  g.innerHTML = '<h2 class="section span">Знаки и вывески</h2>' + KANJI.map(([k, r, ro, ru]) =>
+    `<button class="kcell" type="button"><div class="kja"><span class="ja big" lang="ja">${k}</span></div><div class="kkana" lang="ja">${r}</div><div class="romaji">${ro}</div><div class="ru">${ru}</div></button>`).join('');
+});
+// ?s=phrases → that screen fills the window
+const s = q.get('s');
+if (s && document.getElementById('s-' + s)) {
+  document.body.classList.add('single');
+  document.getElementById('s-' + s).classList.add('current');
+}
+</script>
+</body>
+</html>
