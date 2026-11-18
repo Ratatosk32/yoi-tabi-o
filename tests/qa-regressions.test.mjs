@@ -28,18 +28,18 @@ test('B1: восстановление копии с пустыми favs/history
 
 test('B2: в одной сессии фраза встречается один раз (режимы не выдают друг друга)', () => {
   const items = Array.from({ length: 20 }, (_, i) => ({ id: 'p' + i, kind: 'say' }));
-  const q = buildSession({ items, state: {}, modes: ['ja2ru', 'ru2ja'], today: '2026-11-20', newLimit: 12 });
+  const q = buildSession({ items, state: {}, modes: ['ja2en', 'en2ja'], today: '2026-11-20', newLimit: 12 });
   const ids = q.map((x) => x.id);
   assert.equal(new Set(ids).size, ids.length, 'дубли: ' + ids);
   assert.equal(q.length, 12, '12 новых = 12 разных фраз');
   // RU→JA для новой фразы — только после того, как JA→RU дошла до коробки 2+
-  assert.ok(q.every((x) => x.mode === 'ja2ru'));
-  const st = { 'p0|ja2ru': { box: 2, due: '2026-11-25' } };
-  const q2 = buildSession({ items: items.slice(0, 1), state: st, modes: ['ja2ru', 'ru2ja'], today: '2026-11-20', newLimit: 5 });
-  assert.deepEqual(q2.map((x) => x.key), ['p0|ru2ja']);
+  assert.ok(q.every((x) => x.mode === 'ja2en'));
+  const st = { 'p0|ja2en': { box: 2, due: '2026-11-25' } };
+  const q2 = buildSession({ items: items.slice(0, 1), state: st, modes: ['ja2en', 'en2ja'], today: '2026-11-20', newLimit: 5 });
+  assert.deepEqual(q2.map((x) => x.key), ['p0|en2ja']);
   // обе должные в один день → в сессии только одна
-  const st3 = { 'p0|ja2ru': { box: 3, due: '2026-11-19' }, 'p0|ru2ja': { box: 2, due: '2026-11-19' } };
-  assert.equal(buildSession({ items: items.slice(0, 1), state: st3, modes: ['ja2ru', 'ru2ja'], today: '2026-11-20' }).length, 1);
+  const st3 = { 'p0|ja2en': { box: 3, due: '2026-11-19' }, 'p0|en2ja': { box: 2, due: '2026-11-19' } };
+  assert.equal(buildSession({ items: items.slice(0, 1), state: st3, modes: ['ja2en', 'en2ja'], today: '2026-11-20' }).length, 1);
 });
 
 test('B6: импорт с неверными типами не ломается и не портит данные', () => {

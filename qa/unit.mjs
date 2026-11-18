@@ -50,29 +50,29 @@ await t('srs', 'stats with out-of-range box (imported) keeps 5 numeric bins', ()
 });
 await t('srs', 'modesFor: hear → audio only; card → none; say → 3', () => {
   const r = [S.modesFor({ kind: 'hear' }), S.modesFor({ kind: 'card' }), S.modesFor({ kind: 'say' })];
-  assert.deepEqual(r, [['audio'], [], ['ja2ru', 'ru2ja', 'audio']]); return JSON.stringify(r);
+  assert.deepEqual(r, [['audio'], [], ['ja2en', 'en2ja', 'audio']]); return JSON.stringify(r);
 });
 const ITEMS = Array.from({ length: 10 }, (_, i) => ({ id: 'p' + i, kind: i === 9 ? 'hear' : 'say', tags: ['w1'] }));
 await t('srs', 'buildSession: overdue first (oldest first), then new ≤ newLimit', () => {
-  const state = { 'p0|ja2ru': { box: 2, due: '2026-11-17' }, 'p1|ja2ru': { box: 1, due: '2026-11-10' }, 'p2|ja2ru': { box: 1, due: '2026-11-20' } };
-  const q = S.buildSession({ items: ITEMS, state, modes: ['ja2ru'], today: D0, newLimit: 3 });
+  const state = { 'p0|ja2en': { box: 2, due: '2026-11-17' }, 'p1|ja2en': { box: 1, due: '2026-11-10' }, 'p2|ja2en': { box: 1, due: '2026-11-20' } };
+  const q = S.buildSession({ items: ITEMS, state, modes: ['ja2en'], today: D0, newLimit: 3 });
   const keys = q.map((x) => x.key);
-  assert.deepEqual(keys.slice(0, 2), ['p1|ja2ru', 'p0|ja2ru']); assert.equal(q.filter((x) => x.isNew).length, 3); assert.ok(!keys.includes('p2|ja2ru'));
+  assert.deepEqual(keys.slice(0, 2), ['p1|ja2en', 'p0|ja2en']); assert.equal(q.filter((x) => x.isNew).length, 3); assert.ok(!keys.includes('p2|ja2en'));
   return keys.join(',');
 });
 await t('srs', 'buildSession: hear item only in audio mode', () => {
-  const q = S.buildSession({ items: ITEMS, state: {}, modes: ['ja2ru', 'ru2ja'], today: D0, newLimit: 100 });
+  const q = S.buildSession({ items: ITEMS, state: {}, modes: ['ja2en', 'en2ja'], today: D0, newLimit: 100 });
   assert.ok(!q.some((x) => x.id === 'p9')); return `${q.length} cards, no p9`;
 });
-await t('srs', 'buildSession (review = ja2ru+ru2ja): same phrase not shown in both modes back-to-back', () => {
-  const q = S.buildSession({ items: ITEMS, state: {}, modes: ['ja2ru', 'ru2ja'], today: D0, newLimit: 12 });
+await t('srs', 'buildSession (review = ja2en+en2ja): same phrase not shown in both modes back-to-back', () => {
+  const q = S.buildSession({ items: ITEMS, state: {}, modes: ['ja2en', 'en2ja'], today: D0, newLimit: 12 });
   const seq = q.map((x) => x.key);
   const adj = seq.filter((k, i) => i > 0 && q[i - 1].id === q[i].id);
   assert.equal(adj.length, 0, `adjacent same-phrase pairs: ${adj.length}; order: ${seq.slice(0, 6).join(', ')}…`);
   return seq.join(',');
 });
 await t('srs', 'buildSession: newLimit counts cards (id×mode), not phrases', () => {
-  const q = S.buildSession({ items: ITEMS, state: {}, modes: ['ja2ru', 'ru2ja'], today: D0, newLimit: 12 });
+  const q = S.buildSession({ items: ITEMS, state: {}, modes: ['ja2en', 'en2ja'], today: D0, newLimit: 12 });
   return `newLimit=12 → ${q.length} cards from ${new Set(q.map((x) => x.id)).size} phrases`;
 });
 await t('srs', 'studyWeek: day1/week1, day8/week2, day15/week3, day31/week3', () => {
@@ -104,10 +104,10 @@ const ST = await mod('store.js');
 function memBE(init = {}) { const m = new Map(Object.entries(init)); return { m, getItem: (k) => (m.has(k) ? m.get(k) : null), setItem: (k, v) => m.set(k, String(v)), removeItem: (k) => m.delete(k) }; }
 const SAMPLE = {
   favs: ['konbini.bag.none', 'basics.thanks'],
-  srs: { 'konbini.bag.none|ja2ru': { box: 3, due: '2026-11-25', seen: 4, lapses: 1 } },
+  srs: { 'konbini.bag.none|ja2en': { box: 3, due: '2026-11-25', seen: 4, lapses: 1 } },
   settings: { furigana: false, startDate: '2026-11-18', newPerDay: 15 },
   cards: { allergy: { who: 'child', allergens: ['tamago'], strict: true }, hotel: { name: 'ホテル', address: '東京都新宿区' }, free: 'テスト' },
-  userItems: [{ id: 'u.x1', ru: 'Зонт', ja: '傘', kana: 'かさ', romaji: 'kasa' }],
+  userItems: [{ id: 'u.x1', en: 'Umbrella', ja: '傘', kana: 'かさ', romaji: 'kasa' }],
   history: ['Где туалет?'],
   quizStats: { kana: { hira: 9 } },
 };
@@ -130,7 +130,7 @@ await t('store', 'export → JSON → import(replace) on clean profile: deep-equ
   const json = JSON.stringify(a.exportAll());
   const b = ST.createStore(memBE()); const changed = b.importAll(json, 'replace');
   for (const k of Object.keys(SAMPLE)) assert.deepEqual(b.get(k), SAMPLE[k], k);
-  const exp = JSON.parse(json); assert.equal(exp.app, 'japan-trip'); assert.equal(exp.format, 1);
+  const exp = JSON.parse(json); assert.equal(exp.app, 'japan-trip'); assert.equal(exp.format, 2);
   return 'changed: ' + changed.join(',');
 });
 await t('store', 'export → import(merge) on clean profile: deep-equal round-trip', () => {
@@ -155,9 +155,9 @@ await t('store', 'merge history: local strings + backup [] → local kept', () =
   assert.deepEqual(s.get('history'), ['x', 'y'], 'got ' + JSON.stringify(s.get('history'))); return JSON.stringify(s.get('history'));
 });
 await t('store', 'merge userItems by id (incoming wins), keeps local-only', () => {
-  const s = ST.createStore(memBE()); s.set('userItems', [{ id: 'u.1', ru: 'old' }, { id: 'u.2', ru: 'local' }]);
-  s.importAll({ app: 'japan-trip', data: { userItems: [{ id: 'u.1', ru: 'new' }, { id: 'u.3', ru: 'b' }] } }, 'merge');
-  assert.deepEqual(s.get('userItems').map((x) => x.id + ':' + x.ru), ['u.1:new', 'u.2:local', 'u.3:b']); return 'ok';
+  const s = ST.createStore(memBE()); s.set('userItems', [{ id: 'u.1', en: 'old' }, { id: 'u.2', en: 'local' }]);
+  s.importAll({ app: 'japan-trip', data: { userItems: [{ id: 'u.1', ru: 'new' }, { id: 'u.3', en: 'b' }] } }, 'merge');
+  assert.deepEqual(s.get('userItems').map((x) => x.id + ':' + x.en), ['u.1:new', 'u.2:local', 'u.3:b']); return 'ok';
 });
 await t('store', 'merge srs: older backup overwrites newer local progress for same key', () => {
   const s = ST.createStore(memBE()); s.set('srs', { k: { box: 5, due: '2026-12-01', seen: 9 } });
@@ -198,14 +198,14 @@ const items = PH.items.map(TX.completeItem);
 const KJ = JSON.parse(fs.readFileSync(path.join(APP, 'data', 'kanji.json'), 'utf8'));
 const bagId = items.find((it) => it.ja === '袋はいりません')?.id;
 await t('text', 'phrase 袋はいりません exists', () => { assert.ok(bagId); return bagId; });
-for (const q of ['ふくろ', 'пакет', 'fukuro', 'Пакет', 'ПАКЕТ', 'フクロ', 'ﾌｸﾛ', 'FUKURO', 'fukuro wa', 'пакет не нужен', '袋', 'пакет?']) {
+for (const q of ['ふくろ', 'bag', 'fukuro', 'Bag', 'BAG', 'フクロ', 'ﾌｸﾛ', 'FUKURO', 'fukuro wa', "don't need a bag", '袋', 'bag?']) {
   await t('text-search', `search «${q}» finds 袋はいりません`, () => {
     const r = TX.search(items, q); const pos = r.findIndex((x) => x.id === bagId);
     assert.ok(pos >= 0, `not found among ${r.length}`); return `rank ${pos + 1}/${r.length}`;
   });
 }
 await t('text', 'normalize ё/е, case, NFKC, macrons, katakana', () => {
-  const pairs = [['Ёлка', 'елка'], ['ЕЩЁ', 'еще'], ['kōhī', 'kohi'], ['Tōkyō', 'tokyo'], ['arigatou', 'arigato'], ['コーヒー', 'こひ'], ['ﾊﾟｽ', 'ぱす'], ["kin'en", 'kinen'], ['chūko', 'chuko'], ['ＡＴＭ', 'atm']];
+  const pairs = [['BAG', 'bag'], ['My Bag', 'mybag'], ['kōhī', 'kohi'], ['Tōkyō', 'tokyo'], ['arigatou', 'arigato'], ['コーヒー', 'こひ'], ['ﾊﾟｽ', 'ぱす'], ["kin'en", 'kinen'], ['chūko', 'chuko'], ['ＡＴＭ', 'atm']];
   const bad = pairs.filter(([a, b]) => TX.normalize(a) !== b).map(([a, b]) => `${a}→${TX.normalize(a)} (exp ${b})`);
   assert.equal(bad.length, 0, bad.join('; ')); return 'all ' + pairs.length;
 });
@@ -231,7 +231,7 @@ await t('text-search', 'search romaji with doubled vowel (arigatou / koohii-type
   const r = TX.search(items, 'arigatou'); assert.ok(r.some((x) => /ありがとう/.test(x.ja))); return `${r.length} hits`;
 });
 await t('text-search', 'kanji search (real kanji.json): chuko / 中古 / б/у', () => {
-  const k = KJ.items.map(TX.completeItem); const r = ['chuko', '中古', 'ちゅうこ', 'выход'].map((q) => [q, TX.search(k, q).length]);
+  const k = KJ.items.map(TX.completeItem); const r = ['chuko', '中古', 'ちゅうこ', 'exit'].map((q) => [q, TX.search(k, q).length]);
   assert.ok(r.every(([, n]) => n > 0), JSON.stringify(r)); return JSON.stringify(r);
 });
 await t('text-search', 'empty / whitespace query → []', () => { assert.deepEqual(TX.search(items, '   '), []); assert.deepEqual(TX.search(items, ''), []); return 'ok'; });

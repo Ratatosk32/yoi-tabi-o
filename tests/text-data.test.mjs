@@ -41,8 +41,8 @@ test('romajiMatchesKana: ловит ошибки, но не границы сл�
   assert.ok(!romajiMatchesKana('fukuro ha irimasen', 'ふくろをいりません'), 'не та частица');
 });
 
-test('поиск: ふくろ / пакет / fukuro находят фразу про пакет', () => {
-  for (const q of ['ふくろ', 'пакет', 'fukuro', 'フクロ', 'Пакет']) {
+test('search: ふくろ / bag / fukuro find the bag phrase', () => {
+  for (const q of ['ふくろ', 'bag', 'fukuro', 'フクロ', 'Bag', "don't need a bag"]) {
     const ids = search(phrases.items, q).map((x) => x.id);
     assert.ok(ids.includes('konbini.bag-none'), `запрос «${q}»: ${ids.slice(0, 5)}`);
   }
@@ -50,7 +50,6 @@ test('поиск: ふくろ / пакет / fukuro находят фразу пр
   for (const q of ['arigato', 'arigatou', 'arigatō']) {
     assert.ok(search(phrases.items, q).some((x) => x.id === 'basics.arigato'), q);
   }
-  assert.equal(normalize('Ёлка'), 'елка');
   assert.deepEqual(search(phrases.items, ''), []);
 });
 

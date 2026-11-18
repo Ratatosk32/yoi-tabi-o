@@ -28,7 +28,7 @@ const PROFILES = [
 const KANA = JSON.parse(fs.readFileSync(path.join(APP, 'data', 'kana.json'), 'utf8'));
 const KMAP = new Map();
 for (const rows of [KANA.gojuon, KANA.dakuten, KANA.yoon, KANA.extended]) for (const c of rows.flat().filter(Boolean)) { if (c.h) KMAP.set(c.h, c.r); if (c.k) KMAP.set(c.k, c.r); }
-for (const w of KANA.words) KMAP.set(w.k, w.ru);
+for (const w of KANA.words) KMAP.set(w.k, w.en);
 
 const results = [];
 const rec = (profile, name, ok, actual, extra = {}) => { results.push({ profile, name, ok, actual: String(actual ?? '').slice(0, 600), ...extra }); console.log(`${ok ? 'PASS' : 'FAIL'} [${profile}] ${name}${actual ? ' — ' + String(actual).slice(0, 220) : ''}`); };
@@ -112,11 +112,11 @@ async function runProfile(browser, P) {
   // ---------- 2. search ----------
   await gotoHash(page, '#/phrases');
   const bagId = await page.evaluate(() => window.__app.data.items.find((i) => i.ja === '袋はいりません')?.id);
-  for (const q of ['ふくろ', 'пакет', 'fukuro']) {
+  for (const q of ['ふくろ', 'bag', 'fukuro']) {
     await page.evaluate(() => { const i = document.getElementById('phrase-search'); i.value = ''; });
     await page.focus('#phrase-search'); await page.type('#phrase-search', q); await sleep(450);
     const r = await page.evaluate((id) => ({ found: !!document.querySelector(`#phrase-list article[data-id="${id}"]`), title: document.querySelector('#phrase-list h2')?.textContent, first: document.querySelector('#phrase-list article')?.dataset.id }), bagId);
-    const s = await shot(page, P, 'search-' + (q === 'ふくろ' ? 'fukuro-kana' : q === 'пакет' ? 'paket' : 'fukuro'));
+    const s = await shot(page, P, 'search-' + (q === 'ふくろ' ? 'fukuro-kana' : q === 'bag' ? 'bag' : 'fukuro'));
     rec(P.id, `search «${q}» shows ${bagId}`, r.found, `${r.title}; first=${r.first}; shot=${s}`);
   }
 
@@ -136,7 +136,7 @@ async function runProfile(browser, P) {
   await page.click(`#phrase-list article[data-id="${bagId}"] .fav`); await sleep(150); // keep it favourited for backup test
 
   // ---------- 4. Show card full screen ----------
-  await page.click(`#phrase-list article[data-id="${bagId}"] button[aria-label="Показать на весь экран"]`); await sleep(400);
+  await page.click(`#phrase-list article[data-id="${bagId}"] button[aria-label="Show full screen"]`); await sleep(400);
   const fs1 = await page.evaluate(() => { const o = document.getElementById('fs'); if (!o) return null; const r = o.getBoundingClientRect(); const b = o.querySelector('.fs-body'); const cs = getComputedStyle(o);
     return { x: r.x, y: r.y, w: r.width, h: r.height, vw: innerWidth, vh: innerHeight, text: o.querySelector('.fs-ja')?.textContent, rt: o.querySelectorAll('rt').length, bg: cs.backgroundColor, color: getComputedStyle(o.querySelector('.fs-ja')).color, fontPx: parseFloat(getComputedStyle(o.querySelector('.fs-ja')).fontSize), bodyOverflow: b.scrollHeight > b.clientHeight + 1, lang: o.querySelector('[lang="ja"]') ? 'ja' : 'none' }; });
   const fsShot = await shot(page, P, 'show-fullscreen');
@@ -152,7 +152,7 @@ async function runProfile(browser, P) {
   await page.click('button.showcard'); await sleep(300);
   const fs2 = await page.evaluate(() => { const o = document.getElementById('fs'); const b = o?.querySelector('.fs-body'); return o ? { text: o.querySelector('.fs-body').textContent.slice(0, 60), overflow: b.scrollHeight > b.clientHeight + 1, sh: b.scrollHeight, ch: b.clientHeight } : null; });
   const s2 = await shot(page, P, 'show-readycard');
-  await clickText(page, '#fs button', 'Закрыть');
+  await clickText(page, '#fs button', 'Close');
   const closed2 = await page.evaluate(() => !document.getElementById('fs'));
   rec(P.id, `Show tab: ready card (${nCards}) opens, fits, ✕ closes`, !!fs2 && !fs2.overflow && closed2, JSON.stringify(fs2) + ' shot=' + s2);
   // longest ready card and allergy card must fit
@@ -166,7 +166,7 @@ async function runProfile(browser, P) {
   // allergy card
   await page.evaluate(() => { [...document.querySelectorAll('#card-allergy input[type=checkbox]')].slice(0, 3).forEach((c) => c.click()); });
   await sleep(300);
-  await page.evaluate(() => [...document.querySelectorAll('#card-allergy button')].find((b) => b.textContent === 'Показать').click()); await sleep(300);
+  await page.evaluate(() => [...document.querySelectorAll('#card-allergy button')].find((b) => b.textContent === 'Show').click()); await sleep(300);
   const al = await page.evaluate(() => { const o = document.getElementById('fs'); const b = o?.querySelector('.fs-body'); return o ? { text: b.textContent, over: b.scrollHeight > b.clientHeight + 1, sh: b.scrollHeight, ch: b.clientHeight } : null; });
   const s3 = await shot(page, P, 'show-allergy-3');
   rec(P.id, 'allergy card (3 allergens, strict) shows and fits', !!al && /卵/.test(al.text) && !al.over, JSON.stringify(al) + ' shot=' + s3);
@@ -176,7 +176,7 @@ async function runProfile(browser, P) {
     const more = await page.evaluate(() => { const c = [...document.querySelectorAll('#card-allergy .checks input[type=checkbox]')].find((x) => !x.checked); if (!c) return false; c.click(); return true; });
     if (!more) break; await sleep(60);
   }
-  await page.evaluate(() => [...document.querySelectorAll('#card-allergy button')].find((b) => b.textContent === 'Показать').click()); await sleep(300);
+  await page.evaluate(() => [...document.querySelectorAll('#card-allergy button')].find((b) => b.textContent === 'Show').click()); await sleep(300);
   const al12 = await page.evaluate(() => { const o = document.getElementById('fs'); const b = o?.querySelector('.fs-body'); return o ? { chars: b.textContent.length, over: b.scrollHeight > b.clientHeight + 1, sh: b.scrollHeight, ch: b.clientHeight, checked: document.querySelectorAll('#card-allergy .checks input:checked').length } : null; });
   rec(P.id, 'allergy card with ALL allergens fits without scroll', !!al12 && !al12.over, JSON.stringify(al12) + ' shot=' + await shot(page, P, 'show-allergy-all'));
   await page.evaluate(() => document.querySelector('#fs .btn.primary')?.click()); await sleep(150);
@@ -192,7 +192,7 @@ async function runProfile(browser, P) {
     const clicked = await page.evaluate((ans) => { const b = [...document.querySelectorAll('#kana-quiz .opt')].find((x) => x.textContent === ans); if (!b) return false; b.click(); return true; }, ans);
     await sleep(100);
     const fb = await page.evaluate(() => document.querySelector('#kana-quiz .feedback p')?.textContent);
-    if (clicked && fb === 'Верно!') score++;
+    if (clicked && fb === 'Correct!') score++;
     if (i === 0) await shot(page, P, 'kana-quiz-answered');
     await page.evaluate(() => document.querySelector('#kana-quiz .feedback .btn.primary').click()); await sleep(100);
   }
@@ -200,19 +200,19 @@ async function runProfile(browser, P) {
   const qs = await page.evaluate(() => localStorage.getItem('jt.quizStats'));
   rec(P.id, 'kana quiz: 10 correct answers → 10/10, stored', score === 10 && /10\/10/.test(res) && /"hira":10/.test(qs), `${res}; quizStats=${qs}; unknown=${missing.join(',')}; shot=${await shot(page, P, 'kana-quiz-result')}`);
   // wrong answer path + double click guard
-  await clickText(page, '#kana-quiz button', 'Ещё раз');
+  await clickText(page, '#kana-quiz button', 'Again');
   const wrong = await page.evaluate(() => { const q = document.querySelector('#kana-quiz .kana-big').textContent; const opts = [...document.querySelectorAll('#kana-quiz .opt')]; return { q, opts: opts.map((o) => o.textContent) }; });
   const wrongOpt = wrong.opts.find((o) => o !== KMAP.get(wrong.q));
   await page.evaluate((w, r) => { const b = [...document.querySelectorAll('#kana-quiz .opt')]; b.find((x) => x.textContent === w).click(); b.find((x) => x.textContent === r).click(); }, wrongOpt, KMAP.get(wrong.q)); await sleep(100);
   const wr = await page.evaluate(() => ({ fb: document.querySelector('#kana-quiz .feedback p')?.textContent, score: document.querySelector('#kana-quiz .sess-head span:last-child')?.textContent }));
-  rec(P.id, 'kana quiz: wrong answer marked, second click ignored', /Правильно/.test(wr.fb || '') && /верно: 0/.test(wr.score), JSON.stringify(wr));
+  rec(P.id, 'kana quiz: wrong answer marked, second click ignored', /Answer:/.test(wr.fb || '') && /correct: 0/.test(wr.score), JSON.stringify(wr));
   // katakana words set: 1 answer
   await gotoHash(page, '#/phrases'); await gotoHash(page, '#/study/kana');
   await page.click('#kana-quiz button[data-set="words"]'); await sleep(150);
   const wq = await page.evaluate(() => document.querySelector('#kana-quiz .kana-big')?.textContent);
   const okW = await page.evaluate((a) => { const b = [...document.querySelectorAll('#kana-quiz .opt')].find((x) => x.textContent === a); b?.click(); return !!b; }, KMAP.get(wq)); await sleep(100);
   const fbW = await page.evaluate(() => document.querySelector('#kana-quiz .feedback p')?.textContent);
-  rec(P.id, 'kana quiz «Слова катаканой» accepts correct meaning', okW && /^Верно/.test(fbW || ''), `${wq} → ${KMAP.get(wq)}: ${fbW}`);
+  rec(P.id, 'kana quiz «Слова катаканой» accepts correct meaning', okW && /^Correct/.test(fbW || ''), `${wq} → ${KMAP.get(wq)}: ${fbW}`);
 
   // ---------- 6. price trainer ----------
   await gotoHash(page, '#/study/numbers');
@@ -228,51 +228,51 @@ async function runProfile(browser, P) {
     if (Number.isNaN(n)) { priceRes.push({ i, spoken, note: 'no TTS → cannot hear price' }); break; }
     await page.type('#num-answer', fmt(n)); await page.click('#num-check'); await sleep(150);
     const fb = await page.evaluate(() => document.getElementById('num-feedback').textContent);
-    priceRes.push({ typed: fmt(n), spoken, ok: /^Верно!/.test(fb), fb: fb.slice(0, 80) });
+    priceRes.push({ typed: fmt(n), spoken, ok: /^Correct!/.test(fb), fb: fb.slice(0, 80) });
     if (i === 0) await shot(page, P, 'price-correct');
     await page.click('#num-next'); await sleep(150);
   }
   const ttsLess = P.tts === 'none';
   rec(P.id, 'price trainer (audio mode) accepts the correct number in 4 formats', ttsLess ? true : priceRes.length === 4 && priceRes.every((r) => r.ok), (ttsLess ? '[no speechSynthesis: audio mode untestable, see mixed mode] ' : '') + JSON.stringify(priceRes));
   // mixed mode: read 12万8千円 text, convert, answer
-  await clickText(page, '.chips button', '12万8千円 → цифры');
-  for (const range of ['Техника', 'Конбини']) {
+  await clickText(page, '.chips button', '12万8千円 → digits');
+  for (const range of ['Cameras', 'Konbini']) {
     await clickText(page, '.chips button', range);
-    const before = await page.evaluate(() => Number((/из (\d+)/.exec(document.querySelector('#num-card .sess-head span').textContent) || [])[1]));
+    const before = await page.evaluate(() => Number((/of (\d+)/.exec(document.querySelector('#num-card .sess-head span').textContent) || [])[1]));
     const txt = await page.evaluate(() => document.querySelector('#num-card .price-big')?.textContent);
     const m = /^(?:(\d+)万)?(?:(\d+)千|([\d,]+))?円$/.exec(txt || '');
     const n = m ? (+m[1] || 0) * 10000 + (m[2] ? +m[2] * 1000 : m[3] ? +m[3].replace(/,/g, '') : 0) : NaN;
     await page.type('#num-answer', String(n)); await page.keyboard.press('Enter'); await sleep(150);
     const fb = await page.evaluate(() => document.getElementById('num-feedback').textContent);
-    rec(P.id, `price trainer (mixed, ${range}) «${txt}» → ${n} accepted, kana shown`, /^Верно!/.test(fb), fb.slice(0, 160) + ' shot=' + await shot(page, P, 'price-mixed-' + (range === 'Техника' ? 'gear' : 'konbini')));
+    rec(P.id, `price trainer (mixed, ${range}) «${txt}» → ${n} accepted, kana shown`, /^Correct!/.test(fb), fb.slice(0, 160) + ' shot=' + await shot(page, P, 'price-mixed-' + (range === 'Cameras' ? 'gear' : 'konbini')));
     // double check (Enter again) should not count twice
     await page.keyboard.press('Enter'); await sleep(100);
     await page.click('#num-next'); await sleep(100);
     const head = await page.evaluate(() => document.querySelector('#num-card .sess-head span').textContent);
-    const after = Number((/из (\d+)/.exec(head) || [])[1]);
+    const after = Number((/of (\d+)/.exec(head) || [])[1]);
     rec(P.id, `price trainer: one answer + Enter pressed again counts once (${range})`, after === before + 1, `before: total ${before}; after 1 answer + repeated Enter: «${head}»`);
   }
   // range switch must give a price from the new range immediately
-  await clickText(page, '.chips button', 'Конбини'); await clickText(page, '.chips button', 'Техника');
+  await clickText(page, '.chips button', 'Konbini'); await clickText(page, '.chips button', 'Cameras');
   const afterSwitch = await page.evaluate(() => document.querySelector('#num-card .price-big')?.textContent);
   const mm = /^(?:(\d+)万)?(?:(\d+)千|([\d,]+))?円$/.exec(afterSwitch || ''); const nn = mm ? (+mm[1] || 0) * 10000 + (mm[2] ? +mm[2] * 1000 : mm[3] ? +mm[3].replace(/,/g, '') : 0) : NaN;
   rec(P.id, 'price trainer: switching range Конбини→Техника immediately shows a 20 000–250 000 price', nn >= 20000 && nn <= 250000, `after switch: «${afterSwitch}» (${nn})`);
   // wrong answer
   await page.type('#num-answer', '1'); await page.click('#num-card .btn.primary'); await sleep(100);
   const fbw = await page.evaluate(() => document.getElementById('num-feedback').textContent);
-  rec(P.id, 'price trainer rejects a wrong number', /^Неверно/.test(fbw), fbw.slice(0, 100));
+  rec(P.id, 'price trainer rejects a wrong number', /^Wrong/.test(fbw), fbw.slice(0, 100));
 
   // ---------- 7. time trainer ----------
   await gotoHash(page, '#/study/time');
   if (!ttsLess) {
     await page.evaluate(() => { window.__spoken.length = 0; });
-    await clickText(page, '#time-card button', 'Слушать время');
+    await clickText(page, '#time-card button', 'Listen to the time');
     const sp = await page.evaluate(() => window.__spoken.at(-1)?.text);
     const m = /^(\d+)時(?:(半)|(\d+)分)?$/.exec(sp || '');
     const ans = m ? `${m[1]}:${m[2] ? '30' : String(m[3] || 0).padStart(2, '0')}` : '?';
-    await page.type('#time-card input', ans); await clickText(page, '#time-card button', 'Проверить');
+    await page.type('#time-card input', ans); await clickText(page, '#time-card button', 'Check');
     const fb = await page.evaluate(() => document.querySelector('#time-card .feedback').textContent);
-    rec(P.id, `time trainer accepts «${sp}» as ${ans}`, /^Верно/.test(fb), fb.slice(0, 120));
+    rec(P.id, `time trainer accepts «${sp}» as ${ans}`, /^Correct/.test(fb), fb.slice(0, 120));
   }
 
   // ---------- 8. SRS lesson ----------
@@ -304,26 +304,26 @@ async function runProfile(browser, P) {
     `toast=«${toastTxt}»; spoken=${JSON.stringify(sp)}; errors=${JSON.stringify(jsErr)}`);
   await gotoHash(page, '#/tools'); await sleep(1700);
   const ttsBox = await page.evaluate(() => document.getElementById('tts-box').innerText.slice(0, 300));
-  rec(P.id, 'Tools → Озвучка shows the right platform guidance', P.platform === 'ios' ? /не поддерживает|iPhone/.test(ttsBox) : /Android|Speech Services/.test(ttsBox), ttsBox.replace(/\n/g, ' / ') + ' shot=' + await shot(page, P, 'tools-tts'));
+  rec(P.id, 'Tools → Озвучка shows the right platform guidance', P.platform === 'ios' ? /not support|iPhone/.test(ttsBox) : /Android|Speech Services/.test(ttsBox), ttsBox.replace(/\n/g, ' / ') + ' shot=' + await shot(page, P, 'tools-tts'));
 
   // ---------- 10. launchers ----------
   const lens = await page.evaluate(() => ({ href: document.getElementById('lens-btn').getAttribute('href'), opts: [...document.querySelectorAll('#lens-variant option')].map((o) => o.value + '=' + o.textContent) }));
   const expLens = P.platform === 'ios' ? /^google:\/\/$/ : /^intent:\/\/lens\.google\.com\/#Intent;scheme=https;package=com\.google\.ar\.lens;S\.browser_fallback_url=https%3A%2F%2Flens\.google\.com%2F;end$/;
   rec(P.id, `Lens button URL for ${P.platform}`, expLens.test(lens.href), JSON.stringify(lens));
   // translate (web) → window.open
-  await page.evaluate(() => { window.__opened.length = 0; document.getElementById('tr-text').value = 'Где туалет?'; });
-  await clickText(page, 'button', 'Открыть в Переводчике');
+  await page.evaluate(() => { window.__opened.length = 0; document.getElementById('tr-text').value = 'Where is the toilet?'; });
+  await clickText(page, 'button', 'Open in Translate');
   await page.evaluate(() => { document.getElementById('maps-q').value = '新宿駅'; });
-  await clickText(page, 'button', 'Найти на карте');
-  await clickText(page, 'button', 'Маршрут на транспорте');
+  await clickText(page, 'button', 'Find on map');
+  await clickText(page, 'button', 'Transit directions');
   const opened = await page.evaluate(() => window.__opened.slice());
-  rec(P.id, 'Translate/Maps buttons open expected https URLs', opened.length === 3 && opened[0] === 'https://translate.google.com/?sl=ru&tl=ja&text=%D0%93%D0%B4%D0%B5%20%D1%82%D1%83%D0%B0%D0%BB%D0%B5%D1%82%3F&op=translate'
+  rec(P.id, 'Translate/Maps buttons open expected https URLs', opened.length === 3 && opened[0] === 'https://translate.google.com/?sl=en&tl=ja&text=Where%20is%20the%20toilet%3F&op=translate'
     && opened[1] === 'https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E5%AE%BF%E9%A7%85' && opened[2].startsWith('https://www.google.com/maps/dir/?api=1&travelmode=transit&destination=%E6'), JSON.stringify(opened));
   // app-scheme translate: location.href = intent/googletranslate → capture via CDP
   const cdp = await page.createCDPSession(); await cdp.send('Page.enable');
   const navs = []; cdp.on('Page.frameRequestedNavigation', (e) => navs.push(e.url));
-  await clickText(page, 'button', 'В приложении Переводчика'); await sleep(500);
-  const expT = P.platform === 'ios' ? /^googletranslate:\/\/\?sl=ru&tl=ja&text=%D0%93/ : /^intent:\/\/translate\.google\.com\/\?sl=ru&tl=ja&text=%D0%93.*#Intent;scheme=https;package=com\.google\.android\.apps\.translate;S\.browser_fallback_url=https%3A%2F%2Ftranslate/;
+  await clickText(page, 'button', 'In the Translate app'); await sleep(500);
+  const expT = P.platform === 'ios' ? /^googletranslate:\/\/\?sl=en&tl=ja&text=Where/ : /^intent:\/\/translate\.google\.com\/\?sl=en&tl=ja&text=Where.*#Intent;scheme=https;package=com\.google\.android\.apps\.translate;S\.browser_fallback_url=https%3A%2F%2Ftranslate/;
   rec(P.id, `«В приложении Переводчика» navigates to ${P.platform} app URL`, navs.some((u) => expT.test(u)), JSON.stringify(navs));
   const stillApp = await page.evaluate(() => document.documentElement.dataset.ready === '1').catch(() => false);
   rec(P.id, 'app still alive after app-scheme navigation', stillApp, page.url());

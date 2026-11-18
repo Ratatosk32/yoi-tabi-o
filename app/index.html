@@ -1,33 +1,33 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Japan Trip</title>
-  <meta name="description" content="Разговорник, тренажёр и инструменты для поездки в Японию. Работает офлайн.">
+  <meta name="description" content="Phrasebook, trainer and tools for a trip to Japan. Works offline.">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#f5f1e7" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#171613" media="(prefers-color-scheme: dark)">
   <meta name="robots" content="noindex">
   <meta name="format-detection" content="telephone=no">
-  <!-- iOS: установка через «Поделиться → На экран «Домой»» -->
+  <!-- iOS: install via Share → Add to Home Screen -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-title" content="Япония">
+  <meta name="apple-mobile-web-app-title" content="Japan Trip">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
   <link rel="icon" href="icons/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
   <script>
-    // Тема, выбранная вручную, — до первого кадра (без вспышки). Без выбора — как в системе.
+    // A manually chosen theme is applied before the first frame (no flash). Otherwise follow the system.
     try {
       var t = localStorage.getItem('theme');
       if (t === 'light' || t === 'dark') {
         document.documentElement.dataset.theme = t;
         document.querySelectorAll('meta[name=theme-color]').forEach(function (m) { m.content = t === 'dark' ? '#171613' : '#f5f1e7'; });
       }
-    } catch (e) { /* хранилище недоступно — тема системы */ }
+    } catch (e) { /* storage unavailable — system theme */ }
   </script>
   <link rel="preload" href="fonts/shippori-mincho-500.kana.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="fonts/fonts.css">
@@ -38,8 +38,8 @@
 </head>
 <body>
   <div id="app">
-    <main id="view"><p class="loading">Загрузка…</p></main>
+    <main id="view"><p class="loading">Loading…</p></main>
   </div>
-  <noscript><p class="loading">Для работы нужен JavaScript.</p></noscript>
+  <noscript><p class="loading">JavaScript is required.</p></noscript>
 </body>
 </html>

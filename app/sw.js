@@ -1,7 +1,7 @@
-// Service Worker (same-origin, отдельный файл — Blob-SW запрещены, PLAN.md 2d).
-// При каждом изменении файлов приложения увеличивайте VERSION — браузер увидит новый sw.js
-// и предложит пользователю «Обновить» (без тихих перезагрузок).
-const VERSION = 'v5';
+// Service Worker (same-origin separate file — Blob SWs are not allowed, PLAN.md 2d).
+// Bump VERSION whenever app files change — the browser sees a new sw.js
+// and the app offers "Update" (no silent reloads).
+const VERSION = 'v6';
 const CACHE = `jt-${VERSION}`;
 
 const PRECACHE = [
@@ -42,7 +42,7 @@ const PRECACHE = [
 self.addEventListener('install', (event) => {
   event.waitUntil((async () => {
     const cache = await caches.open(CACHE);
-    // cache: 'reload' — мимо HTTP-кеша, чтобы не закешировать старую версию файла
+    // cache: 'reload' — bypass the HTTP cache so a stale file is never precached
     await cache.addAll(PRECACHE.map((u) => new Request(u, { cache: 'reload' })));
     // v5 replaces a broken v4 (redirected navigation responses): take over at once so the app can load at all.
     await self.skipWaiting();
@@ -65,9 +65,9 @@ self.addEventListener('fetch', (event) => {
   const req = event.request;
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
-  if (url.origin !== self.location.origin) return; // внешние запросы — только сеть
+  if (url.origin !== self.location.origin) return; // external requests — network only
 
-  // Навигация: оболочка из кеша (офлайн), иначе сеть
+  // Navigation: app shell from cache (offline), else network
   if (req.mode === 'navigate') {
     event.respondWith((async () => {
       const cache = await caches.open(CACHE);
@@ -82,7 +82,7 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Данные: stale-while-revalidate (показываем кеш, обновляем в фоне)
+  // Data: stale-while-revalidate (serve cache, refresh in the background)
   if (url.pathname.includes('/data/')) {
     event.respondWith((async () => {
       const cache = await caches.open(CACHE);
@@ -96,7 +96,7 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Остальное (оболочка, модули, vendor, иконки): cache-first
+  // Everything else (shell, modules, vendor, icons): cache-first
   event.respondWith((async () => {
     const cache = await caches.open(CACHE);
     const cached = await cache.match(req, { ignoreSearch: true });

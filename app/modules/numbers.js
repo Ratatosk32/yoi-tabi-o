@@ -1,6 +1,6 @@
-// Японские числа, цены, время, даты и счётные суффиксы.
-// Чистые функции (без DOM) — тестируются в Node: tests/numbers.test.mjs.
-// Каждая функция возвращает { kana, romaji } (Хэпбёрн с макронами, см. PLAN.md 1.6).
+// Japanese numbers, prices, time, dates and counters.
+// Pure functions (no DOM) — tested in Node: tests/numbers.test.mjs.
+// Every function returns { kana, romaji } (Hepburn with macrons, see PLAN.md 1.6).
 
 const DIGIT = [
   null,
@@ -12,7 +12,7 @@ const TEN = [ // 10, 20 … 90
   ['じゅう', 'jū'], ['にじゅう', 'nijū'], ['さんじゅう', 'sanjū'], ['よんじゅう', 'yonjū'], ['ごじゅう', 'gojū'],
   ['ろくじゅう', 'rokujū'], ['ななじゅう', 'nanajū'], ['はちじゅう', 'hachijū'], ['きゅうじゅう', 'kyūjū'],
 ];
-const HUNDRED = [ // 100 … 900 (звуковые изменения: 300, 600, 800)
+const HUNDRED = [ // 100 … 900 (sound changes: 300, 600, 800)
   null,
   ['ひゃく', 'hyaku'], ['にひゃく', 'nihyaku'], ['さんびゃく', 'sanbyaku'], ['よんひゃく', 'yonhyaku'], ['ごひゃく', 'gohyaku'],
   ['ろっぴゃく', 'roppyaku'], ['ななひゃく', 'nanahyaku'], ['はっぴゃく', 'happyaku'], ['きゅうひゃく', 'kyūhyaku'],
@@ -23,12 +23,12 @@ const THOUSAND = [ // 1000 … 9000 (3000, 8000)
   ['ろくせん', 'rokusen'], ['ななせん', 'nanasen'], ['はっせん', 'hassen'], ['きゅうせん', 'kyūsen'],
 ];
 
-/** Части числа 1..9999 как массив [kana, romaji]. */
+/** Parts of a number 1..9999 as [kana, romaji] pairs. */
 function under10000(n, { manBlock = false } = {}) {
   const parts = [];
   const th = Math.floor(n / 1000), h = Math.floor(n / 100) % 10, t = Math.floor(n / 10) % 10, o = n % 10;
   if (th) {
-    // 1000万 = いっせんまん (в блоке перед 万 «1000» произносится いっせん)
+    // 1000万 = いっせんまん (before 万, "1000" is pronounced いっせん)
     if (th === 1 && manBlock) parts.push(['いっせん', 'issen']);
     else parts.push(THOUSAND[th]);
   }
@@ -38,7 +38,7 @@ function under10000(n, { manBlock = false } = {}) {
   return parts;
 }
 
-/** Склейка ромадзи по Хэпбёрну: n перед гласной/y → n' (1001 = sen'ichi). */
+/** Join romaji per Hepburn: n before a vowel/y → n' (1001 = sen'ichi). */
 export function joinRomaji(pieces, sep = '') {
   return pieces.reduce((acc, p) => (acc && sep === '' && /n$/.test(acc) && /^[aiueoy]/.test(p) ? acc + "'" + p : acc + (acc && sep ? sep : '') + p), '');
 }
@@ -51,7 +51,7 @@ function join(parts, sep = '') {
 }
 
 /**
- * Число 0..99 999 999 → чтение. Ромадзи: группа 万 отделяется пробелом
+ * Number 0..99,999,999 → reading. Romaji: the 万 group is separated by a space
  * (128000 → "jūniman hassen").
  */
 export function numberParts(n) {
@@ -74,7 +74,7 @@ export function numberReading(n) {
   return join(numberParts(n), ' ');
 }
 
-/** Цена в иенах: 4円 = よえん, 300円 = さんびゃくえん, 128000円 = じゅうにまんはっせんえん. */
+/** Price in yen: 4円 = よえん, 300円 = さんびゃくえん, 128000円 = じゅうにまんはっせんえん. */
 export function yenReading(n) {
   const r = numberReading(n);
   let { kana, romaji } = r;
@@ -85,7 +85,7 @@ export function yenReading(n) {
   return { kana: kana + 'えん', romaji: romaji + '-en' };
 }
 
-/** Запись цены: меньше 万 — как на ценнике (1,000円, 980円); от 万 — с 万 (128000 → "12万8千円", 125500 → "12万5,500円"). */
+/** Written price: below 万 like a price tag (1,000円, 980円); from 万 with 万 (128000 → "12万8千円", 125500 → "12万5,500円"). */
 export function yenMixed(n) {
   if (n < 10000) return n.toLocaleString('en-US') + '円';
   const man = Math.floor(n / 10000), rest = n % 10000;
@@ -99,7 +99,7 @@ export function yenMixed(n) {
   return s + '円';
 }
 
-// ---------- Время ----------
+// ---------- Time ----------
 const HOUR = {
   0: ['れいじ', 'reiji'], 1: ['いちじ', 'ichiji'], 2: ['にじ', 'niji'], 3: ['さんじ', 'sanji'], 4: ['よじ', 'yoji'],
   5: ['ごじ', 'goji'], 6: ['ろくじ', 'rokuji'], 7: ['しちじ', 'shichiji'], 8: ['はちじ', 'hachiji'], 9: ['くじ', 'kuji'],
@@ -115,12 +115,12 @@ function hourParts(h) {
   return [tens[0] + oh[0], tens[1] + oh[1]];
 }
 
-const MIN_ONES = [ // 0..9 минут (для 0 — только в составе десятков)
+const MIN_ONES = [ // 0..9 minutes (0 only as part of the tens)
   null,
   ['いっぷん', 'ippun'], ['にふん', 'nifun'], ['さんぷん', 'sanpun'], ['よんぷん', 'yonpun'], ['ごふん', 'gofun'],
   ['ろっぷん', 'roppun'], ['ななふん', 'nanafun'], ['はっぷん', 'happun'], ['きゅうふん', 'kyūfun'],
 ];
-const MIN_TENS_EXACT = [ // 10, 20, … 50 минут
+const MIN_TENS_EXACT = [ // 10, 20, … 50 minutes
   null, ['じゅっぷん', 'juppun'], ['にじゅっぷん', 'nijuppun'], ['さんじゅっぷん', 'sanjuppun'],
   ['よんじゅっぷん', 'yonjuppun'], ['ごじゅっぷん', 'gojuppun'],
 ];
@@ -133,7 +133,7 @@ export function minuteReading(m) {
   return { kana: pre[0] + MIN_ONES[o][0], romaji: pre[1] + MIN_ONES[o][1] };
 }
 
-/** 9:30 → くじはん (half=true) или くじさんじゅっぷん. */
+/** 9:30 → くじはん (half=true) or くじさんじゅっぷん. */
 export function timeReading(h, m = 0, { half = true } = {}) {
   const hp = hourParts(h);
   if (m === 0) return { kana: hp[0], romaji: hp[1] };
@@ -142,7 +142,7 @@ export function timeReading(h, m = 0, { half = true } = {}) {
   return { kana: hp[0] + mr.kana, romaji: hp[1] + ' ' + mr.romaji };
 }
 
-// ---------- Даты ----------
+// ---------- Dates ----------
 const DAY = [null,
   ['ついたち', 'tsuitachi'], ['ふつか', 'futsuka'], ['みっか', 'mikka'], ['よっか', 'yokka'], ['いつか', 'itsuka'],
   ['むいか', 'muika'], ['なのか', 'nanoka'], ['ようか', 'yōka'], ['ここのか', 'kokonoka'], ['とおか', 'tōka'],
@@ -158,38 +158,38 @@ const MONTH = [null,
   ['ろくがつ', 'rokugatsu'], ['しちがつ', 'shichigatsu'], ['はちがつ', 'hachigatsu'], ['くがつ', 'kugatsu'], ['じゅうがつ', 'jūgatsu'],
   ['じゅういちがつ', 'jūichigatsu'], ['じゅうにがつ', 'jūnigatsu'],
 ];
-export const WEEKDAYS = [ // getDay(): 0 = воскресенье
-  { ja: '日曜日', kana: 'にちようび', romaji: 'nichiyōbi', ru: 'воскресенье', short: '日' },
-  { ja: '月曜日', kana: 'げつようび', romaji: 'getsuyōbi', ru: 'понедельник', short: '月' },
-  { ja: '火曜日', kana: 'かようび', romaji: 'kayōbi', ru: 'вторник', short: '火' },
-  { ja: '水曜日', kana: 'すいようび', romaji: 'suiyōbi', ru: 'среда', short: '水' },
-  { ja: '木曜日', kana: 'もくようび', romaji: 'mokuyōbi', ru: 'четверг', short: '木' },
-  { ja: '金曜日', kana: 'きんようび', romaji: 'kin\'yōbi', ru: 'пятница', short: '金' },
-  { ja: '土曜日', kana: 'どようび', romaji: 'doyōbi', ru: 'суббота', short: '土' },
+export const WEEKDAYS = [ // getDay(): 0 = Sunday
+  { ja: '日曜日', kana: 'にちようび', romaji: 'nichiyōbi', en: 'Sunday', short: '日' },
+  { ja: '月曜日', kana: 'げつようび', romaji: 'getsuyōbi', en: 'Monday', short: '月' },
+  { ja: '火曜日', kana: 'かようび', romaji: 'kayōbi', en: 'Tuesday', short: '火' },
+  { ja: '水曜日', kana: 'すいようび', romaji: 'suiyōbi', en: 'Wednesday', short: '水' },
+  { ja: '木曜日', kana: 'もくようび', romaji: 'mokuyōbi', en: 'Thursday', short: '木' },
+  { ja: '金曜日', kana: 'きんようび', romaji: 'kin\'yōbi', en: 'Friday', short: '金' },
+  { ja: '土曜日', kana: 'どようび', romaji: 'doyōbi', en: 'Saturday', short: '土' },
 ];
 
 export function dateReading(month, day) {
   const mo = MONTH[month], d = DAY[day];
-  const maxDay = [0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][month]; // 29.02 допустим (високосный год)
+  const maxDay = [0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][month]; // Feb 29 allowed (leap year)
   if (!mo || !d || day > maxDay) throw new RangeError(`date ${month}/${day}`);
   return { kana: mo[0] + d[0], romaji: mo[1] + ' ' + d[1] };
 }
 
-// ---------- Счётные суффиксы (1..10) ----------
+// ---------- Counters (1..10) ----------
 export const COUNTERS = {
-  tsu: { label: '～つ (общий счёт предметов)', ja: 'つ', items: [
+  tsu: { label: '～つ (general counter for things)', ja: 'つ', items: [
     ['ひとつ', 'hitotsu'], ['ふたつ', 'futatsu'], ['みっつ', 'mittsu'], ['よっつ', 'yottsu'], ['いつつ', 'itsutsu'],
     ['むっつ', 'muttsu'], ['ななつ', 'nanatsu'], ['やっつ', 'yattsu'], ['ここのつ', 'kokonotsu'], ['とお', 'tō']] },
-  nin: { label: '～人 (люди)', ja: '人', items: [
+  nin: { label: '～人 (people)', ja: '人', items: [
     ['ひとり', 'hitori'], ['ふたり', 'futari'], ['さんにん', 'sannin'], ['よにん', 'yonin'], ['ごにん', 'gonin'],
     ['ろくにん', 'rokunin'], ['ななにん', 'nananin'], ['はちにん', 'hachinin'], ['きゅうにん', 'kyūnin'], ['じゅうにん', 'jūnin']] },
-  mai: { label: '～枚 (плоское: билеты, полотенца)', ja: '枚', items: [
+  mai: { label: '～枚 (flat things: tickets, towels)', ja: '枚', items: [
     ['いちまい', 'ichimai'], ['にまい', 'nimai'], ['さんまい', 'sanmai'], ['よんまい', 'yonmai'], ['ごまい', 'gomai'],
     ['ろくまい', 'rokumai'], ['ななまい', 'nanamai'], ['はちまい', 'hachimai'], ['きゅうまい', 'kyūmai'], ['じゅうまい', 'jūmai']] },
-  hon: { label: '～本 (длинное: бутылки, зонты)', ja: '本', items: [
+  hon: { label: '～本 (long things: bottles, umbrellas)', ja: '本', items: [
     ['いっぽん', 'ippon'], ['にほん', 'nihon'], ['さんぼん', 'sanbon'], ['よんほん', 'yonhon'], ['ごほん', 'gohon'],
     ['ろっぽん', 'roppon'], ['ななほん', 'nanahon'], ['はっぽん', 'happon'], ['きゅうほん', 'kyūhon'], ['じゅっぽん', 'juppon']] },
-  ko: { label: '～個 (мелкие предметы)', ja: '個', items: [
+  ko: { label: '～個 (small items)', ja: '個', items: [
     ['いっこ', 'ikko'], ['にこ', 'niko'], ['さんこ', 'sanko'], ['よんこ', 'yonko'], ['ごこ', 'goko'],
     ['ろっこ', 'rokko'], ['ななこ', 'nanako'], ['はっこ', 'hakko'], ['きゅうこ', 'kyūko'], ['じゅっこ', 'jukko']] },
 };
@@ -201,17 +201,17 @@ export function counterReading(key, n) {
   return { kana, romaji };
 }
 
-// ---------- Генераторы заданий ----------
+// ---------- Exercise generators ----------
 export const PRICE_RANGES = {
-  konbini: { label: 'Конбини', min: 100, max: 1500, step: 10 },
-  cafe: { label: 'Кафе', min: 800, max: 8000, step: 10 },
-  gear: { label: 'Техника', min: 20000, max: 250000, step: 100 },
-  all: { label: 'Всё 100–250 000', min: 100, max: 250000, step: 10 },
+  konbini: { label: 'Konbini', min: 100, max: 1500, step: 10 },
+  cafe: { label: 'Café', min: 800, max: 8000, step: 10 },
+  gear: { label: 'Cameras', min: 20000, max: 250000, step: 100 },
+  all: { label: 'All 100–250,000', min: 100, max: 250000, step: 10 },
 };
 
 export function randomPrice(rangeKey = 'all', rnd = Math.random) {
   const r = PRICE_RANGES[rangeKey] || PRICE_RANGES.all;
-  // Для техники чаще «круглые» цены (…800, …000), как на ценниках.
+  // Camera prices are usually round (…800, …000), like real price tags.
   let step = r.step;
   if (rangeKey === 'gear' && rnd() < 0.6) step = 1000;
   const k = Math.floor(rnd() * ((r.max - r.min) / step + 1));
@@ -224,11 +224,11 @@ export function randomTime(rnd = Math.random) {
   return { h, m: mins[Math.floor(rnd() * mins.length)] };
 }
 
-/** Разбор ответа пользователя: "12,800" / "12 800" / "１２８００" → 12800. */
+/** Parse the user's answer: "12,800" / "12 800" / "１２８００" / "12万8千" → 12800 / 128000. */
 export function parseDigits(s) {
   const t = String(s).normalize('NFKC').replace(/[\s,.'’円¥]/g, '');
   if (/^\d+$/.test(t)) return Number(t);
-  // запись с 万 / 千: 12万8千 → 128000, 12万5500 → 125500, 3千 → 3000 (B13)
+  // 万 / 千 notation: 12万8千 → 128000, 12万5500 → 125500, 3千 → 3000 (QA B13)
   const m = t.match(/^(?:(\d+)万)?(?:(\d+)千)?(\d*)$/);
   if (m && (m[1] || m[2])) return Number(m[1] || 0) * 10000 + Number(m[2] || 0) * 1000 + Number(m[3] || 0);
   return NaN;

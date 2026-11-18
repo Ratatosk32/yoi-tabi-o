@@ -28,14 +28,14 @@ test('buildSession: должные раньше новых, лимит новы�
   ];
   assert.deepEqual(modesFor(items[2]), ['audio']);
   assert.deepEqual(modesFor(items[3]), []);
-  const state = { [keyOf('b', 'ja2ru')]: { box: 2, due: '2026-11-19' } };
-  const q = buildSession({ items, state, modes: ['ja2ru', 'audio'], today: '2026-11-20', newLimit: 2 });
-  assert.equal(q[0].key, 'b|ja2ru');
+  const state = { [keyOf('b', 'ja2en')]: { box: 2, due: '2026-11-19' } };
+  const q = buildSession({ items, state, modes: ['ja2en', 'audio'], today: '2026-11-20', newLimit: 2 });
+  assert.equal(q[0].key, 'b|ja2en');
   assert.equal(q[0].isNew, false);
   assert.equal(q.filter((x) => x.isNew).length, 2);
   assert.ok(!q.some((x) => x.id === 'd'));
   // не должные (due в будущем) не попадают
-  const q2 = buildSession({ items, state: { 'a|ja2ru': { box: 3, due: '2026-12-01' } }, modes: ['ja2ru'], today: '2026-11-20', newLimit: 0 });
+  const q2 = buildSession({ items, state: { 'a|ja2en': { box: 3, due: '2026-12-01' } }, modes: ['ja2en'], today: '2026-11-20', newLimit: 0 });
   assert.equal(q2.length, 0);
 });
 
@@ -64,7 +64,7 @@ test('store: get/set/update, повреждённые данные', () => {
 
 test('store: экспорт/импорт с merge', () => {
   const a = createStore(memBackend());
-  a.set('srs', { 'k|ja2ru': { box: 2, due: '2026-11-20' } });
+  a.set('srs', { 'k|ja2en': { box: 2, due: '2026-11-20' } });
   a.set('favs', ['p1']);
   a.set('cards', { hotel: { name: 'テスト' } });
   const dump = JSON.stringify(a.exportAll());
@@ -74,7 +74,7 @@ test('store: экспорт/импорт с merge', () => {
   const changed = b.importAll(dump, 'merge');
   assert.ok(changed.includes('srs'));
   assert.deepEqual(b.get('favs').sort(), ['p1', 'p2']);
-  assert.ok(b.get('srs')['k|ja2ru'] && b.get('srs')['z|audio']);
+  assert.ok(b.get('srs')['k|ja2en'] && b.get('srs')['z|audio']);
   assert.equal(b.get('cards').hotel.name, 'テスト');
   assert.throws(() => b.importAll('{"app":"other","data":{}}'));
 });

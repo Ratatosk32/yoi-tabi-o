@@ -1,7 +1,7 @@
-// Исходник каны. Катакана получается сдвигом кодовой точки из хираганы (кроме расширенной).
-// Ромадзи — Хэпбёрн; を показываем как "o" (произносится «о»), в таблице с пометкой (wo).
+// Kana source. Katakana is derived from hiragana by a code-point shift (except the extended set).
+// Romaji: Hepburn; を is shown as "o" (pronounced "o").
 
-// Таблица годзюон: строки по согласным, столбцы a i u e o (null — пусто)
+// Gojūon table: rows by consonant, columns a i u e o (null = empty)
 export const GOJUON = [
   ['あ a', 'い i', 'う u', 'え e', 'お o'],
   ['か ka', 'き ki', 'く ku', 'け ke', 'こ ko'],
@@ -24,7 +24,7 @@ export const DAKUTEN = [
   ['ぱ pa', 'ぴ pi', 'ぷ pu', 'ぺ pe', 'ぽ po'],
 ];
 
-// Ёон: столбцы ya yu yo
+// Yōon: columns ya yu yo
 export const YOON = [
   ['きゃ kya', 'きゅ kyu', 'きょ kyo'],
   ['しゃ sha', 'しゅ shu', 'しょ sho'],
@@ -39,7 +39,7 @@ export const YOON = [
   ['ぴゃ pya', 'ぴゅ pyu', 'ぴょ pyo'],
 ];
 
-// Расширенная катакана для заимствований (только катакана)
+// Extended katakana for loanwords (katakana only)
 export const EXTENDED = [
   ['ティ ti', 'ディ di', 'トゥ tu', 'ドゥ du'],
   ['ファ fa', 'フィ fi', 'フェ fe', 'フォ fo'],
@@ -48,28 +48,58 @@ export const EXTENDED = [
 ];
 
 export const SPECIAL_NOTES = [
-  { mark: 'っ / ッ', ru: 'Маленькое цу: удвоение следующей согласной (пауза). きって kitte, カップ kappu.' },
-  { mark: 'ー', ru: 'Удлинитель в катакане: コーヒー kōhī, ビール bīru. В ромадзи — макрон.' },
-  { mark: 'ん / ン', ru: 'Слоговое «н». Перед b/p/m звучит как «м»: さんびゃく «самбяку». Перед гласной в ромадзи — n\' (kin\'en).' },
-  { mark: '゛ ゜', ru: 'Дакутэн (озвончение: か→が) и хандакутэн (は→ぱ).' },
-  { mark: 'は / を / へ', ru: 'Как частицы читаются wa / o / e.' },
+  { mark: 'っ / ッ', en: 'Small tsu: doubles the next consonant (a short pause). きって kitte, カップ kappu.' },
+  { mark: 'ー', en: 'Long-vowel mark in katakana: コーヒー kōhī, ビール bīru. Written as a macron in romaji.' },
+  { mark: 'ん / ン', en: 'Syllabic n. Before b/p/m it sounds like “m”: さんびゃく “sambyaku”. Before a vowel romaji writes n\' (kin\'en).' },
+  { mark: '゛ ゜', en: 'Dakuten (voicing: か→が) and handakuten (は→ぱ).' },
+  { mark: 'は / を / へ', en: 'As particles they are read wa / o / e.' },
 ];
 
-// Слова для квиза: [катакана, romaji, ru]
+// Quiz words: [katakana, romaji, en]
 export const WORDS = [
-  ['カメラ', 'kamera', 'камера'], ['レンズ', 'renzu', 'объектив'], ['フィルム', 'firumu', 'плёнка'],
-  ['ボディ', 'bodi', 'корпус («тушка»)'], ['バッテリー', 'batterī', 'аккумулятор'], ['ストラップ', 'sutorappu', 'ремешок'],
-  ['フィルター', 'firutā', 'светофильтр'], ['シャッター', 'shattā', 'затвор'], ['ズーム', 'zūmu', 'зум'],
-  ['ケース', 'kēsu', 'чехол'], ['キャップ', 'kyappu', 'крышка'], ['ジャンク', 'janku', 'как есть / неисправное'],
-  ['メモリーカード', 'memorī kādo', 'карта памяти'], ['レシート', 'reshīto', 'чек'], ['ポイントカード', 'pointo kādo', 'бонусная карта'],
-  ['コンビニ', 'konbini', 'круглосуточный магазин'], ['スーパー', 'sūpā', 'супермаркет'], ['レジ', 'reji', 'касса'],
-  ['コーヒー', 'kōhī', 'кофе'], ['ジュース', 'jūsu', 'сок'], ['ミルク', 'miruku', 'молоко'],
-  ['パン', 'pan', 'хлеб'], ['アイスクリーム', 'aisukurīmu', 'мороженое'], ['チーズ', 'chīzu', 'сыр'],
-  ['ラーメン', 'rāmen', 'рамэн'], ['カレー', 'karē', 'карри'], ['メニュー', 'menyū', 'меню'],
-  ['セット', 'setto', 'сет, комплект'], ['ホテル', 'hoteru', 'отель'], ['チェックイン', 'chekkuin', 'заселение'],
-  ['タクシー', 'takushī', 'такси'], ['バス', 'basu', 'автобус'], ['ホーム', 'hōmu', 'платформа'],
-  ['エレベーター', 'erebētā', 'лифт'], ['エスカレーター', 'esukarētā', 'эскалатор'], ['トイレ', 'toire', 'туалет'],
-  ['ベビーカー', 'bebīkā', 'детская коляска'], ['タオル', 'taoru', 'полотенце'], ['パスポート', 'pasupōto', 'паспорт'],
-  ['クレジットカード', 'kurejitto kādo', 'кредитная карта'], ['ティッシュ', 'tisshu', 'бумажные салфетки'], ['デジタル', 'dejitaru', 'цифровой'],
-  ['ファミリー', 'famirī', 'семья (семейный)'], ['ウォッチ', 'wotchi', 'часы (в названиях)'], ['チケット', 'chiketto', 'билет'],
+  ['カメラ', 'kamera', 'camera'],
+  ['レンズ', 'renzu', 'lens'],
+  ['フィルム', 'firumu', 'film'],
+  ['ボディ', 'bodi', 'camera body'],
+  ['バッテリー', 'batterī', 'battery'],
+  ['ストラップ', 'sutorappu', 'strap'],
+  ['フィルター', 'firutā', 'filter'],
+  ['シャッター', 'shattā', 'shutter'],
+  ['ズーム', 'zūmu', 'zoom'],
+  ['ケース', 'kēsu', 'case'],
+  ['キャップ', 'kyappu', 'lens cap'],
+  ['ジャンク', 'janku', 'junk (as-is, broken)'],
+  ['メモリーカード', 'memorī kādo', 'memory card'],
+  ['レシート', 'reshīto', 'receipt'],
+  ['ポイントカード', 'pointo kādo', 'point card'],
+  ['コンビニ', 'konbini', 'convenience store'],
+  ['スーパー', 'sūpā', 'supermarket'],
+  ['レジ', 'reji', 'register (checkout)'],
+  ['コーヒー', 'kōhī', 'coffee'],
+  ['ジュース', 'jūsu', 'juice'],
+  ['ミルク', 'miruku', 'milk'],
+  ['パン', 'pan', 'bread'],
+  ['アイスクリーム', 'aisukurīmu', 'ice cream'],
+  ['チーズ', 'chīzu', 'cheese'],
+  ['ラーメン', 'rāmen', 'ramen'],
+  ['カレー', 'karē', 'curry'],
+  ['メニュー', 'menyū', 'menu'],
+  ['セット', 'setto', 'set meal / set'],
+  ['ホテル', 'hoteru', 'hotel'],
+  ['チェックイン', 'chekkuin', 'check-in'],
+  ['タクシー', 'takushī', 'taxi'],
+  ['バス', 'basu', 'bus'],
+  ['ホーム', 'hōmu', 'platform'],
+  ['エレベーター', 'erebētā', 'elevator'],
+  ['エスカレーター', 'esukarētā', 'escalator'],
+  ['トイレ', 'toire', 'toilet'],
+  ['ベビーカー', 'bebīkā', 'stroller'],
+  ['タオル', 'taoru', 'towel'],
+  ['パスポート', 'pasupōto', 'passport'],
+  ['クレジットカード', 'kurejitto kādo', 'credit card'],
+  ['ティッシュ', 'tisshu', 'tissues'],
+  ['デジタル', 'dejitaru', 'digital'],
+  ['ファミリー', 'famirī', 'family'],
+  ['ウォッチ', 'wotchi', 'watch (in names)'],
+  ['チケット', 'chiketto', 'ticket'],
 ];

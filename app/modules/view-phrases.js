@@ -1,10 +1,10 @@
-// Вкладка «Фразы»: категории, поиск по ru/ja/kana/romaji, избранное, озвучка, «показать».
+// Phrases tab: categories, search in en/ja/kana/romaji, favourites, speech, "show".
 import { h, clear, rubyEl, speakButtons, speakItem, chip, showFullscreen, toast, ico } from './ui.js';
 import { search } from './text.js';
 
 const SPECIAL = {
-  fav: { ru: 'Избранное', icon: '★' },
-  hear: { ru: 'Скажет персонал', icon: '聞' },
+  fav: { en: 'Favorites', icon: '★' },
+  hear: { en: 'Staff will say', icon: '聞' },
 };
 
 export function render(ctx, root, params) {
@@ -15,10 +15,10 @@ export function render(ctx, root, params) {
 
   const list = h('div.list#phrase-list');
   const input = h('input.search#phrase-search', {
-    type: 'search', placeholder: 'Поиск: пакет, fukuro, ふくろ…', autocomplete: 'off',
-    'aria-label': 'Поиск фраз', enterkeyhint: 'search',
+    type: 'search', placeholder: 'Search: bag, fukuro, ふくろ…', autocomplete: 'off',
+    'aria-label': 'Search phrases', enterkeyhint: 'search',
   });
-  const chips = h('div.chips', { role: 'tablist', 'aria-label': 'Категории' });
+  const chips = h('div.chips', { role: 'tablist', 'aria-label': 'Categories' });
 
   function favs() { return new Set(ctx.store.get('favs', [])); }
 
@@ -27,9 +27,9 @@ export function render(ctx, root, params) {
     const add = (id, label, icon) => chips.append(chip([h('span.ci', { lang: 'ja' }, icon), ' ', label], !query && cat === id, () => {
       cat = id; query = ''; input.value = ''; ctx.setSetting('phrasesCat', id); draw();
     }, { 'data-cat': id }));
-    add('fav', SPECIAL.fav.ru, SPECIAL.fav.icon);
-    add('hear', SPECIAL.hear.ru, SPECIAL.hear.icon);
-    for (const c of ctx.data.categories) add(c.id, c.ru, c.icon);
+    add('fav', SPECIAL.fav.en, SPECIAL.fav.icon);
+    add('hear', SPECIAL.hear.en, SPECIAL.hear.icon);
+    for (const c of ctx.data.categories) add(c.id, c.en, c.icon);
   }
 
   function current() {
@@ -43,11 +43,11 @@ export function render(ctx, root, params) {
     drawChips();
     clear(list);
     const arr = current();
-    const title = query ? `Найдено: ${arr.length}` : (SPECIAL[cat]?.ru || ctx.data.catById[cat]?.ru || '');
+    const title = query ? `Found: ${arr.length}` : (SPECIAL[cat]?.en || ctx.data.catById[cat]?.en || '');
     list.append(h('h2.section', title));
-    if (cat === 'hear' && !query) list.append(h('p.hint', 'Это вы услышите от персонала. Тренируйте узнавание на слух: «Учёба» → «Слушание».'));
+    if (cat === 'hear' && !query) list.append(h('p.hint', 'Staff will say these to you. Train your ear: Study → Listening.'));
     if (!arr.length) {
-      list.append(h('p.empty', query ? 'Ничего не найдено. Попробуйте по-русски, ромадзи или каной.' : cat === 'fav' ? 'Пока пусто. Нажмите ☆ у фразы, чтобы добавить.' : 'Пусто.'));
+      list.append(h('p.empty', query ? 'Nothing found. Try English, romaji or kana.' : cat === 'fav' ? 'Nothing yet. Tap ☆ on a phrase to add it.' : 'Empty.'));
       return;
     }
     const f = favs();
@@ -67,10 +67,10 @@ export function render(ctx, root, params) {
 
   root.append(
     h('header.top',
-      h('h1', 'Фразы'),
+      h('h1', 'Phrases'),
       h('label.toggle',
         h('input', { type: 'checkbox', checked: s.furigana, on: { change: (e) => { ctx.setSetting('furigana', e.target.checked); draw(); } } }),
-        h('span', 'фуригана')),
+        h('span', 'furigana')),
     ),
     input, chips, list,
   );
@@ -80,7 +80,7 @@ export function render(ctx, root, params) {
 export function phraseCard(ctx, it, isFav, onChange, { collapsed = true } = {}) {
   const s = ctx.settings();
   const favBtn = h('button.btn.icon.fav' + (isFav ? '.on' : ''), {
-    type: 'button', title: isFav ? 'Убрать из избранного' : 'В избранное', 'aria-label': 'Избранное', 'aria-pressed': isFav ? 'true' : 'false',
+    type: 'button', title: isFav ? 'Remove from favorites' : 'Add to favorites', 'aria-label': 'Favorite', 'aria-pressed': isFav ? 'true' : 'false',
     on: {
       click: (e) => {
         e.stopPropagation();
@@ -92,31 +92,31 @@ export function phraseCard(ctx, it, isFav, onChange, { collapsed = true } = {}) 
         const on = ctx.store.get('favs', []).includes(it.id);
         favBtn.classList.toggle('on', on);
         favBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
-        favBtn.title = on ? 'Убрать из избранного' : 'В избранное';
+        favBtn.title = on ? 'Remove from favorites' : 'Add to favorites';
         favBtn.replaceChildren(ico(on ? 'star-fill' : 'star'));
         onChange && onChange();
       },
     },
   }, ico(isFav ? 'star-fill' : 'star'));
   const showBtn = h('button.btn.icon', {
-    type: 'button', title: 'Показать японцу', 'aria-label': 'Показать на весь экран',
-    on: { click: (e) => { e.stopPropagation(); showFullscreen({ lines: [{ ruby: it.ruby }], caption: it.ru, speakText: it.tts || it.ja }); } },
+    type: 'button', title: 'Show to a Japanese person', 'aria-label': 'Show full screen',
+    on: { click: (e) => { e.stopPropagation(); showFullscreen({ lines: [{ ruby: it.ruby }], caption: it.en, speakText: it.tts || it.ja }); } },
   }, ico('show'));
 
   const art = h('article.phrase' + (it.kind === 'hear' ? '.hear' : '') + (collapsed ? '.is-collapsed' : ''), {
     'data-id': it.id,
     ...(collapsed ? { tabindex: '0', 'aria-expanded': 'false' } : {}),
   },
-  it.kind === 'hear' ? h('div.badge', 'Вы услышите') : it.kind === 'pattern' && it.pattern ? h('div.badge.pat', { lang: 'ja' }, it.pattern) : null,
+  it.kind === 'hear' ? h('div.badge', 'You will hear') : it.kind === 'pattern' && it.pattern ? h('div.badge.pat', { lang: 'ja' }, it.pattern) : null,
   h('div.jp', rubyEl(it.ruby, { furigana: s.furigana })),
   h('div.romaji', it.romaji),
-  h('div.ru', it.ru),
+  h('div.en', it.en),
   it.note ? h('div.note', it.note) : null,
   replyBlock(ctx, it),
   h('div.actions', speakButtons(it), showBtn, favBtn),
   );
   if (collapsed) {
-    // Тап раскрывает фразу листом (кнопки, заметка, крупный японский); остальные сворачиваются
+    // Tapping opens the phrase as a sheet (buttons, note, large Japanese); the others collapse
     const toggle = (e) => {
       if (e.target.closest('button, a, input')) return;
       const willOpen = !art.classList.contains('open');
@@ -133,29 +133,29 @@ export function phraseCard(ctx, it, isFav, onChange, { collapsed = true } = {}) 
   return art;
 }
 
-/** «Как ответить» под фразой персонала и «Ответ на: …» под фразой-ответом. */
+/** "How to reply" under a staff phrase and "Reply to: …" under a reply phrase. */
 export function replyBlock(ctx, it) {
   const byId = ctx.data.byId;
   const s = ctx.settings();
   if (it.kind === 'hear' && it.replies?.length) {
     return h('div.replies', { 'data-for': it.id },
-      h('div.replies-title', 'Как ответить:'),
+      h('div.replies-title', 'How to reply:'),
       it.replies.map((rid) => byId[rid]).filter(Boolean).map((r) => h('div.reply', { 'data-id': r.id },
         h('div.reply-text',
           h('span.jp', rubyEl(r.ruby, { furigana: s.furigana })),
           h('span.romaji', r.romaji),
-          h('span.ru', r.ru)),
+          h('span.en', r.en)),
         speakButtons(r))));
   }
   if (it.replyTo?.length) {
     const qs = it.replyTo.map((qid) => byId[qid]).filter(Boolean);
-    return h('div.reply-to', 'Ответ на: ', qs.map((q, i) => [i ? ', ' : '',
-      h('button.linklike', { type: 'button', title: q.ru, on: { click: (e) => { e.stopPropagation(); speakItem(q, 1.0); } } },
+    return h('div.reply-to', 'Reply to: ', qs.map((q, i) => [i ? ', ' : '',
+      h('button.linklike', { type: 'button', title: q.en, on: { click: (e) => { e.stopPropagation(); speakItem(q, 1.0); } } },
         h('span', { lang: 'ja' }, q.ja), ' ', ico('play'))]));
   }
   return null;
 }
 
 export function copyOrToast(text) {
-  navigator.clipboard?.writeText(text).then(() => toast('Скопировано'), () => toast(text));
+  navigator.clipboard?.writeText(text).then(() => toast('Copied'), () => toast(text));
 }

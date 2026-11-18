@@ -1,5 +1,5 @@
 {
- "version": 1,
+ "version": 2,
  "gojuon": [
   [
    {
@@ -682,250 +682,250 @@
  "notes": [
   {
    "mark": "っ / ッ",
-   "ru": "Маленькое цу: удвоение следующей согласной (пауза). きって kitte, カップ kappu."
+   "en": "Small tsu: doubles the next consonant (a short pause). きって kitte, カップ kappu."
   },
   {
    "mark": "ー",
-   "ru": "Удлинитель в катакане: コーヒー kōhī, ビール bīru. В ромадзи — макрон."
+   "en": "Long-vowel mark in katakana: コーヒー kōhī, ビール bīru. Written as a macron in romaji."
   },
   {
    "mark": "ん / ン",
-   "ru": "Слоговое «н». Перед b/p/m звучит как «м»: さんびゃく «самбяку». Перед гласной в ромадзи — n' (kin'en)."
+   "en": "Syllabic n. Before b/p/m it sounds like “m”: さんびゃく “sambyaku”. Before a vowel romaji writes n' (kin'en)."
   },
   {
    "mark": "゛ ゜",
-   "ru": "Дакутэн (озвончение: か→が) и хандакутэн (は→ぱ)."
+   "en": "Dakuten (voicing: か→が) and handakuten (は→ぱ)."
   },
   {
    "mark": "は / を / へ",
-   "ru": "Как частицы читаются wa / o / e."
+   "en": "As particles they are read wa / o / e."
   }
  ],
  "words": [
   {
    "k": "カメラ",
    "r": "kamera",
-   "ru": "камера"
+   "en": "camera"
   },
   {
    "k": "レンズ",
    "r": "renzu",
-   "ru": "объектив"
+   "en": "lens"
   },
   {
    "k": "フィルム",
    "r": "firumu",
-   "ru": "плёнка"
+   "en": "film"
   },
   {
    "k": "ボディ",
    "r": "bodi",
-   "ru": "корпус («тушка»)"
+   "en": "camera body"
   },
   {
    "k": "バッテリー",
    "r": "batterī",
-   "ru": "аккумулятор"
+   "en": "battery"
   },
   {
    "k": "ストラップ",
    "r": "sutorappu",
-   "ru": "ремешок"
+   "en": "strap"
   },
   {
    "k": "フィルター",
    "r": "firutā",
-   "ru": "светофильтр"
+   "en": "filter"
   },
   {
    "k": "シャッター",
    "r": "shattā",
-   "ru": "затвор"
+   "en": "shutter"
   },
   {
    "k": "ズーム",
    "r": "zūmu",
-   "ru": "зум"
+   "en": "zoom"
   },
   {
    "k": "ケース",
    "r": "kēsu",
-   "ru": "чехол"
+   "en": "case"
   },
   {
    "k": "キャップ",
    "r": "kyappu",
-   "ru": "крышка"
+   "en": "lens cap"
   },
   {
    "k": "ジャンク",
    "r": "janku",
-   "ru": "как есть / неисправное"
+   "en": "junk (as-is, broken)"
   },
   {
    "k": "メモリーカード",
    "r": "memorī kādo",
-   "ru": "карта памяти"
+   "en": "memory card"
   },
   {
    "k": "レシート",
    "r": "reshīto",
-   "ru": "чек"
+   "en": "receipt"
   },
   {
    "k": "ポイントカード",
    "r": "pointo kādo",
-   "ru": "бонусная карта"
+   "en": "point card"
   },
   {
    "k": "コンビニ",
    "r": "konbini",
-   "ru": "круглосуточный магазин"
+   "en": "convenience store"
   },
   {
    "k": "スーパー",
    "r": "sūpā",
-   "ru": "супермаркет"
+   "en": "supermarket"
   },
   {
    "k": "レジ",
    "r": "reji",
-   "ru": "касса"
+   "en": "register (checkout)"
   },
   {
    "k": "コーヒー",
    "r": "kōhī",
-   "ru": "кофе"
+   "en": "coffee"
   },
   {
    "k": "ジュース",
    "r": "jūsu",
-   "ru": "сок"
+   "en": "juice"
   },
   {
    "k": "ミルク",
    "r": "miruku",
-   "ru": "молоко"
+   "en": "milk"
   },
   {
    "k": "パン",
    "r": "pan",
-   "ru": "хлеб"
+   "en": "bread"
   },
   {
    "k": "アイスクリーム",
    "r": "aisukurīmu",
-   "ru": "мороженое"
+   "en": "ice cream"
   },
   {
    "k": "チーズ",
    "r": "chīzu",
-   "ru": "сыр"
+   "en": "cheese"
   },
   {
    "k": "ラーメン",
    "r": "rāmen",
-   "ru": "рамэн"
+   "en": "ramen"
   },
   {
    "k": "カレー",
    "r": "karē",
-   "ru": "карри"
+   "en": "curry"
   },
   {
    "k": "メニュー",
    "r": "menyū",
-   "ru": "меню"
+   "en": "menu"
   },
   {
    "k": "セット",
    "r": "setto",
-   "ru": "сет, комплект"
+   "en": "set meal / set"
   },
   {
    "k": "ホテル",
    "r": "hoteru",
-   "ru": "отель"
+   "en": "hotel"
   },
   {
    "k": "チェックイン",
    "r": "chekkuin",
-   "ru": "заселение"
+   "en": "check-in"
   },
   {
    "k": "タクシー",
    "r": "takushī",
-   "ru": "такси"
+   "en": "taxi"
   },
   {
    "k": "バス",
    "r": "basu",
-   "ru": "автобус"
+   "en": "bus"
   },
   {
    "k": "ホーム",
    "r": "hōmu",
-   "ru": "платформа"
+   "en": "platform"
   },
   {
    "k": "エレベーター",
    "r": "erebētā",
-   "ru": "лифт"
+   "en": "elevator"
   },
   {
    "k": "エスカレーター",
    "r": "esukarētā",
-   "ru": "эскалатор"
+   "en": "escalator"
   },
   {
    "k": "トイレ",
    "r": "toire",
-   "ru": "туалет"
+   "en": "toilet"
   },
   {
    "k": "ベビーカー",
    "r": "bebīkā",
-   "ru": "детская коляска"
+   "en": "stroller"
   },
   {
    "k": "タオル",
    "r": "taoru",
-   "ru": "полотенце"
+   "en": "towel"
   },
   {
    "k": "パスポート",
    "r": "pasupōto",
-   "ru": "паспорт"
+   "en": "passport"
   },
   {
    "k": "クレジットカード",
    "r": "kurejitto kādo",
-   "ru": "кредитная карта"
+   "en": "credit card"
   },
   {
    "k": "ティッシュ",
    "r": "tisshu",
-   "ru": "бумажные салфетки"
+   "en": "tissues"
   },
   {
    "k": "デジタル",
    "r": "dejitaru",
-   "ru": "цифровой"
+   "en": "digital"
   },
   {
    "k": "ファミリー",
    "r": "famirī",
-   "ru": "семья (семейный)"
+   "en": "family"
   },
   {
    "k": "ウォッチ",
    "r": "wotchi",
-   "ru": "часы (в названиях)"
+   "en": "watch (in names)"
   },
   {
    "k": "チケット",
    "r": "chiketto",
-   "ru": "билет"
+   "en": "ticket"
   }
  ]
 }

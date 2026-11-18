@@ -18,8 +18,16 @@ const TYPES = {
 export function startServer(port = PORT, { quiet = false } = {}) {
   const server = createServer(async (req, res) => {
     try {
-      let p = decodeURIComponent(new URL(req.url, 'http://x').pathname);
+      const u = new URL(req.url, 'http://x');
+      let p = decodeURIComponent(u.pathname);
+      // Mimic Cloudflare Pages "pretty URLs": /index.html → 308 /, /x.html → 308 /x (the SW must cope with this).
+      if (p.endsWith('.html')) {
+        const target = p.endsWith('/index.html') ? p.slice(0, -'index.html'.length) : p.slice(0, -'.html'.length);
+        res.writeHead(308, { Location: target + u.search }).end();
+        return;
+      }
       if (p.endsWith('/')) p += 'index.html';
+      else if (!extname(p)) p += '.html'; // /diag → diag.html
       const file = normalize(join(ROOT, p));
       if (!file.startsWith(ROOT + sep) && file !== ROOT) { res.writeHead(403).end(); return; }
       const st = await stat(file).catch(() => null);

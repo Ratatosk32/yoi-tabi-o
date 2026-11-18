@@ -1,5 +1,6 @@
-// Локальное хранилище: localStorage c try/catch и запасным in-memory вариантом.
-// Можно передать свой backend (для тестов в Node).
+// Local storage: localStorage with try/catch and an in-memory fallback.
+// A custom backend can be passed (for tests in Node).
+import { migrateSrsKeys } from './srs.js';
 
 const PREFIX = 'jt.';
 export const KEYS = ['favs', 'srs', 'settings', 'cards', 'userItems', 'history', 'quizStats'];
@@ -11,6 +12,22 @@ function memoryBackend() {
     setItem: (k, v) => { m.set(k, String(v)); },
     removeItem: (k) => { m.delete(k); },
   };
+}
+
+/**
+ * Bring data saved by older versions up to date:
+ * SRS keys "id|ja2ru" / "id|ru2ja" → "id|ja2en" / "id|en2ja"; user phrases { ru } → { en }.
+ */
+export function migrateValue(key, v) {
+  if (key === 'srs') return migrateSrsKeys(v);
+  if (key === 'userItems' && Array.isArray(v)) {
+    return v.map((x) => {
+      if (!isPlainObject(x) || !('ru' in x)) return x;
+      const { ru, ...rest } = x;
+      return { ...rest, en: rest.en || ru };
+    });
+  }
+  return v;
 }
 
 export function createStore(backend) {
@@ -28,13 +45,15 @@ export function createStore(backend) {
 
   function get(key, fallback) {
     if (cache.has(key)) return cache.get(key);
-    let v = fallback;
     try {
       const raw = be.getItem(PREFIX + key);
-      if (raw != null) v = JSON.parse(raw);
-    } catch { /* повреждённые данные — используем fallback */ }
-    cache.set(key, v);
-    return v;
+      if (raw != null) {
+        const v = JSON.parse(raw);
+        cache.set(key, v); // cache only real stored values, never the caller's fallback
+        return v;
+      }
+    } catch { /* corrupted data — use the fallback */ }
+    return fallback;
   }
 
   function set(key, value) {
@@ -48,8 +67,20 @@ export function createStore(backend) {
     return next;
   }
 
+  /** Migrate stored data from older versions in place. Returns the list of migrated keys. */
+  function migrate() {
+    const changed = [];
+    for (const k of ['srs', 'userItems']) {
+      const v = get(k, undefined);
+      if (v === undefined) continue;
+      const m = migrateValue(k, v);
+      if (JSON.stringify(m) !== JSON.stringify(v)) { set(k, m); changed.push(k); }
+    }
+    return changed;
+  }
+
   function exportAll() {
-    const out = { app: 'japan-trip', format: 1, exportedAt: new Date().toISOString(), data: {} };
+    const out = { app: 'japan-trip', format: 2, exportedAt: new Date().toISOString(), data: {} };
     for (const k of KEYS) {
       const v = get(k, undefined);
       if (v !== undefined) out.data[k] = v;
@@ -57,8 +88,11 @@ export function createStore(backend) {
     return out;
   }
 
-  /** Импорт: объект или JSON-строка формата exportAll(). mode: 'replace' | 'merge'.
-   *  Поля неверного типа пропускаются (B6), пустые массивы не стирают текущие данные (B1). */
+  /**
+   * Import: an object or JSON string in exportAll() format (format 1 backups are migrated).
+   * mode: 'replace' | 'merge'. Fields of the wrong type are skipped (QA B6);
+   * empty arrays don't wipe current data (QA B1).
+   */
   function importAll(input, mode = 'merge') {
     let obj;
     try { obj = typeof input === 'string' ? JSON.parse(input) : input; } catch { obj = null; }
@@ -68,8 +102,8 @@ export function createStore(backend) {
     const changed = [];
     for (const k of KEYS) {
       if (!(k in obj.data)) continue;
-      const incoming = obj.data[k];
-      if (!typeOk(k, incoming)) continue;
+      if (!typeOk(k, obj.data[k])) continue;
+      const incoming = migrateValue(k, obj.data[k]);
       if (mode === 'merge' && isPlainObject(incoming) && isPlainObject(get(k, undefined))) {
         set(k, { ...get(k, {}), ...incoming });
       } else if (mode === 'merge' && Array.isArray(incoming) && Array.isArray(get(k, undefined))) {
@@ -82,12 +116,12 @@ export function createStore(backend) {
     return changed;
   }
 
-  return { get, set, update, exportAll, importAll };
+  return { get, set, update, migrate, exportAll, importAll };
 }
 
 function isPlainObject(v) { return !!v && typeof v === 'object' && !Array.isArray(v); }
 
-// Ожидаемые типы полей резервной копии
+// Expected types of backup fields
 const ARRAY_KEYS = new Set(['favs', 'userItems', 'history']);
 function typeOk(key, v) {
   if (ARRAY_KEYS.has(key)) {
@@ -101,8 +135,8 @@ function typeOk(key, v) {
 const hasIds = (arr) => arr.length > 0 && arr.every((x) => isPlainObject(x) && 'id' in x);
 
 function mergeArrays(a, b) {
-  if (!b.length) return a; // пустой массив в копии не стирает текущие данные
-  // элементы с id — слияние по id (только если оба массива из объектов с id); примитивы — объединение без повторов
+  if (!b.length) return a; // an empty array in the backup doesn't wipe current data
+  // objects with id — merge by id (only if both arrays hold objects with id); primitives — union without duplicates
   if (hasIds(b) && (a.length === 0 || hasIds(a))) {
     const m = new Map(a.filter((x) => x && x.id).map((x) => [x.id, x]));
     for (const x of b) m.set(x.id, x);

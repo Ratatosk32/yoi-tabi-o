@@ -1,39 +1,39 @@
-// Вкладка «Показать»: карточки для японца на весь экран.
-// Личные данные (аллергия, адрес отеля) — ЗАГЛУШКИ, пользователь заполняет сам; хранятся только в этом браузере.
+// Show tab: full-screen cards for Japanese people.
+// Personal data (allergy, hotel address) are PLACEHOLDERS the user fills in; stored only in this browser.
 import { h, clear, showFullscreen, rubyEl, toast } from './ui.js';
 
 export const ALLERGENS = [
-  { id: 'tamago', ja: '卵', ruby: '卵[たまご]', ru: 'яйца' },
-  { id: 'nyu', ja: '乳製品', ruby: '乳製品[にゅうせいひん]', ru: 'молочное' },
-  { id: 'komugi', ja: '小麦', ruby: '小麦[こむぎ]', ru: 'пшеница' },
-  { id: 'soba', ja: 'そば', ruby: 'そば', ru: 'гречиха (соба)' },
-  { id: 'rakkasei', ja: '落花生', ruby: '落花生[らっかせい]', ru: 'арахис' },
-  { id: 'nuts', ja: 'ナッツ類', ruby: 'ナッツ類[るい]', ru: 'орехи' },
-  { id: 'kurumi', ja: 'くるみ', ruby: 'くるみ', ru: 'грецкий орех' },
-  { id: 'ebi', ja: 'えび', ruby: 'えび', ru: 'креветки' },
-  { id: 'kani', ja: 'かに', ruby: 'かに', ru: 'краб' },
-  { id: 'sakana', ja: '魚', ruby: '魚[さかな]', ru: 'рыба' },
-  { id: 'goma', ja: 'ごま', ruby: 'ごま', ru: 'кунжут' },
-  { id: 'daizu', ja: '大豆', ruby: '大豆[だいず]', ru: 'соя' },
+  { id: 'tamago', ja: '卵', ruby: '卵[たまご]', en: 'egg' },
+  { id: 'nyu', ja: '乳製品', ruby: '乳製品[にゅうせいひん]', en: 'dairy' },
+  { id: 'komugi', ja: '小麦', ruby: '小麦[こむぎ]', en: 'wheat' },
+  { id: 'soba', ja: 'そば', ruby: 'そば', en: 'buckwheat (soba)' },
+  { id: 'rakkasei', ja: '落花生', ruby: '落花生[らっかせい]', en: 'peanut' },
+  { id: 'nuts', ja: 'ナッツ類', ruby: 'ナッツ類[るい]', en: 'nuts' },
+  { id: 'kurumi', ja: 'くるみ', ruby: 'くるみ', en: 'walnut' },
+  { id: 'ebi', ja: 'えび', ruby: 'えび', en: 'shrimp' },
+  { id: 'kani', ja: 'かに', ruby: 'かに', en: 'crab' },
+  { id: 'sakana', ja: '魚', ruby: '魚[さかな]', en: 'fish' },
+  { id: 'goma', ja: 'ごま', ruby: 'ごま', en: 'sesame' },
+  { id: 'daizu', ja: '大豆', ruby: '大豆[だいず]', en: 'soy' },
 ];
 
-/** Сгенерировать текст карточки аллергии. Возвращает null, если не заполнено. */
+/** Build the allergy card text. Returns null when nothing is selected. */
 export function allergyText(card) {
   const chosen = ALLERGENS.filter((a) => card?.allergens?.includes(a.id));
   if (!chosen.length) return null;
   const who = card.who === 'me' ? '私[わたし]' : 'この子[こ]';
-  const whoRu = card.who === 'me' ? 'У меня' : 'У этого ребёнка';
+  const whoEn = card.who === 'me' ? 'I am' : 'This child is';
   const list = chosen.map((a) => a.ruby).join('・');
   const lines = [
     `${who}には${list}のアレルギーがあります。`,
-    // при нескольких аллергенах не повторяем список — короче и помещается на экран (B3)
+    // with several allergens don't repeat the list — shorter and fits on screen (QA B3)
     `${chosen.length > 1 ? 'これら' : list}が入[はい]った料理[りょうり]は食[た]べられません。`,
   ];
   if (card.strict) lines.push('少量[しょうりょう]でも危険[きけん]です。');
   lines.push('入[はい]っているかどうか確認[かくにん]していただけますか。');
-  const ru = `${whoRu} аллергия: ${chosen.map((a) => a.ru).join(', ')}. Блюда с этим есть нельзя.` +
-    (card.strict ? ' Опасно даже в малом количестве.' : '') + ' Проверьте, пожалуйста, есть ли это в блюде.';
-  return { lines, ru };
+  const en = `${whoEn} allergic to: ${chosen.map((a) => a.en).join(', ')}. Cannot eat dishes containing them.` +
+    (card.strict ? ' Even a small amount is dangerous.' : '') + ' Please check whether the dish contains them.';
+  return { lines, en };
 }
 
 export function hotelText(card) {
@@ -42,21 +42,21 @@ export function hotelText(card) {
   if (card.name) lines.push(card.name);
   if (card.address) lines.push(card.address);
   if (card.phone) lines.push('☎ ' + card.phone);
-  return { lines, ru: 'Отвезите, пожалуйста, в этот отель.' };
+  return { lines, en: 'Please take me to this hotel.' };
 }
 
 export function render(ctx, root) {
   const cards = () => ctx.store.get('cards', {});
   const saveCard = (key, val) => ctx.store.update('cards', {}, (c) => ({ ...c, [key]: val }));
 
-  root.append(h('header.top', h('h1', 'Показать японцу')),
-    h('p.hint', 'Карточка открывается на весь экран, экран не гаснет. «Назад» закрывает карточку.'));
+  root.append(h('header.top', h('h1', 'Show')),
+    h('p.hint', 'Cards open full screen and keep the screen on. Back closes the card.'));
 
-  // --- Мои карточки ---
-  const mine = h('section.block', h('h2.section', 'Мои карточки'));
+  // --- My cards ---
+  const mine = h('section.block', h('h2.section', 'My cards'));
   root.append(mine);
 
-  // Аллергия
+  // Allergy
   const allergyBox = h('div.card.edit#card-allergy');
   mine.append(allergyBox);
   function drawAllergy() {
@@ -64,10 +64,10 @@ export function render(ctx, root) {
     const c = cards().allergy || { who: 'child', allergens: [], strict: true };
     const gen = allergyText(c);
     allergyBox.append(
-      h('div.card-head', h('strong', 'Аллергия'), gen ? null : h('span.warn', 'НЕ ЗАПОЛНЕНО')),
+      h('div.card-head', h('strong', 'Allergy'), gen ? null : h('span.warn', 'NOT FILLED IN')),
       h('div.row',
-        h('label', h('input', { type: 'radio', name: 'who', checked: c.who !== 'me', on: { change: () => { saveCard('allergy', { ...c, who: 'child' }); drawAllergy(); } } }), ' у ребёнка'),
-        h('label', h('input', { type: 'radio', name: 'who', checked: c.who === 'me', on: { change: () => { saveCard('allergy', { ...c, who: 'me' }); drawAllergy(); } } }), ' у меня')),
+        h('label', h('input', { type: 'radio', name: 'who', checked: c.who !== 'me', on: { change: () => { saveCard('allergy', { ...c, who: 'child' }); drawAllergy(); } } }), ' my child'),
+        h('label', h('input', { type: 'radio', name: 'who', checked: c.who === 'me', on: { change: () => { saveCard('allergy', { ...c, who: 'me' }); drawAllergy(); } } }), ' me')),
       h('div.checks', ALLERGENS.map((a) => h('label.check',
         h('input', { type: 'checkbox', checked: c.allergens.includes(a.id), on: { change: (e) => {
           const set = new Set(c.allergens);
@@ -75,16 +75,16 @@ export function render(ctx, root) {
           saveCard('allergy', { ...c, allergens: [...set] });
           drawAllergy();
         } } }),
-        ' ', h('span', { lang: 'ja' }, a.ja), ' ', h('small', a.ru)))),
-      h('label.check', h('input', { type: 'checkbox', checked: !!c.strict, on: { change: (e) => { saveCard('allergy', { ...c, strict: e.target.checked }); drawAllergy(); } } }), ' опасно даже в малом количестве'),
-      gen ? h('div.preview', gen.lines.map((l) => h('p', rubyEl(l, { furigana: true })))) : h('p.hint', 'Отметьте аллергены — японский текст соберётся автоматически.'),
+        ' ', h('span', { lang: 'ja' }, a.ja), ' ', h('small', a.en)))),
+      h('label.check', h('input', { type: 'checkbox', checked: !!c.strict, on: { change: (e) => { saveCard('allergy', { ...c, strict: e.target.checked }); drawAllergy(); } } }), ' even a small amount is dangerous'),
+      gen ? h('div.preview', gen.lines.map((l) => h('p', rubyEl(l, { furigana: true })))) : h('p.hint', 'Tick the allergens — the Japanese text is built automatically.'),
       h('div.actions',
-        h('button.btn.primary', { type: 'button', disabled: !gen, on: { click: () => gen && showFullscreen({ lines: gen.lines.map((ruby) => ({ ruby })), caption: gen.ru }) } }, 'Показать')),
+        h('button.btn.primary', { type: 'button', disabled: !gen, on: { click: () => gen && showFullscreen({ lines: gen.lines.map((ruby) => ({ ruby })), caption: gen.en }) } }, 'Show')),
     );
   }
   drawAllergy();
 
-  // Адрес отеля
+  // Hotel address
   const hotelBox = h('div.card.edit#card-hotel');
   mine.append(hotelBox);
   function drawHotel() {
@@ -96,41 +96,41 @@ export function render(ctx, root) {
       return h('label.field', h('span', label), multiline ? h('textarea', { rows: 3, ...attrs }) : h('input', { type: 'text', ...attrs }));
     };
     hotelBox.append(
-      h('div.card-head', h('strong', 'Адрес отеля (для такси)'), gen ? null : h('span.warn', 'НЕ ЗАПОЛНЕНО')),
-      h('p.hint', 'Скопируйте название и адрес ПО-ЯПОНСКИ из подтверждения брони или с сайта отеля (Google Maps → карточка отеля).'),
-      field('name', 'Название отеля (по-японски)', 'например: 〇〇ホテル新宿'),
-      field('address', 'Адрес (по-японски)', '〒000-0000 東京都…', true),
-      field('phone', 'Телефон отеля', '03-0000-0000'),
+      h('div.card-head', h('strong', 'Hotel address (for taxis)'), gen ? null : h('span.warn', 'NOT FILLED IN')),
+      h('p.hint', 'Copy the name and address IN JAPANESE from your booking confirmation or the hotel website (Google Maps → hotel page).'),
+      field('name', 'Hotel name (in Japanese)', 'e.g. 〇〇ホテル新宿'),
+      field('address', 'Address (in Japanese)', '〒000-0000 東京都…', true),
+      field('phone', 'Hotel phone', '03-0000-0000'),
       h('div.actions',
-        h('button.btn.primary', { type: 'button', disabled: !gen, on: { click: () => gen && showFullscreen({ lines: gen.lines.map((t, i) => (i === 0 ? { ruby: t } : { text: t, small: i > 1 })), caption: gen.ru }) } }, 'Показать')),
+        h('button.btn.primary', { type: 'button', disabled: !gen, on: { click: () => gen && showFullscreen({ lines: gen.lines.map((t, i) => (i === 0 ? { ruby: t } : { text: t, small: i > 1 })), caption: gen.en }) } }, 'Show')),
     );
   }
   drawHotel();
 
-  // Свободный текст
+  // Free text
   const free = cards().free || '';
-  const ta = h('textarea#free-text', { rows: 3, lang: 'ja', placeholder: 'Вставьте японский текст (например, из Google Переводчика)', value: free });
+  const ta = h('textarea#free-text', { rows: 3, lang: 'ja', placeholder: 'Paste Japanese text (e.g. from Google Translate)', value: free });
   mine.append(h('div.card.edit',
-    h('div.card-head', h('strong', 'Свой текст')),
+    h('div.card-head', h('strong', 'Your own text')),
     ta,
     h('div.actions',
       h('button.btn.primary', { type: 'button', on: { click: () => {
         const v = ta.value.trim();
         saveCard('free', v);
-        if (!v) return toast('Сначала вставьте текст');
+        if (!v) return toast('Paste some text first');
         showFullscreen({ lines: [{ text: v }], speakText: v });
-      } } }, 'Показать'),
+      } } }, 'Show'),
       h('button.btn', { type: 'button', on: { click: async () => {
-        try { ta.value = await navigator.clipboard.readText(); saveCard('free', ta.value.trim()); } catch { toast('Нет доступа к буферу — вставьте долгим нажатием'); }
-      } } }, 'Вставить из буфера')),
+        try { ta.value = await navigator.clipboard.readText(); saveCard('free', ta.value.trim()); } catch { toast('No clipboard access — long-press to paste'); }
+      } } }, 'Paste from clipboard')),
   ));
 
-  // --- Готовые карточки ---
-  const ready = h('section.block', h('h2.section', 'Готовые карточки'));
+  // --- Ready-made cards ---
+  const ready = h('section.block', h('h2.section', 'Ready-made cards'));
   for (const it of ctx.allItems().filter((x) => x.kind === 'card')) {
-    ready.append(h('button.card.showcard', { type: 'button', 'data-id': it.id, on: { click: () => showFullscreen({ lines: [{ ruby: it.ruby }], caption: it.ru, speakText: it.ja }) } },
+    ready.append(h('button.card.showcard', { type: 'button', 'data-id': it.id, on: { click: () => showFullscreen({ lines: [{ ruby: it.ruby }], caption: it.en, speakText: it.ja }) } },
       h('div.jp', rubyEl(it.ruby, { furigana: false })),
-      h('div.ru', it.ru)));
+      h('div.en', it.en)));
   }
   root.append(ready);
 }

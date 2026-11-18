@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Диагностика · Japan Trip</title>
+  <title>Diagnostics · Japan Trip</title>
   <meta name="robots" content="noindex">
   <meta name="color-scheme" content="light dark">
   <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -27,53 +27,53 @@
 </head>
 <body>
 <main id="view">
-  <header class="top"><h1>Диагностика</h1><a class="btn small" href="./">← В приложение</a></header>
-  <p class="hint">Откройте эту страницу на каждом телефоне. Сначала нажмите кнопки-тесты, потом отметьте результат в колонке своего устройства и нажмите «Скопировать отчёт».</p>
-  <p class="small">Устройство: <strong id="plat"></strong></p>
+  <header class="top"><h1>Diagnostics</h1><a class="btn small" href="./">← Back to the app</a></header>
+  <p class="hint">Open this page on each phone. Run the test buttons, mark the result in your device’s column, then tap “Copy report”.</p>
+  <p class="small">Device: <strong id="plat"></strong></p>
 
   <section class="card">
-    <h2 class="section">1. Японский голос (TTS)</h2>
-    <div class="t"><button class="btn" id="voices">Показать голоса</button><span class="res" id="voices-res"></span></div>
+    <h2 class="section">1. Japanese voice (TTS)</h2>
+    <div class="t"><button class="btn" id="voices">List voices</button><span class="res" id="voices-res"></span></div>
     <div id="voices-table"></div>
     <div class="t">
       <button class="btn" data-say="袋はご利用ですか">▶︎ 袋はご利用ですか</button>
       <button class="btn" data-say="12800円">▶︎ 12800円</button>
       <button class="btn" data-say="じゅっぷん">▶︎ じゅっぷん</button>
     </div>
-    <p class="small">12800円 должно звучать «итиман нисэн хаппяку эн» (いちまんにせんはっぴゃくえん). Затем включите авиарежим и повторите.</p>
+    <p class="small">12800円 should sound like “ichiman nisen happyaku en” (いちまんにせんはっぴゃくえん). Then turn on airplane mode and repeat.</p>
   </section>
 
   <section class="card">
-    <h2 class="section">2. Google Lens / камера</h2>
+    <h2 class="section">2. Google Lens / camera</h2>
     <div class="t" id="lens-links"></div>
   </section>
 
   <section class="card">
-    <h2 class="section">3. Google Переводчик</h2>
+    <h2 class="section">3. Google Translate</h2>
     <div class="t" id="tr-links"></div>
   </section>
 
   <section class="card">
-    <h2 class="section">4. MyMemory (CORS, только онлайн)</h2>
-    <div class="t"><button class="btn" id="mm">Проверить запрос</button><span class="res" id="mm-res"></span></div>
+    <h2 class="section">4. MyMemory (CORS, online only)</h2>
+    <div class="t"><button class="btn" id="mm">Test request</button><span class="res" id="mm-res"></span></div>
   </section>
 
   <section class="card">
-    <h2 class="section">5. Экран, офлайн, хранилище</h2>
-    <div class="t"><button class="btn" id="wl">Wake Lock на 2 минуты</button><span class="res" id="wl-res"></span></div>
-    <div class="t"><button class="btn" id="sw">Статус Service Worker</button><span class="res" id="sw-res"></span></div>
-    <div class="t"><button class="btn" id="st">Хранилище</button><span class="res" id="st-res"></span></div>
+    <h2 class="section">5. Screen, offline, storage</h2>
+    <div class="t"><button class="btn" id="wl">Wake Lock for 2 minutes</button><span class="res" id="wl-res"></span></div>
+    <div class="t"><button class="btn" id="sw">Service Worker status</button><span class="res" id="sw-res"></span></div>
+    <div class="t"><button class="btn" id="st">Storage</button><span class="res" id="st-res"></span></div>
   </section>
 
   <section class="card">
-    <h2 class="section">Результаты</h2>
-    <table id="checks"><thead><tr><th>Проверка</th><th>Pixel</th><th>iPhone</th></tr></thead><tbody></tbody></table>
+    <h2 class="section">Results</h2>
+    <table id="checks"><thead><tr><th>Check</th><th>Pixel</th><th>iPhone</th></tr></thead><tbody></tbody></table>
   </section>
 
   <section class="card">
-    <h2 class="section">Отчёт</h2>
+    <h2 class="section">Report</h2>
     <textarea id="log" readonly></textarea>
-    <div class="t"><button class="btn primary" id="copy">Скопировать отчёт</button></div>
+    <div class="t"><button class="btn primary" id="copy">Copy report</button></div>
   </section>
 </main>
 <script type="module">
@@ -83,29 +83,29 @@
   const $ = (s) => document.querySelector(s);
   const PLAT = L.PLATFORM; // 'android' | 'ios' | 'other'
   const COL = PLAT === 'ios' ? 'iphone' : 'pixel';
-  $('#plat').textContent = PLAT === 'ios' ? 'iPhone (Safari)' : PLAT === 'android' ? 'Android (Chrome)' : 'другое (' + navigator.platform + ')';
+  $('#plat').textContent = PLAT === 'ios' ? 'iPhone (Safari)' : PLAT === 'android' ? 'Android (Chrome)' : 'other (' + navigator.platform + ')';
   const standalone = matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
   const report = { platform: PLAT, standalone, ua: navigator.userAgent, time: new Date().toISOString(), checks: {}, notes: {} };
   const log = () => { $('#log').value = JSON.stringify(report, null, 1); };
   const note = (k, v) => { report.notes[k] = v; log(); };
 
-  // Таблица проверок: [ключ, текст, где применимо]
+  // Checks table: [key, label, where it applies]
   const CHECKS = [
-    ['tts-online', 'Японский голос звучит (онлайн)', ['pixel', 'iphone']],
-    ['tts-offline', 'Японский голос звучит в авиарежиме', ['pixel', 'iphone']],
-    ['tts-12800', '12800円 читается правильно', ['pixel', 'iphone']],
-    ['lens-1', 'Lens: вариант 1 открыл камеру', ['pixel', 'iphone']],
-    ['lens-2', 'Lens: вариант 2 открыл камеру', ['pixel', 'iphone']],
-    ['lens-3', 'Lens: вариант 3 полезен', ['pixel']],
-    ['live-text', 'Камера → Live Text → «Перевести» японский', ['iphone']],
-    ['circle', 'Circle to Search переводит экран', ['pixel']],
-    ['tr-web', 'Ссылка Переводчика открыла ПРИЛОЖЕНИЕ', ['pixel', 'iphone']],
-    ['tr-app', 'Кнопка «приложение» открыла Переводчик с текстом', ['pixel', 'iphone']],
-    ['tr-share', '«Поделиться» показал Переводчик', ['pixel', 'iphone']],
-    ['wakelock', 'Экран не гас 2 минуты (Wake Lock)', ['pixel', 'iphone']],
-    ['install', 'Установлено на домашний экран', ['pixel', 'iphone']],
-    ['offline-start', 'С иконки открывается в авиарежиме', ['pixel', 'iphone']],
-    ['backup', 'Копия прогресса скачалась и восстановилась', ['pixel', 'iphone']],
+    ['tts-online', 'Japanese voice speaks (online)', ['pixel', 'iphone']],
+    ['tts-offline', 'Japanese voice speaks in airplane mode', ['pixel', 'iphone']],
+    ['tts-12800', '12800円 is read correctly', ['pixel', 'iphone']],
+    ['lens-1', 'Lens: option 1 opened the camera', ['pixel', 'iphone']],
+    ['lens-2', 'Lens: option 2 opened the camera', ['pixel', 'iphone']],
+    ['lens-3', 'Lens: option 3 is useful', ['pixel']],
+    ['live-text', 'Camera → Live Text → Translate Japanese', ['iphone']],
+    ['circle', 'Circle to Search translates the screen', ['pixel']],
+    ['tr-web', 'Translate link opened the APP', ['pixel', 'iphone']],
+    ['tr-app', 'App button opened Translate with the text', ['pixel', 'iphone']],
+    ['tr-share', 'Share sheet offered Translate', ['pixel', 'iphone']],
+    ['wakelock', 'Screen stayed on for 2 minutes (Wake Lock)', ['pixel', 'iphone']],
+    ['install', 'Installed on the home screen', ['pixel', 'iphone']],
+    ['offline-start', 'Opens from the icon in airplane mode', ['pixel', 'iphone']],
+    ['backup', 'Backup downloaded and restored', ['pixel', 'iphone']],
   ];
   const tbody = $('#checks tbody');
   for (const [key, label, where] of CHECKS) {
@@ -113,11 +113,11 @@
     const td = document.createElement('td'); td.textContent = label; tr.append(td);
     for (const col of ['pixel', 'iphone']) {
       const c = document.createElement('td'); c.className = 'col';
-      if (!where.includes(col)) { c.textContent = 'н/п'; c.classList.add('off'); }
-      else if (col !== COL) { c.textContent = '—'; c.classList.add('off'); c.title = 'Отметьте на другом устройстве'; }
+      if (!where.includes(col)) { c.textContent = 'n/a'; c.classList.add('off'); }
+      else if (col !== COL) { c.textContent = '—'; c.classList.add('off'); c.title = 'Mark it on the other device'; }
       else {
         const box = document.createElement('span'); box.className = 'yn';
-        for (const [v, l] of [['yes', 'Да'], ['no', 'Нет']]) {
+        for (const [v, l] of [['yes', 'Yes'], ['no', 'No']]) {
           const b = document.createElement('button'); b.className = 'btn small'; b.textContent = l;
           b.onclick = () => { report.checks[`${col}:${key}`] = v; box.querySelectorAll('button').forEach((x) => x.classList.remove('primary')); b.classList.add('primary'); log(); };
           box.append(b);
@@ -133,7 +133,7 @@
   $('#voices').onclick = async () => {
     const st = await tts.init();
     const list = tts.listVoices();
-    $('#voices-res').textContent = `голосов: ${list.length}; японский: ${st.hasJapanese ? st.jaVoiceName : 'НЕ НАЙДЕН'}`;
+    $('#voices-res').textContent = `voices: ${list.length}; Japanese: ${st.hasJapanese ? st.jaVoiceName : 'NOT FOUND'}`;
     const ja = list.filter((v) => /^ja/i.test(v.lang));
     const rows = (ja.length ? ja : list.slice(0, 15));
     $('#voices-table').innerHTML = '<table>' + rows.map((v) => `<tr><td>${v.name.replace(/</g, '&lt;')}</td><td>${v.lang}</td><td>${v.local ? 'local' : 'network'}</td></tr>`).join('') + '</table>';
@@ -143,7 +143,7 @@
     b.onclick = () => { tts.speak(b.dataset.say, 1.0).then((r) => note('speak:' + b.dataset.say, r)); };
   });
 
-  // 2. Lens — варианты текущей платформы
+  // 2. Lens — options for the current platform
   const lens = $('#lens-links');
   Object.entries(L.LENS_VARIANTS).forEach(([k, v], i) => {
     const a = document.createElement('a');
@@ -153,37 +153,37 @@
   });
 
   // 3. Translate
-  const sample = 'Где здесь туалет?';
+  const sample = 'Where is the toilet?';
   const tr = $('#tr-links');
   const link = (label, href, blank) => { const a = document.createElement('a'); a.className = 'btn'; a.href = href; a.textContent = label; if (blank) { a.target = '_blank'; a.rel = 'noopener'; } tr.append(a); };
-  link('Ссылка translate.google.com', L.translateUrl(sample), true);
-  link(PLAT === 'ios' ? 'Приложение (googletranslate://)' : 'Приложение (intent)', L.translateAppUrl(sample), false);
-  const sb = document.createElement('button'); sb.className = 'btn'; sb.textContent = 'Поделиться…';
+  link('translate.google.com link', L.translateUrl(sample, 'en', 'ja'), true);
+  link(PLAT === 'ios' ? 'App (googletranslate://)' : 'App (intent)', L.translateAppUrl(sample, 'en', 'ja'), false);
+  const sb = document.createElement('button'); sb.className = 'btn'; sb.textContent = 'Share…';
   sb.onclick = async () => note('share', await L.shareText(sample)); tr.append(sb);
 
   // 4. MyMemory
   $('#mm').onclick = async () => {
     try {
-      const r = await fetch('https://api.mymemory.translated.net/get?q=' + encodeURIComponent('Где туалет?') + '&langpair=ru|ja');
+      const r = await fetch('https://api.mymemory.translated.net/get?q=' + encodeURIComponent('Where is the toilet?') + '&langpair=en|ja');
       const j = await r.json();
       const txt = j?.responseData?.translatedText;
-      $('#mm-res').textContent = `OK (CORS разрешён): ${txt}`;
+      $('#mm-res').textContent = `OK (CORS allowed): ${txt}`;
       note('mymemory', { ok: true, status: r.status, txt, quota: j?.quotaFinished });
     } catch (e) {
-      $('#mm-res').textContent = 'Ошибка: ' + e.message;
+      $('#mm-res').textContent = 'Error: ' + e.message;
       note('mymemory', { ok: false, error: String(e) });
     }
   };
 
   // 5. Wake lock, SW, storage
   $('#wl').onclick = async () => {
-    if (!('wakeLock' in navigator)) { $('#wl-res').textContent = 'API нет в этом браузере'; note('wakeLock', 'unsupported'); return; }
+    if (!('wakeLock' in navigator)) { $('#wl-res').textContent = 'No API in this browser'; note('wakeLock', 'unsupported'); return; }
     try {
       const lock = await navigator.wakeLock.request('screen');
-      $('#wl-res').textContent = 'включён — экран не должен гаснуть 2 минуты';
+      $('#wl-res').textContent = 'on — the screen should stay on for 2 minutes';
       note('wakeLock', 'ok');
       setTimeout(() => lock.release(), 120000);
-    } catch (e) { $('#wl-res').textContent = 'нет: ' + e.message; note('wakeLock', String(e)); }
+    } catch (e) { $('#wl-res').textContent = 'failed: ' + e.message; note('wakeLock', String(e)); }
   };
   $('#sw').onclick = async () => {
     const reg = await navigator.serviceWorker?.getRegistration();
@@ -201,7 +201,7 @@
   };
   $('#copy').onclick = async () => {
     log();
-    try { await navigator.clipboard.writeText($('#log').value); $('#copy').textContent = 'Скопировано'; }
+    try { await navigator.clipboard.writeText($('#log').value); $('#copy').textContent = 'Copied'; }
     catch { $('#log').select(); }
   };
   log();

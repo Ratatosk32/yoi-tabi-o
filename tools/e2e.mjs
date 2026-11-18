@@ -115,9 +115,9 @@ async function main() {
     check(`${vp.name}: нет горизонтальной прокрутки (фразы)`, await noHScroll());
     await shot(`${vp.name}-1-phrases`);
 
-    for (const q of ['ふくろ', 'пакет', 'fukuro']) {
+    for (const q of ['ふくろ', 'bag', 'fukuro']) {
       await evaluate(`(() => { const i = document.querySelector('#phrase-search'); i.value = ${JSON.stringify(q)}; i.dispatchEvent(new Event('input')); })()`);
-      check(`${vp.name}: поиск «${q}» находит «Пакет не нужен»`, await waitFor(`!!document.querySelector('[data-id="konbini.bag-none"]') && document.querySelector('#phrase-list h2').textContent.startsWith('Найдено')`, 3000));
+      check(`${vp.name}: поиск «${q}» находит «Пакет не нужен»`, await waitFor(`!!document.querySelector('[data-id="konbini.bag-none"]') && document.querySelector('#phrase-list h2').textContent.startsWith('Found')`, 3000));
     }
     check(`${vp.name}: у ответа есть «Ответ на: 袋はご利用ですか»`, await evaluate(`/袋はご利用ですか/.test(document.querySelector('[data-id="konbini.bag-none"] .reply-to')?.textContent || '')`));
     await shot(`${vp.name}-2-search`);
@@ -166,7 +166,7 @@ async function main() {
     await waitFor("!!document.querySelector('#time-card input')");
     // счётчик «из N» до и после двух Enter: должен вырасти ровно на 1
     const twoEnters = (card, input, value) => evaluate(`(() => {
-      const total = () => Number((document.querySelector('${card} .sess-head').textContent.match(/из (\\d+)/) || [])[1]);
+      const total = () => Number((document.querySelector('${card} .sess-head').textContent.match(/of (\\d+)/) || [])[1]);
       const before = total();
       const i = document.querySelector('${input}'); i.value = '${value}';
       const enter = () => document.querySelector('${input}').dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
@@ -184,7 +184,7 @@ async function main() {
 
     // Показать
     await navigate(BASE + '#/show');
-    check(`${vp.name}: карточка аллергии — «НЕ ЗАПОЛНЕНО»`, await waitFor("/НЕ ЗАПОЛНЕНО/.test(document.querySelector('#card-allergy').textContent)"));
+    check(`${vp.name}: карточка аллергии — «НЕ ЗАПОЛНЕНО»`, await waitFor("/NOT FILLED IN/.test(document.querySelector('#card-allergy').textContent)"));
     await evaluate("document.querySelector('#card-allergy .checks input').click()");
     check(`${vp.name}: аллергия → японский текст`, await waitFor("/アレルギーがあります/.test(document.querySelector('#card-allergy .preview')?.textContent || '')"));
     await shot(`${vp.name}-7-show`);
@@ -208,7 +208,7 @@ async function main() {
     await cdp.send('Input.dispatchKeyEvent', { type: 'keyDown', key: 'Escape', code: 'Escape', windowsVirtualKeyCode: 27 });
     check(`${vp.name}: B15 Esc закрывает карточку после других клавиш`, await waitFor("!document.querySelector('#fs')", 2000));
     await evaluate("document.querySelectorAll('#card-allergy .checks input').forEach((c) => { if (c.checked) c.click(); })");
-    check(`${vp.name}: личные данные не выдуманы (отель пуст)`, await evaluate("/НЕ ЗАПОЛНЕНО/.test(document.querySelector('#card-hotel').textContent)"));
+    check(`${vp.name}: личные данные не выдуманы (отель пуст)`, await evaluate("/NOT FILLED IN/.test(document.querySelector('#card-hotel').textContent)"));
 
     // Кандзи
     await navigate(BASE + '#/kanji');
@@ -228,14 +228,14 @@ async function main() {
     await evaluate(`(() => {
       const box = document.querySelector('#user-phrases');
       const [ru, ja, kana] = box.querySelectorAll('input');
-      ru.value = 'Тестовая фраза зонтик'; ja.value = '傘はありますか'; kana.value = 'kasa wa arimasu ka';
+      ru.value = 'Test phrase umbrella'; ja.value = '傘はありますか'; kana.value = 'kasa wa arimasu ka';
       kana.dispatchEvent(new Event('input'));
       document.querySelector('#add-phrase').click();
     })()`);
     const ui = await evaluate("JSON.parse(localStorage.getItem('jt.userItems') || '[]')[0] || {}");
     check(`${vp.name}: своя фраза: ромадзи → кана, частица wa → は`, ui.kana === 'かさはありますか' && ui.romaji === 'kasa wa arimasu ka', JSON.stringify(ui));
     await navigate(BASE + '#/phrases');
-    await evaluate(`(() => { const i = document.querySelector('#phrase-search'); i.value = 'зонтик'; i.dispatchEvent(new Event('input')); })()`);
+    await evaluate(`(() => { const i = document.querySelector('#phrase-search'); i.value = 'umbrella'; i.dispatchEvent(new Event('input')); })()`);
     check(`${vp.name}: своя фраза находится поиском`, await waitFor("[...document.querySelectorAll('.phrase')].some((p) => p.dataset.id.startsWith('u.'))", 3000));
 
     // diag

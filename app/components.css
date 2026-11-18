@@ -1,5 +1,5 @@
 /* ============================================================================
- * Japan Trip PWA — components. «Бумага и тушь».
+ * Japan Trip PWA — components. "Paper and ink".
  * Requires tokens.css (and fonts/fonts.css for the two self-hosted subsets).
  *
  * Class names follow the builder's markup in app/modules/*.js, so this file can
@@ -414,7 +414,7 @@ label:has(> input[type=radio]) { display: inline-flex; align-items: center; min-
 .phrase .romaji { margin-top: 2px; }
 /* furigana needs a tall line; take back the half-leading it leaves under the last line */
 .phrase .jp:has(rt), .flash .jp:has(rt) { margin-bottom: -.28em; }
-.phrase .ru {
+.phrase .en {
   margin-top: var(--sp-2);
   font-family: var(--font-read);
   font-size: var(--fs-body);
@@ -438,7 +438,7 @@ label:has(> input[type=radio]) { display: inline-flex; align-items: center; min-
 /* [NEW] optional states. Without them every phrase shows everything (today's markup). */
 .phrase.is-collapsed { cursor: pointer; }
 .phrase.is-collapsed .note, .phrase.is-collapsed .actions { display: none; }
-.phrase.is-collapsed .ru { color: var(--ink-2); }
+.phrase.is-collapsed .en { color: var(--ink-2); }
 .phrase.open {
   margin: var(--sp-3) calc(-1 * var(--sp-3));
   padding: var(--sp-5) var(--sp-3) var(--sp-3);
@@ -450,7 +450,7 @@ label:has(> input[type=radio]) { display: inline-flex; align-items: center; min-
 .phrase.open .jp { font-size: var(--fs-ja-lg); }
 .phrase:has(+ .phrase.open) { border-bottom-color: transparent; }
 
-/* "Как ответить" under a staff phrase, "Ответ на" under an answer: apparatus, not a box */
+/* "How to reply" under a staff phrase, "Reply to" under an answer: apparatus, not a box */
 .replies { margin-top: var(--sp-4); padding-left: var(--sp-3); border-left: 2px solid var(--line-strong); }
 .replies-title {
   margin-bottom: var(--sp-1);
@@ -463,7 +463,7 @@ label:has(> input[type=radio]) { display: inline-flex; align-items: center; min-
 .reply-text .jp { font-family: var(--font-ja-display); font-size: var(--fs-ja-sm); line-height: var(--lh-ja); }
 .reply-text .jp:has(rt) { line-height: 1.9; margin-bottom: -.2em; }
 .reply-text .romaji { font-size: var(--fs-small); margin-top: 0; }
-.reply-text .ru { font-family: var(--font-read); font-size: var(--fs-label); margin-top: 2px; color: var(--ink-2); }
+.reply-text .en { font-family: var(--font-read); font-size: var(--fs-label); margin-top: 2px; color: var(--ink-2); }
 .reply .speak { flex: none; }
 .reply .speak .btn { min-height: 40px; min-width: 40px; width: 40px; }
 .reply .speak .btn::before { content: ""; position: absolute; inset: -4px; }
@@ -495,7 +495,7 @@ label:has(> input[type=radio]) { display: inline-flex; align-items: center; min-
   letter-spacing: .02em; text-transform: none;
 }
 
-/* ---------- 8. "Показать": list + editors ---------- */
+/* ---------- 8. "Show": list + editors ---------- */
 .showcard {
   position: relative;
   display: block; width: 100%;
@@ -512,7 +512,7 @@ label:has(> input[type=radio]) { display: inline-flex; align-items: center; min-
 }
 .showcard:active { background: var(--fill); }
 .showcard .jp { display: block; font-family: var(--font-ja-display); font-size: var(--fs-ja-sm); line-height: var(--lh-ja); }
-.showcard .ru { display: block; margin-top: var(--sp-2); font-family: var(--font-read); font-size: var(--fs-label); color: var(--ink-2); }
+.showcard .en { display: block; margin-top: var(--sp-2); font-family: var(--font-read); font-size: var(--fs-label); color: var(--ink-2); }
 .card.edit .preview {
   margin-top: var(--sp-3); padding: var(--sp-3) var(--sp-4);
   background: var(--show-paper); color: var(--show-ink);
@@ -617,7 +617,7 @@ label:has(> input[type=radio]) { display: inline-flex; align-items: center; min-
 .kcell .kja .ja.big { font-size: inherit; line-height: inherit; }
 .kcell .kkana { margin-top: 2px; font-family: var(--font-ja-ui); font-size: var(--fs-small); color: var(--ink-3); letter-spacing: .02em; }
 .kcell .romaji { font-size: var(--fs-small); }
-.kcell .ru { margin-top: var(--sp-1); font-family: var(--font-read); font-size: var(--fs-label); line-height: 1.35; color: var(--ink); }
+.kcell .en { margin-top: var(--sp-1); font-family: var(--font-read); font-size: var(--fs-label); line-height: 1.35; color: var(--ink); }
 /* [NEW] single-column variant with the kanji in a fixed left column */
 .kgrid.rows { grid-template-columns: minmax(0, 1fr); }
 .kgrid.rows .kcell { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); column-gap: var(--sp-4); align-items: baseline; min-height: 64px; }
@@ -660,8 +660,8 @@ label:has(> input[type=radio]) { display: inline-flex; align-items: center; min-
   padding: var(--sp-6) var(--sp-5);
 }
 .flash .jp { font-family: var(--font-ja-display); font-size: var(--fs-ja-lg); line-height: var(--lh-ja); }
-.ru.big { font-family: var(--font-read); font-size: 1.375rem; line-height: 1.4; }
-.flash .ru { font-family: var(--font-read); }
+.en.big { font-family: var(--font-read); font-size: 1.375rem; line-height: 1.4; }
+.flash .en { font-family: var(--font-read); }
 .prompt { margin: var(--sp-2) 0; text-align: center; font-size: var(--fs-small); color: var(--ink-3); }
 .back {
   margin-top: var(--sp-3); padding-top: var(--sp-4);

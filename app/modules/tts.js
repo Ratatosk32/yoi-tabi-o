@@ -1,5 +1,5 @@
-// Озвучка через Web Speech API (на Android Chrome → системный движок, Speech Services by Google).
-// Не бросает исключений, если API или японского голоса нет (PLAN.md 2a).
+// Speech via the Web Speech API (Android Chrome → system engine, Speech Services by Google).
+// Never throws if the API or a Japanese voice is missing (PLAN.md 2a).
 
 const JA_RE = /^ja([-_]JP)?$/i;
 let voices = [];
@@ -22,7 +22,7 @@ function refresh() {
   jaVoice = ja.find((v) => v.localService) || ja[0] || null;
 }
 
-/** Дождаться списка голосов (асинхронно на Android); максимум ~1.5 с. */
+/** Wait for the voice list (async on Android); at most ~1.5 s. */
 export function init() {
   if (ready) return ready;
   ready = new Promise((resolve) => {
@@ -32,7 +32,7 @@ export function init() {
     if (voices.length) return resolve(status());
     let done = false;
     const finish = () => { if (done) return; done = true; refresh(); resolve(status()); };
-    try { s.addEventListener('voiceschanged', finish, { once: true }); } catch { /* старые движки */ }
+    try { s.addEventListener('voiceschanged', finish, { once: true }); } catch { /* old engines */ }
     setTimeout(() => { refresh(); if (voices.length) finish(); }, 400);
     setTimeout(finish, 1500);
   });
@@ -54,23 +54,23 @@ export function listVoices() {
 }
 
 /**
- * Произнести японский текст. Вызывать из обработчика клика (Chrome требует user activation).
- * Возвращает Promise<'end'|'error:…'|'unsupported'>.
+ * Speak Japanese text. Call from a click handler (Chrome requires user activation).
+ * Returns Promise<'end'|'error:…'|'timeout'|'unsupported'>.
  */
 export function speak(text, rate = 1.0) {
   const s = synth();
   if (!s || !text) return Promise.resolve('unsupported');
   return new Promise((resolve) => {
     try {
-      // На iOS/WebKit cancel() непосредственно перед speak() может «проглотить» новую фразу,
-      // поэтому отменяем только если что-то реально звучит.
+      // On iOS/WebKit cancel() right before speak() can swallow the new utterance,
+      // so cancel only if something is actually speaking.
       if (s.speaking || s.pending) s.cancel();
-      if (!voices.length) refresh(); // iOS отдаёт голоса лениво — пробуем ещё раз в момент жеста
+      if (!voices.length) refresh(); // iOS loads voices lazily — try again during the gesture
       const u = new SpeechSynthesisUtterance(text);
       u.lang = 'ja-JP';
       if (jaVoice) u.voice = jaVoice;
       u.rate = rate;
-      // Некоторые движки не присылают ни onend, ни onerror — страхуемся опросом и таймаутом (заметка QA)
+      // Some engines send neither onend nor onerror — guard with polling and a timeout (QA note)
       let done = false, poll = null, hard = null;
       const finish = (r) => { if (done) return; done = true; clearInterval(poll); clearTimeout(hard); resolve(r); };
       u.onend = () => finish('end');
@@ -79,7 +79,7 @@ export function speak(text, rate = 1.0) {
       const t0 = Date.now();
       poll = setInterval(() => { if (Date.now() - t0 > 800 && !s.speaking && !s.pending) finish('end'); }, 250);
       hard = setTimeout(() => finish('timeout'), 4000 + text.length * 400);
-      // Chrome иногда «засыпает» на паузе — страховка
+      // Chrome sometimes stalls while paused — nudge it
       if (s.paused) s.resume();
     } catch (e) {
       resolve('error:' + (e && e.message ? e.message : e));

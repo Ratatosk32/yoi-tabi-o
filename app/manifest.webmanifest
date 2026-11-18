@@ -1,7 +1,7 @@
 {
-  "name": "Japan Trip — фразы и учёба",
-  "short_name": "Япония",
-  "description": "Разговорник, тренажёр каны, цен и фраз персонала, карточки «показать японцу». Работает офлайн.",
+  "name": "Japan Trip — phrases & study",
+  "short_name": "Japan Trip",
+  "description": "Phrasebook; kana, price and staff-phrase trainer; show-to-a-Japanese-person cards. Works offline.",
   "id": "./",
   "start_url": "./#/phrases",
   "scope": "./",
@@ -9,14 +9,14 @@
   "orientation": "portrait",
   "background_color": "#f5f1e7",
   "theme_color": "#f5f1e7",
-  "lang": "ru",
+  "lang": "en",
   "icons": [
     { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
     { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
     { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ],
   "shortcuts": [
-    { "name": "Показать японцу", "url": "./#/show", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
-    { "name": "Учёба: сегодня", "url": "./#/study/today", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] }
+    { "name": "Show cards", "url": "./#/show", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Study: today", "url": "./#/study/today", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] }
   ]
 }

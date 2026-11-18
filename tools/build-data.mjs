@@ -1,5 +1,5 @@
-// Сборка app/data/*.json из tools/content/*.src.mjs.
-// Запуск: node tools/build-data.mjs   (затем node tools/validate.mjs)
+// Build app/data/*.json from tools/content/*.src.mjs.
+// Run: node tools/build-data.mjs   (then node tools/validate.mjs)
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -16,13 +16,14 @@ const out = (name, data) => {
   return p;
 };
 
-const VERSION = 1;
+// Data format version: 2 = English translations in the `en` field (was `ru` in v1).
+const VERSION = 2;
 const weekOf = Object.fromEntries(CATEGORIES.map((c) => [c.id, c.week]));
-// Слушание: касса конбини — с 1-й недели, ресторан — со 2-й, остальное — с 3-й
+// Listening: convenience-store till from week 1, restaurant from week 2, the rest from week 3
 const HEAR_WEEK = { konbini: 1, food: 2, transport: 3, hotel: 3, shop: 3, family: 3 };
 
-function row([id, ruby, romaji, ru, note, more], extra) {
-  const it = completeItem({ id, ...extra, ru, ruby, romaji });
+function row([id, ruby, romaji, en, note, more], extra) {
+  const it = completeItem({ id, ...extra, en, ruby, romaji });
   if (note) it.note = note;
   if (more && more.tts) it.tts = more.tts;
   return it;
@@ -43,22 +44,22 @@ for (const [key, list] of Object.entries(ITEMS)) {
       if (m) it.pattern = m[1];
     }
     it.tags = tags;
-    // порядок полей как в схеме PLAN.md 3.3
+    // field order as in the schema (PLAN.md 3.3)
     items.push({
-      id: it.id, cat: it.cat, kind: it.kind, ru: it.ru, ja: it.ja, ruby: it.ruby, kana: it.kana, romaji: it.romaji,
+      id: it.id, cat: it.cat, kind: it.kind, en: it.en, ja: it.ja, ruby: it.ruby, kana: it.kana, romaji: it.romaji,
       ...(it.tts ? { tts: it.tts } : {}), ...(it.note ? { note: it.note } : {}), ...(it.pattern ? { pattern: it.pattern } : {}), tags: it.tags,
     });
   }
 }
-// связи «услышал → ответ»: replies у hear, обратные replyTo у say
+// "heard → reply" links: replies on hear items, reverse replyTo on say items
 const byId = new Map(items.map((it) => [it.id, it]));
 for (const [hearId, sayIds] of Object.entries(REPLIES)) {
   const h = byId.get(hearId);
-  if (!h) throw new Error('REPLIES: нет фразы ' + hearId);
+  if (!h) throw new Error('REPLIES: no phrase ' + hearId);
   h.replies = [...sayIds];
   for (const sid of sayIds) {
     const s = byId.get(sid);
-    if (!s) throw new Error('REPLIES: нет ответа ' + sid);
+    if (!s) throw new Error('REPLIES: no reply ' + sid);
     s.replyTo = [...new Set([...(s.replyTo || []), hearId])];
   }
 }
@@ -79,7 +80,7 @@ const p2 = out('kana.json', {
   yoon: grid(KANA.YOON),
   extended: grid(KANA.EXTENDED, true),
   notes: KANA.SPECIAL_NOTES,
-  words: KANA.WORDS.map(([k, r, ru]) => ({ k, r, ru })),
+  words: KANA.WORDS.map(([k, r, en]) => ({ k, r, en })),
 });
 
 // ---------- kanji ----------
@@ -87,7 +88,7 @@ const kanji = [];
 for (const g of GROUPS) {
   for (const r of KANJI[g.id]) {
     const it = row(r, { group: g.id });
-    kanji.push({ id: it.id, group: it.group, ja: it.ja, ruby: it.ruby, kana: it.kana, romaji: it.romaji, ru: it.ru, ...(it.note ? { note: it.note } : {}) });
+    kanji.push({ id: it.id, group: it.group, ja: it.ja, ruby: it.ruby, kana: it.kana, romaji: it.romaji, en: it.en, ...(it.note ? { note: it.note } : {}) });
   }
 }
 const p3 = out('kanji.json', { version: VERSION, groups: GROUPS, items: kanji });

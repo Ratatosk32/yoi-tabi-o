@@ -1,7 +1,7 @@
-// Запуск внешних приложений (PLAN.md 2b, 2c). Все ссылки открываются только по клику пользователя.
-// Android (Pixel/Chrome): intent:// с S.browser_fallback_url.
-// iOS (iPhone/Safari): intent:// не существует → схемы приложений [не подтверждены документацией] и https-ссылки.
-// Какие варианты реально работают — проверяется в diag.html на каждом телефоне (Фаза 0).
+// Launch external apps (PLAN.md 2b, 2c). Links open only on a user tap.
+// Android (Pixel/Chrome): intent:// with S.browser_fallback_url.
+// iOS (iPhone/Safari): no intent:// → app URL schemes [not officially documented] and https links.
+// What actually works is checked on each phone in diag.html (Phase 0).
 
 const enc = encodeURIComponent;
 
@@ -19,21 +19,21 @@ const LENS_WEB = 'https://lens.google.com/';
 export const LENS_VARIANTS_BY_PLATFORM = {
   android: {
     lensApp: {
-      label: 'Lens (пакет com.google.ar.lens)',
+      label: 'Lens (package com.google.ar.lens)',
       url: () => `intent://lens.google.com/#Intent;scheme=https;package=com.google.ar.lens;S.browser_fallback_url=${enc(LENS_WEB)};end`,
     },
     googleApp: {
-      label: 'Lens через приложение Google (googleapp://lens)',
+      label: 'Lens via the Google app (googleapp://lens)',
       url: () => `intent://lens/#Intent;scheme=googleapp;package=com.google.android.googlequicksearchbox;S.browser_fallback_url=${enc(LENS_WEB)};end`,
     },
-    web: { label: 'lens.google.com (веб)', url: () => LENS_WEB },
+    web: { label: 'lens.google.com (web)', url: () => LENS_WEB },
   },
   ios: {
     googleApp: {
-      label: 'Приложение Google (google://) → значок Lens',
+      label: 'Google app (google://) → Lens icon',
       url: () => 'google://',
     },
-    web: { label: 'lens.google.com (веб, может открыть приложение)', url: () => LENS_WEB },
+    web: { label: 'lens.google.com (web, may open the app)', url: () => LENS_WEB },
   },
 };
 LENS_VARIANTS_BY_PLATFORM.other = { web: LENS_VARIANTS_BY_PLATFORM.android.web };
@@ -45,36 +45,36 @@ export function lensVariant(key) {
   return LENS_VARIANTS[key] || LENS_VARIANTS[DEFAULT_LENS] || Object.values(LENS_VARIANTS)[0];
 }
 
-/** Надёжные запасные пути «прочитать надпись» для текущей платформы. */
+/** Reliable fallbacks for "read a sign" on the current platform. */
 export const CAMERA_FALLBACKS = {
   android: [
-    'Значок Lens в поисковой строке Google на домашнем экране.',
-    'Circle to Search: долгое нажатие на полоску навигации / «Домой» и обвести текст (на поддерживаемых Pixel).',
-    'Google Переводчик → «Камера» (офлайн с японским пакетом).',
+    'The Lens icon in the Google search bar on your home screen.',
+    'Circle to Search: long-press the navigation bar / Home and circle the text (supported Pixels).',
+    'Google Translate → Camera (works offline with the Japanese pack).',
   ],
   ios: [
-    'Камера iPhone → навести на текст → значок Live Text (рамка с текстом) → «Перевести» (Apple Translate; скачайте японский язык в приложении «Перевод»).',
-    'Приложение Google → значок камеры (Lens) в строке поиска.',
-    'Google Translate → «Камера» (офлайн с японским пакетом).',
+    'iPhone Camera → point at the text → Live Text icon → Translate (download Japanese in the Translate app).',
+    'Google app → camera (Lens) icon in the search bar.',
+    'Google Translate → Camera (works offline with the Japanese pack).',
   ],
-  other: ['Используйте Google Lens на телефоне.'],
+  other: ['Use Google Lens on your phone.'],
 };
 
 export function translateUrl(text, sl = 'ru', tl = 'ja') {
   return `https://translate.google.com/?sl=${sl}&tl=${tl}&text=${enc(text || '')}&op=translate`;
 }
 
-/** Открыть именно приложение Переводчика: Android — intent с пакетом; iOS — схема googletranslate:// [неофициальная]. */
+/** Open the Translate app itself: Android — intent with the package; iOS — googletranslate:// scheme [unofficial]. */
 export function translateAppUrl(text, sl = 'ru', tl = 'ja', platform = PLATFORM) {
   if (platform === 'ios') return `googletranslate://?sl=${sl}&tl=${tl}&text=${enc(text || '')}`;
-  if (platform !== 'android') return translateUrl(text, sl, tl); // десктоп: без intent:// (B14)
+  if (platform !== 'android') return translateUrl(text, sl, tl); // desktop: no intent:// (QA B14)
   const web = translateUrl(text, sl, tl);
   return `intent://translate.google.com/?sl=${sl}&tl=${tl}&text=${enc(text || '')}&op=translate#Intent;scheme=https;package=com.google.android.apps.translate;S.browser_fallback_url=${enc(web)};end`;
 }
-// старое имя (Android)
+// old name (Android)
 export const translateIntentUrl = (text, sl, tl) => translateAppUrl(text, sl, tl, 'android');
 
-/** Системный лист «Поделиться» — пользователь выбирает Переводчик. */
+/** System share sheet — the user picks Translate. */
 export async function shareText(text) {
   if (!navigator.share) return 'unsupported';
   try { await navigator.share({ text }); return 'ok'; } catch (e) { return e && e.name === 'AbortError' ? 'cancel' : 'error'; }
@@ -93,7 +93,7 @@ export async function copyText(text) {
 }
 
 export function open(url) {
-  // intent:// и схемы приложений — переход в той же вкладке по жесту пользователя
+  // intent:// and app schemes — navigate in the same tab on the user gesture
   if (!/^https?:/i.test(url)) { location.href = url; return; }
   window.open(url, '_blank', 'noopener');
 }
