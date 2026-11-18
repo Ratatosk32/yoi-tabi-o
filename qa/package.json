@@ -1,0 +1,14 @@
+{
+  "name": "japan-trip-qa",
+  "private": true,
+  "type": "module",
+  "description": "Independent QA harness for the japan-trip PWA (oracle, unit, e2e)",
+  "scripts": {
+    "oracle": "node compare-numbers.mjs",
+    "unit": "node unit.mjs",
+    "e2e": "node e2e.mjs"
+  },
+  "dependencies": {
+    "puppeteer-core": "^23.11.1"
+  }
+}
