@@ -7,6 +7,7 @@ import { completeItem } from '../app/modules/text.js';
 import { CATEGORIES, ITEMS, REPLIES } from './content/phrases.src.mjs';
 import * as KANA from './content/kana.src.mjs';
 import { GROUPS, KANJI } from './content/kanji.src.mjs';
+import { GROUPS_EXTRA, KANJI_EXTRA } from '../curriculum/src/kanji-extra.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const out = (name, data) => {
@@ -84,17 +85,26 @@ const p2 = out('kana.json', {
 });
 
 // ---------- kanji ----------
-const kanji = [];
-for (const g of GROUPS) {
-  for (const r of KANJI[g.id]) {
-    const it = row(r, { group: g.id });
-    kanji.push({ id: it.id, group: it.group, ja: it.ja, ruby: it.ruby, kana: it.kana, romaji: it.romaji, en: it.en, ...(it.note ? { note: it.note } : {}) });
-  }
+// Groups: ours, plus the linguist's extra groups (pharmacy goes right after allergen).
+const groups = [...GROUPS];
+for (const g of GROUPS_EXTRA) {
+  if (groups.some((x) => x.id === g.id)) continue;
+  const at = groups.findIndex((x) => x.id === 'allergen');
+  groups.splice(at < 0 ? groups.length : at + 1, 0, g);
 }
-const p3 = out('kanji.json', { version: VERSION, groups: GROUPS, items: kanji });
+const kanji = [];
+const pick = (it) => ({ id: it.id, group: it.group, ja: it.ja, ruby: it.ruby, kana: it.kana, romaji: it.romaji, en: it.en, ...(it.note ? { note: it.note } : {}) });
+for (const g of groups) {
+  for (const r of KANJI[g.id] || []) kanji.push(pick(row(r, { group: g.id })));
+  // curriculum/src/kanji-extra.mjs: appended after our items of the same group, in its own (frequency) order
+  for (const it of KANJI_EXTRA.filter((x) => x.group === g.id)) kanji.push(pick(it));
+}
+const unknown = KANJI_EXTRA.filter((x) => !groups.some((g) => g.id === x.group));
+if (unknown.length) throw new Error('kanji-extra: unknown groups ' + [...new Set(unknown.map((x) => x.group))].join(', '));
+const p3 = out('kanji.json', { version: VERSION, groups, items: kanji });
 
 const byKind = items.reduce((a, it) => ((a[it.kind] = (a[it.kind] || 0) + 1), a), {});
 console.log(`links: ${Object.keys(REPLIES).length} hear → ${items.filter((it) => it.replyTo).length} say`);
 console.log(`phrases: ${items.length} ${JSON.stringify(byKind)} → ${p1}`);
 console.log(`kana: words ${KANA.WORDS.length} → ${p2}`);
-console.log(`kanji: ${kanji.length} → ${p3}`);
+console.log(`kanji: ${kanji.length} (${KANJI_EXTRA.length} from curriculum/src/kanji-extra.mjs) → ${p3}`);

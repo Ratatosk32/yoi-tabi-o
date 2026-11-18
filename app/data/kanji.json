@@ -28,6 +28,10 @@
   {
    "id": "allergen",
    "en": "Allergens (mandatory labels)"
+  },
+  {
+   "id": "pharmacy",
+   "en": "Pharmacy & medicine"
   }
  ],
  "items": [
@@ -205,6 +209,192 @@
    "romaji": "nenmatsu nenshi",
    "en": "New Year holidays",
    "note": "Many places close around Dec 29 – Jan 3."
+  },
+  {
+   "id": "k.toire",
+   "group": "signs",
+   "ja": "トイレ",
+   "ruby": "トイレ",
+   "kana": "トイレ",
+   "romaji": "toire",
+   "en": "toilet"
+  },
+  {
+   "id": "k.keshoshitsu",
+   "group": "signs",
+   "ja": "化粧室",
+   "ruby": "化粧室[けしょうしつ]",
+   "kana": "けしょうしつ",
+   "romaji": "keshōshitsu",
+   "en": "restroom (polite sign)"
+  },
+  {
+   "id": "k.tamokuteki",
+   "group": "signs",
+   "ja": "多目的トイレ",
+   "ruby": "多目的[たもくてき]トイレ",
+   "kana": "たもくてきトイレ",
+   "romaji": "tamokuteki toire",
+   "en": "accessible / family toilet",
+   "note": "Has a baby-changing table; also signed みんなのトイレ."
+  },
+  {
+   "id": "k.shiyochu",
+   "group": "signs",
+   "ja": "使用中",
+   "ruby": "使用中[しようちゅう]",
+   "kana": "しようちゅう",
+   "romaji": "shiyōchū",
+   "en": "occupied, in use"
+  },
+  {
+   "id": "k.koin-rokka",
+   "group": "signs",
+   "ja": "コインロッカー",
+   "ruby": "コインロッカー",
+   "kana": "コインロッカー",
+   "romaji": "koin rokkā",
+   "en": "coin lockers"
+  },
+  {
+   "id": "k.kaidan",
+   "group": "signs",
+   "ja": "階段",
+   "ruby": "階段[かいだん]",
+   "kana": "かいだん",
+   "romaji": "kaidan",
+   "en": "stairs"
+  },
+  {
+   "id": "k.erebeta",
+   "group": "signs",
+   "ja": "エレベーター",
+   "ruby": "エレベーター",
+   "kana": "エレベーター",
+   "romaji": "erebētā",
+   "en": "elevator"
+  },
+  {
+   "id": "k.hiraku",
+   "group": "signs",
+   "ja": "開く",
+   "ruby": "開[ひら]く",
+   "kana": "ひらく",
+   "romaji": "hiraku",
+   "en": "open",
+   "note": "Elevator button: 開 = open the door."
+  },
+  {
+   "id": "k.shimaru",
+   "group": "signs",
+   "ja": "閉まる",
+   "ruby": "閉[し]まる",
+   "kana": "しまる",
+   "romaji": "shimaru",
+   "en": "close",
+   "note": "Elevator button: 閉 = close the door."
+  },
+  {
+   "id": "k.chuoguchi",
+   "group": "signs",
+   "ja": "中央口",
+   "ruby": "中央口[ちゅうおうぐち]",
+   "kana": "ちゅうおうぐち",
+   "romaji": "chūōguchi",
+   "en": "central exit"
+  },
+  {
+   "id": "k.ban-deguchi",
+   "group": "signs",
+   "ja": "〇番出口",
+   "ruby": "〇番出口[ばんでぐち]",
+   "kana": "〇ばんでぐち",
+   "romaji": "〇-ban deguchi",
+   "en": "exit no. 〇",
+   "note": "Subway exits are numbered: A1, B2…"
+  },
+  {
+   "id": "k.uketsuke",
+   "group": "signs",
+   "ja": "受付",
+   "ruby": "受付[うけつけ]",
+   "kana": "うけつけ",
+   "romaji": "uketsuke",
+   "en": "reception"
+  },
+  {
+   "id": "k.annaijo",
+   "group": "signs",
+   "ja": "案内所",
+   "ruby": "案内所[あんないじょ]",
+   "kana": "あんないじょ",
+   "romaji": "annaijo",
+   "en": "information desk",
+   "note": "観光案内所 = tourist information."
+  },
+  {
+   "id": "k.junyushitsu",
+   "group": "signs",
+   "ja": "授乳室",
+   "ruby": "授乳室[じゅにゅうしつ]",
+   "kana": "じゅにゅうしつ",
+   "romaji": "junyūshitsu",
+   "en": "nursing room"
+  },
+  {
+   "id": "k.inshoku-kinshi",
+   "group": "signs",
+   "ja": "飲食禁止",
+   "ruby": "飲食禁止[いんしょくきんし]",
+   "kana": "いんしょくきんし",
+   "romaji": "inshoku kinshi",
+   "en": "no eating or drinking"
+  },
+  {
+   "id": "k.dosoku-kinshi",
+   "group": "signs",
+   "ja": "土足禁止",
+   "ruby": "土足禁止[どそくきんし]",
+   "kana": "どそくきんし",
+   "romaji": "dosoku kinshi",
+   "en": "no outdoor shoes (take shoes off)",
+   "note": "土足厳禁 is the stronger form."
+  },
+  {
+   "id": "k.ashimoto",
+   "group": "signs",
+   "ja": "足元注意",
+   "ruby": "足元注意[あしもとちゅうい]",
+   "kana": "あしもとちゅうい",
+   "romaji": "ashimoto chūi",
+   "en": "watch your step"
+  },
+  {
+   "id": "k.kankeisha",
+   "group": "signs",
+   "ja": "関係者以外立入禁止",
+   "ruby": "関係者以外立入禁止[かんけいしゃいがいたちいりきんし]",
+   "kana": "かんけいしゃいがいたちいりきんし",
+   "romaji": "kankeisha igai tachiiri kinshi",
+   "en": "staff only"
+  },
+  {
+   "id": "k.honjitsu-kyugyo",
+   "group": "signs",
+   "ja": "本日休業",
+   "ruby": "本日休業[ほんじつきゅうぎょう]",
+   "kana": "ほんじつきゅうぎょう",
+   "romaji": "honjitsu kyūgyō",
+   "en": "closed today"
+  },
+  {
+   "id": "k.rinji-kyugyo",
+   "group": "signs",
+   "ja": "臨時休業",
+   "ruby": "臨時休業[りんじきゅうぎょう]",
+   "kana": "りんじきゅうぎょう",
+   "romaji": "rinji kyūgyō",
+   "en": "temporarily closed"
   },
   {
    "id": "k.eki",
@@ -550,6 +740,549 @@
    "kana": "へんぴんふか",
    "romaji": "henpin fuka",
    "en": "no returns"
+  },
+  {
+   "id": "k.reji",
+   "group": "shop",
+   "ja": "レジ",
+   "ruby": "レジ",
+   "kana": "レジ",
+   "romaji": "reji",
+   "en": "register, checkout"
+  },
+  {
+   "id": "k.serufu-reji",
+   "group": "shop",
+   "ja": "セルフレジ",
+   "ruby": "セルフレジ",
+   "kana": "セルフレジ",
+   "romaji": "serufu reji",
+   "en": "self-checkout"
+  },
+  {
+   "id": "k.oshiharai",
+   "group": "shop",
+   "ja": "お支払い",
+   "ruby": "お支払[しはら]い",
+   "kana": "おしはらい",
+   "romaji": "oshiharai",
+   "en": "payment"
+  },
+  {
+   "id": "k.kyasshuresu",
+   "group": "shop",
+   "ja": "キャッシュレス",
+   "ruby": "キャッシュレス",
+   "kana": "キャッシュレス",
+   "romaji": "kyasshuresu",
+   "en": "cashless (card, IC, QR)"
+  },
+  {
+   "id": "k.denshi-mane",
+   "group": "shop",
+   "ja": "電子マネー",
+   "ruby": "電子[でんし]マネー",
+   "kana": "でんしマネー",
+   "romaji": "denshi manē",
+   "en": "e-money (IC cards such as Suica)"
+  },
+  {
+   "id": "k.otsuri",
+   "group": "shop",
+   "ja": "おつり",
+   "ruby": "おつり",
+   "kana": "おつり",
+   "romaji": "otsuri",
+   "en": "change (money back)"
+  },
+  {
+   "id": "k.reshito",
+   "group": "shop",
+   "ja": "レシート",
+   "ruby": "レシート",
+   "kana": "レシート",
+   "romaji": "reshīto",
+   "en": "receipt"
+  },
+  {
+   "id": "k.ryoshusho",
+   "group": "shop",
+   "ja": "領収書",
+   "ruby": "領収書[りょうしゅうしょ]",
+   "kana": "りょうしゅうしょ",
+   "romaji": "ryōshūsho",
+   "en": "formal receipt"
+  },
+  {
+   "id": "k.rejibukuro",
+   "group": "shop",
+   "ja": "レジ袋",
+   "ruby": "レジ袋[ぶくろ]",
+   "kana": "レジぶくろ",
+   "romaji": "reji-bukuro",
+   "en": "plastic shopping bag (paid)"
+  },
+  {
+   "id": "k.pointo",
+   "group": "shop",
+   "ja": "ポイント",
+   "ruby": "ポイント",
+   "kana": "ポイント",
+   "romaji": "pointo",
+   "en": "loyalty points"
+  },
+  {
+   "id": "k.kakaku",
+   "group": "shop",
+   "ja": "価格",
+   "ruby": "価格[かかく]",
+   "kana": "かかく",
+   "romaji": "kakaku",
+   "en": "price"
+  },
+  {
+   "id": "k.nedan",
+   "group": "shop",
+   "ja": "値段",
+   "ruby": "値段[ねだん]",
+   "kana": "ねだん",
+   "romaji": "nedan",
+   "en": "price (everyday word)"
+  },
+  {
+   "id": "k.sale",
+   "group": "shop",
+   "ja": "セール",
+   "ruby": "セール",
+   "kana": "セール",
+   "romaji": "sēru",
+   "en": "sale"
+  },
+  {
+   "id": "k.wari",
+   "group": "shop",
+   "ja": "〇割引",
+   "ruby": "〇割引[わりびき]",
+   "kana": "〇わりびき",
+   "romaji": "〇-waribiki",
+   "en": "〇0 % off",
+   "note": "割 = 10 %: 2割引 = 20 % off, 5割引 = half price."
+  },
+  {
+   "id": "k.ofu",
+   "group": "shop",
+   "ja": "オフ",
+   "ruby": "オフ",
+   "kana": "オフ",
+   "romaji": "ofu",
+   "en": "off (discount)",
+   "note": "30%オフ = 30 % off."
+  },
+  {
+   "id": "k.tokka",
+   "group": "shop",
+   "ja": "特価",
+   "ruby": "特価[とっか]",
+   "kana": "とっか",
+   "romaji": "tokka",
+   "en": "special price"
+  },
+  {
+   "id": "k.otoku",
+   "group": "shop",
+   "ja": "お得",
+   "ruby": "お得[とく]",
+   "kana": "おとく",
+   "romaji": "otoku",
+   "en": "good deal, value"
+  },
+  {
+   "id": "k.gentei",
+   "group": "shop",
+   "ja": "限定",
+   "ruby": "限定[げんてい]",
+   "kana": "げんてい",
+   "romaji": "gentei",
+   "en": "limited (edition, time, quantity)"
+  },
+  {
+   "id": "k.shinshohin",
+   "group": "shop",
+   "ja": "新商品",
+   "ruby": "新商品[しんしょうひん]",
+   "kana": "しんしょうひん",
+   "romaji": "shinshōhin",
+   "en": "new product"
+  },
+  {
+   "id": "k.ninki",
+   "group": "shop",
+   "ja": "人気",
+   "ruby": "人気[にんき]",
+   "kana": "にんき",
+   "romaji": "ninki",
+   "en": "popular",
+   "note": "人気No.1 = best seller."
+  },
+  {
+   "id": "k.osusume",
+   "group": "shop",
+   "ja": "おすすめ",
+   "ruby": "おすすめ",
+   "kana": "おすすめ",
+   "romaji": "osusume",
+   "en": "recommended"
+  },
+  {
+   "id": "k.kanbai",
+   "group": "shop",
+   "ja": "完売",
+   "ruby": "完売[かんばい]",
+   "kana": "かんばい",
+   "romaji": "kanbai",
+   "en": "sold out"
+  },
+  {
+   "id": "k.shinagire",
+   "group": "shop",
+   "ja": "品切れ",
+   "ruby": "品切[しなぎ]れ",
+   "kana": "しなぎれ",
+   "romaji": "shinagire",
+   "en": "out of stock"
+  },
+  {
+   "id": "k.toriyose",
+   "group": "shop",
+   "ja": "取り寄せ",
+   "ruby": "取[と]り寄[よ]せ",
+   "kana": "とりよせ",
+   "romaji": "toriyose",
+   "en": "special order (ordered in for you)"
+  },
+  {
+   "id": "k.yoyaku-uketsuke",
+   "group": "shop",
+   "ja": "予約受付中",
+   "ruby": "予約受付中[よやくうけつけちゅう]",
+   "kana": "よやくうけつけちゅう",
+   "romaji": "yoyaku uketsukechū",
+   "en": "taking pre-orders"
+  },
+  {
+   "id": "k.hitori-made",
+   "group": "shop",
+   "ja": "お一人様〇点まで",
+   "ruby": "お一人様[ひとりさま]〇点[てん]まで",
+   "kana": "おひとりさま〇てんまで",
+   "romaji": "ohitori-sama 〇-ten made",
+   "en": "limit 〇 per customer"
+  },
+  {
+   "id": "k.koiri",
+   "group": "shop",
+   "ja": "〇個入り",
+   "ruby": "〇個入[こい]り",
+   "kana": "〇こいり",
+   "romaji": "〇-ko-iri",
+   "en": "pack of 〇"
+  },
+  {
+   "id": "k.uriba",
+   "group": "shop",
+   "ja": "売り場",
+   "ruby": "売[う]り場[ば]",
+   "kana": "うりば",
+   "romaji": "uriba",
+   "en": "sales floor, section"
+  },
+  {
+   "id": "k.kai-floor",
+   "group": "shop",
+   "ja": "〇階",
+   "ruby": "〇階[かい]",
+   "kana": "〇かい",
+   "romaji": "〇-kai",
+   "en": "floor 〇",
+   "note": "Sound changes: 1 いっかい, 3 さんがい, 6 ろっかい, 8 はっかい, 10 じゅっかい."
+  },
+  {
+   "id": "k.chika",
+   "group": "shop",
+   "ja": "地下",
+   "ruby": "地下[ちか]",
+   "kana": "ちか",
+   "romaji": "chika",
+   "en": "basement",
+   "note": "B1 = 地下1階. Department-store food halls are in the basement."
+  },
+  {
+   "id": "k.kairo",
+   "group": "shop",
+   "ja": "カイロ",
+   "ruby": "カイロ",
+   "kana": "カイロ",
+   "romaji": "kairo",
+   "en": "disposable hand warmer",
+   "note": "貼るカイロ = stick-on type."
+  },
+  {
+   "id": "k.omutsu",
+   "group": "shop",
+   "ja": "おむつ",
+   "ruby": "おむつ",
+   "kana": "おむつ",
+   "romaji": "omutsu",
+   "en": "diapers"
+  },
+  {
+   "id": "k.oshirifuki",
+   "group": "shop",
+   "ja": "おしりふき",
+   "ruby": "おしりふき",
+   "kana": "おしりふき",
+   "romaji": "oshirifuki",
+   "en": "baby wipes"
+  },
+  {
+   "id": "k.tisshu",
+   "group": "shop",
+   "ja": "ティッシュ",
+   "ruby": "ティッシュ",
+   "kana": "ティッシュ",
+   "romaji": "tisshu",
+   "en": "tissues"
+  },
+  {
+   "id": "k.haburashi",
+   "group": "shop",
+   "ja": "歯ブラシ",
+   "ruby": "歯[は]ブラシ",
+   "kana": "はブラシ",
+   "romaji": "haburashi",
+   "en": "toothbrush"
+  },
+  {
+   "id": "k.hamigakiko",
+   "group": "shop",
+   "ja": "歯磨き粉",
+   "ruby": "歯磨[はみが]き粉[こ]",
+   "kana": "はみがきこ",
+   "romaji": "hamigakiko",
+   "en": "toothpaste"
+  },
+  {
+   "id": "k.shanpu",
+   "group": "shop",
+   "ja": "シャンプー",
+   "ruby": "シャンプー",
+   "kana": "シャンプー",
+   "romaji": "shanpū",
+   "en": "shampoo"
+  },
+  {
+   "id": "k.kasa",
+   "group": "shop",
+   "ja": "傘",
+   "ruby": "傘[かさ]",
+   "kana": "かさ",
+   "romaji": "kasa",
+   "en": "umbrella",
+   "note": "ビニール傘 = cheap clear umbrella."
+  },
+  {
+   "id": "k.denchi",
+   "group": "shop",
+   "ja": "電池",
+   "ruby": "電池[でんち]",
+   "kana": "でんち",
+   "romaji": "denchi",
+   "en": "batteries"
+  },
+  {
+   "id": "k.tansan",
+   "group": "shop",
+   "ja": "単三",
+   "ruby": "単三[たんさん]",
+   "kana": "たんさん",
+   "romaji": "tansan",
+   "en": "AA battery",
+   "note": "Usually printed 単3; 単4 = AAA."
+  },
+  {
+   "id": "k.judenki",
+   "group": "shop",
+   "ja": "充電器",
+   "ruby": "充電器[じゅうでんき]",
+   "kana": "じゅうでんき",
+   "romaji": "jūdenki",
+   "en": "charger"
+  },
+  {
+   "id": "k.keburu",
+   "group": "shop",
+   "ja": "ケーブル",
+   "ruby": "ケーブル",
+   "kana": "ケーブル",
+   "romaji": "kēburu",
+   "en": "cable"
+  },
+  {
+   "id": "k.mobairu-batteri",
+   "group": "shop",
+   "ja": "モバイルバッテリー",
+   "ruby": "モバイルバッテリー",
+   "kana": "モバイルバッテリー",
+   "romaji": "mobairu batterī",
+   "en": "power bank"
+  },
+  {
+   "id": "k.henkan-puragu",
+   "group": "shop",
+   "ja": "変換プラグ",
+   "ruby": "変換[へんかん]プラグ",
+   "kana": "へんかんプラグ",
+   "romaji": "henkan puragu",
+   "en": "plug adapter"
+  },
+  {
+   "id": "k.sd-kado",
+   "group": "shop",
+   "ja": "SDカード",
+   "ruby": "{SD|エスディー}カード",
+   "kana": "エスディーカード",
+   "romaji": "esudī kādo",
+   "en": "SD card"
+  },
+  {
+   "id": "k.sankyaku",
+   "group": "shop",
+   "ja": "三脚",
+   "ruby": "三脚[さんきゃく]",
+   "kana": "さんきゃく",
+   "romaji": "sankyaku",
+   "en": "tripod"
+  },
+  {
+   "id": "k.firuta",
+   "group": "shop",
+   "ja": "フィルター",
+   "ruby": "フィルター",
+   "kana": "フィルター",
+   "romaji": "firutā",
+   "en": "filter (lens)"
+  },
+  {
+   "id": "k.sutorappu",
+   "group": "shop",
+   "ja": "ストラップ",
+   "ruby": "ストラップ",
+   "kana": "ストラップ",
+   "romaji": "sutorappu",
+   "en": "strap"
+  },
+  {
+   "id": "k.renzu-kyappu",
+   "group": "shop",
+   "ja": "レンズキャップ",
+   "ruby": "レンズキャップ",
+   "kana": "レンズキャップ",
+   "romaji": "renzu kyappu",
+   "en": "lens cap"
+  },
+  {
+   "id": "k.taio",
+   "group": "shop",
+   "ja": "対応",
+   "ruby": "対応[たいおう]",
+   "kana": "たいおう",
+   "romaji": "taiō",
+   "en": "compatible with",
+   "note": "〇〇対応 = works with 〇〇."
+  },
+  {
+   "id": "k.kaigai-taio",
+   "group": "shop",
+   "ja": "海外対応",
+   "ruby": "海外対応[かいがいたいおう]",
+   "kana": "かいがいたいおう",
+   "romaji": "kaigai taiō",
+   "en": "works abroad (100–240 V)"
+  },
+  {
+   "id": "k.kokunai-senyo",
+   "group": "shop",
+   "ja": "国内専用",
+   "ruby": "国内専用[こくないせんよう]",
+   "kana": "こくないせんよう",
+   "romaji": "kokunai sen'yō",
+   "en": "for use in Japan only (100 V)",
+   "note": "Check before buying electronics to take home."
+  },
+  {
+   "id": "k.saizu",
+   "group": "shop",
+   "ja": "サイズ",
+   "ruby": "サイズ",
+   "kana": "サイズ",
+   "romaji": "saizu",
+   "en": "size"
+  },
+  {
+   "id": "k.sml",
+   "group": "shop",
+   "ja": "S・M・L",
+   "ruby": "{S|エス}・{M|エム}・{L|エル}",
+   "kana": "エス・エム・エル",
+   "romaji": "esu, emu, eru",
+   "en": "S / M / L",
+   "note": "Japanese sizes run about one size smaller than European."
+  },
+  {
+   "id": "k.menzu",
+   "group": "shop",
+   "ja": "メンズ",
+   "ruby": "メンズ",
+   "kana": "メンズ",
+   "romaji": "menzu",
+   "en": "men's"
+  },
+  {
+   "id": "k.redisu",
+   "group": "shop",
+   "ja": "レディース",
+   "ruby": "レディース",
+   "kana": "レディース",
+   "romaji": "redīsu",
+   "en": "women's"
+  },
+  {
+   "id": "k.kizzu",
+   "group": "shop",
+   "ja": "キッズ",
+   "ruby": "キッズ",
+   "kana": "キッズ",
+   "romaji": "kizzu",
+   "en": "kids'"
+  },
+  {
+   "id": "k.kodomofuku",
+   "group": "shop",
+   "ja": "子供服",
+   "ruby": "子供服[こどもふく]",
+   "kana": "こどもふく",
+   "romaji": "kodomofuku",
+   "en": "children's clothing"
+  },
+  {
+   "id": "k.shincho",
+   "group": "shop",
+   "ja": "身長",
+   "ruby": "身長[しんちょう]",
+   "kana": "しんちょう",
+   "romaji": "shinchō",
+   "en": "height",
+   "note": "Kids' sizes are given by height in cm: 110, 120, 130…"
   },
   {
    "id": "k.chuko",
@@ -1007,6 +1740,776 @@
    "note": "Also 生ビール — draft beer."
   },
   {
+   "id": "k.setto",
+   "group": "food",
+   "ja": "セット",
+   "ruby": "セット",
+   "kana": "セット",
+   "romaji": "setto",
+   "en": "set (meal with sides / drink)"
+  },
+  {
+   "id": "k.tanpin",
+   "group": "food",
+   "ja": "単品",
+   "ruby": "単品[たんぴん]",
+   "kana": "たんぴん",
+   "romaji": "tanpin",
+   "en": "single item, à la carte (no set)"
+  },
+  {
+   "id": "k.ranchi",
+   "group": "food",
+   "ja": "ランチ",
+   "ruby": "ランチ",
+   "kana": "ランチ",
+   "romaji": "ranchi",
+   "en": "lunch (set)",
+   "note": "Lunch sets are usually cheaper; often until 14:00 or 15:00."
+  },
+  {
+   "id": "k.osusume-honjitsu",
+   "group": "food",
+   "ja": "本日のおすすめ",
+   "ruby": "本日[ほんじつ]のおすすめ",
+   "kana": "ほんじつのおすすめ",
+   "romaji": "honjitsu no osusume",
+   "en": "today's special"
+  },
+  {
+   "id": "k.komori",
+   "group": "food",
+   "ja": "小盛",
+   "ruby": "小盛[こもり]",
+   "kana": "こもり",
+   "romaji": "komori",
+   "en": "small portion",
+   "note": "Sometimes cheaper. Also written 小盛り."
+  },
+  {
+   "id": "k.tokumori",
+   "group": "food",
+   "ja": "特盛",
+   "ruby": "特盛[とくもり]",
+   "kana": "とくもり",
+   "romaji": "tokumori",
+   "en": "extra-large portion"
+  },
+  {
+   "id": "k.kaedama",
+   "group": "food",
+   "ja": "替え玉",
+   "ruby": "替[か]え玉[だま]",
+   "kana": "かえだま",
+   "romaji": "kaedama",
+   "en": "extra noodles (refill)",
+   "note": "Tonkotsu ramen shops."
+  },
+  {
+   "id": "k.topping",
+   "group": "food",
+   "ja": "トッピング",
+   "ruby": "トッピング",
+   "kana": "トッピング",
+   "romaji": "toppingu",
+   "en": "topping(s)"
+  },
+  {
+   "id": "k.tsuika",
+   "group": "food",
+   "ja": "追加",
+   "ruby": "追加[ついか]",
+   "kana": "ついか",
+   "romaji": "tsuika",
+   "en": "extra, add-on"
+  },
+  {
+   "id": "k.nuki",
+   "group": "food",
+   "ja": "〇〇抜き",
+   "ruby": "〇〇抜[ぬ]き",
+   "kana": "〇〇ぬき",
+   "romaji": "〇〇-nuki",
+   "en": "without 〇〇",
+   "note": "わさび抜き = no wasabi; ねぎ抜き = no green onion."
+  },
+  {
+   "id": "k.okawari",
+   "group": "food",
+   "ja": "おかわり自由",
+   "ruby": "おかわり自由[じゆう]",
+   "kana": "おかわりじゆう",
+   "romaji": "okawari jiyū",
+   "en": "free refills"
+  },
+  {
+   "id": "k.tabehodai",
+   "group": "food",
+   "ja": "食べ放題",
+   "ruby": "食[た]べ放題[ほうだい]",
+   "kana": "たべほうだい",
+   "romaji": "tabehōdai",
+   "en": "all you can eat"
+  },
+  {
+   "id": "k.nomihodai",
+   "group": "food",
+   "ja": "飲み放題",
+   "ruby": "飲[の]み放題[ほうだい]",
+   "kana": "のみほうだい",
+   "romaji": "nomihōdai",
+   "en": "all you can drink"
+  },
+  {
+   "id": "k.okosama-lunch",
+   "group": "food",
+   "ja": "お子様ランチ",
+   "ruby": "お子様[こさま]ランチ",
+   "kana": "おこさまランチ",
+   "romaji": "okosama ranchi",
+   "en": "kids' meal"
+  },
+  {
+   "id": "k.jika",
+   "group": "food",
+   "ja": "時価",
+   "ruby": "時価[じか]",
+   "kana": "じか",
+   "romaji": "jika",
+   "en": "market price (ask before ordering)",
+   "note": "Common for fresh fish and sushi."
+  },
+  {
+   "id": "k.ramen",
+   "group": "food",
+   "ja": "ラーメン",
+   "ruby": "ラーメン",
+   "kana": "ラーメン",
+   "romaji": "rāmen",
+   "en": "ramen"
+  },
+  {
+   "id": "k.sushi",
+   "group": "food",
+   "ja": "寿司",
+   "ruby": "寿司[すし]",
+   "kana": "すし",
+   "romaji": "sushi",
+   "en": "sushi"
+  },
+  {
+   "id": "k.udon",
+   "group": "food",
+   "ja": "うどん",
+   "ruby": "うどん",
+   "kana": "うどん",
+   "romaji": "udon",
+   "en": "udon (thick wheat noodles)"
+  },
+  {
+   "id": "k.bento",
+   "group": "food",
+   "ja": "弁当",
+   "ruby": "弁当[べんとう]",
+   "kana": "べんとう",
+   "romaji": "bentō",
+   "en": "bento (boxed meal)"
+  },
+  {
+   "id": "k.onigiri",
+   "group": "food",
+   "ja": "おにぎり",
+   "ruby": "おにぎり",
+   "kana": "おにぎり",
+   "romaji": "onigiri",
+   "en": "rice ball"
+  },
+  {
+   "id": "k.karaage",
+   "group": "food",
+   "ja": "唐揚げ",
+   "ruby": "唐揚[からあ]げ",
+   "kana": "からあげ",
+   "romaji": "karaage",
+   "en": "Japanese fried chicken"
+  },
+  {
+   "id": "k.tenpura",
+   "group": "food",
+   "ja": "天ぷら",
+   "ruby": "天[てん]ぷら",
+   "kana": "てんぷら",
+   "romaji": "tenpura",
+   "en": "tempura"
+  },
+  {
+   "id": "k.gyudon",
+   "group": "food",
+   "ja": "牛丼",
+   "ruby": "牛丼[ぎゅうどん]",
+   "kana": "ぎゅうどん",
+   "romaji": "gyūdon",
+   "en": "beef rice bowl"
+  },
+  {
+   "id": "k.oyakodon",
+   "group": "food",
+   "ja": "親子丼",
+   "ruby": "親子丼[おやこどん]",
+   "kana": "おやこどん",
+   "romaji": "oyakodon",
+   "en": "chicken and egg rice bowl"
+  },
+  {
+   "id": "k.katsudon",
+   "group": "food",
+   "ja": "かつ丼",
+   "ruby": "かつ丼[どん]",
+   "kana": "かつどん",
+   "romaji": "katsudon",
+   "en": "pork cutlet rice bowl (with egg)"
+  },
+  {
+   "id": "k.tonkatsu",
+   "group": "food",
+   "ja": "とんかつ",
+   "ruby": "とんかつ",
+   "kana": "とんかつ",
+   "romaji": "tonkatsu",
+   "en": "pork cutlet"
+  },
+  {
+   "id": "k.kare",
+   "group": "food",
+   "ja": "カレー",
+   "ruby": "カレー",
+   "kana": "カレー",
+   "romaji": "karē",
+   "en": "Japanese curry"
+  },
+  {
+   "id": "k.gyoza",
+   "group": "food",
+   "ja": "餃子",
+   "ruby": "餃子[ぎょうざ]",
+   "kana": "ぎょうざ",
+   "romaji": "gyōza",
+   "en": "gyoza (dumplings)"
+  },
+  {
+   "id": "k.yakitori",
+   "group": "food",
+   "ja": "焼き鳥",
+   "ruby": "焼[や]き鳥[とり]",
+   "kana": "やきとり",
+   "romaji": "yakitori",
+   "en": "grilled chicken skewers"
+  },
+  {
+   "id": "k.sashimi",
+   "group": "food",
+   "ja": "刺身",
+   "ruby": "刺身[さしみ]",
+   "kana": "さしみ",
+   "romaji": "sashimi",
+   "en": "sliced raw fish"
+  },
+  {
+   "id": "k.misoshiru",
+   "group": "food",
+   "ja": "味噌汁",
+   "ruby": "味噌汁[みそしる]",
+   "kana": "みそしる",
+   "romaji": "misoshiru",
+   "en": "miso soup"
+  },
+  {
+   "id": "k.okonomiyaki",
+   "group": "food",
+   "ja": "お好み焼き",
+   "ruby": "お好[この]み焼[や]き",
+   "kana": "おこのみやき",
+   "romaji": "okonomiyaki",
+   "en": "savory pancake"
+  },
+  {
+   "id": "k.omuraisu",
+   "group": "food",
+   "ja": "オムライス",
+   "ruby": "オムライス",
+   "kana": "オムライス",
+   "romaji": "omuraisu",
+   "en": "omelet over fried rice",
+   "note": "A kids' favorite."
+  },
+  {
+   "id": "k.hanbagu",
+   "group": "food",
+   "ja": "ハンバーグ",
+   "ruby": "ハンバーグ",
+   "kana": "ハンバーグ",
+   "romaji": "hanbāgu",
+   "en": "hamburger steak (no bun)"
+  },
+  {
+   "id": "k.sukiyaki",
+   "group": "food",
+   "ja": "すき焼き",
+   "ruby": "すき焼[や]き",
+   "kana": "すきやき",
+   "romaji": "sukiyaki",
+   "en": "sukiyaki (sweet soy hot pot)",
+   "note": "Usually dipped in raw egg."
+  },
+  {
+   "id": "k.chawanmushi",
+   "group": "food",
+   "ja": "茶碗蒸し",
+   "ruby": "茶碗蒸[ちゃわんむ]し",
+   "kana": "ちゃわんむし",
+   "romaji": "chawanmushi",
+   "en": "savory steamed egg custard",
+   "note": "Contains egg."
+  },
+  {
+   "id": "k.sozai",
+   "group": "food",
+   "ja": "惣菜",
+   "ruby": "惣菜[そうざい]",
+   "kana": "そうざい",
+   "romaji": "sōzai",
+   "en": "ready-made side dishes (deli)"
+  },
+  {
+   "id": "k.shoyu",
+   "group": "food",
+   "ja": "醤油",
+   "ruby": "醤油[しょうゆ]",
+   "kana": "しょうゆ",
+   "romaji": "shōyu",
+   "en": "soy sauce (flavor)"
+  },
+  {
+   "id": "k.miso",
+   "group": "food",
+   "ja": "味噌",
+   "ruby": "味噌[みそ]",
+   "kana": "みそ",
+   "romaji": "miso",
+   "en": "miso (flavor)"
+  },
+  {
+   "id": "k.shio",
+   "group": "food",
+   "ja": "塩",
+   "ruby": "塩[しお]",
+   "kana": "しお",
+   "romaji": "shio",
+   "en": "salt (flavor)"
+  },
+  {
+   "id": "k.tonkotsu",
+   "group": "food",
+   "ja": "豚骨",
+   "ruby": "豚骨[とんこつ]",
+   "kana": "とんこつ",
+   "romaji": "tonkotsu",
+   "en": "pork-bone broth"
+  },
+  {
+   "id": "k.karai",
+   "group": "food",
+   "ja": "辛い",
+   "ruby": "辛[から]い",
+   "kana": "からい",
+   "romaji": "karai",
+   "en": "spicy"
+  },
+  {
+   "id": "k.gekikara",
+   "group": "food",
+   "ja": "激辛",
+   "ruby": "激辛[げきから]",
+   "kana": "げきから",
+   "romaji": "gekikara",
+   "en": "extremely spicy"
+  },
+  {
+   "id": "k.amai",
+   "group": "food",
+   "ja": "甘い",
+   "ruby": "甘[あま]い",
+   "kana": "あまい",
+   "romaji": "amai",
+   "en": "sweet"
+  },
+  {
+   "id": "k.niku",
+   "group": "food",
+   "ja": "肉",
+   "ruby": "肉[にく]",
+   "kana": "にく",
+   "romaji": "niku",
+   "en": "meat"
+  },
+  {
+   "id": "k.yasai",
+   "group": "food",
+   "ja": "野菜",
+   "ruby": "野菜[やさい]",
+   "kana": "やさい",
+   "romaji": "yasai",
+   "en": "vegetables"
+  },
+  {
+   "id": "k.gohan",
+   "group": "food",
+   "ja": "ご飯",
+   "ruby": "ご飯[はん]",
+   "kana": "ごはん",
+   "romaji": "gohan",
+   "en": "cooked rice"
+  },
+  {
+   "id": "k.men",
+   "group": "food",
+   "ja": "麺",
+   "ruby": "麺[めん]",
+   "kana": "めん",
+   "romaji": "men",
+   "en": "noodles"
+  },
+  {
+   "id": "k.ebi-kanji",
+   "group": "food",
+   "ja": "海老",
+   "ruby": "海老[えび]",
+   "kana": "えび",
+   "romaji": "ebi",
+   "en": "shrimp",
+   "note": "Same as えび (allergen)."
+  },
+  {
+   "id": "k.tako",
+   "group": "food",
+   "ja": "たこ",
+   "ruby": "たこ",
+   "kana": "たこ",
+   "romaji": "tako",
+   "en": "octopus"
+  },
+  {
+   "id": "k.kai",
+   "group": "food",
+   "ja": "貝",
+   "ruby": "貝[かい]",
+   "kana": "かい",
+   "romaji": "kai",
+   "en": "shellfish"
+  },
+  {
+   "id": "k.maguro",
+   "group": "food",
+   "ja": "まぐろ",
+   "ruby": "まぐろ",
+   "kana": "まぐろ",
+   "romaji": "maguro",
+   "en": "tuna"
+  },
+  {
+   "id": "k.tofu",
+   "group": "food",
+   "ja": "豆腐",
+   "ruby": "豆腐[とうふ]",
+   "kana": "とうふ",
+   "romaji": "tōfu",
+   "en": "tofu"
+  },
+  {
+   "id": "k.nori",
+   "group": "food",
+   "ja": "海苔",
+   "ruby": "海苔[のり]",
+   "kana": "のり",
+   "romaji": "nori",
+   "en": "seaweed sheets"
+  },
+  {
+   "id": "k.negi",
+   "group": "food",
+   "ja": "ねぎ",
+   "ruby": "ねぎ",
+   "kana": "ねぎ",
+   "romaji": "negi",
+   "en": "green onion"
+  },
+  {
+   "id": "k.yaki",
+   "group": "food",
+   "ja": "焼き",
+   "ruby": "焼[や]き",
+   "kana": "やき",
+   "romaji": "yaki",
+   "en": "grilled, fried (on a griddle)"
+  },
+  {
+   "id": "k.age",
+   "group": "food",
+   "ja": "揚げ",
+   "ruby": "揚[あ]げ",
+   "kana": "あげ",
+   "romaji": "age",
+   "en": "deep-fried"
+  },
+  {
+   "id": "k.nimono",
+   "group": "food",
+   "ja": "煮物",
+   "ruby": "煮物[にもの]",
+   "kana": "にもの",
+   "romaji": "nimono",
+   "en": "simmered dish"
+  },
+  {
+   "id": "k.itame",
+   "group": "food",
+   "ja": "炒め",
+   "ruby": "炒[いた]め",
+   "kana": "いため",
+   "romaji": "itame",
+   "en": "stir-fried"
+  },
+  {
+   "id": "k.hiyashi",
+   "group": "food",
+   "ja": "冷やし",
+   "ruby": "冷[ひ]やし",
+   "kana": "ひやし",
+   "romaji": "hiyashi",
+   "en": "chilled (served cold)"
+  },
+  {
+   "id": "k.mizu",
+   "group": "food",
+   "ja": "水",
+   "ruby": "水[みず]",
+   "kana": "みず",
+   "romaji": "mizu",
+   "en": "water"
+  },
+  {
+   "id": "k.ocha",
+   "group": "food",
+   "ja": "お茶",
+   "ruby": "お茶[ちゃ]",
+   "kana": "おちゃ",
+   "romaji": "ocha",
+   "en": "tea (usually green)"
+  },
+  {
+   "id": "k.mugicha",
+   "group": "food",
+   "ja": "麦茶",
+   "ruby": "麦茶[むぎちゃ]",
+   "kana": "むぎちゃ",
+   "romaji": "mugicha",
+   "en": "barley tea",
+   "note": "Caffeine-free: good for kids."
+  },
+  {
+   "id": "k.uroncha",
+   "group": "food",
+   "ja": "ウーロン茶",
+   "ruby": "ウーロン茶[ちゃ]",
+   "kana": "ウーロンちゃ",
+   "romaji": "ūroncha",
+   "en": "oolong tea"
+  },
+  {
+   "id": "k.gyunyu",
+   "group": "food",
+   "ja": "牛乳",
+   "ruby": "牛乳[ぎゅうにゅう]",
+   "kana": "ぎゅうにゅう",
+   "romaji": "gyūnyū",
+   "en": "milk"
+  },
+  {
+   "id": "k.hot",
+   "group": "food",
+   "ja": "ホット",
+   "ruby": "ホット",
+   "kana": "ホット",
+   "romaji": "hotto",
+   "en": "hot (drink)"
+  },
+  {
+   "id": "k.ice",
+   "group": "food",
+   "ja": "アイス",
+   "ruby": "アイス",
+   "kana": "アイス",
+   "romaji": "aisu",
+   "en": "iced (drink); ice cream"
+  },
+  {
+   "id": "k.kori",
+   "group": "food",
+   "ja": "氷",
+   "ruby": "氷[こおり]",
+   "kana": "こおり",
+   "romaji": "kōri",
+   "en": "ice"
+  },
+  {
+   "id": "k.biru",
+   "group": "food",
+   "ja": "ビール",
+   "ruby": "ビール",
+   "kana": "ビール",
+   "romaji": "bīru",
+   "en": "beer"
+  },
+  {
+   "id": "k.nama-biru",
+   "group": "food",
+   "ja": "生ビール",
+   "ruby": "生[なま]ビール",
+   "kana": "なまビール",
+   "romaji": "nama bīru",
+   "en": "draft beer"
+  },
+  {
+   "id": "k.nihonshu",
+   "group": "food",
+   "ja": "日本酒",
+   "ruby": "日本酒[にほんしゅ]",
+   "kana": "にほんしゅ",
+   "romaji": "nihonshu",
+   "en": "sake"
+  },
+  {
+   "id": "k.chuhai",
+   "group": "food",
+   "ja": "チューハイ",
+   "ruby": "チューハイ",
+   "kana": "チューハイ",
+   "romaji": "chūhai",
+   "en": "shochu highball (often fruit-flavored)",
+   "note": "Looks like juice in konbini; it is alcoholic."
+  },
+  {
+   "id": "k.non-alcohol",
+   "group": "food",
+   "ja": "ノンアルコール",
+   "ruby": "ノンアルコール",
+   "kana": "ノンアルコール",
+   "romaji": "non'arukōru",
+   "en": "non-alcoholic"
+  },
+  {
+   "id": "k.choshoku",
+   "group": "food",
+   "ja": "朝食",
+   "ruby": "朝食[ちょうしょく]",
+   "kana": "ちょうしょく",
+   "romaji": "chōshoku",
+   "en": "breakfast"
+  },
+  {
+   "id": "k.moningu",
+   "group": "food",
+   "ja": "モーニング",
+   "ruby": "モーニング",
+   "kana": "モーニング",
+   "romaji": "mōningu",
+   "en": "café breakfast set",
+   "note": "Toast and egg with your coffee, usually until about 11:00."
+  },
+  {
+   "id": "k.pan",
+   "group": "food",
+   "ja": "パン",
+   "ruby": "パン",
+   "kana": "パン",
+   "romaji": "pan",
+   "en": "bread"
+  },
+  {
+   "id": "k.tamagoyaki",
+   "group": "food",
+   "ja": "卵焼き",
+   "ruby": "卵焼[たまごや]き",
+   "kana": "たまごやき",
+   "romaji": "tamagoyaki",
+   "en": "rolled omelet"
+  },
+  {
+   "id": "k.dezato",
+   "group": "food",
+   "ja": "デザート",
+   "ruby": "デザート",
+   "kana": "デザート",
+   "romaji": "dezāto",
+   "en": "dessert"
+  },
+  {
+   "id": "k.aisukurimu",
+   "group": "food",
+   "ja": "アイスクリーム",
+   "ruby": "アイスクリーム",
+   "kana": "アイスクリーム",
+   "romaji": "aisukurīmu",
+   "en": "ice cream"
+  },
+  {
+   "id": "k.matcha",
+   "group": "food",
+   "ja": "抹茶",
+   "ruby": "抹茶[まっちゃ]",
+   "kana": "まっちゃ",
+   "romaji": "matcha",
+   "en": "matcha (powdered green tea; has caffeine)"
+  },
+  {
+   "id": "k.shomi",
+   "group": "food",
+   "ja": "賞味期限",
+   "ruby": "賞味期限[しょうみきげん]",
+   "kana": "しょうみきげん",
+   "romaji": "shōmi kigen",
+   "en": "best before (date)"
+  },
+  {
+   "id": "k.shohi",
+   "group": "food",
+   "ja": "消費期限",
+   "ruby": "消費期限[しょうひきげん]",
+   "kana": "しょうひきげん",
+   "romaji": "shōhi kigen",
+   "en": "use by (date)",
+   "note": "Stricter than 賞味期限: for bento, sandwiches, raw food."
+  },
+  {
+   "id": "k.yoreizo",
+   "group": "food",
+   "ja": "要冷蔵",
+   "ruby": "要冷蔵[ようれいぞう]",
+   "kana": "ようれいぞう",
+   "romaji": "yō reizō",
+   "en": "keep refrigerated"
+  },
+  {
+   "id": "k.denshi-renji",
+   "group": "food",
+   "ja": "電子レンジ",
+   "ruby": "電子[でんし]レンジ",
+   "kana": "でんしレンジ",
+   "romaji": "denshi renji",
+   "en": "microwave",
+   "note": "Labels: レンジ〇分 = microwave for 〇 minutes."
+  },
+  {
    "id": "k.tamago",
    "group": "allergen",
    "ja": "卵",
@@ -1079,6 +2582,798 @@
    "kana": "くるみ",
    "romaji": "kurumi",
    "en": "walnut"
+  },
+  {
+   "id": "k.nyuseibun",
+   "group": "allergen",
+   "ja": "乳成分",
+   "ruby": "乳成分[にゅうせいぶん]",
+   "kana": "にゅうせいぶん",
+   "romaji": "nyūseibun",
+   "en": "milk ingredients",
+   "note": "How 乳 usually appears on labels."
+  },
+  {
+   "id": "k.genzairyo",
+   "group": "allergen",
+   "ja": "原材料名",
+   "ruby": "原材料名[げんざいりょうめい]",
+   "kana": "げんざいりょうめい",
+   "romaji": "genzairyōmei",
+   "en": "ingredients (label heading)"
+  },
+  {
+   "id": "k.arerugi-busshitsu",
+   "group": "allergen",
+   "ja": "アレルギー物質",
+   "ruby": "アレルギー物質[ぶっしつ]",
+   "kana": "アレルギーぶっしつ",
+   "romaji": "arerugī busshitsu",
+   "en": "allergens (label heading)"
+  },
+  {
+   "id": "k.ichibu",
+   "group": "allergen",
+   "ja": "一部に〇〇を含む",
+   "ruby": "一部[いちぶ]に〇〇を含[ふく]む",
+   "kana": "いちぶに〇〇をふくむ",
+   "romaji": "ichibu ni 〇〇 o fukumu",
+   "en": "contains 〇〇 (as part of an ingredient)",
+   "note": "Typical label form: （一部に小麦・卵を含む）."
+  },
+  {
+   "id": "k.tokutei",
+   "group": "allergen",
+   "ja": "特定原材料",
+   "ruby": "特定原材料[とくていげんざいりょう]",
+   "kana": "とくていげんざいりょう",
+   "romaji": "tokutei genzairyō",
+   "en": "mandatory allergens (the 8 above)"
+  },
+  {
+   "id": "k.gyuniku",
+   "group": "allergen",
+   "ja": "牛肉",
+   "ruby": "牛肉[ぎゅうにく]",
+   "kana": "ぎゅうにく",
+   "romaji": "gyūniku",
+   "en": "beef",
+   "note": "Recommended allergen label (one of 20)."
+  },
+  {
+   "id": "k.butaniku",
+   "group": "allergen",
+   "ja": "豚肉",
+   "ruby": "豚肉[ぶたにく]",
+   "kana": "ぶたにく",
+   "romaji": "butaniku",
+   "en": "pork",
+   "note": "Recommended allergen label."
+  },
+  {
+   "id": "k.toriniku",
+   "group": "allergen",
+   "ja": "鶏肉",
+   "ruby": "鶏肉[とりにく]",
+   "kana": "とりにく",
+   "romaji": "toriniku",
+   "en": "chicken",
+   "note": "Recommended allergen label."
+  },
+  {
+   "id": "k.daizu",
+   "group": "allergen",
+   "ja": "大豆",
+   "ruby": "大豆[だいず]",
+   "kana": "だいず",
+   "romaji": "daizu",
+   "en": "soy",
+   "note": "Recommended allergen label."
+  },
+  {
+   "id": "k.goma",
+   "group": "allergen",
+   "ja": "ごま",
+   "ruby": "ごま",
+   "kana": "ごま",
+   "romaji": "goma",
+   "en": "sesame",
+   "note": "Recommended allergen label."
+  },
+  {
+   "id": "k.ika",
+   "group": "allergen",
+   "ja": "いか",
+   "ruby": "いか",
+   "kana": "いか",
+   "romaji": "ika",
+   "en": "squid",
+   "note": "Recommended allergen label."
+  },
+  {
+   "id": "k.ikura",
+   "group": "allergen",
+   "ja": "いくら",
+   "ruby": "いくら",
+   "kana": "いくら",
+   "romaji": "ikura",
+   "en": "salmon roe",
+   "note": "Recommended allergen label."
+  },
+  {
+   "id": "k.sake-fish",
+   "group": "allergen",
+   "ja": "さけ",
+   "ruby": "さけ",
+   "kana": "さけ",
+   "romaji": "sake",
+   "en": "salmon",
+   "note": "Not the drink: on labels さけ is salmon."
+  },
+  {
+   "id": "k.saba",
+   "group": "allergen",
+   "ja": "さば",
+   "ruby": "さば",
+   "kana": "さば",
+   "romaji": "saba",
+   "en": "mackerel",
+   "note": "Recommended allergen label."
+  },
+  {
+   "id": "k.awabi",
+   "group": "allergen",
+   "ja": "あわび",
+   "ruby": "あわび",
+   "kana": "あわび",
+   "romaji": "awabi",
+   "en": "abalone",
+   "note": "Recommended allergen label."
+  },
+  {
+   "id": "k.amondo",
+   "group": "allergen",
+   "ja": "アーモンド",
+   "ruby": "アーモンド",
+   "kana": "アーモンド",
+   "romaji": "āmondo",
+   "en": "almond",
+   "note": "Recommended allergen label."
+  },
+  {
+   "id": "k.kashunattsu",
+   "group": "allergen",
+   "ja": "カシューナッツ",
+   "ruby": "カシューナッツ",
+   "kana": "カシューナッツ",
+   "romaji": "kashūnattsu",
+   "en": "cashew nut",
+   "note": "Recommended allergen label."
+  },
+  {
+   "id": "k.makadamia",
+   "group": "allergen",
+   "ja": "マカダミアナッツ",
+   "ruby": "マカダミアナッツ",
+   "kana": "マカダミアナッツ",
+   "romaji": "makadamianattsu",
+   "en": "macadamia nut",
+   "note": "Added to the recommended list in 2024."
+  },
+  {
+   "id": "k.yamaimo",
+   "group": "allergen",
+   "ja": "やまいも",
+   "ruby": "やまいも",
+   "kana": "やまいも",
+   "romaji": "yamaimo",
+   "en": "Japanese yam",
+   "note": "Recommended allergen label."
+  },
+  {
+   "id": "k.zerachin",
+   "group": "allergen",
+   "ja": "ゼラチン",
+   "ruby": "ゼラチン",
+   "kana": "ゼラチン",
+   "romaji": "zerachin",
+   "en": "gelatin",
+   "note": "Recommended allergen label."
+  },
+  {
+   "id": "k.kiui",
+   "group": "allergen",
+   "ja": "キウイフルーツ",
+   "ruby": "キウイフルーツ",
+   "kana": "キウイフルーツ",
+   "romaji": "kiuifurūtsu",
+   "en": "kiwi fruit",
+   "note": "Recommended allergen label."
+  },
+  {
+   "id": "k.banana",
+   "group": "allergen",
+   "ja": "バナナ",
+   "ruby": "バナナ",
+   "kana": "バナナ",
+   "romaji": "banana",
+   "en": "banana",
+   "note": "Recommended allergen label."
+  },
+  {
+   "id": "k.momo",
+   "group": "allergen",
+   "ja": "もも",
+   "ruby": "もも",
+   "kana": "もも",
+   "romaji": "momo",
+   "en": "peach",
+   "note": "Recommended allergen label."
+  },
+  {
+   "id": "k.ringo",
+   "group": "allergen",
+   "ja": "りんご",
+   "ruby": "りんご",
+   "kana": "りんご",
+   "romaji": "ringo",
+   "en": "apple",
+   "note": "Recommended allergen label."
+  },
+  {
+   "id": "k.orenji",
+   "group": "allergen",
+   "ja": "オレンジ",
+   "ruby": "オレンジ",
+   "kana": "オレンジ",
+   "romaji": "orenji",
+   "en": "orange",
+   "note": "Recommended allergen label."
+  },
+  {
+   "id": "k.doraggusutoa",
+   "group": "pharmacy",
+   "ja": "ドラッグストア",
+   "ruby": "ドラッグストア",
+   "kana": "ドラッグストア",
+   "romaji": "doraggusutoa",
+   "en": "drugstore",
+   "note": "Best place for over-the-counter medicine."
+  },
+  {
+   "id": "k.yakkyoku",
+   "group": "pharmacy",
+   "ja": "薬局",
+   "ruby": "薬局[やっきょく]",
+   "kana": "やっきょく",
+   "romaji": "yakkyoku",
+   "en": "pharmacy"
+  },
+  {
+   "id": "k.yakuzaishi",
+   "group": "pharmacy",
+   "ja": "薬剤師",
+   "ruby": "薬剤師[やくざいし]",
+   "kana": "やくざいし",
+   "romaji": "yakuzaishi",
+   "en": "pharmacist"
+  },
+  {
+   "id": "k.shohosen",
+   "group": "pharmacy",
+   "ja": "処方箋",
+   "ruby": "処方箋[しょほうせん]",
+   "kana": "しょほうせん",
+   "romaji": "shohōsen",
+   "en": "prescription"
+  },
+  {
+   "id": "k.kusuri",
+   "group": "pharmacy",
+   "ja": "薬",
+   "ruby": "薬[くすり]",
+   "kana": "くすり",
+   "romaji": "kusuri",
+   "en": "medicine"
+  },
+  {
+   "id": "k.iyakuhin",
+   "group": "pharmacy",
+   "ja": "医薬品",
+   "ruby": "医薬品[いやくひん]",
+   "kana": "いやくひん",
+   "romaji": "iyakuhin",
+   "en": "medicine (pharmaceutical product)"
+  },
+  {
+   "id": "k.dai1rui",
+   "group": "pharmacy",
+   "ja": "第一類医薬品",
+   "ruby": "第一類医薬品[だいいちるいいやくひん]",
+   "kana": "だいいちるいいやくひん",
+   "romaji": "daiichirui iyakuhin",
+   "en": "Class 1 OTC medicine",
+   "note": "Printed 第1類. Sold only after a pharmacist explains it; not available when no pharmacist is on duty."
+  },
+  {
+   "id": "k.dai2rui",
+   "group": "pharmacy",
+   "ja": "第二類医薬品",
+   "ruby": "第二類医薬品[だいにるいいやくひん]",
+   "kana": "だいにるいいやくひん",
+   "romaji": "dainirui iyakuhin",
+   "en": "Class 2 OTC medicine",
+   "note": "Printed 第2類: most cold and pain medicines. 指定第2類 = take extra care (ask staff)."
+  },
+  {
+   "id": "k.dai3rui",
+   "group": "pharmacy",
+   "ja": "第三類医薬品",
+   "ruby": "第三類医薬品[だいさんるいいやくひん]",
+   "kana": "だいさんるいいやくひん",
+   "romaji": "daisanrui iyakuhin",
+   "en": "Class 3 OTC medicine (mildest)",
+   "note": "Printed 第3類."
+  },
+  {
+   "id": "k.kazegusuri",
+   "group": "pharmacy",
+   "ja": "かぜ薬",
+   "ruby": "かぜ薬[ぐすり]",
+   "kana": "かぜぐすり",
+   "romaji": "kazegusuri",
+   "en": "cold medicine",
+   "note": "Also written 風邪薬."
+  },
+  {
+   "id": "k.sogo-kaze",
+   "group": "pharmacy",
+   "ja": "総合かぜ薬",
+   "ruby": "総合[そうごう]かぜ薬[ぐすり]",
+   "kana": "そうごうかぜぐすり",
+   "romaji": "sōgō kazegusuri",
+   "en": "multi-symptom cold medicine"
+  },
+  {
+   "id": "k.zutsuyaku",
+   "group": "pharmacy",
+   "ja": "頭痛薬",
+   "ruby": "頭痛薬[ずつうやく]",
+   "kana": "ずつうやく",
+   "romaji": "zutsūyaku",
+   "en": "headache medicine"
+  },
+  {
+   "id": "k.chintsuzai",
+   "group": "pharmacy",
+   "ja": "鎮痛剤",
+   "ruby": "鎮痛剤[ちんつうざい]",
+   "kana": "ちんつうざい",
+   "romaji": "chintsūzai",
+   "en": "painkiller"
+  },
+  {
+   "id": "k.genetsu",
+   "group": "pharmacy",
+   "ja": "解熱鎮痛薬",
+   "ruby": "解熱鎮痛薬[げねつちんつうやく]",
+   "kana": "げねつちんつうやく",
+   "romaji": "genetsu chintsūyaku",
+   "en": "fever and pain reliever"
+  },
+  {
+   "id": "k.bienyaku",
+   "group": "pharmacy",
+   "ja": "鼻炎薬",
+   "ruby": "鼻炎薬[びえんやく]",
+   "kana": "びえんやく",
+   "romaji": "bien'yaku",
+   "en": "medicine for nasal allergy / runny nose"
+  },
+  {
+   "id": "k.hanamizu",
+   "group": "pharmacy",
+   "ja": "鼻水",
+   "ruby": "鼻水[はなみず]",
+   "kana": "はなみず",
+   "romaji": "hanamizu",
+   "en": "runny nose"
+  },
+  {
+   "id": "k.hanazumari",
+   "group": "pharmacy",
+   "ja": "鼻づまり",
+   "ruby": "鼻[はな]づまり",
+   "kana": "はなづまり",
+   "romaji": "hanazumari",
+   "en": "stuffy nose"
+  },
+  {
+   "id": "k.tenbiyaku",
+   "group": "pharmacy",
+   "ja": "点鼻薬",
+   "ruby": "点鼻薬[てんびやく]",
+   "kana": "てんびやく",
+   "romaji": "tenbiyaku",
+   "en": "nasal spray / drops"
+  },
+  {
+   "id": "k.sekidome",
+   "group": "pharmacy",
+   "ja": "せき止め",
+   "ruby": "せき止[ど]め",
+   "kana": "せきどめ",
+   "romaji": "sekidome",
+   "en": "cough medicine"
+  },
+  {
+   "id": "k.nodo",
+   "group": "pharmacy",
+   "ja": "のど",
+   "ruby": "のど",
+   "kana": "のど",
+   "romaji": "nodo",
+   "en": "throat"
+  },
+  {
+   "id": "k.nodoame",
+   "group": "pharmacy",
+   "ja": "のど飴",
+   "ruby": "のど飴[あめ]",
+   "kana": "のどあめ",
+   "romaji": "nodo ame",
+   "en": "throat lozenges (candy)"
+  },
+  {
+   "id": "k.torochi",
+   "group": "pharmacy",
+   "ja": "トローチ",
+   "ruby": "トローチ",
+   "kana": "トローチ",
+   "romaji": "torōchi",
+   "en": "medicated lozenges"
+  },
+  {
+   "id": "k.ichoyaku",
+   "group": "pharmacy",
+   "ja": "胃腸薬",
+   "ruby": "胃腸薬[いちょうやく]",
+   "kana": "いちょうやく",
+   "romaji": "ichōyaku",
+   "en": "stomach and bowel medicine"
+  },
+  {
+   "id": "k.igusuri",
+   "group": "pharmacy",
+   "ja": "胃薬",
+   "ruby": "胃薬[いぐすり]",
+   "kana": "いぐすり",
+   "romaji": "igusuri",
+   "en": "stomach medicine (indigestion, heartburn)"
+  },
+  {
+   "id": "k.geridome",
+   "group": "pharmacy",
+   "ja": "下痢止め",
+   "ruby": "下痢止[げりど]め",
+   "kana": "げりどめ",
+   "romaji": "geridome",
+   "en": "anti-diarrhea medicine"
+  },
+  {
+   "id": "k.seichozai",
+   "group": "pharmacy",
+   "ja": "整腸剤",
+   "ruby": "整腸剤[せいちょうざい]",
+   "kana": "せいちょうざい",
+   "romaji": "seichōzai",
+   "en": "gut regulator (probiotic)"
+  },
+  {
+   "id": "k.benpiyaku",
+   "group": "pharmacy",
+   "ja": "便秘薬",
+   "ruby": "便秘薬[べんぴやく]",
+   "kana": "べんぴやく",
+   "romaji": "benpiyaku",
+   "en": "laxative"
+  },
+  {
+   "id": "k.yoidome",
+   "group": "pharmacy",
+   "ja": "酔い止め",
+   "ruby": "酔[よ]い止[ど]め",
+   "kana": "よいどめ",
+   "romaji": "yoidome",
+   "en": "motion-sickness medicine",
+   "note": "Take 30 minutes before the trip."
+  },
+  {
+   "id": "k.megusuri",
+   "group": "pharmacy",
+   "ja": "目薬",
+   "ruby": "目薬[めぐすり]",
+   "kana": "めぐすり",
+   "romaji": "megusuri",
+   "en": "eye drops"
+  },
+  {
+   "id": "k.shippu",
+   "group": "pharmacy",
+   "ja": "湿布",
+   "ruby": "湿布[しっぷ]",
+   "kana": "しっぷ",
+   "romaji": "shippu",
+   "en": "medicated pain-relief patch"
+  },
+  {
+   "id": "k.bansoko",
+   "group": "pharmacy",
+   "ja": "絆創膏",
+   "ruby": "絆創膏[ばんそうこう]",
+   "kana": "ばんそうこう",
+   "romaji": "bansōkō",
+   "en": "plasters, band-aids"
+  },
+  {
+   "id": "k.mushisasare",
+   "group": "pharmacy",
+   "ja": "虫刺され",
+   "ruby": "虫刺[むしさ]され",
+   "kana": "むしさされ",
+   "romaji": "mushisasare",
+   "en": "insect bites"
+  },
+  {
+   "id": "k.kayumidome",
+   "group": "pharmacy",
+   "ja": "かゆみ止め",
+   "ruby": "かゆみ止[ど]め",
+   "kana": "かゆみどめ",
+   "romaji": "kayumidome",
+   "en": "anti-itch medicine"
+  },
+  {
+   "id": "k.hiyakedome",
+   "group": "pharmacy",
+   "ja": "日焼け止め",
+   "ruby": "日焼[ひや]け止[ど]め",
+   "kana": "ひやけどめ",
+   "romaji": "hiyakedome",
+   "en": "sunscreen"
+  },
+  {
+   "id": "k.shodoku",
+   "group": "pharmacy",
+   "ja": "消毒",
+   "ruby": "消毒[しょうどく]",
+   "kana": "しょうどく",
+   "romaji": "shōdoku",
+   "en": "disinfectant; disinfecting"
+  },
+  {
+   "id": "k.masuku",
+   "group": "pharmacy",
+   "ja": "マスク",
+   "ruby": "マスク",
+   "kana": "マスク",
+   "romaji": "masuku",
+   "en": "face mask"
+  },
+  {
+   "id": "k.taionkei",
+   "group": "pharmacy",
+   "ja": "体温計",
+   "ruby": "体温計[たいおんけい]",
+   "kana": "たいおんけい",
+   "romaji": "taionkei",
+   "en": "thermometer"
+  },
+  {
+   "id": "k.reikyaku",
+   "group": "pharmacy",
+   "ja": "冷却シート",
+   "ruby": "冷却[れいきゃく]シート",
+   "kana": "れいきゃくシート",
+   "romaji": "reikyaku shīto",
+   "en": "cooling gel sheet (for fever)"
+  },
+  {
+   "id": "k.arerugi",
+   "group": "pharmacy",
+   "ja": "アレルギー",
+   "ruby": "アレルギー",
+   "kana": "アレルギー",
+   "romaji": "arerugī",
+   "en": "allergy"
+  },
+  {
+   "id": "k.kafun",
+   "group": "pharmacy",
+   "ja": "花粉",
+   "ruby": "花粉[かふん]",
+   "kana": "かふん",
+   "romaji": "kafun",
+   "en": "pollen",
+   "note": "花粉症 = hay fever."
+  },
+  {
+   "id": "k.shoniyo",
+   "group": "pharmacy",
+   "ja": "小児用",
+   "ruby": "小児用[しょうによう]",
+   "kana": "しょうによう",
+   "romaji": "shōniyō",
+   "en": "for children (on the box)"
+  },
+  {
+   "id": "k.kodomoyo",
+   "group": "pharmacy",
+   "ja": "子供用",
+   "ruby": "子供用[こどもよう]",
+   "kana": "こどもよう",
+   "romaji": "kodomo-yō",
+   "en": "for children",
+   "note": "Kids' brands also use こども in the name."
+  },
+  {
+   "id": "k.yoji",
+   "group": "pharmacy",
+   "ja": "幼児",
+   "ruby": "幼児[ようじ]",
+   "kana": "ようじ",
+   "romaji": "yōji",
+   "en": "small child (toddler, preschool)"
+  },
+  {
+   "id": "k.shiroppu",
+   "group": "pharmacy",
+   "ja": "シロップ",
+   "ruby": "シロップ",
+   "kana": "シロップ",
+   "romaji": "shiroppu",
+   "en": "syrup"
+  },
+  {
+   "id": "k.jozai",
+   "group": "pharmacy",
+   "ja": "錠剤",
+   "ruby": "錠剤[じょうざい]",
+   "kana": "じょうざい",
+   "romaji": "jōzai",
+   "en": "tablets"
+  },
+  {
+   "id": "k.karyu",
+   "group": "pharmacy",
+   "ja": "顆粒",
+   "ruby": "顆粒[かりゅう]",
+   "kana": "かりゅう",
+   "romaji": "karyū",
+   "en": "granules (powder sachets)"
+  },
+  {
+   "id": "k.kapuseru",
+   "group": "pharmacy",
+   "ja": "カプセル",
+   "ruby": "カプセル",
+   "kana": "カプセル",
+   "romaji": "kapuseru",
+   "en": "capsules"
+  },
+  {
+   "id": "k.zayaku",
+   "group": "pharmacy",
+   "ja": "坐薬",
+   "ruby": "坐薬[ざやく]",
+   "kana": "ざやく",
+   "romaji": "zayaku",
+   "en": "suppository",
+   "note": "Common for children's fever in Japan."
+  },
+  {
+   "id": "k.yoho-yoryo",
+   "group": "pharmacy",
+   "ja": "用法・用量",
+   "ruby": "用法[ようほう]・用量[ようりょう]",
+   "kana": "ようほう・ようりょう",
+   "romaji": "yōhō yōryō",
+   "en": "directions and dosage"
+  },
+  {
+   "id": "k.kono-koka",
+   "group": "pharmacy",
+   "ja": "効能・効果",
+   "ruby": "効能[こうのう]・効果[こうか]",
+   "kana": "こうのう・こうか",
+   "romaji": "kōnō kōka",
+   "en": "indications (what it treats)"
+  },
+  {
+   "id": "k.ichinichi-kai",
+   "group": "pharmacy",
+   "ja": "一日〇回",
+   "ruby": "一日[いちにち]〇回[かい]",
+   "kana": "いちにち〇かい",
+   "romaji": "ichinichi 〇-kai",
+   "en": "〇 times a day",
+   "note": "Printed 1日3回."
+  },
+  {
+   "id": "k.shokugo",
+   "group": "pharmacy",
+   "ja": "食後",
+   "ruby": "食後[しょくご]",
+   "kana": "しょくご",
+   "romaji": "shokugo",
+   "en": "after meals"
+  },
+  {
+   "id": "k.shokuzen",
+   "group": "pharmacy",
+   "ja": "食前",
+   "ruby": "食前[しょくぜん]",
+   "kana": "しょくぜん",
+   "romaji": "shokuzen",
+   "en": "before meals"
+  },
+  {
+   "id": "k.shokkan",
+   "group": "pharmacy",
+   "ja": "食間",
+   "ruby": "食間[しょっかん]",
+   "kana": "しょっかん",
+   "romaji": "shokkan",
+   "en": "between meals (about 2 hours after eating)",
+   "note": "Not \"during the meal\"."
+  },
+  {
+   "id": "k.sai-ijo",
+   "group": "pharmacy",
+   "ja": "〇歳以上",
+   "ruby": "〇歳以上[さいいじょう]",
+   "kana": "〇さいいじょう",
+   "romaji": "〇-sai ijō",
+   "en": "〇 years and older",
+   "note": "15歳以上 = adults only: check the age table on the box for children."
+  },
+  {
+   "id": "k.nemuke",
+   "group": "pharmacy",
+   "ja": "眠気",
+   "ruby": "眠気[ねむけ]",
+   "kana": "ねむけ",
+   "romaji": "nemuke",
+   "en": "drowsiness"
+  },
+  {
+   "id": "k.nemuku-naru",
+   "group": "pharmacy",
+   "ja": "眠くなる成分",
+   "ruby": "眠[ねむ]くなる成分[せいぶん]",
+   "kana": "ねむくなるせいぶん",
+   "romaji": "nemuku naru seibun",
+   "en": "ingredient that causes drowsiness",
+   "note": "Warning box on cold and allergy medicine."
+  },
+  {
+   "id": "k.fukuyo",
+   "group": "pharmacy",
+   "ja": "服用",
+   "ruby": "服用[ふくよう]",
+   "kana": "ふくよう",
+   "romaji": "fukuyō",
+   "en": "taking (a medicine)",
+   "note": "服用しないでください = do not take."
+  },
+  {
+   "id": "k.chui",
+   "group": "pharmacy",
+   "ja": "注意",
+   "ruby": "注意[ちゅうい]",
+   "kana": "ちゅうい",
+   "romaji": "chūi",
+   "en": "caution"
   }
  ]
 }

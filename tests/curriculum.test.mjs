@@ -15,11 +15,11 @@ test('app/data/curriculum.json is the current build of curriculum/data/curriculu
   assert.deepEqual(shipped, JSON.parse(JSON.stringify(buildCurriculum(source))));
 });
 
-test('curriculum counts: 1003 items, 79 lessons, core 248 / ext 553 / ref 202', () => {
-  assert.equal(shipped.items.length, 1003);
-  assert.equal(shipped.lessons.length, 79);
+test('curriculum counts: 1015 items, 80 lessons, core 248 / ext 553 / ref 214', () => {
+  assert.equal(shipped.items.length, 1015);
+  assert.equal(shipped.lessons.length, 80);
   const byPath = shipped.items.reduce((a, it) => ((a[it.tags[0]] = (a[it.tags[0]] || 0) + 1), a), {});
-  assert.deepEqual(byPath, { core: 248, ext: 553, ref: 202 });
+  assert.deepEqual(byPath, { core: 248, ext: 553, ref: 214 });
   assert.equal(shipped.lessons.filter((l) => l.path === 'core').length, 20);
 });
 
@@ -57,4 +57,20 @@ test('validator catches broken curriculum data', () => {
   assert.match(run((c) => { const h = c.items.find((it) => it.replies?.length); h.replies.push('basics.hai.nope'); }), /missing basics\.hai\.nope/);
   assert.match(run((c) => { c.items[0].tags = ['ext']; }), /path/);
   assert.match(run((c) => { c.items[0].tts = '十分'; }), /tts must be kana/);
+});
+
+test('kanji sheet: curriculum/src/kanji-extra.mjs merged after our items; pharmacy group after allergen', async () => {
+  const { KANJI_EXTRA, GROUPS_EXTRA } = await import('../curriculum/src/kanji-extra.mjs');
+  const ids = kanji.items.map((k) => k.id);
+  assert.equal(new Set(ids).size, ids.length, 'unique ids');
+  for (const x of KANJI_EXTRA) assert.ok(ids.includes(x.id), x.id);
+  const g = kanji.groups.map((x) => x.id);
+  for (const x of GROUPS_EXTRA) assert.ok(g.includes(x.id));
+  assert.equal(g.indexOf('pharmacy'), g.indexOf('allergen') + 1);
+  // within a group: our items first, then the extras in their own order
+  for (const grp of g) {
+    const inGroup = kanji.items.filter((k) => k.group === grp).map((k) => k.id);
+    const extra = KANJI_EXTRA.filter((x) => x.group === grp).map((x) => x.id);
+    assert.deepEqual(inGroup.slice(inGroup.length - extra.length), extra, grp);
+  }
 });

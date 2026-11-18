@@ -153,8 +153,8 @@ async function main() {
 
     // Lessons: units → 79 lessons, the second core lesson locked on a fresh profile
     await navigate(BASE + '#/study/lessons');
-    check(`${vp.name}: lessons list (79 rows, U01-L02 locked, U08 open)`, await waitFor(
-      "document.querySelectorAll('.lesson-row').length === 79 && document.querySelector('[data-lesson=\"U01-L02\"]').classList.contains('locked') && !document.querySelector('[data-lesson=\"U08-L05\"]').classList.contains('locked')"));
+    check(`${vp.name}: lessons list (80 rows, U01-L02 locked, U08 open)`, await waitFor(
+      "document.querySelectorAll('.lesson-row').length === 80 && document.querySelector('[data-lesson=\"U01-L02\"]').classList.contains('locked') && !document.querySelector('[data-lesson=\"U08-L05\"]').classList.contains('locked')"));
     check(`${vp.name}: no horizontal scroll (lessons)`, await noHScroll());
     await shot(`${vp.name}-4b-lessons`);
     await click('[data-lesson="U01-L01"]');
