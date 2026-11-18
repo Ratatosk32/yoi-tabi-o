@@ -58,7 +58,7 @@ export const ITEMS = {
     ['patterns.moraemasu', '見[み]せてもらえますか', 'misete moraemasu ka', 'Можете показать?', '～てもらえますか — вежливая просьба «не могли бы вы ～?»'],
     ['patterns.ikitai', '渋谷[しぶや]に行[い]きたいです', 'Shibuya ni ikitai desu', 'Хочу поехать в Сибую', '～に行きたいです — «хочу в ～».'],
     ['patterns.irimasen', '袋[ふくろ]はいりません', 'fukuro wa irimasen', 'Пакет не нужен', '～はいりません — «～ не нужно».'],
-    ['patterns.taberaremasen', '卵[たまご]が食[た]べられません', 'tamago ga taberaremasen', 'Не может есть яйца', '～が食べられません — «нельзя/не может есть ～».'],
+    ['patterns.taberaremasen', '卵[たまご]が食[た]べられません', 'tamago ga taberaremasen', 'Нельзя есть яйца (не могу / ребёнок не может)', '～が食べられません — «нельзя/не может есть ～».'],
   ],
 
   'konbini:say': [
@@ -79,6 +79,7 @@ export const ITEMS = {
     ['konbini.receipt-no', 'レシートは大丈夫[だいじょうぶ]です', 'reshīto wa daijōbu desu', 'Чек не нужен'],
     ['konbini.receipt-yes', 'レシートをください', 'reshīto o kudasai', 'Дайте чек, пожалуйста'],
     ['konbini.no-point', 'ポイントカードは持[も]っていません', 'pointo kādo wa motte imasen', 'Бонусной карты нет', 'Ответ на ポイントカードはお持ちですか. Можно короче: いいえ.'],
+    ['konbini.issho', '一緒[いっしょ]で大丈夫[だいじょうぶ]です', 'issho de daijōbu desu', 'Можно вместе (в один пакет)', 'Ответ на 袋はお分けしますか.'],
   ],
 
   'konbini:hear': [
@@ -94,9 +95,10 @@ export const ITEMS = {
     ['hear.konbini.receipt', 'レシートはご入用[にゅうよう]ですか', 'reshīto wa go-nyūyō desu ka', 'Чек нужен?', 'Ответ: お願いします / 大丈夫です.'],
     ['hear.konbini.azukari', '千円[せんえん]お預[あず]かりします', 'sen-en oazukari shimasu', 'Принимаю 1000 иен', 'Так кассир подтверждает сумму, которую вы дали.'],
     ['hear.konbini.okaeshi', '二百円[にひゃくえん]のお返[かえ]しです', 'nihyaku-en no okaeshi desu', 'Ваша сдача — 200 иен'],
-    ['hear.konbini.nenrei', '年齢確認[ねんれいかくにん]のため、画面[がめん]のタッチをお願[ねが]いします', 'nenrei kakunin no tame, gamen no tatchi o onegai shimasu', 'Подтвердите возраст — нажмите на экран', 'При покупке алкоголя: нажать «はい» на экране кассы.'],
+    ['hear.konbini.nenrei', '年齢確認[ねんれいかくにん]のため、画面[がめん]のタッチをお願[ねが]いします', 'nenrei kakunin no tame, gamen no tatchi o onegai shimasu', 'Подтвердите возраст — нажмите на экран', 'При покупке алкоголя: нажать на экране кассы «はい», «20歳以上です» или «確認».'],
     ['hear.konbini.gokei', '合計[ごうけい]〇〇円[えん]になります', 'gōkei 〇〇-en ni narimasu', 'Итого 〇〇 иен'],
     ['hear.konbini.otsugi', 'お次[つぎ]の方[かた]どうぞ', 'otsugi no kata dōzo', 'Следующий, пожалуйста'],
+    ['hear.konbini.wake', '袋[ふくろ]はお分[わ]けしますか', 'fukuro wa owake shimasu ka', 'Разложить по разным пакетам (горячее/холодное)?', 'Ответ: 一緒で大丈夫です (вместе) / お願いします (раздельно).'],
   ],
 
   'food:say': [
@@ -116,7 +118,7 @@ export const ITEMS = {
     ['food.not-spicy', '辛[から]くないものはありますか', 'karakunai mono wa arimasu ka', 'Есть что-нибудь не острое?', '', { tts: 'からくないものはありますか' }],
     ['food.no-spice', '辛[から]くしないでください', 'karaku shinaide kudasai', 'Не делайте острым, пожалуйста', '', { tts: 'からくしないでください' }],
     ['food.no-wasabi', 'わさび抜[ぬ]きでお願[ねが]いします', 'wasabi-nuki de onegai shimasu', 'Без васаби, пожалуйста', 'Для ребёнка в суши-барах. Персонал говорит さび抜き (sabinuki).'],
-    ['food.allergen-list', 'アレルギー表[ひょう]はありますか', 'arerugī-hyō wa arimasu ka', 'Есть таблица аллергенов?', 'В сетевых ресторанах обычно есть.'],
+    ['food.allergen-list', 'アレルギー表[ひょう]はありますか', 'arerugī-hyō wa arimasu ka', 'Есть таблица аллергенов?', 'В сетевых ресторанах обычно есть. Вариант: アレルゲン情報はありますか (arerugen jōhō wa arimasu ka).'],
     ['food.share', '子[こ]どもと分[わ]けて食[た]べてもいいですか', 'kodomo to wakete tabete mo ii desu ka', 'Можно поделить порцию с ребёнком?', 'В некоторых местах требуют заказ на каждого.'],
     ['food.takeout', '持[も]ち帰[かえ]りできますか', 'mochikaeri dekimasu ka', 'Можно навынос?'],
     ['food.wait', 'どのくらい待[ま]ちますか', 'dono kurai machimasu ka', 'Сколько ждать?'],
@@ -127,6 +129,8 @@ export const ITEMS = {
     ['food.itadakimasu', 'いただきます', 'itadakimasu', '(перед едой) Спасибо за еду — приступаю', 'Не «приятного аппетита» другим, а формула самого едящего.'],
     ['food.oishii', 'おいしかったです', 'oishikatta desu', 'Было вкусно'],
     ['food.gochiso', 'ごちそうさまでした', 'gochisōsama deshita', 'Спасибо за угощение (уходя)'],
+    ['food.mochikaeri-de', '持[も]ち帰[かえ]りで', 'mochikaeri de', 'Навынос, пожалуйста', 'Ответ на 店内でお召し上がりですか.'],
+    ['food.machimasu', '待[ま]ちます', 'machimasu', 'Мы подождём', 'Ответ на «мест нет» или «придётся подождать».'],
   ],
 
   'food:hear': [
@@ -143,6 +147,9 @@ export const ITEMS = {
     ['hear.food.lastorder', 'ラストオーダーです', 'rasuto ōdā desu', 'Последний заказ'],
     ['hear.food.urikire', '申[もう]し訳[わけ]ございません、売[う]り切[き]れです', 'mōshiwake gozaimasen, urikire desu', 'Извините, закончилось'],
     ['hear.food.reji', 'お会計[かいけい]はレジでお願[ねが]いします', 'okaikei wa reji de onegai shimasu', 'Оплата на кассе, пожалуйста'],
+    ['hear.food.suki', 'お好[す]きな席[せき]へどうぞ', 'osuki na seki e dōzo', 'Садитесь, где нравится'],
+    ['hear.food.button', 'お決[き]まりになりましたら、ボタンでお呼[よ]びください', 'okimari ni narimashitara, botan de oyobi kudasai', 'Когда выберете, нажмите кнопку вызова'],
+    ['hear.food.namae', 'こちらにお名前[なまえ]を書[か]いてお待[ま]ちください', 'kochira ni onamae o kaite omachi kudasai', 'Впишите имя в лист ожидания и подождите', 'Имя можно написать латиницей.'],
   ],
 
   'transport:say': [
@@ -159,7 +166,7 @@ export const ITEMS = {
     ['transport.lost-ticket', '切符[きっぷ]をなくしました', 'kippu o nakushimashita', 'Я потерял(а) билет'],
     ['transport.overshot', '乗[の]り過[す]ごしました', 'norisugoshimashita', 'Я проехал(а) свою остановку'],
     ['transport.reserved', '指定席[していせき]を予約[よやく]したいです', 'shiteiseki o yoyaku shitai desu', 'Хочу забронировать места'],
-    ['transport.together', '三人[さんにん]並[なら]んで座[すわ]れますか', 'sannin narande suwaremasu ka', 'Можно сесть втроём рядом?'],
+    ['transport.together', '三人[さんにん]並[なら]んで座[すわ]れますか', 'sannin narande suwaremasu ka', 'Можно сесть втроём рядом?', 'У кассы часто говорят: 三人並びの席をお願いします (sannin narabi no seki o onegai shimasu).'],
     ['transport.stroller', 'ベビーカーのまま乗[の]れますか', 'bebīkā no mama noremasu ka', 'Можно сесть, не складывая коляску?'],
     ['transport.locker', 'コインロッカーはどこですか', 'koin rokkā wa doko desu ka', 'Где камеры хранения?'],
     ['transport.elevator', 'エレベーターはどこですか', 'erebētā wa doko desu ka', 'Где лифт?'],
@@ -182,11 +189,11 @@ export const ITEMS = {
   ],
 
   'hotel:say': [
-    ['hotel.checkin', 'チェックインをお願[ねが]いします。予約[よやく]した〇〇です', 'chekkuin o onegai shimasu. yoyaku shita 〇〇 desu', 'Заселение, пожалуйста. Бронь на имя 〇〇'],
+    ['hotel.checkin', 'チェックインをお願[ねが]いします。予約[よやく]している〇〇です', 'chekkuin o onegai shimasu. yoyaku shite iru 〇〇 desu', 'Заселение, пожалуйста. Бронь на имя 〇〇'],
     ['hotel.luggage', '荷物[にもつ]を預[あず]かってもらえますか', 'nimotsu o azukatte moraemasu ka', 'Можно оставить у вас багаж?'],
     ['hotel.breakfast', '朝食[ちょうしょく]は何時[なんじ]からですか', 'chōshoku wa nanji kara desu ka', 'Со скольки завтрак?'],
     ['hotel.checkout', 'チェックアウトは何時[なんじ]ですか', 'chekkuauto wa nanji desu ka', 'Во сколько выезд?'],
-    ['hotel.late-checkout', 'チェックアウトを遅[おそ]くできますか', 'chekkuauto o osoku dekimasu ka', 'Можно выехать попозже?'],
+    ['hotel.late-checkout', 'チェックアウトを遅[おそ]くできますか', 'chekkuauto o osoku dekimasu ka', 'Можно выехать попозже?', 'Чаще говорят: レイトチェックアウトはできますか (reito chekkuauto wa dekimasu ka).'],
     ['hotel.wifi', '{Wi-Fi|ワイファイ}のパスワードを教[おし]えてください', 'waifai no pasuwādo o oshiete kudasai', 'Скажите, пожалуйста, пароль от Wi-Fi'],
     ['hotel.towel', 'タオルをもう一枚[いちまい]お願[ねが]いします', 'taoru o mō ichimai onegai shimasu', 'Ещё одно полотенце, пожалуйста'],
     ['hotel.futon', '布団[ふとん]をもう一組[ひとくみ]お願[ねが]いします', 'futon o mō hitokumi onegai shimasu', 'Ещё один комплект футона, пожалуйста'],
@@ -237,6 +244,10 @@ export const ITEMS = {
     ['shop.take', 'これにします', 'kore ni shimasu', 'Беру это'],
     ['shop.think', 'ちょっと考[かんが]えます', 'chotto kangaemasu', 'Я подумаю', 'Вежливый способ уйти без покупки.'],
     ['shop.looking', '見[み]ているだけです', 'mite iru dake desu', 'Просто смотрю'],
+    ['shop.present', 'プレゼント用[よう]です', 'purezento-yō desu', 'Это в подарок', 'Ответ на ご自宅用ですか.'],
+    ['shop.flashlight', 'ライトで中[なか]を見[み]てもいいですか', 'raito de naka o mite mo ii desu ka', 'Можно посмотреть объектив на просвет фонариком?'],
+    ['shop.body-only', '本体[ほんたい]のみですか', 'hontai nomi desu ka', 'Это только сам аппарат (без комплекта)?'],
+    ['shop.return', '返品[へんぴん]はできますか', 'henpin wa dekimasu ka', 'Можно будет вернуть?', 'На б/у часто пишут 返品不可 — возврат не принимается.'],
   ],
 
   'shop:hear': [
@@ -248,6 +259,7 @@ export const ITEMS = {
     ['hear.shop.hosho', '保証[ほしょう]は〇か月[げつ]です', 'hoshō wa 〇-kagetsu desu', 'Гарантия 〇 месяцев', 'Число + か月: 1 いっかげつ, 3 さんかげつ, 6 ろっかげつ, 10 じゅっかげつ; 1年 いちねん. 保証なし — без гарантии.'],
     ['hear.shop.counter', '免税[めんぜい]カウンターは〇階[かい]です', 'menzei kauntā wa 〇-kai desu', 'Стойка tax-free на 〇 этаже', 'Число + 階: 1 いっかい, 3 さんがい, 6 ろっかい, 8 はっかい, 10 じゅっかい. 地下 (ちか) — подземный этаж.'],
     ['hear.shop.tsutsumi', 'お包[つつ]みしますか', 'otsutsumi shimasu ka', 'Упаковать?'],
+    ['hear.shop.jitaku', 'ご自宅用[じたくよう]ですか', 'go-jitaku-yō desu ka', 'Это для себя (не в подарок)?', 'Ответ: はい / プレゼント用です.'],
   ],
 
   'family:say': [
@@ -273,6 +285,9 @@ export const ITEMS = {
     ['family.kid-toilet', '子[こ]どもがトイレに行[い]きたいです', 'kodomo ga toire ni ikitai desu', 'Ребёнку нужно в туалет'],
     ['family.wallet', '財布[さいふ]をなくしました', 'saifu o nakushimashita', 'Я потерял(а) кошелёк'],
     ['family.phone', 'スマホをなくしました', 'sumaho o nakushimashita', 'Я потерял(а) телефон'],
+    ['family.age', '〇歳[さい]です', '〇-sai desu', 'Ему/ей 〇 лет', 'Звуковые изменения: 1 いっさい, 8 はっさい, 10 じゅっさい.'],
+    ['family.free', '子[こ]どもは無料[むりょう]ですか', 'kodomo wa muryō desu ka', 'Для ребёнка бесплатно?'],
+    ['family.kid-price', '子[こ]ども料金[りょうきん]はいくらですか', 'kodomo ryōkin wa ikura desu ka', 'Сколько стоит детский билет (вход)?'],
   ],
 
   'family:hear': [
@@ -329,4 +344,33 @@ export const ITEMS = {
 export const ROMAJI_REVIEWED = {
   'basics.konnichiwa': 'は в слове こんにちは читается wa',
   'basics.konbanwa': 'は в слове こんばんは читается wa',
+};
+
+// Связи «услышал → что ответить» (PLAN.md 3.3). Сборка выводит replies у hear и обратные replyTo у say.
+// Источник: таблица из вычитки (review/content-review.md §5) + ответы, добавленные отдельными фразами.
+export const REPLIES = {
+  'hear.konbini.bag': ['konbini.bag-none', 'konbini.bag-yes', 'basics.daijobu', 'basics.onegai'],
+  'hear.konbini.heat': ['konbini.heat', 'konbini.no-heat', 'basics.daijobu', 'basics.onegai'],
+  'hear.konbini.hashi': ['basics.onegai', 'basics.daijobu', 'konbini.chopsticks'],
+  'hear.konbini.receipt': ['konbini.receipt-yes', 'konbini.receipt-no'],
+  'hear.konbini.point': ['konbini.no-point', 'basics.iie'],
+  'hear.konbini.shiharai': ['konbini.card', 'konbini.cash', 'konbini.ic'],
+  'hear.konbini.ijo': ['basics.hai'],
+  'hear.konbini.ikkatsu': ['basics.hai'],
+  'hear.konbini.wake': ['konbini.issho', 'basics.onegai'],
+  'hear.food.nanmei': ['food.party', 'food.party-detail'],
+  'hear.food.order': ['food.not-yet', 'basics.hai'],
+  'hear.food.eatin': ['basics.hai', 'food.mochikaeri-de'],
+  'hear.food.manseki': ['food.machimasu', 'food.wait'],
+  'hear.food.namae': ['food.machimasu'],
+  'hear.shop.sagashi': ['shop.looking', 'shop.looking-lens', 'shop.looking-body'],
+  'hear.shop.passport': ['shop.passport'],
+  'hear.hotel.passport': ['shop.passport'],
+  'hear.shop.tsutsumi': ['shop.gift', 'basics.daijobu'],
+  'hear.shop.jitaku': ['basics.hai', 'shop.present'],
+  'hear.taxi.dochira': ['transport.taxi-address'],
+  'hear.family.hoken': ['family.insurance'],
+  'hear.family.dou': ['family.stomach', 'family.fever', 'family.injury', 'family.sick'],
+  'hear.family.itai': ['family.stomach', 'family.fever', 'family.injury', 'family.sick'],
+  'hear.family.nansai': ['family.age'],
 };

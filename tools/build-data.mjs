@@ -4,7 +4,7 @@ import { writeFileSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { completeItem } from '../app/modules/text.js';
-import { CATEGORIES, ITEMS } from './content/phrases.src.mjs';
+import { CATEGORIES, ITEMS, REPLIES } from './content/phrases.src.mjs';
 import * as KANA from './content/kana.src.mjs';
 import { GROUPS, KANJI } from './content/kanji.src.mjs';
 
@@ -50,6 +50,18 @@ for (const [key, list] of Object.entries(ITEMS)) {
     });
   }
 }
+// связи «услышал → ответ»: replies у hear, обратные replyTo у say
+const byId = new Map(items.map((it) => [it.id, it]));
+for (const [hearId, sayIds] of Object.entries(REPLIES)) {
+  const h = byId.get(hearId);
+  if (!h) throw new Error('REPLIES: нет фразы ' + hearId);
+  h.replies = [...sayIds];
+  for (const sid of sayIds) {
+    const s = byId.get(sid);
+    if (!s) throw new Error('REPLIES: нет ответа ' + sid);
+    s.replyTo = [...new Set([...(s.replyTo || []), hearId])];
+  }
+}
 const p1 = out('phrases.json', { version: VERSION, categories: CATEGORIES, items });
 
 // ---------- kana ----------
@@ -81,6 +93,7 @@ for (const g of GROUPS) {
 const p3 = out('kanji.json', { version: VERSION, groups: GROUPS, items: kanji });
 
 const byKind = items.reduce((a, it) => ((a[it.kind] = (a[it.kind] || 0) + 1), a), {});
+console.log(`links: ${Object.keys(REPLIES).length} hear → ${items.filter((it) => it.replyTo).length} say`);
 console.log(`phrases: ${items.length} ${JSON.stringify(byKind)} → ${p1}`);
 console.log(`kana: words ${KANA.WORDS.length} → ${p2}`);
 console.log(`kanji: ${kanji.length} → ${p3}`);

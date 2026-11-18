@@ -105,6 +105,12 @@
    "tags": [
     "w1",
     "core"
+   ],
+   "replyTo": [
+    "hear.konbini.bag",
+    "hear.konbini.heat",
+    "hear.konbini.hashi",
+    "hear.konbini.wake"
    ]
   },
   {
@@ -120,6 +126,12 @@
    "tags": [
     "w1",
     "core"
+   ],
+   "replyTo": [
+    "hear.konbini.bag",
+    "hear.konbini.heat",
+    "hear.konbini.hashi",
+    "hear.shop.tsutsumi"
    ]
   },
   {
@@ -148,6 +160,13 @@
    "tags": [
     "w1",
     "core"
+   ],
+   "replyTo": [
+    "hear.konbini.ijo",
+    "hear.konbini.ikkatsu",
+    "hear.food.order",
+    "hear.food.eatin",
+    "hear.shop.jitaku"
    ]
   },
   {
@@ -162,6 +181,9 @@
    "tags": [
     "w1",
     "core"
+   ],
+   "replyTo": [
+    "hear.konbini.point"
    ]
   },
   {
@@ -574,7 +596,7 @@
    "id": "patterns.taberaremasen",
    "cat": "patterns",
    "kind": "pattern",
-   "ru": "Не может есть яйца",
+   "ru": "Нельзя есть яйца (не могу / ребёнок не может)",
    "ja": "卵が食べられません",
    "ruby": "卵[たまご]が食[た]べられません",
    "kana": "たまごがたべられません",
@@ -624,6 +646,9 @@
    "note": "Ответ на 袋はご利用ですか.",
    "tags": [
     "w1"
+   ],
+   "replyTo": [
+    "hear.konbini.bag"
    ]
   },
   {
@@ -638,6 +663,9 @@
    "note": "Пакеты платные — несколько иен.",
    "tags": [
     "w1"
+   ],
+   "replyTo": [
+    "hear.konbini.bag"
    ]
   },
   {
@@ -651,6 +679,9 @@
    "romaji": "atatamete kudasai",
    "tags": [
     "w1"
+   ],
+   "replyTo": [
+    "hear.konbini.heat"
    ]
   },
   {
@@ -664,6 +695,9 @@
    "romaji": "atatamenakute daijōbu desu",
    "tags": [
     "w1"
+   ],
+   "replyTo": [
+    "hear.konbini.heat"
    ]
   },
   {
@@ -678,6 +712,9 @@
    "note": "Разговорно; формальный счёт палочек — 膳 (ぜん).",
    "tags": [
     "w1"
+   ],
+   "replyTo": [
+    "hear.konbini.hashi"
    ]
   },
   {
@@ -704,6 +741,9 @@
    "romaji": "kādo de haraemasu ka",
    "tags": [
     "w1"
+   ],
+   "replyTo": [
+    "hear.konbini.shiharai"
    ]
   },
   {
@@ -718,6 +758,9 @@
    "note": "Проще: «Suica de» (スイカで).",
    "tags": [
     "w1"
+   ],
+   "replyTo": [
+    "hear.konbini.shiharai"
    ]
   },
   {
@@ -731,6 +774,9 @@
    "romaji": "genkin de haraimasu",
    "tags": [
     "w1"
+   ],
+   "replyTo": [
+    "hear.konbini.shiharai"
    ]
   },
   {
@@ -784,6 +830,9 @@
    "romaji": "reshīto wa daijōbu desu",
    "tags": [
     "w1"
+   ],
+   "replyTo": [
+    "hear.konbini.receipt"
    ]
   },
   {
@@ -797,6 +846,9 @@
    "romaji": "reshīto o kudasai",
    "tags": [
     "w1"
+   ],
+   "replyTo": [
+    "hear.konbini.receipt"
    ]
   },
   {
@@ -811,6 +863,26 @@
    "note": "Ответ на ポイントカードはお持ちですか. Можно короче: いいえ.",
    "tags": [
     "w1"
+   ],
+   "replyTo": [
+    "hear.konbini.point"
+   ]
+  },
+  {
+   "id": "konbini.issho",
+   "cat": "konbini",
+   "kind": "say",
+   "ru": "Можно вместе (в один пакет)",
+   "ja": "一緒で大丈夫です",
+   "ruby": "一緒[いっしょ]で大丈夫[だいじょうぶ]です",
+   "kana": "いっしょでだいじょうぶです",
+   "romaji": "issho de daijōbu desu",
+   "note": "Ответ на 袋はお分けしますか.",
+   "tags": [
+    "w1"
+   ],
+   "replyTo": [
+    "hear.konbini.wake"
    ]
   },
   {
@@ -841,6 +913,12 @@
    "tags": [
     "w1",
     "hear"
+   ],
+   "replies": [
+    "konbini.bag-none",
+    "konbini.bag-yes",
+    "basics.daijobu",
+    "basics.onegai"
    ]
   },
   {
@@ -856,6 +934,10 @@
    "tags": [
     "w1",
     "hear"
+   ],
+   "replies": [
+    "konbini.no-point",
+    "basics.iie"
    ]
   },
   {
@@ -871,6 +953,12 @@
    "tags": [
     "w1",
     "hear"
+   ],
+   "replies": [
+    "konbini.heat",
+    "konbini.no-heat",
+    "basics.daijobu",
+    "basics.onegai"
    ]
   },
   {
@@ -886,6 +974,11 @@
    "tags": [
     "w1",
     "hear"
+   ],
+   "replies": [
+    "basics.onegai",
+    "basics.daijobu",
+    "konbini.chopsticks"
    ]
   },
   {
@@ -901,6 +994,9 @@
    "tags": [
     "w1",
     "hear"
+   ],
+   "replies": [
+    "basics.hai"
    ]
   },
   {
@@ -916,6 +1012,11 @@
    "tags": [
     "w1",
     "hear"
+   ],
+   "replies": [
+    "konbini.card",
+    "konbini.cash",
+    "konbini.ic"
    ]
   },
   {
@@ -931,6 +1032,9 @@
    "tags": [
     "w1",
     "hear"
+   ],
+   "replies": [
+    "basics.hai"
    ]
   },
   {
@@ -960,6 +1064,10 @@
    "tags": [
     "w1",
     "hear"
+   ],
+   "replies": [
+    "konbini.receipt-yes",
+    "konbini.receipt-no"
    ]
   },
   {
@@ -1000,7 +1108,7 @@
    "ruby": "年齢確認[ねんれいかくにん]のため、画面[がめん]のタッチをお願[ねが]いします",
    "kana": "ねんれいかくにんのため、がめんのタッチをおねがいします",
    "romaji": "nenrei kakunin no tame, gamen no tatchi o onegai shimasu",
-   "note": "При покупке алкоголя: нажать «はい» на экране кассы.",
+   "note": "При покупке алкоголя: нажать на экране кассы «はい», «20歳以上です» или «確認».",
    "tags": [
     "w1",
     "hear"
@@ -1035,6 +1143,25 @@
    ]
   },
   {
+   "id": "hear.konbini.wake",
+   "cat": "konbini",
+   "kind": "hear",
+   "ru": "Разложить по разным пакетам (горячее/холодное)?",
+   "ja": "袋はお分けしますか",
+   "ruby": "袋[ふくろ]はお分[わ]けしますか",
+   "kana": "ふくろはおわけしますか",
+   "romaji": "fukuro wa owake shimasu ka",
+   "note": "Ответ: 一緒で大丈夫です (вместе) / お願いします (раздельно).",
+   "tags": [
+    "w1",
+    "hear"
+   ],
+   "replies": [
+    "konbini.issho",
+    "basics.onegai"
+   ]
+  },
+  {
    "id": "food.party",
    "cat": "food",
    "kind": "say",
@@ -1046,6 +1173,9 @@
    "note": "Ответ на 何名様ですか. Можно показать пальцы.",
    "tags": [
     "w2"
+   ],
+   "replyTo": [
+    "hear.food.nanmei"
    ]
   },
   {
@@ -1059,6 +1189,9 @@
    "romaji": "otona futari to kodomo hitori desu",
    "tags": [
     "w2"
+   ],
+   "replyTo": [
+    "hear.food.nanmei"
    ]
   },
   {
@@ -1257,7 +1390,7 @@
    "ruby": "アレルギー表[ひょう]はありますか",
    "kana": "アレルギーひょうはありますか",
    "romaji": "arerugī-hyō wa arimasu ka",
-   "note": "В сетевых ресторанах обычно есть.",
+   "note": "В сетевых ресторанах обычно есть. Вариант: アレルゲン情報はありますか (arerugen jōhō wa arimasu ka).",
    "tags": [
     "w2"
    ]
@@ -1300,6 +1433,9 @@
    "romaji": "dono kurai machimasu ka",
    "tags": [
     "w2"
+   ],
+   "replyTo": [
+    "hear.food.manseki"
    ]
   },
   {
@@ -1313,6 +1449,9 @@
    "romaji": "mō sukoshi matte kudasai",
    "tags": [
     "w2"
+   ],
+   "replyTo": [
+    "hear.food.order"
    ]
   },
   {
@@ -1397,6 +1536,41 @@
    ]
   },
   {
+   "id": "food.mochikaeri-de",
+   "cat": "food",
+   "kind": "say",
+   "ru": "Навынос, пожалуйста",
+   "ja": "持ち帰りで",
+   "ruby": "持[も]ち帰[かえ]りで",
+   "kana": "もちかえりで",
+   "romaji": "mochikaeri de",
+   "note": "Ответ на 店内でお召し上がりですか.",
+   "tags": [
+    "w2"
+   ],
+   "replyTo": [
+    "hear.food.eatin"
+   ]
+  },
+  {
+   "id": "food.machimasu",
+   "cat": "food",
+   "kind": "say",
+   "ru": "Мы подождём",
+   "ja": "待ちます",
+   "ruby": "待[ま]ちます",
+   "kana": "まちます",
+   "romaji": "machimasu",
+   "note": "Ответ на «мест нет» или «придётся подождать».",
+   "tags": [
+    "w2"
+   ],
+   "replyTo": [
+    "hear.food.manseki",
+    "hear.food.namae"
+   ]
+  },
+  {
    "id": "hear.food.nanmei",
    "cat": "food",
    "kind": "hear",
@@ -1409,6 +1583,10 @@
    "tags": [
     "w2",
     "hear"
+   ],
+   "replies": [
+    "food.party",
+    "food.party-detail"
    ]
   },
   {
@@ -1452,6 +1630,10 @@
    "tags": [
     "w2",
     "hear"
+   ],
+   "replies": [
+    "food.not-yet",
+    "basics.hai"
    ]
   },
   {
@@ -1481,6 +1663,10 @@
    "tags": [
     "w2",
     "hear"
+   ],
+   "replies": [
+    "basics.hai",
+    "food.mochikaeri-de"
    ]
   },
   {
@@ -1539,6 +1725,10 @@
    "tags": [
     "w2",
     "hear"
+   ],
+   "replies": [
+    "food.machimasu",
+    "food.wait"
    ]
   },
   {
@@ -1581,6 +1771,52 @@
    "tags": [
     "w2",
     "hear"
+   ]
+  },
+  {
+   "id": "hear.food.suki",
+   "cat": "food",
+   "kind": "hear",
+   "ru": "Садитесь, где нравится",
+   "ja": "お好きな席へどうぞ",
+   "ruby": "お好[す]きな席[せき]へどうぞ",
+   "kana": "おすきなせきへどうぞ",
+   "romaji": "osuki na seki e dōzo",
+   "tags": [
+    "w2",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.food.button",
+   "cat": "food",
+   "kind": "hear",
+   "ru": "Когда выберете, нажмите кнопку вызова",
+   "ja": "お決まりになりましたら、ボタンでお呼びください",
+   "ruby": "お決[き]まりになりましたら、ボタンでお呼[よ]びください",
+   "kana": "おきまりになりましたら、ボタンでおよびください",
+   "romaji": "okimari ni narimashitara, botan de oyobi kudasai",
+   "tags": [
+    "w2",
+    "hear"
+   ]
+  },
+  {
+   "id": "hear.food.namae",
+   "cat": "food",
+   "kind": "hear",
+   "ru": "Впишите имя в лист ожидания и подождите",
+   "ja": "こちらにお名前を書いてお待ちください",
+   "ruby": "こちらにお名前[なまえ]を書[か]いてお待[ま]ちください",
+   "kana": "こちらにおなまえをかいておまちください",
+   "romaji": "kochira ni onamae o kaite omachi kudasai",
+   "note": "Имя можно написать латиницей.",
+   "tags": [
+    "w2",
+    "hear"
+   ],
+   "replies": [
+    "food.machimasu"
    ]
   },
   {
@@ -1764,6 +2000,7 @@
    "ruby": "三人[さんにん]並[なら]んで座[すわ]れますか",
    "kana": "さんにんならんですわれますか",
    "romaji": "sannin narande suwaremasu ka",
+   "note": "У кассы часто говорят: 三人並びの席をお願いします (sannin narabi no seki o onegai shimasu).",
    "tags": [
     "w2"
    ]
@@ -1819,6 +2056,9 @@
    "note": "Показать карточку адреса отеля.",
    "tags": [
     "w2"
+   ],
+   "replyTo": [
+    "hear.taxi.dochira"
    ]
   },
   {
@@ -1986,6 +2226,9 @@
    "tags": [
     "w3",
     "hear"
+   ],
+   "replies": [
+    "transport.taxi-address"
    ]
   },
   {
@@ -1993,10 +2236,10 @@
    "cat": "hotel",
    "kind": "say",
    "ru": "Заселение, пожалуйста. Бронь на имя 〇〇",
-   "ja": "チェックインをお願いします。予約した〇〇です",
-   "ruby": "チェックインをお願[ねが]いします。予約[よやく]した〇〇です",
-   "kana": "チェックインをおねがいします。よやくした〇〇です",
-   "romaji": "chekkuin o onegai shimasu. yoyaku shita 〇〇 desu",
+   "ja": "チェックインをお願いします。予約している〇〇です",
+   "ruby": "チェックインをお願[ねが]いします。予約[よやく]している〇〇です",
+   "kana": "チェックインをおねがいします。よやくしている〇〇です",
+   "romaji": "chekkuin o onegai shimasu. yoyaku shite iru 〇〇 desu",
    "tags": [
     "w3"
    ]
@@ -2049,6 +2292,7 @@
    "ruby": "チェックアウトを遅[おそ]くできますか",
    "kana": "チェックアウトをおそくできますか",
    "romaji": "chekkuauto o osoku dekimasu ka",
+   "note": "Чаще говорят: レイトチェックアウトはできますか (reito chekkuauto wa dekimasu ka).",
    "tags": [
     "w3"
    ]
@@ -2169,6 +2413,9 @@
    "tags": [
     "w3",
     "hear"
+   ],
+   "replies": [
+    "shop.passport"
    ]
   },
   {
@@ -2251,6 +2498,9 @@
    "romaji": "〇〇 no renzu o sagashite imasu",
    "tags": [
     "w3"
+   ],
+   "replyTo": [
+    "hear.shop.sagashi"
    ]
   },
   {
@@ -2264,6 +2514,9 @@
    "romaji": "〇〇 no bodi o sagashite imasu",
    "tags": [
     "w3"
+   ],
+   "replyTo": [
+    "hear.shop.sagashi"
    ]
   },
   {
@@ -2500,6 +2753,10 @@
    "romaji": "pasupōto desu",
    "tags": [
     "w3"
+   ],
+   "replyTo": [
+    "hear.shop.passport",
+    "hear.hotel.passport"
    ]
   },
   {
@@ -2592,6 +2849,9 @@
    "romaji": "purezento-yō ni tsutsunde moraemasu ka",
    "tags": [
     "w3"
+   ],
+   "replyTo": [
+    "hear.shop.tsutsumi"
    ]
   },
   {
@@ -2632,6 +2892,66 @@
    "romaji": "mite iru dake desu",
    "tags": [
     "w3"
+   ],
+   "replyTo": [
+    "hear.shop.sagashi"
+   ]
+  },
+  {
+   "id": "shop.present",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "Это в подарок",
+   "ja": "プレゼント用です",
+   "ruby": "プレゼント用[よう]です",
+   "kana": "プレゼントようです",
+   "romaji": "purezento-yō desu",
+   "note": "Ответ на ご自宅用ですか.",
+   "tags": [
+    "w3"
+   ],
+   "replyTo": [
+    "hear.shop.jitaku"
+   ]
+  },
+  {
+   "id": "shop.flashlight",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "Можно посмотреть объектив на просвет фонариком?",
+   "ja": "ライトで中を見てもいいですか",
+   "ruby": "ライトで中[なか]を見[み]てもいいですか",
+   "kana": "ライトでなかをみてもいいですか",
+   "romaji": "raito de naka o mite mo ii desu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "shop.body-only",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "Это только сам аппарат (без комплекта)?",
+   "ja": "本体のみですか",
+   "ruby": "本体[ほんたい]のみですか",
+   "kana": "ほんたいのみですか",
+   "romaji": "hontai nomi desu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "shop.return",
+   "cat": "shop",
+   "kind": "say",
+   "ru": "Можно будет вернуть?",
+   "ja": "返品はできますか",
+   "ruby": "返品[へんぴん]はできますか",
+   "kana": "へんぴんはできますか",
+   "romaji": "henpin wa dekimasu ka",
+   "note": "На б/у часто пишут 返品不可 — возврат не принимается.",
+   "tags": [
+    "w3"
    ]
   },
   {
@@ -2647,6 +2967,11 @@
    "tags": [
     "w3",
     "hear"
+   ],
+   "replies": [
+    "shop.looking",
+    "shop.looking-lens",
+    "shop.looking-body"
    ]
   },
   {
@@ -2661,6 +2986,9 @@
    "tags": [
     "w3",
     "hear"
+   ],
+   "replies": [
+    "shop.passport"
    ]
   },
   {
@@ -2748,6 +3076,29 @@
    "tags": [
     "w3",
     "hear"
+   ],
+   "replies": [
+    "shop.gift",
+    "basics.daijobu"
+   ]
+  },
+  {
+   "id": "hear.shop.jitaku",
+   "cat": "shop",
+   "kind": "hear",
+   "ru": "Это для себя (не в подарок)?",
+   "ja": "ご自宅用ですか",
+   "ruby": "ご自宅用[じたくよう]ですか",
+   "kana": "ごじたくようですか",
+   "romaji": "go-jitaku-yō desu ka",
+   "note": "Ответ: はい / プレゼント用です.",
+   "tags": [
+    "w3",
+    "hear"
+   ],
+   "replies": [
+    "basics.hai",
+    "shop.present"
    ]
   },
   {
@@ -2867,6 +3218,10 @@
    "romaji": "kodomo ga netsu o dashimashita",
    "tags": [
     "w3"
+   ],
+   "replyTo": [
+    "hear.family.dou",
+    "hear.family.itai"
    ]
   },
   {
@@ -2880,6 +3235,10 @@
    "romaji": "onaka ga itai desu",
    "tags": [
     "w3"
+   ],
+   "replyTo": [
+    "hear.family.dou",
+    "hear.family.itai"
    ]
   },
   {
@@ -2893,6 +3252,10 @@
    "romaji": "kibun ga warui desu",
    "tags": [
     "w3"
+   ],
+   "replyTo": [
+    "hear.family.dou",
+    "hear.family.itai"
    ]
   },
   {
@@ -2906,6 +3269,10 @@
    "romaji": "kega o shimashita",
    "tags": [
     "w3"
+   ],
+   "replyTo": [
+    "hear.family.dou",
+    "hear.family.itai"
    ]
   },
   {
@@ -2919,6 +3286,9 @@
    "romaji": "kaigai ryokō hoken ni haitte imasu",
    "tags": [
     "w3"
+   ],
+   "replyTo": [
+    "hear.family.hoken"
    ]
   },
   {
@@ -3041,6 +3411,49 @@
    ]
   },
   {
+   "id": "family.age",
+   "cat": "family",
+   "kind": "say",
+   "ru": "Ему/ей 〇 лет",
+   "ja": "〇歳です",
+   "ruby": "〇歳[さい]です",
+   "kana": "〇さいです",
+   "romaji": "〇-sai desu",
+   "note": "Звуковые изменения: 1 いっさい, 8 はっさい, 10 じゅっさい.",
+   "tags": [
+    "w3"
+   ],
+   "replyTo": [
+    "hear.family.nansai"
+   ]
+  },
+  {
+   "id": "family.free",
+   "cat": "family",
+   "kind": "say",
+   "ru": "Для ребёнка бесплатно?",
+   "ja": "子どもは無料ですか",
+   "ruby": "子[こ]どもは無料[むりょう]ですか",
+   "kana": "こどもはむりょうですか",
+   "romaji": "kodomo wa muryō desu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
+   "id": "family.kid-price",
+   "cat": "family",
+   "kind": "say",
+   "ru": "Сколько стоит детский билет (вход)?",
+   "ja": "子ども料金はいくらですか",
+   "ruby": "子[こ]ども料金[りょうきん]はいくらですか",
+   "kana": "こどもりょうきんはいくらですか",
+   "romaji": "kodomo ryōkin wa ikura desu ka",
+   "tags": [
+    "w3"
+   ]
+  },
+  {
    "id": "hear.family.dou",
    "cat": "family",
    "kind": "hear",
@@ -3052,6 +3465,12 @@
    "tags": [
     "w3",
     "hear"
+   ],
+   "replies": [
+    "family.stomach",
+    "family.fever",
+    "family.injury",
+    "family.sick"
    ]
   },
   {
@@ -3066,6 +3485,12 @@
    "tags": [
     "w3",
     "hear"
+   ],
+   "replies": [
+    "family.stomach",
+    "family.fever",
+    "family.injury",
+    "family.sick"
    ]
   },
   {
@@ -3081,6 +3506,9 @@
    "tags": [
     "w3",
     "hear"
+   ],
+   "replies": [
+    "family.age"
    ]
   },
   {
@@ -3096,6 +3524,9 @@
    "tags": [
     "w3",
     "hear"
+   ],
+   "replies": [
+    "family.insurance"
    ]
   },
   {

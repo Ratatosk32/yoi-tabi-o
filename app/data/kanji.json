@@ -170,6 +170,15 @@
    "ru": "выходной день заведения"
   },
   {
+   "id": "k.eigyojikan",
+   "group": "signs",
+   "ja": "営業時間",
+   "ruby": "営業時間[えいぎょうじかん]",
+   "kana": "えいぎょうじかん",
+   "romaji": "eigyō jikan",
+   "ru": "часы работы"
+  },
+  {
    "id": "k.koshochu",
    "group": "signs",
    "ja": "故障中",
@@ -250,6 +259,15 @@
    "kana": "ふつう",
    "romaji": "futsū",
    "ru": "со всеми остановками"
+  },
+  {
+   "id": "k.kakutei",
+   "group": "station",
+   "ja": "各駅停車",
+   "ruby": "各駅停車[かくえきていしゃ]",
+   "kana": "かくえきていしゃ",
+   "romaji": "kakueki teisha",
+   "ru": "со всеми остановками (= 普通, сокращённо 各停)"
   },
   {
    "id": "k.kaisoku",
@@ -368,6 +386,25 @@
    "kana": "しゅうでん",
    "romaji": "shūden",
    "ru": "последний поезд"
+  },
+  {
+   "id": "k.homen",
+   "group": "station",
+   "ja": "方面",
+   "ruby": "方面[ほうめん]",
+   "kana": "ほうめん",
+   "romaji": "hōmen",
+   "ru": "направление (渋谷方面 — в сторону Сибуи)",
+   "note": "Есть на каждой платформе."
+  },
+  {
+   "id": "k.heijitsu",
+   "group": "station",
+   "ja": "平日",
+   "ruby": "平日[へいじつ]",
+   "kana": "へいじつ",
+   "romaji": "heijitsu",
+   "ru": "будни (в расписаниях и часах работы)"
   },
   {
    "id": "k.donichi",
@@ -504,6 +541,15 @@
    "kana": "しちゃくしつ",
    "romaji": "shichakushitsu",
    "ru": "примерочная"
+  },
+  {
+   "id": "k.henpinfuka",
+   "group": "shop",
+   "ja": "返品不可",
+   "ruby": "返品不可[へんぴんふか]",
+   "kana": "へんぴんふか",
+   "romaji": "henpin fuka",
+   "ru": "возврат не принимается"
   },
   {
    "id": "k.chuko",
@@ -704,6 +750,42 @@
    "kana": "ぶんかいせいそうずみ",
    "romaji": "bunkai seisō-zumi",
    "ru": "после разборки и чистки (CLA)"
+  },
+  {
+   "id": "k.hontai",
+   "group": "used",
+   "ja": "本体のみ",
+   "ruby": "本体[ほんたい]のみ",
+   "kana": "ほんたいのみ",
+   "romaji": "hontai nomi",
+   "ru": "только аппарат, без аксессуаров и коробки"
+  },
+  {
+   "id": "k.jitsuyo",
+   "group": "used",
+   "ja": "実用品",
+   "ruby": "実用品[じつようひん]",
+   "kana": "じつようひん",
+   "romaji": "jitsuyōhin",
+   "ru": "«рабочий» экземпляр: износ заметен, но работает"
+  },
+  {
+   "id": "k.fukikizu",
+   "group": "used",
+   "ja": "拭きキズ",
+   "ruby": "拭[ふ]きキズ",
+   "kana": "ふきキズ",
+   "romaji": "fukikizu",
+   "ru": "следы чистки (микроцарапины) на просветлении"
+  },
+  {
+   "id": "k.balsam",
+   "group": "used",
+   "ja": "バルサム切れ",
+   "ruby": "バルサム切[ぎ]れ",
+   "kana": "バルサムぎれ",
+   "romaji": "barusamu-gire",
+   "ru": "расслоение бальзама (склейки линз)"
   },
   {
    "id": "k.jidomaki",

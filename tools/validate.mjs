@@ -51,9 +51,29 @@ export function validateAll() {
     if (!it.ru) errors.push(`${where}: нет ru`);
     if (!Array.isArray(it.tags) || !it.tags.some((t) => /^w[123]$/.test(t))) errors.push(`${where}: нет тега недели`);
     checkJapanese(it, where, errors, warnings);
+    if (it.tts && !KANA_ONLY.test(it.tts)) errors.push(`${where}: tts должен быть каной «${it.tts}»`);
     if (jaSeen.has(it.ja) && it.kind === 'say') warnings.push(`${where}: та же фраза, что ${jaSeen.get(it.ja)}`);
     jaSeen.set(it.ja, it.id);
   }
+
+  // связи «услышал → ответ»: существуют, правильного типа, симметричны
+  const byId = new Map((ph.items || []).map((it) => [it.id, it]));
+  let links = 0;
+  for (const it of ph.items || []) {
+    for (const r of it.replies || []) {
+      links += 1;
+      const t = byId.get(r);
+      if (!t) errors.push(`phrases[${it.id}]: replies → нет ${r}`);
+      else if (t.kind !== 'say') errors.push(`phrases[${it.id}]: replies → ${r} не say`);
+      else if (!(t.replyTo || []).includes(it.id)) errors.push(`phrases[${r}]: нет обратной связи replyTo → ${it.id}`);
+      if (it.kind !== 'hear') errors.push(`phrases[${it.id}]: replies только у hear`);
+    }
+    for (const r of it.replyTo || []) {
+      const t = byId.get(r);
+      if (!t || !(t.replies || []).includes(it.id)) errors.push(`phrases[${it.id}]: replyTo → ${r} без обратной связи`);
+    }
+  }
+  if (links === 0) errors.push('phrases.json: нет ни одной связи replies/replyTo');
 
   // kanji
   const kj = load('kanji.json');
