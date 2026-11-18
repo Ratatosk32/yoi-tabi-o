@@ -5,19 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Japan Trip</title>
   <meta name="description" content="Разговорник, тренажёр и инструменты для поездки в Японию. Работает офлайн.">
-  <meta name="theme-color" content="#14161c">
-  <meta name="color-scheme" content="dark light">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f5f1e7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#171613" media="(prefers-color-scheme: dark)">
   <meta name="robots" content="noindex">
   <meta name="format-detection" content="telephone=no">
   <!-- iOS: установка через «Поделиться → На экран «Домой»» -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="Япония">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="icon" href="icons/icon-192.png" type="image/png">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="icons/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Тема, выбранная вручную, — до первого кадра (без вспышки). Без выбора — как в системе.
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || t === 'dark') {
+        document.documentElement.dataset.theme = t;
+        document.querySelectorAll('meta[name=theme-color]').forEach(function (m) { m.content = t === 'dark' ? '#171613' : '#f5f1e7'; });
+      }
+    } catch (e) { /* хранилище недоступно — тема системы */ }
+  </script>
+  <link rel="preload" href="fonts/shippori-mincho-500.kana.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="components.css">
   <script src="vendor/wanakana.min.js" defer></script>
   <script type="module" src="app.js"></script>
 </head>

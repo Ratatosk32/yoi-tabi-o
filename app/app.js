@@ -94,8 +94,32 @@ function route() {
     console.error(e);
     view.append(h('div.card.error', 'Ошибка отрисовки: ' + e.message));
   }
+  const header = view.querySelector('header.top');
+  if (header) header.append(themeToggle());
   view.scrollTop = 0;
   window.scrollTo(0, 0);
+}
+
+// ---------- Тема: по умолчанию как в системе; ручной выбор — data-theme на <html> + localStorage ----------
+export function currentTheme() {
+  const el = document.documentElement;
+  if (el.dataset.theme === 'light' || el.dataset.theme === 'dark') return el.dataset.theme;
+  return matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+export function setTheme(theme) {
+  document.documentElement.dataset.theme = theme;
+  try { localStorage.setItem('theme', theme); } catch { /* приватный режим */ }
+  document.querySelectorAll('meta[name=theme-color]').forEach((m) => { m.content = theme === 'dark' ? '#171613' : '#f5f1e7'; });
+}
+
+function themeToggle() {
+  const label = () => (currentTheme() === 'dark' ? 'Светлая тема' : 'Тёмная тема');
+  const btn = h('button.theme-toggle', {
+    type: 'button', 'aria-label': label(), title: label(),
+    on: { click: () => { setTheme(currentTheme() === 'dark' ? 'light' : 'dark'); btn.setAttribute('aria-label', label()); btn.title = label(); } },
+  });
+  return btn;
 }
 
 function buildShell() {

@@ -53,12 +53,21 @@ export function rubyEl(ruby, { furigana = true, cls = 'ja' } = {}) {
 
 export function jaText(text, cls = 'ja') { return h('span', { class: cls, lang: 'ja' }, text); }
 
-/** Кнопки ▶ 1.0x и 0.7x для элемента с полями ja/tts. */
+/** Иконка-маска дизайна (красится в currentColor; не превращается в эмодзи на iOS). */
+export function ico(name) { return h('span.ico.ico-' + name, { 'aria-hidden': 'true' }); }
+
+/** Кнопки ▶ 1.0× и 0.7× для элемента с полями ja/tts. Пока звучит — кольцо .is-speaking. */
 export function speakButtons(item, { text } = {}) {
-  const say = (rate) => (e) => { e.stopPropagation(); speakItem(item, rate, text); };
+  const say = (rate) => (e) => {
+    e.stopPropagation();
+    const btn = e.currentTarget;
+    document.querySelectorAll('.btn.is-speaking').forEach((b) => b.classList.remove('is-speaking'));
+    btn.classList.add('is-speaking');
+    speakItem(item, rate, text).finally(() => btn.classList.remove('is-speaking'));
+  };
   return h('span.speak',
-    h('button.btn.icon', { type: 'button', title: 'Произнести', 'aria-label': 'Произнести', on: { click: say(1.0) } }, '▶'),
-    h('button.btn.icon.slow', { type: 'button', title: 'Медленно (0.7x)', 'aria-label': 'Медленно', on: { click: say(0.7) } }, '0.7'),
+    h('button.btn.icon', { type: 'button', title: 'Произнести', 'aria-label': 'Произнести', on: { click: say(1.0) } }, ico('play')),
+    h('button.btn.icon.slow', { type: 'button', title: 'Медленно (0.7×)', 'aria-label': 'Медленно', on: { click: say(0.7) } }, '0.7×'),
   );
 }
 
@@ -94,17 +103,18 @@ function unlockScreen() { try { wakeLock?.release(); } catch { /* ignore */ } wa
 export function showFullscreen({ lines, caption, speakText }) {
   closeFullscreen();
   const textLen = lines.reduce((n, l) => n + (l.text || l.ruby || '').replace(/\[[^\]]*\]/g, '').length, 0);
-  const size = textLen <= 8 ? 15 : textLen <= 20 ? 11 : textLen <= 40 ? 8.5 : textLen <= 80 ? 6.5 : 5;
-  const body = h('div.fs-body', { style: { '--fs': size + 'vmin' } },
+  // --fs-n: процент от короткой стороны экрана (таблица из design/DESIGN.md §5)
+  const size = textLen <= 8 ? 20 : textLen <= 20 ? 13.5 : textLen <= 40 ? 11 : textLen <= 80 ? 8 : 6;
+  const body = h('div.fs-body', { style: { '--fs-n': String(size) } },
     lines.map((l) => h('p.fs-line' + (l.small ? '.small' : ''),
       l.ruby ? rubyEl(l.ruby, { furigana: false, cls: 'fs-ja' }) : jaText(l.text, 'fs-ja'))));
   const ov = h('div#fs.fs', { role: 'dialog', 'aria-modal': 'true', 'aria-label': 'Карточка для показа' },
     body,
     caption ? h('p.fs-caption', caption) : null,
     h('div.fs-bar',
-      speakText ? h('button.btn', { type: 'button', on: { click: () => speakItem({ ja: speakText }, 1.0) } }, '▶ Озвучить') : null,
-      h('button.btn', { type: 'button', on: { click: () => ov.classList.toggle('rot') } }, '⟳ Повернуть'),
-      h('button.btn.primary', { type: 'button', on: { click: closeFullscreen } }, '✕ Закрыть'),
+      speakText ? h('button.btn', { type: 'button', on: { click: () => speakItem({ ja: speakText }, 1.0) } }, ico('play'), 'Озвучить') : null,
+      h('button.btn', { type: 'button', on: { click: () => ov.classList.toggle('rot') } }, ico('rotate'), 'Повернуть'),
+      h('button.btn.primary', { type: 'button', on: { click: () => closeFullscreen() } }, ico('close'), 'Закрыть'),
     ),
   );
   document.body.append(ov);

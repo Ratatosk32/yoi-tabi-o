@@ -1,0 +1,260 @@
+/* ============================================================================
+ * Japan Trip PWA — design tokens. «Бумага и тушь».
+ *
+ * Every visual value lives here; components.css carries names only.
+ * Light "paper" (washi) is the default. Dark "night ink" applies when
+ *   - the OS asks for dark AND the user has not forced light, or
+ *   - <html data-theme="dark"> is set by the manual toggle.
+ * The dark block is therefore written twice (media query + attribute). Keep the
+ * two copies identical — tools/contrast.py audits the values.
+ * ============================================================================ */
+
+:root {
+  color-scheme: light;
+
+  /* -- Paper: washi, unbleached (kinari) ---------------------------------- */
+  --paper: #f5f1e7;          /* the page */
+  --surface: #fdfbf6;        /* a sheet lying on the page: cards, fields */
+  --raised: #fffdf9;         /* a sheet that floats: toast, banner */
+  --fill: #ebe5d7;           /* pressed / muted fill, kana grid header */
+  --line: #ddd5c4;           /* hairline rule (decorative, not a boundary) */
+  --line-strong: #bfb5a0;    /* firmer rule, sheet edge on hover */
+  --line-field: #857e70;     /* boundary of an input / outline button: 3.6:1 on paper */
+
+  /* -- Ink: sumi, four dilutions ------------------------------------------ */
+  --ink: #1c1a17;            /* 15.4:1 on paper */
+  --ink-2: #46423b;          /*  8.9:1 */
+  --ink-3: #676257;          /*  5.4:1 — the lightest colour text may use */
+  --ink-4: #857e70;          /*  3.6:1 — marks and icons only, never text */
+  --on-ink: #f5f1e7;         /* text on an ink-filled button */
+
+  /* -- Accents: one seal red, one indigo. Used sparingly ------------------ */
+  --shu: #c23a2b;            /* hanko vermilion: seal fill, active tab, favourite */
+  --shu-text: #a83222;       /* the same red as TEXT on paper: 5.9:1 */
+  --on-shu: #fffaf3;         /* 5.1:1 on --shu */
+  --ai: #2b4c7e;             /* ai-iro indigo: "you will hear", links, focus ring */
+
+  /* -- States: quiet, always paired with a mark (○ ×), never colour alone -- */
+  --matsu: #3d6a4c;          /* pine: correct / "know" */
+  --enji: #9b3a32;           /* dark red: incorrect / "again" */
+  --kin: #7a5c14;            /* ochre: "hard" / warning */
+  --matsu-wash: #e6eae2;
+  --enji-wash: #f1e4de;
+  --kin-wash: #ede8db;
+  --ai-wash: #e4e6e8;
+  --shu-wash: #f4e3dc;
+
+  /* -- The "show" card is white paper and black ink in EVERY theme -------- */
+  --show-paper: #ffffff;
+  --show-ink: #000000;
+  --show-caption: #555555;   /* 7.5:1 */
+  --show-rule: #d9d9d9;
+
+  /* -- Paper: fine grain + a soft uneven tone, two inline SVG noises (≈0.7 KB, no images) -- */
+  --paper-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .36 0 0 0 0 .28 0 0 0 0 .16 0 0 0 .42 -.155'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --paper-fibre: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='320'%3E%3Cfilter id='f' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.009 .013' numOctaves='3' seed='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .36 0 0 0 0 .2 0 0 0 .22 -.088'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)'/%3E%3C/svg%3E");
+
+  /* -- Elevation: paper barely lifts ---------------------------------------- */
+  --shadow-sheet: 0 1px 0 rgba(70, 56, 30, .05), 0 1px 3px rgba(70, 56, 30, .07);
+  --shadow-float: 0 1px 2px rgba(50, 40, 20, .08), 0 10px 28px rgba(50, 40, 20, .14);
+  --tabbar-bg: rgba(245, 241, 231, .94);
+
+  /* ---------------------------------------------------------------------- */
+  /* Everything below is theme-independent.                                 */
+  /* ---------------------------------------------------------------------- */
+
+  /* -- Type: four voices ----------------------------------------------------
+   * ja-display  the Japanese you came to read: Mincho (self-hosted subset, then system Mincho)
+   * ja-ui       furigana, small Japanese, the "show" card: system Gothic, 0 bytes
+   * read        Russian meaning and headings: Lora (self-hosted subset with Cyrillic)
+   * ui          labels, buttons, romaji: the system sans (Roboto / SF), 0 bytes        */
+  --font-ja-display: "Shippori Mincho", "Hiragino Mincho ProN", "Noto Serif CJK JP", "Noto Serif JP", "Yu Mincho", "YuMincho", serif;
+  --font-ja-ui: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans CJK JP", "Noto Sans JP", "BIZ UDPGothic", "Yu Gothic UI", "Yu Gothic", "Meiryo", sans-serif;
+  --font-read: "Lora", "Iowan Old Style", "Noto Serif", Georgia, "Times New Roman", serif;
+  --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-num: var(--font-ui);
+
+  /* rem-based so the OS text-size setting is honoured (1rem = 16px by default) */
+  --fs-micro: .75rem;        /* 12   counters, tab labels (never body text) */
+  --fs-small: .8125rem;      /* 13   notes, hints */
+  --fs-label: .875rem;       /* 14   button labels, chips */
+  --fs-romaji: .9375rem;     /* 15   romaji — what the traveller reads aloud */
+  --fs-body: 1rem;           /* 16   Russian meaning; inputs (iOS does not zoom at 16) */
+  --fs-lead: 1.125rem;       /* 18 */
+  --fs-h2: 1.25rem;          /* 20 */
+  --fs-title: 1.75rem;       /* 28   screen title */
+  --fs-ja-sm: 1.125rem;      /* 18   Japanese inside notes, kana cells' secondary */
+  --fs-ja-md: 1.375rem;      /* 22   phrase in a collapsed row */
+  --fs-ja-lg: 1.625rem;      /* 26   phrase opened, flashcard */
+  --fs-ja-xl: 2.25rem;       /* 36   price in kanji */
+  --fs-ja-hero: 6rem;        /* 96   the kana being asked in the quiz */
+
+  --lh-tight: 1.2;
+  --lh-ui: 1.4;
+  --lh-read: 1.55;
+  --lh-ja: 1.5;              /* Japanese without furigana */
+  --lh-ja-ruby: 2.05;        /* Japanese with furigana above */
+
+  /* -- Space: one scale (4-pt) -------------------------------------------- */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+  --gutter: 20px;            /* page side margin: generous, this is the "ma" */
+
+  /* -- Touch --------------------------------------------------------------- */
+  --tap: 48px;               /* minimum target */
+  --tap-lg: 56px;            /* primary one-thumb actions */
+  --tabbar-h: 64px;
+
+  /* -- Radius: paper has almost none --------------------------------------- */
+  --r-seal: 5px;             /* hanko */
+  --r-sheet: 4px;            /* cards, fields */
+  --r-btn: 6px;
+  --r-pill: 999px;
+
+  /* -- Motion --------------------------------------------------------------- */
+  --ease: cubic-bezier(.2, .7, .2, 1);
+  --dur-1: 120ms;            /* press */
+  --dur-2: 220ms;            /* reveal, toast */
+
+  /* -- Layers ---------------------------------------------------------------- */
+  --z-tabbar: 20;
+  --z-banner: 30;
+  --z-show: 100;
+  --z-toast: 200;
+
+  /* -- Safe areas (iPhone, installed PWA) ---------------------------------- */
+  --safe-t: env(safe-area-inset-top, 0px);
+  --safe-r: env(safe-area-inset-right, 0px);
+  --safe-b: env(safe-area-inset-bottom, 0px);
+  --safe-l: env(safe-area-inset-left, 0px);
+
+  /* -- Aliases: the variable names app/styles.css already uses ---------------
+   * Loading this file AFTER the app's own :root block re-skins the app with no
+   * other change ("path A" in DESIGN.md). They resolve at use time, so they
+   * follow the theme. components.css does not use them.                        */
+  --color-bg: var(--paper);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--fill);
+  --color-line: var(--line);
+  --color-text: var(--ink);
+  --color-text-2: var(--ink-2);
+  --color-muted: var(--ink-3);
+  --color-accent: var(--shu);
+  --color-on-accent: var(--on-shu);
+  --color-ok: var(--matsu);
+  --color-ok-soft: var(--matsu-wash);
+  --color-warn: var(--kin);
+  --color-warn-line: var(--kin);
+  --color-bad: var(--enji);
+  --color-bad-soft: var(--enji-wash);
+  --color-danger-text: var(--shu-text);
+  --color-tabbar: var(--tabbar-bg);
+  --color-toast-bg: var(--ink);
+  --color-toast-text: var(--on-ink);
+  --color-show-bg: var(--show-paper);
+  --color-show-text: var(--show-ink);
+  --color-show-muted: var(--show-caption);
+  --color-show-bar: var(--show-paper);
+  --color-show-line: var(--show-rule);
+  --color-show-btn: #ffffff;
+  --color-show-btn-primary: #000000;
+  --color-show-on-primary: #ffffff;
+  --font-ja: var(--font-ja-display);
+  --text-base: var(--fs-body);
+  --text-sm: var(--fs-small);
+  --text-xs: var(--fs-micro);
+  --text-ja: var(--fs-ja-md);
+  --text-ja-lg: var(--fs-ja-lg);
+  --radius-lg: var(--r-sheet);
+  --radius-md: var(--r-btn);
+  --radius-sm: var(--r-sheet);
+  --radius-xs: 2px;
+  --radius-pill: var(--r-pill);
+  --shadow-card: var(--shadow-sheet);
+  --tap-min: var(--tap);
+  --content-max: 560px;
+}
+
+/* ---------------------------------------------------------------------------
+ * Night ink. Warm, not blue-black: the paper colour becomes the ink.
+ * --------------------------------------------------------------------------- */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #171613;
+    --surface: #201f1b;
+    --raised: #2a2823;
+    --fill: #2a2823;
+    --line: #3a372f;
+    --line-strong: #575245;
+    --line-field: #7d7768;
+    --ink: #ece6d8;          /* 14.5:1 on paper */
+    --ink-2: #c9c2b1;        /* 10.2:1 */
+    --ink-3: #a19a8a;        /*  6.5:1 */
+    --ink-4: #7d7768;        /*  4.1:1 (marks) */
+    --on-ink: #171613;
+    --shu: #cc4532;          /* seal: 3.9:1 on paper as a mark, 4.5:1 under --on-shu */
+    --shu-text: #f08a75;     /* 7.4:1 */
+    --on-shu: #fffaf3;
+    --ai: #9bb8de;           /* 8.9:1 */
+    --matsu: #8fbf9c;
+    --enji: #f0958a;
+    --kin: #d9b765;
+    --matsu-wash: #343c32;
+    --enji-wash: #45342f;
+    --kin-wash: #413a28;
+    --ai-wash: #363b3e;
+    --shu-wash: #44302a;
+    --paper-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .93 0 0 0 0 .9 0 0 0 0 .82 0 0 0 .2 -.078'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    --paper-fibre: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='320'%3E%3Cfilter id='f' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.009 .013' numOctaves='3' seed='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .93 0 0 0 0 .9 0 0 0 0 .82 0 0 0 .12 -.05'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)'/%3E%3C/svg%3E");
+    --shadow-sheet: 0 1px 0 rgba(0, 0, 0, .25), 0 1px 3px rgba(0, 0, 0, .3);
+    --shadow-float: 0 1px 2px rgba(0, 0, 0, .4), 0 12px 32px rgba(0, 0, 0, .5);
+    --tabbar-bg: rgba(23, 22, 19, .94);
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #171613;
+  --surface: #201f1b;
+  --raised: #2a2823;
+  --fill: #2a2823;
+  --line: #3a372f;
+  --line-strong: #575245;
+  --line-field: #7d7768;
+  --ink: #ece6d8;
+  --ink-2: #c9c2b1;
+  --ink-3: #a19a8a;
+  --ink-4: #7d7768;
+  --on-ink: #171613;
+  --shu: #cc4532;
+  --shu-text: #f08a75;
+  --on-shu: #fffaf3;
+  --ai: #9bb8de;
+  --matsu: #8fbf9c;
+  --enji: #f0958a;
+  --kin: #d9b765;
+  --matsu-wash: #343c32;
+  --enji-wash: #45342f;
+  --kin-wash: #413a28;
+  --ai-wash: #363b3e;
+  --shu-wash: #44302a;
+  --paper-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .93 0 0 0 0 .9 0 0 0 0 .82 0 0 0 .2 -.078'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --paper-fibre: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='320'%3E%3Cfilter id='f' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.009 .013' numOctaves='3' seed='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .93 0 0 0 0 .9 0 0 0 0 .82 0 0 0 .12 -.05'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)'/%3E%3C/svg%3E");
+  --shadow-sheet: 0 1px 0 rgba(0, 0, 0, .25), 0 1px 3px rgba(0, 0, 0, .3);
+  --shadow-float: 0 1px 2px rgba(0, 0, 0, .4), 0 12px 32px rgba(0, 0, 0, .5);
+  --tabbar-bg: rgba(23, 22, 19, .94);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-1: 1ms;
+    --dur-2: 1ms;
+  }
+}

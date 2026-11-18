@@ -212,6 +212,58 @@ async function main() {
     check(`${vp.name}: diag.html — таблица Pixel/iPhone`, await waitFor("document.querySelectorAll('#checks tbody tr').length >= 10 && document.querySelectorAll('#checks .yn').length > 0"));
     await shot(`${vp.name}-11-diag`);
 
+    // ---------- Темы: переключатель, скриншоты всех вкладок в светлой и тёмной, таб-бар ничего не перекрывает ----------
+    await navigate(BASE + '#/phrases');
+    await waitFor("document.documentElement.dataset.ready === '1'");
+    await evaluate("localStorage.removeItem('theme'); document.documentElement.removeAttribute('data-theme')");
+    await click('header.top .theme-toggle');
+    const t1 = await evaluate("[document.documentElement.dataset.theme, localStorage.getItem('theme')]");
+    await click('header.top .theme-toggle');
+    const t2 = await evaluate("[document.documentElement.dataset.theme, localStorage.getItem('theme')]");
+    check(`${vp.name}: переключатель темы меняет и запоминает тему`, t1[0] && t1[0] === t1[1] && t2[0] === t2[1] && t1[0] !== t2[0], JSON.stringify([t1, t2]));
+
+    const TABS = [['phrases', '#/phrases'], ['hear', '#/phrases/hear'], ['study', '#/study/today'], ['session', null], ['kana', '#/study/kana'],
+      ['numbers', '#/study/numbers'], ['time', '#/study/time'], ['show', '#/show'], ['kanji', '#/kanji'], ['tools', '#/tools']];
+    for (const theme of ['light', 'dark']) {
+      await evaluate(`localStorage.setItem('theme', '${theme}'); document.documentElement.dataset.theme = '${theme}'`);
+      for (const [name, hash] of TABS) {
+        if (hash) await navigate(BASE + hash);
+        else { await navigate(BASE + '#/study/today'); await waitFor("!!document.querySelector('#start-review')"); await click('#start-review'); await click('#reveal'); }
+        await waitFor("document.documentElement.dataset.ready === '1' && document.querySelector('#view').children.length > 1");
+        if (name === 'phrases') await click('.phrase.is-collapsed .jp'); // раскрыть одну фразу
+        await sleep(150);
+        const st = await evaluate(`(() => {
+          const de = document.documentElement, cs = getComputedStyle(document.body);
+          const tb = document.querySelector('.tabbar').getBoundingClientRect();
+          // низ контента в координатах документа должен быть выше таб-бара при прокрутке до конца
+          const view = document.querySelector('#view');
+          const last = [...view.querySelectorAll('*')].filter((e) => e.offsetParent && e.getBoundingClientRect().height > 0 && !(e.closest('details:not([open])') && !e.closest('summary')))
+            .reduce((m, e) => Math.max(m, e.getBoundingClientRect().bottom + scrollY), 0);
+          const docH = document.scrollingElement.scrollHeight;
+          const lastBottom = last;
+          const tbTop = docH - tb.height;
+          const ctrls = [...view.querySelectorAll('button, a.btn, input:not([type=checkbox]):not([type=radio]):not([type=file]), select')].filter((e) => e.offsetParent);
+          const tiny = ctrls.filter((e) => e.getBoundingClientRect().height < 30 && !e.closest('.reply-to, .linklike, details summary') && !e.classList.contains('linklike'));
+          const serif = ctrls.filter((e) => /Times New Roman/i.test(getComputedStyle(e).fontFamily));
+          return { theme: de.dataset.theme, bg: cs.backgroundColor, tbH: Math.round(tb.height), lastBottom: Math.round(lastBottom), tbTop: Math.round(tbTop),
+            tiny: tiny.map((e) => e.className + ':' + Math.round(e.getBoundingClientRect().height)).slice(0, 5), serif: serif.length, hscroll: de.scrollWidth > innerWidth + 1 };
+        })()`);
+        const expectBg = theme === 'light' ? 'rgb(245, 241, 231)' : 'rgb(23, 22, 19)';
+        const ok = st.theme === theme && st.bg === expectBg && st.lastBottom <= st.tbTop + 1 && !st.tiny.length && !st.serif && !st.hscroll;
+        check(`${vp.name} ${theme} ${name}: тема, фон, таб-бар не перекрывает, контролы оформлены`, ok, ok ? '' : JSON.stringify(st));
+        await shot(`theme-${vp.name}-${theme}-${name}`);
+      }
+      // полноэкранная карточка в теме (всегда белая)
+      await navigate(BASE + '#/show');
+      await waitFor("!!document.querySelector('.showcard')");
+      await click('.showcard');
+      const fsBg = await evaluate("getComputedStyle(document.querySelector('#fs')).backgroundColor");
+      check(`${vp.name} ${theme}: карточка «показать» белая в любой теме`, fsBg === 'rgb(255, 255, 255)', fsBg);
+      await shot(`theme-${vp.name}-${theme}-fullscreen`);
+      await click('#fs .fs-bar .btn.primary');
+    }
+    await evaluate("localStorage.removeItem('theme')");
+
     const newErr = errors.slice(e0);
     check(`${vp.name}: нет исключений и console.error`, newErr.length === 0, newErr.join(' | '));
   }

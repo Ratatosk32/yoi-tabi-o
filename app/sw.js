@@ -1,13 +1,18 @@
 // Service Worker (same-origin, отдельный файл — Blob-SW запрещены, PLAN.md 2d).
 // При каждом изменении файлов приложения увеличивайте VERSION — браузер увидит новый sw.js
 // и предложит пользователю «Обновить» (без тихих перезагрузок).
-const VERSION = 'v2';
+const VERSION = 'v3';
 const CACHE = `jt-${VERSION}`;
 
 const PRECACHE = [
   './',
   'index.html',
-  'styles.css',
+  'fonts/fonts.css',
+  'fonts/shippori-mincho-500.kana.woff2',
+  'fonts/shippori-mincho-500.kanji.woff2',
+  'fonts/lora-var.woff2',
+  'tokens.css',
+  'components.css',
   'app.js',
   'manifest.webmanifest',
   'diag.html',
@@ -31,6 +36,8 @@ const PRECACHE = [
   'icons/icon-512.png',
   'icons/icon-maskable-512.png',
   'icons/apple-touch-icon.png',
+  'icons/favicon-32.png',
+  'icons/icon.svg',
 ];
 
 self.addEventListener('install', (event) => {

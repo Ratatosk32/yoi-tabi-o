@@ -1,5 +1,5 @@
 // Вкладка «Учёба»: урок дня, SRS (Leitner), кана (таблицы + квиз), тренажёры цен и времени.
-import { h, clear, rubyEl, jaText, speakButtons, speakItem, chip, shuffle, toast } from './ui.js';
+import { h, clear, rubyEl, jaText, speakButtons, speakItem, chip, shuffle, toast, ico } from './ui.js';
 import { buildSession, grade, todayStr, studyWeek, stats, MODES } from './srs.js';
 import * as N from './numbers.js';
 import * as tts from './tts.js';
@@ -129,10 +129,16 @@ function renderSession(ctx, box) {
   const cur = session.queue[session.idx];
   const it = cur.item;
   const total = session.queue.length;
-  const head = h('div.sess-head',
-    h('span', `${session.title} · ${session.idx + 1}/${total}`),
-    h('span.small', (cur.isNew ? 'новая · ' : '') + MODES[cur.mode]),
-    h('button.btn.small', { type: 'button', on: { click: () => { session = null; clear(box); renderToday(ctx, box); } } }, 'Выйти'));
+  const boxNo = (ctx.store.get('srs', {})[cur.key] || {}).box || 0;
+  const head = h('div',
+    h('div.sess-head',
+      h('span', `${session.title} · ${session.idx + 1}/${total}`),
+      h('span.small', (cur.isNew ? 'новая · ' : '') + MODES[cur.mode], ' ',
+        h('span.leitner', { title: boxNo ? `Коробка ${boxNo} из 5` : 'Новая карточка', 'aria-label': boxNo ? `Коробка ${boxNo} из 5` : 'Новая карточка' },
+          [1, 2, 3, 4, 5].map((i) => h('i' + (i <= boxNo ? '.on' : ''))))),
+      h('button.btn.small', { type: 'button', on: { click: () => { session = null; clear(box); renderToday(ctx, box); } } }, 'Выйти')),
+    h('div.progress', { role: 'progressbar', 'aria-valuemin': '0', 'aria-valuemax': String(total), 'aria-valuenow': String(session.idx) },
+      h('span', { style: { width: `${Math.round((session.idx / total) * 100)}%` } })));
   const card = h('div.card.flash', { 'data-mode': cur.mode, 'data-id': it.id });
   const jp = () => h('div.jp.center', rubyEl(it.ruby, { furigana: s.furigana }));
 
@@ -141,8 +147,8 @@ function renderSession(ctx, box) {
   } else if (cur.mode === 'ru2ja') {
     card.append(h('div.ru.big.center', it.ru), h('p.prompt', 'Скажите по-японски вслух, затем откройте ответ.'));
   } else {
-    card.append(h('div.center', h('button.btn.big.primary', { type: 'button', on: { click: () => speakItem(it, 1.0) } }, '▶ Слушать'),
-      h('button.btn', { type: 'button', on: { click: () => speakItem(it, 0.7) } }, '0.7x')),
+    card.append(h('div.center', h('button.btn.big.primary', { type: 'button', on: { click: () => speakItem(it, 1.0) } }, ico('play'), 'Слушать'),
+      h('button.btn', { type: 'button', on: { click: () => speakItem(it, 0.7) } }, '0.7×')),
     h('p.prompt', it.kind === 'hear' ? 'Что вам сказали? Что ответите?' : 'Что это значит?'));
   }
 
@@ -289,7 +295,7 @@ function runQuiz(ctx, quizBox, K, setKey) {
     const feedback = h('div.feedback');
     quizBox.append(
       h('div.sess-head', h('span', `${KANA_SETS[setKey].label} · ${i + 1}/10`), h('span', `верно: ${score}`)),
-      h('div.quiz-q', jaText(q.q, 'kana-big'), h('button.btn.icon', { type: 'button', 'aria-label': 'Произнести', on: { click: () => tts.speak(q.q, 0.9) } }, '▶')),
+      h('div.quiz-q', jaText(q.q, 'kana-big'), h('button.btn.icon', { type: 'button', 'aria-label': 'Произнести', on: { click: () => tts.speak(q.q, 0.9) } }, ico('play'))),
       h('div.opts', opts.map((o) => h('button.btn.opt', { type: 'button', on: { click: (e) => {
         if (quizBox.dataset.answered) return;
         quizBox.dataset.answered = '1';
@@ -322,7 +328,7 @@ function renderNumbers(ctx, box) {
       clear(fb).append(
         h('p', ok === true ? 'Верно!' : ok === false ? 'Неверно.' : '', ' ', h('strong', `¥${n.toLocaleString('ru-RU')}`), ' = ', jaText(N.yenMixed(n))),
         h('p', jaText(r.kana), ' — ', h('span.romaji', r.romaji)),
-        h('div.actions', h('button.btn', { type: 'button', on: { click: () => tts.speak(`${n}円`, 0.8) } }, '▶ ещё раз'),
+        h('div.actions', h('button.btn', { type: 'button', on: { click: () => tts.speak(`${n}円`, 0.8) } }, ico('play'), 'ещё раз'),
           h('button.btn.primary#num-next', { type: 'button', on: { click: next } }, 'Следующее')));
     };
     const check = () => {
@@ -336,8 +342,8 @@ function renderNumbers(ctx, box) {
     card.append(h('div.sess-head', h('span', `Верно ${numState.ok} из ${numState.total}`), h('span.small', N.PRICE_RANGES[numState.range].label)));
     if (numState.mode === 'audio') {
       card.append(h('div.center',
-        h('button.btn.big.primary#num-play', { type: 'button', on: { click: () => tts.speak(`${n}円`, 1.0) } }, '▶ Слушать цену'),
-        h('button.btn', { type: 'button', on: { click: () => tts.speak(`${n}円`, 0.7) } }, '0.7x')),
+        h('button.btn.big.primary#num-play', { type: 'button', on: { click: () => tts.speak(`${n}円`, 1.0) } }, ico('play'), 'Слушать цену'),
+        h('button.btn', { type: 'button', on: { click: () => tts.speak(`${n}円`, 0.7) } }, '0.7×')),
       input, h('div.actions', h('button.btn.primary#num-check', { type: 'button', on: { click: check } }, 'Проверить'), h('button.btn', { type: 'button', on: { click: () => reveal(null) } }, 'Сдаюсь')));
     } else if (numState.mode === 'mixed') {
       card.append(h('div.center', jaText(N.yenMixed(n), 'price-big')), h('p.prompt', 'Сколько это цифрами?'),
@@ -392,8 +398,8 @@ function renderTime(ctx, box) {
     input.addEventListener('keydown', (e) => { if (e.key === 'Enter') check(); });
     card.append(h('div.sess-head', h('span', `Верно ${timeState.ok} из ${timeState.total}`)));
     if (timeState.mode === 'audio') {
-      card.append(h('div.center', h('button.btn.big.primary', { type: 'button', on: { click: () => tts.speak(speakTime(t), 1.0) } }, '▶ Слушать время'),
-        h('button.btn', { type: 'button', on: { click: () => tts.speak(speakTime(t), 0.7) } }, '0.7x')),
+      card.append(h('div.center', h('button.btn.big.primary', { type: 'button', on: { click: () => tts.speak(speakTime(t), 1.0) } }, ico('play'), 'Слушать время'),
+        h('button.btn', { type: 'button', on: { click: () => tts.speak(speakTime(t), 0.7) } }, '0.7×')),
       input, h('div.actions', h('button.btn.primary', { type: 'button', on: { click: check } }, 'Проверить'), h('button.btn', { type: 'button', on: { click: () => reveal(null) } }, 'Сдаюсь')));
     } else {
       card.append(h('div.center', h('div.price-big', label)), h('p.prompt', 'Скажите по-японски, затем проверьте.'),

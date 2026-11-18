@@ -1,5 +1,5 @@
 // Вкладка «Инструменты»: Lens, Google Переводчик, карты, экстренные номера, озвучка, настройки, резервная копия.
-import { h, clear, toast, downloadJson } from './ui.js';
+import { h, clear, toast, downloadJson, ico } from './ui.js';
 import * as L from './launchers.js';
 import * as tts from './tts.js';
 import { stats } from './srs.js';
@@ -15,7 +15,7 @@ export function render(ctx, root) {
     h('header.top', h('h1', 'Инструменты')),
     h('section.block',
       h('h2.section', 'Камера: прочитать надпись'),
-      h('a.btn.big.primary#lens-btn', { href: variant.url(), rel: 'noopener', 'data-platform': L.PLATFORM }, 'Открыть Google Lens'),
+      h('a.btn.big.primary#lens-btn', { href: variant.url(), rel: 'noopener', 'data-platform': L.PLATFORM }, ico('camera'), 'Открыть Google Lens'),
       h('details.more', { open: L.PLATFORM === 'ios' },
         h('summary', L.PLATFORM === 'ios' ? 'На iPhone надёжнее так' : 'Если кнопка не открыла камеру'),
         h('ul',
@@ -43,7 +43,7 @@ export function render(ctx, root) {
     ta,
     h('div.actions.wrap',
       h('button.btn.primary', { type: 'button', on: { click: () => { const t = need(); if (t) L.open(L.translateUrl(t)); drawHist(); } } }, 'Открыть в Переводчике'),
-      h('button.btn', { type: 'button', on: { click: async () => { const t = need(); if (!t) return; const r = await L.shareText(t); if (r === 'unsupported') toast('«Поделиться» недоступно в этом браузере'); drawHist(); } } }, 'Поделиться…'),
+      h('button.btn', { type: 'button', on: { click: async () => { const t = need(); if (!t) return; const r = await L.shareText(t); if (r === 'unsupported') toast('«Поделиться» недоступно в этом браузере'); drawHist(); } } }, ico('share'), 'Поделиться…'),
       h('button.btn', { type: 'button', on: { click: () => { const t = need(); if (t) L.open(L.translateAppUrl(t)); drawHist(); } } }, 'В приложении Переводчика'),
     ),
     histBox,
@@ -56,17 +56,17 @@ export function render(ctx, root) {
     h('h2.section', 'Карты'),
     q,
     h('div.actions.wrap',
-      h('button.btn', { type: 'button', on: { click: () => L.open(L.mapsSearchUrl(q.value.trim())) } }, 'Найти на карте'),
+      h('button.btn', { type: 'button', on: { click: () => L.open(L.mapsSearchUrl(q.value.trim())) } }, ico('map'), 'Найти на карте'),
       h('button.btn', { type: 'button', on: { click: () => L.open(L.mapsTransitUrl(q.value.trim())) } }, 'Маршрут на транспорте')),
   ));
 
   // --- Экстренные номера ---
   root.append(h('section.block',
     h('h2.section', 'Экстренные номера'),
-    h('div.actions.wrap',
-      h('a.btn.danger', { href: 'tel:110' }, '110 Полиция'),
-      h('a.btn.danger', { href: 'tel:119' }, '119 Скорая / пожарные'),
-      h('a.btn', { href: 'tel:05038162787' }, 'Japan Visitor Hotline 050-3816-2787')),
+    h('div.tels',
+      h('a.tel', { href: 'tel:110' }, h('b', '110'), h('span', 'Полиция')),
+      h('a.tel', { href: 'tel:119' }, h('b', '119'), h('span', 'Скорая / пожарные')),
+      h('a.tel', { href: 'tel:05038162787' }, h('b.long', '050-3816-2787'), h('span', 'Japan Visitor Hotline'), h('small', 'JNTO, 24/7, английский'))),
     h('p.hint', 'Hotline JNTO: 24/7, английский, китайский, корейский. Фразы — в категории «Ребёнок, здоровье, экстренное».'),
   ));
 
@@ -88,8 +88,8 @@ export function render(ctx, root) {
           h('li', 'Движок: Speech Services by Google → значок шестерёнки → Install voice data → Японский (日本語).'),
           h('li', 'Перезапустите приложение и проверьте в авиарежиме.')));
     ttsBox.append(h('div.actions.wrap',
-      h('button.btn', { type: 'button', on: { click: () => tts.speak('袋はご利用ですか', 1.0) } }, '▶ Тест: 袋はご利用ですか'),
-      h('button.btn', { type: 'button', on: { click: () => tts.speak('12800円', 1.0) } }, '▶ Тест: 12800円'),
+      h('button.btn', { type: 'button', on: { click: () => tts.speak('袋はご利用ですか', 1.0) } }, ico('play'), 'Тест: 袋はご利用ですか'),
+      h('button.btn', { type: 'button', on: { click: () => tts.speak('12800円', 1.0) } }, ico('play'), 'Тест: 12800円'),
       h('a.btn', { href: 'diag.html' }, 'Диагностика')));
   };
   drawTts(tts.status());

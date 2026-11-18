@@ -5,13 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Диагностика · Japan Trip</title>
   <meta name="robots" content="noindex">
-  <meta name="theme-color" content="#14161c">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f5f1e7">
+  <script>try { var t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}</script>
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="components.css">
   <style>
     #view { padding-bottom: calc(40px + env(safe-area-inset-bottom)); }
     .t { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; margin: var(--space-2) 0; }
     .res { font-size: 13px; color: var(--color-text-2); word-break: break-word; }
-    #log { width: 100%; min-height: 160px; font: 12px/1.4 var(--font-mono); }
+    #log { width: 100%; min-height: 160px; font: 12px/1.4 ui-monospace, Menlo, Consolas, monospace; }
     table { width: 100%; border-collapse: collapse; font-size: 13px; }
     th, td { border-bottom: 1px solid var(--color-line); padding: 6px 4px; text-align: left; vertical-align: middle; }
     th { color: var(--color-text-2); font-weight: 600; }
@@ -31,9 +35,9 @@
     <div class="t"><button class="btn" id="voices">Показать голоса</button><span class="res" id="voices-res"></span></div>
     <div id="voices-table"></div>
     <div class="t">
-      <button class="btn" data-say="袋はご利用ですか">▶ 袋はご利用ですか</button>
-      <button class="btn" data-say="12800円">▶ 12800円</button>
-      <button class="btn" data-say="じゅっぷん">▶ じゅっぷん</button>
+      <button class="btn" data-say="袋はご利用ですか">▶︎ 袋はご利用ですか</button>
+      <button class="btn" data-say="12800円">▶︎ 12800円</button>
+      <button class="btn" data-say="じゅっぷん">▶︎ じゅっぷん</button>
     </div>
     <p class="small">12800円 должно звучать «итиман нисэн хаппяку эн» (いちまんにせんはっぴゃくえん). Затем включите авиарежим и повторите.</p>
   </section>
