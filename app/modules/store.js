@@ -3,7 +3,7 @@
 import { migrateSrsKeys } from './srs.js';
 
 const PREFIX = 'jt.';
-export const KEYS = ['favs', 'srs', 'settings', 'cards', 'userItems', 'history', 'quizStats'];
+export const KEYS = ['favs', 'srs', 'settings', 'cards', 'userItems', 'history', 'quizStats', 'lessons', 'learned', 'activity'];
 
 function memoryBackend() {
   const m = new Map();
@@ -122,7 +122,7 @@ export function createStore(backend) {
 function isPlainObject(v) { return !!v && typeof v === 'object' && !Array.isArray(v); }
 
 // Expected types of backup fields
-const ARRAY_KEYS = new Set(['favs', 'userItems', 'history']);
+const ARRAY_KEYS = new Set(['favs', 'userItems', 'history', 'activity']);
 function typeOk(key, v) {
   if (ARRAY_KEYS.has(key)) {
     if (!Array.isArray(v)) return false;

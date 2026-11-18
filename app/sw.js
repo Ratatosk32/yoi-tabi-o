@@ -15,6 +15,7 @@ const PRECACHE = [
   'app.js',
   'manifest.webmanifest',
   'diag',
+  'modules/curriculum.js',
   'modules/launchers.js',
   'modules/numbers.js',
   'modules/srs.js',
