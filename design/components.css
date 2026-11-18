@@ -1,5 +1,5 @@
 /* ============================================================================
- * Japan Trip PWA — components. «Бумага и тушь».
+ * Japan Trip PWA — components. "Paper and ink".
  * Requires tokens.css (and fonts/fonts.css for the two self-hosted subsets).
  *
  * Class names follow the builder's markup in app/modules/*.js, so this file can
@@ -450,7 +450,7 @@ label:has(> input[type=radio]) { display: inline-flex; align-items: center; min-
 .phrase.open .jp { font-size: var(--fs-ja-lg); }
 .phrase:has(+ .phrase.open) { border-bottom-color: transparent; }
 
-/* "Как ответить" under a staff phrase, "Ответ на" under an answer: apparatus, not a box */
+/* "How to reply" under a staff phrase, "Reply to" under an answer: apparatus, not a box */
 .replies { margin-top: var(--sp-4); padding-left: var(--sp-3); border-left: 2px solid var(--line-strong); }
 .replies-title {
   margin-bottom: var(--sp-1);
@@ -495,7 +495,7 @@ label:has(> input[type=radio]) { display: inline-flex; align-items: center; min-
   letter-spacing: .02em; text-transform: none;
 }
 
-/* ---------- 8. "Показать": list + editors ---------- */
+/* ---------- 8. "Show": list + editors ---------- */
 .showcard {
   position: relative;
   display: block; width: 100%;

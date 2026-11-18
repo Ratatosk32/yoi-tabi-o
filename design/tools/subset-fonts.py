@@ -10,7 +10,7 @@ Japanese characters actually used, and writes:
     design/fonts/lora-var.woff2                   Latin + macrons + Cyrillic, wght 400..700
     design/fonts/fonts.css                        @font-face rules with unicode-range
 Re-run after the phrase data changes: a kanji missing from the subset is not an
-error, it simply falls back to the system Mincho (see DESIGN.md, "Шрифты").
+error, it simply falls back to the system Mincho (see DESIGN.md, "Fonts").
 """
 import io, sys, pathlib
 from fontTools import subset

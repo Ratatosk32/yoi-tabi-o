@@ -9,7 +9,7 @@ for (const vp of [{ width: 412, height: 915, deviceScaleFactor: 2.625, isMobile:
   for (let n = 1; n <= 12; n++) {
     await p.evaluate(() => { const c = [...document.querySelectorAll('#card-allergy .checks input')].find((x) => !x.checked); c && c.click(); });
     await new Promise((r) => setTimeout(r, 80));
-    await p.evaluate(() => [...document.querySelectorAll('#card-allergy button')].find((b) => b.textContent === 'Показать').click());
+    await p.evaluate(() => [...document.querySelectorAll('#card-allergy button')].find((b) => b.textContent === 'Show').click());
     await new Promise((r) => setTimeout(r, 120));
     out.push(await p.evaluate((n) => { const b = document.querySelector('#fs .fs-body'); const r = `${n}:${b.scrollHeight > b.clientHeight + 1 ? 'CLIP' : 'ok'}(${b.scrollHeight}/${b.clientHeight},${getComputedStyle(b).overflowY})`; document.querySelector('#fs .btn.primary').click(); return r; }, n));
     await new Promise((r) => setTimeout(r, 80));

@@ -108,7 +108,7 @@ const SAMPLE = {
   settings: { furigana: false, startDate: '2026-11-18', newPerDay: 15 },
   cards: { allergy: { who: 'child', allergens: ['tamago'], strict: true }, hotel: { name: 'ホテル', address: '東京都新宿区' }, free: 'テスト' },
   userItems: [{ id: 'u.x1', en: 'Umbrella', ja: '傘', kana: 'かさ', romaji: 'kasa' }],
-  history: ['Где туалет?'],
+  history: ['Where is the toilet?'],
   quizStats: { kana: { hira: 9 } },
 };
 await t('store', 'no localStorage (Node) → in-memory fallback works', () => { const s = ST.createStore(); s.set('favs', ['a']); assert.deepEqual(s.get('favs', []), ['a']); return 'ok'; });
@@ -204,7 +204,7 @@ for (const q of ['ふくろ', 'bag', 'fukuro', 'Bag', 'BAG', 'フクロ', 'ﾌ�
     assert.ok(pos >= 0, `not found among ${r.length}`); return `rank ${pos + 1}/${r.length}`;
   });
 }
-await t('text', 'normalize ё/е, case, NFKC, macrons, katakana', () => {
+await t('text', 'normalize case, NFKC, macrons, katakana', () => {
   const pairs = [['BAG', 'bag'], ['My Bag', 'mybag'], ['kōhī', 'kohi'], ['Tōkyō', 'tokyo'], ['arigatou', 'arigato'], ['コーヒー', 'こひ'], ['ﾊﾟｽ', 'ぱす'], ["kin'en", 'kinen'], ['chūko', 'chuko'], ['ＡＴＭ', 'atm']];
   const bad = pairs.filter(([a, b]) => TX.normalize(a) !== b).map(([a, b]) => `${a}→${TX.normalize(a)} (exp ${b})`);
   assert.equal(bad.length, 0, bad.join('; ')); return 'all ' + pairs.length;
@@ -218,11 +218,9 @@ await t('text', 'long-vowel spellings: takushī ≡ takushii, rāmen ≡ raamen,
   const v = [['takushī', 'takushii'], ['rāmen', 'raamen'], ['ēgo', 'eego'], ['ōkii', 'ookii']].map(([a, b]) => [a, TX.normalize(a), b, TX.normalize(b)]);
   const bad = v.filter((x) => x[1] !== x[3]); assert.equal(bad.length, 0, JSON.stringify(bad)); return 'ok';
 });
-await t('text-search', 'search in real data with ё/е both ways (ещё / еще)', () => {
-  const withYo = items.filter((it) => /ё/i.test(it.ru)); if (!withYo.length) return 'no ё in data';
-  const w = withYo[0].ru.split(/\s+/).find((x) => /ё/i.test(x)).replace(/[^а-яё]/gi, '');
-  const r1 = TX.search(items, w), r2 = TX.search(items, w.replace(/ё/g, 'е').replace(/Ё/g, 'Е'));
-  assert.ok(r1.some((x) => x.id === withYo[0].id) && r2.some((x) => x.id === withYo[0].id)); return `«${w}»: ${r1.length}/${r2.length}`;
+await t('text-search', 'search in real data with curly and straight apostrophes (don’t / don\'t)', () => {
+  const r1 = TX.search(items, 'don’t need a bag'), r2 = TX.search(items, "don't need a bag");
+  assert.ok(r1.some((x) => x.id === 'konbini.bag-none') && r2.some((x) => x.id === 'konbini.bag-none')); return `${r1.length}/${r2.length}`;
 });
 await t('text-search', 'search macron-less romaji in real data (arigato, gozaimasu)', () => {
   const r = TX.search(items, 'arigato'); assert.ok(r.some((x) => /ありがとう/.test(x.ja))); return `${r.length} hits`;
@@ -230,7 +228,7 @@ await t('text-search', 'search macron-less romaji in real data (arigato, gozaima
 await t('text-search', 'search romaji with doubled vowel (arigatou / koohii-type input) in real data', () => {
   const r = TX.search(items, 'arigatou'); assert.ok(r.some((x) => /ありがとう/.test(x.ja))); return `${r.length} hits`;
 });
-await t('text-search', 'kanji search (real kanji.json): chuko / 中古 / б/у', () => {
+await t('text-search', 'kanji search (real kanji.json): chuko / 中古 / ちゅうこ / exit', () => {
   const k = KJ.items.map(TX.completeItem); const r = ['chuko', '中古', 'ちゅうこ', 'exit'].map((q) => [q, TX.search(k, q).length]);
   assert.ok(r.every(([, n]) => n > 0), JSON.stringify(r)); return JSON.stringify(r);
 });
@@ -317,7 +315,7 @@ const launchers = {};
 for (const [k, ua] of Object.entries({ android: UA.pixel, ios: UA.iphone, other: UA.desktop })) {
   nav(ua); const L = await mod('launchers.js', '?' + k);
   launchers[k] = { PLATFORM: L.PLATFORM, DEFAULT_LENS: L.DEFAULT_LENS, lens: Object.fromEntries(Object.entries(L.LENS_VARIANTS).map(([kk, v]) => [kk, v.url()])), lensDefaultUrl: L.lensVariant('nonexistent').url(),
-    translateApp: L.translateAppUrl('Где туалет? & 100%'), translateWeb: L.translateUrl('Где туалет? & 100%'), maps: L.mapsSearchUrl('新宿駅'), transit: L.mapsTransitUrl('Shinjuku Station') };
+    translateApp: L.translateAppUrl('Where is the toilet? & 100%'), translateWeb: L.translateUrl('Where is the toilet? & 100%'), maps: L.mapsSearchUrl('新宿駅'), transit: L.mapsTransitUrl('Shinjuku Station') };
 }
 if (navDesc) Object.defineProperty(globalThis, 'navigator', navDesc); else delete globalThis.navigator;
 await t('launchers', 'Android: Lens intent with package + fallback; Translate intent', () => {
@@ -326,7 +324,7 @@ await t('launchers', 'Android: Lens intent with package + fallback; Translate in
   assert.match(a.lens.googleApp, /package=com\.google\.android\.googlequicksearchbox/);
   assert.match(a.translateApp, /^intent:\/\/translate\.google\.com\/\?sl=ru&tl=ja&text=[^#]*#Intent;scheme=https;package=com\.google\.android\.apps\.translate;S\.browser_fallback_url=([^;]+);end$/);
   const fb = decodeURIComponent(/S\.browser_fallback_url=([^;]+);end/.exec(a.translateApp)[1]);
-  assert.equal(new URL(fb).searchParams.get('text'), 'Где туалет? & 100%');
+  assert.equal(new URL(fb).searchParams.get('text'), 'Where is the toilet? & 100%');
   return JSON.stringify(a);
 });
 await t('launchers', 'iOS: no intent:// anywhere; google:// + googletranslate://', () => {
@@ -340,7 +338,7 @@ await t('launchers', 'desktop/other: web Lens only; unknown variant falls back',
 });
 await t('launchers', 'web Translate / Maps URLs correctly encoded', () => {
   const a = launchers.android; const u = new URL(a.translateWeb);
-  assert.equal(u.searchParams.get('text'), 'Где туалет? & 100%'); assert.equal(u.searchParams.get('op'), 'translate');
+  assert.equal(u.searchParams.get('text'), 'Where is the toilet? & 100%'); assert.equal(u.searchParams.get('op'), 'translate');
   assert.equal(new URL(a.maps).searchParams.get('query'), '新宿駅'); assert.equal(new URL(a.transit).searchParams.get('travelmode'), 'transit');
   return a.maps + ' ' + a.transit;
 });

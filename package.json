@@ -5,8 +5,9 @@
   "scripts": {
     "build:data": "node tools/build-data.mjs",
     "validate": "node tools/validate.mjs",
-    "test": "node --test tests/",
+    "test": "node --test tests/ && node tools/check-no-cyrillic.mjs",
     "serve": "node tools/serve.mjs",
-    "e2e": "node --experimental-websocket tools/e2e.mjs"
+    "e2e": "node --experimental-websocket tools/e2e.mjs",
+    "check:cyrillic": "node tools/check-no-cyrillic.mjs"
   }
 }
