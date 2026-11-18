@@ -50,7 +50,7 @@ await t('srs', 'stats with out-of-range box (imported) keeps 5 numeric bins', ()
 });
 await t('srs', 'modesFor: hear → audio only; card → none; say → 3', () => {
   const r = [S.modesFor({ kind: 'hear' }), S.modesFor({ kind: 'card' }), S.modesFor({ kind: 'say' })];
-  assert.deepEqual(r, [['audio'], [], ['ja2en', 'en2ja', 'audio']]); return JSON.stringify(r);
+  assert.deepEqual(r, [['audio'], [], ['en2ja', 'ja2en', 'audio']]); return JSON.stringify(r);
 });
 const ITEMS = Array.from({ length: 10 }, (_, i) => ({ id: 'p' + i, kind: i === 9 ? 'hear' : 'say', tags: ['w1'] }));
 await t('srs', 'buildSession: overdue first (oldest first), then new ≤ newLimit', () => {

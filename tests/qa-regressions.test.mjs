@@ -32,11 +32,11 @@ test('B2: a phrase appears once per session (modes do not give each other away)'
   const ids = q.map((x) => x.id);
   assert.equal(new Set(ids).size, ids.length, 'duplicates: ' + ids);
   assert.equal(q.length, 12, '12 new = 12 different phrases');
-  // EN→JA for a new phrase only after JA→EN reached box 2+
-  assert.ok(q.every((x) => x.mode === 'ja2en'));
-  const st = { 'p0|ja2en': { box: 2, due: '2026-11-25' } };
+  // JA→EN for a new phrase only after EN→JA (the main mode) reached box 2+
+  assert.ok(q.every((x) => x.mode === 'en2ja'));
+  const st = { 'p0|en2ja': { box: 2, due: '2026-11-25' } };
   const q2 = buildSession({ items: items.slice(0, 1), state: st, modes: ['ja2en', 'en2ja'], today: '2026-11-20', newLimit: 5 });
-  assert.deepEqual(q2.map((x) => x.key), ['p0|en2ja']);
+  assert.deepEqual(q2.map((x) => x.key), ['p0|ja2en']);
   // both due on the same day → only one in the session
   const st3 = { 'p0|ja2en': { box: 3, due: '2026-11-19' }, 'p0|en2ja': { box: 2, due: '2026-11-19' } };
   assert.equal(buildSession({ items: items.slice(0, 1), state: st3, modes: ['ja2en', 'en2ja'], today: '2026-11-20' }).length, 1);

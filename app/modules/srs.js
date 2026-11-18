@@ -41,7 +41,7 @@ export const keyOf = (id, mode) => `${id}|${mode}`;
 export function modesFor(item) {
   if (item.kind === 'hear') return ['audio'];
   if (item.kind === 'card') return [];
-  return ['ja2en', 'en2ja', 'audio'];
+  return ['en2ja', 'ja2en', 'audio']; // curriculum §3.1: EN → JA aloud is the main mode, JA → EN secondary
 }
 
 /** Box 1..5 from any value (null, "3", 7 → 1, 3, 5). */

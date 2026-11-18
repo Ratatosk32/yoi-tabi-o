@@ -67,16 +67,22 @@ async function loadJson(path) {
 }
 
 async function loadData() {
-  const [ph, kana, kanji] = await Promise.all([
-    loadJson('data/phrases.json'), loadJson('data/kana.json'), loadJson('data/kanji.json'),
+  // The curriculum (1003 items in 79 lessons) is the phrase source; v1 ids are kept, so SRS progress survives.
+  const [cur, kana, kanji] = await Promise.all([
+    loadJson('data/curriculum.json'), loadJson('data/kana.json'), loadJson('data/kanji.json'),
   ]);
-  const items = ph.items.map(completeItem);
+  const items = cur.items.map(completeItem);
+  const lessons = cur.lessons.map((l, i) => ({ ...l, index: i }));
   return {
-    version: ph.version,
-    categories: ph.categories,
-    catById: Object.fromEntries(ph.categories.map((c) => [c.id, c])),
+    version: `${cur.format}.${cur.version}`,
+    categories: cur.categories,
+    catById: Object.fromEntries(cur.categories.map((c) => [c.id, c])),
     items,
     byId: Object.fromEntries(items.map((it) => [it.id, it])),
+    units: cur.units,
+    unitById: Object.fromEntries(cur.units.map((u) => [u.id, u])),
+    lessons,
+    lessonByCode: Object.fromEntries(lessons.map((l) => [l.code, l])),
     kana,
     kanji,
   };

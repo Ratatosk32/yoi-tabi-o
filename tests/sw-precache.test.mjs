@@ -12,7 +12,7 @@ const ALIAS = { diag: 'diag.html' };
 const precacheFiles = [...precache.map((p) => ALIAS[p] || p), 'index.html'];
 // Data built ahead of its UI: not loaded by the app yet, so not precached yet. Remove from this list
 // (and add to PRECACHE in app/sw.js) in the same commit that wires the curriculum into the UI.
-const NOT_YET_WIRED = ['data/curriculum.json'];
+const NOT_YET_WIRED = []; // curriculum.json is wired in and precached since SW v8
 
 function walk(dir) {
   return readdirSync(dir).flatMap((f) => {

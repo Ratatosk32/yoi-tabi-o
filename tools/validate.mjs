@@ -19,9 +19,6 @@ const ROMAJI_OK = /^[A-Za-zāīūēōĀĪŪĒŌ'’ \-,.?!〇]+$/u;
 const CYRILLIC = /[\u0400-\u04FF]/u;
 const TEXT_EXT = new Set(['.html', '.js', '.mjs', '.css', '.json', '.webmanifest', '.md', '.txt', '.svg', '']);
 
-// Extended katakana クァ/クィ/クェ/クォ is written kwa/kwi/kwe/kwo (クォーツ = kwōtsu).
-// TODO(app/modules/text.js): add these digraphs to the converter itself when app/ is free, then drop this.
-const romajiOk = (romaji, kana) => romajiMatchesKana(romaji, kana) || romajiMatchesKana(romaji.replace(/kw(?=[aiueoāīūēō])/g, 'ku'), kana);
 // Reviewed romaji exceptions in the curriculum (filled from its own reviewed list when present).
 const reviewedExtra = {};
 
@@ -35,7 +32,7 @@ function checkJapanese(it, where, errors, warnings) {
   if (kanjiWithoutReading(it.ruby)) errors.push(`${where}: kanji without reading in ruby "${it.ruby}"`);
   if (!KANA_ONLY.test(it.kana)) errors.push(`${where}: kana field is not kana-only "${it.kana}"`);
   if (!ROMAJI_OK.test(it.romaji)) errors.push(`${where}: invalid characters in romaji "${it.romaji}"`);
-  if (!romajiOk(it.romaji, it.kana)) {
+  if (!romajiMatchesKana(it.romaji, it.kana)) {
     if (ROMAJI_REVIEWED[it.id] || reviewedExtra[it.id]) warnings.push(`${where}: romaji differs from auto-transliteration (reviewed: ${ROMAJI_REVIEWED[it.id] || reviewedExtra[it.id]})`);
     else errors.push(`${where}: romaji "${it.romaji}" → ${romajiComparable(it.romaji)} ≠ from kana ${kanaComparable(it.kana)}`);
   }

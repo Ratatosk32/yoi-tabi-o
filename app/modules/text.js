@@ -127,6 +127,7 @@ const DIGRAPH = {
   てぃ: 'ti', でぃ: 'di', ふぁ: 'fa', ふぃ: 'fi', ふぇ: 'fe', ふぉ: 'fo', うぃ: 'wi', うぇ: 'we', うぉ: 'wo',
   しぇ: 'she', じぇ: 'je', ちぇ: 'che', とぅ: 'tu', どぅ: 'du', ゔぁ: 'va', ゔぃ: 'vi', ゔぇ: 've', ゔぉ: 'vo',
   つぁ: 'tsa', てゅ: 'tyu', でゅ: 'dyu', ふゅ: 'fyu',
+  くぁ: 'kwa', くぃ: 'kwi', くぇ: 'kwe', くぉ: 'kwo', // クォーツ = kwōtsu
 };
 const LONG = { a: 'ā', i: 'ī', u: 'ū', e: 'ē', o: 'ō' };
 
