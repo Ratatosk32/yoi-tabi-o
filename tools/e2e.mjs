@@ -363,6 +363,10 @@ async function main() {
     await click('header.top .theme-toggle');
     const t2 = await evaluate("[document.documentElement.dataset.theme, localStorage.getItem('theme')]");
     check(`${vp.name}: theme toggle switches and remembers the theme`, t1[0] && t1[0] === t1[1] && t2[0] === t2[1] && t1[0] !== t2[0], JSON.stringify([t1, t2]));
+    const metas = await evaluate("[document.documentElement.dataset.theme, ...[...document.querySelectorAll('meta[name=theme-color]')].map((m) => m.content)]");
+    check(`${vp.name}: the toggle also recolours the system status bar (meta theme-color)`, metas.length === 3 && metas.slice(1).every((c) => c === (metas[0] === 'dark' ? '#171613' : '#f5f1e7')), JSON.stringify(metas));
+    const mf = await evaluate("fetch('manifest.webmanifest').then((r) => r.json()).then((m) => [m.background_color, m.theme_color])");
+    check(`${vp.name}: manifest bar colours are dark (Android navigation bar under the dark app)`, mf[0] === '#171613' && mf[1] === '#171613', JSON.stringify(mf));
 
     const TABS = [['phrases', '#/phrases'], ['hear', '#/phrases/hear'], ['study', '#/study/today'], ['lessons', '#/study/lessons'], ['lesson', '#/study/lesson/U01-L01'], ['morning', 'click:#/study/today|#start-morning'], ['quiz', 'click:#/study/lesson/U01-L01|#lesson-quiz'], ['chain', 'click:#/study/lesson/U01-L05|#lesson-chain'], ['session', null], ['kana', '#/study/kana'],
       ['numbers', '#/study/numbers'], ['time', '#/study/time'], ['show', '#/show'], ['kanji', '#/kanji'], ['tools', '#/tools']];

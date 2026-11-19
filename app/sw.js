@@ -1,7 +1,7 @@
 // Service Worker (same-origin separate file — Blob SWs are not allowed, PLAN.md 2d).
 // Bump VERSION whenever app files change — the browser sees a new sw.js
 // and the app offers "Update" (no silent reloads).
-const VERSION = 'v13';
+const VERSION = 'v14';
 const CACHE = `jt-${VERSION}`;
 // Dictionary (JMdict) files: their own cache, cache-first, NOT part of the shell precache. Bump with the data
 // (dictDate) only: a shell update does not re-download the dictionary, a dictionary update does not touch the shell.
