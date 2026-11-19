@@ -336,6 +336,52 @@ async function main() {
     check(`${vp.name}: no horizontal scroll (tools)`, await noHScroll());
     await shot(`${vp.name}-10-tools`);
 
+    // Backup: copy / share / paste first, the file only as a small link; storage status; help line; daily snapshots
+    check(`${vp.name}: backup UI: Copy / Paste buttons, file download only a small link, help line, storage status`, await waitFor(`(() => {
+      const b = document.querySelector('#backup'); if (!b) return false;
+      return !!b.querySelector('#copy-backup.btn') && !!b.querySelector('#paste-backup.btn') && b.querySelector('#backup-btn')?.classList.contains('textlink')
+        && /reinstalling the app icon on Android keeps it/.test(b.textContent) && /^Storage: (protected|may be cleared by the browser)/.test(b.querySelector('#storage-status').textContent);
+    })()`, 4000), await evaluate("document.querySelector('#storage-status')?.textContent"));
+    await evaluate(`(() => {
+      window.__copied = null; window.__shared = null;
+      Object.defineProperty(navigator, 'clipboard', { configurable: true, value: { writeText: async (t) => { window.__copied = t; } } });
+      Object.defineProperty(navigator, 'share', { configurable: true, value: async (d) => { window.__shared = d; } });
+      window.confirm = () => true;
+      window.__app.store.set('favs', ['e2e-a', 'e2e-b']);
+      window.__app.rerender();
+    })()`);
+    await waitFor("!!document.querySelector('#share-backup')");
+    await evaluate("document.querySelector('#copy-backup').click()");
+    check(`${vp.name}: Copy backup puts the whole backup text on the clipboard`, await waitFor(
+      "!!window.__copied && JSON.parse(window.__copied).app === 'japan-trip' && JSON.parse(window.__copied).data.favs.includes('e2e-a') && /Backup copied/.test(document.querySelector('#toast')?.textContent)"));
+    await evaluate("document.querySelector('#share-backup').click()");
+    check(`${vp.name}: Share… sends the backup text (Telegram, Notes)`, await waitFor("!!window.__shared && (() => { const a = JSON.parse(window.__shared.text), b = JSON.parse(window.__copied); return a.app === 'japan-trip' && JSON.stringify(a.data.favs) === JSON.stringify(b.data.favs) && JSON.stringify(a.data.srs) === JSON.stringify(b.data.srs); })()"));
+    await evaluate("window.__app.store.set('favs', [])");
+    await evaluate("document.querySelector('#paste-backup').click()");
+    check(`${vp.name}: Paste backup opens a text box`, await waitFor("!document.querySelector('#paste-panel').hidden"));
+    await evaluate("(() => { document.querySelector('#backup-text').value = window.__copied; document.querySelector('#restore-text').click(); })()");
+    check(`${vp.name}: restoring from pasted text brings the data back`, await waitFor(
+      "(window.__app.store.get('favs', []) || []).includes('e2e-b') && /^Restored: /.test(document.querySelector('#toast')?.textContent)"));
+    await evaluate("(() => { document.querySelector('#paste-backup').click(); document.querySelector('#backup-text').value = 'hello'; document.querySelector('#paste-backup').click(); document.querySelector('#restore-text').click(); })()");
+    check(`${vp.name}: pasting something else is refused with a message`, await waitFor("/not a Japan Trip backup/.test(document.querySelector('#toast')?.textContent)"));
+    // daily snapshot → change → "Restore yesterday's state"
+    await evaluate(`import('./modules/snapshots.js').then(async (S) => {
+      const kv = S.idbKV();
+      for (const s of await S.listSnapshots(kv)) await kv.del(s.day);
+      const d = new Date(); const today = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+      await S.takeDailySnapshot(window.__app.store, kv, today);
+      window.__app.store.set('favs', ['changed-after-snapshot']);
+      window.__app.rerender();
+    })`);
+    check(`${vp.name}: one-tap "Restore yesterday's state" after a daily snapshot`, await waitFor("/Restore yesterday’s state/.test(document.querySelector('#restore-snapshot')?.textContent || '')", 4000));
+    await evaluate("document.querySelector('#restore-snapshot').click()");
+    check(`${vp.name}: snapshot restore puts the earlier progress back`, await waitFor(
+      "JSON.stringify(window.__app.store.get('favs', [])) === JSON.stringify(['e2e-a', 'e2e-b'])"), await evaluate("JSON.stringify(window.__app.store.get('favs', []))"));
+    check(`${vp.name}: no horizontal scroll (backup)`, await noHScroll());
+    await evaluate("document.querySelector('#backup').scrollIntoView()");
+    await shot(`${vp.name}-10c-backup`);
+    await evaluate("window.__app.store.set('favs', [])");
+
     // My phrases: romaji → kana (wanakana), saving, search
     await evaluate(`(() => {
       const box = document.querySelector('#user-phrases');

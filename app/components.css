@@ -1159,3 +1159,21 @@ section.block, .card.edit { scroll-margin-top: var(--sp-3); }
   font-size: clamp(32px, calc((100cqw - var(--sp-3) * 2 - 4px) / var(--n, 4)), var(--fs-ja-hero));
 }
 .quiz-q.is-word .btn.icon { grid-column: 1; justify-self: center; } /* under the word: the word gets the full width */
+
+/* ---------- 18.4 Backup: copy / share / paste first, file as a small link ---------- */
+.backup-actions { display: grid; gap: var(--sp-2); margin: var(--sp-3) 0; }
+.backup-actions .btn { min-height: var(--tap-lg); }
+.paste-panel { display: grid; gap: var(--sp-2); margin-bottom: var(--sp-3); }
+.paste-panel[hidden] { display: none; }
+.paste-panel textarea { width: 100%; box-sizing: border-box; font: inherit; font-size: var(--fs-small); padding: var(--sp-2);
+  border: 1px solid var(--line-strong); border-radius: var(--r-sheet); background: var(--surface); color: var(--ink); }
+.snapshots { margin: var(--sp-3) 0; }
+.snapshots .btn { min-height: var(--tap-lg); }
+.file-links { color: var(--ink-3); }
+.storage-status[data-persisted="1"] { color: var(--matsu); }
+/* plain secondary text links (the file backup, "Protect it"): underlined text, still a 44 px tap target */
+.textlink {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 2px;
+  border: 0; background: none; color: var(--ai); cursor: pointer; font: inherit; font-size: var(--fs-small);
+  text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .22em;
+}

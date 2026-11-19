@@ -61,6 +61,11 @@ export function createStore(backend) {
     try { be.setItem(PREFIX + key, JSON.stringify(value)); return true; } catch { return false; }
   }
 
+  function remove(key) {
+    cache.delete(key);
+    try { be.removeItem(PREFIX + key); } catch { /* ignore */ }
+  }
+
   function update(key, fallback, fn) {
     const next = fn(structuredCloneSafe(get(key, fallback)));
     set(key, next);
@@ -116,7 +121,7 @@ export function createStore(backend) {
     return changed;
   }
 
-  return { get, set, update, migrate, exportAll, importAll };
+  return { get, set, remove, update, migrate, exportAll, importAll };
 }
 
 function isPlainObject(v) { return !!v && typeof v === 'object' && !Array.isArray(v); }

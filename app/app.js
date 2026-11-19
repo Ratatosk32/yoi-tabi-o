@@ -12,6 +12,7 @@ import * as kanjiView from './modules/view-kanji.js';
 import * as toolsView from './modules/view-tools.js';
 import * as dict from './modules/dict.js';
 import { appVersion, consumeUpdatedFlag } from './modules/updates.js';
+import { takeDailySnapshot, idbKV } from './modules/snapshots.js';
 
 export const APP_VERSION = '1.0.0';
 
@@ -259,12 +260,23 @@ async function start() {
   }
   await boot();
   registerSW();
+  // Ask the browser to keep our data (progress lives in localStorage) on the first real interaction
+  const askPersist = () => { removeEventListener('pointerdown', askPersist, true); removeEventListener('keydown', askPersist, true); requestPersist(); };
+  addEventListener('pointerdown', askPersist, true);
+  addEventListener('keydown', askPersist, true);
+  // Daily local snapshot (IndexedDB, last 3 days): 'Restore yesterday's state' in Tools
+  setTimeout(() => takeDailySnapshot(ctx.store, idbKV(), todayStr()).catch(() => { /* no IndexedDB */ }), 1000);
+}
+
+export async function requestPersist() {
   try { if (navigator.storage?.persist) ctx.persisted = await navigator.storage.persist(); } catch { /* ignore */ }
+  return ctx.persisted;
 }
 
 function sessionStorageGet(k) { try { return sessionStorage.getItem(k); } catch { return null; } }
 function sessionStorageSet(k, v) { try { sessionStorage.setItem(k, v); } catch { /* ignore */ } }
 
 ctx.swInfo = swInfo;
+ctx.requestPersist = requestPersist;
 window.__app = ctx; // for debugging and e2e tests
 start();

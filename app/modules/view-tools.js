@@ -2,7 +2,9 @@
 import { h, add, clear, toast, downloadJson, ico } from './ui.js';
 import * as L from './launchers.js';
 import * as tts from './tts.js';
-import { stats } from './srs.js';
+import { stats, todayStr } from './srs.js';
+import { KEYS } from './store.js';
+import * as S from './snapshots.js';
 import { kanaToHepburn } from './text.js';
 import * as D from './dict.js';
 import * as U from './updates.js';
@@ -138,19 +140,72 @@ export function render(ctx, root, params = []) {
     } catch (err) { toast('Import failed: ' + err.message, 4000); }
   } } });
   const last = s.lastBackup ? new Date(s.lastBackup).toLocaleDateString('en-US') : 'never';
+  const backupText = () => JSON.stringify(ctx.store.exportAll());
+  const backedUp = (msg) => { ctx.setSetting('lastBackup', new Date().toISOString()); toast(msg); };
+  // Paste: a text box (works everywhere; reading the clipboard directly needs a permission prompt)
+  const pasteBox = h('textarea#backup-text', { rows: '4', placeholder: 'Paste a backup here (it starts with {"app":"japan-trip"…)', 'aria-label': 'Backup text', spellcheck: 'false' });
+  const pastePanel = h('div.paste-panel#paste-panel', { hidden: true }, pasteBox,
+    h('button.btn.primary.wide#restore-text', { type: 'button', on: { click: () => {
+      try {
+        const changed = ctx.store.importAll(pasteBox.value.trim(), 'merge');
+        toast(changed.length ? 'Restored: ' + changed.join(', ') : 'Nothing to restore in this text', 3500);
+        if (changed.length) { pasteBox.value = ''; pastePanel.hidden = true; }
+      } catch (err) { toast('This is not a Japan Trip backup: ' + err.message, 4000); }
+    } } }, 'Restore from this text'));
+  const persistLine = h('p.small.storage-status#storage-status', 'Storage: checking…');
+  const showPersist = async () => {
+    const on = await navigator.storage?.persisted?.().catch(() => false);
+    clear(persistLine);
+    persistLine.append(on ? 'Storage: protected (the browser keeps it when space runs low).' : 'Storage: may be cleared by the browser when space runs low. ',
+      on ? null : h('button.textlink#protect-storage', { type: 'button', on: { click: async () => { await ctx.requestPersist?.(); showPersist(); } } }, 'Protect it'));
+    persistLine.dataset.persisted = on ? '1' : '0';
+  };
+  showPersist();
+  const snapBox = h('div.snapshots#snapshots');
+  const drawSnaps = async () => {
+    const list = await S.listSnapshots(S.idbKV()).catch(() => []);
+    clear(snapBox);
+    if (!list.length) { snapBox.append(h('p.small', 'Automatic daily snapshots: the first one is saved tomorrow (the last 3 days are kept on this device).')); return; }
+    const [newest, ...older] = list;
+    const when = (sn) => new Date(sn.at).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+    const restore = (sn) => {
+      if (!confirm(`Put progress back to how it was on ${when(sn)}? Changes made after that are replaced.`)) return;
+      S.restoreSnapshot(ctx.store, sn, KEYS);
+      toast('Restored the state from ' + when(sn), 3500);
+      ctx.rerender();
+    };
+    snapBox.append(
+      h('button.btn.wide#restore-snapshot', { type: 'button', on: { click: () => restore(newest) } },
+        newest.day === todayStr() ? 'Restore yesterday’s state' : `Restore the state from ${when(newest)}`),
+      h('p.small', `Automatic daily snapshots on this device: ${list.map(when).join(' · ')}. `,
+        ...older.map((sn, i) => h('button.textlink', { type: 'button', 'data-snapshot': sn.day, on: { click: () => restore(sn) } }, `${i ? ' · ' : ''}restore ${when(sn)}`))));
+  };
+  drawSnaps();
   root.append(h('section.block#backup',
     h('h2.section', 'Progress & backup'),
     h('p.small', `Cards in progress: ${st.total}, due today: ${st.due}. By box: ${st.boxes.join(' / ')}.`),
-    h('p.small', 'Everything is stored only in this browser: progress, favorites, the Allergy and Hotel address cards. ' +
-      (L.PLATFORM === 'ios' ? 'On iPhone, Safari may delete site data after 7 days without a visit; the home-screen app is safer, but keep a backup anyway. ' : '') +
+    h('p.small.help-line', 'Progress is stored in this browser for this site; reinstalling the app icon on Android keeps it.'),
+    persistLine,
+    h('p.small', 'A backup is a short text with your progress, favorites and the Allergy / Hotel cards. Keep a copy somewhere else (Notes, Telegram, email). ' +
+      (L.PLATFORM === 'ios' ? 'On iPhone, Safari may delete site data after 7 days without a visit; the home-screen app is safer. ' : '') +
       `Last backup: ${last}.`),
-    h('div.actions.wrap',
-      h('button.btn.primary#backup-btn', { type: 'button', on: { click: () => {
+    h('div.backup-actions',
+      h('button.btn.primary.wide#copy-backup', { type: 'button', on: { click: async () => {
+        try { await navigator.clipboard.writeText(backupText()); backedUp('Backup copied - paste it into Notes or a chat'); } catch { toast('Copy is blocked here: use Share or the file link', 4000); }
+      } } }, 'Copy backup to clipboard'),
+      navigator.share ? h('button.btn.wide#share-backup', { type: 'button', on: { click: async () => {
+        try { await navigator.share({ title: 'Japan Trip backup', text: backupText() }); backedUp('Backup shared'); } catch (e) { if (e?.name !== 'AbortError') toast('Sharing failed: ' + (e?.message || e), 4000); }
+      } } }, 'Share…') : null,
+      h('button.btn.wide#paste-backup', { type: 'button', on: { click: () => { pastePanel.hidden = !pastePanel.hidden; if (!pastePanel.hidden) pasteBox.focus(); } } }, 'Paste backup')),
+    pastePanel,
+    snapBox,
+    h('p.small.file-links',
+      h('button.textlink#backup-btn', { type: 'button', on: { click: () => {
         downloadJson(ctx.store.exportAll(), `japan-trip-backup-${new Date().toISOString().slice(0, 10)}.json`);
-        ctx.setSetting('lastBackup', new Date().toISOString());
-        toast('Backup saved to Downloads / Files');
-      } } }, 'Download backup (JSON)'),
-      h('label.btn', { tabindex: '0', role: 'button', on: { keydown: (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); imp.click(); } } } }, 'Restore from file', h('span.visually-hidden', imp))),
+        backedUp('Backup saved to Downloads / Files');
+      } } }, 'Download as a file'),
+      ' · ',
+      h('label.textlink#restore-file', { tabindex: '0', role: 'button', on: { keydown: (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); imp.click(); } } } }, 'Restore from a file', h('span.visually-hidden', imp))),
   ));
 
   // --- About ---
