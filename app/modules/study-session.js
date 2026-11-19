@@ -52,8 +52,7 @@ function renderCard(ctx, box, ses, draw) {
     h('div.sess-head',
       h('span', `${ses.title} · ${ses.idx + 1}/${total}`),
       h('span.small', label, ' ',
-        ses.kind === 'srs' ? h('span.leitner', { title: boxNo ? `Box ${boxNo} of 5` : 'New card', 'aria-label': boxNo ? `Box ${boxNo} of 5` : 'New card' },
-          [1, 2, 3, 4, 5].map((i) => h('i' + (i <= boxNo ? '.on' : '')))) : null),
+        ses.kind === 'srs' && boxNo ? h('span.leitner', `· level ${boxNo}/5`) : null),
       h('button.btn.small', { type: 'button', 'aria-label': 'End the session', on: { click: () => (ses.onExit ? ses.onExit() : ses.onDone?.(ses.counts)) } }, 'End')),
     h('div.progress', { role: 'progressbar', 'aria-valuemin': '0', 'aria-valuemax': String(total), 'aria-valuenow': String(ses.idx) },
       h('span', { style: { width: `${Math.round((ses.idx / total) * 100)}%` } })));

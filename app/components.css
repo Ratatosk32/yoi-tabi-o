@@ -634,9 +634,7 @@ label:has(> input[type=radio]) { display: inline-flex; align-items: center; min-
 .progress { height: 2px; background: var(--line); margin: var(--sp-2) 0 var(--sp-4); }
 .progress > span { display: block; height: 100%; background: var(--ink); transition: width var(--dur-2) var(--ease); }
 /* [NEW] Leitner box of the current card: five squares, the reached ones inked */
-.leitner { display: inline-flex; gap: 4px; vertical-align: middle; }
-.leitner > i { width: 9px; height: 9px; border: 1px solid var(--ink-4); border-radius: 1px; }
-.leitner > i.on { background: var(--ink-2); border-color: var(--ink-2); }
+.leitner { white-space: nowrap; }
 
 /* Flashcard */
 .card.flash {
