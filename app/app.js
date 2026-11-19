@@ -11,6 +11,7 @@ import * as showView from './modules/view-show.js';
 import * as kanjiView from './modules/view-kanji.js';
 import * as toolsView from './modules/view-tools.js';
 import * as dict from './modules/dict.js';
+import { appVersion, consumeUpdatedFlag } from './modules/updates.js';
 
 export const APP_VERSION = '1.0.0';
 
@@ -238,6 +239,7 @@ async function boot() {
   }
   route();
   document.documentElement.dataset.ready = '1';
+  if (consumeUpdatedFlag()) appVersion().then((v) => toast(v ? `Updated to ${v}` : 'Updated')); // after Tools > Check for updates
   // The dictionary loads after the first paint, when the browser is idle (core first, then the rest in chunks)
   const idle = (fn) => (typeof requestIdleCallback === 'function' ? requestIdleCallback(fn, { timeout: 3000 }) : setTimeout(fn, 1500));
   idle(() => dict.load().catch(() => { /* offline before the first download: retried when the dictionary is opened */ }));

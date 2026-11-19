@@ -15,7 +15,8 @@ const TYPES = {
   '.woff2': 'font/woff2', '.map': 'application/json',
 };
 
-export function startServer(port = PORT, { quiet = false } = {}) {
+// overrides (tests only): Map of path → content served instead of the file, e.g. a newer /sw.js
+export function startServer(port = PORT, { quiet = false, overrides = new Map() } = {}) {
   const server = createServer(async (req, res) => {
     try {
       const u = new URL(req.url, 'http://x');
@@ -24,6 +25,11 @@ export function startServer(port = PORT, { quiet = false } = {}) {
       if (p.endsWith('.html')) {
         const target = p.endsWith('/index.html') ? p.slice(0, -'index.html'.length) : p.slice(0, -'.html'.length);
         res.writeHead(308, { Location: target + u.search }).end();
+        return;
+      }
+      if (overrides.has(p)) {
+        res.writeHead(200, { 'Content-Type': TYPES[extname(p)] || 'application/octet-stream', 'Cache-Control': 'no-cache' });
+        res.end(overrides.get(p));
         return;
       }
       if (p.endsWith('/')) p += 'index.html';

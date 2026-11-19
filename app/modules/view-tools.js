@@ -5,6 +5,7 @@ import * as tts from './tts.js';
 import { stats } from './srs.js';
 import { kanaToHepburn } from './text.js';
 import * as D from './dict.js';
+import * as U from './updates.js';
 
 export function render(ctx, root, params = []) {
   if (params[0] === 'credits') { renderCredits(ctx, root); return; }
@@ -114,6 +115,7 @@ export function render(ctx, root, params = []) {
   romajiSel.value = s.romaji || 'auto';
   const tripIn = h('input#trip-date', { type: 'date', value: s.tripDate || '', on: { change: (e) => ctx.setSetting('tripDate', e.target.value || null) } });
   const startIn = h('input', { type: 'date', value: s.startDate || '', on: { change: (e) => e.target.value && ctx.setSetting('startDate', e.target.value) } });
+  root.append(updatesBlock());
   root.append(h('section.block#settings',
     h('h2.section', 'Settings'),
     h('label.field', h('span', 'How to launch Lens'), lensSel),
@@ -161,6 +163,41 @@ export function render(ctx, root, params = []) {
     h('p.small', D.progressText()),
     h('button.btn.wide#open-credits', { type: 'button', on: { click: () => ctx.go('#/tools/credits') } }, 'Credits and licences'),
   ));
+}
+
+// ---------- App version and updates ----------
+function updatesBlock() {
+  const ver = h('p.app-version#app-version', 'App version: checking…');
+  const showVersion = () => U.appVersion().then((v) => { ver.textContent = v ? `App version ${v}` : 'App version: offline copy not installed yet'; ver.dataset.version = v || ''; return v; });
+  showVersion();
+  const btn = h('button.btn.primary.big.wide#check-updates', { type: 'button', on: { click: async () => {
+    btn.disabled = true;
+    btn.textContent = 'Checking…';
+    try {
+      const r = await U.checkForUpdates();
+      const v = await showVersion();
+      if (r.status === 'updating') { btn.textContent = 'Updating… the app reloads by itself'; toast('New version found, installing…'); return; }
+      if (r.status === 'offline') toast('No connection - try again online');
+      else if (r.status === 'current') toast(`You're up to date${v ? ` (${v})` : ''}`);
+      else toast('Updates are not supported in this browser');
+    } catch {
+      toast('No connection - try again online');
+    }
+    btn.disabled = false;
+    btn.textContent = 'Check for updates';
+  } } }, 'Check for updates');
+  const hard = h('button.btn.wide#hard-refresh', { type: 'button', on: { click: async () => {
+    if (!confirm('Reload the app files from the server? Your progress, favorites and the dictionary stay.')) return;
+    hard.disabled = true;
+    const r = await U.hardRefresh().catch(() => ({ status: 'offline' }));
+    if (r.status === 'offline') { toast('No connection - try again online'); hard.disabled = false; }
+  } } }, 'Hard refresh');
+  return h('section.block#updates',
+    h('h2.section', 'App updates'),
+    ver,
+    btn,
+    hard,
+    h('p.small', 'Hard refresh is for when something looks stuck: it downloads the app files again. Progress, favorites and the dictionary are kept.'));
 }
 
 // ---------- Credits and licences (required by the JMdict / EDRDG licence: a separate screen reachable from a menu) ----------

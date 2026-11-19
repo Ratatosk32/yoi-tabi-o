@@ -4,7 +4,7 @@
 // no horizontal scroll, search, SRS, quiz, cards; the SW installs; after the server is STOPPED
 // the app reloads offline. Screenshots → tools/out/.
 import { spawn } from 'node:child_process';
-import { mkdirSync, writeFileSync, rmSync } from 'node:fs';
+import { mkdirSync, writeFileSync, rmSync, readFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { startServer } from './serve.mjs';
@@ -53,7 +53,8 @@ async function main() {
   const profile = join(OUT, 'profile');
   rmSync(profile, { recursive: true, force: true });
 
-  let server = await startServer(PORT, { quiet: true });
+  const overrides = new Map(); // served instead of files: a newer sw.js for the update test
+  let server = await startServer(PORT, { quiet: true, overrides });
   const chrome = spawn(CHROME, [
     '--headless=new', `--remote-debugging-port=${DEBUG_PORT}`, `--user-data-dir=${profile}`,
     '--no-first-run', '--no-default-browser-check', '--disable-gpu', '--hide-scrollbars', 'about:blank',
@@ -479,6 +480,46 @@ async function main() {
   check('dictionary in its own cache dict-2026-11-16 (core + rest), not in the shell cache',
     cacheInfo.keys.includes('dict-2026-11-16') && cacheInfo.dict.length === 2 && !cacheInfo.dictInShell, JSON.stringify(cacheInfo));
 
+  // ---------- Tools > Check for updates / Hard refresh (a newer sw.js is simulated on the local server) ----------
+  console.log('\n=== Updates ===');
+  const swSrc = readFileSync(join(dirname(fileURLToPath(import.meta.url)), '..', 'app', 'sw.js'), 'utf8');
+  const curVer = swSrc.match(/const VERSION = '([^']+)'/)[1];
+  const toastText = "document.querySelector('#toast')?.textContent || ''";
+  await evaluate("localStorage.setItem('jt.e2eMarker', 'keep-me')");
+  await navigate(BASE + '#/tools');
+  check(`Tools shows the running version (App version ${curVer})`, await waitFor(`document.querySelector('#app-version')?.textContent === 'App version ${curVer}'`, 5000),
+    await evaluate("document.querySelector('#app-version')?.textContent"));
+  check('Check for updates is a big button at the top of the settings area', await evaluate(
+    "(() => { const b = document.querySelector('#check-updates'), s = document.querySelector('#settings'); return !!b && b.getBoundingClientRect().height >= 48 && !!(b.compareDocumentPosition(s) & Node.DOCUMENT_POSITION_FOLLOWING); })()"));
+  await click('#check-updates');
+  check(`no new version: "You're up to date (${curVer})"`, await waitFor(`(${toastText}) === "You're up to date (${curVer})"`, 8000), await evaluate(toastText));
+  const newVer = curVer + '-e2e';
+  overrides.set('/sw.js', swSrc.replace(`const VERSION = '${curVer}'`, `const VERSION = '${newVer}'`));
+  await click('#check-updates');
+  check(`new sw.js on the server: installed, page reloaded, App version ${newVer}`, await waitFor(
+    `document.documentElement.dataset.ready === '1' && document.querySelector('#app-version')?.textContent === 'App version ${newVer}'`, 20000),
+    await evaluate("document.querySelector('#app-version')?.textContent"));
+  check(`after the reload: "Updated to ${newVer}"`, await waitFor(`(${toastText}) === 'Updated to ${newVer}'`, 5000), await evaluate(toastText));
+  check('update keeps the data (localStorage) and the dictionary cache', await evaluate(
+    `caches.keys().then((k) => localStorage.getItem('jt.e2eMarker') === 'keep-me' && k.includes('dict-2026-11-16') && k.includes('jt-${newVer}') && !k.includes('jt-${curVer}'))`));
+  // Hard refresh: only jt-* caches go, the worker is re-registered, everything is precached again
+  await evaluate("window.confirm = () => true; document.querySelector('#hard-refresh').click()");
+  await sleep(1500);
+  check('hard refresh reloads with a fresh worker and a refilled shell cache', await waitFor(
+    `document.documentElement.dataset.ready === '1' && !!navigator.serviceWorker.controller && caches.open('jt-${newVer}').then((c) => c.keys()).then((k) => k.length >= 25)`, 20000));
+  check('hard refresh keeps localStorage and the dictionary cache', await evaluate(
+    "caches.keys().then((k) => localStorage.getItem('jt.e2eMarker') === 'keep-me' && k.includes('dict-2026-11-16'))"));
+  // back to the real sw.js (also exercises a second update)
+  overrides.delete('/sw.js');
+  await navigate(BASE + '#/tools');
+  await waitFor("!!document.querySelector('#check-updates')");
+  await click('#check-updates');
+  check(`back to the real version ${curVer}`, await waitFor(`document.querySelector('#app-version')?.textContent === 'App version ${curVer}'`, 20000),
+    await evaluate("document.querySelector('#app-version')?.textContent"));
+  await evaluate("localStorage.removeItem('jt.e2eMarker')");
+  await navigate(BASE + '#/phrases');
+  await waitFor('!!navigator.serviceWorker.controller', 5000);
+
   await new Promise((r) => server.close(r));
   server = null;
   const reachable = await fetch(BASE).then(() => true, () => false);
@@ -499,6 +540,11 @@ async function main() {
       await evaluate("document.querySelector('#dict-status')?.textContent"));
     await navigate(BASE + '#/study/kana');
     check(`offline ${vp.name}: kana`, await waitFor("document.querySelectorAll('.kana').length >= 71"));
+    await navigate(BASE + '#/tools');
+    await waitFor("!!document.querySelector('#check-updates')");
+    await click('#check-updates');
+    check(`offline ${vp.name}: Check for updates says "No connection - try again online"`, await waitFor(
+      "document.querySelector('#toast')?.textContent === 'No connection - try again online'", 8000), await evaluate("document.querySelector('#toast')?.textContent"));
     await shot(`offline-${vp.name}`);
   }
   await navigate(BASE + 'diag.html');

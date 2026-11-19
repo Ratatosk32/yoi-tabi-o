@@ -1,7 +1,7 @@
 // Service Worker (same-origin separate file — Blob SWs are not allowed, PLAN.md 2d).
 // Bump VERSION whenever app files change — the browser sees a new sw.js
 // and the app offers "Update" (no silent reloads).
-const VERSION = 'v14';
+const VERSION = 'v15';
 const CACHE = `jt-${VERSION}`;
 // Dictionary (JMdict) files: their own cache, cache-first, NOT part of the shell precache. Bump with the data
 // (dictDate) only: a shell update does not re-download the dictionary, a dictionary update does not touch the shell.
@@ -30,6 +30,7 @@ const PRECACHE = [
   'modules/store.js',
   'modules/text.js',
   'modules/tts.js',
+  'modules/updates.js',
   'modules/ui.js',
   'modules/view-kanji.js',
   'modules/view-lessons.js',
@@ -70,6 +71,7 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('message', (event) => {
   if (event.data === 'skipWaiting') self.skipWaiting();
+  if (event.data === 'version') event.ports[0]?.postMessage(VERSION); // Tools: "App version v.."
   // The page loaded the dictionary (maybe before this SW controlled it): make sure both files are in the
   // dictionary cache, so it works offline from now on. Usually a no-op or an HTTP-cache hit.
   if (event.data === 'cacheDict') event.waitUntil(fillDict());
