@@ -1,0 +1,15 @@
+export const GROUPS = [
+  { id: 'number', en: 'Numbers and measure words' },
+  { id: 'people', en: 'People and pronouns' },
+  { id: 'body', en: 'Body and health' },
+  { id: 'time', en: 'Time and dates' },
+  { id: 'place', en: 'Places and directions' },
+  { id: 'nature', en: 'Nature, weather, animals' },
+  { id: 'food', en: 'Food and drink' },
+  { id: 'home', en: 'Home, clothes, things' },
+  { id: 'city', en: 'Money, transport, school, work' },
+  { id: 'verb', en: 'Common verbs' },
+  { id: 'adj', en: 'Describing words' },
+  { id: 'grammar', en: 'Question and grammar words' },
+  { id: 'radical', en: 'Radicals (components)' },
+];

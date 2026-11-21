@@ -1,0 +1,1959 @@
+{
+ "format": 1,
+ "lang": "zh",
+ "locale": "zh-CN",
+ "script": "Hans",
+ "version": 1,
+ "generated": "2026-11-21",
+ "source": "curriculum/zh/src/hanzi-*.mjs via curriculum/zh/tools/build.mjs",
+ "groups": [
+  {
+   "id": "number",
+   "en": "Numbers and measure words"
+  },
+  {
+   "id": "people",
+   "en": "People and pronouns"
+  },
+  {
+   "id": "body",
+   "en": "Body and health"
+  },
+  {
+   "id": "time",
+   "en": "Time and dates"
+  },
+  {
+   "id": "place",
+   "en": "Places and directions"
+  },
+  {
+   "id": "nature",
+   "en": "Nature, weather, animals"
+  },
+  {
+   "id": "food",
+   "en": "Food and drink"
+  },
+  {
+   "id": "home",
+   "en": "Home, clothes, things"
+  },
+  {
+   "id": "city",
+   "en": "Money, transport, school, work"
+  },
+  {
+   "id": "verb",
+   "en": "Common verbs"
+  },
+  {
+   "id": "adj",
+   "en": "Describing words"
+  },
+  {
+   "id": "grammar",
+   "en": "Question and grammar words"
+  },
+  {
+   "id": "radical",
+   "en": "Radicals (components)"
+  }
+ ],
+ "items": [
+  {
+   "id": "zh.h.yi1-4e00",
+   "group": "number",
+   "ja": "一",
+   "ruby": "一[yī]",
+   "kana": "yi",
+   "romaji": "yī",
+   "en": "one",
+   "hsk": 1,
+   "radical": "一",
+   "ex": {
+    "ja": "一个",
+    "ruby": "一个[yí ge]",
+    "romaji": "yíge",
+    "en": "one (of something)"
+   },
+   "alt": "yí before a 4th tone, yì before tones 1-3; yī when counting"
+  },
+  {
+   "id": "zh.h.er4",
+   "group": "number",
+   "ja": "二",
+   "ruby": "二[èr]",
+   "kana": "er",
+   "romaji": "èr",
+   "en": "two",
+   "hsk": 1,
+   "radical": "二",
+   "ex": {
+    "ja": "二月",
+    "ruby": "二月[èr yuè]",
+    "romaji": "èryuè",
+    "en": "February"
+   }
+  },
+  {
+   "id": "zh.h.san1",
+   "group": "number",
+   "ja": "三",
+   "ruby": "三[sān]",
+   "kana": "san",
+   "romaji": "sān",
+   "en": "three",
+   "hsk": 1,
+   "radical": "一",
+   "ex": {
+    "ja": "三天",
+    "ruby": "三天[sān tiān]",
+    "romaji": "sāntiān",
+    "en": "three days"
+   }
+  },
+  {
+   "id": "zh.h.si4",
+   "group": "number",
+   "ja": "四",
+   "ruby": "四[sì]",
+   "kana": "si",
+   "romaji": "sì",
+   "en": "four",
+   "hsk": 1,
+   "radical": "囗",
+   "ex": {
+    "ja": "四月",
+    "ruby": "四月[sì yuè]",
+    "romaji": "sìyuè",
+    "en": "April"
+   }
+  },
+  {
+   "id": "zh.h.wu3-4e94",
+   "group": "number",
+   "ja": "五",
+   "ruby": "五[wǔ]",
+   "kana": "wu",
+   "romaji": "wǔ",
+   "en": "five",
+   "hsk": 1,
+   "radical": "二",
+   "ex": {
+    "ja": "五月",
+    "ruby": "五月[wǔ yuè]",
+    "romaji": "wǔyuè",
+    "en": "May"
+   }
+  },
+  {
+   "id": "zh.h.liu4",
+   "group": "number",
+   "ja": "六",
+   "ruby": "六[liù]",
+   "kana": "liu",
+   "romaji": "liù",
+   "en": "six",
+   "hsk": 1,
+   "radical": "八",
+   "ex": {
+    "ja": "六月",
+    "ruby": "六月[liù yuè]",
+    "romaji": "liùyuè",
+    "en": "June"
+   }
+  },
+  {
+   "id": "zh.h.qi1-4e03",
+   "group": "number",
+   "ja": "七",
+   "ruby": "七[qī]",
+   "kana": "qi",
+   "romaji": "qī",
+   "en": "seven",
+   "hsk": 1,
+   "radical": "一",
+   "ex": {
+    "ja": "七月",
+    "ruby": "七月[qī yuè]",
+    "romaji": "qīyuè",
+    "en": "July"
+   }
+  },
+  {
+   "id": "zh.h.ba1",
+   "group": "number",
+   "ja": "八",
+   "ruby": "八[bā]",
+   "kana": "ba",
+   "romaji": "bā",
+   "en": "eight",
+   "hsk": 1,
+   "radical": "八",
+   "ex": {
+    "ja": "八月",
+    "ruby": "八月[bā yuè]",
+    "romaji": "bāyuè",
+    "en": "August"
+   }
+  },
+  {
+   "id": "zh.h.jiu3-4e5d",
+   "group": "number",
+   "ja": "九",
+   "ruby": "九[jiǔ]",
+   "kana": "jiu",
+   "romaji": "jiǔ",
+   "en": "nine",
+   "hsk": 1,
+   "radical": "乙",
+   "ex": {
+    "ja": "九月",
+    "ruby": "九月[jiǔ yuè]",
+    "romaji": "jiǔyuè",
+    "en": "September"
+   }
+  },
+  {
+   "id": "zh.h.shi2-5341",
+   "group": "number",
+   "ja": "十",
+   "ruby": "十[shí]",
+   "kana": "shi",
+   "romaji": "shí",
+   "en": "ten",
+   "hsk": 1,
+   "radical": "十",
+   "ex": {
+    "ja": "十分",
+    "ruby": "十分[shí fēn]",
+    "romaji": "shífēn",
+    "en": "very, extremely"
+   }
+  },
+  {
+   "id": "zh.h.bai3",
+   "group": "number",
+   "ja": "百",
+   "ruby": "百[bǎi]",
+   "kana": "bai",
+   "romaji": "bǎi",
+   "en": "hundred",
+   "hsk": 2,
+   "radical": "白",
+   "ex": {
+    "ja": "一百",
+    "ruby": "一百[yì bǎi]",
+    "romaji": "yìbǎi",
+    "en": "one hundred"
+   }
+  },
+  {
+   "id": "zh.h.qian1",
+   "group": "number",
+   "ja": "千",
+   "ruby": "千[qiān]",
+   "kana": "qian",
+   "romaji": "qiān",
+   "en": "thousand",
+   "hsk": 2,
+   "radical": "十",
+   "ex": {
+    "ja": "一千",
+    "ruby": "一千[yì qiān]",
+    "romaji": "yìqiān",
+    "en": "one thousand"
+   }
+  },
+  {
+   "id": "zh.h.wan4",
+   "group": "number",
+   "ja": "万",
+   "ruby": "万[wàn]",
+   "kana": "wan",
+   "romaji": "wàn",
+   "en": "ten thousand",
+   "hsk": 3,
+   "radical": "一",
+   "ex": {
+    "ja": "一万",
+    "ruby": "一万[yí wàn]",
+    "romaji": "yíwàn",
+    "en": "ten thousand"
+   }
+  },
+  {
+   "id": "zh.h.ling2",
+   "group": "number",
+   "ja": "零",
+   "ruby": "零[líng]",
+   "kana": "ling",
+   "romaji": "líng",
+   "en": "zero",
+   "hsk": 1,
+   "radical": "雨",
+   "ex": {
+    "ja": "零下",
+    "ruby": "零下[líng xià]",
+    "romaji": "língxià",
+    "en": "below zero"
+   }
+  },
+  {
+   "id": "zh.h.liang3",
+   "group": "number",
+   "ja": "两",
+   "ruby": "两[liǎng]",
+   "kana": "liang",
+   "romaji": "liǎng",
+   "en": "two (before a measure word)",
+   "hsk": 2,
+   "radical": "一",
+   "ex": {
+    "ja": "两个",
+    "ruby": "两个[liǎng ge]",
+    "romaji": "liǎngge",
+    "en": "two (of something)"
+   }
+  },
+  {
+   "id": "zh.h.ban4",
+   "group": "number",
+   "ja": "半",
+   "ruby": "半[bàn]",
+   "kana": "ban",
+   "romaji": "bàn",
+   "en": "half",
+   "hsk": 3,
+   "radical": "十",
+   "ex": {
+    "ja": "一半",
+    "ruby": "一半[yí bàn]",
+    "romaji": "yíbàn",
+    "en": "half"
+   }
+  },
+  {
+   "id": "zh.h.di4-7b2c",
+   "group": "number",
+   "ja": "第",
+   "ruby": "第[dì]",
+   "kana": "di",
+   "romaji": "dì",
+   "en": "ordinal prefix (-th)",
+   "hsk": 2,
+   "radical": "⺮",
+   "ex": {
+    "ja": "第一",
+    "ruby": "第一[dì yī]",
+    "romaji": "dìyī",
+    "en": "first"
+   }
+  },
+  {
+   "id": "zh.h.ge4",
+   "group": "number",
+   "ja": "个",
+   "ruby": "个[gè]",
+   "kana": "ge",
+   "romaji": "gè",
+   "en": "general measure word",
+   "hsk": 1,
+   "radical": "丨",
+   "ex": {
+    "ja": "这个",
+    "ruby": "这个[zhè ge]",
+    "romaji": "zhège",
+    "en": "this one"
+   },
+   "alt": "usually neutral ge after a number or 这 / 那"
+  },
+  {
+   "id": "zh.h.ji3-51e0",
+   "group": "number",
+   "ja": "几",
+   "ruby": "几[jǐ]",
+   "kana": "ji",
+   "romaji": "jǐ",
+   "en": "how many; a few",
+   "hsk": 1,
+   "radical": "几",
+   "ex": {
+    "ja": "几个",
+    "ruby": "几个[jǐ ge]",
+    "romaji": "jǐge",
+    "en": "how many?; a few"
+   }
+  },
+  {
+   "id": "zh.h.ben3",
+   "group": "number",
+   "ja": "本",
+   "ruby": "本[běn]",
+   "kana": "ben",
+   "romaji": "běn",
+   "en": "measure word for books; origin",
+   "hsk": 1,
+   "radical": "木",
+   "ex": {
+    "ja": "本子",
+    "ruby": "本子[běn zi]",
+    "romaji": "běnzi",
+    "en": "notebook"
+   }
+  },
+  {
+   "id": "zh.h.kuai4",
+   "group": "number",
+   "ja": "块",
+   "ruby": "块[kuài]",
+   "kana": "kuai",
+   "romaji": "kuài",
+   "en": "piece; yuan (spoken)",
+   "hsk": 1,
+   "radical": "土",
+   "ex": {
+    "ja": "一块",
+    "ruby": "一块[yí kuài]",
+    "romaji": "yíkuài",
+    "en": "one yuan; one piece"
+   }
+  },
+  {
+   "id": "zh.h.zhang1",
+   "group": "number",
+   "ja": "张",
+   "ruby": "张[zhāng]",
+   "kana": "zhang",
+   "romaji": "zhāng",
+   "en": "measure word for flat things",
+   "hsk": 2,
+   "radical": "弓",
+   "ex": {
+    "ja": "一张",
+    "ruby": "一张[yì zhāng]",
+    "romaji": "yìzhāng",
+    "en": "one (ticket, sheet, table)"
+   }
+  },
+  {
+   "id": "zh.h.jian4",
+   "group": "number",
+   "ja": "件",
+   "ruby": "件[jiàn]",
+   "kana": "jian",
+   "romaji": "jiàn",
+   "en": "measure word for clothes and matters",
+   "hsk": 2,
+   "radical": "亻",
+   "ex": {
+    "ja": "一件",
+    "ruby": "一件[yí jiàn]",
+    "romaji": "yíjiàn",
+    "en": "one (top, matter)"
+   }
+  },
+  {
+   "id": "zh.h.ci4",
+   "group": "number",
+   "ja": "次",
+   "ruby": "次[cì]",
+   "kana": "ci",
+   "romaji": "cì",
+   "en": "time(s), occurrence",
+   "hsk": 2,
+   "radical": "欠",
+   "ex": {
+    "ja": "一次",
+    "ruby": "一次[yí cì]",
+    "romaji": "yícì",
+    "en": "once"
+   }
+  },
+  {
+   "id": "zh.h.sui4",
+   "group": "number",
+   "ja": "岁",
+   "ruby": "岁[suì]",
+   "kana": "sui",
+   "romaji": "suì",
+   "en": "year(s) of age",
+   "hsk": 1,
+   "radical": "山",
+   "ex": {
+    "ja": "几岁",
+    "ruby": "几岁[jǐ suì]",
+    "romaji": "jǐsuì",
+    "en": "how old? (a child)"
+   }
+  },
+  {
+   "id": "zh.h.hao4",
+   "group": "number",
+   "ja": "号",
+   "ruby": "号[hào]",
+   "kana": "hao",
+   "romaji": "hào",
+   "en": "number; day of the month",
+   "hsk": 2,
+   "radical": "口",
+   "ex": {
+    "ja": "号码",
+    "ruby": "号码[hào mǎ]",
+    "romaji": "hàomǎ",
+    "en": "number (phone, ID)"
+   }
+  },
+  {
+   "id": "zh.h.wei4",
+   "group": "number",
+   "ja": "位",
+   "ruby": "位[wèi]",
+   "kana": "wei",
+   "romaji": "wèi",
+   "en": "polite measure word for people",
+   "hsk": 3,
+   "radical": "亻",
+   "ex": {
+    "ja": "座位",
+    "ruby": "座位[zuò wèi]",
+    "romaji": "zuòwèi",
+    "en": "seat"
+   }
+  },
+  {
+   "id": "zh.h.tiao2",
+   "group": "number",
+   "ja": "条",
+   "ruby": "条[tiáo]",
+   "kana": "tiao",
+   "romaji": "tiáo",
+   "en": "measure word for long things",
+   "hsk": 3,
+   "radical": "木",
+   "ex": {
+    "ja": "面条",
+    "ruby": "面条[miàn tiáo]",
+    "romaji": "miàntiáo",
+    "en": "noodles"
+   }
+  },
+  {
+   "id": "zh.h.shuang1",
+   "group": "number",
+   "ja": "双",
+   "ruby": "双[shuāng]",
+   "kana": "shuang",
+   "romaji": "shuāng",
+   "en": "pair",
+   "hsk": 3,
+   "radical": "又",
+   "ex": {
+    "ja": "双人",
+    "ruby": "双人[shuāng rén]",
+    "romaji": "shuāngrén",
+    "en": "for two people"
+   }
+  },
+  {
+   "id": "zh.h.zhong3",
+   "group": "number",
+   "ja": "种",
+   "ruby": "种[zhǒng]",
+   "kana": "zhong",
+   "romaji": "zhǒng",
+   "en": "kind, type",
+   "hsk": 3,
+   "radical": "禾",
+   "ex": {
+    "ja": "这种",
+    "ruby": "这种[zhè zhǒng]",
+    "romaji": "zhèzhǒng",
+    "en": "this kind"
+   },
+   "alt": "zhòng: to plant"
+  },
+  {
+   "id": "zh.h.ren2",
+   "group": "people",
+   "ja": "人",
+   "ruby": "人[rén]",
+   "kana": "ren",
+   "romaji": "rén",
+   "en": "person",
+   "hsk": 1,
+   "radical": "人",
+   "ex": {
+    "ja": "中国人",
+    "ruby": "中国人[Zhōng guó rén]",
+    "romaji": "Zhōngguórén",
+    "en": "Chinese (person)"
+   }
+  },
+  {
+   "id": "zh.h.wo3",
+   "group": "people",
+   "ja": "我",
+   "ruby": "我[wǒ]",
+   "kana": "wo",
+   "romaji": "wǒ",
+   "en": "I, me",
+   "hsk": 1,
+   "radical": "戈",
+   "ex": {
+    "ja": "我们",
+    "ruby": "我们[wǒ men]",
+    "romaji": "wǒmen",
+    "en": "we, us"
+   }
+  },
+  {
+   "id": "zh.h.ni3",
+   "group": "people",
+   "ja": "你",
+   "ruby": "你[nǐ]",
+   "kana": "ni",
+   "romaji": "nǐ",
+   "en": "you",
+   "hsk": 1,
+   "radical": "亻",
+   "ex": {
+    "ja": "你们",
+    "ruby": "你们[nǐ men]",
+    "romaji": "nǐmen",
+    "en": "you (plural)"
+   }
+  },
+  {
+   "id": "zh.h.nin2",
+   "group": "people",
+   "ja": "您",
+   "ruby": "您[nín]",
+   "kana": "nin",
+   "romaji": "nín",
+   "en": "you (polite)",
+   "hsk": 2,
+   "radical": "心",
+   "ex": {
+    "ja": "您好",
+    "ruby": "您好[nín hǎo]",
+    "romaji": "nínhǎo",
+    "en": "hello (polite)"
+   }
+  },
+  {
+   "id": "zh.h.ta1-4ed6",
+   "group": "people",
+   "ja": "他",
+   "ruby": "他[tā]",
+   "kana": "ta",
+   "romaji": "tā",
+   "en": "he, him",
+   "hsk": 1,
+   "radical": "亻",
+   "ex": {
+    "ja": "他们",
+    "ruby": "他们[tā men]",
+    "romaji": "tāmen",
+    "en": "they, them"
+   }
+  },
+  {
+   "id": "zh.h.ta1-5979",
+   "group": "people",
+   "ja": "她",
+   "ruby": "她[tā]",
+   "kana": "ta",
+   "romaji": "tā",
+   "en": "she, her",
+   "hsk": 1,
+   "radical": "女",
+   "ex": {
+    "ja": "她们",
+    "ruby": "她们[tā men]",
+    "romaji": "tāmen",
+    "en": "they (women)"
+   }
+  },
+  {
+   "id": "zh.h.ta1-5b83",
+   "group": "people",
+   "ja": "它",
+   "ruby": "它[tā]",
+   "kana": "ta",
+   "romaji": "tā",
+   "en": "it",
+   "hsk": 2,
+   "radical": "宀",
+   "ex": {
+    "ja": "它们",
+    "ruby": "它们[tā men]",
+    "romaji": "tāmen",
+    "en": "they (things, animals)"
+   }
+  },
+  {
+   "id": "zh.h.men5",
+   "group": "people",
+   "ja": "们",
+   "ruby": "们[men]",
+   "kana": "men",
+   "romaji": "men",
+   "en": "plural suffix for people",
+   "hsk": 1,
+   "radical": "亻",
+   "ex": {
+    "ja": "我们",
+    "ruby": "我们[wǒ men]",
+    "romaji": "wǒmen",
+    "en": "we, us"
+   }
+  },
+  {
+   "id": "zh.h.jia1",
+   "group": "people",
+   "ja": "家",
+   "ruby": "家[jiā]",
+   "kana": "jia",
+   "romaji": "jiā",
+   "en": "home, family",
+   "hsk": 1,
+   "radical": "宀",
+   "ex": {
+    "ja": "大家",
+    "ruby": "大家[dà jiā]",
+    "romaji": "dàjiā",
+    "en": "everybody"
+   }
+  },
+  {
+   "id": "zh.h.ba4",
+   "group": "people",
+   "ja": "爸",
+   "ruby": "爸[bà]",
+   "kana": "ba",
+   "romaji": "bà",
+   "en": "dad",
+   "hsk": 1,
+   "radical": "父",
+   "ex": {
+    "ja": "爸爸",
+    "ruby": "爸爸[bà ba]",
+    "romaji": "bàba",
+    "en": "dad"
+   }
+  },
+  {
+   "id": "zh.h.ma1",
+   "group": "people",
+   "ja": "妈",
+   "ruby": "妈[mā]",
+   "kana": "ma",
+   "romaji": "mā",
+   "en": "mum",
+   "hsk": 1,
+   "radical": "女",
+   "ex": {
+    "ja": "妈妈",
+    "ruby": "妈妈[mā ma]",
+    "romaji": "māma",
+    "en": "mum"
+   }
+  },
+  {
+   "id": "zh.h.ge1",
+   "group": "people",
+   "ja": "哥",
+   "ruby": "哥[gē]",
+   "kana": "ge",
+   "romaji": "gē",
+   "en": "older brother",
+   "hsk": 2,
+   "radical": "口",
+   "ex": {
+    "ja": "哥哥",
+    "ruby": "哥哥[gē ge]",
+    "romaji": "gēge",
+    "en": "older brother"
+   }
+  },
+  {
+   "id": "zh.h.jie3",
+   "group": "people",
+   "ja": "姐",
+   "ruby": "姐[jiě]",
+   "kana": "jie",
+   "romaji": "jiě",
+   "en": "older sister",
+   "hsk": 1,
+   "radical": "女",
+   "ex": {
+    "ja": "姐姐",
+    "ruby": "姐姐[jiě jie]",
+    "romaji": "jiějie",
+    "en": "older sister"
+   }
+  },
+  {
+   "id": "zh.h.di4-5f1f",
+   "group": "people",
+   "ja": "弟",
+   "ruby": "弟[dì]",
+   "kana": "di",
+   "romaji": "dì",
+   "en": "younger brother",
+   "hsk": 2,
+   "radical": "弓",
+   "ex": {
+    "ja": "弟弟",
+    "ruby": "弟弟[dì di]",
+    "romaji": "dìdi",
+    "en": "younger brother"
+   }
+  },
+  {
+   "id": "zh.h.mei4",
+   "group": "people",
+   "ja": "妹",
+   "ruby": "妹[mèi]",
+   "kana": "mei",
+   "romaji": "mèi",
+   "en": "younger sister",
+   "hsk": 2,
+   "radical": "女",
+   "ex": {
+    "ja": "妹妹",
+    "ruby": "妹妹[mèi mei]",
+    "romaji": "mèimei",
+    "en": "younger sister"
+   }
+  },
+  {
+   "id": "zh.h.er2",
+   "group": "people",
+   "ja": "儿",
+   "ruby": "儿[ér]",
+   "kana": "er",
+   "romaji": "ér",
+   "en": "child, son; the 儿 ending",
+   "hsk": 1,
+   "ex": {
+    "ja": "儿子",
+    "ruby": "儿子[ér zi]",
+    "romaji": "érzi",
+    "en": "son"
+   },
+   "alt": "r: the 儿 ending (哪儿 nǎr)"
+  },
+  {
+   "id": "zh.h.nv3",
+   "group": "people",
+   "ja": "女",
+   "ruby": "女[nǚ]",
+   "kana": "nv",
+   "romaji": "nǚ",
+   "en": "woman, female",
+   "hsk": 1,
+   "radical": "女",
+   "ex": {
+    "ja": "女儿",
+    "ruby": "女儿[nǚ ér]",
+    "romaji": "nǚ'ér",
+    "en": "daughter"
+   }
+  },
+  {
+   "id": "zh.h.nan2",
+   "group": "people",
+   "ja": "男",
+   "ruby": "男[nán]",
+   "kana": "nan",
+   "romaji": "nán",
+   "en": "man, male",
+   "hsk": 2,
+   "radical": "田",
+   "ex": {
+    "ja": "男人",
+    "ruby": "男人[nán rén]",
+    "romaji": "nánrén",
+    "en": "man"
+   }
+  },
+  {
+   "id": "zh.h.zi3",
+   "group": "people",
+   "ja": "子",
+   "ruby": "子[zǐ]",
+   "kana": "zi",
+   "romaji": "zǐ",
+   "en": "child; noun suffix",
+   "hsk": 1,
+   "radical": "子",
+   "ex": {
+    "ja": "孩子",
+    "ruby": "孩子[hái zi]",
+    "romaji": "háizi",
+    "en": "child"
+   },
+   "alt": "zi: neutral as a noun suffix (桌子)"
+  },
+  {
+   "id": "zh.h.hai2",
+   "group": "people",
+   "ja": "孩",
+   "ruby": "孩[hái]",
+   "kana": "hai",
+   "romaji": "hái",
+   "en": "child",
+   "hsk": 2,
+   "ex": {
+    "ja": "女孩",
+    "ruby": "女孩[nǚ hái]",
+    "romaji": "nǚhái",
+    "en": "girl"
+   }
+  },
+  {
+   "id": "zh.h.peng2",
+   "group": "people",
+   "ja": "朋",
+   "ruby": "朋[péng]",
+   "kana": "peng",
+   "romaji": "péng",
+   "en": "friend",
+   "hsk": 1,
+   "ex": {
+    "ja": "朋友",
+    "ruby": "朋友[péng you]",
+    "romaji": "péngyou",
+    "en": "friend"
+   }
+  },
+  {
+   "id": "zh.h.you3",
+   "group": "people",
+   "ja": "友",
+   "ruby": "友[yǒu]",
+   "kana": "you",
+   "romaji": "yǒu",
+   "en": "friend",
+   "hsk": 1,
+   "ex": {
+    "ja": "友好",
+    "ruby": "友好[yǒu hǎo]",
+    "romaji": "yǒuhǎo",
+    "en": "friendly"
+   }
+  },
+  {
+   "id": "zh.h.lao3",
+   "group": "people",
+   "ja": "老",
+   "ruby": "老[lǎo]",
+   "kana": "lao",
+   "romaji": "lǎo",
+   "en": "old; (title)",
+   "hsk": 1,
+   "radical": "老",
+   "ex": {
+    "ja": "老师",
+    "ruby": "老师[lǎo shī]",
+    "romaji": "lǎoshī",
+    "en": "teacher"
+   }
+  },
+  {
+   "id": "zh.h.shi1",
+   "group": "people",
+   "ja": "师",
+   "ruby": "师[shī]",
+   "kana": "shi",
+   "romaji": "shī",
+   "en": "teacher, master",
+   "hsk": 1,
+   "ex": {
+    "ja": "师傅",
+    "ruby": "师傅[shī fu]",
+    "romaji": "shīfu",
+    "en": "master; driver (address)"
+   }
+  },
+  {
+   "id": "zh.h.sheng1",
+   "group": "people",
+   "ja": "生",
+   "ruby": "生[shēng]",
+   "kana": "sheng",
+   "romaji": "shēng",
+   "en": "be born; life; raw",
+   "hsk": 1,
+   "radical": "生",
+   "ex": {
+    "ja": "生日",
+    "ruby": "生日[shēng rì]",
+    "romaji": "shēngrì",
+    "en": "birthday"
+   }
+  },
+  {
+   "id": "zh.h.xian1",
+   "group": "people",
+   "ja": "先",
+   "ruby": "先[xiān]",
+   "kana": "xian",
+   "romaji": "xiān",
+   "en": "first; before",
+   "hsk": 1,
+   "radical": "儿",
+   "ex": {
+    "ja": "先生",
+    "ruby": "先生[xiān sheng]",
+    "romaji": "xiānsheng",
+    "en": "Mr; husband"
+   }
+  },
+  {
+   "id": "zh.h.ming2-540d",
+   "group": "people",
+   "ja": "名",
+   "ruby": "名[míng]",
+   "kana": "ming",
+   "romaji": "míng",
+   "en": "name; famous",
+   "hsk": 1,
+   "radical": "口",
+   "ex": {
+    "ja": "名字",
+    "ruby": "名字[míng zi]",
+    "romaji": "míngzi",
+    "en": "name"
+   }
+  },
+  {
+   "id": "zh.h.zi4-5b57",
+   "group": "people",
+   "ja": "字",
+   "ruby": "字[zì]",
+   "kana": "zi",
+   "romaji": "zì",
+   "en": "character, word",
+   "hsk": 1,
+   "radical": "子",
+   "ex": {
+    "ja": "汉字",
+    "ruby": "汉字[Hàn zì]",
+    "romaji": "Hànzì",
+    "en": "Chinese character"
+   }
+  },
+  {
+   "id": "zh.h.jiao4",
+   "group": "people",
+   "ja": "叫",
+   "ruby": "叫[jiào]",
+   "kana": "jiao",
+   "romaji": "jiào",
+   "en": "be called; call",
+   "hsk": 1,
+   "radical": "口",
+   "ex": {
+    "ja": "叫车",
+    "ruby": "叫车[jiào chē]",
+    "romaji": "jiàochē",
+    "en": "call a car"
+   }
+  },
+  {
+   "id": "zh.h.xing4",
+   "group": "people",
+   "ja": "姓",
+   "ruby": "姓[xìng]",
+   "kana": "xing",
+   "romaji": "xìng",
+   "en": "surname",
+   "hsk": 2,
+   "radical": "女",
+   "ex": {
+    "ja": "姓名",
+    "ruby": "姓名[xìng míng]",
+    "romaji": "xìngmíng",
+    "en": "full name"
+   }
+  },
+  {
+   "id": "zh.h.tong2",
+   "group": "people",
+   "ja": "同",
+   "ruby": "同[tóng]",
+   "kana": "tong",
+   "romaji": "tóng",
+   "en": "same; together",
+   "hsk": 1,
+   "radical": "口",
+   "ex": {
+    "ja": "同学",
+    "ruby": "同学[tóng xué]",
+    "romaji": "tóngxué",
+    "en": "classmate"
+   }
+  },
+  {
+   "id": "zh.h.ke4",
+   "group": "people",
+   "ja": "客",
+   "ruby": "客[kè]",
+   "kana": "ke",
+   "romaji": "kè",
+   "en": "guest",
+   "hsk": 1,
+   "ex": {
+    "ja": "客人",
+    "ruby": "客人[kè rén]",
+    "romaji": "kèrén",
+    "en": "guest"
+   }
+  },
+  {
+   "id": "zh.h.zi4-81ea",
+   "group": "people",
+   "ja": "自",
+   "ruby": "自[zì]",
+   "kana": "zi",
+   "romaji": "zì",
+   "en": "self; from",
+   "hsk": 2,
+   "radical": "自",
+   "ex": {
+    "ja": "自己",
+    "ruby": "自己[zì jǐ]",
+    "romaji": "zìjǐ",
+    "en": "oneself"
+   }
+  },
+  {
+   "id": "zh.h.ji3-5df1",
+   "group": "people",
+   "ja": "己",
+   "ruby": "己[jǐ]",
+   "kana": "ji",
+   "romaji": "jǐ",
+   "en": "self",
+   "hsk": 3,
+   "ex": {
+    "ja": "自己",
+    "ruby": "自己[zì jǐ]",
+    "romaji": "zìjǐ",
+    "en": "oneself"
+   }
+  },
+  {
+   "id": "zh.h.kou3",
+   "group": "body",
+   "ja": "口",
+   "ruby": "口[kǒu]",
+   "kana": "kou",
+   "romaji": "kǒu",
+   "en": "mouth; opening",
+   "hsk": 3,
+   "radical": "口",
+   "ex": {
+    "ja": "门口",
+    "ruby": "门口[mén kǒu]",
+    "romaji": "ménkǒu",
+    "en": "doorway, entrance"
+   }
+  },
+  {
+   "id": "zh.h.shou3",
+   "group": "body",
+   "ja": "手",
+   "ruby": "手[shǒu]",
+   "kana": "shou",
+   "romaji": "shǒu",
+   "en": "hand",
+   "hsk": 2,
+   "radical": "手",
+   "ex": {
+    "ja": "手机",
+    "ruby": "手机[shǒu jī]",
+    "romaji": "shǒujī",
+    "en": "mobile phone"
+   }
+  },
+  {
+   "id": "zh.h.tou2",
+   "group": "body",
+   "ja": "头",
+   "ruby": "头[tóu]",
+   "kana": "tou",
+   "romaji": "tóu",
+   "en": "head",
+   "hsk": 3,
+   "radical": "大",
+   "ex": {
+    "ja": "头发",
+    "ruby": "头发[tóu fa]",
+    "romaji": "tóufa",
+    "en": "hair (on the head)"
+   }
+  },
+  {
+   "id": "zh.h.yan3",
+   "group": "body",
+   "ja": "眼",
+   "ruby": "眼[yǎn]",
+   "kana": "yan",
+   "romaji": "yǎn",
+   "en": "eye",
+   "hsk": 2,
+   "radical": "目",
+   "ex": {
+    "ja": "眼睛",
+    "ruby": "眼睛[yǎn jing]",
+    "romaji": "yǎnjing",
+    "en": "eye"
+   }
+  },
+  {
+   "id": "zh.h.er3",
+   "group": "body",
+   "ja": "耳",
+   "ruby": "耳[ěr]",
+   "kana": "er",
+   "romaji": "ěr",
+   "en": "ear",
+   "hsk": 3,
+   "ex": {
+    "ja": "耳朵",
+    "ruby": "耳朵[ěr duo]",
+    "romaji": "ěrduo",
+    "en": "ear"
+   }
+  },
+  {
+   "id": "zh.h.xin1",
+   "group": "body",
+   "ja": "心",
+   "ruby": "心[xīn]",
+   "kana": "xin",
+   "romaji": "xīn",
+   "en": "heart",
+   "hsk": 3,
+   "radical": "心",
+   "ex": {
+    "ja": "小心",
+    "ruby": "小心[xiǎo xīn]",
+    "romaji": "xiǎoxīn",
+    "en": "be careful"
+   }
+  },
+  {
+   "id": "zh.h.shen1",
+   "group": "body",
+   "ja": "身",
+   "ruby": "身[shēn]",
+   "kana": "shen",
+   "romaji": "shēn",
+   "en": "body",
+   "hsk": 2,
+   "ex": {
+    "ja": "身体",
+    "ruby": "身体[shēn tǐ]",
+    "romaji": "shēntǐ",
+    "en": "body; health"
+   }
+  },
+  {
+   "id": "zh.h.ti3",
+   "group": "body",
+   "ja": "体",
+   "ruby": "体[tǐ]",
+   "kana": "ti",
+   "romaji": "tǐ",
+   "en": "body; form",
+   "hsk": 2,
+   "ex": {
+    "ja": "体育",
+    "ruby": "体育[tǐ yù]",
+    "romaji": "tǐyù",
+    "en": "sport, PE"
+   }
+  },
+  {
+   "id": "zh.h.jiao3",
+   "group": "body",
+   "ja": "脚",
+   "ruby": "脚[jiǎo]",
+   "kana": "jiao",
+   "romaji": "jiǎo",
+   "en": "foot",
+   "hsk": 3,
+   "radical": "⺼",
+   "ex": {
+    "ja": "手脚",
+    "ruby": "手脚[shǒu jiǎo]",
+    "romaji": "shǒujiǎo",
+    "en": "hands and feet"
+   }
+  },
+  {
+   "id": "zh.h.ya2",
+   "group": "body",
+   "ja": "牙",
+   "ruby": "牙[yá]",
+   "kana": "ya",
+   "romaji": "yá",
+   "en": "tooth",
+   "hsk": 4,
+   "radical": "牙",
+   "ex": {
+    "ja": "刷牙",
+    "ruby": "刷牙[shuā yá]",
+    "romaji": "shuāyá",
+    "en": "brush your teeth"
+   }
+  },
+  {
+   "id": "zh.h.bing4",
+   "group": "body",
+   "ja": "病",
+   "ruby": "病[bìng]",
+   "kana": "bing",
+   "romaji": "bìng",
+   "en": "illness; ill",
+   "hsk": 2,
+   "radical": "疒",
+   "ex": {
+    "ja": "生病",
+    "ruby": "生病[shēng bìng]",
+    "romaji": "shēngbìng",
+    "en": "fall ill"
+   }
+  },
+  {
+   "id": "zh.h.yi1-533b",
+   "group": "body",
+   "ja": "医",
+   "ruby": "医[yī]",
+   "kana": "yi",
+   "romaji": "yī",
+   "en": "medicine; doctor",
+   "hsk": 1,
+   "ex": {
+    "ja": "医生",
+    "ruby": "医生[yī shēng]",
+    "romaji": "yīshēng",
+    "en": "doctor"
+   }
+  },
+  {
+   "id": "zh.h.yuan4",
+   "group": "body",
+   "ja": "院",
+   "ruby": "院[yuàn]",
+   "kana": "yuan",
+   "romaji": "yuàn",
+   "en": "courtyard; institution",
+   "hsk": 1,
+   "radical": "阝",
+   "ex": {
+    "ja": "医院",
+    "ruby": "医院[yī yuàn]",
+    "romaji": "yīyuàn",
+    "en": "hospital"
+   }
+  },
+  {
+   "id": "zh.h.yao4",
+   "group": "body",
+   "ja": "药",
+   "ruby": "药[yào]",
+   "kana": "yao",
+   "romaji": "yào",
+   "en": "medicine",
+   "hsk": 2,
+   "radical": "艹",
+   "ex": {
+    "ja": "药店",
+    "ruby": "药店[yào diàn]",
+    "romaji": "yàodiàn",
+    "en": "pharmacy"
+   }
+  },
+  {
+   "id": "zh.h.teng2",
+   "group": "body",
+   "ja": "疼",
+   "ruby": "疼[téng]",
+   "kana": "teng",
+   "romaji": "téng",
+   "en": "hurt, ache",
+   "hsk": 3,
+   "radical": "疒",
+   "ex": {
+    "ja": "头疼",
+    "ruby": "头疼[tóu téng]",
+    "romaji": "tóuténg",
+    "en": "headache"
+   }
+  },
+  {
+   "id": "zh.h.lei4",
+   "group": "body",
+   "ja": "累",
+   "ruby": "累[lèi]",
+   "kana": "lei",
+   "romaji": "lèi",
+   "en": "tired",
+   "hsk": 2,
+   "radical": "糸",
+   "ex": {
+    "ja": "劳累",
+    "ruby": "劳累[láo lèi]",
+    "romaji": "láolèi",
+    "en": "worn out"
+   }
+  },
+  {
+   "id": "zh.h.e4",
+   "group": "body",
+   "ja": "饿",
+   "ruby": "饿[è]",
+   "kana": "e",
+   "romaji": "è",
+   "en": "hungry",
+   "hsk": 3,
+   "radical": "饣",
+   "ex": {
+    "ja": "饥饿",
+    "ruby": "饥饿[jī è]",
+    "romaji": "jī'è",
+    "en": "hunger"
+   }
+  },
+  {
+   "id": "zh.h.ke3",
+   "group": "body",
+   "ja": "渴",
+   "ruby": "渴[kě]",
+   "kana": "ke",
+   "romaji": "kě",
+   "en": "thirsty",
+   "hsk": 3,
+   "radical": "氵",
+   "ex": {
+    "ja": "口渴",
+    "ruby": "口渴[kǒu kě]",
+    "romaji": "kǒukě",
+    "en": "thirsty"
+   }
+  },
+  {
+   "id": "zh.h.nian2",
+   "group": "time",
+   "ja": "年",
+   "ruby": "年[nián]",
+   "kana": "nian",
+   "romaji": "nián",
+   "en": "year",
+   "hsk": 1,
+   "radical": "干",
+   "ex": {
+    "ja": "今年",
+    "ruby": "今年[jīn nián]",
+    "romaji": "jīnnián",
+    "en": "this year"
+   }
+  },
+  {
+   "id": "zh.h.yue4",
+   "group": "time",
+   "ja": "月",
+   "ruby": "月[yuè]",
+   "kana": "yue",
+   "romaji": "yuè",
+   "en": "month; moon",
+   "hsk": 1,
+   "radical": "月",
+   "ex": {
+    "ja": "月亮",
+    "ruby": "月亮[yuè liang]",
+    "romaji": "yuèliang",
+    "en": "the moon"
+   }
+  },
+  {
+   "id": "zh.h.ri4",
+   "group": "time",
+   "ja": "日",
+   "ruby": "日[rì]",
+   "kana": "ri",
+   "romaji": "rì",
+   "en": "day; sun",
+   "hsk": 1,
+   "radical": "日",
+   "ex": {
+    "ja": "生日",
+    "ruby": "生日[shēng rì]",
+    "romaji": "shēngrì",
+    "en": "birthday"
+   }
+  },
+  {
+   "id": "zh.h.tian1",
+   "group": "time",
+   "ja": "天",
+   "ruby": "天[tiān]",
+   "kana": "tian",
+   "romaji": "tiān",
+   "en": "day; sky",
+   "hsk": 1,
+   "radical": "大",
+   "ex": {
+    "ja": "今天",
+    "ruby": "今天[jīn tiān]",
+    "romaji": "jīntiān",
+    "en": "today"
+   }
+  },
+  {
+   "id": "zh.h.xing1",
+   "group": "time",
+   "ja": "星",
+   "ruby": "星[xīng]",
+   "kana": "xing",
+   "romaji": "xīng",
+   "en": "star",
+   "hsk": 1,
+   "ex": {
+    "ja": "星期",
+    "ruby": "星期[xīng qī]",
+    "romaji": "xīngqī",
+    "en": "week"
+   }
+  },
+  {
+   "id": "zh.h.qi1-671f",
+   "group": "time",
+   "ja": "期",
+   "ruby": "期[qī]",
+   "kana": "qi",
+   "romaji": "qī",
+   "en": "period of time",
+   "hsk": 1,
+   "radical": "月",
+   "ex": {
+    "ja": "假期",
+    "ruby": "假期[jià qī]",
+    "romaji": "jiàqī",
+    "en": "holiday"
+   }
+  },
+  {
+   "id": "zh.h.shi2-65f6",
+   "group": "time",
+   "ja": "时",
+   "ruby": "时[shí]",
+   "kana": "shi",
+   "romaji": "shí",
+   "en": "time; hour",
+   "hsk": 1,
+   "radical": "日",
+   "ex": {
+    "ja": "时间",
+    "ruby": "时间[shí jiān]",
+    "romaji": "shíjiān",
+    "en": "time"
+   }
+  },
+  {
+   "id": "zh.h.jian1",
+   "group": "time",
+   "ja": "间",
+   "ruby": "间[jiān]",
+   "kana": "jian",
+   "romaji": "jiān",
+   "en": "between; room",
+   "hsk": 2,
+   "radical": "门",
+   "ex": {
+    "ja": "房间",
+    "ruby": "房间[fáng jiān]",
+    "romaji": "fángjiān",
+    "en": "room"
+   },
+   "alt": "jiàn: gap, as in 间隔"
+  },
+  {
+   "id": "zh.h.dian3",
+   "group": "time",
+   "ja": "点",
+   "ruby": "点[diǎn]",
+   "kana": "dian",
+   "romaji": "diǎn",
+   "en": "o'clock; dot; a little",
+   "hsk": 1,
+   "radical": "灬",
+   "ex": {
+    "ja": "几点",
+    "ruby": "几点[jǐ diǎn]",
+    "romaji": "jǐdiǎn",
+    "en": "what time?"
+   }
+  },
+  {
+   "id": "zh.h.fen1",
+   "group": "time",
+   "ja": "分",
+   "ruby": "分[fēn]",
+   "kana": "fen",
+   "romaji": "fēn",
+   "en": "minute; divide",
+   "hsk": 1,
+   "radical": "刀",
+   "ex": {
+    "ja": "分钟",
+    "ruby": "分钟[fēn zhōng]",
+    "romaji": "fēnzhōng",
+    "en": "minute"
+   },
+   "alt": "fèn: portion, part"
+  },
+  {
+   "id": "zh.h.zhong1",
+   "group": "time",
+   "ja": "钟",
+   "ruby": "钟[zhōng]",
+   "kana": "zhong",
+   "romaji": "zhōng",
+   "en": "clock; bell",
+   "hsk": 1,
+   "radical": "钅",
+   "ex": {
+    "ja": "钟头",
+    "ruby": "钟头[zhōng tóu]",
+    "romaji": "zhōngtóu",
+    "en": "hour"
+   }
+  },
+  {
+   "id": "zh.h.zao3",
+   "group": "time",
+   "ja": "早",
+   "ruby": "早[zǎo]",
+   "kana": "zao",
+   "romaji": "zǎo",
+   "en": "early; morning",
+   "hsk": 2,
+   "radical": "日",
+   "ex": {
+    "ja": "早上",
+    "ruby": "早上[zǎo shang]",
+    "romaji": "zǎoshang",
+    "en": "morning"
+   }
+  },
+  {
+   "id": "zh.h.wan3",
+   "group": "time",
+   "ja": "晚",
+   "ruby": "晚[wǎn]",
+   "kana": "wan",
+   "romaji": "wǎn",
+   "en": "late; evening",
+   "hsk": 2,
+   "radical": "日",
+   "ex": {
+    "ja": "晚上",
+    "ruby": "晚上[wǎn shang]",
+    "romaji": "wǎnshang",
+    "en": "evening"
+   }
+  },
+  {
+   "id": "zh.h.wu3-5348",
+   "group": "time",
+   "ja": "午",
+   "ruby": "午[wǔ]",
+   "kana": "wu",
+   "romaji": "wǔ",
+   "en": "noon",
+   "hsk": 1,
+   "ex": {
+    "ja": "中午",
+    "ruby": "中午[zhōng wǔ]",
+    "romaji": "zhōngwǔ",
+    "en": "midday"
+   }
+  },
+  {
+   "id": "zh.h.jin1",
+   "group": "time",
+   "ja": "今",
+   "ruby": "今[jīn]",
+   "kana": "jin",
+   "romaji": "jīn",
+   "en": "now, this",
+   "hsk": 1,
+   "ex": {
+    "ja": "今天",
+    "ruby": "今天[jīn tiān]",
+    "romaji": "jīntiān",
+    "en": "today"
+   }
+  },
+  {
+   "id": "zh.h.ming2-660e",
+   "group": "time",
+   "ja": "明",
+   "ruby": "明[míng]",
+   "kana": "ming",
+   "romaji": "míng",
+   "en": "bright; next",
+   "hsk": 1,
+   "ex": {
+    "ja": "明天",
+    "ruby": "明天[míng tiān]",
+    "romaji": "míngtiān",
+    "en": "tomorrow"
+   }
+  },
+  {
+   "id": "zh.h.zuo2",
+   "group": "time",
+   "ja": "昨",
+   "ruby": "昨[zuó]",
+   "kana": "zuo",
+   "romaji": "zuó",
+   "en": "yesterday",
+   "hsk": 1,
+   "ex": {
+    "ja": "昨天",
+    "ruby": "昨天[zuó tiān]",
+    "romaji": "zuótiān",
+    "en": "yesterday"
+   }
+  },
+  {
+   "id": "zh.h.xian4",
+   "group": "time",
+   "ja": "现",
+   "ruby": "现[xiàn]",
+   "kana": "xian",
+   "romaji": "xiàn",
+   "en": "now; appear",
+   "hsk": 1,
+   "ex": {
+    "ja": "现在",
+    "ruby": "现在[xiàn zài]",
+    "romaji": "xiànzài",
+    "en": "now"
+   }
+  },
+  {
+   "id": "zh.h.zhou1",
+   "group": "time",
+   "ja": "周",
+   "ruby": "周[zhōu]",
+   "kana": "zhou",
+   "romaji": "zhōu",
+   "en": "week; around",
+   "hsk": 3,
+   "radical": "口",
+   "ex": {
+    "ja": "周末",
+    "ruby": "周末[zhōu mò]",
+    "romaji": "zhōumò",
+    "en": "weekend"
+   }
+  },
+  {
+   "id": "zh.h.mo4",
+   "group": "time",
+   "ja": "末",
+   "ruby": "末[mò]",
+   "kana": "mo",
+   "romaji": "mò",
+   "en": "end",
+   "hsk": 3,
+   "radical": "木",
+   "ex": {
+    "ja": "月末",
+    "ruby": "月末[yuè mò]",
+    "romaji": "yuèmò",
+    "en": "end of the month"
+   }
+  },
+  {
+   "id": "zh.h.hou4",
+   "group": "time",
+   "ja": "后",
+   "ruby": "后[hòu]",
+   "kana": "hou",
+   "romaji": "hòu",
+   "en": "after; behind",
+   "hsk": 1,
+   "radical": "口",
+   "ex": {
+    "ja": "以后",
+    "ruby": "以后[yǐ hòu]",
+    "romaji": "yǐhòu",
+    "en": "after; later"
+   }
+  },
+  {
+   "id": "zh.h.qian2",
+   "group": "time",
+   "ja": "前",
+   "ruby": "前[qián]",
+   "kana": "qian",
+   "romaji": "qián",
+   "en": "before; in front",
+   "hsk": 1,
+   "radical": "刂",
+   "ex": {
+    "ja": "以前",
+    "ruby": "以前[yǐ qián]",
+    "romaji": "yǐqián",
+    "en": "before"
+   }
+  },
+  {
+   "id": "zh.h.chun1",
+   "group": "time",
+   "ja": "春",
+   "ruby": "春[chūn]",
+   "kana": "chun",
+   "romaji": "chūn",
+   "en": "spring",
+   "hsk": 3,
+   "radical": "日",
+   "ex": {
+    "ja": "春天",
+    "ruby": "春天[chūn tiān]",
+    "romaji": "chūntiān",
+    "en": "spring"
+   }
+  },
+  {
+   "id": "zh.h.xia4",
+   "group": "time",
+   "ja": "夏",
+   "ruby": "夏[xià]",
+   "kana": "xia",
+   "romaji": "xià",
+   "en": "summer",
+   "hsk": 3,
+   "radical": "夊",
+   "ex": {
+    "ja": "夏天",
+    "ruby": "夏天[xià tiān]",
+    "romaji": "xiàtiān",
+    "en": "summer"
+   }
+  },
+  {
+   "id": "zh.h.qiu1",
+   "group": "time",
+   "ja": "秋",
+   "ruby": "秋[qiū]",
+   "kana": "qiu",
+   "romaji": "qiū",
+   "en": "autumn",
+   "hsk": 3,
+   "radical": "禾",
+   "ex": {
+    "ja": "秋天",
+    "ruby": "秋天[qiū tiān]",
+    "romaji": "qiūtiān",
+    "en": "autumn"
+   }
+  },
+  {
+   "id": "zh.h.dong1",
+   "group": "time",
+   "ja": "冬",
+   "ruby": "冬[dōng]",
+   "kana": "dong",
+   "romaji": "dōng",
+   "en": "winter",
+   "hsk": 3,
+   "radical": "⺀",
+   "ex": {
+    "ja": "冬天",
+    "ruby": "冬天[dōng tiān]",
+    "romaji": "dōngtiān",
+    "en": "winter"
+   }
+  },
+  {
+   "id": "zh.h.jie2",
+   "group": "time",
+   "ja": "节",
+   "ruby": "节[jié]",
+   "kana": "jie",
+   "romaji": "jié",
+   "en": "festival; section",
+   "hsk": 3,
+   "radical": "艹",
+   "ex": {
+    "ja": "节日",
+    "ruby": "节日[jié rì]",
+    "romaji": "jiérì",
+    "en": "festival, holiday"
+   }
+  },
+  {
+   "id": "zh.h.jiu3-4e45",
+   "group": "time",
+   "ja": "久",
+   "ruby": "久[jiǔ]",
+   "kana": "jiu",
+   "romaji": "jiǔ",
+   "en": "long (time)",
+   "hsk": 3,
+   "radical": "丿",
+   "ex": {
+    "ja": "多久",
+    "ruby": "多久[duō jiǔ]",
+    "romaji": "duōjiǔ",
+    "en": "how long?"
+   }
+  },
+  {
+   "id": "zh.h.chang2",
+   "group": "time",
+   "ja": "常",
+   "ruby": "常[cháng]",
+   "kana": "chang",
+   "romaji": "cháng",
+   "en": "often; usual",
+   "hsk": 2,
+   "radical": "巾",
+   "ex": {
+    "ja": "常常",
+    "ruby": "常常[cháng cháng]",
+    "romaji": "chángcháng",
+    "en": "often"
+   }
+  },
+  {
+   "id": "zh.h.mei3",
+   "group": "time",
+   "ja": "每",
+   "ruby": "每[měi]",
+   "kana": "mei",
+   "romaji": "měi",
+   "en": "every",
+   "hsk": 2,
+   "radical": "母",
+   "ex": {
+    "ja": "每天",
+    "ruby": "每天[měi tiān]",
+    "romaji": "měitiān",
+    "en": "every day"
+   }
+  }
+ ]
+}
