@@ -34,7 +34,7 @@ export function rubyToRomaji(src) {
   let out = '';
   for (const seg of parseRuby(src)) {
     if (seg.text != null) {
-      for (const ch of seg.text) out += PUNCT[ch] ?? ch;
+      for (const ch of seg.text.replace(/…+/g, '…')) out += PUNCT[ch] ?? ch;
       continue;
     }
     const word = seg.explicit ? seg.rt.trim() : joinWord(seg.rt.trim().split(/\s+/));
@@ -43,7 +43,7 @@ export function rubyToRomaji(src) {
   }
   out = out.replace(/\s+/g, ' ').replace(/ ([,.?!:;])/g, '$1').trim();
   if (!/[。？！，]/.test(src)) return out;
-  return out.replace(/(^|[.?!] )(\p{L})/gu, (_, a, b) => a + b.toUpperCase());
+  return out.replace(/(^|(?<!\.\.)[.?!] )(\p{L})/gu, (_, a, b) => a + b.toUpperCase());
 }
 
 export function romajiToKana(romaji) {

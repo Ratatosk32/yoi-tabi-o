@@ -2265,6 +2265,178 @@
     "zh.daily.fan-yi-cheng-ying-wen",
     "zh.daily.ba-fang-jian-da-sao-gan-jing"
    ]
+  },
+  {
+   "code": "Z19-L01",
+   "unit": "Z19",
+   "title": "Getting to know someone",
+   "goal": "Answer the usual questions about your stay, your reasons and your home town.",
+   "level": 3,
+   "path": "core",
+   "hsk": 3,
+   "patterns": [
+    "……多久了？",
+    "习惯 + noun",
+    "加个微信"
+   ],
+   "count": 11,
+   "ids": [
+    "zh.talk.hear-lai-zhong-guo-duo-jiu-le",
+    "zh.talk.kuai-yi-nian-le",
+    "zh.talk.hear-xi-guan-le-ma",
+    "zh.talk.yi-jing-xi-guan-le",
+    "zh.talk.hai-bu-tai-xi-guan",
+    "zh.talk.hear-wei-shen-me-xue-zhong-wen",
+    "zh.talk.dui-wen-hua-gan-xing-qu",
+    "zh.talk.hear-lao-jia-zai-nar",
+    "zh.talk.lao-jia-zai-lun-dun",
+    "zh.talk.yi-qi-he-bei-ka-fei",
+    "zh.talk.jia-ge-wei-xin"
+   ]
+  },
+  {
+   "code": "Z19-L02",
+   "unit": "Z19",
+   "title": "Compliments and courtesy",
+   "goal": "Take a compliment, thank, apologize for trouble, wish people well.",
+   "level": 3,
+   "path": "core",
+   "hsk": 3,
+   "patterns": [
+    "麻烦你了",
+    "辛苦了",
+    "别客气",
+    "祝 + person + wish"
+   ],
+   "count": 11,
+   "ids": [
+    "zh.talk.hear-zhong-wen-zhen-hao",
+    "zh.talk.hai-zai-xue",
+    "zh.talk.yi-fu-zhen-hao-kan",
+    "zh.talk.ma-fan-ni-le",
+    "zh.talk.da-rao-yi-xia",
+    "zh.talk.xin-ku-le",
+    "zh.talk.bie-ke-qi",
+    "zh.talk.hear-sui-bian-zuo",
+    "zh.talk.man-zou",
+    "zh.talk.xin-nian-kuai-le",
+    "zh.talk.gong-xi"
+   ]
+  },
+  {
+   "code": "Z19-L03",
+   "unit": "Z19",
+   "title": "Keeping a chat going",
+   "goal": "Check guesses, react, change the subject, fill a pause.",
+   "level": 3,
+   "path": "core",
+   "hsk": 3,
+   "patterns": [
+    "是不是……？",
+    "……吧？",
+    "对了",
+    "好像……"
+   ],
+   "count": 11,
+   "ids": [
+    "zh.talk.hear-shi-bu-shi-lao-shi",
+    "zh.patterns.shi-ying-guo-ren-ba",
+    "zh.talk.dui-le",
+    "zh.talk.na-ge",
+    "zh.talk.zhen-de-ma",
+    "zh.talk.shi-ma",
+    "zh.talk.yuan-lai-shi-zhe-yang",
+    "zh.talk.hear-zhou-mo-guo-de-zen-me-yang",
+    "zh.talk.guo-de-hen-kai-xin",
+    "zh.talk.ye-jiu-shi-shuo",
+    "zh.talk.hao-xiang-yao-xia-yu"
+   ]
+  },
+  {
+   "code": "Z20-L01",
+   "unit": "Z20",
+   "title": "On the phone",
+   "goal": "Answer and make calls, leave a message, deal with a bad line.",
+   "level": 3,
+   "path": "core",
+   "hsk": 3,
+   "patterns": [
+    "喂",
+    "请问……在吗？",
+    "给 + person + 回电话",
+    "verb + 错"
+   ],
+   "count": 11,
+   "ids": [
+    "zh.phone.wei-ni-hao",
+    "zh.phone.wang-xian-sheng-zai-ma",
+    "zh.phone.hear-yao-liu-yan-ma",
+    "zh.phone.qing-ta-hui-dian-hua",
+    "zh.phone.hear-nin-na-wei",
+    "zh.phone.wo-shi-an-na",
+    "zh.phone.da-cuo-le",
+    "zh.phone.ting-bu-qing-chu",
+    "zh.phone.da-sheng-yi-dian",
+    "zh.phone.dai-hui-r-da-gei-ni",
+    "zh.phone.word-shou-ji-hao"
+   ]
+  },
+  {
+   "code": "Z20-L02",
+   "unit": "Z20",
+   "title": "Messages and apps",
+   "goal": "Send messages and locations, ask for the WiFi, charge your phone.",
+   "level": 3,
+   "path": "core",
+   "hsk": 3,
+   "patterns": [
+    "给 + person + 发……",
+    "快没电了",
+    "verb + 一下"
+   ],
+   "count": 11,
+   "ids": [
+    "zh.phone.dao-le-fa-wei-xin",
+    "zh.phone.fa-ge-ding-wei",
+    "zh.phone.kuai-mei-dian-le",
+    "zh.phone.you-chong-dian-qi-ma",
+    "zh.phone.wifi-mi-ma",
+    "zh.phone.hear-mi-ma-zai-qiang-shang",
+    "zh.phone.mei-kan-dao-xiao-xi",
+    "zh.phone.fa-yu-yin",
+    "zh.phone.sao-er-wei-ma",
+    "zh.phone.word-shang-wang",
+    "zh.phone.word-ying-yong"
+   ]
+  },
+  {
+   "code": "Z20-L03",
+   "unit": "Z20",
+   "title": "Running late, changing plans",
+   "goal": "Say you are on your way or late; move or cancel a meeting.",
+   "level": 3,
+   "path": "core",
+   "hsk": 3,
+   "patterns": [
+    "在路上了",
+    "可能 + verb",
+    "改到 + time",
+    "来不及"
+   ],
+   "count": 11,
+   "ids": [
+    "zh.phone.zai-lu-shang-le",
+    "zh.phone.ke-neng-chi-dao",
+    "zh.phone.hear-man-man-lai",
+    "zh.phone.gai-dao-ming-tian",
+    "zh.phone.lai-bu-ji-le",
+    "zh.phone.hear-dao-nar-le",
+    "zh.phone.ma-shang-dao",
+    "zh.phone.hear-ji-dian-fang-bian",
+    "zh.phone.san-dian-yi-hou-dou-xing",
+    "zh.phone.yi-hui-r-jian",
+    "zh.phone.de-qu-xiao"
+   ]
   }
  ],
  "items": [
@@ -2424,7 +2596,10 @@
     "zh.food.hear-qing-zuo",
     "zh.shopping.hear-zhao-nin-wu-kuai",
     "zh.city.hear-zai-xi-dan-huan",
-    "zh.talk.hear-kuai-jin-lai"
+    "zh.talk.hear-kuai-jin-lai",
+    "zh.talk.hear-sui-bian-zuo",
+    "zh.phone.hear-mi-ma-zai-qiang-shang",
+    "zh.phone.hear-man-man-lai"
    ],
    "tags": [
     "core"
@@ -3005,6 +3180,9 @@
    "ruby": "对[duì]。",
    "kana": "dui",
    "romaji": "Duì.",
+   "replyTo": [
+    "zh.talk.hear-shi-bu-shi-lao-shi"
+   ],
    "tags": [
     "core"
    ],
@@ -3986,7 +4164,8 @@
    "kana": "wo shi laoshi",
    "romaji": "Wǒ shì lǎoshī.",
    "replyTo": [
-    "zh.people.hear-zuo-shen-me-gong-zuo"
+    "zh.people.hear-zuo-shen-me-gong-zuo",
+    "zh.talk.hear-shi-bu-shi-lao-shi"
    ],
    "tags": [
     "core"
@@ -16613,6 +16792,9 @@
    "kana": "nali nali hai cha de yuan ne",
    "romaji": "Nǎlǐ nǎlǐ, hái chà de yuǎn ne.",
    "note": "哪里哪里 is the modest reply to praise; spoken ná li ná li.",
+   "replyTo": [
+    "zh.talk.hear-zhong-wen-zhen-hao"
+   ],
    "tags": [
     "core"
    ],
@@ -19099,6 +19281,1233 @@
    "lesson": "Z18-L03",
    "level": 3,
    "order": 890,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.hear-lai-zhong-guo-duo-jiu-le",
+   "cat": "talk",
+   "kind": "hear",
+   "en": "How long have you been in China?",
+   "ja": "你来中国多久了？",
+   "ruby": "你[nǐ]来[lái]中国[Zhōng guó]多久[duō jiǔ]了[le]？",
+   "kana": "ni lai zhongguo duojiu le",
+   "romaji": "Nǐ lái Zhōngguó duōjiǔ le?",
+   "replies": [
+    "zh.talk.kuai-yi-nian-le"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z19-L01",
+   "level": 3,
+   "order": 891,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.kuai-yi-nian-le",
+   "cat": "talk",
+   "kind": "say",
+   "en": "Almost a year.",
+   "ja": "快一年了。",
+   "ruby": "快[kuài]一[yì]年[nián]了[le]。",
+   "kana": "kuai yi nian le",
+   "romaji": "Kuài yì nián le.",
+   "replyTo": [
+    "zh.talk.hear-lai-zhong-guo-duo-jiu-le"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z19-L01",
+   "level": 3,
+   "order": 892,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.hear-xi-guan-le-ma",
+   "cat": "talk",
+   "kind": "hear",
+   "en": "Have you got used to life here?",
+   "ja": "你习惯这里的生活了吗？",
+   "ruby": "你[nǐ]习惯[xí guàn]这里[zhè lǐ]的[de]生活[shēng huó]了[le]吗[ma]？",
+   "kana": "ni xiguan zheli de shenghuo le ma",
+   "romaji": "Nǐ xíguàn zhèlǐ de shēnghuó le ma?",
+   "replies": [
+    "zh.talk.yi-jing-xi-guan-le",
+    "zh.talk.hai-bu-tai-xi-guan"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z19-L01",
+   "level": 3,
+   "order": 893,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.yi-jing-xi-guan-le",
+   "cat": "talk",
+   "kind": "say",
+   "en": "Yes, I'm used to it now.",
+   "ja": "已经习惯了。",
+   "ruby": "已经[yǐ jīng]习惯[xí guàn]了[le]。",
+   "kana": "yijing xiguan le",
+   "romaji": "Yǐjīng xíguàn le.",
+   "replyTo": [
+    "zh.talk.hear-xi-guan-le-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z19-L01",
+   "level": 3,
+   "order": 894,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.hai-bu-tai-xi-guan",
+   "cat": "talk",
+   "kind": "say",
+   "en": "Not quite yet, especially the food.",
+   "ja": "还不太习惯，特别是吃的。",
+   "ruby": "还[hái]不[bú]太[tài]习惯[xí guàn]，特别[tè bié]是[shì]吃[chī]的[de]。",
+   "kana": "hai bu tai xiguan tebie shi chi de",
+   "romaji": "Hái bú tài xíguàn, tèbié shì chī de.",
+   "replyTo": [
+    "zh.talk.hear-xi-guan-le-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z19-L01",
+   "level": 3,
+   "order": 895,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.hear-wei-shen-me-xue-zhong-wen",
+   "cat": "talk",
+   "kind": "hear",
+   "en": "Why are you learning Chinese?",
+   "ja": "你为什么学中文？",
+   "ruby": "你[nǐ]为什么[wèi shén me]学[xué]中文[Zhōng wén]？",
+   "kana": "ni weishenme xue zhongwen",
+   "romaji": "Nǐ wèishénme xué Zhōngwén?",
+   "replies": [
+    "zh.talk.dui-wen-hua-gan-xing-qu"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z19-L01",
+   "level": 3,
+   "order": 896,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.dui-wen-hua-gan-xing-qu",
+   "cat": "talk",
+   "kind": "say",
+   "en": "Because I'm very interested in Chinese culture.",
+   "ja": "因为我对中国文化很感兴趣。",
+   "ruby": "因为[yīn wèi]我[wǒ]对[duì]中国[Zhōng guó]文化[wén huà]很[hěn]感兴趣[gǎn xìng qù]。",
+   "kana": "yinwei wo dui zhongguo wenhua hen ganxingqu",
+   "romaji": "Yīnwèi wǒ duì Zhōngguó wénhuà hěn gǎnxìngqù.",
+   "replyTo": [
+    "zh.talk.hear-wei-shen-me-xue-zhong-wen"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z19-L01",
+   "level": 3,
+   "order": 897,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.hear-lao-jia-zai-nar",
+   "cat": "talk",
+   "kind": "hear",
+   "en": "Where are you from originally?",
+   "ja": "你老家在哪儿？",
+   "ruby": "你[nǐ]老家[lǎo jiā]在[zài]哪儿[nǎ r]？",
+   "kana": "ni laojia zai nar",
+   "romaji": "Nǐ lǎojiā zài nǎr?",
+   "note": "老家 = home town, where your family comes from.",
+   "replies": [
+    "zh.talk.lao-jia-zai-lun-dun"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z19-L01",
+   "level": 3,
+   "order": 898,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.lao-jia-zai-lun-dun",
+   "cat": "talk",
+   "kind": "say",
+   "en": "My home town is London.",
+   "ja": "我老家在伦敦。",
+   "ruby": "我[wǒ]老家[lǎo jiā]在[zài]伦敦[Lún dūn]。",
+   "kana": "wo laojia zai lundun",
+   "romaji": "Wǒ lǎojiā zài Lúndūn.",
+   "note": "3rd + 3rd tone: wó lǎojiā.",
+   "replyTo": [
+    "zh.talk.hear-lao-jia-zai-nar"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z19-L01",
+   "level": 3,
+   "order": 899,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.yi-qi-he-bei-ka-fei",
+   "cat": "talk",
+   "kind": "say",
+   "en": "Let's have a coffee together some time.",
+   "ja": "有空一起喝杯咖啡吧。",
+   "ruby": "有空[yǒu kòng]一起[yì qǐ]喝[hē]杯[bēi]咖啡[kā fēi]吧[ba]。",
+   "kana": "youkong yiqi he bei kafei ba",
+   "romaji": "Yǒukòng yìqǐ hē bēi kāfēi ba.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z19-L01",
+   "level": 3,
+   "order": 900,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.jia-ge-wei-xin",
+   "cat": "talk",
+   "kind": "say",
+   "en": "Let's add each other on WeChat.",
+   "ja": "我们加个微信吧。",
+   "ruby": "我们[wǒ men]加[jiā]个[ge]微信[Wēi xìn]吧[ba]。",
+   "kana": "women jia ge weixin ba",
+   "romaji": "Wǒmen jiā ge Wēixìn ba.",
+   "note": "加微信 = add someone on WeChat: the usual way to swap contacts.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z19-L01",
+   "level": 3,
+   "order": 901,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.hear-zhong-wen-zhen-hao",
+   "cat": "talk",
+   "kind": "hear",
+   "en": "Your Chinese is really good!",
+   "ja": "你的中文真好！",
+   "ruby": "你[nǐ]的[de]中文[Zhōng wén]真[zhēn]好[hǎo]！",
+   "kana": "ni de zhongwen zhen hao",
+   "romaji": "Nǐ de Zhōngwén zhēn hǎo!",
+   "replies": [
+    "zh.work.na-li-na-li",
+    "zh.talk.hai-zai-xue"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z19-L02",
+   "level": 3,
+   "order": 902,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.hai-zai-xue",
+   "cat": "talk",
+   "kind": "say",
+   "en": "Thank you, I'm still learning.",
+   "ja": "谢谢，我还在学。",
+   "ruby": "谢谢[xiè xie]，我[wǒ]还[hái]在[zài]学[xué]。",
+   "kana": "xiexie wo hai zai xue",
+   "romaji": "Xièxie, wǒ hái zài xué.",
+   "replyTo": [
+    "zh.talk.hear-zhong-wen-zhen-hao"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z19-L02",
+   "level": 3,
+   "order": 903,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.yi-fu-zhen-hao-kan",
+   "cat": "talk",
+   "kind": "say",
+   "en": "That's a really nice top.",
+   "ja": "你这件衣服真好看。",
+   "ruby": "你[nǐ]这[zhè]件[jiàn]衣服[yī fu]真[zhēn]好看[hǎo kàn]。",
+   "kana": "ni zhe jian yifu zhen haokan",
+   "romaji": "Nǐ zhè jiàn yīfu zhēn hǎokàn.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z19-L02",
+   "level": 3,
+   "order": 904,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.ma-fan-ni-le",
+   "cat": "talk",
+   "kind": "say",
+   "en": "Thanks for your trouble.",
+   "ja": "麻烦你了。",
+   "ruby": "麻烦[má fan]你[nǐ]了[le]。",
+   "kana": "mafan ni le",
+   "romaji": "Máfan nǐ le.",
+   "note": "Said when someone does something for you.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z19-L02",
+   "level": 3,
+   "order": 905,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.da-rao-yi-xia",
+   "cat": "talk",
+   "kind": "say",
+   "en": "Sorry to bother you.",
+   "ja": "不好意思，打扰一下。",
+   "ruby": "不好意思[bù hǎo yì si]，打扰[dǎ rǎo]一下[yí xià]。",
+   "kana": "buhaoyisi darao yixia",
+   "romaji": "Bùhǎoyìsi, dǎrǎo yíxià.",
+   "note": "3rd + 3rd tone: dá rǎo.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z19-L02",
+   "level": 3,
+   "order": 906,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.xin-ku-le",
+   "cat": "talk",
+   "kind": "say",
+   "en": "Thanks for all your hard work!",
+   "ja": "辛苦了！",
+   "ruby": "辛苦[xīn kǔ]了[le]！",
+   "kana": "xinku le",
+   "romaji": "Xīnkǔ le!",
+   "note": "Said to someone who has worked hard, often for you.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z19-L02",
+   "level": 3,
+   "order": 907,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.bie-ke-qi",
+   "cat": "talk",
+   "kind": "say",
+   "en": "Please, make yourself at home.",
+   "ja": "别客气！",
+   "ruby": "别[bié]客气[kè qi]！",
+   "kana": "bie keqi",
+   "romaji": "Bié kèqi!",
+   "note": "Said by a host; also a reply to thanks.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z19-L02",
+   "level": 3,
+   "order": 908,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.hear-sui-bian-zuo",
+   "cat": "talk",
+   "kind": "hear",
+   "en": "Sit wherever you like.",
+   "ja": "随便坐。",
+   "ruby": "随便[suí biàn]坐[zuò]。",
+   "kana": "suibian zuo",
+   "romaji": "Suíbiàn zuò.",
+   "replies": [
+    "zh.basics.xie-xie"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z19-L02",
+   "level": 3,
+   "order": 909,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.man-zou",
+   "cat": "talk",
+   "kind": "say",
+   "en": "Take care! (to a guest who is leaving)",
+   "ja": "慢走！",
+   "ruby": "慢走[màn zǒu]！",
+   "kana": "manzou",
+   "romaji": "Mànzǒu!",
+   "note": "Said by the host at the door.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z19-L02",
+   "level": 3,
+   "order": 910,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.xin-nian-kuai-le",
+   "cat": "talk",
+   "kind": "say",
+   "en": "Happy New Year!",
+   "ja": "新年快乐！",
+   "ruby": "新年[xīn nián]快乐[kuài lè]！",
+   "kana": "xinnian kuaile",
+   "romaji": "Xīnnián kuàilè!",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z19-L02",
+   "level": 3,
+   "order": 911,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.gong-xi",
+   "cat": "talk",
+   "kind": "say",
+   "en": "Congratulations!",
+   "ja": "恭喜！",
+   "ruby": "恭喜[gōng xǐ]！",
+   "kana": "gongxi",
+   "romaji": "Gōngxǐ!",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z19-L02",
+   "level": 3,
+   "order": 912,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.hear-shi-bu-shi-lao-shi",
+   "cat": "talk",
+   "kind": "hear",
+   "en": "You're a teacher, aren't you?",
+   "ja": "你是不是老师？",
+   "ruby": "你[nǐ]是不是[shì bu shì]老师[lǎo shī]？",
+   "kana": "ni shibushi laoshi",
+   "romaji": "Nǐ shìbushì lǎoshī?",
+   "note": "是不是 = isn't it? / is it or not?",
+   "replies": [
+    "zh.basics.dui",
+    "zh.people.wo-shi-lao-shi"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z19-L03",
+   "level": 3,
+   "order": 913,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.shi-ying-guo-ren-ba",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "You're British, right?",
+   "ja": "你是英国人吧？",
+   "ruby": "你[nǐ]是[shì]英国人[Yīng guó rén]吧[ba]？",
+   "kana": "ni shi yingguoren ba",
+   "romaji": "Nǐ shì Yīngguórén ba?",
+   "note": "……吧？ checks a guess.",
+   "pattern": "……吧？",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z19-L03",
+   "level": 3,
+   "order": 914,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.dui-le",
+   "cat": "talk",
+   "kind": "say",
+   "en": "Oh, by the way, are you free tomorrow?",
+   "ja": "对了，你明天有空吗？",
+   "ruby": "对了[duì le]，你[nǐ]明天[míng tiān]有[yǒu]空[kòng]吗[ma]？",
+   "kana": "duile ni mingtian you kong ma",
+   "romaji": "Duìle, nǐ míngtiān yǒu kòng ma?",
+   "note": "对了 = oh, by the way.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z19-L03",
+   "level": 3,
+   "order": 915,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.na-ge",
+   "cat": "talk",
+   "kind": "say",
+   "en": "Um ... let me think.",
+   "ja": "那个……我想一下。",
+   "ruby": "那个[nà ge]……我[wǒ]想[xiǎng]一下[yí xià]。",
+   "kana": "nage wo xiang yixia",
+   "romaji": "Nàge... wǒ xiǎng yíxià.",
+   "note": "那个 (often said nèige) is the most common filler, like \"um\".",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z19-L03",
+   "level": 3,
+   "order": 916,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.zhen-de-ma",
+   "cat": "talk",
+   "kind": "say",
+   "en": "Really?",
+   "ja": "真的吗？",
+   "ruby": "真的[zhēn de]吗[ma]？",
+   "kana": "zhende ma",
+   "romaji": "Zhēnde ma?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z19-L03",
+   "level": 3,
+   "order": 917,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.shi-ma",
+   "cat": "talk",
+   "kind": "say",
+   "en": "Is that so?",
+   "ja": "是吗？",
+   "ruby": "是[shì]吗[ma]？",
+   "kana": "shi ma",
+   "romaji": "Shì ma?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z19-L03",
+   "level": 3,
+   "order": 918,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.yuan-lai-shi-zhe-yang",
+   "cat": "talk",
+   "kind": "say",
+   "en": "Oh, I see!",
+   "ja": "原来是这样！",
+   "ruby": "原来[yuán lái]是[shì]这样[zhè yàng]！",
+   "kana": "yuanlai shi zheyang",
+   "romaji": "Yuánlái shì zhèyàng!",
+   "note": "原来 = so it turns out.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z19-L03",
+   "level": 3,
+   "order": 919,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.hear-zhou-mo-guo-de-zen-me-yang",
+   "cat": "talk",
+   "kind": "hear",
+   "en": "How was your weekend?",
+   "ja": "你周末过得怎么样？",
+   "ruby": "你[nǐ]周末[zhōu mò]过[guò]得[de]怎么样[zěn me yàng]？",
+   "kana": "ni zhoumo guo de zenmeyang",
+   "romaji": "Nǐ zhōumò guò de zěnmeyàng?",
+   "replies": [
+    "zh.talk.guo-de-hen-kai-xin"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z19-L03",
+   "level": 3,
+   "order": 920,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.guo-de-hen-kai-xin",
+   "cat": "talk",
+   "kind": "say",
+   "en": "I had a great time.",
+   "ja": "过得很开心。",
+   "ruby": "过[guò]得[de]很[hěn]开心[kāi xīn]。",
+   "kana": "guo de hen kaixin",
+   "romaji": "Guò de hěn kāixīn.",
+   "replyTo": [
+    "zh.talk.hear-zhou-mo-guo-de-zen-me-yang"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z19-L03",
+   "level": 3,
+   "order": 921,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.ye-jiu-shi-shuo",
+   "cat": "talk",
+   "kind": "say",
+   "en": "So you mean you're not coming?",
+   "ja": "也就是说，你不来了？",
+   "ruby": "也[yě]就是[jiù shì]说[shuō]，你[nǐ]不[bù]来[lái]了[le]？",
+   "kana": "ye jiushi shuo ni bu lai le",
+   "romaji": "Yě jiùshì shuō, nǐ bù lái le?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z19-L03",
+   "level": 3,
+   "order": 922,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.hao-xiang-yao-xia-yu",
+   "cat": "talk",
+   "kind": "say",
+   "en": "It looks like it's going to rain.",
+   "ja": "好像要下雨了。",
+   "ruby": "好像[hǎo xiàng]要[yào]下雨[xià yǔ]了[le]。",
+   "kana": "haoxiang yao xiayu le",
+   "romaji": "Hǎoxiàng yào xiàyǔ le.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z19-L03",
+   "level": 3,
+   "order": 923,
+   "src": "new"
+  },
+  {
+   "id": "zh.phone.wei-ni-hao",
+   "cat": "phone",
+   "kind": "say",
+   "en": "Hello? (on the phone)",
+   "ja": "喂，你好！",
+   "ruby": "喂[wéi]，你[nǐ]好[hǎo]！",
+   "kana": "wei ni hao",
+   "romaji": "Wéi, nǐ hǎo!",
+   "note": "喂 is wéi on the phone (wèi when calling out to someone).",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z20-L01",
+   "level": 3,
+   "order": 924,
+   "src": "new"
+  },
+  {
+   "id": "zh.phone.wang-xian-sheng-zai-ma",
+   "cat": "phone",
+   "kind": "say",
+   "en": "May I speak to Mr Wang, please?",
+   "ja": "请问，王先生在吗？",
+   "ruby": "请问[qǐng wèn]，王[Wáng]先生[xiān sheng]在[zài]吗[ma]？",
+   "kana": "qingwen wang xiansheng zai ma",
+   "romaji": "Qǐngwèn, Wáng xiānsheng zài ma?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z20-L01",
+   "level": 3,
+   "order": 925,
+   "src": "new"
+  },
+  {
+   "id": "zh.phone.hear-yao-liu-yan-ma",
+   "cat": "phone",
+   "kind": "hear",
+   "en": "He's not in right now; would you like to leave a message?",
+   "ja": "他现在不在，要留言吗？",
+   "ruby": "他[tā]现在[xiàn zài]不[bú]在[zài]，要[yào]留言[liú yán]吗[ma]？",
+   "kana": "ta xianzai bu zai yao liuyan ma",
+   "romaji": "Tā xiànzài bú zài, yào liúyán ma?",
+   "replies": [
+    "zh.phone.qing-ta-hui-dian-hua"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z20-L01",
+   "level": 3,
+   "order": 926,
+   "src": "new"
+  },
+  {
+   "id": "zh.phone.qing-ta-hui-dian-hua",
+   "cat": "phone",
+   "kind": "say",
+   "en": "Please ask him to call me back.",
+   "ja": "请他给我回个电话。",
+   "ruby": "请[qǐng]他[tā]给[gěi]我[wǒ]回[huí]个[ge]电话[diàn huà]。",
+   "kana": "qing ta gei wo hui ge dianhua",
+   "romaji": "Qǐng tā gěi wǒ huí ge diànhuà.",
+   "note": "给 + person + 打 / 回电话 = call someone (back).",
+   "replyTo": [
+    "zh.phone.hear-yao-liu-yan-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z20-L01",
+   "level": 3,
+   "order": 927,
+   "src": "new"
+  },
+  {
+   "id": "zh.phone.hear-nin-na-wei",
+   "cat": "phone",
+   "kind": "hear",
+   "en": "Who's calling, please?",
+   "ja": "您是哪位？",
+   "ruby": "您[nín]是[shì]哪[nǎ]位[wèi]？",
+   "kana": "nin shi na wei",
+   "romaji": "Nín shì nǎ wèi?",
+   "replies": [
+    "zh.phone.wo-shi-an-na"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z20-L01",
+   "level": 3,
+   "order": 928,
+   "src": "new"
+  },
+  {
+   "id": "zh.phone.wo-shi-an-na",
+   "cat": "phone",
+   "kind": "say",
+   "en": "This is Anna.",
+   "ja": "我是安娜。",
+   "ruby": "我[wǒ]是[shì]安娜[Ān nà]。",
+   "kana": "wo shi anna",
+   "romaji": "Wǒ shì Ānnà.",
+   "replyTo": [
+    "zh.phone.hear-nin-na-wei"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z20-L01",
+   "level": 3,
+   "order": 929,
+   "src": "new"
+  },
+  {
+   "id": "zh.phone.da-cuo-le",
+   "cat": "phone",
+   "kind": "say",
+   "en": "Sorry, you've got the wrong number.",
+   "ja": "对不起，你打错了。",
+   "ruby": "对不起[duì bu qǐ]，你[nǐ]打错[dǎ cuò]了[le]。",
+   "kana": "duibuqi ni dacuo le",
+   "romaji": "Duìbuqǐ, nǐ dǎcuò le.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z20-L01",
+   "level": 3,
+   "order": 930,
+   "src": "new"
+  },
+  {
+   "id": "zh.phone.ting-bu-qing-chu",
+   "cat": "phone",
+   "kind": "say",
+   "en": "The signal is bad; I can't hear you clearly.",
+   "ja": "信号不好，我听不清楚。",
+   "ruby": "信号[xìn hào]不[bù]好[hǎo]，我[wǒ]听[tīng]不[bu]清楚[qīng chu]。",
+   "kana": "xinhao bu hao wo ting bu qingchu",
+   "romaji": "Xìnhào bù hǎo, wǒ tīng bu qīngchu.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z20-L01",
+   "level": 3,
+   "order": 931,
+   "src": "new"
+  },
+  {
+   "id": "zh.phone.da-sheng-yi-dian",
+   "cat": "phone",
+   "kind": "say",
+   "en": "Could you speak up a bit?",
+   "ja": "你能大声一点儿吗？",
+   "ruby": "你[nǐ]能[néng]大声[dà shēng]一点儿[yì diǎn r]吗[ma]？",
+   "kana": "ni neng dasheng yidianr ma",
+   "romaji": "Nǐ néng dàshēng yìdiǎnr ma?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z20-L01",
+   "level": 3,
+   "order": 932,
+   "src": "new"
+  },
+  {
+   "id": "zh.phone.dai-hui-r-da-gei-ni",
+   "cat": "phone",
+   "kind": "say",
+   "en": "I'm a bit busy now; I'll call you in a bit.",
+   "ja": "我现在有点儿忙，待会儿打给你。",
+   "ruby": "我[wǒ]现在[xiàn zài]有点儿[yǒu diǎn r]忙[máng]，待会儿[dāi huì r]打[dǎ]给[gěi]你[nǐ]。",
+   "kana": "wo xianzai youdianr mang daihuir da gei ni",
+   "romaji": "Wǒ xiànzài yǒudiǎnr máng, dāihuìr dǎ gěi nǐ.",
+   "note": "待会儿 dāihuìr = in a moment (spoken).",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z20-L01",
+   "level": 3,
+   "order": 933,
+   "src": "new"
+  },
+  {
+   "id": "zh.phone.word-shou-ji-hao",
+   "cat": "phone",
+   "kind": "say",
+   "en": "mobile number",
+   "ja": "手机号",
+   "ruby": "手机号[shǒu jī hào]",
+   "kana": "shoujihao",
+   "romaji": "shǒujīhào",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z20-L01",
+   "level": 3,
+   "order": 934,
+   "src": "new"
+  },
+  {
+   "id": "zh.phone.dao-le-fa-wei-xin",
+   "cat": "phone",
+   "kind": "say",
+   "en": "Send me a WeChat message when you get there.",
+   "ja": "到了给我发个微信。",
+   "ruby": "到[dào]了[le]给[gěi]我[wǒ]发[fā]个[ge]微信[Wēi xìn]。",
+   "kana": "dao le gei wo fa ge weixin",
+   "romaji": "Dào le gěi wǒ fā ge Wēixìn.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z20-L02",
+   "level": 3,
+   "order": 935,
+   "src": "new"
+  },
+  {
+   "id": "zh.phone.fa-ge-ding-wei",
+   "cat": "phone",
+   "kind": "say",
+   "en": "I'll send you my location.",
+   "ja": "我给你发个定位。",
+   "ruby": "我[wǒ]给[gěi]你[nǐ]发[fā]个[ge]定位[dìng wèi]。",
+   "kana": "wo gei ni fa ge dingwei",
+   "romaji": "Wǒ gěi nǐ fā ge dìngwèi.",
+   "note": "定位 = location pin. Three 3rd tones: wó géi nǐ.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z20-L02",
+   "level": 3,
+   "order": 936,
+   "src": "new"
+  },
+  {
+   "id": "zh.phone.kuai-mei-dian-le",
+   "cat": "phone",
+   "kind": "say",
+   "en": "My phone is about to die.",
+   "ja": "我的手机快没电了。",
+   "ruby": "我[wǒ]的[de]手机[shǒu jī]快[kuài]没电[méi diàn]了[le]。",
+   "kana": "wo de shouji kuai meidian le",
+   "romaji": "Wǒ de shǒujī kuài méidiàn le.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z20-L02",
+   "level": 3,
+   "order": 937,
+   "src": "new"
+  },
+  {
+   "id": "zh.phone.you-chong-dian-qi-ma",
+   "cat": "phone",
+   "kind": "say",
+   "en": "Do you have a charger?",
+   "ja": "你有充电器吗？",
+   "ruby": "你[nǐ]有[yǒu]充电器[chōng diàn qì]吗[ma]？",
+   "kana": "ni you chongdianqi ma",
+   "romaji": "Nǐ yǒu chōngdiànqì ma?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z20-L02",
+   "level": 3,
+   "order": 938,
+   "src": "new"
+  },
+  {
+   "id": "zh.phone.wifi-mi-ma",
+   "cat": "phone",
+   "kind": "say",
+   "en": "What's the WiFi password?",
+   "ja": "WiFi密码是多少？",
+   "ruby": "{WiFi|WiFi}密码[mì mǎ]是[shì]多少[duō shao]？",
+   "kana": "wifi mima shi duoshao",
+   "romaji": "WiFi mìmǎ shì duōshao?",
+   "note": "People also say 无线网 for WiFi.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z20-L02",
+   "level": 3,
+   "order": 939,
+   "src": "new"
+  },
+  {
+   "id": "zh.phone.hear-mi-ma-zai-qiang-shang",
+   "cat": "phone",
+   "kind": "hear",
+   "en": "The password is on the wall.",
+   "ja": "密码在墙上。",
+   "ruby": "密码[mì mǎ]在[zài]墙[qiáng]上[shang]。",
+   "kana": "mima zai qiang shang",
+   "romaji": "Mìmǎ zài qiáng shang.",
+   "replies": [
+    "zh.basics.xie-xie"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z20-L02",
+   "level": 3,
+   "order": 940,
+   "src": "new"
+  },
+  {
+   "id": "zh.phone.mei-kan-dao-xiao-xi",
+   "cat": "phone",
+   "kind": "say",
+   "en": "Sorry, I didn't see your message just now.",
+   "ja": "不好意思，我刚才没看到消息。",
+   "ruby": "不好意思[bù hǎo yì si]，我[wǒ]刚才[gāng cái]没[méi]看到[kàn dào]消息[xiāo xi]。",
+   "kana": "buhaoyisi wo gangcai mei kandao xiaoxi",
+   "romaji": "Bùhǎoyìsi, wǒ gāngcái méi kàndào xiāoxi.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z20-L02",
+   "level": 3,
+   "order": 941,
+   "src": "new"
+  },
+  {
+   "id": "zh.phone.fa-yu-yin",
+   "cat": "phone",
+   "kind": "say",
+   "en": "I'll send you a voice message.",
+   "ja": "我给你发语音吧。",
+   "ruby": "我[wǒ]给[gěi]你[nǐ]发[fā]语音[yǔ yīn]吧[ba]。",
+   "kana": "wo gei ni fa yuyin ba",
+   "romaji": "Wǒ gěi nǐ fā yǔyīn ba.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z20-L02",
+   "level": 3,
+   "order": 942,
+   "src": "new"
+  },
+  {
+   "id": "zh.phone.sao-er-wei-ma",
+   "cat": "phone",
+   "kind": "say",
+   "en": "Scan my QR code.",
+   "ja": "你扫一下我的二维码。",
+   "ruby": "你[nǐ]扫[sǎo]一下[yí xià]我[wǒ]的[de]二维码[èr wéi mǎ]。",
+   "kana": "ni sao yixia wo de erweima",
+   "romaji": "Nǐ sǎo yíxià wǒ de èrwéimǎ.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z20-L02",
+   "level": 3,
+   "order": 943,
+   "src": "new"
+  },
+  {
+   "id": "zh.phone.word-shang-wang",
+   "cat": "phone",
+   "kind": "say",
+   "en": "go online",
+   "ja": "上网",
+   "ruby": "上网[shàng wǎng]",
+   "kana": "shangwang",
+   "romaji": "shàngwǎng",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z20-L02",
+   "level": 3,
+   "order": 944,
+   "src": "new"
+  },
+  {
+   "id": "zh.phone.word-ying-yong",
+   "cat": "phone",
+   "kind": "say",
+   "en": "app",
+   "ja": "应用",
+   "ruby": "应用[yìng yòng]",
+   "kana": "yingyong",
+   "romaji": "yìngyòng",
+   "note": "Also just \"App\".",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z20-L02",
+   "level": 3,
+   "order": 945,
+   "src": "new"
+  },
+  {
+   "id": "zh.phone.zai-lu-shang-le",
+   "cat": "phone",
+   "kind": "say",
+   "en": "I'm already on my way.",
+   "ja": "我已经在路上了。",
+   "ruby": "我[wǒ]已经[yǐ jīng]在[zài]路上[lù shang]了[le]。",
+   "kana": "wo yijing zai lushang le",
+   "romaji": "Wǒ yǐjīng zài lùshang le.",
+   "replyTo": [
+    "zh.phone.hear-dao-nar-le"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z20-L03",
+   "level": 3,
+   "order": 946,
+   "src": "new"
+  },
+  {
+   "id": "zh.phone.ke-neng-chi-dao",
+   "cat": "phone",
+   "kind": "say",
+   "en": "I might be ten minutes late.",
+   "ja": "我可能要迟到十分钟。",
+   "ruby": "我[wǒ]可能[kě néng]要[yào]迟到[chí dào]十[shí]分钟[fēn zhōng]。",
+   "kana": "wo keneng yao chidao shi fenzhong",
+   "romaji": "Wǒ kěnéng yào chídào shí fēnzhōng.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z20-L03",
+   "level": 3,
+   "order": 947,
+   "src": "new"
+  },
+  {
+   "id": "zh.phone.hear-man-man-lai",
+   "cat": "phone",
+   "kind": "hear",
+   "en": "No problem, take your time.",
+   "ja": "没关系，你慢慢来。",
+   "ruby": "没关系[méi guān xi]，你[nǐ]慢慢[màn màn]来[lái]。",
+   "kana": "meiguanxi ni manman lai",
+   "romaji": "Méiguānxi, nǐ mànmàn lái.",
+   "replies": [
+    "zh.basics.xie-xie"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z20-L03",
+   "level": 3,
+   "order": 948,
+   "src": "new"
+  },
+  {
+   "id": "zh.phone.gai-dao-ming-tian",
+   "cat": "phone",
+   "kind": "say",
+   "en": "Could we move it to tomorrow?",
+   "ja": "我们能改到明天吗？",
+   "ruby": "我们[wǒ men]能[néng]改[gǎi]到[dào]明天[míng tiān]吗[ma]？",
+   "kana": "women neng gai dao mingtian ma",
+   "romaji": "Wǒmen néng gǎi dào míngtiān ma?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z20-L03",
+   "level": 3,
+   "order": 949,
+   "src": "new"
+  },
+  {
+   "id": "zh.phone.lai-bu-ji-le",
+   "cat": "phone",
+   "kind": "say",
+   "en": "We won't make it; let's take a taxi.",
+   "ja": "来不及了，我们打车吧。",
+   "ruby": "来不及[lái bu jí]了[le]，我们[wǒ men]打车[dǎ chē]吧[ba]。",
+   "kana": "laibuji le women dache ba",
+   "romaji": "Láibují le, wǒmen dǎchē ba.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z20-L03",
+   "level": 3,
+   "order": 950,
+   "src": "new"
+  },
+  {
+   "id": "zh.phone.hear-dao-nar-le",
+   "cat": "phone",
+   "kind": "hear",
+   "en": "Where have you got to?",
+   "ja": "你到哪儿了？",
+   "ruby": "你[nǐ]到[dào]哪儿[nǎ r]了[le]？",
+   "kana": "ni dao nar le",
+   "romaji": "Nǐ dào nǎr le?",
+   "replies": [
+    "zh.phone.zai-lu-shang-le",
+    "zh.phone.ma-shang-dao"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z20-L03",
+   "level": 3,
+   "order": 951,
+   "src": "new"
+  },
+  {
+   "id": "zh.phone.ma-shang-dao",
+   "cat": "phone",
+   "kind": "say",
+   "en": "I'll be there in a minute!",
+   "ja": "马上到！",
+   "ruby": "马上[mǎ shàng]到[dào]！",
+   "kana": "mashang dao",
+   "romaji": "Mǎshàng dào!",
+   "replyTo": [
+    "zh.phone.hear-dao-nar-le"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z20-L03",
+   "level": 3,
+   "order": 952,
+   "src": "new"
+  },
+  {
+   "id": "zh.phone.hear-ji-dian-fang-bian",
+   "cat": "phone",
+   "kind": "hear",
+   "en": "What time suits you?",
+   "ja": "你几点方便？",
+   "ruby": "你[nǐ]几[jǐ]点[diǎn]方便[fāng biàn]？",
+   "kana": "ni ji dian fangbian",
+   "romaji": "Nǐ jǐ diǎn fāngbiàn?",
+   "replies": [
+    "zh.phone.san-dian-yi-hou-dou-xing"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z20-L03",
+   "level": 3,
+   "order": 953,
+   "src": "new"
+  },
+  {
+   "id": "zh.phone.san-dian-yi-hou-dou-xing",
+   "cat": "phone",
+   "kind": "say",
+   "en": "Any time after 3 p.m. is fine.",
+   "ja": "下午三点以后都行。",
+   "ruby": "下午[xià wǔ]三[sān]点[diǎn]以后[yǐ hòu]都[dōu]行[xíng]。",
+   "kana": "xiawu san dian yihou dou xing",
+   "romaji": "Xiàwǔ sān diǎn yǐhòu dōu xíng.",
+   "replyTo": [
+    "zh.phone.hear-ji-dian-fang-bian"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z20-L03",
+   "level": 3,
+   "order": 954,
+   "src": "new"
+  },
+  {
+   "id": "zh.phone.yi-hui-r-jian",
+   "cat": "phone",
+   "kind": "say",
+   "en": "OK, see you soon!",
+   "ja": "好，一会儿见！",
+   "ruby": "好[hǎo]，一会儿[yí huì r]见[jiàn]！",
+   "kana": "hao yihuir jian",
+   "romaji": "Hǎo, yíhuìr jiàn!",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z20-L03",
+   "level": 3,
+   "order": 955,
+   "src": "new"
+  },
+  {
+   "id": "zh.phone.de-qu-xiao",
+   "cat": "phone",
+   "kind": "say",
+   "en": "Sorry, I'll have to cancel today's meeting.",
+   "ja": "对不起，今天的见面我得取消了。",
+   "ruby": "对不起[duì bu qǐ]，今天[jīn tiān]的[de]见面[jiàn miàn]我[wǒ]得[děi]取消[qǔ xiāo]了[le]。",
+   "kana": "duibuqi jintian de jianmian wo dei quxiao le",
+   "romaji": "Duìbuqǐ, jīntiān de jiànmiàn wǒ děi qǔxiāo le.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z20-L03",
+   "level": 3,
+   "order": 956,
    "src": "new"
   }
  ]
