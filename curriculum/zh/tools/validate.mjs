@@ -209,7 +209,8 @@ if (existsSync(join(dataDir, 'hanzi.json'))) {
     const w = `[${it.id}]`;
     if (!/^zh\.h\.[a-z0-9\-]+$/.test(it.id)) E(`${w} bad id`);
     if (ids.has(it.id)) E(`${w} duplicate id`); ids.add(it.id);
-    if (chars.has(it.ja + it.group)) E(`${w} duplicate character ${it.ja}`); chars.add(it.ja + it.group);
+    const ckey = it.group === 'radical' ? 'r:' + it.ja : it.ja;
+    if (chars.has(ckey)) E(`${w} duplicate character ${it.ja}`); chars.add(ckey);
     if ([...it.ja].length !== 1) E(`${w} ja must be one character`);
     if (!groups.has(it.group)) E(`${w} unknown group ${it.group}`);
     for (const f of ['ja', 'ruby', 'kana', 'romaji', 'en']) if (!it[f]) E(`${w} empty ${f}`);
@@ -221,7 +222,7 @@ if (existsSync(join(dataDir, 'hanzi.json'))) {
     if (!it.ex || !it.ex.ja || !it.ex.en || !it.ex.romaji) E(`${w} missing example`);
     else {
       checkRuby(`${w} ex`, it.ex.ruby, it.ex.ja);
-      if (!it.ex.ja.includes(it.ja)) E(`${w} example word does not contain ${it.ja}`);
+      if (it.group !== 'radical' && !it.ex.ja.includes(it.ja)) E(`${w} example word does not contain ${it.ja}`);
     }
   }
   stats.hanzi = d.items.length;
