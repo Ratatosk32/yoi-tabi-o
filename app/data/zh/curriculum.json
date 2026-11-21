@@ -1428,6 +1428,245 @@
     "zh.daily.word-ran-hou",
     "zh.daily.word-hou-lai"
    ]
+  },
+  {
+   "code": "Z11-L01",
+   "unit": "Z11",
+   "title": "Asking the way",
+   "goal": "Ask for directions and follow left, right and straight on.",
+   "level": 2,
+   "path": "core",
+   "hsk": 2,
+   "patterns": [
+    "去……怎么走？",
+    "往 + direction + verb",
+    "一直往前走"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.city.qu-huo-che-zhan-zen-me-zou",
+    "zh.city.hear-yi-zhi-wang-qian-zou",
+    "zh.patterns.wang-zuo-guai",
+    "zh.city.hear-wang-you-guai",
+    "zh.city.zhi-dao-le-xie-xie",
+    "zh.city.zai-lu-de-you-bian",
+    "zh.city.word-zuo-bian",
+    "zh.city.word-you-bian",
+    "zh.city.word-lu-kou",
+    "zh.city.word-guo-ma-lu",
+    "zh.city.hai-yao-zou-duo-jiu",
+    "zh.city.wo-mi-lu-le",
+    "zh.city.zai-di-tu-shang-zhi"
+   ]
+  },
+  {
+   "code": "Z11-L02",
+   "unit": "Z11",
+   "title": "North, south, upstairs",
+   "goal": "Compass points, from A to B, floors and entrances.",
+   "level": 2,
+   "path": "core",
+   "hsk": 2,
+   "patterns": [
+    "东 / 南 / 西 / 北",
+    "从 A 到 B",
+    "从……来"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.city.dong-nan-xi-bei",
+    "zh.city.bei-jing-zai-bei-bian",
+    "zh.patterns.cong-zher-dao-di-tie-zhan",
+    "zh.city.hear-cong-nar-lai",
+    "zh.city.cong-gong-si-lai",
+    "zh.city.zai-dong-men-jian",
+    "zh.city.chu-kou-zai-nar",
+    "zh.city.word-ru-kou",
+    "zh.city.word-lou",
+    "zh.city.zai-er-lou",
+    "zh.city.hear-ting-che-chang-zai-di-xia",
+    "zh.city.word-dian-ti",
+    "zh.city.word-lou-ti"
+   ]
+  },
+  {
+   "code": "Z11-L03",
+   "unit": "Z11",
+   "title": "Bank, post, hotel",
+   "goal": "Get things done at a bank, a post office and a hotel.",
+   "level": 2,
+   "path": "core",
+   "hsk": 2,
+   "patterns": [
+    "去 + place + verb",
+    "带 + thing"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.city.qu-yin-hang-qu-qian",
+    "zh.patterns.qu-you-ju-ji-dong-xi",
+    "zh.city.hear-ban-shen-me-ye-wu",
+    "zh.city.huan-qian",
+    "zh.city.hear-dai-hu-zhao-le-ma",
+    "zh.city.dai-le-gei-nin",
+    "zh.city.qu-kuan-ji",
+    "zh.city.word-jing-cha-ju",
+    "zh.city.word-yao-dian",
+    "zh.city.word-bin-guan",
+    "zh.city.hear-zhu-ji-tian",
+    "zh.city.zhu-san-tian",
+    "zh.city.ji-cun-xing-li"
+   ]
+  },
+  {
+   "code": "Z11-L04",
+   "unit": "Z11",
+   "title": "Sights and rules",
+   "goal": "Tickets, photos, what is and is not allowed.",
+   "level": 2,
+   "path": "core",
+   "hsk": 2,
+   "patterns": [
+    "可以……吗？ (permission)",
+    "不能 + verb",
+    "帮 + person + verb"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.city.ke-yi-pai-zhao-ma",
+    "zh.city.hear-bu-ke-yi",
+    "zh.patterns.bu-neng-ting-che",
+    "zh.city.men-piao-duo-shao-qian",
+    "zh.city.hear-xue-sheng-ban-jia",
+    "zh.city.xue-sheng-zheng",
+    "zh.city.bo-wu-guan-ji-dian-guan-men",
+    "zh.city.bang-wo-men-pai-zhao",
+    "zh.city.hear-qie-zi",
+    "zh.city.word-jing-dian",
+    "zh.city.word-dao-you",
+    "zh.city.zhi-de-qu",
+    "zh.city.ren-tai-duo-le"
+   ]
+  },
+  {
+   "code": "Z12-L01",
+   "unit": "Z12",
+   "title": "Metro and bus",
+   "goal": "Find the line, change trains, get off at the right stop.",
+   "level": 2,
+   "path": "core",
+   "hsk": 2,
+   "patterns": [
+    "坐 + vehicle + 去",
+    "在……换",
+    "在……下车"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.patterns.zuo-di-tie-qu",
+    "zh.city.zuo-ji-hao-xian",
+    "zh.city.hear-yi-hao-xian",
+    "zh.city.yao-huan-che-ma",
+    "zh.city.hear-zai-xi-dan-huan",
+    "zh.city.zai-na-zhan-xia-che",
+    "zh.city.hear-xia-yi-zhan",
+    "zh.city.hear-shang-che-shua-ka",
+    "zh.city.zhe-lu-che-qu-ma",
+    "zh.city.word-gong-jiao-che",
+    "zh.city.word-zhan",
+    "zh.city.word-chu-zu-che",
+    "zh.city.word-gao-tie"
+   ]
+  },
+  {
+   "code": "Z12-L02",
+   "unit": "Z12",
+   "title": "Taxis and ride-hailing",
+   "goal": "Give the address, ask to stop, pay the driver.",
+   "level": 2,
+   "path": "core",
+   "hsk": 2,
+   "patterns": [
+    "到 + place",
+    "在这儿停",
+    "verb + 快一点儿"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.city.da-che-qu-ji-chang",
+    "zh.city.hear-qu-nar",
+    "zh.city.dao-zhe-ge-di-zhi",
+    "zh.city.kai-kuai-yi-dian",
+    "zh.city.jiu-zai-zher-ting",
+    "zh.city.hear-dao-le-yi-gong",
+    "zh.city.dao-ji-chang-duo-chang-shi-jian",
+    "zh.city.hear-du-che",
+    "zh.city.kai-kong-tiao",
+    "zh.city.jiao-le-yi-liang-che",
+    "zh.city.hear-wei-hao",
+    "zh.city.wei-hao",
+    "zh.city.word-xing-li-xiang"
+   ]
+  },
+  {
+   "code": "Z12-L03",
+   "unit": "Z12",
+   "title": "Trains and planes",
+   "goal": "Buy a ticket, find your seat, follow announcements.",
+   "level": 3,
+   "path": "core",
+   "hsk": 2,
+   "patterns": [
+    "去 + place + 的票",
+    "几点的",
+    "最 + adjective"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.city.mai-qu-shang-hai-de-piao",
+    "zh.city.hear-ji-dian-de",
+    "zh.city.zui-zao-de",
+    "zh.city.er-deng-zuo",
+    "zh.city.hear-chu-shi-hu-zhao",
+    "zh.city.huo-che-ji-dian-kai",
+    "zh.city.fei-ji-wan-dian-le",
+    "zh.city.hear-deng-ji-kou",
+    "zh.city.zuo-wei-zai-nar",
+    "zh.city.huan-yi-xia-zuo-wei",
+    "zh.city.word-hu-zhao",
+    "zh.city.word-hang-ban",
+    "zh.city.word-wang-fan"
+   ]
+  },
+  {
+   "code": "Z12-L04",
+   "unit": "Z12",
+   "title": "Have you ever ...? 过",
+   "goal": "Talk about experiences with 过.",
+   "level": 3,
+   "path": "core",
+   "hsk": 2,
+   "patterns": [
+    "verb + 过",
+    "没 + verb + 过",
+    "从来没 + verb + 过"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.patterns.qu-guo-bei-jing",
+    "zh.city.hear-qu-guo-shang-hai-ma",
+    "zh.city.qu-guo-liang-ci",
+    "zh.patterns.mei-qu-guo",
+    "zh.food.hear-chi-guo-kao-ya-ma",
+    "zh.food.chi-guo-fei-chang-hao-chi",
+    "zh.city.zuo-guo-gao-tie",
+    "zh.city.mei-jian-guo-xue",
+    "zh.city.xi-huan-lv-you",
+    "zh.city.hear-qu-guo-na-xie-di-fang",
+    "zh.city.qu-guo-xi-an-cheng-du",
+    "zh.city.yi-lu-ping-an",
+    "zh.city.word-di-tu"
+   ]
   }
  ],
  "items": [
@@ -1585,7 +1824,8 @@
    "replyTo": [
     "zh.city.hear-qian-mian-you-yi-ge",
     "zh.food.hear-qing-zuo",
-    "zh.shopping.hear-zhao-nin-wu-kuai"
+    "zh.shopping.hear-zhao-nin-wu-kuai",
+    "zh.city.hear-zai-xi-dan-huan"
    ],
    "tags": [
     "core"
@@ -1641,6 +1881,9 @@
    "kana": "mei guanxi",
    "romaji": "Méi guānxi.",
    "note": "The usual answer to 对不起.",
+   "replyTo": [
+    "zh.city.hear-du-che"
+   ],
    "tags": [
     "core"
    ],
@@ -10166,7 +10409,8 @@
    "kana": "yong weixin",
    "romaji": "Yòng Wēixìn.",
    "replyTo": [
-    "zh.shopping.hear-zen-me-fu"
+    "zh.shopping.hear-zen-me-fu",
+    "zh.city.hear-dao-le-yi-gong"
    ],
    "tags": [
     "core"
@@ -10186,7 +10430,8 @@
    "kana": "wo fu xianjin",
    "romaji": "Wǒ fù xiànjīn.",
    "replyTo": [
-    "zh.shopping.hear-zen-me-fu"
+    "zh.shopping.hear-zen-me-fu",
+    "zh.city.hear-dao-le-yi-gong"
    ],
    "tags": [
     "core"
@@ -11626,6 +11871,1938 @@
    "lesson": "Z10-L04",
    "level": 2,
    "order": 535,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.qu-huo-che-zhan-zen-me-zou",
+   "cat": "city",
+   "kind": "say",
+   "en": "Excuse me, how do I get to the railway station?",
+   "ja": "请问，去火车站怎么走？",
+   "ruby": "请问[qǐng wèn]，去[qù]火车站[huǒ chē zhàn]怎么[zěn me]走[zǒu]？",
+   "kana": "qingwen qu huochezhan zenme zou",
+   "romaji": "Qǐngwèn, qù huǒchēzhàn zěnme zǒu?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L01",
+   "level": 2,
+   "order": 536,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.hear-yi-zhi-wang-qian-zou",
+   "cat": "city",
+   "kind": "hear",
+   "en": "Go straight ahead.",
+   "ja": "一直往前走。",
+   "ruby": "一直[yì zhí]往[wǎng]前[qián]走[zǒu]。",
+   "kana": "yizhi wang qian zou",
+   "romaji": "Yìzhí wǎng qián zǒu.",
+   "replies": [
+    "zh.city.hai-yao-zou-duo-jiu",
+    "zh.city.zhi-dao-le-xie-xie"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L01",
+   "level": 2,
+   "order": 537,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.wang-zuo-guai",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "Turn left at the traffic lights.",
+   "ja": "到了红绿灯往左拐。",
+   "ruby": "到[dào]了[le]红绿灯[hóng lǜ dēng]往[wǎng]左[zuǒ]拐[guǎi]。",
+   "kana": "dao le honglvdeng wang zuo guai",
+   "romaji": "Dào le hónglǜdēng wǎng zuǒ guǎi.",
+   "note": "往 = towards. Three 3rd tones: wáng zuó guǎi.",
+   "pattern": "往 + direction + verb",
+   "tags": [
+    "core",
+    "sandhi"
+   ],
+   "lesson": "Z11-L01",
+   "level": 2,
+   "order": 538,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.hear-wang-you-guai",
+   "cat": "city",
+   "kind": "hear",
+   "en": "Turn right at the second crossing.",
+   "ja": "在第二个路口往右拐。",
+   "ruby": "在[zài]第二[dì èr]个[ge]路口[lù kǒu]往[wǎng]右[yòu]拐[guǎi]。",
+   "kana": "zai dier ge lukou wang you guai",
+   "romaji": "Zài dì'èr ge lùkǒu wǎng yòu guǎi.",
+   "replies": [
+    "zh.city.zhi-dao-le-xie-xie"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L01",
+   "level": 2,
+   "order": 539,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.zhi-dao-le-xie-xie",
+   "cat": "city",
+   "kind": "say",
+   "en": "Got it, thanks!",
+   "ja": "知道了，谢谢！",
+   "ruby": "知道[zhī dào]了[le]，谢谢[xiè xie]！",
+   "kana": "zhidao le xiexie",
+   "romaji": "Zhīdào le, xièxie!",
+   "replyTo": [
+    "zh.city.hear-yi-zhi-wang-qian-zou",
+    "zh.city.hear-wang-you-guai"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L01",
+   "level": 2,
+   "order": 540,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.zai-lu-de-you-bian",
+   "cat": "city",
+   "kind": "say",
+   "en": "The supermarket is on the right side of the road.",
+   "ja": "超市在路的右边。",
+   "ruby": "超市[chāo shì]在[zài]路[lù]的[de]右边[yòu bian]。",
+   "kana": "chaoshi zai lu de youbian",
+   "romaji": "Chāoshì zài lù de yòubian.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L01",
+   "level": 2,
+   "order": 541,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.word-zuo-bian",
+   "cat": "city",
+   "kind": "say",
+   "en": "the left",
+   "ja": "左边",
+   "ruby": "左边[zuǒ bian]",
+   "kana": "zuobian",
+   "romaji": "zuǒbian",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z11-L01",
+   "level": 2,
+   "order": 542,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.word-you-bian",
+   "cat": "city",
+   "kind": "say",
+   "en": "the right",
+   "ja": "右边",
+   "ruby": "右边[yòu bian]",
+   "kana": "youbian",
+   "romaji": "yòubian",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z11-L01",
+   "level": 2,
+   "order": 543,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.word-lu-kou",
+   "cat": "city",
+   "kind": "say",
+   "en": "crossing, intersection",
+   "ja": "路口",
+   "ruby": "路口[lù kǒu]",
+   "kana": "lukou",
+   "romaji": "lùkǒu",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z11-L01",
+   "level": 2,
+   "order": 544,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.word-guo-ma-lu",
+   "cat": "city",
+   "kind": "say",
+   "en": "cross the road",
+   "ja": "过马路",
+   "ruby": "过[guò]马路[mǎ lù]",
+   "kana": "guo malu",
+   "romaji": "guò mǎlù",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z11-L01",
+   "level": 2,
+   "order": 545,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.hai-yao-zou-duo-jiu",
+   "cat": "city",
+   "kind": "say",
+   "en": "How much further is it?",
+   "ja": "还要走多久？",
+   "ruby": "还[hái]要[yào]走[zǒu]多久[duō jiǔ]？",
+   "kana": "hai yao zou duojiu",
+   "romaji": "Hái yào zǒu duōjiǔ?",
+   "replyTo": [
+    "zh.city.hear-yi-zhi-wang-qian-zou"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L01",
+   "level": 2,
+   "order": 546,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.wo-mi-lu-le",
+   "cat": "city",
+   "kind": "say",
+   "en": "I'm lost.",
+   "ja": "我迷路了。",
+   "ruby": "我[wǒ]迷路[mí lù]了[le]。",
+   "kana": "wo milu le",
+   "romaji": "Wǒ mílù le.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L01",
+   "level": 2,
+   "order": 547,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.zai-di-tu-shang-zhi",
+   "cat": "city",
+   "kind": "say",
+   "en": "Could you show me on the map?",
+   "ja": "你能在地图上指一下吗？",
+   "ruby": "你[nǐ]能[néng]在[zài]地图[dì tú]上[shang]指[zhǐ]一下[yí xià]吗[ma]？",
+   "kana": "ni neng zai ditu shang zhi yixia ma",
+   "romaji": "Nǐ néng zài dìtú shang zhǐ yíxià ma?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L01",
+   "level": 2,
+   "order": 548,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.dong-nan-xi-bei",
+   "cat": "city",
+   "kind": "say",
+   "en": "east, south, west, north",
+   "ja": "东、南、西、北",
+   "ruby": "东[dōng]、南[nán]、西[xī]、北[běi]",
+   "kana": "dong nan xi bei",
+   "romaji": "dōng, nán, xī, běi",
+   "note": "The usual order; south-east is 东南 (east first).",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L02",
+   "level": 2,
+   "order": 549,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.bei-jing-zai-bei-bian",
+   "cat": "city",
+   "kind": "say",
+   "en": "Beijing is in the north of China.",
+   "ja": "北京在中国的北边。",
+   "ruby": "北京[Běi jīng]在[zài]中国[Zhōng guó]的[de]北边[běi biān]。",
+   "kana": "beijing zai zhongguo de beibian",
+   "romaji": "Běijīng zài Zhōngguó de běibiān.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L02",
+   "level": 2,
+   "order": 550,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.cong-zher-dao-di-tie-zhan",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "It takes ten minutes from here to the metro station.",
+   "ja": "从这儿到地铁站要十分钟。",
+   "ruby": "从[cóng]这儿[zhè r]到[dào]地铁站[dì tiě zhàn]要[yào]十[shí]分钟[fēn zhōng]。",
+   "kana": "cong zher dao ditiezhan yao shi fenzhong",
+   "romaji": "Cóng zhèr dào dìtiězhàn yào shí fēnzhōng.",
+   "note": "从 A 到 B = from A to B.",
+   "pattern": "从 A 到 B",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L02",
+   "level": 2,
+   "order": 551,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.hear-cong-nar-lai",
+   "cat": "city",
+   "kind": "hear",
+   "en": "Where are you coming from?",
+   "ja": "你从哪儿来？",
+   "ruby": "你[nǐ]从[cóng]哪儿[nǎ r]来[lái]？",
+   "kana": "ni cong nar lai",
+   "romaji": "Nǐ cóng nǎr lái?",
+   "replies": [
+    "zh.city.cong-gong-si-lai"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L02",
+   "level": 2,
+   "order": 552,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.cong-gong-si-lai",
+   "cat": "city",
+   "kind": "say",
+   "en": "I'm coming from the office.",
+   "ja": "我从公司来。",
+   "ruby": "我[wǒ]从[cóng]公司[gōng sī]来[lái]。",
+   "kana": "wo cong gongsi lai",
+   "romaji": "Wǒ cóng gōngsī lái.",
+   "replyTo": [
+    "zh.city.hear-cong-nar-lai"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L02",
+   "level": 2,
+   "order": 553,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.zai-dong-men-jian",
+   "cat": "city",
+   "kind": "say",
+   "en": "Let's meet at the east gate.",
+   "ja": "我们在东门见。",
+   "ruby": "我们[wǒ men]在[zài]东门[dōng mén]见[jiàn]。",
+   "kana": "women zai dongmen jian",
+   "romaji": "Wǒmen zài dōngmén jiàn.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L02",
+   "level": 2,
+   "order": 554,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.chu-kou-zai-nar",
+   "cat": "city",
+   "kind": "say",
+   "en": "Where is the exit?",
+   "ja": "出口在哪儿？",
+   "ruby": "出口[chū kǒu]在[zài]哪儿[nǎ r]？",
+   "kana": "chukou zai nar",
+   "romaji": "Chūkǒu zài nǎr?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L02",
+   "level": 2,
+   "order": 555,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.word-ru-kou",
+   "cat": "city",
+   "kind": "say",
+   "en": "entrance",
+   "ja": "入口",
+   "ruby": "入口[rù kǒu]",
+   "kana": "rukou",
+   "romaji": "rùkǒu",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z11-L02",
+   "level": 2,
+   "order": 556,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.word-lou",
+   "cat": "city",
+   "kind": "say",
+   "en": "building; floor",
+   "ja": "楼",
+   "ruby": "楼[lóu]",
+   "kana": "lou",
+   "romaji": "lóu",
+   "note": "一楼 = the ground floor, 二楼 = one floor up.",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z11-L02",
+   "level": 2,
+   "order": 557,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.zai-er-lou",
+   "cat": "city",
+   "kind": "say",
+   "en": "The toilets are one floor up.",
+   "ja": "洗手间在二楼。",
+   "ruby": "洗手间[xǐ shǒu jiān]在[zài]二[èr]楼[lóu]。",
+   "kana": "xishoujian zai er lou",
+   "romaji": "Xǐshǒujiān zài èr lóu.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L02",
+   "level": 2,
+   "order": 558,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.hear-ting-che-chang-zai-di-xia",
+   "cat": "city",
+   "kind": "hear",
+   "en": "The car park is underground.",
+   "ja": "停车场在地下。",
+   "ruby": "停车场[tíng chē chǎng]在[zài]地下[dì xià]。",
+   "kana": "tingchechang zai dixia",
+   "romaji": "Tíngchēchǎng zài dìxià.",
+   "note": "Just listen: no reply needed.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L02",
+   "level": 2,
+   "order": 559,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.word-dian-ti",
+   "cat": "city",
+   "kind": "say",
+   "en": "lift, elevator",
+   "ja": "电梯",
+   "ruby": "电梯[diàn tī]",
+   "kana": "dianti",
+   "romaji": "diàntī",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z11-L02",
+   "level": 2,
+   "order": 560,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.word-lou-ti",
+   "cat": "city",
+   "kind": "say",
+   "en": "stairs",
+   "ja": "楼梯",
+   "ruby": "楼梯[lóu tī]",
+   "kana": "louti",
+   "romaji": "lóutī",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z11-L02",
+   "level": 2,
+   "order": 561,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.qu-yin-hang-qu-qian",
+   "cat": "city",
+   "kind": "say",
+   "en": "I need to go to the bank to get money.",
+   "ja": "我要去银行取钱。",
+   "ruby": "我[wǒ]要[yào]去[qù]银行[yín háng]取[qǔ]钱[qián]。",
+   "kana": "wo yao qu yinhang qu qian",
+   "romaji": "Wǒ yào qù yínháng qǔ qián.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L03",
+   "level": 2,
+   "order": 562,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.qu-you-ju-ji-dong-xi",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "I'm going to the post office to send something.",
+   "ja": "我去邮局寄东西。",
+   "ruby": "我[wǒ]去[qù]邮局[yóu jú]寄[jì]东西[dōng xi]。",
+   "kana": "wo qu youju ji dongxi",
+   "romaji": "Wǒ qù yóujú jì dōngxi.",
+   "note": "Go to a place to do something: 去 + place + verb.",
+   "pattern": "去 + place + verb",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L03",
+   "level": 2,
+   "order": 563,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.hear-ban-shen-me-ye-wu",
+   "cat": "city",
+   "kind": "hear",
+   "en": "What can I do for you? (at a counter)",
+   "ja": "您办什么业务？",
+   "ruby": "您[nín]办[bàn]什么[shén me]业务[yè wù]？",
+   "kana": "nin ban shenme yewu",
+   "romaji": "Nín bàn shénme yèwù?",
+   "replies": [
+    "zh.city.huan-qian"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L03",
+   "level": 2,
+   "order": 564,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.huan-qian",
+   "cat": "city",
+   "kind": "say",
+   "en": "I'd like to change money.",
+   "ja": "我想换钱。",
+   "ruby": "我[wǒ]想[xiǎng]换[huàn]钱[qián]。",
+   "kana": "wo xiang huan qian",
+   "romaji": "Wǒ xiǎng huàn qián.",
+   "replyTo": [
+    "zh.city.hear-ban-shen-me-ye-wu"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L03",
+   "level": 2,
+   "order": 565,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.hear-dai-hu-zhao-le-ma",
+   "cat": "city",
+   "kind": "hear",
+   "en": "Did you bring your passport?",
+   "ja": "您带护照了吗？",
+   "ruby": "您[nín]带[dài]护照[hù zhào]了[le]吗[ma]？",
+   "kana": "nin dai huzhao le ma",
+   "romaji": "Nín dài hùzhào le ma?",
+   "replies": [
+    "zh.city.dai-le-gei-nin"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L03",
+   "level": 2,
+   "order": 566,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.dai-le-gei-nin",
+   "cat": "city",
+   "kind": "say",
+   "en": "Yes, here you are.",
+   "ja": "带了，给您。",
+   "ruby": "带[dài]了[le]，给[gěi]您[nín]。",
+   "kana": "dai le gei nin",
+   "romaji": "Dài le, gěi nín.",
+   "replyTo": [
+    "zh.city.hear-dai-hu-zhao-le-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L03",
+   "level": 2,
+   "order": 567,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.qu-kuan-ji",
+   "cat": "city",
+   "kind": "say",
+   "en": "Is there a cash machine near here?",
+   "ja": "这儿附近有取款机吗？",
+   "ruby": "这儿[zhè r]附近[fù jìn]有[yǒu]取款机[qǔ kuǎn jī]吗[ma]？",
+   "kana": "zher fujin you qukuanji ma",
+   "romaji": "Zhèr fùjìn yǒu qǔkuǎnjī ma?",
+   "note": "3rd + 3rd tone: qú kuǎn.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L03",
+   "level": 2,
+   "order": 568,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.word-jing-cha-ju",
+   "cat": "city",
+   "kind": "say",
+   "en": "police station",
+   "ja": "警察局",
+   "ruby": "警察局[jǐng chá jú]",
+   "kana": "jingchaju",
+   "romaji": "jǐngchájú",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z11-L03",
+   "level": 2,
+   "order": 569,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.word-yao-dian",
+   "cat": "city",
+   "kind": "say",
+   "en": "pharmacy",
+   "ja": "药店",
+   "ruby": "药店[yào diàn]",
+   "kana": "yaodian",
+   "romaji": "yàodiàn",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z11-L03",
+   "level": 2,
+   "order": 570,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.word-bin-guan",
+   "cat": "city",
+   "kind": "say",
+   "en": "hotel",
+   "ja": "宾馆",
+   "ruby": "宾馆[bīn guǎn]",
+   "kana": "binguan",
+   "romaji": "bīnguǎn",
+   "note": "Also 酒店 jiǔdiàn.",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z11-L03",
+   "level": 2,
+   "order": 571,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.hear-zhu-ji-tian",
+   "cat": "city",
+   "kind": "hear",
+   "en": "How many nights are you staying?",
+   "ja": "您住几天？",
+   "ruby": "您[nín]住[zhù]几[jǐ]天[tiān]？",
+   "kana": "nin zhu ji tian",
+   "romaji": "Nín zhù jǐ tiān?",
+   "replies": [
+    "zh.city.zhu-san-tian"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L03",
+   "level": 2,
+   "order": 572,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.zhu-san-tian",
+   "cat": "city",
+   "kind": "say",
+   "en": "Three nights.",
+   "ja": "住三天。",
+   "ruby": "住[zhù]三[sān]天[tiān]。",
+   "kana": "zhu san tian",
+   "romaji": "Zhù sān tiān.",
+   "replyTo": [
+    "zh.city.hear-zhu-ji-tian"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L03",
+   "level": 2,
+   "order": 573,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.ji-cun-xing-li",
+   "cat": "city",
+   "kind": "say",
+   "en": "Can I leave my luggage here?",
+   "ja": "可以寄存行李吗？",
+   "ruby": "可以[kě yǐ]寄存[jì cún]行李[xíng li]吗[ma]？",
+   "kana": "keyi jicun xingli ma",
+   "romaji": "Kěyǐ jìcún xíngli ma?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L03",
+   "level": 2,
+   "order": 574,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.ke-yi-pai-zhao-ma",
+   "cat": "city",
+   "kind": "say",
+   "en": "Can I take photos here?",
+   "ja": "这儿可以拍照吗？",
+   "ruby": "这儿[zhè r]可以[kě yǐ]拍照[pāi zhào]吗[ma]？",
+   "kana": "zher keyi paizhao ma",
+   "romaji": "Zhèr kěyǐ pāizhào ma?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L04",
+   "level": 2,
+   "order": 575,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.hear-bu-ke-yi",
+   "cat": "city",
+   "kind": "hear",
+   "en": "Sorry, no photos here.",
+   "ja": "对不起，这里不可以拍照。",
+   "ruby": "对不起[duì bu qǐ]，这里[zhè lǐ]不[bù]可以[kě yǐ]拍照[pāi zhào]。",
+   "kana": "duibuqi zheli bu keyi paizhao",
+   "romaji": "Duìbuqǐ, zhèlǐ bù kěyǐ pāizhào.",
+   "note": "No reply needed: just put the camera away.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L04",
+   "level": 2,
+   "order": 576,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.bu-neng-ting-che",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "You can't park here.",
+   "ja": "这里不能停车。",
+   "ruby": "这里[zhè lǐ]不能[bù néng]停车[tíng chē]。",
+   "kana": "zheli buneng tingche",
+   "romaji": "Zhèlǐ bùnéng tíngchē.",
+   "note": "不能 + verb = not allowed (or not possible).",
+   "pattern": "不能 + verb",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L04",
+   "level": 2,
+   "order": 577,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.men-piao-duo-shao-qian",
+   "cat": "city",
+   "kind": "say",
+   "en": "How much is the entrance ticket?",
+   "ja": "门票多少钱？",
+   "ruby": "门票[mén piào]多少[duō shao]钱[qián]？",
+   "kana": "menpiao duoshao qian",
+   "romaji": "Ménpiào duōshao qián?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L04",
+   "level": 2,
+   "order": 578,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.hear-xue-sheng-ban-jia",
+   "cat": "city",
+   "kind": "hear",
+   "en": "Half price for students.",
+   "ja": "学生半价。",
+   "ruby": "学生[xué sheng]半价[bàn jià]。",
+   "kana": "xuesheng banjia",
+   "romaji": "Xuésheng bànjià.",
+   "replies": [
+    "zh.city.xue-sheng-zheng"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L04",
+   "level": 2,
+   "order": 579,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.xue-sheng-zheng",
+   "cat": "city",
+   "kind": "say",
+   "en": "Here's my student card.",
+   "ja": "这是我的学生证。",
+   "ruby": "这[zhè]是[shì]我[wǒ]的[de]学生证[xué sheng zhèng]。",
+   "kana": "zhe shi wo de xueshengzheng",
+   "romaji": "Zhè shì wǒ de xuéshengzhèng.",
+   "replyTo": [
+    "zh.city.hear-xue-sheng-ban-jia"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L04",
+   "level": 2,
+   "order": 580,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.bo-wu-guan-ji-dian-guan-men",
+   "cat": "city",
+   "kind": "say",
+   "en": "What time does the museum close?",
+   "ja": "博物馆几点关门？",
+   "ruby": "博物馆[bó wù guǎn]几[jǐ]点[diǎn]关门[guān mén]？",
+   "kana": "bowuguan ji dian guanmen",
+   "romaji": "Bówùguǎn jǐ diǎn guānmén?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L04",
+   "level": 2,
+   "order": 581,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.bang-wo-men-pai-zhao",
+   "cat": "city",
+   "kind": "say",
+   "en": "Could you take a photo of us?",
+   "ja": "能帮我们拍张照片吗？",
+   "ruby": "能[néng]帮[bāng]我们[wǒ men]拍[pāi]张[zhāng]照片[zhào piàn]吗[ma]？",
+   "kana": "neng bang women pai zhang zhaopian ma",
+   "romaji": "Néng bāng wǒmen pāi zhāng zhàopiàn ma?",
+   "note": "帮 + person + verb = do something for someone.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L04",
+   "level": 2,
+   "order": 582,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.hear-qie-zi",
+   "cat": "city",
+   "kind": "hear",
+   "en": "One, two, three, say cheese!",
+   "ja": "一、二、三，茄子！",
+   "ruby": "一[yī]、二[èr]、三[sān]，茄子[qié zi]！",
+   "kana": "yi er san qiezi",
+   "romaji": "Yī, èr, sān, qiézi!",
+   "note": "No reply needed: 茄子 (aubergine) is the Chinese \"cheese\" for photos.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L04",
+   "level": 2,
+   "order": 583,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.word-jing-dian",
+   "cat": "city",
+   "kind": "say",
+   "en": "tourist sight",
+   "ja": "景点",
+   "ruby": "景点[jǐng diǎn]",
+   "kana": "jingdian",
+   "romaji": "jǐngdiǎn",
+   "note": "3rd + 3rd tone: jíng diǎn.",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z11-L04",
+   "level": 2,
+   "order": 584,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.word-dao-you",
+   "cat": "city",
+   "kind": "say",
+   "en": "tour guide",
+   "ja": "导游",
+   "ruby": "导游[dǎo yóu]",
+   "kana": "daoyou",
+   "romaji": "dǎoyóu",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z11-L04",
+   "level": 2,
+   "order": 585,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.zhi-de-qu",
+   "cat": "city",
+   "kind": "say",
+   "en": "This place is worth a visit.",
+   "ja": "这个地方很值得去。",
+   "ruby": "这个[zhè ge]地方[dì fang]很[hěn]值得[zhí de]去[qù]。",
+   "kana": "zhege difang hen zhide qu",
+   "romaji": "Zhège dìfang hěn zhíde qù.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L04",
+   "level": 2,
+   "order": 586,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.ren-tai-duo-le",
+   "cat": "city",
+   "kind": "say",
+   "en": "There are far too many people!",
+   "ja": "人太多了！",
+   "ruby": "人[rén]太[tài]多[duō]了[le]！",
+   "kana": "ren tai duo le",
+   "romaji": "Rén tài duō le!",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z11-L04",
+   "level": 2,
+   "order": 587,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.zuo-di-tie-qu",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "Let's take the metro.",
+   "ja": "我们坐地铁去吧。",
+   "ruby": "我们[wǒ men]坐[zuò]地铁[dì tiě]去[qù]吧[ba]。",
+   "kana": "women zuo ditie qu ba",
+   "romaji": "Wǒmen zuò dìtiě qù ba.",
+   "note": "坐 + vehicle = go by it (literally \"sit\").",
+   "pattern": "坐 + vehicle + 去",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L01",
+   "level": 2,
+   "order": 588,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.zuo-ji-hao-xian",
+   "cat": "city",
+   "kind": "say",
+   "en": "Which line goes to Tian'anmen?",
+   "ja": "去天安门坐几号线？",
+   "ruby": "去[qù]天安门[Tiān ān mén]坐[zuò]几[jǐ]号[hào]线[xiàn]？",
+   "kana": "qu tiananmen zuo ji hao xian",
+   "romaji": "Qù Tiān'ānmén zuò jǐ hào xiàn?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L01",
+   "level": 2,
+   "order": 589,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.hear-yi-hao-xian",
+   "cat": "city",
+   "kind": "hear",
+   "en": "Take Line 1.",
+   "ja": "坐一号线。",
+   "ruby": "坐[zuò]一[yī]号[hào]线[xiàn]。",
+   "kana": "zuo yi hao xian",
+   "romaji": "Zuò yī hào xiàn.",
+   "note": "In numbers and names 一 keeps yī.",
+   "replies": [
+    "zh.city.yao-huan-che-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L01",
+   "level": 2,
+   "order": 590,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.yao-huan-che-ma",
+   "cat": "city",
+   "kind": "say",
+   "en": "Do I need to change?",
+   "ja": "要换车吗？",
+   "ruby": "要[yào]换车[huàn chē]吗[ma]？",
+   "kana": "yao huanche ma",
+   "romaji": "Yào huànchē ma?",
+   "replyTo": [
+    "zh.city.hear-yi-hao-xian"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L01",
+   "level": 2,
+   "order": 591,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.hear-zai-xi-dan-huan",
+   "cat": "city",
+   "kind": "hear",
+   "en": "Change to Line 4 at Xidan.",
+   "ja": "在西单换四号线。",
+   "ruby": "在[zài]西单[Xī dān]换[huàn]四[sì]号[hào]线[xiàn]。",
+   "kana": "zai xidan huan si hao xian",
+   "romaji": "Zài Xīdān huàn sì hào xiàn.",
+   "replies": [
+    "zh.basics.xie-xie"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L01",
+   "level": 2,
+   "order": 592,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.zai-na-zhan-xia-che",
+   "cat": "city",
+   "kind": "say",
+   "en": "Which stop should I get off at?",
+   "ja": "我应该在哪站下车？",
+   "ruby": "我[wǒ]应该[yīng gāi]在[zài]哪[nǎ]站[zhàn]下车[xià chē]？",
+   "kana": "wo yinggai zai na zhan xiache",
+   "romaji": "Wǒ yīnggāi zài nǎ zhàn xiàchē?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L01",
+   "level": 2,
+   "order": 593,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.hear-xia-yi-zhan",
+   "cat": "city",
+   "kind": "hear",
+   "en": "Next stop: People's Square.",
+   "ja": "下一站，人民广场。",
+   "ruby": "下[xià]一[yí]站[zhàn]，人民[Rén mín]广场[Guǎng chǎng]。",
+   "kana": "xia yi zhan renmin guangchang",
+   "romaji": "Xià yí zhàn, Rénmín Guǎngchǎng.",
+   "note": "Just listen: no reply needed.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L01",
+   "level": 2,
+   "order": 594,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.hear-shang-che-shua-ka",
+   "cat": "city",
+   "kind": "hear",
+   "en": "Please tap your card as you get on.",
+   "ja": "上车请刷卡。",
+   "ruby": "上车[shàng chē]请[qǐng]刷卡[shuā kǎ]。",
+   "kana": "shangche qing shuaka",
+   "romaji": "Shàngchē qǐng shuākǎ.",
+   "note": "Just listen: no reply needed.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L01",
+   "level": 2,
+   "order": 595,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.zhe-lu-che-qu-ma",
+   "cat": "city",
+   "kind": "say",
+   "en": "Does this bus go to the railway station?",
+   "ja": "这路车去火车站吗？",
+   "ruby": "这[zhè]路[lù]车[chē]去[qù]火车站[huǒ chē zhàn]吗[ma]？",
+   "kana": "zhe lu che qu huochezhan ma",
+   "romaji": "Zhè lù chē qù huǒchēzhàn ma?",
+   "note": "路 = bus route: 三路车 = the number 3 bus.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L01",
+   "level": 2,
+   "order": 596,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.word-gong-jiao-che",
+   "cat": "city",
+   "kind": "say",
+   "en": "city bus",
+   "ja": "公交车",
+   "ruby": "公交车[gōng jiāo chē]",
+   "kana": "gongjiaoche",
+   "romaji": "gōngjiāochē",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z12-L01",
+   "level": 2,
+   "order": 597,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.word-zhan",
+   "cat": "city",
+   "kind": "say",
+   "en": "stop, station",
+   "ja": "站",
+   "ruby": "站[zhàn]",
+   "kana": "zhan",
+   "romaji": "zhàn",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z12-L01",
+   "level": 2,
+   "order": 598,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.word-chu-zu-che",
+   "cat": "city",
+   "kind": "say",
+   "en": "taxi",
+   "ja": "出租车",
+   "ruby": "出租车[chū zū chē]",
+   "kana": "chuzuche",
+   "romaji": "chūzūchē",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z12-L01",
+   "level": 2,
+   "order": 599,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.word-gao-tie",
+   "cat": "city",
+   "kind": "say",
+   "en": "high-speed train",
+   "ja": "高铁",
+   "ruby": "高铁[gāo tiě]",
+   "kana": "gaotie",
+   "romaji": "gāotiě",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z12-L01",
+   "level": 2,
+   "order": 600,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.da-che-qu-ji-chang",
+   "cat": "city",
+   "kind": "say",
+   "en": "I'll take a taxi to the airport.",
+   "ja": "我打车去机场。",
+   "ruby": "我[wǒ]打车[dǎ chē]去[qù]机场[jī chǎng]。",
+   "kana": "wo dache qu jichang",
+   "romaji": "Wǒ dǎchē qù jīchǎng.",
+   "note": "3rd + 3rd tone: wó dǎ.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L02",
+   "level": 2,
+   "order": 601,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.hear-qu-nar",
+   "cat": "city",
+   "kind": "hear",
+   "en": "Where to?",
+   "ja": "去哪儿？",
+   "ruby": "去[qù]哪儿[nǎ r]？",
+   "kana": "qu nar",
+   "romaji": "Qù nǎr?",
+   "replies": [
+    "zh.city.dao-zhe-ge-di-zhi"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L02",
+   "level": 2,
+   "order": 602,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.dao-zhe-ge-di-zhi",
+   "cat": "city",
+   "kind": "say",
+   "en": "To this address, please.",
+   "ja": "师傅，到这个地址。",
+   "ruby": "师傅[shī fu]，到[dào]这个[zhè ge]地址[dì zhǐ]。",
+   "kana": "shifu dao zhege dizhi",
+   "romaji": "Shīfu, dào zhège dìzhǐ.",
+   "note": "师傅 = the polite way to address a driver or a skilled worker.",
+   "replyTo": [
+    "zh.city.hear-qu-nar"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L02",
+   "level": 2,
+   "order": 603,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.kai-kuai-yi-dian",
+   "cat": "city",
+   "kind": "say",
+   "en": "Please drive a bit faster; I have a flight to catch.",
+   "ja": "请开快一点儿，我要赶飞机。",
+   "ruby": "请[qǐng]开[kāi]快[kuài]一点儿[yì diǎn r]，我[wǒ]要[yào]赶[gǎn]飞机[fēi jī]。",
+   "kana": "qing kai kuai yidianr wo yao gan feiji",
+   "romaji": "Qǐng kāi kuài yìdiǎnr, wǒ yào gǎn fēijī.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L02",
+   "level": 2,
+   "order": 604,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.jiu-zai-zher-ting",
+   "cat": "city",
+   "kind": "say",
+   "en": "Stop right here, please.",
+   "ja": "就在这儿停吧。",
+   "ruby": "就[jiù]在[zài]这儿[zhè r]停[tíng]吧[ba]。",
+   "kana": "jiu zai zher ting ba",
+   "romaji": "Jiù zài zhèr tíng ba.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L02",
+   "level": 2,
+   "order": 605,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.hear-dao-le-yi-gong",
+   "cat": "city",
+   "kind": "hear",
+   "en": "Here we are; that's 42 yuan.",
+   "ja": "到了，一共四十二块。",
+   "ruby": "到[dào]了[le]，一共[yí gòng]四十二[sì shí èr]块[kuài]。",
+   "kana": "dao le yigong sishier kuai",
+   "romaji": "Dào le, yígòng sìshí'èr kuài.",
+   "replies": [
+    "zh.shopping.yong-wei-xin",
+    "zh.shopping.fu-xian-jin"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L02",
+   "level": 2,
+   "order": 606,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.dao-ji-chang-duo-chang-shi-jian",
+   "cat": "city",
+   "kind": "say",
+   "en": "How long does it take to the airport?",
+   "ja": "到机场要多长时间？",
+   "ruby": "到[dào]机场[jī chǎng]要[yào]多[duō]长[cháng]时间[shí jiān]？",
+   "kana": "dao jichang yao duo chang shijian",
+   "romaji": "Dào jīchǎng yào duō cháng shíjiān?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L02",
+   "level": 2,
+   "order": 607,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.hear-du-che",
+   "cat": "city",
+   "kind": "hear",
+   "en": "There's a traffic jam; it will take an hour.",
+   "ja": "现在堵车，要一个小时。",
+   "ruby": "现在[xiàn zài]堵车[dǔ chē]，要[yào]一[yí]个[ge]小时[xiǎo shí]。",
+   "kana": "xianzai duche yao yi ge xiaoshi",
+   "romaji": "Xiànzài dǔchē, yào yí ge xiǎoshí.",
+   "replies": [
+    "zh.basics.mei-guan-xi"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L02",
+   "level": 2,
+   "order": 608,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.kai-kong-tiao",
+   "cat": "city",
+   "kind": "say",
+   "en": "Could you turn on the air conditioning?",
+   "ja": "可以开空调吗？",
+   "ruby": "可以[kě yǐ]开[kāi]空调[kōng tiáo]吗[ma]？",
+   "kana": "keyi kai kongtiao ma",
+   "romaji": "Kěyǐ kāi kōngtiáo ma?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L02",
+   "level": 2,
+   "order": 609,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.jiao-le-yi-liang-che",
+   "cat": "city",
+   "kind": "say",
+   "en": "I've ordered a car.",
+   "ja": "我叫了一辆车。",
+   "ruby": "我[wǒ]叫[jiào]了[le]一[yí]辆[liàng]车[chē]。",
+   "kana": "wo jiao le yi liang che",
+   "romaji": "Wǒ jiào le yí liàng chē.",
+   "note": "For ride-hailing apps; 叫车 = call a car.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L02",
+   "level": 2,
+   "order": 610,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.hear-wei-hao",
+   "cat": "city",
+   "kind": "hear",
+   "en": "What are the last digits of your phone number?",
+   "ja": "你的手机尾号是多少？",
+   "ruby": "你[nǐ]的[de]手机[shǒu jī]尾号[wěi hào]是[shì]多少[duō shao]？",
+   "kana": "ni de shouji weihao shi duoshao",
+   "romaji": "Nǐ de shǒujī wěihào shì duōshao?",
+   "note": "Ride-hailing drivers check the last four digits.",
+   "replies": [
+    "zh.city.wei-hao"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L02",
+   "level": 2,
+   "order": 611,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.wei-hao",
+   "cat": "city",
+   "kind": "say",
+   "en": "8866.",
+   "ja": "8866。",
+   "ruby": "{8866|bā bā liù liù}。",
+   "kana": "ba ba liu liu",
+   "romaji": "Bā bā liù liù.",
+   "tts": "八八六六。",
+   "replyTo": [
+    "zh.city.hear-wei-hao"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L02",
+   "level": 2,
+   "order": 612,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.word-xing-li-xiang",
+   "cat": "city",
+   "kind": "say",
+   "en": "suitcase",
+   "ja": "行李箱",
+   "ruby": "行李箱[xíng li xiāng]",
+   "kana": "xinglixiang",
+   "romaji": "xínglixiāng",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z12-L02",
+   "level": 2,
+   "order": 613,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.mai-qu-shang-hai-de-piao",
+   "cat": "city",
+   "kind": "say",
+   "en": "I'd like a ticket to Shanghai.",
+   "ja": "我想买一张去上海的票。",
+   "ruby": "我[wǒ]想[xiǎng]买[mǎi]一[yì]张[zhāng]去[qù]上海[Shàng hǎi]的[de]票[piào]。",
+   "kana": "wo xiang mai yi zhang qu shanghai de piao",
+   "romaji": "Wǒ xiǎng mǎi yì zhāng qù Shànghǎi de piào.",
+   "note": "Three 3rd tones: usually spoken wó xiáng mǎi.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L03",
+   "level": 3,
+   "order": 614,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.hear-ji-dian-de",
+   "cat": "city",
+   "kind": "hear",
+   "en": "What time would you like?",
+   "ja": "您要几点的？",
+   "ruby": "您[nín]要[yào]几[jǐ]点[diǎn]的[de]？",
+   "kana": "nin yao ji dian de",
+   "romaji": "Nín yào jǐ diǎn de?",
+   "replies": [
+    "zh.city.zui-zao-de"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L03",
+   "level": 3,
+   "order": 615,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.zui-zao-de",
+   "cat": "city",
+   "kind": "say",
+   "en": "The earliest one.",
+   "ja": "最早的那班。",
+   "ruby": "最[zuì]早[zǎo]的[de]那[nà]班[bān]。",
+   "kana": "zui zao de na ban",
+   "romaji": "Zuì zǎo de nà bān.",
+   "note": "最 + adjective = the most ...; 班 is the measure word for scheduled trains, buses and flights.",
+   "replyTo": [
+    "zh.city.hear-ji-dian-de"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L03",
+   "level": 3,
+   "order": 616,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.er-deng-zuo",
+   "cat": "city",
+   "kind": "say",
+   "en": "Second class is fine.",
+   "ja": "二等座就行。",
+   "ruby": "二等座[èr děng zuò]就[jiù]行[xíng]。",
+   "kana": "erdengzuo jiu xing",
+   "romaji": "Èrděngzuò jiù xíng.",
+   "note": "就行 = will do.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L03",
+   "level": 3,
+   "order": 617,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.hear-chu-shi-hu-zhao",
+   "cat": "city",
+   "kind": "hear",
+   "en": "Please show your passport.",
+   "ja": "请出示护照。",
+   "ruby": "请[qǐng]出示[chū shì]护照[hù zhào]。",
+   "kana": "qing chushi huzhao",
+   "romaji": "Qǐng chūshì hùzhào.",
+   "note": "Just listen: no reply needed.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L03",
+   "level": 3,
+   "order": 618,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.huo-che-ji-dian-kai",
+   "cat": "city",
+   "kind": "say",
+   "en": "What time does the train leave?",
+   "ja": "火车几点开？",
+   "ruby": "火车[huǒ chē]几[jǐ]点[diǎn]开[kāi]？",
+   "kana": "huoche ji dian kai",
+   "romaji": "Huǒchē jǐ diǎn kāi?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L03",
+   "level": 3,
+   "order": 619,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.fei-ji-wan-dian-le",
+   "cat": "city",
+   "kind": "say",
+   "en": "The plane is delayed.",
+   "ja": "飞机晚点了。",
+   "ruby": "飞机[fēi jī]晚点[wǎn diǎn]了[le]。",
+   "kana": "feiji wandian le",
+   "romaji": "Fēijī wǎndiǎn le.",
+   "note": "3rd + 3rd tone: wán diǎn.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L03",
+   "level": 3,
+   "order": 620,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.hear-deng-ji-kou",
+   "cat": "city",
+   "kind": "hear",
+   "en": "Please board at gate 15.",
+   "ja": "请到十五号登机口登机。",
+   "ruby": "请[qǐng]到[dào]十五[shí wǔ]号[hào]登机口[dēng jī kǒu]登机[dēng jī]。",
+   "kana": "qing dao shiwu hao dengjikou dengji",
+   "romaji": "Qǐng dào shíwǔ hào dēngjīkǒu dēngjī.",
+   "note": "Just listen: no reply needed.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L03",
+   "level": 3,
+   "order": 621,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.zuo-wei-zai-nar",
+   "cat": "city",
+   "kind": "say",
+   "en": "Where is my seat?",
+   "ja": "我的座位在哪儿？",
+   "ruby": "我[wǒ]的[de]座位[zuò wèi]在[zài]哪儿[nǎ r]？",
+   "kana": "wo de zuowei zai nar",
+   "romaji": "Wǒ de zuòwèi zài nǎr?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L03",
+   "level": 3,
+   "order": 622,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.huan-yi-xia-zuo-wei",
+   "cat": "city",
+   "kind": "say",
+   "en": "Could we swap seats?",
+   "ja": "我们可以换一下座位吗？",
+   "ruby": "我们[wǒ men]可以[kě yǐ]换[huàn]一下[yí xià]座位[zuò wèi]吗[ma]？",
+   "kana": "women keyi huan yixia zuowei ma",
+   "romaji": "Wǒmen kěyǐ huàn yíxià zuòwèi ma?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L03",
+   "level": 3,
+   "order": 623,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.word-hu-zhao",
+   "cat": "city",
+   "kind": "say",
+   "en": "passport",
+   "ja": "护照",
+   "ruby": "护照[hù zhào]",
+   "kana": "huzhao",
+   "romaji": "hùzhào",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z12-L03",
+   "level": 3,
+   "order": 624,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.word-hang-ban",
+   "cat": "city",
+   "kind": "say",
+   "en": "flight",
+   "ja": "航班",
+   "ruby": "航班[háng bān]",
+   "kana": "hangban",
+   "romaji": "hángbān",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z12-L03",
+   "level": 3,
+   "order": 625,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.word-wang-fan",
+   "cat": "city",
+   "kind": "say",
+   "en": "return (trip, ticket)",
+   "ja": "往返",
+   "ruby": "往返[wǎng fǎn]",
+   "kana": "wangfan",
+   "romaji": "wǎngfǎn",
+   "note": "3rd + 3rd tone: wáng fǎn. One way = 单程.",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z12-L03",
+   "level": 3,
+   "order": 626,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.qu-guo-bei-jing",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "I've been to Beijing.",
+   "ja": "我去过北京。",
+   "ruby": "我[wǒ]去过[qù guo]北京[Běi jīng]。",
+   "kana": "wo quguo beijing",
+   "romaji": "Wǒ qùguo Běijīng.",
+   "note": "过 after a verb = have done it at some time.",
+   "pattern": "verb + 过",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L04",
+   "level": 3,
+   "order": 627,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.hear-qu-guo-shang-hai-ma",
+   "cat": "city",
+   "kind": "hear",
+   "en": "Have you been to Shanghai?",
+   "ja": "你去过上海吗？",
+   "ruby": "你[nǐ]去过[qù guo]上海[Shàng hǎi]吗[ma]？",
+   "kana": "ni quguo shanghai ma",
+   "romaji": "Nǐ qùguo Shànghǎi ma?",
+   "replies": [
+    "zh.city.qu-guo-liang-ci",
+    "zh.patterns.mei-qu-guo"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L04",
+   "level": 3,
+   "order": 628,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.qu-guo-liang-ci",
+   "cat": "city",
+   "kind": "say",
+   "en": "Twice.",
+   "ja": "去过两次。",
+   "ruby": "去过[qù guo]两[liǎng]次[cì]。",
+   "kana": "quguo liang ci",
+   "romaji": "Qùguo liǎng cì.",
+   "replyTo": [
+    "zh.city.hear-qu-guo-shang-hai-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L04",
+   "level": 3,
+   "order": 629,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.mei-qu-guo",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "I haven't been yet.",
+   "ja": "我还没去过。",
+   "ruby": "我[wǒ]还[hái]没[méi]去过[qù guo]。",
+   "kana": "wo hai mei quguo",
+   "romaji": "Wǒ hái méi qùguo.",
+   "note": "没 + verb + 过 = have never done it (so far).",
+   "pattern": "没 + verb + 过",
+   "replyTo": [
+    "zh.city.hear-qu-guo-shang-hai-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L04",
+   "level": 3,
+   "order": 630,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.hear-chi-guo-kao-ya-ma",
+   "cat": "food",
+   "kind": "hear",
+   "en": "Have you ever had Peking duck?",
+   "ja": "你吃过北京烤鸭吗？",
+   "ruby": "你[nǐ]吃过[chī guo]北京[Běi jīng]烤鸭[kǎo yā]吗[ma]？",
+   "kana": "ni chiguo beijing kaoya ma",
+   "romaji": "Nǐ chīguo Běijīng kǎoyā ma?",
+   "replies": [
+    "zh.food.chi-guo-fei-chang-hao-chi"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L04",
+   "level": 3,
+   "order": 631,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.chi-guo-fei-chang-hao-chi",
+   "cat": "food",
+   "kind": "say",
+   "en": "Yes, it's really delicious.",
+   "ja": "吃过，非常好吃。",
+   "ruby": "吃过[chī guo]，非常[fēi cháng]好吃[hǎo chī]。",
+   "kana": "chiguo feichang haochi",
+   "romaji": "Chīguo, fēicháng hǎochī.",
+   "replyTo": [
+    "zh.food.hear-chi-guo-kao-ya-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L04",
+   "level": 3,
+   "order": 632,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.zuo-guo-gao-tie",
+   "cat": "city",
+   "kind": "say",
+   "en": "I've taken the high-speed train: fast and comfortable.",
+   "ja": "我坐过高铁，又快又舒服。",
+   "ruby": "我[wǒ]坐过[zuò guo]高铁[gāo tiě]，又[yòu]快[kuài]又[yòu]舒服[shū fu]。",
+   "kana": "wo zuoguo gaotie you kuai you shufu",
+   "romaji": "Wǒ zuòguo gāotiě, yòu kuài yòu shūfu.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L04",
+   "level": 3,
+   "order": 633,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.mei-jian-guo-xue",
+   "cat": "city",
+   "kind": "say",
+   "en": "I've never seen snow.",
+   "ja": "我从来没见过雪。",
+   "ruby": "我[wǒ]从来[cóng lái]没[méi]见过[jiàn guo]雪[xuě]。",
+   "kana": "wo conglai mei jianguo xue",
+   "romaji": "Wǒ cónglái méi jiànguo xuě.",
+   "note": "从来没 + verb + 过 = never ever.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L04",
+   "level": 3,
+   "order": 634,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.xi-huan-lv-you",
+   "cat": "city",
+   "kind": "say",
+   "en": "I love travelling.",
+   "ja": "我很喜欢旅游。",
+   "ruby": "我[wǒ]很[hěn]喜欢[xǐ huan]旅游[lǚ yóu]。",
+   "kana": "wo hen xihuan lvyou",
+   "romaji": "Wǒ hěn xǐhuan lǚyóu.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L04",
+   "level": 3,
+   "order": 635,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.hear-qu-guo-na-xie-di-fang",
+   "cat": "city",
+   "kind": "hear",
+   "en": "Which places have you been to?",
+   "ja": "你去过哪些地方？",
+   "ruby": "你[nǐ]去过[qù guo]哪些[nǎ xiē]地方[dì fang]？",
+   "kana": "ni quguo naxie difang",
+   "romaji": "Nǐ qùguo nǎxiē dìfang?",
+   "replies": [
+    "zh.city.qu-guo-xi-an-cheng-du"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L04",
+   "level": 3,
+   "order": 636,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.qu-guo-xi-an-cheng-du",
+   "cat": "city",
+   "kind": "say",
+   "en": "I've been to Xi'an and Chengdu.",
+   "ja": "我去过西安和成都。",
+   "ruby": "我[wǒ]去过[qù guo]西安[Xī ān]和[hé]成都[Chéng dū]。",
+   "kana": "wo quguo xian he chengdu",
+   "romaji": "Wǒ qùguo Xī'ān hé Chéngdū.",
+   "note": "Xī'ān: the apostrophe keeps it from reading as xiān.",
+   "replyTo": [
+    "zh.city.hear-qu-guo-na-xie-di-fang"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L04",
+   "level": 3,
+   "order": 637,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.yi-lu-ping-an",
+   "cat": "city",
+   "kind": "say",
+   "en": "Have a safe trip!",
+   "ja": "一路平安！",
+   "ruby": "一路[yí lù]平安[píng ān]！",
+   "kana": "yilu pingan",
+   "romaji": "Yílù píng'ān!",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z12-L04",
+   "level": 3,
+   "order": 638,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.word-di-tu",
+   "cat": "city",
+   "kind": "say",
+   "en": "map",
+   "ja": "地图",
+   "ruby": "地图[dì tú]",
+   "kana": "ditu",
+   "romaji": "dìtú",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z12-L04",
+   "level": 3,
+   "order": 639,
    "src": "new"
   }
  ]
