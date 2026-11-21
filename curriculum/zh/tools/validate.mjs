@@ -15,7 +15,7 @@ const load = (f) => JSON.parse(readFileSync(join(dataDir, f), 'utf8'));
 const cedictText = findCedict(root);
 const CEDICT = cedictText ? loadCedict(cedictText) : null;
 if (!CEDICT) W('CC-CEDICT not found (dictionary/zh/raw/cedict or $CEDICT_DIR): reading checks skipped');
-const REVIEWED = new Set(['后面 hòu miàn']);
+const REVIEWED = new Set(['后面 hòu miàn', '那边 nà biān']);
 const NEUTRAL_OK = new Set([...'个们子么的了吗呢吧着过得地啊呀哪啦上下里来去起开头候道儿么西气思服友生']);
 
 function units(ruby) {
@@ -70,7 +70,8 @@ function readingCheck(w, chars, syls) {
     const r = es.map((e) => sylMatch(syls[i], e, ch));
     if (r.includes('ok')) return;
     if (r.includes('soft')) {
-      if (!NEUTRAL_OK.has(ch) || verbose) W(`${w} ${ch}[${syls[i]}] neutral tone not in CC-CEDICT (${es.map((e) => addTone(e.base, e.tone)).join(', ')})`);
+      const reduplicated = i > 0 && chars[i - 1] === ch && splitTone(syls[i]).tone === 5;
+      if ((!NEUTRAL_OK.has(ch) && !reduplicated) || verbose) W(`${w} ${ch}[${syls[i]}] neutral tone not in CC-CEDICT (${es.map((e) => addTone(e.base, e.tone)).join(', ')})`);
       return;
     }
     E(`${w} ${ch}[${syls[i]}] is not a CC-CEDICT reading (${es.map((e) => addTone(e.base, e.tone)).join(', ')})`);

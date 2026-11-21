@@ -1182,6 +1182,252 @@
     "zh.food.xie-xie-hen-hao-chi",
     "zh.food.word-xian-jin"
    ]
+  },
+  {
+   "code": "Z09-L01",
+   "unit": "Z09",
+   "title": "How much is it?",
+   "goal": "Ask prices, hear them, and haggle a little.",
+   "level": 2,
+   "path": "core",
+   "hsk": 2,
+   "patterns": [
+    "多少钱？",
+    "块 / 毛",
+    "adjective + 一点儿"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.shopping.duo-shao-qian",
+    "zh.shopping.hear-san-shi-wu-kuai",
+    "zh.shopping.tai-gui-le",
+    "zh.patterns.pian-yi-yi-dian",
+    "zh.shopping.hear-zui-shao-san-shi",
+    "zh.shopping.hao-wo-yao-le",
+    "zh.shopping.word-kuai",
+    "zh.shopping.word-mao",
+    "zh.shopping.san-kuai-wu",
+    "zh.shopping.yi-bai-kuai",
+    "zh.shopping.liang-bai-ba",
+    "zh.shopping.hen-pian-yi",
+    "zh.shopping.bu-gui"
+   ]
+  },
+  {
+   "code": "Z09-L02",
+   "unit": "Z09",
+   "title": "Buying clothes",
+   "goal": "Look around, try things on, ask for sizes and colours.",
+   "level": 2,
+   "path": "core",
+   "hsk": 2,
+   "patterns": [
+    "verb doubled (看看, 试试)",
+    "有没有……？",
+    "adjective + 一点儿的"
+   ],
+   "count": 14,
+   "ids": [
+    "zh.shopping.hear-xu-yao-shen-me",
+    "zh.shopping.xiang-mai-chen-shan",
+    "zh.shopping.xian-kan-kan",
+    "zh.patterns.ke-yi-shi-shi",
+    "zh.shopping.hear-shi-yi-jian",
+    "zh.shopping.you-mei-you-da-de",
+    "zh.shopping.tai-xiao-le",
+    "zh.shopping.hear-duo-da-hao",
+    "zh.shopping.zhong-hao",
+    "zh.shopping.bie-de-yan-se",
+    "zh.shopping.word-hong-se",
+    "zh.shopping.word-hei-se",
+    "zh.shopping.word-bai-se",
+    "zh.shopping.word-lan-se"
+   ]
+  },
+  {
+   "code": "Z09-L03",
+   "unit": "Z09",
+   "title": "At the checkout",
+   "goal": "Pay, get change, refuse a bag, return or exchange.",
+   "level": 2,
+   "path": "core",
+   "hsk": 2,
+   "patterns": [
+    "用 + payment",
+    "给你",
+    "不用了",
+    "可以 + verb + 吗？"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.shopping.hear-zen-me-fu",
+    "zh.shopping.yong-wei-xin",
+    "zh.shopping.fu-xian-jin",
+    "zh.shopping.gei-ni",
+    "zh.shopping.hear-zhao-nin-wu-kuai",
+    "zh.shopping.you-ling-qian-ma",
+    "zh.shopping.hear-qing-sao-zhe-li",
+    "zh.shopping.hear-yao-dai-zi-ma",
+    "zh.shopping.bu-yong-le",
+    "zh.shopping.yao-yi-ge",
+    "zh.shopping.ke-yi-tui-ma",
+    "zh.shopping.xiang-huan-yi-ge",
+    "zh.shopping.word-xiao-piao"
+   ]
+  },
+  {
+   "code": "Z09-L04",
+   "unit": "Z09",
+   "title": "Online, in malls and markets",
+   "goal": "Talk about online orders, sales and sold-out items.",
+   "level": 2,
+   "path": "core",
+   "hsk": 2,
+   "patterns": [
+    "在网上 + verb",
+    "又……又……",
+    "打 + number + 折",
+    "怎么卖？"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.shopping.zai-wang-shang-mai",
+    "zh.shopping.hear-kuai-di-dao-le",
+    "zh.shopping.fang-zai-men-kou",
+    "zh.patterns.you-pian-yi-you-hao",
+    "zh.shopping.bi-jiao-gui",
+    "zh.shopping.hear-da-ba-zhe",
+    "zh.shopping.zen-me-mai",
+    "zh.shopping.mai-he-mai",
+    "zh.shopping.hear-mai-wan-le",
+    "zh.shopping.shen-me-shi-hou-you",
+    "zh.shopping.word-shang-chang",
+    "zh.shopping.word-dong-xi",
+    "zh.shopping.word-jia-ge"
+   ]
+  },
+  {
+   "code": "Z10-L01",
+   "unit": "Z10",
+   "title": "Done: verb + 了",
+   "goal": "Say what you did and did not do.",
+   "level": 2,
+   "path": "core",
+   "hsk": 2,
+   "patterns": [
+    "verb + 了",
+    "没 + verb",
+    "还没……",
+    "已经……了",
+    "快……了"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.patterns.mai-le-yi-jian-yi-fu",
+    "zh.daily.hear-zuo-tian-qu-nar-le",
+    "zh.daily.qu-gong-yuan-le",
+    "zh.patterns.wo-mei-qu",
+    "zh.daily.hear-dian-ying-kan-le-ma",
+    "zh.daily.kan-le-hen-hao-kan",
+    "zh.daily.hai-mei-kan",
+    "zh.daily.he-le-san-bei-ka-fei",
+    "zh.daily.ta-yi-jing-zou-le",
+    "zh.daily.hear-ni-dao-le-ma",
+    "zh.daily.wo-dao-le",
+    "zh.daily.kuai-dao-le",
+    "zh.daily.wo-wang-le"
+   ]
+  },
+  {
+   "code": "Z10-L02",
+   "unit": "Z10",
+   "title": "Things have changed",
+   "goal": "Say that a situation is new, has changed or is about to happen.",
+   "level": 2,
+   "path": "core",
+   "hsk": 2,
+   "patterns": [
+    "sentence + 了 (change)",
+    "不……了 (not any more)",
+    "快要……了",
+    "该……了"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.patterns.xia-yu-le",
+    "zh.daily.tian-hei-le",
+    "zh.daily.bu-e-le",
+    "zh.daily.bu-zai-zher-gong-zuo-le",
+    "zh.people.hai-zi-zhang-gao-le",
+    "zh.patterns.kuai-yao-kai-le",
+    "zh.daily.hear-ji-dian-le",
+    "zh.daily.gai-zou-le",
+    "zh.daily.hui-shuo-zhong-wen-le",
+    "zh.daily.dong-tian-lai-le",
+    "zh.daily.hao-jiu-bu-jian",
+    "zh.daily.hear-ni-zen-me-le",
+    "zh.daily.mei-shi"
+   ]
+  },
+  {
+   "code": "Z10-L03",
+   "unit": "Z10",
+   "title": "How, when, with whom: 是……的",
+   "goal": "Ask and give details of past events.",
+   "level": 2,
+   "path": "core",
+   "hsk": 2,
+   "patterns": [
+    "是……的",
+    "跟 + person + 一起"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.daily.hear-zen-me-lai-de",
+    "zh.patterns.zuo-di-tie-lai-de",
+    "zh.daily.hear-shen-me-shi-hou-dao-de",
+    "zh.daily.zuo-tian-wan-shang-dao-de",
+    "zh.daily.hear-gen-shei-lai-de",
+    "zh.daily.gen-peng-you-lai-de",
+    "zh.daily.bu-shi-yi-ge-ren-lai-de",
+    "zh.daily.hear-zai-nar-mai-de",
+    "zh.daily.zai-wang-shang-mai-de",
+    "zh.daily.zen-me-zhi-dao-de",
+    "zh.daily.qu-nian-lai-de",
+    "zh.daily.word-gang-cai",
+    "zh.daily.word-yi-jing"
+   ]
+  },
+  {
+   "code": "Z10-L04",
+   "unit": "Z10",
+   "title": "Telling a story",
+   "goal": "Tell what happened in order, and for how long.",
+   "level": 2,
+   "path": "core",
+   "hsk": 2,
+   "patterns": [
+    "先……然后……",
+    "verb + 了 + ……以后",
+    "后来 / 最后",
+    "verb + 了 + duration"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.daily.xian-qu-yin-hang",
+    "zh.patterns.xia-le-ban-yi-hou",
+    "zh.daily.chi-le-fan-zai-zou",
+    "zh.daily.hear-hou-lai-ne",
+    "zh.daily.hou-lai-cheng-le-peng-you",
+    "zh.daily.mang-le-yi-tian",
+    "zh.patterns.shui-le-ba-ge-xiao-shi",
+    "zh.daily.hear-xue-le-duo-jiu",
+    "zh.daily.xue-le-liang-nian",
+    "zh.daily.tu-ran-ting-dian-le",
+    "zh.daily.zui-hou-da-che-hui-jia",
+    "zh.daily.word-ran-hou",
+    "zh.daily.word-hou-lai"
+   ]
   }
  ],
  "items": [
@@ -1338,7 +1584,8 @@
    "note": "The second 谢 is in the neutral tone: short and light.",
    "replyTo": [
     "zh.city.hear-qian-mian-you-yi-ge",
-    "zh.food.hear-qing-zuo"
+    "zh.food.hear-qing-zuo",
+    "zh.shopping.hear-zhao-nin-wu-kuai"
    ],
    "tags": [
     "core"
@@ -3122,6 +3369,9 @@
    "romaji": "Tài hǎo le!",
    "note": "太 + adjective + 了 = \"so ...!\" (or \"too ...\").",
    "pattern": "太……了",
+   "replyTo": [
+    "zh.shopping.hear-da-ba-zhe"
+   ],
    "tags": [
     "core"
    ],
@@ -3190,6 +3440,9 @@
    "ruby": "我[wǒ]很[hěn]累[lèi]。",
    "kana": "wo hen lei",
    "romaji": "Wǒ hěn lèi.",
+   "replyTo": [
+    "zh.daily.hear-ni-zen-me-le"
+   ],
    "tags": [
     "core"
    ],
@@ -9371,6 +9624,2008 @@
    "lesson": "Z08-L04",
    "level": 2,
    "order": 430,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.duo-shao-qian",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "How much is this?",
+   "ja": "这个多少钱？",
+   "ruby": "这个[zhè ge]多少[duō shao]钱[qián]？",
+   "kana": "zhege duoshao qian",
+   "romaji": "Zhège duōshao qián?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L01",
+   "level": 2,
+   "order": 431,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.hear-san-shi-wu-kuai",
+   "cat": "shopping",
+   "kind": "hear",
+   "en": "35 yuan.",
+   "ja": "三十五块。",
+   "ruby": "三十五[sān shí wǔ]块[kuài]。",
+   "kana": "sanshiwu kuai",
+   "romaji": "Sānshíwǔ kuài.",
+   "replies": [
+    "zh.shopping.tai-gui-le",
+    "zh.shopping.hao-wo-yao-le"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L01",
+   "level": 2,
+   "order": 432,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.tai-gui-le",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "That's too expensive!",
+   "ja": "太贵了！",
+   "ruby": "太[tài]贵[guì]了[le]！",
+   "kana": "tai gui le",
+   "romaji": "Tài guì le!",
+   "replyTo": [
+    "zh.shopping.hear-san-shi-wu-kuai"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L01",
+   "level": 2,
+   "order": 433,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.pian-yi-yi-dian",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "Could you make it a bit cheaper?",
+   "ja": "能便宜一点儿吗？",
+   "ruby": "能[néng]便宜[pián yi]一点儿[yì diǎn r]吗[ma]？",
+   "kana": "neng pianyi yidianr ma",
+   "romaji": "Néng piányi yìdiǎnr ma?",
+   "note": "Adjective + 一点儿 = a bit more ...: 便宜一点儿 = a bit cheaper.",
+   "pattern": "adjective + 一点儿",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L01",
+   "level": 2,
+   "order": 434,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.hear-zui-shao-san-shi",
+   "cat": "shopping",
+   "kind": "hear",
+   "en": "Thirty is the lowest I can go.",
+   "ja": "最少三十块。",
+   "ruby": "最[zuì]少[shǎo]三十[sān shí]块[kuài]。",
+   "kana": "zui shao sanshi kuai",
+   "romaji": "Zuì shǎo sānshí kuài.",
+   "replies": [
+    "zh.shopping.hao-wo-yao-le"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L01",
+   "level": 2,
+   "order": 435,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.hao-wo-yao-le",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "OK, I'll take it.",
+   "ja": "好，我要了。",
+   "ruby": "好[hǎo]，我[wǒ]要[yào]了[le]。",
+   "kana": "hao wo yao le",
+   "romaji": "Hǎo, wǒ yào le.",
+   "replyTo": [
+    "zh.shopping.hear-san-shi-wu-kuai",
+    "zh.shopping.hear-zui-shao-san-shi"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L01",
+   "level": 2,
+   "order": 436,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.word-kuai",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "yuan (spoken)",
+   "ja": "块",
+   "ruby": "块[kuài]",
+   "kana": "kuai",
+   "romaji": "kuài",
+   "note": "块 in speech = 元 in writing: ¥35 = 三十五块.",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z09-L01",
+   "level": 2,
+   "order": 437,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.word-mao",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "ten fen, 0.1 yuan (spoken)",
+   "ja": "毛",
+   "ruby": "毛[máo]",
+   "kana": "mao",
+   "romaji": "máo",
+   "note": "毛 in speech = 角 in writing.",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z09-L01",
+   "level": 2,
+   "order": 438,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.san-kuai-wu",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "3.50 yuan.",
+   "ja": "三块五。",
+   "ruby": "三[sān]块[kuài]五[wǔ]。",
+   "kana": "san kuai wu",
+   "romaji": "Sān kuài wǔ.",
+   "note": "The last unit is usually dropped: 三块五 (毛).",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L01",
+   "level": 2,
+   "order": 439,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.yi-bai-kuai",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "100 yuan.",
+   "ja": "一百块。",
+   "ruby": "一百[yì bǎi]块[kuài]。",
+   "kana": "yibai kuai",
+   "romaji": "Yìbǎi kuài.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L01",
+   "level": 2,
+   "order": 440,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.liang-bai-ba",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "280 yuan.",
+   "ja": "两百八。",
+   "ruby": "两百[liǎng bǎi]八[bā]。",
+   "kana": "liangbai ba",
+   "romaji": "Liǎngbǎi bā.",
+   "note": "两百八 = 280: the final zero is dropped.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L01",
+   "level": 2,
+   "order": 441,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.hen-pian-yi",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "This is cheap.",
+   "ja": "这个很便宜。",
+   "ruby": "这个[zhè ge]很[hěn]便宜[pián yi]。",
+   "kana": "zhege hen pianyi",
+   "romaji": "Zhège hěn piányi.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L01",
+   "level": 2,
+   "order": 442,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.bu-gui",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "It's not expensive.",
+   "ja": "不贵。",
+   "ruby": "不[bú]贵[guì]。",
+   "kana": "bu gui",
+   "romaji": "Bú guì.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L01",
+   "level": 2,
+   "order": 443,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.hear-xu-yao-shen-me",
+   "cat": "shopping",
+   "kind": "hear",
+   "en": "Hello, what can I help you with?",
+   "ja": "您好，您需要什么？",
+   "ruby": "您[nín]好[hǎo]，您[nín]需要[xū yào]什么[shén me]？",
+   "kana": "nin hao nin xuyao shenme",
+   "romaji": "Nín hǎo, nín xūyào shénme?",
+   "replies": [
+    "zh.shopping.xiang-mai-chen-shan",
+    "zh.shopping.xian-kan-kan"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L02",
+   "level": 2,
+   "order": 444,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.xiang-mai-chen-shan",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "I'd like to buy a shirt.",
+   "ja": "我想买一件衬衫。",
+   "ruby": "我[wǒ]想[xiǎng]买[mǎi]一[yí]件[jiàn]衬衫[chèn shān]。",
+   "kana": "wo xiang mai yi jian chenshan",
+   "romaji": "Wǒ xiǎng mǎi yí jiàn chènshān.",
+   "note": "Three 3rd tones: usually spoken wó xiáng mǎi.",
+   "replyTo": [
+    "zh.shopping.hear-xu-yao-shen-me"
+   ],
+   "tags": [
+    "core",
+    "sandhi"
+   ],
+   "lesson": "Z09-L02",
+   "level": 2,
+   "order": 445,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.xian-kan-kan",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "I'm just looking.",
+   "ja": "我先看看。",
+   "ruby": "我[wǒ]先[xiān]看看[kàn kan]。",
+   "kana": "wo xian kankan",
+   "romaji": "Wǒ xiān kànkan.",
+   "note": "A doubled verb = \"have a quick ...\": 看看, 试试.",
+   "replyTo": [
+    "zh.shopping.hear-xu-yao-shen-me"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L02",
+   "level": 2,
+   "order": 446,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.ke-yi-shi-shi",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "Can I try it on?",
+   "ja": "我可以试试吗？",
+   "ruby": "我[wǒ]可以[kě yǐ]试试[shì shi]吗[ma]？",
+   "kana": "wo keyi shishi ma",
+   "romaji": "Wǒ kěyǐ shìshi ma?",
+   "note": "Doubling a verb makes it light and casual.",
+   "pattern": "verb + verb",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L02",
+   "level": 2,
+   "order": 447,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.hear-shi-yi-jian",
+   "cat": "shopping",
+   "kind": "hear",
+   "en": "The fitting room is over there.",
+   "ja": "试衣间在那边。",
+   "ruby": "试衣间[shì yī jiān]在[zài]那边[nà biān]。",
+   "kana": "shiyijian zai nabian",
+   "romaji": "Shìyījiān zài nàbiān.",
+   "note": "No reply needed.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L02",
+   "level": 2,
+   "order": 448,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.you-mei-you-da-de",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "Do you have a bigger one?",
+   "ja": "有没有大一点儿的？",
+   "ruby": "有[yǒu]没有[méi yǒu]大[dà]一点儿[yì diǎn r]的[de]？",
+   "kana": "you meiyou da yidianr de",
+   "romaji": "Yǒu méiyǒu dà yìdiǎnr de?",
+   "note": "有没有……？ = 有……吗？",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L02",
+   "level": 2,
+   "order": 449,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.tai-xiao-le",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "It's too small.",
+   "ja": "太小了。",
+   "ruby": "太[tài]小[xiǎo]了[le]。",
+   "kana": "tai xiao le",
+   "romaji": "Tài xiǎo le.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L02",
+   "level": 2,
+   "order": 450,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.hear-duo-da-hao",
+   "cat": "shopping",
+   "kind": "hear",
+   "en": "What size do you wear?",
+   "ja": "你穿多大号的？",
+   "ruby": "你[nǐ]穿[chuān]多[duō]大[dà]号[hào]的[de]？",
+   "kana": "ni chuan duo da hao de",
+   "romaji": "Nǐ chuān duō dà hào de?",
+   "replies": [
+    "zh.shopping.zhong-hao"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L02",
+   "level": 2,
+   "order": 451,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.zhong-hao",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "Medium.",
+   "ja": "中号。",
+   "ruby": "中号[zhōng hào]。",
+   "kana": "zhonghao",
+   "romaji": "Zhōnghào.",
+   "note": "小号 = S, 中号 = M, 大号 = L.",
+   "replyTo": [
+    "zh.shopping.hear-duo-da-hao"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L02",
+   "level": 2,
+   "order": 452,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.bie-de-yan-se",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "Do you have other colours?",
+   "ja": "有别的颜色吗？",
+   "ruby": "有[yǒu]别的[bié de]颜色[yán sè]吗[ma]？",
+   "kana": "you biede yanse ma",
+   "romaji": "Yǒu biéde yánsè ma?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L02",
+   "level": 2,
+   "order": 453,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.word-hong-se",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "red",
+   "ja": "红色",
+   "ruby": "红色[hóng sè]",
+   "kana": "hongse",
+   "romaji": "hóngsè",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z09-L02",
+   "level": 2,
+   "order": 454,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.word-hei-se",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "black",
+   "ja": "黑色",
+   "ruby": "黑色[hēi sè]",
+   "kana": "heise",
+   "romaji": "hēisè",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z09-L02",
+   "level": 2,
+   "order": 455,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.word-bai-se",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "white",
+   "ja": "白色",
+   "ruby": "白色[bái sè]",
+   "kana": "baise",
+   "romaji": "báisè",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z09-L02",
+   "level": 2,
+   "order": 456,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.word-lan-se",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "blue",
+   "ja": "蓝色",
+   "ruby": "蓝色[lán sè]",
+   "kana": "lanse",
+   "romaji": "lánsè",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z09-L02",
+   "level": 2,
+   "order": 457,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.hear-zen-me-fu",
+   "cat": "shopping",
+   "kind": "hear",
+   "en": "How would you like to pay?",
+   "ja": "您怎么付？",
+   "ruby": "您[nín]怎么[zěn me]付[fù]？",
+   "kana": "nin zenme fu",
+   "romaji": "Nín zěnme fù?",
+   "replies": [
+    "zh.shopping.yong-wei-xin",
+    "zh.shopping.fu-xian-jin"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L03",
+   "level": 2,
+   "order": 458,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.yong-wei-xin",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "By WeChat.",
+   "ja": "用微信。",
+   "ruby": "用[yòng]微信[Wēi xìn]。",
+   "kana": "yong weixin",
+   "romaji": "Yòng Wēixìn.",
+   "replyTo": [
+    "zh.shopping.hear-zen-me-fu"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L03",
+   "level": 2,
+   "order": 459,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.fu-xian-jin",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "I'll pay cash.",
+   "ja": "我付现金。",
+   "ruby": "我[wǒ]付[fù]现金[xiàn jīn]。",
+   "kana": "wo fu xianjin",
+   "romaji": "Wǒ fù xiànjīn.",
+   "replyTo": [
+    "zh.shopping.hear-zen-me-fu"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L03",
+   "level": 2,
+   "order": 460,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.gei-ni",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "Here you are.",
+   "ja": "给你。",
+   "ruby": "给[gěi]你[nǐ]。",
+   "kana": "gei ni",
+   "romaji": "Gěi nǐ.",
+   "note": "3rd + 3rd tone: géi nǐ.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L03",
+   "level": 2,
+   "order": 461,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.hear-zhao-nin-wu-kuai",
+   "cat": "shopping",
+   "kind": "hear",
+   "en": "Here's five yuan change.",
+   "ja": "找您五块。",
+   "ruby": "找[zhǎo]您[nín]五[wǔ]块[kuài]。",
+   "kana": "zhao nin wu kuai",
+   "romaji": "Zhǎo nín wǔ kuài.",
+   "note": "找 = give change.",
+   "replies": [
+    "zh.basics.xie-xie"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L03",
+   "level": 2,
+   "order": 462,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.you-ling-qian-ma",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "Do you have any small change?",
+   "ja": "你有零钱吗？",
+   "ruby": "你[nǐ]有[yǒu]零钱[líng qián]吗[ma]？",
+   "kana": "ni you lingqian ma",
+   "romaji": "Nǐ yǒu língqián ma?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L03",
+   "level": 2,
+   "order": 463,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.hear-qing-sao-zhe-li",
+   "cat": "shopping",
+   "kind": "hear",
+   "en": "Please scan here.",
+   "ja": "请扫这里。",
+   "ruby": "请[qǐng]扫[sǎo]这里[zhè lǐ]。",
+   "kana": "qing sao zheli",
+   "romaji": "Qǐng sǎo zhèlǐ.",
+   "note": "No reply needed: scan the QR code with your phone.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L03",
+   "level": 2,
+   "order": 464,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.hear-yao-dai-zi-ma",
+   "cat": "shopping",
+   "kind": "hear",
+   "en": "Do you need a bag?",
+   "ja": "要袋子吗？",
+   "ruby": "要[yào]袋子[dài zi]吗[ma]？",
+   "kana": "yao daizi ma",
+   "romaji": "Yào dàizi ma?",
+   "replies": [
+    "zh.shopping.bu-yong-le",
+    "zh.shopping.yao-yi-ge"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L03",
+   "level": 2,
+   "order": 465,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.bu-yong-le",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "No need, thanks.",
+   "ja": "不用了，谢谢。",
+   "ruby": "不用[bú yòng]了[le]，谢谢[xiè xie]。",
+   "kana": "buyong le xiexie",
+   "romaji": "Búyòng le, xièxie.",
+   "note": "不用 búyòng = no need.",
+   "replyTo": [
+    "zh.shopping.hear-yao-dai-zi-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L03",
+   "level": 2,
+   "order": 466,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.yao-yi-ge",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "Yes, one please.",
+   "ja": "要一个。",
+   "ruby": "要[yào]一[yí]个[ge]。",
+   "kana": "yao yi ge",
+   "romaji": "Yào yí ge.",
+   "replyTo": [
+    "zh.shopping.hear-yao-dai-zi-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L03",
+   "level": 2,
+   "order": 467,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.ke-yi-tui-ma",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "Can I return this?",
+   "ja": "这个可以退吗？",
+   "ruby": "这个[zhè ge]可以[kě yǐ]退[tuì]吗[ma]？",
+   "kana": "zhege keyi tui ma",
+   "romaji": "Zhège kěyǐ tuì ma?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L03",
+   "level": 2,
+   "order": 468,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.xiang-huan-yi-ge",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "I'd like to exchange it.",
+   "ja": "我想换一个。",
+   "ruby": "我[wǒ]想[xiǎng]换[huàn]一[yí]个[ge]。",
+   "kana": "wo xiang huan yi ge",
+   "romaji": "Wǒ xiǎng huàn yí ge.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L03",
+   "level": 2,
+   "order": 469,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.word-xiao-piao",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "till receipt",
+   "ja": "小票",
+   "ruby": "小票[xiǎo piào]",
+   "kana": "xiaopiao",
+   "romaji": "xiǎopiào",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z09-L03",
+   "level": 2,
+   "order": 470,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.zai-wang-shang-mai",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "I often buy things online.",
+   "ja": "我常常在网上买东西。",
+   "ruby": "我[wǒ]常常[cháng cháng]在[zài]网上[wǎng shàng]买[mǎi]东西[dōng xi]。",
+   "kana": "wo changchang zai wangshang mai dongxi",
+   "romaji": "Wǒ chángcháng zài wǎngshàng mǎi dōngxi.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L04",
+   "level": 2,
+   "order": 471,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.hear-kuai-di-dao-le",
+   "cat": "shopping",
+   "kind": "hear",
+   "en": "Your parcel has arrived.",
+   "ja": "你的快递到了。",
+   "ruby": "你[nǐ]的[de]快递[kuài dì]到[dào]了[le]。",
+   "kana": "ni de kuaidi dao le",
+   "romaji": "Nǐ de kuàidì dào le.",
+   "replies": [
+    "zh.shopping.fang-zai-men-kou"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L04",
+   "level": 2,
+   "order": 472,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.fang-zai-men-kou",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "Please leave it at the door.",
+   "ja": "请放在门口。",
+   "ruby": "请[qǐng]放[fàng]在[zài]门口[mén kǒu]。",
+   "kana": "qing fang zai menkou",
+   "romaji": "Qǐng fàng zài ménkǒu.",
+   "replyTo": [
+    "zh.shopping.hear-kuai-di-dao-le"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L04",
+   "level": 2,
+   "order": 473,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.you-pian-yi-you-hao",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "Things here are both cheap and good.",
+   "ja": "这里的东西又便宜又好。",
+   "ruby": "这里[zhè lǐ]的[de]东西[dōng xi]又[yòu]便宜[pián yi]又[yòu]好[hǎo]。",
+   "kana": "zheli de dongxi you pianyi you hao",
+   "romaji": "Zhèlǐ de dōngxi yòu piányi yòu hǎo.",
+   "note": "又 A 又 B = both A and B.",
+   "pattern": "又……又……",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L04",
+   "level": 2,
+   "order": 474,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.bi-jiao-gui",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "This shop is rather expensive.",
+   "ja": "这家店比较贵。",
+   "ruby": "这[zhè]家[jiā]店[diàn]比较[bǐ jiào]贵[guì]。",
+   "kana": "zhe jia dian bijiao gui",
+   "romaji": "Zhè jiā diàn bǐjiào guì.",
+   "note": "家 is the measure word for shops and companies.",
+   "tags": [
+    "core",
+    "mw"
+   ],
+   "lesson": "Z09-L04",
+   "level": 2,
+   "order": 475,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.hear-da-ba-zhe",
+   "cat": "shopping",
+   "kind": "hear",
+   "en": "There's 20% off now.",
+   "ja": "现在打八折。",
+   "ruby": "现在[xiàn zài]打[dǎ]八[bā]折[zhé]。",
+   "kana": "xianzai da ba zhe",
+   "romaji": "Xiànzài dǎ bā zhé.",
+   "note": "打八折 = you pay 80%.",
+   "replies": [
+    "zh.patterns.tai-hao-le"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L04",
+   "level": 2,
+   "order": 476,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.zen-me-mai",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "How much are these shoes?",
+   "ja": "这双鞋怎么卖？",
+   "ruby": "这[zhè]双[shuāng]鞋[xié]怎么[zěn me]卖[mài]？",
+   "kana": "zhe shuang xie zenme mai",
+   "romaji": "Zhè shuāng xié zěnme mài?",
+   "note": "怎么卖？ = how much? (common in markets).",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L04",
+   "level": 2,
+   "order": 477,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.mai-he-mai",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "buy and sell",
+   "ja": "买和卖",
+   "ruby": "买[mǎi]和[hé]卖[mài]",
+   "kana": "mai he mai",
+   "romaji": "mǎi hé mài",
+   "note": "买 mǎi (3rd tone) = buy; 卖 mài (4th tone) = sell. Only the tone differs.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L04",
+   "level": 2,
+   "order": 478,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.hear-mai-wan-le",
+   "cat": "shopping",
+   "kind": "hear",
+   "en": "It's sold out.",
+   "ja": "卖完了。",
+   "ruby": "卖完[mài wán]了[le]。",
+   "kana": "maiwan le",
+   "romaji": "Màiwán le.",
+   "replies": [
+    "zh.shopping.shen-me-shi-hou-you"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L04",
+   "level": 2,
+   "order": 479,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.shen-me-shi-hou-you",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "When will you have it again?",
+   "ja": "什么时候会有？",
+   "ruby": "什么[shén me]时候[shí hou]会[huì]有[yǒu]？",
+   "kana": "shenme shihou hui you",
+   "romaji": "Shénme shíhou huì yǒu?",
+   "note": "会 + verb can also mean \"will (probably)\".",
+   "replyTo": [
+    "zh.shopping.hear-mai-wan-le"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z09-L04",
+   "level": 2,
+   "order": 480,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.word-shang-chang",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "shopping mall",
+   "ja": "商场",
+   "ruby": "商场[shāng chǎng]",
+   "kana": "shangchang",
+   "romaji": "shāngchǎng",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z09-L04",
+   "level": 2,
+   "order": 481,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.word-dong-xi",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "thing(s), stuff",
+   "ja": "东西",
+   "ruby": "东西[dōng xi]",
+   "kana": "dongxi",
+   "romaji": "dōngxi",
+   "note": "dōngxi = things; dōngxī = east and west.",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z09-L04",
+   "level": 2,
+   "order": 482,
+   "src": "new"
+  },
+  {
+   "id": "zh.shopping.word-jia-ge",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "price",
+   "ja": "价格",
+   "ruby": "价格[jià gé]",
+   "kana": "jiage",
+   "romaji": "jiàgé",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z09-L04",
+   "level": 2,
+   "order": 483,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.mai-le-yi-jian-yi-fu",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "I bought a piece of clothing.",
+   "ja": "我买了一件衣服。",
+   "ruby": "我[wǒ]买[mǎi]了[le]一[yí]件[jiàn]衣服[yī fu]。",
+   "kana": "wo mai le yi jian yifu",
+   "romaji": "Wǒ mǎi le yí jiàn yīfu.",
+   "note": "了 after a verb = the action is done.",
+   "pattern": "verb + 了 + amount + noun",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L01",
+   "level": 2,
+   "order": 484,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hear-zuo-tian-qu-nar-le",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "Where did you go yesterday?",
+   "ja": "你昨天去哪儿了？",
+   "ruby": "你[nǐ]昨天[zuó tiān]去[qù]哪儿[nǎ r]了[le]？",
+   "kana": "ni zuotian qu nar le",
+   "romaji": "Nǐ zuótiān qù nǎr le?",
+   "replies": [
+    "zh.daily.qu-gong-yuan-le",
+    "zh.patterns.wo-mei-qu"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L01",
+   "level": 2,
+   "order": 485,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.qu-gong-yuan-le",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I went to the park.",
+   "ja": "我去公园了。",
+   "ruby": "我[wǒ]去[qù]公园[gōng yuán]了[le]。",
+   "kana": "wo qu gongyuan le",
+   "romaji": "Wǒ qù gōngyuán le.",
+   "replyTo": [
+    "zh.daily.hear-zuo-tian-qu-nar-le"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L01",
+   "level": 2,
+   "order": 486,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.wo-mei-qu",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "I didn't go anywhere.",
+   "ja": "我哪儿也没去。",
+   "ruby": "我[wǒ]哪儿[nǎ r]也[yě]没[méi]去[qù]。",
+   "kana": "wo nar ye mei qu",
+   "romaji": "Wǒ nǎr yě méi qù.",
+   "note": "Past negative: 没 + verb, with no 了. 哪儿也没 = nowhere.",
+   "pattern": "没 + verb",
+   "replyTo": [
+    "zh.daily.hear-zuo-tian-qu-nar-le"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L01",
+   "level": 2,
+   "order": 487,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hear-dian-ying-kan-le-ma",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "Did you see that film?",
+   "ja": "那个电影你看了吗？",
+   "ruby": "那[nà]个[ge]电影[diàn yǐng]你[nǐ]看[kàn]了[le]吗[ma]？",
+   "kana": "na ge dianying ni kan le ma",
+   "romaji": "Nà ge diànyǐng nǐ kàn le ma?",
+   "replies": [
+    "zh.daily.kan-le-hen-hao-kan",
+    "zh.daily.hai-mei-kan"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L01",
+   "level": 2,
+   "order": 488,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.kan-le-hen-hao-kan",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Yes, it was great.",
+   "ja": "看了，很好看。",
+   "ruby": "看[kàn]了[le]，很[hěn]好看[hǎo kàn]。",
+   "kana": "kan le hen haokan",
+   "romaji": "Kàn le, hěn hǎokàn.",
+   "note": "好看 = good-looking; good to watch.",
+   "replyTo": [
+    "zh.daily.hear-dian-ying-kan-le-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L01",
+   "level": 2,
+   "order": 489,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hai-mei-kan",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Not yet.",
+   "ja": "还没看。",
+   "ruby": "还[hái]没[méi]看[kàn]。",
+   "kana": "hai mei kan",
+   "romaji": "Hái méi kàn.",
+   "replyTo": [
+    "zh.daily.hear-dian-ying-kan-le-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L01",
+   "level": 2,
+   "order": 490,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.he-le-san-bei-ka-fei",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I've had three cups of coffee today.",
+   "ja": "我今天喝了三杯咖啡。",
+   "ruby": "我[wǒ]今天[jīn tiān]喝[hē]了[le]三[sān]杯[bēi]咖啡[kā fēi]。",
+   "kana": "wo jintian he le san bei kafei",
+   "romaji": "Wǒ jīntiān hē le sān bēi kāfēi.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L01",
+   "level": 2,
+   "order": 491,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.ta-yi-jing-zou-le",
+   "cat": "daily",
+   "kind": "say",
+   "en": "He has already left.",
+   "ja": "他已经走了。",
+   "ruby": "他[tā]已经[yǐ jīng]走[zǒu]了[le]。",
+   "kana": "ta yijing zou le",
+   "romaji": "Tā yǐjīng zǒu le.",
+   "note": "已经……了 = already.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L01",
+   "level": 2,
+   "order": 492,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hear-ni-dao-le-ma",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "Are you there yet?",
+   "ja": "你到了吗？",
+   "ruby": "你[nǐ]到[dào]了[le]吗[ma]？",
+   "kana": "ni dao le ma",
+   "romaji": "Nǐ dào le ma?",
+   "replies": [
+    "zh.daily.wo-dao-le",
+    "zh.daily.kuai-dao-le"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L01",
+   "level": 2,
+   "order": 493,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.wo-dao-le",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I'm here.",
+   "ja": "我到了。",
+   "ruby": "我[wǒ]到[dào]了[le]。",
+   "kana": "wo dao le",
+   "romaji": "Wǒ dào le.",
+   "replyTo": [
+    "zh.daily.hear-ni-dao-le-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L01",
+   "level": 2,
+   "order": 494,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.kuai-dao-le",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Almost there.",
+   "ja": "快到了。",
+   "ruby": "快[kuài]到[dào]了[le]。",
+   "kana": "kuai dao le",
+   "romaji": "Kuài dào le.",
+   "note": "快……了 = about to.",
+   "replyTo": [
+    "zh.daily.hear-ni-dao-le-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L01",
+   "level": 2,
+   "order": 495,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.wo-wang-le",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Sorry, I forgot.",
+   "ja": "对不起，我忘了。",
+   "ruby": "对不起[duì bu qǐ]，我[wǒ]忘[wàng]了[le]。",
+   "kana": "duibuqi wo wang le",
+   "romaji": "Duìbuqǐ, wǒ wàng le.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L01",
+   "level": 2,
+   "order": 496,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.xia-yu-le",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "It's started raining!",
+   "ja": "下雨了！",
+   "ruby": "下雨[xià yǔ]了[le]！",
+   "kana": "xiayu le",
+   "romaji": "Xiàyǔ le!",
+   "note": "了 at the end of a sentence = the situation has changed.",
+   "pattern": "sentence + 了",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L02",
+   "level": 2,
+   "order": 497,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.tian-hei-le",
+   "cat": "daily",
+   "kind": "say",
+   "en": "It's got dark.",
+   "ja": "天黑了。",
+   "ruby": "天[tiān]黑[hēi]了[le]。",
+   "kana": "tian hei le",
+   "romaji": "Tiān hēi le.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L02",
+   "level": 2,
+   "order": 498,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.bu-e-le",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I'm not hungry any more.",
+   "ja": "我不饿了。",
+   "ruby": "我[wǒ]不[bú]饿[è]了[le]。",
+   "kana": "wo bu e le",
+   "romaji": "Wǒ bú è le.",
+   "note": "不……了 = not any more.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L02",
+   "level": 2,
+   "order": 499,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.bu-zai-zher-gong-zuo-le",
+   "cat": "daily",
+   "kind": "say",
+   "en": "He doesn't work here any more.",
+   "ja": "他不在这儿工作了。",
+   "ruby": "他[tā]不[bú]在[zài]这儿[zhè r]工作[gōng zuò]了[le]。",
+   "kana": "ta bu zai zher gongzuo le",
+   "romaji": "Tā bú zài zhèr gōngzuò le.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L02",
+   "level": 2,
+   "order": 500,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.hai-zi-zhang-gao-le",
+   "cat": "people",
+   "kind": "say",
+   "en": "The child has grown taller.",
+   "ja": "孩子长高了。",
+   "ruby": "孩子[hái zi]长[zhǎng]高[gāo]了[le]。",
+   "kana": "haizi zhang gao le",
+   "romaji": "Háizi zhǎng gāo le.",
+   "note": "长 zhǎng = grow (cháng = long).",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L02",
+   "level": 2,
+   "order": 501,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.kuai-yao-kai-le",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "The train is about to leave.",
+   "ja": "火车快要开了。",
+   "ruby": "火车[huǒ chē]快[kuài]要[yào]开[kāi]了[le]。",
+   "kana": "huoche kuai yao kai le",
+   "romaji": "Huǒchē kuài yào kāi le.",
+   "note": "(快)要……了 = about to happen.",
+   "pattern": "快要……了",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L02",
+   "level": 2,
+   "order": 502,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hear-ji-dian-le",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "What time is it now?",
+   "ja": "几点了？",
+   "ruby": "几[jǐ]点[diǎn]了[le]？",
+   "kana": "ji dian le",
+   "romaji": "Jǐ diǎn le?",
+   "replies": [
+    "zh.daily.gai-zou-le"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L02",
+   "level": 2,
+   "order": 503,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.gai-zou-le",
+   "cat": "daily",
+   "kind": "say",
+   "en": "It's ten; I should be going.",
+   "ja": "十点了，我该走了。",
+   "ruby": "十[shí]点[diǎn]了[le]，我[wǒ]该[gāi]走[zǒu]了[le]。",
+   "kana": "shi dian le wo gai zou le",
+   "romaji": "Shí diǎn le, wǒ gāi zǒu le.",
+   "note": "该……了 = it's time to.",
+   "replyTo": [
+    "zh.daily.hear-ji-dian-le"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L02",
+   "level": 2,
+   "order": 504,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hui-shuo-zhong-wen-le",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Now I can speak a little Chinese.",
+   "ja": "我会说一点儿中文了。",
+   "ruby": "我[wǒ]会[huì]说[shuō]一点儿[yì diǎn r]中文[Zhōng wén]了[le]。",
+   "kana": "wo hui shuo yidianr zhongwen le",
+   "romaji": "Wǒ huì shuō yìdiǎnr Zhōngwén le.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L02",
+   "level": 2,
+   "order": 505,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.dong-tian-lai-le",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Winter is here.",
+   "ja": "冬天来了。",
+   "ruby": "冬天[dōng tiān]来[lái]了[le]。",
+   "kana": "dongtian lai le",
+   "romaji": "Dōngtiān lái le.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L02",
+   "level": 2,
+   "order": 506,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hao-jiu-bu-jian",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Long time no see!",
+   "ja": "好久不见！",
+   "ruby": "好久[hǎo jiǔ]不[bú]见[jiàn]！",
+   "kana": "haojiu bu jian",
+   "romaji": "Hǎojiǔ bú jiàn!",
+   "note": "3rd + 3rd tone: háo jiǔ.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L02",
+   "level": 2,
+   "order": 507,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hear-ni-zen-me-le",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "What's wrong?",
+   "ja": "你怎么了？",
+   "ruby": "你[nǐ]怎么[zěn me]了[le]？",
+   "kana": "ni zenme le",
+   "romaji": "Nǐ zěnme le?",
+   "replies": [
+    "zh.daily.mei-shi",
+    "zh.feelings.wo-hen-lei"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L02",
+   "level": 2,
+   "order": 508,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.mei-shi",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I'm fine. / It's nothing.",
+   "ja": "没事。",
+   "ruby": "没事[méi shì]。",
+   "kana": "meishi",
+   "romaji": "Méishì.",
+   "replyTo": [
+    "zh.daily.hear-ni-zen-me-le"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L02",
+   "level": 2,
+   "order": 509,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hear-zen-me-lai-de",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "How did you get here?",
+   "ja": "你是怎么来的？",
+   "ruby": "你[nǐ]是[shì]怎么[zěn me]来[lái]的[de]？",
+   "kana": "ni shi zenme lai de",
+   "romaji": "Nǐ shì zěnme lái de?",
+   "note": "是……的 asks for a detail (how, when, where, with whom) of something already done.",
+   "replies": [
+    "zh.patterns.zuo-di-tie-lai-de"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L03",
+   "level": 2,
+   "order": 510,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.zuo-di-tie-lai-de",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "I came by metro.",
+   "ja": "我是坐地铁来的。",
+   "ruby": "我[wǒ]是[shì]坐[zuò]地铁[dì tiě]来[lái]的[de]。",
+   "kana": "wo shi zuo ditie lai de",
+   "romaji": "Wǒ shì zuò dìtiě lái de.",
+   "note": "The detail goes between 是 and the verb; 的 closes the sentence.",
+   "pattern": "是 + detail + verb + 的",
+   "replyTo": [
+    "zh.daily.hear-zen-me-lai-de"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L03",
+   "level": 2,
+   "order": 511,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hear-shen-me-shi-hou-dao-de",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "When did you arrive?",
+   "ja": "你是什么时候到的？",
+   "ruby": "你[nǐ]是[shì]什么[shén me]时候[shí hou]到[dào]的[de]？",
+   "kana": "ni shi shenme shihou dao de",
+   "romaji": "Nǐ shì shénme shíhou dào de?",
+   "replies": [
+    "zh.daily.zuo-tian-wan-shang-dao-de"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L03",
+   "level": 2,
+   "order": 512,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.zuo-tian-wan-shang-dao-de",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I arrived last night.",
+   "ja": "我是昨天晚上到的。",
+   "ruby": "我[wǒ]是[shì]昨天[zuó tiān]晚上[wǎn shang]到[dào]的[de]。",
+   "kana": "wo shi zuotian wanshang dao de",
+   "romaji": "Wǒ shì zuótiān wǎnshang dào de.",
+   "replyTo": [
+    "zh.daily.hear-shen-me-shi-hou-dao-de"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L03",
+   "level": 2,
+   "order": 513,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hear-gen-shei-lai-de",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "Who did you come with?",
+   "ja": "你跟谁一起来的？",
+   "ruby": "你[nǐ]跟[gēn]谁[shéi]一起[yì qǐ]来[lái]的[de]？",
+   "kana": "ni gen shei yiqi lai de",
+   "romaji": "Nǐ gēn shéi yìqǐ lái de?",
+   "note": "是 is often left out.",
+   "replies": [
+    "zh.daily.gen-peng-you-lai-de",
+    "zh.daily.bu-shi-yi-ge-ren-lai-de"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L03",
+   "level": 2,
+   "order": 514,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.gen-peng-you-lai-de",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I came with a friend.",
+   "ja": "我是跟朋友一起来的。",
+   "ruby": "我[wǒ]是[shì]跟[gēn]朋友[péng you]一起[yì qǐ]来[lái]的[de]。",
+   "kana": "wo shi gen pengyou yiqi lai de",
+   "romaji": "Wǒ shì gēn péngyou yìqǐ lái de.",
+   "replyTo": [
+    "zh.daily.hear-gen-shei-lai-de"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L03",
+   "level": 2,
+   "order": 515,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.bu-shi-yi-ge-ren-lai-de",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I didn't come alone.",
+   "ja": "我不是一个人来的。",
+   "ruby": "我[wǒ]不[bú]是[shì]一[yí]个[ge]人[rén]来[lái]的[de]。",
+   "kana": "wo bu shi yi ge ren lai de",
+   "romaji": "Wǒ bú shì yí ge rén lái de.",
+   "replyTo": [
+    "zh.daily.hear-gen-shei-lai-de"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L03",
+   "level": 2,
+   "order": 516,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hear-zai-nar-mai-de",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "Where did you buy this?",
+   "ja": "这是在哪儿买的？",
+   "ruby": "这[zhè]是[shì]在[zài]哪儿[nǎ r]买[mǎi]的[de]？",
+   "kana": "zhe shi zai nar mai de",
+   "romaji": "Zhè shì zài nǎr mǎi de?",
+   "replies": [
+    "zh.daily.zai-wang-shang-mai-de"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L03",
+   "level": 2,
+   "order": 517,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.zai-wang-shang-mai-de",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Online.",
+   "ja": "在网上买的。",
+   "ruby": "在[zài]网上[wǎng shàng]买[mǎi]的[de]。",
+   "kana": "zai wangshang mai de",
+   "romaji": "Zài wǎngshàng mǎi de.",
+   "replyTo": [
+    "zh.daily.hear-zai-nar-mai-de"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L03",
+   "level": 2,
+   "order": 518,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.zen-me-zhi-dao-de",
+   "cat": "daily",
+   "kind": "say",
+   "en": "How did you know?",
+   "ja": "你是怎么知道的？",
+   "ruby": "你[nǐ]是[shì]怎么[zěn me]知道[zhī dào]的[de]？",
+   "kana": "ni shi zenme zhidao de",
+   "romaji": "Nǐ shì zěnme zhīdào de?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L03",
+   "level": 2,
+   "order": 519,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.qu-nian-lai-de",
+   "cat": "daily",
+   "kind": "say",
+   "en": "She came to China last year.",
+   "ja": "她是去年来中国的。",
+   "ruby": "她[tā]是[shì]去年[qù nián]来[lái]中国[Zhōng guó]的[de]。",
+   "kana": "ta shi qunian lai zhongguo de",
+   "romaji": "Tā shì qùnián lái Zhōngguó de.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L03",
+   "level": 2,
+   "order": 520,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-gang-cai",
+   "cat": "daily",
+   "kind": "say",
+   "en": "just now",
+   "ja": "刚才",
+   "ruby": "刚才[gāng cái]",
+   "kana": "gangcai",
+   "romaji": "gāngcái",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z10-L03",
+   "level": 2,
+   "order": 521,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-yi-jing",
+   "cat": "daily",
+   "kind": "say",
+   "en": "already",
+   "ja": "已经",
+   "ruby": "已经[yǐ jīng]",
+   "kana": "yijing",
+   "romaji": "yǐjīng",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z10-L03",
+   "level": 2,
+   "order": 522,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.xian-qu-yin-hang",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Yesterday I went to the bank first, then to the supermarket.",
+   "ja": "昨天我先去了银行，然后去了超市。",
+   "ruby": "昨天[zuó tiān]我[wǒ]先[xiān]去[qù]了[le]银行[yín háng]，然后[rán hòu]去[qù]了[le]超市[chāo shì]。",
+   "kana": "zuotian wo xian qu le yinhang ranhou qu le chaoshi",
+   "romaji": "Zuótiān wǒ xiān qù le yínháng, ránhòu qù le chāoshì.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L04",
+   "level": 2,
+   "order": 523,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.xia-le-ban-yi-hou",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "After work I go to the gym.",
+   "ja": "下了班以后，我去健身。",
+   "ruby": "下[xià]了[le]班[bān]以后[yǐ hòu]，我[wǒ]去[qù]健身[jiàn shēn]。",
+   "kana": "xia le ban yihou wo qu jianshen",
+   "romaji": "Xià le bān yǐhòu, wǒ qù jiànshēn.",
+   "note": "了 can mark the first of two actions: when A is done, B happens.",
+   "pattern": "verb + 了 + ……以后",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L04",
+   "level": 2,
+   "order": 524,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.chi-le-fan-zai-zou",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Stay and eat before you go.",
+   "ja": "吃了饭再走吧。",
+   "ruby": "吃[chī]了[le]饭[fàn]再[zài]走[zǒu]吧[ba]。",
+   "kana": "chi le fan zai zou ba",
+   "romaji": "Chī le fàn zài zǒu ba.",
+   "note": "再 = and then (in the future).",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L04",
+   "level": 2,
+   "order": 525,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hear-hou-lai-ne",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "And then what happened?",
+   "ja": "后来呢？",
+   "ruby": "后来[hòu lái]呢[ne]？",
+   "kana": "houlai ne",
+   "romaji": "Hòulái ne?",
+   "replies": [
+    "zh.daily.hou-lai-cheng-le-peng-you"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L04",
+   "level": 2,
+   "order": 526,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hou-lai-cheng-le-peng-you",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Later we became good friends.",
+   "ja": "后来我们成了好朋友。",
+   "ruby": "后来[hòu lái]我们[wǒ men]成[chéng]了[le]好[hǎo]朋友[péng you]。",
+   "kana": "houlai women cheng le hao pengyou",
+   "romaji": "Hòulái wǒmen chéng le hǎo péngyou.",
+   "replyTo": [
+    "zh.daily.hear-hou-lai-ne"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L04",
+   "level": 2,
+   "order": 527,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.mang-le-yi-tian",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I was busy all day yesterday.",
+   "ja": "昨天我忙了一天。",
+   "ruby": "昨天[zuó tiān]我[wǒ]忙[máng]了[le]一[yì]天[tiān]。",
+   "kana": "zuotian wo mang le yi tian",
+   "romaji": "Zuótiān wǒ máng le yì tiān.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L04",
+   "level": 2,
+   "order": 528,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.shui-le-ba-ge-xiao-shi",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "I slept for eight hours.",
+   "ja": "我睡了八个小时。",
+   "ruby": "我[wǒ]睡[shuì]了[le]八[bā]个[ge]小时[xiǎo shí]。",
+   "kana": "wo shui le ba ge xiaoshi",
+   "romaji": "Wǒ shuì le bā ge xiǎoshí.",
+   "note": "How long goes after verb + 了.",
+   "pattern": "verb + 了 + duration",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L04",
+   "level": 2,
+   "order": 529,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hear-xue-le-duo-jiu",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "How long did you study?",
+   "ja": "你学了多久？",
+   "ruby": "你[nǐ]学[xué]了[le]多久[duō jiǔ]？",
+   "kana": "ni xue le duojiu",
+   "romaji": "Nǐ xué le duōjiǔ?",
+   "replies": [
+    "zh.daily.xue-le-liang-nian"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L04",
+   "level": 2,
+   "order": 530,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.xue-le-liang-nian",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I studied Chinese for two years.",
+   "ja": "我学了两年中文。",
+   "ruby": "我[wǒ]学[xué]了[le]两[liǎng]年[nián]中文[Zhōng wén]。",
+   "kana": "wo xue le liang nian zhongwen",
+   "romaji": "Wǒ xué le liǎng nián Zhōngwén.",
+   "note": "The duration comes before the object.",
+   "replyTo": [
+    "zh.daily.hear-xue-le-duo-jiu"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L04",
+   "level": 2,
+   "order": 531,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.tu-ran-ting-dian-le",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Suddenly the power went out.",
+   "ja": "突然停电了。",
+   "ruby": "突然[tū rán]停电[tíng diàn]了[le]。",
+   "kana": "turan tingdian le",
+   "romaji": "Tūrán tíngdiàn le.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L04",
+   "level": 2,
+   "order": 532,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.zui-hou-da-che-hui-jia",
+   "cat": "daily",
+   "kind": "say",
+   "en": "In the end we took a taxi home.",
+   "ja": "最后我们打车回家了。",
+   "ruby": "最后[zuì hòu]我们[wǒ men]打车[dǎ chē]回[huí]家[jiā]了[le]。",
+   "kana": "zuihou women dache hui jia le",
+   "romaji": "Zuìhòu wǒmen dǎchē huí jiā le.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z10-L04",
+   "level": 2,
+   "order": 533,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-ran-hou",
+   "cat": "daily",
+   "kind": "say",
+   "en": "then; after that",
+   "ja": "然后",
+   "ruby": "然后[rán hòu]",
+   "kana": "ranhou",
+   "romaji": "ránhòu",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z10-L04",
+   "level": 2,
+   "order": 534,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-hou-lai",
+   "cat": "daily",
+   "kind": "say",
+   "en": "later; afterwards (in the past)",
+   "ja": "后来",
+   "ruby": "后来[hòu lái]",
+   "kana": "houlai",
+   "romaji": "hòulái",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z10-L04",
+   "level": 2,
+   "order": 535,
    "src": "new"
   }
  ]
