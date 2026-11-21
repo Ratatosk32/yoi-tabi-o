@@ -940,6 +940,248 @@
     "zh.daily.word-ping-shi",
     "zh.daily.word-zao-shui-zao-qi"
    ]
+  },
+  {
+   "code": "Z07-L01",
+   "unit": "Z07",
+   "title": "Food I like",
+   "goal": "Say what you like to eat and drink.",
+   "level": 1,
+   "path": "core",
+   "hsk": 1,
+   "patterns": [
+    "喜欢 + noun / verb",
+    "爱 + verb",
+    "adjective + 的"
+   ],
+   "count": 14,
+   "ids": [
+    "zh.food.hear-xi-huan-chi-shen-me",
+    "zh.food.xi-huan-chi-jiao-zi",
+    "zh.patterns.xi-huan-zhong-guo-cai",
+    "zh.food.bu-xi-huan-la-de",
+    "zh.food.ai-he-cha",
+    "zh.food.word-mi-fan",
+    "zh.food.word-mian-tiao",
+    "zh.food.word-bao-zi",
+    "zh.food.word-ji-dan",
+    "zh.food.word-niu-rou",
+    "zh.food.word-shui-guo",
+    "zh.food.word-cai",
+    "zh.food.hear-hao-chi-ma",
+    "zh.food.hen-hao-chi"
+   ]
+  },
+  {
+   "code": "Z07-L02",
+   "unit": "Z07",
+   "title": "I want, I'd like",
+   "goal": "Ask for food and drink with 要 and 想; say no politely.",
+   "level": 1,
+   "path": "core",
+   "hsk": 1,
+   "patterns": [
+    "要 + thing",
+    "想 + verb",
+    "不要 / 不想",
+    "要不要……？"
+   ],
+   "count": 14,
+   "ids": [
+    "zh.patterns.yao-yi-bei-ka-fei",
+    "zh.patterns.xiang-he-shui",
+    "zh.food.hear-xiang-he-shen-me",
+    "zh.food.lai-bei-cha",
+    "zh.food.wo-e-le",
+    "zh.food.wo-ke-le",
+    "zh.food.bu-yao-tang",
+    "zh.food.bu-xiang-chi",
+    "zh.food.hear-yao-bu-yao-niu-nai",
+    "zh.food.yao-yi-dian",
+    "zh.food.bu-yao-xie-xie",
+    "zh.food.word-ka-fei",
+    "zh.food.word-niu-nai",
+    "zh.food.word-guo-zhi"
+   ]
+  },
+  {
+   "code": "Z07-L03",
+   "unit": "Z07",
+   "title": "Tastes and cooking",
+   "goal": "Describe tastes; say what you do not eat.",
+   "level": 2,
+   "path": "core",
+   "hsk": 1,
+   "patterns": [
+    "太 + adjective + 了",
+    "有点儿 + adjective",
+    "会 + verb"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.food.tai-la-le",
+    "zh.food.you-dian-xian",
+    "zh.food.word-tian",
+    "zh.food.word-suan",
+    "zh.food.word-ku",
+    "zh.food.word-la",
+    "zh.food.hear-hui-zuo-fan-ma",
+    "zh.food.hui-zuo-ji-ge",
+    "zh.food.cai-zen-me-zuo",
+    "zh.food.wo-chi-su",
+    "zh.food.bu-chi-rou",
+    "zh.food.bu-chi-xiang-cai",
+    "zh.food.zhen-xiang"
+   ]
+  },
+  {
+   "code": "Z07-L04",
+   "unit": "Z07",
+   "title": "Meals at home",
+   "goal": "Talk about meals; accept and refuse more food.",
+   "level": 2,
+   "path": "core",
+   "hsk": 1,
+   "patterns": [
+    "还没 + verb + 呢",
+    "verb + 点儿",
+    "吃饱了"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.food.hear-chi-fan-le-ma",
+    "zh.food.chi-le-ni-ne",
+    "zh.food.hai-mei-chi",
+    "zh.food.word-zao-fan",
+    "zh.food.word-wu-fan",
+    "zh.food.word-wan-fan",
+    "zh.food.hear-wan-fan-chi-shen-me",
+    "zh.food.chi-mian-tiao-ba",
+    "zh.food.jin-tian-wo-zuo-fan",
+    "zh.food.mai-dian-cai",
+    "zh.food.duo-chi-dian",
+    "zh.food.wo-chi-bao-le",
+    "zh.food.man-man-chi"
+   ]
+  },
+  {
+   "code": "Z08-L01",
+   "unit": "Z08",
+   "title": "Getting a table",
+   "goal": "Understand the host; say how many you are; reservations.",
+   "level": 2,
+   "path": "core",
+   "hsk": 2,
+   "patterns": [
+    "几位？",
+    "有……吗？"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.food.hear-huan-ying-guang-lin",
+    "zh.food.hear-ji-wei",
+    "zh.food.liang-wei",
+    "zh.food.san-ge-ren",
+    "zh.food.hear-qing-zuo",
+    "zh.food.hear-zhe-bian-qing",
+    "zh.food.kao-chuang-de-wei-zi",
+    "zh.food.hear-yao-deng",
+    "zh.food.wo-men-deng",
+    "zh.food.na-suan-le",
+    "zh.food.hear-you-yu-ding-ma",
+    "zh.food.yu-ding-le",
+    "zh.food.mei-you-yu-ding"
+   ]
+  },
+  {
+   "code": "Z08-L02",
+   "unit": "Z08",
+   "title": "Ordering",
+   "goal": "Call the waiter, ask for the menu and a recommendation, order.",
+   "level": 2,
+   "path": "core",
+   "hsk": 2,
+   "patterns": [
+    "来 + amount + dish",
+    "给 + person + thing",
+    "可以……吗？"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.food.fu-wu-yuan",
+    "zh.food.gei-wo-cai-dan",
+    "zh.food.ying-wen-cai-dan",
+    "zh.food.hear-dian-shen-me",
+    "zh.food.lai-gong-bao-ji-ding",
+    "zh.food.you-shen-me-tui-jian",
+    "zh.food.hear-hen-you-ming",
+    "zh.food.na-jiu-yao-zhe-ge",
+    "zh.patterns.ke-yi-bu-yao-la",
+    "zh.food.shao-fang-yan",
+    "zh.food.hear-hai-yao-bie-de-ma",
+    "zh.food.gou-le",
+    "zh.food.zai-lai-yi-wan-mi-fan"
+   ]
+  },
+  {
+   "code": "Z08-L03",
+   "unit": "Z08",
+   "title": "During the meal",
+   "goal": "Ask for things at the table; sort out a wrong dish.",
+   "level": 2,
+   "path": "core",
+   "hsk": 2,
+   "patterns": [
+    "能……吗？",
+    "没有……了",
+    "还没 + verb"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.patterns.neng-gei-wo-kuai-zi",
+    "zh.food.yi-bei-re-shui",
+    "zh.food.cai-hai-mei-shang",
+    "zh.food.hear-ma-shang-lai",
+    "zh.food.bu-shi-wo-dian-de",
+    "zh.food.hear-cai-mei-you-le",
+    "zh.food.na-huan-yi-ge",
+    "zh.food.ke-yi-da-bao",
+    "zh.food.cai-dou-hen-hao-chi",
+    "zh.food.gan-bei",
+    "zh.food.word-kuai-zi",
+    "zh.food.word-shao-zi",
+    "zh.food.word-can-jin-zhi"
+   ]
+  },
+  {
+   "code": "Z08-L04",
+   "unit": "Z08",
+   "title": "Paying the bill",
+   "goal": "Ask for the bill, pay by phone or card, treat or split.",
+   "level": 2,
+   "path": "core",
+   "hsk": 2,
+   "patterns": [
+    "一共",
+    "可以 + verb + 吗？",
+    "A 还是 B？"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.food.mai-dan",
+    "zh.food.jie-zhang",
+    "zh.food.hear-yi-gong",
+    "zh.food.sao-ma",
+    "zh.food.shua-ka",
+    "zh.food.hear-wei-xin-zhi-fu-bao",
+    "zh.food.wei-xin",
+    "zh.food.wo-qing-ke",
+    "zh.food.ge-fu-ge-de",
+    "zh.food.kai-fa-piao",
+    "zh.food.hear-xia-ci-zai-lai",
+    "zh.food.xie-xie-hen-hao-chi",
+    "zh.food.word-xian-jin"
+   ]
   }
  ],
  "items": [
@@ -1095,7 +1337,8 @@
    "romaji": "Xièxie!",
    "note": "The second 谢 is in the neutral tone: short and light.",
    "replyTo": [
-    "zh.city.hear-qian-mian-you-yi-ge"
+    "zh.city.hear-qian-mian-you-yi-ge",
+    "zh.food.hear-qing-zuo"
    ],
    "tags": [
     "core"
@@ -1530,7 +1773,8 @@
    "note": "3rd + 3rd tone: the first 3rd tone is spoken as a 2nd: ké yǐ.",
    "replyTo": [
     "zh.basics.hear-ni-hao-ma",
-    "zh.basics.hear-zui-jin"
+    "zh.basics.hear-zui-jin",
+    "zh.food.hear-hao-chi-ma"
    ],
    "tags": [
     "core",
@@ -1919,7 +2163,8 @@
    "romaji": "Bú huì.",
    "note": "Answer with the verb of the question: 会 / 不会.",
    "replyTo": [
-    "zh.basics.hear-hui-shuo-ying-yu"
+    "zh.basics.hear-hui-shuo-ying-yu",
+    "zh.food.hear-hui-zuo-fan-ma"
    ],
    "tags": [
     "core"
@@ -7121,6 +7366,2011 @@
    "lesson": "Z06-L04",
    "level": 2,
    "order": 324,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.hear-xi-huan-chi-shen-me",
+   "cat": "food",
+   "kind": "hear",
+   "en": "What do you like to eat?",
+   "ja": "你喜欢吃什么？",
+   "ruby": "你[nǐ]喜欢[xǐ huan]吃[chī]什么[shén me]？",
+   "kana": "ni xihuan chi shenme",
+   "romaji": "Nǐ xǐhuan chī shénme?",
+   "replies": [
+    "zh.food.xi-huan-chi-jiao-zi"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L01",
+   "level": 1,
+   "order": 325,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.xi-huan-chi-jiao-zi",
+   "cat": "food",
+   "kind": "say",
+   "en": "I like eating dumplings.",
+   "ja": "我喜欢吃饺子。",
+   "ruby": "我[wǒ]喜欢[xǐ huan]吃[chī]饺子[jiǎo zi]。",
+   "kana": "wo xihuan chi jiaozi",
+   "romaji": "Wǒ xǐhuan chī jiǎozi.",
+   "note": "3rd + 3rd tone: wó xǐhuan.",
+   "replyTo": [
+    "zh.food.hear-xi-huan-chi-shen-me"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L01",
+   "level": 1,
+   "order": 326,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.xi-huan-zhong-guo-cai",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "I really like Chinese food.",
+   "ja": "我很喜欢中国菜。",
+   "ruby": "我[wǒ]很[hěn]喜欢[xǐ huan]中国菜[Zhōng guó cài]。",
+   "kana": "wo hen xihuan zhongguocai",
+   "romaji": "Wǒ hěn xǐhuan Zhōngguócài.",
+   "note": "喜欢 takes a noun or a verb: 喜欢茶, 喜欢喝茶.",
+   "pattern": "喜欢 + noun / verb",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L01",
+   "level": 1,
+   "order": 327,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.bu-xi-huan-la-de",
+   "cat": "food",
+   "kind": "say",
+   "en": "I don't like spicy food.",
+   "ja": "我不喜欢吃辣的。",
+   "ruby": "我[wǒ]不[bù]喜欢[xǐ huan]吃[chī]辣[là]的[de]。",
+   "kana": "wo bu xihuan chi la de",
+   "romaji": "Wǒ bù xǐhuan chī là de.",
+   "note": "Adjective + 的 = \"... ones\": 辣的 = spicy things.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L01",
+   "level": 1,
+   "order": 328,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.ai-he-cha",
+   "cat": "food",
+   "kind": "say",
+   "en": "I love drinking tea.",
+   "ja": "我爱喝茶。",
+   "ruby": "我[wǒ]爱[ài]喝[hē]茶[chá]。",
+   "kana": "wo ai he cha",
+   "romaji": "Wǒ ài hē chá.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L01",
+   "level": 1,
+   "order": 329,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.word-mi-fan",
+   "cat": "food",
+   "kind": "say",
+   "en": "rice (cooked)",
+   "ja": "米饭",
+   "ruby": "米饭[mǐ fàn]",
+   "kana": "mifan",
+   "romaji": "mǐfàn",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z07-L01",
+   "level": 1,
+   "order": 330,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.word-mian-tiao",
+   "cat": "food",
+   "kind": "say",
+   "en": "noodles",
+   "ja": "面条",
+   "ruby": "面条[miàn tiáo]",
+   "kana": "miantiao",
+   "romaji": "miàntiáo",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z07-L01",
+   "level": 1,
+   "order": 331,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.word-bao-zi",
+   "cat": "food",
+   "kind": "say",
+   "en": "steamed bun",
+   "ja": "包子",
+   "ruby": "包子[bāo zi]",
+   "kana": "baozi",
+   "romaji": "bāozi",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z07-L01",
+   "level": 1,
+   "order": 332,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.word-ji-dan",
+   "cat": "food",
+   "kind": "say",
+   "en": "egg",
+   "ja": "鸡蛋",
+   "ruby": "鸡蛋[jī dàn]",
+   "kana": "jidan",
+   "romaji": "jīdàn",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z07-L01",
+   "level": 1,
+   "order": 333,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.word-niu-rou",
+   "cat": "food",
+   "kind": "say",
+   "en": "beef",
+   "ja": "牛肉",
+   "ruby": "牛肉[niú ròu]",
+   "kana": "niurou",
+   "romaji": "niúròu",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z07-L01",
+   "level": 1,
+   "order": 334,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.word-shui-guo",
+   "cat": "food",
+   "kind": "say",
+   "en": "fruit",
+   "ja": "水果",
+   "ruby": "水果[shuǐ guǒ]",
+   "kana": "shuiguo",
+   "romaji": "shuǐguǒ",
+   "note": "3rd + 3rd tone: shuí guǒ.",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z07-L01",
+   "level": 1,
+   "order": 335,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.word-cai",
+   "cat": "food",
+   "kind": "say",
+   "en": "dish; vegetables",
+   "ja": "菜",
+   "ruby": "菜[cài]",
+   "kana": "cai",
+   "romaji": "cài",
+   "note": "菜 = a dish of food, and also vegetables.",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z07-L01",
+   "level": 1,
+   "order": 336,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.hear-hao-chi-ma",
+   "cat": "food",
+   "kind": "hear",
+   "en": "Is it good?",
+   "ja": "好吃吗？",
+   "ruby": "好吃[hǎo chī]吗[ma]？",
+   "kana": "haochi ma",
+   "romaji": "Hǎochī ma?",
+   "replies": [
+    "zh.food.hen-hao-chi",
+    "zh.basics.hai-ke-yi"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L01",
+   "level": 1,
+   "order": 337,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.hen-hao-chi",
+   "cat": "food",
+   "kind": "say",
+   "en": "It's delicious!",
+   "ja": "很好吃！",
+   "ruby": "很[hěn]好吃[hǎo chī]！",
+   "kana": "hen haochi",
+   "romaji": "Hěn hǎochī!",
+   "note": "好吃 = tasty (food); 好喝 = tasty (drinks). 3rd + 3rd tone: hén hǎo.",
+   "replyTo": [
+    "zh.food.hear-hao-chi-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L01",
+   "level": 1,
+   "order": 338,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.yao-yi-bei-ka-fei",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "I'd like a coffee.",
+   "ja": "我要一杯咖啡。",
+   "ruby": "我[wǒ]要[yào]一[yì]杯[bēi]咖啡[kā fēi]。",
+   "kana": "wo yao yi bei kafei",
+   "romaji": "Wǒ yào yì bēi kāfēi.",
+   "note": "要 + thing = I want / I'll have.",
+   "pattern": "要 + thing",
+   "replyTo": [
+    "zh.food.hear-xiang-he-shen-me"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L02",
+   "level": 1,
+   "order": 339,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.xiang-he-shui",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "I'd like some water.",
+   "ja": "我想喝水。",
+   "ruby": "我[wǒ]想[xiǎng]喝[hē]水[shuǐ]。",
+   "kana": "wo xiang he shui",
+   "romaji": "Wǒ xiǎng hē shuǐ.",
+   "note": "想 + verb = would like to (softer than 要).",
+   "pattern": "想 + verb",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L02",
+   "level": 1,
+   "order": 340,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.hear-xiang-he-shen-me",
+   "cat": "food",
+   "kind": "hear",
+   "en": "What would you like to drink?",
+   "ja": "你想喝什么？",
+   "ruby": "你[nǐ]想[xiǎng]喝[hē]什么[shén me]？",
+   "kana": "ni xiang he shenme",
+   "romaji": "Nǐ xiǎng hē shénme?",
+   "replies": [
+    "zh.patterns.yao-yi-bei-ka-fei",
+    "zh.food.lai-bei-cha"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L02",
+   "level": 1,
+   "order": 341,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.lai-bei-cha",
+   "cat": "food",
+   "kind": "say",
+   "en": "A cup of tea, then.",
+   "ja": "来一杯茶吧。",
+   "ruby": "来[lái]一[yì]杯[bēi]茶[chá]吧[ba]。",
+   "kana": "lai yi bei cha ba",
+   "romaji": "Lái yì bēi chá ba.",
+   "note": "来 + amount = \"bring me\" (in cafés and restaurants).",
+   "replyTo": [
+    "zh.food.hear-xiang-he-shen-me"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L02",
+   "level": 1,
+   "order": 342,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.wo-e-le",
+   "cat": "food",
+   "kind": "say",
+   "en": "I'm hungry.",
+   "ja": "我饿了。",
+   "ruby": "我[wǒ]饿[è]了[le]。",
+   "kana": "wo e le",
+   "romaji": "Wǒ è le.",
+   "note": "了 here = a new situation: now I am hungry.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L02",
+   "level": 1,
+   "order": 343,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.wo-ke-le",
+   "cat": "food",
+   "kind": "say",
+   "en": "I'm thirsty.",
+   "ja": "我渴了。",
+   "ruby": "我[wǒ]渴[kě]了[le]。",
+   "kana": "wo ke le",
+   "romaji": "Wǒ kě le.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L02",
+   "level": 1,
+   "order": 344,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.bu-yao-tang",
+   "cat": "food",
+   "kind": "say",
+   "en": "No sugar for me.",
+   "ja": "我不要糖。",
+   "ruby": "我[wǒ]不[bú]要[yào]糖[táng]。",
+   "kana": "wo bu yao tang",
+   "romaji": "Wǒ bú yào táng.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L02",
+   "level": 1,
+   "order": 345,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.bu-xiang-chi",
+   "cat": "food",
+   "kind": "say",
+   "en": "I don't feel like eating now.",
+   "ja": "我现在不想吃。",
+   "ruby": "我[wǒ]现在[xiàn zài]不[bù]想[xiǎng]吃[chī]。",
+   "kana": "wo xianzai bu xiang chi",
+   "romaji": "Wǒ xiànzài bù xiǎng chī.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L02",
+   "level": 1,
+   "order": 346,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.hear-yao-bu-yao-niu-nai",
+   "cat": "food",
+   "kind": "hear",
+   "en": "Do you want milk in it?",
+   "ja": "要不要加牛奶？",
+   "ruby": "要[yào]不[bu]要[yào]加[jiā]牛奶[niú nǎi]？",
+   "kana": "yao bu yao jia niunai",
+   "romaji": "Yào bu yào jiā niúnǎi?",
+   "replies": [
+    "zh.food.yao-yi-dian",
+    "zh.food.bu-yao-xie-xie"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L02",
+   "level": 1,
+   "order": 347,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.yao-yi-dian",
+   "cat": "food",
+   "kind": "say",
+   "en": "Yes, a little.",
+   "ja": "要一点儿。",
+   "ruby": "要[yào]一点儿[yì diǎn r]。",
+   "kana": "yao yidianr",
+   "romaji": "Yào yìdiǎnr.",
+   "replyTo": [
+    "zh.food.hear-yao-bu-yao-niu-nai"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L02",
+   "level": 1,
+   "order": 348,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.bu-yao-xie-xie",
+   "cat": "food",
+   "kind": "say",
+   "en": "No, thanks.",
+   "ja": "不要，谢谢。",
+   "ruby": "不[bú]要[yào]，谢谢[xiè xie]。",
+   "kana": "bu yao xiexie",
+   "romaji": "Bú yào, xièxie.",
+   "replyTo": [
+    "zh.food.hear-yao-bu-yao-niu-nai"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L02",
+   "level": 1,
+   "order": 349,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.word-ka-fei",
+   "cat": "food",
+   "kind": "say",
+   "en": "coffee",
+   "ja": "咖啡",
+   "ruby": "咖啡[kā fēi]",
+   "kana": "kafei",
+   "romaji": "kāfēi",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z07-L02",
+   "level": 1,
+   "order": 350,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.word-niu-nai",
+   "cat": "food",
+   "kind": "say",
+   "en": "milk",
+   "ja": "牛奶",
+   "ruby": "牛奶[niú nǎi]",
+   "kana": "niunai",
+   "romaji": "niúnǎi",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z07-L02",
+   "level": 1,
+   "order": 351,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.word-guo-zhi",
+   "cat": "food",
+   "kind": "say",
+   "en": "juice",
+   "ja": "果汁",
+   "ruby": "果汁[guǒ zhī]",
+   "kana": "guozhi",
+   "romaji": "guǒzhī",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z07-L02",
+   "level": 1,
+   "order": 352,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.tai-la-le",
+   "cat": "food",
+   "kind": "say",
+   "en": "It's too spicy!",
+   "ja": "太辣了！",
+   "ruby": "太[tài]辣[là]了[le]！",
+   "kana": "tai la le",
+   "romaji": "Tài là le!",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L03",
+   "level": 2,
+   "order": 353,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.you-dian-xian",
+   "cat": "food",
+   "kind": "say",
+   "en": "It's a bit salty.",
+   "ja": "有点儿咸。",
+   "ruby": "有点儿[yǒu diǎn r]咸[xián]。",
+   "kana": "youdianr xian",
+   "romaji": "Yǒudiǎnr xián.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L03",
+   "level": 2,
+   "order": 354,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.word-tian",
+   "cat": "food",
+   "kind": "say",
+   "en": "sweet",
+   "ja": "甜",
+   "ruby": "甜[tián]",
+   "kana": "tian",
+   "romaji": "tián",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z07-L03",
+   "level": 2,
+   "order": 355,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.word-suan",
+   "cat": "food",
+   "kind": "say",
+   "en": "sour",
+   "ja": "酸",
+   "ruby": "酸[suān]",
+   "kana": "suan",
+   "romaji": "suān",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z07-L03",
+   "level": 2,
+   "order": 356,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.word-ku",
+   "cat": "food",
+   "kind": "say",
+   "en": "bitter",
+   "ja": "苦",
+   "ruby": "苦[kǔ]",
+   "kana": "ku",
+   "romaji": "kǔ",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z07-L03",
+   "level": 2,
+   "order": 357,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.word-la",
+   "cat": "food",
+   "kind": "say",
+   "en": "spicy, hot",
+   "ja": "辣",
+   "ruby": "辣[là]",
+   "kana": "la",
+   "romaji": "là",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z07-L03",
+   "level": 2,
+   "order": 358,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.hear-hui-zuo-fan-ma",
+   "cat": "food",
+   "kind": "hear",
+   "en": "Can you cook?",
+   "ja": "你会做饭吗？",
+   "ruby": "你[nǐ]会[huì]做饭[zuò fàn]吗[ma]？",
+   "kana": "ni hui zuofan ma",
+   "romaji": "Nǐ huì zuòfàn ma?",
+   "replies": [
+    "zh.food.hui-zuo-ji-ge",
+    "zh.basics.bu-hui"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L03",
+   "level": 2,
+   "order": 359,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.hui-zuo-ji-ge",
+   "cat": "food",
+   "kind": "say",
+   "en": "Yes, I can make a few Chinese dishes.",
+   "ja": "会，我会做几个中国菜。",
+   "ruby": "会[huì]，我[wǒ]会[huì]做[zuò]几[jǐ]个[ge]中国菜[Zhōng guó cài]。",
+   "kana": "hui wo hui zuo ji ge zhongguocai",
+   "romaji": "Huì, wǒ huì zuò jǐ ge Zhōngguócài.",
+   "note": "几 in a statement = \"a few\".",
+   "replyTo": [
+    "zh.food.hear-hui-zuo-fan-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L03",
+   "level": 2,
+   "order": 360,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.cai-zen-me-zuo",
+   "cat": "food",
+   "kind": "say",
+   "en": "How do you make this dish?",
+   "ja": "这个菜怎么做？",
+   "ruby": "这个[zhè ge]菜[cài]怎么[zěn me]做[zuò]？",
+   "kana": "zhege cai zenme zuo",
+   "romaji": "Zhège cài zěnme zuò?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L03",
+   "level": 2,
+   "order": 361,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.wo-chi-su",
+   "cat": "food",
+   "kind": "say",
+   "en": "I'm vegetarian.",
+   "ja": "我吃素。",
+   "ruby": "我[wǒ]吃素[chī sù]。",
+   "kana": "wo chisu",
+   "romaji": "Wǒ chīsù.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L03",
+   "level": 2,
+   "order": 362,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.bu-chi-rou",
+   "cat": "food",
+   "kind": "say",
+   "en": "I don't eat meat.",
+   "ja": "我不吃肉。",
+   "ruby": "我[wǒ]不[bù]吃[chī]肉[ròu]。",
+   "kana": "wo bu chi rou",
+   "romaji": "Wǒ bù chī ròu.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L03",
+   "level": 2,
+   "order": 363,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.bu-chi-xiang-cai",
+   "cat": "food",
+   "kind": "say",
+   "en": "I don't eat coriander.",
+   "ja": "我不吃香菜。",
+   "ruby": "我[wǒ]不[bù]吃[chī]香菜[xiāng cài]。",
+   "kana": "wo bu chi xiangcai",
+   "romaji": "Wǒ bù chī xiāngcài.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L03",
+   "level": 2,
+   "order": 364,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.zhen-xiang",
+   "cat": "food",
+   "kind": "say",
+   "en": "It smells wonderful!",
+   "ja": "真香！",
+   "ruby": "真[zhēn]香[xiāng]！",
+   "kana": "zhen xiang",
+   "romaji": "Zhēn xiāng!",
+   "note": "香 = fragrant: for food that smells or tastes good.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L03",
+   "level": 2,
+   "order": 365,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.hear-chi-fan-le-ma",
+   "cat": "food",
+   "kind": "hear",
+   "en": "Have you eaten?",
+   "ja": "你吃饭了吗？",
+   "ruby": "你[nǐ]吃饭[chī fàn]了[le]吗[ma]？",
+   "kana": "ni chifan le ma",
+   "romaji": "Nǐ chīfàn le ma?",
+   "note": "A friendly everyday greeting, a bit like \"how are you?\"",
+   "replies": [
+    "zh.food.chi-le-ni-ne",
+    "zh.food.hai-mei-chi"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L04",
+   "level": 2,
+   "order": 366,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.chi-le-ni-ne",
+   "cat": "food",
+   "kind": "say",
+   "en": "Yes, have you?",
+   "ja": "吃了，你呢？",
+   "ruby": "吃[chī]了[le]，你[nǐ]呢[ne]？",
+   "kana": "chi le ni ne",
+   "romaji": "Chī le, nǐ ne?",
+   "replyTo": [
+    "zh.food.hear-chi-fan-le-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L04",
+   "level": 2,
+   "order": 367,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.hai-mei-chi",
+   "cat": "food",
+   "kind": "say",
+   "en": "Not yet.",
+   "ja": "还没吃呢。",
+   "ruby": "还[hái]没[méi]吃[chī]呢[ne]。",
+   "kana": "hai mei chi ne",
+   "romaji": "Hái méi chī ne.",
+   "note": "还没 + verb + 呢 = not yet.",
+   "replyTo": [
+    "zh.food.hear-chi-fan-le-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L04",
+   "level": 2,
+   "order": 368,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.word-zao-fan",
+   "cat": "food",
+   "kind": "say",
+   "en": "breakfast",
+   "ja": "早饭",
+   "ruby": "早饭[zǎo fàn]",
+   "kana": "zaofan",
+   "romaji": "zǎofàn",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z07-L04",
+   "level": 2,
+   "order": 369,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.word-wu-fan",
+   "cat": "food",
+   "kind": "say",
+   "en": "lunch",
+   "ja": "午饭",
+   "ruby": "午饭[wǔ fàn]",
+   "kana": "wufan",
+   "romaji": "wǔfàn",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z07-L04",
+   "level": 2,
+   "order": 370,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.word-wan-fan",
+   "cat": "food",
+   "kind": "say",
+   "en": "dinner",
+   "ja": "晚饭",
+   "ruby": "晚饭[wǎn fàn]",
+   "kana": "wanfan",
+   "romaji": "wǎnfàn",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z07-L04",
+   "level": 2,
+   "order": 371,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.hear-wan-fan-chi-shen-me",
+   "cat": "food",
+   "kind": "hear",
+   "en": "What's for dinner?",
+   "ja": "晚饭吃什么？",
+   "ruby": "晚饭[wǎn fàn]吃[chī]什么[shén me]？",
+   "kana": "wanfan chi shenme",
+   "romaji": "Wǎnfàn chī shénme?",
+   "replies": [
+    "zh.food.chi-mian-tiao-ba"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L04",
+   "level": 2,
+   "order": 372,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.chi-mian-tiao-ba",
+   "cat": "food",
+   "kind": "say",
+   "en": "Let's have noodles.",
+   "ja": "吃面条吧。",
+   "ruby": "吃[chī]面条[miàn tiáo]吧[ba]。",
+   "kana": "chi miantiao ba",
+   "romaji": "Chī miàntiáo ba.",
+   "replyTo": [
+    "zh.food.hear-wan-fan-chi-shen-me"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L04",
+   "level": 2,
+   "order": 373,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.jin-tian-wo-zuo-fan",
+   "cat": "food",
+   "kind": "say",
+   "en": "I'll cook today.",
+   "ja": "今天我做饭。",
+   "ruby": "今天[jīn tiān]我[wǒ]做饭[zuò fàn]。",
+   "kana": "jintian wo zuofan",
+   "romaji": "Jīntiān wǒ zuòfàn.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L04",
+   "level": 2,
+   "order": 374,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.mai-dian-cai",
+   "cat": "food",
+   "kind": "say",
+   "en": "I'm going to the supermarket to get some food.",
+   "ja": "我去超市买点儿菜。",
+   "ruby": "我[wǒ]去[qù]超市[chāo shì]买[mǎi]点儿[diǎn r]菜[cài]。",
+   "kana": "wo qu chaoshi mai dianr cai",
+   "romaji": "Wǒ qù chāoshì mǎi diǎnr cài.",
+   "note": "After a verb, 一点儿 is often shortened to 点儿.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L04",
+   "level": 2,
+   "order": 375,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.duo-chi-dian",
+   "cat": "food",
+   "kind": "say",
+   "en": "Have some more!",
+   "ja": "多吃点儿！",
+   "ruby": "多[duō]吃[chī]点儿[diǎn r]！",
+   "kana": "duo chi dianr",
+   "romaji": "Duō chī diǎnr!",
+   "note": "A host will say this many times; 我吃饱了 is the polite way out.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L04",
+   "level": 2,
+   "order": 376,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.wo-chi-bao-le",
+   "cat": "food",
+   "kind": "say",
+   "en": "I'm full.",
+   "ja": "我吃饱了。",
+   "ruby": "我[wǒ]吃饱[chī bǎo]了[le]。",
+   "kana": "wo chibao le",
+   "romaji": "Wǒ chībǎo le.",
+   "note": "Verb + result: 吃饱 = eat until full.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L04",
+   "level": 2,
+   "order": 377,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.man-man-chi",
+   "cat": "food",
+   "kind": "say",
+   "en": "Enjoy your meal.",
+   "ja": "慢慢吃。",
+   "ruby": "慢慢[màn màn]吃[chī]。",
+   "kana": "manman chi",
+   "romaji": "Mànmàn chī.",
+   "note": "Literally \"eat slowly\": said to someone starting to eat.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z07-L04",
+   "level": 2,
+   "order": 378,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.hear-huan-ying-guang-lin",
+   "cat": "food",
+   "kind": "hear",
+   "en": "Welcome!",
+   "ja": "欢迎光临！",
+   "ruby": "欢迎[huān yíng]光临[guāng lín]！",
+   "kana": "huanying guanglin",
+   "romaji": "Huānyíng guānglín!",
+   "note": "No reply needed; a nod or 你好 is fine.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L01",
+   "level": 2,
+   "order": 379,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.hear-ji-wei",
+   "cat": "food",
+   "kind": "hear",
+   "en": "How many people?",
+   "ja": "几位？",
+   "ruby": "几[jǐ]位[wèi]？",
+   "kana": "ji wei",
+   "romaji": "Jǐ wèi?",
+   "replies": [
+    "zh.food.liang-wei",
+    "zh.food.san-ge-ren"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L01",
+   "level": 2,
+   "order": 380,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.liang-wei",
+   "cat": "food",
+   "kind": "say",
+   "en": "Two.",
+   "ja": "两位。",
+   "ruby": "两[liǎng]位[wèi]。",
+   "kana": "liang wei",
+   "romaji": "Liǎng wèi.",
+   "note": "Staff use the polite 位; you can also say 两个人.",
+   "replyTo": [
+    "zh.food.hear-ji-wei"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L01",
+   "level": 2,
+   "order": 381,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.san-ge-ren",
+   "cat": "food",
+   "kind": "say",
+   "en": "Three of us.",
+   "ja": "三个人。",
+   "ruby": "三[sān]个[ge]人[rén]。",
+   "kana": "san ge ren",
+   "romaji": "Sān ge rén.",
+   "replyTo": [
+    "zh.food.hear-ji-wei"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L01",
+   "level": 2,
+   "order": 382,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.hear-qing-zuo",
+   "cat": "food",
+   "kind": "hear",
+   "en": "Please sit down.",
+   "ja": "请坐。",
+   "ruby": "请[qǐng]坐[zuò]。",
+   "kana": "qing zuo",
+   "romaji": "Qǐng zuò.",
+   "replies": [
+    "zh.basics.xie-xie"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L01",
+   "level": 2,
+   "order": 383,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.hear-zhe-bian-qing",
+   "cat": "food",
+   "kind": "hear",
+   "en": "This way, please.",
+   "ja": "这边请。",
+   "ruby": "这边[zhè biān]请[qǐng]。",
+   "kana": "zhebian qing",
+   "romaji": "Zhèbiān qǐng.",
+   "note": "No reply needed; follow the staff.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L01",
+   "level": 2,
+   "order": 384,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.kao-chuang-de-wei-zi",
+   "cat": "food",
+   "kind": "say",
+   "en": "Do you have a table by the window?",
+   "ja": "有靠窗的位子吗？",
+   "ruby": "有[yǒu]靠窗[kào chuāng]的[de]位子[wèi zi]吗[ma]？",
+   "kana": "you kaochuang de weizi ma",
+   "romaji": "Yǒu kàochuāng de wèizi ma?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L01",
+   "level": 2,
+   "order": 385,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.hear-yao-deng",
+   "cat": "food",
+   "kind": "hear",
+   "en": "There are no tables now; it's a 20-minute wait.",
+   "ja": "现在没有位子，要等二十分钟。",
+   "ruby": "现在[xiàn zài]没有[méi yǒu]位子[wèi zi]，要[yào]等[děng]二十[èr shí]分钟[fēn zhōng]。",
+   "kana": "xianzai meiyou weizi yao deng ershi fenzhong",
+   "romaji": "Xiànzài méiyǒu wèizi, yào děng èrshí fēnzhōng.",
+   "replies": [
+    "zh.food.wo-men-deng",
+    "zh.food.na-suan-le"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L01",
+   "level": 2,
+   "order": 386,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.wo-men-deng",
+   "cat": "food",
+   "kind": "say",
+   "en": "That's fine, we'll wait.",
+   "ja": "没关系，我们等。",
+   "ruby": "没关系[méi guān xi]，我们[wǒ men]等[děng]。",
+   "kana": "meiguanxi women deng",
+   "romaji": "Méiguānxi, wǒmen děng.",
+   "replyTo": [
+    "zh.food.hear-yao-deng"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L01",
+   "level": 2,
+   "order": 387,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.na-suan-le",
+   "cat": "food",
+   "kind": "say",
+   "en": "Never mind, then.",
+   "ja": "那算了。",
+   "ruby": "那[nà]算了[suàn le]。",
+   "kana": "na suanle",
+   "romaji": "Nà suànle.",
+   "note": "算了 = forget it, let it go.",
+   "replyTo": [
+    "zh.food.hear-yao-deng"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L01",
+   "level": 2,
+   "order": 388,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.hear-you-yu-ding-ma",
+   "cat": "food",
+   "kind": "hear",
+   "en": "Do you have a reservation?",
+   "ja": "您有预订吗？",
+   "ruby": "您[nín]有[yǒu]预订[yù dìng]吗[ma]？",
+   "kana": "nin you yuding ma",
+   "romaji": "Nín yǒu yùdìng ma?",
+   "replies": [
+    "zh.food.yu-ding-le",
+    "zh.food.mei-you-yu-ding"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L01",
+   "level": 2,
+   "order": 389,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.yu-ding-le",
+   "cat": "food",
+   "kind": "say",
+   "en": "I have a reservation, under Wang.",
+   "ja": "我预订了，姓王。",
+   "ruby": "我[wǒ]预订[yù dìng]了[le]，姓[xìng]王[Wáng]。",
+   "kana": "wo yuding le xing wang",
+   "romaji": "Wǒ yùdìng le, xìng Wáng.",
+   "replyTo": [
+    "zh.food.hear-you-yu-ding-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L01",
+   "level": 2,
+   "order": 390,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.mei-you-yu-ding",
+   "cat": "food",
+   "kind": "say",
+   "en": "No, we didn't book.",
+   "ja": "没有，我们没预订。",
+   "ruby": "没有[méi yǒu]，我们[wǒ men]没[méi]预订[yù dìng]。",
+   "kana": "meiyou women mei yuding",
+   "romaji": "Méiyǒu, wǒmen méi yùdìng.",
+   "replyTo": [
+    "zh.food.hear-you-yu-ding-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L01",
+   "level": 2,
+   "order": 391,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.fu-wu-yuan",
+   "cat": "food",
+   "kind": "say",
+   "en": "Excuse me! (to a waiter)",
+   "ja": "服务员！",
+   "ruby": "服务员[fú wù yuán]！",
+   "kana": "fuwuyuan",
+   "romaji": "Fúwùyuán!",
+   "note": "Calling 服务员 out loud is normal and polite enough.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L02",
+   "level": 2,
+   "order": 392,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.gei-wo-cai-dan",
+   "cat": "food",
+   "kind": "say",
+   "en": "Could I have the menu, please?",
+   "ja": "请给我菜单。",
+   "ruby": "请[qǐng]给[gěi]我[wǒ]菜单[cài dān]。",
+   "kana": "qing gei wo caidan",
+   "romaji": "Qǐng gěi wǒ càidān.",
+   "note": "Three 3rd tones: usually spoken qíng géi wǒ.",
+   "tags": [
+    "core",
+    "sandhi"
+   ],
+   "lesson": "Z08-L02",
+   "level": 2,
+   "order": 393,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.ying-wen-cai-dan",
+   "cat": "food",
+   "kind": "say",
+   "en": "Do you have an English menu?",
+   "ja": "有英文菜单吗？",
+   "ruby": "有[yǒu]英文[Yīng wén]菜单[cài dān]吗[ma]？",
+   "kana": "you yingwen caidan ma",
+   "romaji": "Yǒu Yīngwén càidān ma?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L02",
+   "level": 2,
+   "order": 394,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.hear-dian-shen-me",
+   "cat": "food",
+   "kind": "hear",
+   "en": "What would you like to order?",
+   "ja": "你们要点什么？",
+   "ruby": "你们[nǐ men]要[yào]点[diǎn]什么[shén me]？",
+   "kana": "nimen yao dian shenme",
+   "romaji": "Nǐmen yào diǎn shénme?",
+   "replies": [
+    "zh.food.lai-gong-bao-ji-ding",
+    "zh.food.you-shen-me-tui-jian"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L02",
+   "level": 2,
+   "order": 395,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.lai-gong-bao-ji-ding",
+   "cat": "food",
+   "kind": "say",
+   "en": "A kung pao chicken, please.",
+   "ja": "来一个宫保鸡丁。",
+   "ruby": "来[lái]一[yí]个[ge]宫保鸡丁[gōng bǎo jī dīng]。",
+   "kana": "lai yi ge gongbaojiding",
+   "romaji": "Lái yí ge gōngbǎojīdīng.",
+   "replyTo": [
+    "zh.food.hear-dian-shen-me"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L02",
+   "level": 2,
+   "order": 396,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.you-shen-me-tui-jian",
+   "cat": "food",
+   "kind": "say",
+   "en": "What do you recommend?",
+   "ja": "你们有什么推荐的？",
+   "ruby": "你们[nǐ men]有[yǒu]什么[shén me]推荐[tuī jiàn]的[de]？",
+   "kana": "nimen you shenme tuijian de",
+   "romaji": "Nǐmen yǒu shénme tuījiàn de?",
+   "replyTo": [
+    "zh.food.hear-dian-shen-me"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L02",
+   "level": 2,
+   "order": 397,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.hear-hen-you-ming",
+   "cat": "food",
+   "kind": "hear",
+   "en": "This dish is very famous.",
+   "ja": "这个菜很有名。",
+   "ruby": "这个[zhè ge]菜[cài]很[hěn]有名[yǒu míng]。",
+   "kana": "zhege cai hen youming",
+   "romaji": "Zhège cài hěn yǒumíng.",
+   "replies": [
+    "zh.food.na-jiu-yao-zhe-ge"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L02",
+   "level": 2,
+   "order": 398,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.na-jiu-yao-zhe-ge",
+   "cat": "food",
+   "kind": "say",
+   "en": "Then I'll have that.",
+   "ja": "那就要这个吧。",
+   "ruby": "那[nà]就[jiù]要[yào]这个[zhè ge]吧[ba]。",
+   "kana": "na jiu yao zhege ba",
+   "romaji": "Nà jiù yào zhège ba.",
+   "replyTo": [
+    "zh.food.hear-hen-you-ming"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L02",
+   "level": 2,
+   "order": 399,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.ke-yi-bu-yao-la",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "Could you make it not spicy?",
+   "ja": "可以不要辣吗？",
+   "ruby": "可以[kě yǐ]不[bú]要[yào]辣[là]吗[ma]？",
+   "kana": "keyi bu yao la ma",
+   "romaji": "Kěyǐ bú yào là ma?",
+   "note": "可以……吗？ asks for permission or whether something is possible.",
+   "pattern": "可以……吗？",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L02",
+   "level": 2,
+   "order": 400,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.shao-fang-yan",
+   "cat": "food",
+   "kind": "say",
+   "en": "Go easy on the salt, please.",
+   "ja": "少放点儿盐。",
+   "ruby": "少[shǎo]放[fàng]点儿[diǎn r]盐[yán]。",
+   "kana": "shao fang dianr yan",
+   "romaji": "Shǎo fàng diǎnr yán.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L02",
+   "level": 2,
+   "order": 401,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.hear-hai-yao-bie-de-ma",
+   "cat": "food",
+   "kind": "hear",
+   "en": "Anything else?",
+   "ja": "还要别的吗？",
+   "ruby": "还[hái]要[yào]别的[bié de]吗[ma]？",
+   "kana": "hai yao biede ma",
+   "romaji": "Hái yào biéde ma?",
+   "replies": [
+    "zh.food.gou-le",
+    "zh.food.zai-lai-yi-wan-mi-fan"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L02",
+   "level": 2,
+   "order": 402,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.gou-le",
+   "cat": "food",
+   "kind": "say",
+   "en": "That's enough, thanks.",
+   "ja": "够了，谢谢。",
+   "ruby": "够[gòu]了[le]，谢谢[xiè xie]。",
+   "kana": "gou le xiexie",
+   "romaji": "Gòu le, xièxie.",
+   "replyTo": [
+    "zh.food.hear-hai-yao-bie-de-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L02",
+   "level": 2,
+   "order": 403,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.zai-lai-yi-wan-mi-fan",
+   "cat": "food",
+   "kind": "say",
+   "en": "One more bowl of rice, please.",
+   "ja": "再来一碗米饭。",
+   "ruby": "再[zài]来[lái]一[yì]碗[wǎn]米饭[mǐ fàn]。",
+   "kana": "zai lai yi wan mifan",
+   "romaji": "Zài lái yì wǎn mǐfàn.",
+   "replyTo": [
+    "zh.food.hear-hai-yao-bie-de-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L02",
+   "level": 2,
+   "order": 404,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.neng-gei-wo-kuai-zi",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "Could I have a pair of chopsticks?",
+   "ja": "能给我一双筷子吗？",
+   "ruby": "能[néng]给[gěi]我[wǒ]一[yì]双[shuāng]筷子[kuài zi]吗[ma]？",
+   "kana": "neng gei wo yi shuang kuaizi ma",
+   "romaji": "Néng gěi wǒ yì shuāng kuàizi ma?",
+   "note": "能 asks whether something is possible; in requests 能 and 可以 both work.",
+   "pattern": "能……吗？",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L03",
+   "level": 2,
+   "order": 405,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.yi-bei-re-shui",
+   "cat": "food",
+   "kind": "say",
+   "en": "A glass of hot water, please.",
+   "ja": "请给我一杯热水。",
+   "ruby": "请[qǐng]给[gěi]我[wǒ]一[yì]杯[bēi]热水[rè shuǐ]。",
+   "kana": "qing gei wo yi bei reshui",
+   "romaji": "Qǐng gěi wǒ yì bēi rèshuǐ.",
+   "note": "Hot water is a normal thing to ask for in China.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L03",
+   "level": 2,
+   "order": 406,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.cai-hai-mei-shang",
+   "cat": "food",
+   "kind": "say",
+   "en": "My dish hasn't come yet.",
+   "ja": "我的菜还没上。",
+   "ruby": "我[wǒ]的[de]菜[cài]还[hái]没[méi]上[shàng]。",
+   "kana": "wo de cai hai mei shang",
+   "romaji": "Wǒ de cài hái méi shàng.",
+   "note": "上菜 = bring food to the table.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L03",
+   "level": 2,
+   "order": 407,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.hear-ma-shang-lai",
+   "cat": "food",
+   "kind": "hear",
+   "en": "Coming right away!",
+   "ja": "马上就来！",
+   "ruby": "马上[mǎ shàng]就[jiù]来[lái]！",
+   "kana": "mashang jiu lai",
+   "romaji": "Mǎshàng jiù lái!",
+   "note": "No reply needed.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L03",
+   "level": 2,
+   "order": 408,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.bu-shi-wo-dian-de",
+   "cat": "food",
+   "kind": "say",
+   "en": "This isn't what I ordered.",
+   "ja": "这不是我点的。",
+   "ruby": "这[zhè]不[bú]是[shì]我[wǒ]点[diǎn]的[de]。",
+   "kana": "zhe bu shi wo dian de",
+   "romaji": "Zhè bú shì wǒ diǎn de.",
+   "note": "3rd + 3rd tone: wó diǎn.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L03",
+   "level": 2,
+   "order": 409,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.hear-cai-mei-you-le",
+   "cat": "food",
+   "kind": "hear",
+   "en": "Sorry, we're out of this dish.",
+   "ja": "不好意思，这个菜没有了。",
+   "ruby": "不好意思[bù hǎo yì si]，这个[zhè ge]菜[cài]没有[méi yǒu]了[le]。",
+   "kana": "buhaoyisi zhege cai meiyou le",
+   "romaji": "Bùhǎoyìsi, zhège cài méiyǒu le.",
+   "note": "没有……了 = there is no more.",
+   "replies": [
+    "zh.food.na-huan-yi-ge"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L03",
+   "level": 2,
+   "order": 410,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.na-huan-yi-ge",
+   "cat": "food",
+   "kind": "say",
+   "en": "Then I'll pick something else.",
+   "ja": "那我换一个。",
+   "ruby": "那[nà]我[wǒ]换[huàn]一[yí]个[ge]。",
+   "kana": "na wo huan yi ge",
+   "romaji": "Nà wǒ huàn yí ge.",
+   "replyTo": [
+    "zh.food.hear-cai-mei-you-le"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L03",
+   "level": 2,
+   "order": 411,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.ke-yi-da-bao",
+   "cat": "food",
+   "kind": "say",
+   "en": "Can we take the leftovers?",
+   "ja": "可以打包吗？",
+   "ruby": "可以[kě yǐ]打包[dǎ bāo]吗[ma]？",
+   "kana": "keyi dabao ma",
+   "romaji": "Kěyǐ dǎbāo ma?",
+   "note": "打包 = pack food to take away.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L03",
+   "level": 2,
+   "order": 412,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.cai-dou-hen-hao-chi",
+   "cat": "food",
+   "kind": "say",
+   "en": "All the dishes are delicious.",
+   "ja": "菜都很好吃。",
+   "ruby": "菜[cài]都[dōu]很[hěn]好吃[hǎo chī]。",
+   "kana": "cai dou hen haochi",
+   "romaji": "Cài dōu hěn hǎochī.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L03",
+   "level": 2,
+   "order": 413,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.gan-bei",
+   "cat": "food",
+   "kind": "say",
+   "en": "Cheers!",
+   "ja": "干杯！",
+   "ruby": "干杯[gān bēi]！",
+   "kana": "ganbei",
+   "romaji": "Gānbēi!",
+   "note": "Literally \"dry the glass\"; with tea or juice it is just as fine.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L03",
+   "level": 2,
+   "order": 414,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.word-kuai-zi",
+   "cat": "food",
+   "kind": "say",
+   "en": "chopsticks",
+   "ja": "筷子",
+   "ruby": "筷子[kuài zi]",
+   "kana": "kuaizi",
+   "romaji": "kuàizi",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z08-L03",
+   "level": 2,
+   "order": 415,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.word-shao-zi",
+   "cat": "food",
+   "kind": "say",
+   "en": "spoon",
+   "ja": "勺子",
+   "ruby": "勺子[sháo zi]",
+   "kana": "shaozi",
+   "romaji": "sháozi",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z08-L03",
+   "level": 2,
+   "order": 416,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.word-can-jin-zhi",
+   "cat": "food",
+   "kind": "say",
+   "en": "paper napkin",
+   "ja": "餐巾纸",
+   "ruby": "餐巾纸[cān jīn zhǐ]",
+   "kana": "canjinzhi",
+   "romaji": "cānjīnzhǐ",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z08-L03",
+   "level": 2,
+   "order": 417,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.mai-dan",
+   "cat": "food",
+   "kind": "say",
+   "en": "The bill, please!",
+   "ja": "服务员，买单！",
+   "ruby": "服务员[fú wù yuán]，买单[mǎi dān]！",
+   "kana": "fuwuyuan maidan",
+   "romaji": "Fúwùyuán, mǎidān!",
+   "note": "买单 or 结账 = pay the bill.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L04",
+   "level": 2,
+   "order": 418,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.jie-zhang",
+   "cat": "food",
+   "kind": "say",
+   "en": "We'd like to pay.",
+   "ja": "我们结账。",
+   "ruby": "我们[wǒ men]结账[jié zhàng]。",
+   "kana": "women jiezhang",
+   "romaji": "Wǒmen jiézhàng.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L04",
+   "level": 2,
+   "order": 419,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.hear-yi-gong",
+   "cat": "food",
+   "kind": "hear",
+   "en": "That's 128 yuan altogether.",
+   "ja": "一共一百二十八块。",
+   "ruby": "一共[yí gòng]一百[yì bǎi]二十八[èr shí bā]块[kuài]。",
+   "kana": "yigong yibai ershiba kuai",
+   "romaji": "Yígòng yìbǎi èrshíbā kuài.",
+   "note": "块 = yuan in speech.",
+   "replies": [
+    "zh.food.sao-ma",
+    "zh.food.shua-ka"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L04",
+   "level": 2,
+   "order": 420,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.sao-ma",
+   "cat": "food",
+   "kind": "say",
+   "en": "Can I pay by scanning a QR code?",
+   "ja": "可以扫码吗？",
+   "ruby": "可以[kě yǐ]扫码[sǎo mǎ]吗[ma]？",
+   "kana": "keyi saoma ma",
+   "romaji": "Kěyǐ sǎomǎ ma?",
+   "note": "Most people pay by phone. 3rd + 3rd tone: ké yǐ, sáo mǎ.",
+   "replyTo": [
+    "zh.food.hear-yi-gong"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L04",
+   "level": 2,
+   "order": 421,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.shua-ka",
+   "cat": "food",
+   "kind": "say",
+   "en": "Can I pay by card?",
+   "ja": "可以刷卡吗？",
+   "ruby": "可以[kě yǐ]刷卡[shuā kǎ]吗[ma]？",
+   "kana": "keyi shuaka ma",
+   "romaji": "Kěyǐ shuākǎ ma?",
+   "replyTo": [
+    "zh.food.hear-yi-gong"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L04",
+   "level": 2,
+   "order": 422,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.hear-wei-xin-zhi-fu-bao",
+   "cat": "food",
+   "kind": "hear",
+   "en": "WeChat or Alipay?",
+   "ja": "微信还是支付宝？",
+   "ruby": "微信[Wēi xìn]还是[hái shi]支付宝[Zhī fù bǎo]？",
+   "kana": "weixin haishi zhifubao",
+   "romaji": "Wēixìn háishi Zhīfùbǎo?",
+   "replies": [
+    "zh.food.wei-xin"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L04",
+   "level": 2,
+   "order": 423,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.wei-xin",
+   "cat": "food",
+   "kind": "say",
+   "en": "WeChat.",
+   "ja": "微信。",
+   "ruby": "微信[Wēi xìn]。",
+   "kana": "weixin",
+   "romaji": "Wēixìn.",
+   "replyTo": [
+    "zh.food.hear-wei-xin-zhi-fu-bao"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L04",
+   "level": 2,
+   "order": 424,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.wo-qing-ke",
+   "cat": "food",
+   "kind": "say",
+   "en": "It's my treat today.",
+   "ja": "今天我请客。",
+   "ruby": "今天[jīn tiān]我[wǒ]请客[qǐng kè]。",
+   "kana": "jintian wo qingke",
+   "romaji": "Jīntiān wǒ qǐngkè.",
+   "note": "请客 = pay for everyone.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L04",
+   "level": 2,
+   "order": 425,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.ge-fu-ge-de",
+   "cat": "food",
+   "kind": "say",
+   "en": "Let's split the bill.",
+   "ja": "我们各付各的吧。",
+   "ruby": "我们[wǒ men]各[gè]付[fù]各[gè]的[de]吧[ba]。",
+   "kana": "women ge fu ge de ba",
+   "romaji": "Wǒmen gè fù gè de ba.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L04",
+   "level": 2,
+   "order": 426,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.kai-fa-piao",
+   "cat": "food",
+   "kind": "say",
+   "en": "Can I get an official receipt?",
+   "ja": "能开发票吗？",
+   "ruby": "能[néng]开[kāi]发票[fā piào]吗[ma]？",
+   "kana": "neng kai fapiao ma",
+   "romaji": "Néng kāi fāpiào ma?",
+   "note": "发票 = official receipt (for expenses).",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L04",
+   "level": 2,
+   "order": 427,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.hear-xia-ci-zai-lai",
+   "cat": "food",
+   "kind": "hear",
+   "en": "Please come again!",
+   "ja": "欢迎下次再来！",
+   "ruby": "欢迎[huān yíng]下次[xià cì]再[zài]来[lái]！",
+   "kana": "huanying xiaci zai lai",
+   "romaji": "Huānyíng xiàcì zài lái!",
+   "note": "No reply needed; 谢谢 or 再见 is nice.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L04",
+   "level": 2,
+   "order": 428,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.xie-xie-hen-hao-chi",
+   "cat": "food",
+   "kind": "say",
+   "en": "Thank you, it was delicious!",
+   "ja": "谢谢，很好吃！",
+   "ruby": "谢谢[xiè xie]，很[hěn]好吃[hǎo chī]！",
+   "kana": "xiexie hen haochi",
+   "romaji": "Xièxie, hěn hǎochī!",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z08-L04",
+   "level": 2,
+   "order": 429,
+   "src": "new"
+  },
+  {
+   "id": "zh.food.word-xian-jin",
+   "cat": "food",
+   "kind": "say",
+   "en": "cash",
+   "ja": "现金",
+   "ruby": "现金[xiàn jīn]",
+   "kana": "xianjin",
+   "romaji": "xiànjīn",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z08-L04",
+   "level": 2,
+   "order": 430,
    "src": "new"
   }
  ]
