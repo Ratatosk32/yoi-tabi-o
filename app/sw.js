@@ -1,7 +1,7 @@
 // Service Worker (same-origin separate file — Blob SWs are not allowed, PLAN.md 2d).
 // Bump VERSION whenever app files change — the browser sees a new sw.js
 // and the app offers "Update" (no silent reloads).
-const VERSION = 'v18';
+const VERSION = 'v19';
 const CACHE = `jt-${VERSION}`;
 // Dictionary (JMdict) files: their own cache, cache-first, NOT part of the shell precache. Bump with the data
 // (dictDate) only: a shell update does not re-download the dictionary, a dictionary update does not touch the shell.
@@ -140,7 +140,7 @@ self.addEventListener('fetch', (event) => {
       const cached = await cache.match(req, { ignoreSearch: true });
       if (cached && ZH_DICT_FILES.test(url.pathname)) return cached;
       const network = fetch(req).then((res) => {
-        if (res.ok) cache.put(req, res.clone());
+        if (res.ok && !(res.headers.get('content-type') || '').includes('text/html')) cache.put(req, res.clone());
         return res;
       }).catch(() => null);
       if (cached) return cached;

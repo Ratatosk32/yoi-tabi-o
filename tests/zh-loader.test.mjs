@@ -34,10 +34,17 @@ test('the zh loader fetches exactly the three course files under data/zh/ (the d
 });
 
 test('a failed or stalled download rejects with a message (the UI shows Retry)', async () => {
-  const f = fakeFetch({ fail: 'data/zh/pinyin.json' });
-  await assert.rejects(loadLangData('zh', { fetchFn: f.fn }), /data\/zh\/pinyin\.json: HTTP 404/);
+  const f = fakeFetch({ fail: 'data/zh/curriculum.json' });
+  await assert.rejects(loadLangData('zh', { fetchFn: f.fn }), /data\/zh\/curriculum\.json: HTTP 404/);
   const never = (url, { signal }) => new Promise((resolve, reject) => signal.addEventListener('abort', () => reject(Object.assign(new Error('aborted'), { name: 'AbortError' }))));
   await assert.rejects(loadJson('data/zh/hanzi.json', { fetchFn: never, timeoutMs: 20 }), /no response in 0.02 s/);
+});
+
+test('zh still loads when pinyin.json or hanzi.json is not deployed yet', async () => {
+  const f = fakeFetch({ fail: 'data/zh/pinyin.json' });
+  const data = await loadLangData('zh', { fetchFn: f.fn });
+  assert.deepEqual(data.pinyin, {});
+  assert.ok(data.items.length > 0);
 });
 
 test('nothing Chinese is requested by the Japanese loader', async () => {

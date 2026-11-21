@@ -41,7 +41,9 @@ export function buildData(langId, cur, alphabet, chars) {
 export async function loadLangData(langId, options = {}) {
   const paths = LANGS[langId].data;
   const [cur, alphabet, chars] = await Promise.all([
-    loadJson(paths.curriculum, options), loadJson(paths.alphabet, options), loadJson(paths.chars, options),
+    loadJson(paths.curriculum, options),
+    loadJson(paths.alphabet, options).catch((e) => { if (langId === 'ja') throw e; return {}; }),
+    loadJson(paths.chars, options).catch((e) => { if (langId === 'ja') throw e; return { groups: [], items: [] }; }),
   ]);
   return buildData(langId, cur, alphabet, chars);
 }
