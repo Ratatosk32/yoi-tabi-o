@@ -1,0 +1,2561 @@
+{
+ "format": 1,
+ "lang": "zh",
+ "locale": "zh-CN",
+ "script": "Hans",
+ "version": 1,
+ "generated": "2026-11-21",
+ "source": "curriculum/zh/src/*.mjs via curriculum/zh/tools/build.mjs",
+ "categories": [
+  {
+   "id": "basics",
+   "en": "Basics",
+   "icon": "好"
+  },
+  {
+   "id": "people",
+   "en": "People and family",
+   "icon": "人"
+  },
+  {
+   "id": "numbers",
+   "en": "Numbers, time, dates",
+   "icon": "数"
+  },
+  {
+   "id": "daily",
+   "en": "Daily life, home, weather",
+   "icon": "家"
+  },
+  {
+   "id": "food",
+   "en": "Food and eating out",
+   "icon": "吃"
+  },
+  {
+   "id": "shopping",
+   "en": "Shopping and money",
+   "icon": "买"
+  },
+  {
+   "id": "city",
+   "en": "City and transport",
+   "icon": "路"
+  },
+  {
+   "id": "work",
+   "en": "Work and study",
+   "icon": "工"
+  },
+  {
+   "id": "health",
+   "en": "Health",
+   "icon": "医"
+  },
+  {
+   "id": "feelings",
+   "en": "Feelings and opinions",
+   "icon": "心"
+  },
+  {
+   "id": "talk",
+   "en": "Small talk and free time",
+   "icon": "说"
+  },
+  {
+   "id": "phone",
+   "en": "Phone and messaging",
+   "icon": "话"
+  },
+  {
+   "id": "patterns",
+   "en": "Grammar patterns",
+   "icon": "型"
+  }
+ ],
+ "units": [
+  {
+   "id": "Z01",
+   "title": "Hello",
+   "path": "core",
+   "hsk": 1
+  },
+  {
+   "id": "Z02",
+   "title": "Family and people",
+   "path": "core",
+   "hsk": 1
+  },
+  {
+   "id": "Z03",
+   "title": "Numbers and measure words",
+   "path": "core",
+   "hsk": 1
+  },
+  {
+   "id": "Z04",
+   "title": "Time and dates",
+   "path": "core",
+   "hsk": 1
+  },
+  {
+   "id": "Z05",
+   "title": "Where things are",
+   "path": "core",
+   "hsk": 1
+  },
+  {
+   "id": "Z06",
+   "title": "Daily routine",
+   "path": "core",
+   "hsk": 1
+  },
+  {
+   "id": "Z07",
+   "title": "Food and drink",
+   "path": "core",
+   "hsk": 1
+  },
+  {
+   "id": "Z08",
+   "title": "Eating out",
+   "path": "core",
+   "hsk": 2
+  },
+  {
+   "id": "Z09",
+   "title": "Shopping and money",
+   "path": "core",
+   "hsk": 2
+  },
+  {
+   "id": "Z10",
+   "title": "What happened",
+   "path": "core",
+   "hsk": 2
+  },
+  {
+   "id": "Z11",
+   "title": "Around the city",
+   "path": "core",
+   "hsk": 2
+  },
+  {
+   "id": "Z12",
+   "title": "Transport and travel",
+   "path": "core",
+   "hsk": 2
+  },
+  {
+   "id": "Z13",
+   "title": "At home",
+   "path": "core",
+   "hsk": 2
+  },
+  {
+   "id": "Z14",
+   "title": "Weather and comparisons",
+   "path": "core",
+   "hsk": 2
+  },
+  {
+   "id": "Z15",
+   "title": "Work and study",
+   "path": "core",
+   "hsk": 3
+  },
+  {
+   "id": "Z16",
+   "title": "Health",
+   "path": "core",
+   "hsk": 3
+  },
+  {
+   "id": "Z17",
+   "title": "Free time and results",
+   "path": "core",
+   "hsk": 3
+  },
+  {
+   "id": "Z18",
+   "title": "Feelings and opinions",
+   "path": "core",
+   "hsk": 3
+  },
+  {
+   "id": "Z19",
+   "title": "Small talk",
+   "path": "core",
+   "hsk": 3
+  },
+  {
+   "id": "Z20",
+   "title": "Phone and messaging",
+   "path": "core",
+   "hsk": 3
+  },
+  {
+   "id": "Z21",
+   "title": "Views and arguments",
+   "path": "ext",
+   "hsk": 4
+  },
+  {
+   "id": "Z22",
+   "title": "Life and plans",
+   "path": "ext",
+   "hsk": 4
+  }
+ ],
+ "lessons": [
+  {
+   "code": "Z01-L01",
+   "unit": "Z01",
+   "title": "Greetings",
+   "goal": "Say hello, goodbye, thank you and sorry.",
+   "level": 1,
+   "path": "core",
+   "hsk": 1,
+   "patterns": [],
+   "count": 13,
+   "ids": [
+    "zh.basics.ni-hao",
+    "zh.basics.nin-hao",
+    "zh.basics.ni-men-hao",
+    "zh.basics.zao-shang-hao",
+    "zh.basics.wan-shang-hao",
+    "zh.basics.lao-shi-hao",
+    "zh.basics.zai-jian",
+    "zh.basics.ming-tian-jian",
+    "zh.basics.xie-xie",
+    "zh.basics.bu-ke-qi",
+    "zh.basics.dui-bu-qi",
+    "zh.basics.mei-guan-xi",
+    "zh.basics.qing-jin"
+   ]
+  },
+  {
+   "code": "Z01-L02",
+   "unit": "Z01",
+   "title": "Who are you?",
+   "goal": "Say your name, nationality and job with 是 and 叫.",
+   "level": 1,
+   "path": "core",
+   "hsk": 1,
+   "patterns": [
+    "A 是 B",
+    "A 不是 B",
+    "我叫……",
+    "我姓……"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.patterns.wo-shi-xue-sheng",
+    "zh.patterns.wo-bu-shi-lao-shi",
+    "zh.people.ta-shi-yi-sheng",
+    "zh.people.hear-jiao-shen-me",
+    "zh.people.wo-jiao-an-na",
+    "zh.people.hear-gui-xing",
+    "zh.people.wo-xing-wang",
+    "zh.people.hear-na-guo-ren",
+    "zh.people.wo-shi-ying-guo-ren",
+    "zh.people.wo-shi-mei-guo-ren",
+    "zh.people.ta-shi-zhong-guo-ren",
+    "zh.people.hear-ren-shi-ni",
+    "zh.people.wo-ye-hen-gao-xing"
+   ]
+  },
+  {
+   "code": "Z01-L03",
+   "unit": "Z01",
+   "title": "How are you?",
+   "goal": "Ask yes / no questions with 吗 and bounce them back with 呢.",
+   "level": 1,
+   "path": "core",
+   "hsk": 1,
+   "patterns": [
+    "……吗？",
+    "……呢？",
+    "也",
+    "不太 + adjective"
+   ],
+   "count": 15,
+   "ids": [
+    "zh.basics.hear-ni-hao-ma",
+    "zh.basics.wo-hen-hao",
+    "zh.patterns.ni-ne",
+    "zh.basics.wo-ye-hen-hao",
+    "zh.basics.hai-ke-yi",
+    "zh.basics.bu-tai-hao",
+    "zh.basics.hear-zui-jin",
+    "zh.basics.ting-hao-de",
+    "zh.patterns.ni-shi-zhong-guo-ren-ma",
+    "zh.people.bu-wo-shi-ying-guo-ren",
+    "zh.basics.shi-de",
+    "zh.basics.dui",
+    "zh.basics.bu-dui",
+    "zh.people.hear-ye-shi-xue-sheng",
+    "zh.people.bu-shi-ta-shi-lao-shi"
+   ]
+  },
+  {
+   "code": "Z01-L04",
+   "unit": "Z01",
+   "title": "When you don't understand",
+   "goal": "Ask to repeat, slow down, explain or write it down.",
+   "level": 1,
+   "path": "core",
+   "hsk": 1,
+   "patterns": [
+    "会 + verb",
+    "请 + verb",
+    "verb + 一下"
+   ],
+   "count": 15,
+   "ids": [
+    "zh.basics.wo-bu-dong",
+    "zh.basics.wo-ting-bu-dong",
+    "zh.basics.qing-zai-shuo-yi-bian",
+    "zh.basics.qing-shuo-man-yi-dian",
+    "zh.basics.zhe-ge-zen-me-shuo",
+    "zh.basics.shen-me-yi-si",
+    "zh.patterns.wo-hui-shuo-yi-dian",
+    "zh.basics.hear-hui-shuo-ying-yu",
+    "zh.basics.hui-yi-dian",
+    "zh.basics.bu-hui",
+    "zh.basics.wo-bu-zhi-dao",
+    "zh.basics.neng-xie-yi-xia",
+    "zh.basics.hear-dong-le-ma",
+    "zh.basics.dong-le",
+    "zh.basics.qing-wen"
+   ]
+  },
+  {
+   "code": "Z02-L01",
+   "unit": "Z02",
+   "title": "This and that",
+   "goal": "Point at things and people; say whose they are with 的.",
+   "level": 1,
+   "path": "core",
+   "hsk": 1,
+   "patterns": [
+    "这 / 那",
+    "什么",
+    "谁",
+    "A 的 B"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.people.hear-zhe-shi-shen-me",
+    "zh.people.zhe-shi-wo-de-shu",
+    "zh.people.hear-na-shi-shei",
+    "zh.people.ta-shi-wo-peng-you",
+    "zh.people.hear-zhe-shi-shei-de",
+    "zh.people.shi-wo-de",
+    "zh.people.bu-shi-wo-de",
+    "zh.people.hear-ni-de-shou-ji",
+    "zh.people.na-shi-shen-me",
+    "zh.people.word-shou-ji",
+    "zh.people.word-dian-nao",
+    "zh.people.word-bei-zi",
+    "zh.people.word-bao"
+   ]
+  },
+  {
+   "code": "Z02-L02",
+   "unit": "Z02",
+   "title": "My family",
+   "goal": "Talk about family members with 有 / 没有 and count them.",
+   "level": 1,
+   "path": "core",
+   "hsk": 1,
+   "patterns": [
+    "有 / 没有",
+    "几 + measure word",
+    "两 + measure word"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.people.hear-ji-kou-ren",
+    "zh.people.si-kou-ren",
+    "zh.people.ba-ba-ma-ma",
+    "zh.people.hear-xiong-di-jie-mei",
+    "zh.people.yi-ge-ge-ge",
+    "zh.people.wo-mei-you",
+    "zh.people.word-jie-jie",
+    "zh.people.word-di-di",
+    "zh.people.word-er-zi",
+    "zh.people.word-nv-er",
+    "zh.people.hear-you-hai-zi-ma",
+    "zh.people.you-liang-ge",
+    "zh.people.zhe-shi-wo-ma-ma"
+   ]
+  },
+  {
+   "code": "Z02-L03",
+   "unit": "Z02",
+   "title": "Age and jobs",
+   "goal": "Ask and give age and job; say where you work with 在.",
+   "level": 1,
+   "path": "core",
+   "hsk": 1,
+   "patterns": [
+    "多大 / 几岁",
+    "做什么工作",
+    "在 + place + verb"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.people.hear-duo-da",
+    "zh.people.er-shi-wu-sui",
+    "zh.people.hear-ji-sui-le",
+    "zh.people.liu-sui-le",
+    "zh.people.hear-zuo-shen-me-gong-zuo",
+    "zh.people.wo-shi-lao-shi",
+    "zh.patterns.zai-gong-si-gong-zuo",
+    "zh.people.ta-zai-yi-yuan",
+    "zh.people.hear-zai-nar-gong-zuo",
+    "zh.people.word-yi-sheng",
+    "zh.people.word-hu-shi",
+    "zh.people.word-si-ji",
+    "zh.people.word-gong-cheng-shi"
+   ]
+  },
+  {
+   "code": "Z02-L04",
+   "unit": "Z02",
+   "title": "Describing people",
+   "goal": "Describe people with 很, 太……了, 真 and 不太.",
+   "level": 2,
+   "path": "core",
+   "hsk": 1,
+   "patterns": [
+    "很 + adjective",
+    "太……了",
+    "真 + adjective"
+   ],
+   "count": 14,
+   "ids": [
+    "zh.patterns.ta-hen-gao",
+    "zh.people.ta-hen-piao-liang",
+    "zh.people.ta-ren-hen-hao",
+    "zh.people.ke-ai",
+    "zh.patterns.tai-hao-le",
+    "zh.people.ta-bu-tai-gao",
+    "zh.people.zhen-cong-ming",
+    "zh.people.ta-hen-mang",
+    "zh.feelings.wo-hen-lei",
+    "zh.people.peng-you-hen-duo",
+    "zh.people.word-nian-qing",
+    "zh.people.word-ai",
+    "zh.people.hear-duo-gao",
+    "zh.people.yi-mi-ba"
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "zh.basics.ni-hao",
+   "cat": "basics",
+   "kind": "say",
+   "en": "Hello",
+   "ja": "你好！",
+   "ruby": "你[nǐ]好[hǎo]！",
+   "kana": "ni hao",
+   "romaji": "Nǐ hǎo!",
+   "note": "3rd + 3rd tone: the first 3rd tone is spoken as a 2nd: ní hǎo.",
+   "tags": [
+    "core",
+    "sandhi"
+   ],
+   "lesson": "Z01-L01",
+   "level": 1,
+   "order": 1,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.nin-hao",
+   "cat": "basics",
+   "kind": "say",
+   "en": "Hello (polite)",
+   "ja": "您好！",
+   "ruby": "您[nín]好[hǎo]！",
+   "kana": "nin hao",
+   "romaji": "Nín hǎo!",
+   "note": "您 is the polite \"you\": for older people, teachers and customers.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L01",
+   "level": 1,
+   "order": 2,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.ni-men-hao",
+   "cat": "basics",
+   "kind": "say",
+   "en": "Hello, everyone",
+   "ja": "你们好！",
+   "ruby": "你们[nǐ men]好[hǎo]！",
+   "kana": "nimen hao",
+   "romaji": "Nǐmen hǎo!",
+   "note": "们 makes a plural of people: 你们 = you (plural).",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L01",
+   "level": 1,
+   "order": 3,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.zao-shang-hao",
+   "cat": "basics",
+   "kind": "say",
+   "en": "Good morning",
+   "ja": "早上好！",
+   "ruby": "早上[zǎo shang]好[hǎo]！",
+   "kana": "zaoshang hao",
+   "romaji": "Zǎoshang hǎo!",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L01",
+   "level": 1,
+   "order": 4,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.wan-shang-hao",
+   "cat": "basics",
+   "kind": "say",
+   "en": "Good evening",
+   "ja": "晚上好！",
+   "ruby": "晚上[wǎn shang]好[hǎo]！",
+   "kana": "wanshang hao",
+   "romaji": "Wǎnshang hǎo!",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L01",
+   "level": 1,
+   "order": 5,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.lao-shi-hao",
+   "cat": "basics",
+   "kind": "say",
+   "en": "Hello, teacher",
+   "ja": "老师好！",
+   "ruby": "老师[lǎo shī]好[hǎo]！",
+   "kana": "laoshi hao",
+   "romaji": "Lǎoshī hǎo!",
+   "note": "Title after the name or alone: 王老师好！",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L01",
+   "level": 1,
+   "order": 6,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.zai-jian",
+   "cat": "basics",
+   "kind": "say",
+   "en": "Goodbye",
+   "ja": "再见！",
+   "ruby": "再见[zài jiàn]！",
+   "kana": "zaijian",
+   "romaji": "Zàijiàn!",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L01",
+   "level": 1,
+   "order": 7,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.ming-tian-jian",
+   "cat": "basics",
+   "kind": "say",
+   "en": "See you tomorrow",
+   "ja": "明天见！",
+   "ruby": "明天[míng tiān]见[jiàn]！",
+   "kana": "mingtian jian",
+   "romaji": "Míngtiān jiàn!",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L01",
+   "level": 1,
+   "order": 8,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.xie-xie",
+   "cat": "basics",
+   "kind": "say",
+   "en": "Thank you",
+   "ja": "谢谢！",
+   "ruby": "谢谢[xiè xie]！",
+   "kana": "xiexie",
+   "romaji": "Xièxie!",
+   "note": "The second 谢 is in the neutral tone: short and light.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L01",
+   "level": 1,
+   "order": 9,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.bu-ke-qi",
+   "cat": "basics",
+   "kind": "say",
+   "en": "You're welcome.",
+   "ja": "不客气。",
+   "ruby": "不[bú]客气[kè qi]。",
+   "kana": "bu keqi",
+   "romaji": "Bú kèqi.",
+   "note": "不 is bù, but bú before a 4th tone (客 kè).",
+   "tags": [
+    "core",
+    "sandhi"
+   ],
+   "lesson": "Z01-L01",
+   "level": 1,
+   "order": 10,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.dui-bu-qi",
+   "cat": "basics",
+   "kind": "say",
+   "en": "Sorry.",
+   "ja": "对不起。",
+   "ruby": "对不起[duì bu qǐ]。",
+   "kana": "duibuqi",
+   "romaji": "Duìbuqǐ.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L01",
+   "level": 1,
+   "order": 11,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.mei-guan-xi",
+   "cat": "basics",
+   "kind": "say",
+   "en": "That's all right. / Never mind.",
+   "ja": "没关系。",
+   "ruby": "没[méi]关系[guān xi]。",
+   "kana": "mei guanxi",
+   "romaji": "Méi guānxi.",
+   "note": "The usual answer to 对不起.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L01",
+   "level": 1,
+   "order": 12,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.qing-jin",
+   "cat": "basics",
+   "kind": "say",
+   "en": "Please come in.",
+   "ja": "请进。",
+   "ruby": "请[qǐng]进[jìn]。",
+   "kana": "qing jin",
+   "romaji": "Qǐng jìn.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L01",
+   "level": 1,
+   "order": 13,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.wo-shi-xue-sheng",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "I'm a student.",
+   "ja": "我是学生。",
+   "ruby": "我[wǒ]是[shì]学生[xué sheng]。",
+   "kana": "wo shi xuesheng",
+   "romaji": "Wǒ shì xuésheng.",
+   "note": "是 links two nouns: A 是 B = A is B.",
+   "pattern": "A 是 B",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L02",
+   "level": 1,
+   "order": 14,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.wo-bu-shi-lao-shi",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "I'm not a teacher.",
+   "ja": "我不是老师。",
+   "ruby": "我[wǒ]不[bú]是[shì]老师[lǎo shī]。",
+   "kana": "wo bu shi laoshi",
+   "romaji": "Wǒ bú shì lǎoshī.",
+   "note": "不是 bú shì: 不 rises before the 4th tone of 是.",
+   "pattern": "A 不是 B",
+   "tags": [
+    "core",
+    "sandhi"
+   ],
+   "lesson": "Z01-L02",
+   "level": 1,
+   "order": 15,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.ta-shi-yi-sheng",
+   "cat": "people",
+   "kind": "say",
+   "en": "He is a doctor.",
+   "ja": "他是医生。",
+   "ruby": "他[tā]是[shì]医生[yī shēng]。",
+   "kana": "ta shi yisheng",
+   "romaji": "Tā shì yīshēng.",
+   "note": "他 (he) and 她 (she) sound the same: tā.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L02",
+   "level": 1,
+   "order": 16,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.hear-jiao-shen-me",
+   "cat": "people",
+   "kind": "hear",
+   "en": "What's your name?",
+   "ja": "你叫什么名字？",
+   "ruby": "你[nǐ]叫[jiào]什么[shén me]名字[míng zi]？",
+   "kana": "ni jiao shenme mingzi",
+   "romaji": "Nǐ jiào shénme míngzi?",
+   "replies": [
+    "zh.people.wo-jiao-an-na"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L02",
+   "level": 1,
+   "order": 17,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.wo-jiao-an-na",
+   "cat": "people",
+   "kind": "say",
+   "en": "My name is Anna.",
+   "ja": "我叫安娜。",
+   "ruby": "我[wǒ]叫[jiào]安娜[Ān nà]。",
+   "kana": "wo jiao anna",
+   "romaji": "Wǒ jiào Ānnà.",
+   "note": "Put your own name after 叫.",
+   "replyTo": [
+    "zh.people.hear-jiao-shen-me"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L02",
+   "level": 1,
+   "order": 18,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.hear-gui-xing",
+   "cat": "people",
+   "kind": "hear",
+   "en": "What is your surname? (polite)",
+   "ja": "您贵姓？",
+   "ruby": "您[nín]贵姓[guì xìng]？",
+   "kana": "nin guixing",
+   "romaji": "Nín guìxìng?",
+   "note": "A polite question; answer with 我姓 + surname.",
+   "replies": [
+    "zh.people.wo-xing-wang"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L02",
+   "level": 1,
+   "order": 19,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.wo-xing-wang",
+   "cat": "people",
+   "kind": "say",
+   "en": "My surname is Wang.",
+   "ja": "我姓王。",
+   "ruby": "我[wǒ]姓[xìng]王[Wáng]。",
+   "kana": "wo xing wang",
+   "romaji": "Wǒ xìng Wáng.",
+   "replyTo": [
+    "zh.people.hear-gui-xing"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L02",
+   "level": 1,
+   "order": 20,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.hear-na-guo-ren",
+   "cat": "people",
+   "kind": "hear",
+   "en": "Which country are you from?",
+   "ja": "你是哪国人？",
+   "ruby": "你[nǐ]是[shì]哪[nǎ]国[guó]人[rén]？",
+   "kana": "ni shi na guo ren",
+   "romaji": "Nǐ shì nǎ guó rén?",
+   "replies": [
+    "zh.people.wo-shi-ying-guo-ren",
+    "zh.people.wo-shi-mei-guo-ren"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L02",
+   "level": 1,
+   "order": 21,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.wo-shi-ying-guo-ren",
+   "cat": "people",
+   "kind": "say",
+   "en": "I'm British.",
+   "ja": "我是英国人。",
+   "ruby": "我[wǒ]是[shì]英国人[Yīng guó rén]。",
+   "kana": "wo shi yingguoren",
+   "romaji": "Wǒ shì Yīngguórén.",
+   "note": "Country + 人 = a person from there.",
+   "replyTo": [
+    "zh.people.hear-na-guo-ren"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L02",
+   "level": 1,
+   "order": 22,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.wo-shi-mei-guo-ren",
+   "cat": "people",
+   "kind": "say",
+   "en": "I'm American.",
+   "ja": "我是美国人。",
+   "ruby": "我[wǒ]是[shì]美国人[Měi guó rén]。",
+   "kana": "wo shi meiguoren",
+   "romaji": "Wǒ shì Měiguórén.",
+   "replyTo": [
+    "zh.people.hear-na-guo-ren"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L02",
+   "level": 1,
+   "order": 23,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.ta-shi-zhong-guo-ren",
+   "cat": "people",
+   "kind": "say",
+   "en": "She's Chinese.",
+   "ja": "她是中国人。",
+   "ruby": "她[tā]是[shì]中国人[Zhōng guó rén]。",
+   "kana": "ta shi zhongguoren",
+   "romaji": "Tā shì Zhōngguórén.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L02",
+   "level": 1,
+   "order": 24,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.hear-ren-shi-ni",
+   "cat": "people",
+   "kind": "hear",
+   "en": "Nice to meet you.",
+   "ja": "认识你很高兴。",
+   "ruby": "认识[rèn shi]你[nǐ]很[hěn]高兴[gāo xìng]。",
+   "kana": "renshi ni hen gaoxing",
+   "romaji": "Rènshi nǐ hěn gāoxìng.",
+   "note": "很 before an adjective is often just a link, not \"very\".",
+   "replies": [
+    "zh.people.wo-ye-hen-gao-xing"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L02",
+   "level": 1,
+   "order": 25,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.wo-ye-hen-gao-xing",
+   "cat": "people",
+   "kind": "say",
+   "en": "Nice to meet you too.",
+   "ja": "我也很高兴。",
+   "ruby": "我[wǒ]也[yě]很[hěn]高兴[gāo xìng]。",
+   "kana": "wo ye hen gaoxing",
+   "romaji": "Wǒ yě hěn gāoxìng.",
+   "note": "Three 3rd tones in a row: usually spoken wó yé hěn.",
+   "replyTo": [
+    "zh.people.hear-ren-shi-ni"
+   ],
+   "tags": [
+    "core",
+    "sandhi"
+   ],
+   "lesson": "Z01-L02",
+   "level": 1,
+   "order": 26,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.hear-ni-hao-ma",
+   "cat": "basics",
+   "kind": "hear",
+   "en": "How are you?",
+   "ja": "你好吗？",
+   "ruby": "你[nǐ]好[hǎo]吗[ma]？",
+   "kana": "ni hao ma",
+   "romaji": "Nǐ hǎo ma?",
+   "note": "Correct but a little formal; friends say 最近怎么样？",
+   "replies": [
+    "zh.basics.wo-hen-hao",
+    "zh.basics.hai-ke-yi"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L03",
+   "level": 1,
+   "order": 27,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.wo-hen-hao",
+   "cat": "basics",
+   "kind": "say",
+   "en": "I'm very well.",
+   "ja": "我很好。",
+   "ruby": "我[wǒ]很[hěn]好[hǎo]。",
+   "kana": "wo hen hao",
+   "romaji": "Wǒ hěn hǎo.",
+   "note": "Three 3rd tones: usually spoken wó hén hǎo.",
+   "replyTo": [
+    "zh.basics.hear-ni-hao-ma"
+   ],
+   "tags": [
+    "core",
+    "sandhi"
+   ],
+   "lesson": "Z01-L03",
+   "level": 1,
+   "order": 28,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.ni-ne",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "And you?",
+   "ja": "你呢？",
+   "ruby": "你[nǐ]呢[ne]？",
+   "kana": "ni ne",
+   "romaji": "Nǐ ne?",
+   "note": "呢 bounces the question back: \"and you?\"",
+   "pattern": "……呢？",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L03",
+   "level": 1,
+   "order": 29,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.wo-ye-hen-hao",
+   "cat": "basics",
+   "kind": "say",
+   "en": "I'm fine too.",
+   "ja": "我也很好。",
+   "ruby": "我[wǒ]也[yě]很[hěn]好[hǎo]。",
+   "kana": "wo ye hen hao",
+   "romaji": "Wǒ yě hěn hǎo.",
+   "note": "也 (also) goes before the verb or adjective, never at the end.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L03",
+   "level": 1,
+   "order": 30,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.hai-ke-yi",
+   "cat": "basics",
+   "kind": "say",
+   "en": "Not bad. / OK.",
+   "ja": "还可以。",
+   "ruby": "还[hái]可以[kě yǐ]。",
+   "kana": "hai keyi",
+   "romaji": "Hái kěyǐ.",
+   "note": "3rd + 3rd tone: the first 3rd tone is spoken as a 2nd: ké yǐ.",
+   "replyTo": [
+    "zh.basics.hear-ni-hao-ma",
+    "zh.basics.hear-zui-jin"
+   ],
+   "tags": [
+    "core",
+    "sandhi"
+   ],
+   "lesson": "Z01-L03",
+   "level": 1,
+   "order": 31,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.bu-tai-hao",
+   "cat": "basics",
+   "kind": "say",
+   "en": "Not so good.",
+   "ja": "不太好。",
+   "ruby": "不[bú]太[tài]好[hǎo]。",
+   "kana": "bu tai hao",
+   "romaji": "Bú tài hǎo.",
+   "note": "不太 bú tài = not very.",
+   "replyTo": [
+    "zh.basics.hear-zui-jin"
+   ],
+   "tags": [
+    "core",
+    "sandhi"
+   ],
+   "lesson": "Z01-L03",
+   "level": 1,
+   "order": 32,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.hear-zui-jin",
+   "cat": "basics",
+   "kind": "hear",
+   "en": "How have you been lately?",
+   "ja": "最近怎么样？",
+   "ruby": "最近[zuì jìn]怎么样[zěn me yàng]？",
+   "kana": "zuijin zenmeyang",
+   "romaji": "Zuìjìn zěnmeyàng?",
+   "replies": [
+    "zh.basics.ting-hao-de",
+    "zh.basics.hai-ke-yi",
+    "zh.basics.bu-tai-hao"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L03",
+   "level": 1,
+   "order": 33,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.ting-hao-de",
+   "cat": "basics",
+   "kind": "say",
+   "en": "Pretty good.",
+   "ja": "挺好的。",
+   "ruby": "挺[tǐng]好[hǎo]的[de]。",
+   "kana": "ting hao de",
+   "romaji": "Tǐng hǎo de.",
+   "note": "挺……的 = quite. 3rd + 3rd tone: the first 3rd tone is spoken as a 2nd: tíng hǎo.",
+   "replyTo": [
+    "zh.basics.hear-zui-jin"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L03",
+   "level": 1,
+   "order": 34,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.ni-shi-zhong-guo-ren-ma",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "Are you Chinese?",
+   "ja": "你是中国人吗？",
+   "ruby": "你[nǐ]是[shì]中国人[Zhōng guó rén]吗[ma]？",
+   "kana": "ni shi zhongguoren ma",
+   "romaji": "Nǐ shì Zhōngguórén ma?",
+   "note": "Add 吗 to any statement to make a yes / no question.",
+   "pattern": "……吗？",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L03",
+   "level": 1,
+   "order": 35,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.bu-wo-shi-ying-guo-ren",
+   "cat": "people",
+   "kind": "say",
+   "en": "No, I'm British.",
+   "ja": "不，我是英国人。",
+   "ruby": "不[bù]，我[wǒ]是[shì]英国人[Yīng guó rén]。",
+   "kana": "bu wo shi yingguoren",
+   "romaji": "Bù, wǒ shì Yīngguórén.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L03",
+   "level": 1,
+   "order": 36,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.shi-de",
+   "cat": "basics",
+   "kind": "say",
+   "en": "Yes, that's right.",
+   "ja": "是的。",
+   "ruby": "是[shì]的[de]。",
+   "kana": "shi de",
+   "romaji": "Shì de.",
+   "note": "Chinese has no single word for \"yes\": repeat the verb (是 / 有 / 会) or say 对.",
+   "replyTo": [
+    "zh.people.hear-ye-shi-xue-sheng"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L03",
+   "level": 1,
+   "order": 37,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.dui",
+   "cat": "basics",
+   "kind": "say",
+   "en": "Right.",
+   "ja": "对。",
+   "ruby": "对[duì]。",
+   "kana": "dui",
+   "romaji": "Duì.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L03",
+   "level": 1,
+   "order": 38,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.bu-dui",
+   "cat": "basics",
+   "kind": "say",
+   "en": "That's not right.",
+   "ja": "不对。",
+   "ruby": "不[bú]对[duì]。",
+   "kana": "bu dui",
+   "romaji": "Bú duì.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L03",
+   "level": 1,
+   "order": 39,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.hear-ye-shi-xue-sheng",
+   "cat": "people",
+   "kind": "hear",
+   "en": "Is he a student too?",
+   "ja": "他也是学生吗？",
+   "ruby": "他[tā]也[yě]是[shì]学生[xué sheng]吗[ma]？",
+   "kana": "ta ye shi xuesheng ma",
+   "romaji": "Tā yě shì xuésheng ma?",
+   "replies": [
+    "zh.basics.shi-de",
+    "zh.people.bu-shi-ta-shi-lao-shi"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L03",
+   "level": 1,
+   "order": 40,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.bu-shi-ta-shi-lao-shi",
+   "cat": "people",
+   "kind": "say",
+   "en": "No, he's a teacher.",
+   "ja": "不是，他是老师。",
+   "ruby": "不[bú]是[shì]，他[tā]是[shì]老师[lǎo shī]。",
+   "kana": "bu shi ta shi laoshi",
+   "romaji": "Bú shì, tā shì lǎoshī.",
+   "replyTo": [
+    "zh.people.hear-ye-shi-xue-sheng"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L03",
+   "level": 1,
+   "order": 41,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.wo-bu-dong",
+   "cat": "basics",
+   "kind": "say",
+   "en": "I don't understand.",
+   "ja": "我不懂。",
+   "ruby": "我[wǒ]不[bù]懂[dǒng]。",
+   "kana": "wo bu dong",
+   "romaji": "Wǒ bù dǒng.",
+   "replyTo": [
+    "zh.basics.hear-dong-le-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L04",
+   "level": 1,
+   "order": 42,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.wo-ting-bu-dong",
+   "cat": "basics",
+   "kind": "say",
+   "en": "I can't understand (what I hear).",
+   "ja": "我听不懂。",
+   "ruby": "我[wǒ]听不懂[tīng bu dǒng]。",
+   "kana": "wo tingbudong",
+   "romaji": "Wǒ tīngbudǒng.",
+   "note": "Verb + 不 + result: 听不懂 = listen but not understand. 不 here is neutral.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L04",
+   "level": 1,
+   "order": 43,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.qing-zai-shuo-yi-bian",
+   "cat": "basics",
+   "kind": "say",
+   "en": "Please say it again.",
+   "ja": "请再说一遍。",
+   "ruby": "请[qǐng]再[zài]说[shuō]一[yí]遍[biàn]。",
+   "kana": "qing zai shuo yi bian",
+   "romaji": "Qǐng zài shuō yí biàn.",
+   "note": "一 is yī, but yí before a 4th tone (遍 biàn).",
+   "tags": [
+    "core",
+    "sandhi"
+   ],
+   "lesson": "Z01-L04",
+   "level": 1,
+   "order": 44,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.qing-shuo-man-yi-dian",
+   "cat": "basics",
+   "kind": "say",
+   "en": "Please speak more slowly.",
+   "ja": "请说慢一点儿。",
+   "ruby": "请[qǐng]说[shuō]慢[màn]一点儿[yì diǎn r]。",
+   "kana": "qing shuo man yidianr",
+   "romaji": "Qǐng shuō màn yìdiǎnr.",
+   "note": "一点儿 yìdiǎnr: 一 is yì before a 1st, 2nd or 3rd tone. The 儿 ending is northern; in the south people say 一点.",
+   "tags": [
+    "core",
+    "sandhi"
+   ],
+   "lesson": "Z01-L04",
+   "level": 1,
+   "order": 45,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.zhe-ge-zen-me-shuo",
+   "cat": "basics",
+   "kind": "say",
+   "en": "How do you say this in Chinese?",
+   "ja": "这个用中文怎么说？",
+   "ruby": "这个[zhè ge]用[yòng]中文[Zhōng wén]怎么[zěn me]说[shuō]？",
+   "kana": "zhege yong zhongwen zenme shuo",
+   "romaji": "Zhège yòng Zhōngwén zěnme shuō?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L04",
+   "level": 1,
+   "order": 46,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.shen-me-yi-si",
+   "cat": "basics",
+   "kind": "say",
+   "en": "What does this mean?",
+   "ja": "这是什么意思？",
+   "ruby": "这[zhè]是[shì]什么[shén me]意思[yì si]？",
+   "kana": "zhe shi shenme yisi",
+   "romaji": "Zhè shì shénme yìsi?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L04",
+   "level": 1,
+   "order": 47,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.wo-hui-shuo-yi-dian",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "I can speak a little Chinese.",
+   "ja": "我会说一点儿中文。",
+   "ruby": "我[wǒ]会[huì]说[shuō]一点儿[yì diǎn r]中文[Zhōng wén]。",
+   "kana": "wo hui shuo yidianr zhongwen",
+   "romaji": "Wǒ huì shuō yìdiǎnr Zhōngwén.",
+   "note": "会 = can, a skill you have learned.",
+   "pattern": "会 + verb",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L04",
+   "level": 1,
+   "order": 48,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.hear-hui-shuo-ying-yu",
+   "cat": "basics",
+   "kind": "hear",
+   "en": "Do you speak English?",
+   "ja": "你会说英语吗？",
+   "ruby": "你[nǐ]会[huì]说[shuō]英语[Yīng yǔ]吗[ma]？",
+   "kana": "ni hui shuo yingyu ma",
+   "romaji": "Nǐ huì shuō Yīngyǔ ma?",
+   "replies": [
+    "zh.basics.hui-yi-dian",
+    "zh.basics.bu-hui"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L04",
+   "level": 1,
+   "order": 49,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.hui-yi-dian",
+   "cat": "basics",
+   "kind": "say",
+   "en": "A little.",
+   "ja": "会一点儿。",
+   "ruby": "会[huì]一点儿[yì diǎn r]。",
+   "kana": "hui yidianr",
+   "romaji": "Huì yìdiǎnr.",
+   "replyTo": [
+    "zh.basics.hear-hui-shuo-ying-yu"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L04",
+   "level": 1,
+   "order": 50,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.bu-hui",
+   "cat": "basics",
+   "kind": "say",
+   "en": "No, I can't.",
+   "ja": "不会。",
+   "ruby": "不[bú]会[huì]。",
+   "kana": "bu hui",
+   "romaji": "Bú huì.",
+   "note": "Answer with the verb of the question: 会 / 不会.",
+   "replyTo": [
+    "zh.basics.hear-hui-shuo-ying-yu"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L04",
+   "level": 1,
+   "order": 51,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.wo-bu-zhi-dao",
+   "cat": "basics",
+   "kind": "say",
+   "en": "I don't know.",
+   "ja": "我不知道。",
+   "ruby": "我[wǒ]不[bù]知道[zhī dào]。",
+   "kana": "wo bu zhidao",
+   "romaji": "Wǒ bù zhīdào.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L04",
+   "level": 1,
+   "order": 52,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.neng-xie-yi-xia",
+   "cat": "basics",
+   "kind": "say",
+   "en": "Could you write it down?",
+   "ja": "你能写一下吗？",
+   "ruby": "你[nǐ]能[néng]写[xiě]一下[yí xià]吗[ma]？",
+   "kana": "ni neng xie yixia ma",
+   "romaji": "Nǐ néng xiě yíxià ma?",
+   "note": "Verb + 一下 (yíxià) softens a request: \"just ... a bit\".",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L04",
+   "level": 1,
+   "order": 53,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.hear-dong-le-ma",
+   "cat": "basics",
+   "kind": "hear",
+   "en": "Do you understand now?",
+   "ja": "你懂了吗？",
+   "ruby": "你[nǐ]懂[dǒng]了[le]吗[ma]？",
+   "kana": "ni dong le ma",
+   "romaji": "Nǐ dǒng le ma?",
+   "replies": [
+    "zh.basics.dong-le",
+    "zh.basics.wo-bu-dong"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L04",
+   "level": 1,
+   "order": 54,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.dong-le",
+   "cat": "basics",
+   "kind": "say",
+   "en": "Got it.",
+   "ja": "懂了。",
+   "ruby": "懂[dǒng]了[le]。",
+   "kana": "dong le",
+   "romaji": "Dǒng le.",
+   "replyTo": [
+    "zh.basics.hear-dong-le-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L04",
+   "level": 1,
+   "order": 55,
+   "src": "new"
+  },
+  {
+   "id": "zh.basics.qing-wen",
+   "cat": "basics",
+   "kind": "say",
+   "en": "Excuse me, are you Teacher Wang?",
+   "ja": "请问，你是王老师吗？",
+   "ruby": "请问[qǐng wèn]，你[nǐ]是[shì]王[Wáng]老师[lǎo shī]吗[ma]？",
+   "kana": "qingwen ni shi wang laoshi ma",
+   "romaji": "Qǐngwèn, nǐ shì Wáng lǎoshī ma?",
+   "note": "请问 = \"may I ask\": the polite way to start a question to a stranger.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L04",
+   "level": 1,
+   "order": 56,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.hear-zhe-shi-shen-me",
+   "cat": "people",
+   "kind": "hear",
+   "en": "What is this?",
+   "ja": "这是什么？",
+   "ruby": "这[zhè]是[shì]什么[shén me]？",
+   "kana": "zhe shi shenme",
+   "romaji": "Zhè shì shénme?",
+   "replies": [
+    "zh.people.zhe-shi-wo-de-shu"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L01",
+   "level": 1,
+   "order": 57,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.zhe-shi-wo-de-shu",
+   "cat": "people",
+   "kind": "say",
+   "en": "This is my book.",
+   "ja": "这是我的书。",
+   "ruby": "这[zhè]是[shì]我[wǒ]的[de]书[shū]。",
+   "kana": "zhe shi wo de shu",
+   "romaji": "Zhè shì wǒ de shū.",
+   "note": "的 links owner and thing: 我的书 = my book.",
+   "replyTo": [
+    "zh.people.hear-zhe-shi-shen-me"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L01",
+   "level": 1,
+   "order": 58,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.hear-na-shi-shei",
+   "cat": "people",
+   "kind": "hear",
+   "en": "Who is that?",
+   "ja": "那是谁？",
+   "ruby": "那[nà]是[shì]谁[shéi]？",
+   "kana": "na shi shei",
+   "romaji": "Nà shì shéi?",
+   "note": "谁 is shéi in everyday speech (shuí when read carefully).",
+   "replies": [
+    "zh.people.ta-shi-wo-peng-you"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L01",
+   "level": 1,
+   "order": 59,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.ta-shi-wo-peng-you",
+   "cat": "people",
+   "kind": "say",
+   "en": "He's my friend.",
+   "ja": "他是我朋友。",
+   "ruby": "他[tā]是[shì]我[wǒ]朋友[péng you]。",
+   "kana": "ta shi wo pengyou",
+   "romaji": "Tā shì wǒ péngyou.",
+   "note": "With close people 的 is usually dropped: 我朋友, 我妈妈.",
+   "replyTo": [
+    "zh.people.hear-na-shi-shei"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L01",
+   "level": 1,
+   "order": 60,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.hear-zhe-shi-shei-de",
+   "cat": "people",
+   "kind": "hear",
+   "en": "Whose is this?",
+   "ja": "这是谁的？",
+   "ruby": "这[zhè]是[shì]谁[shéi]的[de]？",
+   "kana": "zhe shi shei de",
+   "romaji": "Zhè shì shéi de?",
+   "replies": [
+    "zh.people.shi-wo-de",
+    "zh.people.bu-shi-wo-de"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L01",
+   "level": 1,
+   "order": 61,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.shi-wo-de",
+   "cat": "people",
+   "kind": "say",
+   "en": "It's mine.",
+   "ja": "是我的。",
+   "ruby": "是[shì]我[wǒ]的[de]。",
+   "kana": "shi wo de",
+   "romaji": "Shì wǒ de.",
+   "note": "我的 alone = mine.",
+   "replyTo": [
+    "zh.people.hear-zhe-shi-shei-de",
+    "zh.people.hear-ni-de-shou-ji"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L01",
+   "level": 1,
+   "order": 62,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.bu-shi-wo-de",
+   "cat": "people",
+   "kind": "say",
+   "en": "It's not mine.",
+   "ja": "不是我的。",
+   "ruby": "不[bú]是[shì]我[wǒ]的[de]。",
+   "kana": "bu shi wo de",
+   "romaji": "Bú shì wǒ de.",
+   "replyTo": [
+    "zh.people.hear-zhe-shi-shei-de",
+    "zh.people.hear-ni-de-shou-ji"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L01",
+   "level": 1,
+   "order": 63,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.hear-ni-de-shou-ji",
+   "cat": "people",
+   "kind": "hear",
+   "en": "Is this your phone?",
+   "ja": "这是你的手机吗？",
+   "ruby": "这[zhè]是[shì]你[nǐ]的[de]手机[shǒu jī]吗[ma]？",
+   "kana": "zhe shi ni de shouji ma",
+   "romaji": "Zhè shì nǐ de shǒujī ma?",
+   "replies": [
+    "zh.people.shi-wo-de",
+    "zh.people.bu-shi-wo-de"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L01",
+   "level": 1,
+   "order": 64,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.na-shi-shen-me",
+   "cat": "people",
+   "kind": "say",
+   "en": "What's that?",
+   "ja": "那是什么？",
+   "ruby": "那[nà]是[shì]什么[shén me]？",
+   "kana": "na shi shenme",
+   "romaji": "Nà shì shénme?",
+   "note": "这 zhè = this (near), 那 nà = that (far).",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L01",
+   "level": 1,
+   "order": 65,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.word-shou-ji",
+   "cat": "people",
+   "kind": "say",
+   "en": "mobile phone",
+   "ja": "手机",
+   "ruby": "手机[shǒu jī]",
+   "kana": "shouji",
+   "romaji": "shǒujī",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z02-L01",
+   "level": 1,
+   "order": 66,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.word-dian-nao",
+   "cat": "people",
+   "kind": "say",
+   "en": "computer",
+   "ja": "电脑",
+   "ruby": "电脑[diàn nǎo]",
+   "kana": "diannao",
+   "romaji": "diànnǎo",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z02-L01",
+   "level": 1,
+   "order": 67,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.word-bei-zi",
+   "cat": "people",
+   "kind": "say",
+   "en": "cup, glass",
+   "ja": "杯子",
+   "ruby": "杯子[bēi zi]",
+   "kana": "beizi",
+   "romaji": "bēizi",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z02-L01",
+   "level": 1,
+   "order": 68,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.word-bao",
+   "cat": "people",
+   "kind": "say",
+   "en": "bag",
+   "ja": "包",
+   "ruby": "包[bāo]",
+   "kana": "bao",
+   "romaji": "bāo",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z02-L01",
+   "level": 1,
+   "order": 69,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.hear-ji-kou-ren",
+   "cat": "people",
+   "kind": "hear",
+   "en": "How many people are there in your family?",
+   "ja": "你家有几口人？",
+   "ruby": "你[nǐ]家[jiā]有[yǒu]几[jǐ]口[kǒu]人[rén]？",
+   "kana": "ni jia you ji kou ren",
+   "romaji": "Nǐ jiā yǒu jǐ kǒu rén?",
+   "note": "口 (mouth) is the measure word for family members.",
+   "replies": [
+    "zh.people.si-kou-ren"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L02",
+   "level": 1,
+   "order": 70,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.si-kou-ren",
+   "cat": "people",
+   "kind": "say",
+   "en": "There are four of us in my family.",
+   "ja": "我家有四口人。",
+   "ruby": "我[wǒ]家[jiā]有[yǒu]四[sì]口[kǒu]人[rén]。",
+   "kana": "wo jia you si kou ren",
+   "romaji": "Wǒ jiā yǒu sì kǒu rén.",
+   "replyTo": [
+    "zh.people.hear-ji-kou-ren"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L02",
+   "level": 1,
+   "order": 71,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.ba-ba-ma-ma",
+   "cat": "people",
+   "kind": "say",
+   "en": "Dad, Mum, my younger sister and me.",
+   "ja": "爸爸、妈妈、妹妹和我。",
+   "ruby": "爸爸[bà ba]、妈妈[mā ma]、妹妹[mèi mei]和[hé]我[wǒ]。",
+   "kana": "baba mama meimei he wo",
+   "romaji": "Bàba, māma, mèimei hé wǒ.",
+   "note": "Kinship words double the syllable; the second one is neutral.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L02",
+   "level": 1,
+   "order": 72,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.hear-xiong-di-jie-mei",
+   "cat": "people",
+   "kind": "hear",
+   "en": "Do you have brothers or sisters?",
+   "ja": "你有兄弟姐妹吗？",
+   "ruby": "你[nǐ]有[yǒu]兄弟姐妹[xiōng dì jiě mèi]吗[ma]？",
+   "kana": "ni you xiongdijiemei ma",
+   "romaji": "Nǐ yǒu xiōngdìjiěmèi ma?",
+   "replies": [
+    "zh.people.yi-ge-ge-ge",
+    "zh.people.wo-mei-you"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L02",
+   "level": 1,
+   "order": 73,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.yi-ge-ge-ge",
+   "cat": "people",
+   "kind": "say",
+   "en": "I have an older brother.",
+   "ja": "我有一个哥哥。",
+   "ruby": "我[wǒ]有[yǒu]一[yí]个[ge]哥哥[gē ge]。",
+   "kana": "wo you yi ge gege",
+   "romaji": "Wǒ yǒu yí ge gēge.",
+   "note": "一个 yí ge: 个 was originally gè (4th), so 一 rises.",
+   "replyTo": [
+    "zh.people.hear-xiong-di-jie-mei"
+   ],
+   "tags": [
+    "core",
+    "sandhi",
+    "mw"
+   ],
+   "lesson": "Z02-L02",
+   "level": 1,
+   "order": 74,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.wo-mei-you",
+   "cat": "people",
+   "kind": "say",
+   "en": "No, I don't.",
+   "ja": "我没有。",
+   "ruby": "我[wǒ]没有[méi yǒu]。",
+   "kana": "wo meiyou",
+   "romaji": "Wǒ méiyǒu.",
+   "note": "有 is negated with 没, never with 不.",
+   "replyTo": [
+    "zh.people.hear-xiong-di-jie-mei",
+    "zh.people.hear-you-hai-zi-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L02",
+   "level": 1,
+   "order": 75,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.word-jie-jie",
+   "cat": "people",
+   "kind": "say",
+   "en": "older sister",
+   "ja": "姐姐",
+   "ruby": "姐姐[jiě jie]",
+   "kana": "jiejie",
+   "romaji": "jiějie",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z02-L02",
+   "level": 1,
+   "order": 76,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.word-di-di",
+   "cat": "people",
+   "kind": "say",
+   "en": "younger brother",
+   "ja": "弟弟",
+   "ruby": "弟弟[dì di]",
+   "kana": "didi",
+   "romaji": "dìdi",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z02-L02",
+   "level": 1,
+   "order": 77,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.word-er-zi",
+   "cat": "people",
+   "kind": "say",
+   "en": "son",
+   "ja": "儿子",
+   "ruby": "儿子[ér zi]",
+   "kana": "erzi",
+   "romaji": "érzi",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z02-L02",
+   "level": 1,
+   "order": 78,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.word-nv-er",
+   "cat": "people",
+   "kind": "say",
+   "en": "daughter",
+   "ja": "女儿",
+   "ruby": "女儿[nǚ ér]",
+   "kana": "nver",
+   "romaji": "nǚ'ér",
+   "note": "Written nǚ'ér: an apostrophe goes before a syllable that starts with a, o or e.",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z02-L02",
+   "level": 1,
+   "order": 79,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.hear-you-hai-zi-ma",
+   "cat": "people",
+   "kind": "hear",
+   "en": "Do you have children?",
+   "ja": "你有孩子吗？",
+   "ruby": "你[nǐ]有[yǒu]孩子[hái zi]吗[ma]？",
+   "kana": "ni you haizi ma",
+   "romaji": "Nǐ yǒu háizi ma?",
+   "replies": [
+    "zh.people.you-liang-ge",
+    "zh.people.wo-mei-you"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L02",
+   "level": 1,
+   "order": 80,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.you-liang-ge",
+   "cat": "people",
+   "kind": "say",
+   "en": "Yes, two.",
+   "ja": "有，两个。",
+   "ruby": "有[yǒu]，两[liǎng]个[ge]。",
+   "kana": "you liang ge",
+   "romaji": "Yǒu, liǎng ge.",
+   "note": "两 (not 二) before a measure word.",
+   "replyTo": [
+    "zh.people.hear-you-hai-zi-ma"
+   ],
+   "tags": [
+    "core",
+    "mw"
+   ],
+   "lesson": "Z02-L02",
+   "level": 1,
+   "order": 81,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.zhe-shi-wo-ma-ma",
+   "cat": "people",
+   "kind": "say",
+   "en": "This is my mum.",
+   "ja": "这是我妈妈。",
+   "ruby": "这[zhè]是[shì]我[wǒ]妈妈[mā ma]。",
+   "kana": "zhe shi wo mama",
+   "romaji": "Zhè shì wǒ māma.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L02",
+   "level": 1,
+   "order": 82,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.hear-duo-da",
+   "cat": "people",
+   "kind": "hear",
+   "en": "How old are you? (to an adult)",
+   "ja": "你今年多大？",
+   "ruby": "你[nǐ]今年[jīn nián]多[duō]大[dà]？",
+   "kana": "ni jinnian duo da",
+   "romaji": "Nǐ jīnnián duō dà?",
+   "note": "To a child: 你几岁了？ To an older person: 您多大年纪了？",
+   "replies": [
+    "zh.people.er-shi-wu-sui"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L03",
+   "level": 1,
+   "order": 83,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.er-shi-wu-sui",
+   "cat": "people",
+   "kind": "say",
+   "en": "I'm 25.",
+   "ja": "我二十五岁。",
+   "ruby": "我[wǒ]二十五[èr shí wǔ]岁[suì]。",
+   "kana": "wo ershiwu sui",
+   "romaji": "Wǒ èrshíwǔ suì.",
+   "note": "No 是 before an age.",
+   "replyTo": [
+    "zh.people.hear-duo-da"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L03",
+   "level": 1,
+   "order": 84,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.hear-ji-sui-le",
+   "cat": "people",
+   "kind": "hear",
+   "en": "How old are you? (to a child)",
+   "ja": "你几岁了？",
+   "ruby": "你[nǐ]几[jǐ]岁[suì]了[le]？",
+   "kana": "ni ji sui le",
+   "romaji": "Nǐ jǐ suì le?",
+   "replies": [
+    "zh.people.liu-sui-le"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L03",
+   "level": 1,
+   "order": 85,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.liu-sui-le",
+   "cat": "people",
+   "kind": "say",
+   "en": "I'm six.",
+   "ja": "我六岁了。",
+   "ruby": "我[wǒ]六[liù]岁[suì]了[le]。",
+   "kana": "wo liu sui le",
+   "romaji": "Wǒ liù suì le.",
+   "replyTo": [
+    "zh.people.hear-ji-sui-le"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L03",
+   "level": 1,
+   "order": 86,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.hear-zuo-shen-me-gong-zuo",
+   "cat": "people",
+   "kind": "hear",
+   "en": "What do you do?",
+   "ja": "你做什么工作？",
+   "ruby": "你[nǐ]做[zuò]什么[shén me]工作[gōng zuò]？",
+   "kana": "ni zuo shenme gongzuo",
+   "romaji": "Nǐ zuò shénme gōngzuò?",
+   "replies": [
+    "zh.people.wo-shi-lao-shi",
+    "zh.patterns.zai-gong-si-gong-zuo"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L03",
+   "level": 1,
+   "order": 87,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.wo-shi-lao-shi",
+   "cat": "people",
+   "kind": "say",
+   "en": "I'm a teacher.",
+   "ja": "我是老师。",
+   "ruby": "我[wǒ]是[shì]老师[lǎo shī]。",
+   "kana": "wo shi laoshi",
+   "romaji": "Wǒ shì lǎoshī.",
+   "replyTo": [
+    "zh.people.hear-zuo-shen-me-gong-zuo"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L03",
+   "level": 1,
+   "order": 88,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.zai-gong-si-gong-zuo",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "I work for a company.",
+   "ja": "我在公司工作。",
+   "ruby": "我[wǒ]在[zài]公司[gōng sī]工作[gōng zuò]。",
+   "kana": "wo zai gongsi gongzuo",
+   "romaji": "Wǒ zài gōngsī gōngzuò.",
+   "note": "The place (在 + place) comes before the verb.",
+   "pattern": "在 + place + verb",
+   "replyTo": [
+    "zh.people.hear-zuo-shen-me-gong-zuo",
+    "zh.people.hear-zai-nar-gong-zuo"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L03",
+   "level": 1,
+   "order": 89,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.ta-zai-yi-yuan",
+   "cat": "people",
+   "kind": "say",
+   "en": "She works at a hospital.",
+   "ja": "她在医院工作。",
+   "ruby": "她[tā]在[zài]医院[yī yuàn]工作[gōng zuò]。",
+   "kana": "ta zai yiyuan gongzuo",
+   "romaji": "Tā zài yīyuàn gōngzuò.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L03",
+   "level": 1,
+   "order": 90,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.hear-zai-nar-gong-zuo",
+   "cat": "people",
+   "kind": "hear",
+   "en": "Where do you work?",
+   "ja": "你在哪儿工作？",
+   "ruby": "你[nǐ]在[zài]哪儿[nǎ r]工作[gōng zuò]？",
+   "kana": "ni zai nar gongzuo",
+   "romaji": "Nǐ zài nǎr gōngzuò?",
+   "note": "哪儿 nǎr (north) = 哪里 nǎli (south).",
+   "replies": [
+    "zh.patterns.zai-gong-si-gong-zuo"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L03",
+   "level": 1,
+   "order": 91,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.word-yi-sheng",
+   "cat": "people",
+   "kind": "say",
+   "en": "doctor",
+   "ja": "医生",
+   "ruby": "医生[yī shēng]",
+   "kana": "yisheng",
+   "romaji": "yīshēng",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z02-L03",
+   "level": 1,
+   "order": 92,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.word-hu-shi",
+   "cat": "people",
+   "kind": "say",
+   "en": "nurse",
+   "ja": "护士",
+   "ruby": "护士[hù shi]",
+   "kana": "hushi",
+   "romaji": "hùshi",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z02-L03",
+   "level": 1,
+   "order": 93,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.word-si-ji",
+   "cat": "people",
+   "kind": "say",
+   "en": "driver",
+   "ja": "司机",
+   "ruby": "司机[sī jī]",
+   "kana": "siji",
+   "romaji": "sījī",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z02-L03",
+   "level": 1,
+   "order": 94,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.word-gong-cheng-shi",
+   "cat": "people",
+   "kind": "say",
+   "en": "engineer",
+   "ja": "工程师",
+   "ruby": "工程师[gōng chéng shī]",
+   "kana": "gongchengshi",
+   "romaji": "gōngchéngshī",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z02-L03",
+   "level": 1,
+   "order": 95,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.ta-hen-gao",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "He's tall.",
+   "ja": "他很高。",
+   "ruby": "他[tā]很[hěn]高[gāo]。",
+   "kana": "ta hen gao",
+   "romaji": "Tā hěn gāo.",
+   "note": "Adjectives need no 是: 他很高, never 他是高.",
+   "pattern": "很 + adjective",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L04",
+   "level": 2,
+   "order": 96,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.ta-hen-piao-liang",
+   "cat": "people",
+   "kind": "say",
+   "en": "She's very pretty.",
+   "ja": "她很漂亮。",
+   "ruby": "她[tā]很[hěn]漂亮[piào liang]。",
+   "kana": "ta hen piaoliang",
+   "romaji": "Tā hěn piàoliang.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L04",
+   "level": 2,
+   "order": 97,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.ta-ren-hen-hao",
+   "cat": "people",
+   "kind": "say",
+   "en": "He's a really nice person.",
+   "ja": "他人很好。",
+   "ruby": "他[tā]人[rén]很[hěn]好[hǎo]。",
+   "kana": "ta ren hen hao",
+   "romaji": "Tā rén hěn hǎo.",
+   "note": "3rd + 3rd tone: the first 3rd tone is spoken as a 2nd: hén hǎo.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L04",
+   "level": 2,
+   "order": 98,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.ke-ai",
+   "cat": "people",
+   "kind": "say",
+   "en": "Your little sister is very cute.",
+   "ja": "你妹妹很可爱。",
+   "ruby": "你[nǐ]妹妹[mèi mei]很[hěn]可爱[kě ài]。",
+   "kana": "ni meimei hen keai",
+   "romaji": "Nǐ mèimei hěn kě'ài.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L04",
+   "level": 2,
+   "order": 99,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.tai-hao-le",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "That's great!",
+   "ja": "太好了！",
+   "ruby": "太[tài]好[hǎo]了[le]！",
+   "kana": "tai hao le",
+   "romaji": "Tài hǎo le!",
+   "note": "太 + adjective + 了 = \"so ...!\" (or \"too ...\").",
+   "pattern": "太……了",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L04",
+   "level": 2,
+   "order": 100,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.ta-bu-tai-gao",
+   "cat": "people",
+   "kind": "say",
+   "en": "He's not very tall.",
+   "ja": "他不太高。",
+   "ruby": "他[tā]不[bú]太[tài]高[gāo]。",
+   "kana": "ta bu tai gao",
+   "romaji": "Tā bú tài gāo.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L04",
+   "level": 2,
+   "order": 101,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.zhen-cong-ming",
+   "cat": "people",
+   "kind": "say",
+   "en": "You're so clever!",
+   "ja": "你真聪明！",
+   "ruby": "你[nǐ]真[zhēn]聪明[cōng ming]！",
+   "kana": "ni zhen congming",
+   "romaji": "Nǐ zhēn cōngming!",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L04",
+   "level": 2,
+   "order": 102,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.ta-hen-mang",
+   "cat": "people",
+   "kind": "say",
+   "en": "He's very busy.",
+   "ja": "他很忙。",
+   "ruby": "他[tā]很[hěn]忙[máng]。",
+   "kana": "ta hen mang",
+   "romaji": "Tā hěn máng.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L04",
+   "level": 2,
+   "order": 103,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.wo-hen-lei",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "I'm tired.",
+   "ja": "我很累。",
+   "ruby": "我[wǒ]很[hěn]累[lèi]。",
+   "kana": "wo hen lei",
+   "romaji": "Wǒ hěn lèi.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L04",
+   "level": 2,
+   "order": 104,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.peng-you-hen-duo",
+   "cat": "people",
+   "kind": "say",
+   "en": "She has lots of friends.",
+   "ja": "她的朋友很多。",
+   "ruby": "她[tā]的[de]朋友[péng you]很[hěn]多[duō]。",
+   "kana": "ta de pengyou hen duo",
+   "romaji": "Tā de péngyou hěn duō.",
+   "note": "Literally \"her friends are many\".",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L04",
+   "level": 2,
+   "order": 105,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.word-nian-qing",
+   "cat": "people",
+   "kind": "say",
+   "en": "young",
+   "ja": "年轻",
+   "ruby": "年轻[nián qīng]",
+   "kana": "nianqing",
+   "romaji": "niánqīng",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z02-L04",
+   "level": 2,
+   "order": 106,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.word-ai",
+   "cat": "people",
+   "kind": "say",
+   "en": "short (not tall)",
+   "ja": "矮",
+   "ruby": "矮[ǎi]",
+   "kana": "ai",
+   "romaji": "ǎi",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z02-L04",
+   "level": 2,
+   "order": 107,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.hear-duo-gao",
+   "cat": "people",
+   "kind": "hear",
+   "en": "How tall is he?",
+   "ja": "他多高？",
+   "ruby": "他[tā]多[duō]高[gāo]？",
+   "kana": "ta duo gao",
+   "romaji": "Tā duō gāo?",
+   "note": "多 + adjective = how ... ?",
+   "replies": [
+    "zh.people.yi-mi-ba"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L04",
+   "level": 2,
+   "order": 108,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.yi-mi-ba",
+   "cat": "people",
+   "kind": "say",
+   "en": "One metre eighty.",
+   "ja": "一米八。",
+   "ruby": "一[yì]米[mǐ]八[bā]。",
+   "kana": "yi mi ba",
+   "romaji": "Yì mǐ bā.",
+   "note": "一米八 = 1.80 m; the unit for the second part is left out.",
+   "replyTo": [
+    "zh.people.hear-duo-gao"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z02-L04",
+   "level": 2,
+   "order": 109,
+   "src": "new"
+  }
+ ]
+}
