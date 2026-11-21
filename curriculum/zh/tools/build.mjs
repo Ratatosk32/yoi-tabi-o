@@ -81,11 +81,10 @@ if (existsSync(join(zh, 'src', 'hanzi-groups.mjs'))) {
     const { base, tone } = splitTone(r[1]);
     return (r[3] === 'radical' ? 'r-' : '') + base.replace(/ü/g, 'v') + (r[3] === 'radical' ? '' : tone);
   };
-  const keyCount = rows.reduce((a, r) => ((a[keyOf(r)] = (a[keyOf(r)] || 0) + 1), a), {});
   const hanzi = rows.map((r) => {
     const [ch, py, en, group, exRuby, exEn, alt] = r;
     const key = keyOf(r);
-    const id = 'zh.h.' + (keyCount[key] > 1 ? `${key}-${ch.codePointAt(0).toString(16)}` : key);
+    const id = `zh.h.${key}-${ch.codePointAt(0).toString(16)}`;
     const it = { id, group, ja: ch, ruby: `${ch}[${py}]`, kana: romajiToKana(py), romaji: py, en, hsk: group === 'radical' ? 0 : (HSK[ch]?.[0] ?? 0) };
     if (HSK[ch]?.[1] && group !== 'radical') it.radical = HSK[ch][1];
     it.ex = { ja: rubyToJa(exRuby), ruby: exRuby, romaji: word(exRuby), en: exEn };

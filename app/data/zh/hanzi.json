@@ -80,7 +80,7 @@
    "alt": "yí before a 4th tone, yì before tones 1-3; yī when counting"
   },
   {
-   "id": "zh.h.er4",
+   "id": "zh.h.er4-4e8c",
    "group": "number",
    "ja": "二",
    "ruby": "二[èr]",
@@ -97,7 +97,7 @@
    }
   },
   {
-   "id": "zh.h.san1",
+   "id": "zh.h.san1-4e09",
    "group": "number",
    "ja": "三",
    "ruby": "三[sān]",
@@ -114,7 +114,7 @@
    }
   },
   {
-   "id": "zh.h.si4",
+   "id": "zh.h.si4-56db",
    "group": "number",
    "ja": "四",
    "ruby": "四[sì]",
@@ -148,7 +148,7 @@
    }
   },
   {
-   "id": "zh.h.liu4",
+   "id": "zh.h.liu4-516d",
    "group": "number",
    "ja": "六",
    "ruby": "六[liù]",
@@ -182,7 +182,7 @@
    }
   },
   {
-   "id": "zh.h.ba1",
+   "id": "zh.h.ba1-516b",
    "group": "number",
    "ja": "八",
    "ruby": "八[bā]",
@@ -233,7 +233,7 @@
    }
   },
   {
-   "id": "zh.h.bai3",
+   "id": "zh.h.bai3-767e",
    "group": "number",
    "ja": "百",
    "ruby": "百[bǎi]",
@@ -250,7 +250,7 @@
    }
   },
   {
-   "id": "zh.h.qian1",
+   "id": "zh.h.qian1-5343",
    "group": "number",
    "ja": "千",
    "ruby": "千[qiān]",
@@ -267,7 +267,7 @@
    }
   },
   {
-   "id": "zh.h.wan4",
+   "id": "zh.h.wan4-4e07",
    "group": "number",
    "ja": "万",
    "ruby": "万[wàn]",
@@ -284,7 +284,7 @@
    }
   },
   {
-   "id": "zh.h.ling2",
+   "id": "zh.h.ling2-96f6",
    "group": "number",
    "ja": "零",
    "ruby": "零[líng]",
@@ -301,7 +301,7 @@
    }
   },
   {
-   "id": "zh.h.liang3",
+   "id": "zh.h.liang3-4e24",
    "group": "number",
    "ja": "两",
    "ruby": "两[liǎng]",
@@ -318,7 +318,7 @@
    }
   },
   {
-   "id": "zh.h.ban4",
+   "id": "zh.h.ban4-534a",
    "group": "number",
    "ja": "半",
    "ruby": "半[bàn]",
@@ -352,7 +352,7 @@
    }
   },
   {
-   "id": "zh.h.ge4",
+   "id": "zh.h.ge4-4e2a",
    "group": "number",
    "ja": "个",
    "ruby": "个[gè]",
@@ -387,7 +387,7 @@
    }
   },
   {
-   "id": "zh.h.ben3",
+   "id": "zh.h.ben3-672c",
    "group": "number",
    "ja": "本",
    "ruby": "本[běn]",
@@ -404,7 +404,7 @@
    }
   },
   {
-   "id": "zh.h.kuai4",
+   "id": "zh.h.kuai4-5757",
    "group": "number",
    "ja": "块",
    "ruby": "块[kuài]",
@@ -421,7 +421,7 @@
    }
   },
   {
-   "id": "zh.h.zhang1",
+   "id": "zh.h.zhang1-5f20",
    "group": "number",
    "ja": "张",
    "ruby": "张[zhāng]",
@@ -438,7 +438,7 @@
    }
   },
   {
-   "id": "zh.h.jian4",
+   "id": "zh.h.jian4-4ef6",
    "group": "number",
    "ja": "件",
    "ruby": "件[jiàn]",
@@ -455,7 +455,7 @@
    }
   },
   {
-   "id": "zh.h.ci4",
+   "id": "zh.h.ci4-6b21",
    "group": "number",
    "ja": "次",
    "ruby": "次[cì]",
@@ -472,7 +472,7 @@
    }
   },
   {
-   "id": "zh.h.sui4",
+   "id": "zh.h.sui4-5c81",
    "group": "number",
    "ja": "岁",
    "ruby": "岁[suì]",
@@ -489,7 +489,7 @@
    }
   },
   {
-   "id": "zh.h.hao4",
+   "id": "zh.h.hao4-53f7",
    "group": "number",
    "ja": "号",
    "ruby": "号[hào]",
@@ -506,7 +506,7 @@
    }
   },
   {
-   "id": "zh.h.wei4",
+   "id": "zh.h.wei4-4f4d",
    "group": "number",
    "ja": "位",
    "ruby": "位[wèi]",
@@ -523,7 +523,7 @@
    }
   },
   {
-   "id": "zh.h.tiao2",
+   "id": "zh.h.tiao2-6761",
    "group": "number",
    "ja": "条",
    "ruby": "条[tiáo]",
@@ -540,7 +540,7 @@
    }
   },
   {
-   "id": "zh.h.shuang1",
+   "id": "zh.h.shuang1-53cc",
    "group": "number",
    "ja": "双",
    "ruby": "双[shuāng]",
@@ -557,7 +557,7 @@
    }
   },
   {
-   "id": "zh.h.zhong3",
+   "id": "zh.h.zhong3-79cd",
    "group": "number",
    "ja": "种",
    "ruby": "种[zhǒng]",
@@ -575,7 +575,7 @@
    "alt": "zhòng: to plant"
   },
   {
-   "id": "zh.h.ren2",
+   "id": "zh.h.ren2-4eba",
    "group": "people",
    "ja": "人",
    "ruby": "人[rén]",
@@ -592,7 +592,7 @@
    }
   },
   {
-   "id": "zh.h.wo3",
+   "id": "zh.h.wo3-6211",
    "group": "people",
    "ja": "我",
    "ruby": "我[wǒ]",
@@ -609,7 +609,7 @@
    }
   },
   {
-   "id": "zh.h.ni3",
+   "id": "zh.h.ni3-4f60",
    "group": "people",
    "ja": "你",
    "ruby": "你[nǐ]",
@@ -626,7 +626,7 @@
    }
   },
   {
-   "id": "zh.h.nin2",
+   "id": "zh.h.nin2-60a8",
    "group": "people",
    "ja": "您",
    "ruby": "您[nín]",
@@ -694,7 +694,7 @@
    }
   },
   {
-   "id": "zh.h.men5",
+   "id": "zh.h.men5-4eec",
    "group": "people",
    "ja": "们",
    "ruby": "们[men]",
@@ -711,7 +711,7 @@
    }
   },
   {
-   "id": "zh.h.jia1",
+   "id": "zh.h.jia1-5bb6",
    "group": "people",
    "ja": "家",
    "ruby": "家[jiā]",
@@ -728,7 +728,7 @@
    }
   },
   {
-   "id": "zh.h.ba4",
+   "id": "zh.h.ba4-7238",
    "group": "people",
    "ja": "爸",
    "ruby": "爸[bà]",
@@ -745,7 +745,7 @@
    }
   },
   {
-   "id": "zh.h.ma1",
+   "id": "zh.h.ma1-5988",
    "group": "people",
    "ja": "妈",
    "ruby": "妈[mā]",
@@ -762,7 +762,7 @@
    }
   },
   {
-   "id": "zh.h.ge1",
+   "id": "zh.h.ge1-54e5",
    "group": "people",
    "ja": "哥",
    "ruby": "哥[gē]",
@@ -779,7 +779,7 @@
    }
   },
   {
-   "id": "zh.h.jie3",
+   "id": "zh.h.jie3-59d0",
    "group": "people",
    "ja": "姐",
    "ruby": "姐[jiě]",
@@ -813,7 +813,7 @@
    }
   },
   {
-   "id": "zh.h.mei4",
+   "id": "zh.h.mei4-59b9",
    "group": "people",
    "ja": "妹",
    "ruby": "妹[mèi]",
@@ -830,7 +830,7 @@
    }
   },
   {
-   "id": "zh.h.er2",
+   "id": "zh.h.er2-513f",
    "group": "people",
    "ja": "儿",
    "ruby": "儿[ér]",
@@ -847,7 +847,7 @@
    "alt": "r: the 儿 ending (哪儿 nǎr)"
   },
   {
-   "id": "zh.h.nv3",
+   "id": "zh.h.nv3-5973",
    "group": "people",
    "ja": "女",
    "ruby": "女[nǚ]",
@@ -864,7 +864,7 @@
    }
   },
   {
-   "id": "zh.h.nan2",
+   "id": "zh.h.nan2-7537",
    "group": "people",
    "ja": "男",
    "ruby": "男[nán]",
@@ -881,7 +881,7 @@
    }
   },
   {
-   "id": "zh.h.zi3",
+   "id": "zh.h.zi3-5b50",
    "group": "people",
    "ja": "子",
    "ruby": "子[zǐ]",
@@ -899,7 +899,7 @@
    "alt": "zi: neutral as a noun suffix (桌子)"
   },
   {
-   "id": "zh.h.hai2",
+   "id": "zh.h.hai2-5b69",
    "group": "people",
    "ja": "孩",
    "ruby": "孩[hái]",
@@ -915,7 +915,7 @@
    }
   },
   {
-   "id": "zh.h.peng2",
+   "id": "zh.h.peng2-670b",
    "group": "people",
    "ja": "朋",
    "ruby": "朋[péng]",
@@ -931,7 +931,7 @@
    }
   },
   {
-   "id": "zh.h.you3",
+   "id": "zh.h.you3-53cb",
    "group": "people",
    "ja": "友",
    "ruby": "友[yǒu]",
@@ -947,7 +947,7 @@
    }
   },
   {
-   "id": "zh.h.lao3",
+   "id": "zh.h.lao3-8001",
    "group": "people",
    "ja": "老",
    "ruby": "老[lǎo]",
@@ -964,7 +964,7 @@
    }
   },
   {
-   "id": "zh.h.shi1",
+   "id": "zh.h.shi1-5e08",
    "group": "people",
    "ja": "师",
    "ruby": "师[shī]",
@@ -980,7 +980,7 @@
    }
   },
   {
-   "id": "zh.h.sheng1",
+   "id": "zh.h.sheng1-751f",
    "group": "people",
    "ja": "生",
    "ruby": "生[shēng]",
@@ -997,7 +997,7 @@
    }
   },
   {
-   "id": "zh.h.xian1",
+   "id": "zh.h.xian1-5148",
    "group": "people",
    "ja": "先",
    "ruby": "先[xiān]",
@@ -1048,7 +1048,7 @@
    }
   },
   {
-   "id": "zh.h.jiao4",
+   "id": "zh.h.jiao4-53eb",
    "group": "people",
    "ja": "叫",
    "ruby": "叫[jiào]",
@@ -1065,7 +1065,7 @@
    }
   },
   {
-   "id": "zh.h.xing4",
+   "id": "zh.h.xing4-59d3",
    "group": "people",
    "ja": "姓",
    "ruby": "姓[xìng]",
@@ -1082,7 +1082,7 @@
    }
   },
   {
-   "id": "zh.h.tong2",
+   "id": "zh.h.tong2-540c",
    "group": "people",
    "ja": "同",
    "ruby": "同[tóng]",
@@ -1099,7 +1099,7 @@
    }
   },
   {
-   "id": "zh.h.ke4",
+   "id": "zh.h.ke4-5ba2",
    "group": "people",
    "ja": "客",
    "ruby": "客[kè]",
@@ -1148,7 +1148,7 @@
    }
   },
   {
-   "id": "zh.h.kou3",
+   "id": "zh.h.kou3-53e3",
    "group": "body",
    "ja": "口",
    "ruby": "口[kǒu]",
@@ -1165,7 +1165,7 @@
    }
   },
   {
-   "id": "zh.h.shou3",
+   "id": "zh.h.shou3-624b",
    "group": "body",
    "ja": "手",
    "ruby": "手[shǒu]",
@@ -1182,7 +1182,7 @@
    }
   },
   {
-   "id": "zh.h.tou2",
+   "id": "zh.h.tou2-5934",
    "group": "body",
    "ja": "头",
    "ruby": "头[tóu]",
@@ -1199,7 +1199,7 @@
    }
   },
   {
-   "id": "zh.h.yan3",
+   "id": "zh.h.yan3-773c",
    "group": "body",
    "ja": "眼",
    "ruby": "眼[yǎn]",
@@ -1216,7 +1216,7 @@
    }
   },
   {
-   "id": "zh.h.er3",
+   "id": "zh.h.er3-8033",
    "group": "body",
    "ja": "耳",
    "ruby": "耳[ěr]",
@@ -1232,7 +1232,7 @@
    }
   },
   {
-   "id": "zh.h.xin1",
+   "id": "zh.h.xin1-5fc3",
    "group": "body",
    "ja": "心",
    "ruby": "心[xīn]",
@@ -1249,7 +1249,7 @@
    }
   },
   {
-   "id": "zh.h.shen1",
+   "id": "zh.h.shen1-8eab",
    "group": "body",
    "ja": "身",
    "ruby": "身[shēn]",
@@ -1265,7 +1265,7 @@
    }
   },
   {
-   "id": "zh.h.ti3",
+   "id": "zh.h.ti3-4f53",
    "group": "body",
    "ja": "体",
    "ruby": "体[tǐ]",
@@ -1281,7 +1281,7 @@
    }
   },
   {
-   "id": "zh.h.jiao3",
+   "id": "zh.h.jiao3-811a",
    "group": "body",
    "ja": "脚",
    "ruby": "脚[jiǎo]",
@@ -1298,7 +1298,7 @@
    }
   },
   {
-   "id": "zh.h.ya2",
+   "id": "zh.h.ya2-7259",
    "group": "body",
    "ja": "牙",
    "ruby": "牙[yá]",
@@ -1315,7 +1315,7 @@
    }
   },
   {
-   "id": "zh.h.bing4",
+   "id": "zh.h.bing4-75c5",
    "group": "body",
    "ja": "病",
    "ruby": "病[bìng]",
@@ -1348,7 +1348,7 @@
    }
   },
   {
-   "id": "zh.h.yuan4",
+   "id": "zh.h.yuan4-9662",
    "group": "body",
    "ja": "院",
    "ruby": "院[yuàn]",
@@ -1365,7 +1365,7 @@
    }
   },
   {
-   "id": "zh.h.yao4",
+   "id": "zh.h.yao4-836f",
    "group": "body",
    "ja": "药",
    "ruby": "药[yào]",
@@ -1382,7 +1382,7 @@
    }
   },
   {
-   "id": "zh.h.teng2",
+   "id": "zh.h.teng2-75bc",
    "group": "body",
    "ja": "疼",
    "ruby": "疼[téng]",
@@ -1399,7 +1399,7 @@
    }
   },
   {
-   "id": "zh.h.lei4",
+   "id": "zh.h.lei4-7d2f",
    "group": "body",
    "ja": "累",
    "ruby": "累[lèi]",
@@ -1416,7 +1416,7 @@
    }
   },
   {
-   "id": "zh.h.e4",
+   "id": "zh.h.e4-997f",
    "group": "body",
    "ja": "饿",
    "ruby": "饿[è]",
@@ -1433,7 +1433,7 @@
    }
   },
   {
-   "id": "zh.h.ke3",
+   "id": "zh.h.ke3-6e34",
    "group": "body",
    "ja": "渴",
    "ruby": "渴[kě]",
@@ -1450,7 +1450,7 @@
    }
   },
   {
-   "id": "zh.h.nian2",
+   "id": "zh.h.nian2-5e74",
    "group": "time",
    "ja": "年",
    "ruby": "年[nián]",
@@ -1467,7 +1467,7 @@
    }
   },
   {
-   "id": "zh.h.yue4",
+   "id": "zh.h.yue4-6708",
    "group": "time",
    "ja": "月",
    "ruby": "月[yuè]",
@@ -1484,7 +1484,7 @@
    }
   },
   {
-   "id": "zh.h.ri4",
+   "id": "zh.h.ri4-65e5",
    "group": "time",
    "ja": "日",
    "ruby": "日[rì]",
@@ -1501,7 +1501,7 @@
    }
   },
   {
-   "id": "zh.h.tian1",
+   "id": "zh.h.tian1-5929",
    "group": "time",
    "ja": "天",
    "ruby": "天[tiān]",
@@ -1518,7 +1518,7 @@
    }
   },
   {
-   "id": "zh.h.xing1",
+   "id": "zh.h.xing1-661f",
    "group": "time",
    "ja": "星",
    "ruby": "星[xīng]",
@@ -1568,7 +1568,7 @@
    }
   },
   {
-   "id": "zh.h.jian1",
+   "id": "zh.h.jian1-95f4",
    "group": "time",
    "ja": "间",
    "ruby": "间[jiān]",
@@ -1586,7 +1586,7 @@
    "alt": "jiàn: gap, as in 间隔"
   },
   {
-   "id": "zh.h.dian3",
+   "id": "zh.h.dian3-70b9",
    "group": "time",
    "ja": "点",
    "ruby": "点[diǎn]",
@@ -1603,7 +1603,7 @@
    }
   },
   {
-   "id": "zh.h.fen1",
+   "id": "zh.h.fen1-5206",
    "group": "time",
    "ja": "分",
    "ruby": "分[fēn]",
@@ -1621,7 +1621,7 @@
    "alt": "fèn: portion, part"
   },
   {
-   "id": "zh.h.zhong1",
+   "id": "zh.h.zhong1-949f",
    "group": "time",
    "ja": "钟",
    "ruby": "钟[zhōng]",
@@ -1638,7 +1638,7 @@
    }
   },
   {
-   "id": "zh.h.zao3",
+   "id": "zh.h.zao3-65e9",
    "group": "time",
    "ja": "早",
    "ruby": "早[zǎo]",
@@ -1655,7 +1655,7 @@
    }
   },
   {
-   "id": "zh.h.wan3",
+   "id": "zh.h.wan3-665a",
    "group": "time",
    "ja": "晚",
    "ruby": "晚[wǎn]",
@@ -1688,7 +1688,7 @@
    }
   },
   {
-   "id": "zh.h.jin1",
+   "id": "zh.h.jin1-4eca",
    "group": "time",
    "ja": "今",
    "ruby": "今[jīn]",
@@ -1720,7 +1720,7 @@
    }
   },
   {
-   "id": "zh.h.zuo2",
+   "id": "zh.h.zuo2-6628",
    "group": "time",
    "ja": "昨",
    "ruby": "昨[zuó]",
@@ -1736,7 +1736,7 @@
    }
   },
   {
-   "id": "zh.h.xian4",
+   "id": "zh.h.xian4-73b0",
    "group": "time",
    "ja": "现",
    "ruby": "现[xiàn]",
@@ -1752,7 +1752,7 @@
    }
   },
   {
-   "id": "zh.h.zhou1",
+   "id": "zh.h.zhou1-5468",
    "group": "time",
    "ja": "周",
    "ruby": "周[zhōu]",
@@ -1769,7 +1769,7 @@
    }
   },
   {
-   "id": "zh.h.mo4",
+   "id": "zh.h.mo4-672b",
    "group": "time",
    "ja": "末",
    "ruby": "末[mò]",
@@ -1786,7 +1786,7 @@
    }
   },
   {
-   "id": "zh.h.hou4",
+   "id": "zh.h.hou4-540e",
    "group": "time",
    "ja": "后",
    "ruby": "后[hòu]",
@@ -1803,7 +1803,7 @@
    }
   },
   {
-   "id": "zh.h.qian2",
+   "id": "zh.h.qian2-524d",
    "group": "time",
    "ja": "前",
    "ruby": "前[qián]",
@@ -1820,7 +1820,7 @@
    }
   },
   {
-   "id": "zh.h.chun1",
+   "id": "zh.h.chun1-6625",
    "group": "time",
    "ja": "春",
    "ruby": "春[chūn]",
@@ -1837,7 +1837,7 @@
    }
   },
   {
-   "id": "zh.h.xia4",
+   "id": "zh.h.xia4-590f",
    "group": "time",
    "ja": "夏",
    "ruby": "夏[xià]",
@@ -1854,7 +1854,7 @@
    }
   },
   {
-   "id": "zh.h.qiu1",
+   "id": "zh.h.qiu1-79cb",
    "group": "time",
    "ja": "秋",
    "ruby": "秋[qiū]",
@@ -1871,7 +1871,7 @@
    }
   },
   {
-   "id": "zh.h.dong1",
+   "id": "zh.h.dong1-51ac",
    "group": "time",
    "ja": "冬",
    "ruby": "冬[dōng]",
@@ -1888,7 +1888,7 @@
    }
   },
   {
-   "id": "zh.h.jie2",
+   "id": "zh.h.jie2-8282",
    "group": "time",
    "ja": "节",
    "ruby": "节[jié]",
@@ -1922,7 +1922,7 @@
    }
   },
   {
-   "id": "zh.h.chang2",
+   "id": "zh.h.chang2-5e38",
    "group": "time",
    "ja": "常",
    "ruby": "常[cháng]",
@@ -1939,7 +1939,7 @@
    }
   },
   {
-   "id": "zh.h.mei3",
+   "id": "zh.h.mei3-6bcf",
    "group": "time",
    "ja": "每",
    "ruby": "每[měi]",
@@ -1953,6 +1953,1891 @@
     "ruby": "每天[měi tiān]",
     "romaji": "měitiān",
     "en": "every day"
+   }
+  },
+  {
+   "id": "zh.h.shang4-4e0a",
+   "group": "place",
+   "ja": "上",
+   "ruby": "上[shàng]",
+   "kana": "shang",
+   "romaji": "shàng",
+   "en": "up, on; previous",
+   "hsk": 1,
+   "radical": "一",
+   "ex": {
+    "ja": "上面",
+    "ruby": "上面[shàng miàn]",
+    "romaji": "shàngmiàn",
+    "en": "on top; above"
+   }
+  },
+  {
+   "id": "zh.h.xia4-4e0b",
+   "group": "place",
+   "ja": "下",
+   "ruby": "下[xià]",
+   "kana": "xia",
+   "romaji": "xià",
+   "en": "down, under; next",
+   "hsk": 1,
+   "radical": "一",
+   "ex": {
+    "ja": "下面",
+    "ruby": "下面[xià miàn]",
+    "romaji": "xiàmiàn",
+    "en": "below"
+   }
+  },
+  {
+   "id": "zh.h.zuo3-5de6",
+   "group": "place",
+   "ja": "左",
+   "ruby": "左[zuǒ]",
+   "kana": "zuo",
+   "romaji": "zuǒ",
+   "en": "left",
+   "hsk": 2,
+   "radical": "工",
+   "ex": {
+    "ja": "左边",
+    "ruby": "左边[zuǒ bian]",
+    "romaji": "zuǒbian",
+    "en": "the left side"
+   }
+  },
+  {
+   "id": "zh.h.you4-53f3",
+   "group": "place",
+   "ja": "右",
+   "ruby": "右[yòu]",
+   "kana": "you",
+   "romaji": "yòu",
+   "en": "right",
+   "hsk": 2,
+   "radical": "口",
+   "ex": {
+    "ja": "右边",
+    "ruby": "右边[yòu bian]",
+    "romaji": "yòubian",
+    "en": "the right side"
+   }
+  },
+  {
+   "id": "zh.h.li3-91cc",
+   "group": "place",
+   "ja": "里",
+   "ruby": "里[lǐ]",
+   "kana": "li",
+   "romaji": "lǐ",
+   "en": "inside",
+   "hsk": 1,
+   "radical": "里",
+   "ex": {
+    "ja": "里面",
+    "ruby": "里面[lǐ miàn]",
+    "romaji": "lǐmiàn",
+    "en": "inside"
+   }
+  },
+  {
+   "id": "zh.h.wai4-5916",
+   "group": "place",
+   "ja": "外",
+   "ruby": "外[wài]",
+   "kana": "wai",
+   "romaji": "wài",
+   "en": "outside",
+   "hsk": 2,
+   "radical": "夕",
+   "ex": {
+    "ja": "外国",
+    "ruby": "外国[wài guó]",
+    "romaji": "wàiguó",
+    "en": "foreign country"
+   }
+  },
+  {
+   "id": "zh.h.zhong1-4e2d",
+   "group": "place",
+   "ja": "中",
+   "ruby": "中[zhōng]",
+   "kana": "zhong",
+   "romaji": "zhōng",
+   "en": "middle",
+   "hsk": 1,
+   "radical": "丨",
+   "ex": {
+    "ja": "中间",
+    "ruby": "中间[zhōng jiān]",
+    "romaji": "zhōngjiān",
+    "en": "in the middle"
+   }
+  },
+  {
+   "id": "zh.h.dong1-4e1c",
+   "group": "place",
+   "ja": "东",
+   "ruby": "东[dōng]",
+   "kana": "dong",
+   "romaji": "dōng",
+   "en": "east",
+   "hsk": 1,
+   "radical": "一",
+   "ex": {
+    "ja": "东西",
+    "ruby": "东西[dōng xi]",
+    "romaji": "dōngxi",
+    "en": "thing, stuff"
+   }
+  },
+  {
+   "id": "zh.h.xi1-897f",
+   "group": "place",
+   "ja": "西",
+   "ruby": "西[xī]",
+   "kana": "xi",
+   "romaji": "xī",
+   "en": "west",
+   "hsk": 1,
+   "radical": "西",
+   "ex": {
+    "ja": "西边",
+    "ruby": "西边[xī biān]",
+    "romaji": "xībiān",
+    "en": "the west side"
+   }
+  },
+  {
+   "id": "zh.h.nan2-5357",
+   "group": "place",
+   "ja": "南",
+   "ruby": "南[nán]",
+   "kana": "nan",
+   "romaji": "nán",
+   "en": "south",
+   "hsk": 3,
+   "radical": "十",
+   "ex": {
+    "ja": "南方",
+    "ruby": "南方[nán fāng]",
+    "romaji": "nánfāng",
+    "en": "the south"
+   }
+  },
+  {
+   "id": "zh.h.bei3-5317",
+   "group": "place",
+   "ja": "北",
+   "ruby": "北[běi]",
+   "kana": "bei",
+   "romaji": "běi",
+   "en": "north",
+   "hsk": 1,
+   "radical": "匕",
+   "ex": {
+    "ja": "北京",
+    "ruby": "北京[Běi jīng]",
+    "romaji": "Běijīng",
+    "en": "Beijing"
+   }
+  },
+  {
+   "id": "zh.h.bian1-8fb9",
+   "group": "place",
+   "ja": "边",
+   "ruby": "边[biān]",
+   "kana": "bian",
+   "romaji": "biān",
+   "en": "side, edge",
+   "hsk": 2,
+   "radical": "辶",
+   "ex": {
+    "ja": "旁边",
+    "ruby": "旁边[páng biān]",
+    "romaji": "pángbiān",
+    "en": "next to"
+   }
+  },
+  {
+   "id": "zh.h.pang2-65c1",
+   "group": "place",
+   "ja": "旁",
+   "ruby": "旁[páng]",
+   "kana": "pang",
+   "romaji": "páng",
+   "en": "side",
+   "hsk": 2,
+   "radical": "方",
+   "ex": {
+    "ja": "旁边",
+    "ruby": "旁边[páng biān]",
+    "romaji": "pángbiān",
+    "en": "next to"
+   }
+  },
+  {
+   "id": "zh.h.guo2-56fd",
+   "group": "place",
+   "ja": "国",
+   "ruby": "国[guó]",
+   "kana": "guo",
+   "romaji": "guó",
+   "en": "country",
+   "hsk": 1,
+   "radical": "囗",
+   "ex": {
+    "ja": "中国",
+    "ruby": "中国[Zhōng guó]",
+    "romaji": "Zhōngguó",
+    "en": "China"
+   }
+  },
+  {
+   "id": "zh.h.jing1-4eac",
+   "group": "place",
+   "ja": "京",
+   "ruby": "京[jīng]",
+   "kana": "jing",
+   "romaji": "jīng",
+   "en": "capital",
+   "hsk": 1,
+   "ex": {
+    "ja": "南京",
+    "ruby": "南京[Nán jīng]",
+    "romaji": "Nánjīng",
+    "en": "Nanjing"
+   }
+  },
+  {
+   "id": "zh.h.hai3-6d77",
+   "group": "place",
+   "ja": "海",
+   "ruby": "海[hǎi]",
+   "kana": "hai",
+   "romaji": "hǎi",
+   "en": "sea",
+   "hsk": 4,
+   "radical": "氵",
+   "ex": {
+    "ja": "上海",
+    "ruby": "上海[Shàng hǎi]",
+    "romaji": "Shànghǎi",
+    "en": "Shanghai"
+   }
+  },
+  {
+   "id": "zh.h.lu4-8def",
+   "group": "place",
+   "ja": "路",
+   "ruby": "路[lù]",
+   "kana": "lu",
+   "romaji": "lù",
+   "en": "road",
+   "hsk": 2,
+   "radical": "足",
+   "ex": {
+    "ja": "马路",
+    "ruby": "马路[mǎ lù]",
+    "romaji": "mǎlù",
+    "en": "street"
+   }
+  },
+  {
+   "id": "zh.h.men2-95e8",
+   "group": "place",
+   "ja": "门",
+   "ruby": "门[mén]",
+   "kana": "men",
+   "romaji": "mén",
+   "en": "door, gate",
+   "hsk": 2,
+   "radical": "门",
+   "ex": {
+    "ja": "门口",
+    "ruby": "门口[mén kǒu]",
+    "romaji": "ménkǒu",
+    "en": "doorway"
+   }
+  },
+  {
+   "id": "zh.h.dian4-5e97",
+   "group": "place",
+   "ja": "店",
+   "ruby": "店[diàn]",
+   "kana": "dian",
+   "romaji": "diàn",
+   "en": "shop",
+   "hsk": 1,
+   "radical": "广",
+   "ex": {
+    "ja": "商店",
+    "ruby": "商店[shāng diàn]",
+    "romaji": "shāngdiàn",
+    "en": "shop"
+   }
+  },
+  {
+   "id": "zh.h.xiao4-6821",
+   "group": "place",
+   "ja": "校",
+   "ruby": "校[xiào]",
+   "kana": "xiao",
+   "romaji": "xiào",
+   "en": "school",
+   "hsk": 1,
+   "ex": {
+    "ja": "学校",
+    "ruby": "学校[xué xiào]",
+    "romaji": "xuéxiào",
+    "en": "school"
+   }
+  },
+  {
+   "id": "zh.h.zhan4-7ad9",
+   "group": "place",
+   "ja": "站",
+   "ruby": "站[zhàn]",
+   "kana": "zhan",
+   "romaji": "zhàn",
+   "en": "station, stop; stand",
+   "hsk": 1,
+   "radical": "立",
+   "ex": {
+    "ja": "车站",
+    "ruby": "车站[chē zhàn]",
+    "romaji": "chēzhàn",
+    "en": "station, bus stop"
+   }
+  },
+  {
+   "id": "zh.h.chang3-573a",
+   "group": "place",
+   "ja": "场",
+   "ruby": "场[chǎng]",
+   "kana": "chang",
+   "romaji": "chǎng",
+   "en": "open space, field",
+   "hsk": 2,
+   "radical": "土",
+   "ex": {
+    "ja": "机场",
+    "ruby": "机场[jī chǎng]",
+    "romaji": "jīchǎng",
+    "en": "airport"
+   }
+  },
+  {
+   "id": "zh.h.guan3-9986",
+   "group": "place",
+   "ja": "馆",
+   "ruby": "馆[guǎn]",
+   "kana": "guan",
+   "romaji": "guǎn",
+   "en": "building (public)",
+   "hsk": 1,
+   "ex": {
+    "ja": "饭馆",
+    "ruby": "饭馆[fàn guǎn]",
+    "romaji": "fànguǎn",
+    "en": "restaurant"
+   }
+  },
+  {
+   "id": "zh.h.lou2-697c",
+   "group": "place",
+   "ja": "楼",
+   "ruby": "楼[lóu]",
+   "kana": "lou",
+   "romaji": "lóu",
+   "en": "building; floor",
+   "hsk": 3,
+   "radical": "木",
+   "ex": {
+    "ja": "楼上",
+    "ruby": "楼上[lóu shàng]",
+    "romaji": "lóushàng",
+    "en": "upstairs"
+   }
+  },
+  {
+   "id": "zh.h.fang1-65b9",
+   "group": "place",
+   "ja": "方",
+   "ruby": "方[fāng]",
+   "kana": "fang",
+   "romaji": "fāng",
+   "en": "square; direction",
+   "hsk": 3,
+   "radical": "方",
+   "ex": {
+    "ja": "地方",
+    "ruby": "地方[dì fang]",
+    "romaji": "dìfang",
+    "en": "place"
+   }
+  },
+  {
+   "id": "zh.h.di4-5730",
+   "group": "place",
+   "ja": "地",
+   "ruby": "地[dì]",
+   "kana": "di",
+   "romaji": "dì",
+   "en": "ground, earth",
+   "hsk": 3,
+   "radical": "土",
+   "ex": {
+    "ja": "地铁",
+    "ruby": "地铁[dì tiě]",
+    "romaji": "dìtiě",
+    "en": "metro, subway"
+   },
+   "alt": "de: adverb marker (慢慢地)"
+  },
+  {
+   "id": "zh.h.jin4-8fd1",
+   "group": "place",
+   "ja": "近",
+   "ruby": "近[jìn]",
+   "kana": "jin",
+   "romaji": "jìn",
+   "en": "near",
+   "hsk": 2,
+   "radical": "辶",
+   "ex": {
+    "ja": "附近",
+    "ruby": "附近[fù jìn]",
+    "romaji": "fùjìn",
+    "en": "nearby"
+   }
+  },
+  {
+   "id": "zh.h.yuan3-8fdc",
+   "group": "place",
+   "ja": "远",
+   "ruby": "远[yuǎn]",
+   "kana": "yuan",
+   "romaji": "yuǎn",
+   "en": "far",
+   "hsk": 2,
+   "radical": "辶",
+   "ex": {
+    "ja": "远方",
+    "ruby": "远方[yuǎn fāng]",
+    "romaji": "yuǎnfāng",
+    "en": "far away"
+   }
+  },
+  {
+   "id": "zh.h.cheng2-57ce",
+   "group": "place",
+   "ja": "城",
+   "ruby": "城[chéng]",
+   "kana": "cheng",
+   "romaji": "chéng",
+   "en": "city; city wall",
+   "hsk": 3,
+   "radical": "土",
+   "ex": {
+    "ja": "长城",
+    "ruby": "长城[Cháng chéng]",
+    "romaji": "Chángchéng",
+    "en": "the Great Wall"
+   }
+  },
+  {
+   "id": "zh.h.shi4-5e02",
+   "group": "place",
+   "ja": "市",
+   "ruby": "市[shì]",
+   "kana": "shi",
+   "romaji": "shì",
+   "en": "city; market",
+   "hsk": 3,
+   "radical": "巾",
+   "ex": {
+    "ja": "超市",
+    "ruby": "超市[chāo shì]",
+    "romaji": "chāoshì",
+    "en": "supermarket"
+   }
+  },
+  {
+   "id": "zh.h.shan1-5c71",
+   "group": "nature",
+   "ja": "山",
+   "ruby": "山[shān]",
+   "kana": "shan",
+   "romaji": "shān",
+   "en": "mountain",
+   "hsk": 3,
+   "radical": "山",
+   "ex": {
+    "ja": "爬山",
+    "ruby": "爬山[pá shān]",
+    "romaji": "páshān",
+    "en": "climb a mountain, hike"
+   }
+  },
+  {
+   "id": "zh.h.shui3-6c34",
+   "group": "nature",
+   "ja": "水",
+   "ruby": "水[shuǐ]",
+   "kana": "shui",
+   "romaji": "shuǐ",
+   "en": "water",
+   "hsk": 1,
+   "radical": "水",
+   "ex": {
+    "ja": "水果",
+    "ruby": "水果[shuǐ guǒ]",
+    "romaji": "shuǐguǒ",
+    "en": "fruit"
+   }
+  },
+  {
+   "id": "zh.h.huo3-706b",
+   "group": "nature",
+   "ja": "火",
+   "ruby": "火[huǒ]",
+   "kana": "huo",
+   "romaji": "huǒ",
+   "en": "fire",
+   "hsk": 1,
+   "radical": "火",
+   "ex": {
+    "ja": "火车",
+    "ruby": "火车[huǒ chē]",
+    "romaji": "huǒchē",
+    "en": "train"
+   }
+  },
+  {
+   "id": "zh.h.mu4-6728",
+   "group": "nature",
+   "ja": "木",
+   "ruby": "木[mù]",
+   "kana": "mu",
+   "romaji": "mù",
+   "en": "wood, tree",
+   "hsk": 5,
+   "ex": {
+    "ja": "木头",
+    "ruby": "木头[mù tou]",
+    "romaji": "mùtou",
+    "en": "wood"
+   }
+  },
+  {
+   "id": "zh.h.tu3-571f",
+   "group": "nature",
+   "ja": "土",
+   "ruby": "土[tǔ]",
+   "kana": "tu",
+   "romaji": "tǔ",
+   "en": "earth, soil",
+   "hsk": 5,
+   "radical": "土",
+   "ex": {
+    "ja": "土豆",
+    "ruby": "土豆[tǔ dòu]",
+    "romaji": "tǔdòu",
+    "en": "potato"
+   }
+  },
+  {
+   "id": "zh.h.jin1-91d1",
+   "group": "nature",
+   "ja": "金",
+   "ruby": "金[jīn]",
+   "kana": "jin",
+   "romaji": "jīn",
+   "en": "gold; metal",
+   "hsk": 4,
+   "radical": "金",
+   "ex": {
+    "ja": "现金",
+    "ruby": "现金[xiàn jīn]",
+    "romaji": "xiànjīn",
+    "en": "cash"
+   }
+  },
+  {
+   "id": "zh.h.feng1-98ce",
+   "group": "nature",
+   "ja": "风",
+   "ruby": "风[fēng]",
+   "kana": "feng",
+   "romaji": "fēng",
+   "en": "wind",
+   "hsk": 4,
+   "radical": "风",
+   "ex": {
+    "ja": "刮风",
+    "ruby": "刮风[guā fēng]",
+    "romaji": "guāfēng",
+    "en": "be windy"
+   }
+  },
+  {
+   "id": "zh.h.yu3-96e8",
+   "group": "nature",
+   "ja": "雨",
+   "ruby": "雨[yǔ]",
+   "kana": "yu",
+   "romaji": "yǔ",
+   "en": "rain",
+   "hsk": 1,
+   "radical": "雨",
+   "ex": {
+    "ja": "下雨",
+    "ruby": "下雨[xià yǔ]",
+    "romaji": "xiàyǔ",
+    "en": "to rain"
+   }
+  },
+  {
+   "id": "zh.h.xue3-96ea",
+   "group": "nature",
+   "ja": "雪",
+   "ruby": "雪[xuě]",
+   "kana": "xue",
+   "romaji": "xuě",
+   "en": "snow",
+   "hsk": 2,
+   "radical": "雨",
+   "ex": {
+    "ja": "下雪",
+    "ruby": "下雪[xià xuě]",
+    "romaji": "xiàxuě",
+    "en": "to snow"
+   }
+  },
+  {
+   "id": "zh.h.yun2-4e91",
+   "group": "nature",
+   "ja": "云",
+   "ruby": "云[yún]",
+   "kana": "yun",
+   "romaji": "yún",
+   "en": "cloud",
+   "hsk": 3,
+   "radical": "二",
+   "ex": {
+    "ja": "白云",
+    "ruby": "白云[bái yún]",
+    "romaji": "báiyún",
+    "en": "white cloud"
+   }
+  },
+  {
+   "id": "zh.h.qi4-6c14",
+   "group": "nature",
+   "ja": "气",
+   "ruby": "气[qì]",
+   "kana": "qi",
+   "romaji": "qì",
+   "en": "air; gas; mood",
+   "hsk": 1,
+   "radical": "气",
+   "ex": {
+    "ja": "天气",
+    "ruby": "天气[tiān qì]",
+    "romaji": "tiānqì",
+    "en": "weather"
+   }
+  },
+  {
+   "id": "zh.h.leng3-51b7",
+   "group": "nature",
+   "ja": "冷",
+   "ruby": "冷[lěng]",
+   "kana": "leng",
+   "romaji": "lěng",
+   "en": "cold",
+   "hsk": 1,
+   "radical": "冫",
+   "ex": {
+    "ja": "冷水",
+    "ruby": "冷水[lěng shuǐ]",
+    "romaji": "lěngshuǐ",
+    "en": "cold water"
+   }
+  },
+  {
+   "id": "zh.h.re4-70ed",
+   "group": "nature",
+   "ja": "热",
+   "ruby": "热[rè]",
+   "kana": "re",
+   "romaji": "rè",
+   "en": "hot",
+   "hsk": 1,
+   "radical": "灬",
+   "ex": {
+    "ja": "热水",
+    "ruby": "热水[rè shuǐ]",
+    "romaji": "rèshuǐ",
+    "en": "hot water"
+   }
+  },
+  {
+   "id": "zh.h.hua1-82b1",
+   "group": "nature",
+   "ja": "花",
+   "ruby": "花[huā]",
+   "kana": "hua",
+   "romaji": "huā",
+   "en": "flower; spend",
+   "hsk": 3,
+   "radical": "艹",
+   "ex": {
+    "ja": "花园",
+    "ruby": "花园[huā yuán]",
+    "romaji": "huāyuán",
+    "en": "garden"
+   }
+  },
+  {
+   "id": "zh.h.cao3-8349",
+   "group": "nature",
+   "ja": "草",
+   "ruby": "草[cǎo]",
+   "kana": "cao",
+   "romaji": "cǎo",
+   "en": "grass",
+   "hsk": 3,
+   "radical": "艹",
+   "ex": {
+    "ja": "草地",
+    "ruby": "草地[cǎo dì]",
+    "romaji": "cǎodì",
+    "en": "lawn"
+   }
+  },
+  {
+   "id": "zh.h.shu4-6811",
+   "group": "nature",
+   "ja": "树",
+   "ruby": "树[shù]",
+   "kana": "shu",
+   "romaji": "shù",
+   "en": "tree",
+   "hsk": 3,
+   "radical": "木",
+   "ex": {
+    "ja": "树叶",
+    "ruby": "树叶[shù yè]",
+    "romaji": "shùyè",
+    "en": "leaf"
+   }
+  },
+  {
+   "id": "zh.h.he2-6cb3",
+   "group": "nature",
+   "ja": "河",
+   "ruby": "河[hé]",
+   "kana": "he",
+   "romaji": "hé",
+   "en": "river",
+   "hsk": 3,
+   "radical": "氵",
+   "ex": {
+    "ja": "河边",
+    "ruby": "河边[hé biān]",
+    "romaji": "hébiān",
+    "en": "riverside"
+   }
+  },
+  {
+   "id": "zh.h.gou3-72d7",
+   "group": "nature",
+   "ja": "狗",
+   "ruby": "狗[gǒu]",
+   "kana": "gou",
+   "romaji": "gǒu",
+   "en": "dog",
+   "hsk": 1,
+   "radical": "犭",
+   "ex": {
+    "ja": "小狗",
+    "ruby": "小狗[xiǎo gǒu]",
+    "romaji": "xiǎogǒu",
+    "en": "puppy"
+   }
+  },
+  {
+   "id": "zh.h.mao1-732b",
+   "group": "nature",
+   "ja": "猫",
+   "ruby": "猫[māo]",
+   "kana": "mao",
+   "romaji": "māo",
+   "en": "cat",
+   "hsk": 1,
+   "radical": "犭",
+   "ex": {
+    "ja": "小猫",
+    "ruby": "小猫[xiǎo māo]",
+    "romaji": "xiǎomāo",
+    "en": "kitten"
+   }
+  },
+  {
+   "id": "zh.h.yu2-9c7c",
+   "group": "nature",
+   "ja": "鱼",
+   "ruby": "鱼[yú]",
+   "kana": "yu",
+   "romaji": "yú",
+   "en": "fish",
+   "hsk": 2,
+   "radical": "鱼",
+   "ex": {
+    "ja": "金鱼",
+    "ruby": "金鱼[jīn yú]",
+    "romaji": "jīnyú",
+    "en": "goldfish"
+   }
+  },
+  {
+   "id": "zh.h.niao3-9e1f",
+   "group": "nature",
+   "ja": "鸟",
+   "ruby": "鸟[niǎo]",
+   "kana": "niao",
+   "romaji": "niǎo",
+   "en": "bird",
+   "hsk": 3,
+   "radical": "鸟",
+   "ex": {
+    "ja": "小鸟",
+    "ruby": "小鸟[xiǎo niǎo]",
+    "romaji": "xiǎoniǎo",
+    "en": "little bird"
+   }
+  },
+  {
+   "id": "zh.h.ma3-9a6c",
+   "group": "nature",
+   "ja": "马",
+   "ruby": "马[mǎ]",
+   "kana": "ma",
+   "romaji": "mǎ",
+   "en": "horse",
+   "hsk": 3,
+   "radical": "马",
+   "ex": {
+    "ja": "马上",
+    "ruby": "马上[mǎ shàng]",
+    "romaji": "mǎshàng",
+    "en": "right away"
+   }
+  },
+  {
+   "id": "zh.h.niu2-725b",
+   "group": "nature",
+   "ja": "牛",
+   "ruby": "牛[niú]",
+   "kana": "niu",
+   "romaji": "niú",
+   "en": "cow, ox",
+   "hsk": 2,
+   "radical": "牛",
+   "ex": {
+    "ja": "牛奶",
+    "ruby": "牛奶[niú nǎi]",
+    "romaji": "niúnǎi",
+    "en": "milk"
+   }
+  },
+  {
+   "id": "zh.h.yang2-7f8a",
+   "group": "nature",
+   "ja": "羊",
+   "ruby": "羊[yáng]",
+   "kana": "yang",
+   "romaji": "yáng",
+   "en": "sheep",
+   "hsk": 2,
+   "radical": "羊",
+   "ex": {
+    "ja": "羊肉",
+    "ruby": "羊肉[yáng ròu]",
+    "romaji": "yángròu",
+    "en": "mutton, lamb"
+   }
+  },
+  {
+   "id": "zh.h.ji1-9e21",
+   "group": "nature",
+   "ja": "鸡",
+   "ruby": "鸡[jī]",
+   "kana": "ji",
+   "romaji": "jī",
+   "en": "chicken",
+   "hsk": 2,
+   "radical": "鸟",
+   "ex": {
+    "ja": "鸡蛋",
+    "ruby": "鸡蛋[jī dàn]",
+    "romaji": "jīdàn",
+    "en": "egg"
+   }
+  },
+  {
+   "id": "zh.h.qing2-6674",
+   "group": "nature",
+   "ja": "晴",
+   "ruby": "晴[qíng]",
+   "kana": "qing",
+   "romaji": "qíng",
+   "en": "sunny, clear",
+   "hsk": 2,
+   "radical": "日",
+   "ex": {
+    "ja": "晴天",
+    "ruby": "晴天[qíng tiān]",
+    "romaji": "qíngtiān",
+    "en": "sunny day"
+   }
+  },
+  {
+   "id": "zh.h.yin1-9634",
+   "group": "nature",
+   "ja": "阴",
+   "ruby": "阴[yīn]",
+   "kana": "yin",
+   "romaji": "yīn",
+   "en": "cloudy; shade",
+   "hsk": 2,
+   "radical": "阝",
+   "ex": {
+    "ja": "阴天",
+    "ruby": "阴天[yīn tiān]",
+    "romaji": "yīntiān",
+    "en": "cloudy day"
+   }
+  },
+  {
+   "id": "zh.h.yang2-9633",
+   "group": "nature",
+   "ja": "阳",
+   "ruby": "阳[yáng]",
+   "kana": "yang",
+   "romaji": "yáng",
+   "en": "sun",
+   "hsk": 3,
+   "ex": {
+    "ja": "太阳",
+    "ruby": "太阳[tài yang]",
+    "romaji": "tàiyang",
+    "en": "the sun"
+   }
+  },
+  {
+   "id": "zh.h.kong1-7a7a",
+   "group": "nature",
+   "ja": "空",
+   "ruby": "空[kōng]",
+   "kana": "kong",
+   "romaji": "kōng",
+   "en": "sky; empty",
+   "hsk": 3,
+   "radical": "穴",
+   "ex": {
+    "ja": "空气",
+    "ruby": "空气[kōng qì]",
+    "romaji": "kōngqì",
+    "en": "air"
+   },
+   "alt": "kòng: free time (有空)"
+  },
+  {
+   "id": "zh.h.chi1-5403",
+   "group": "food",
+   "ja": "吃",
+   "ruby": "吃[chī]",
+   "kana": "chi",
+   "romaji": "chī",
+   "en": "eat",
+   "hsk": 1,
+   "radical": "口",
+   "ex": {
+    "ja": "吃饭",
+    "ruby": "吃饭[chī fàn]",
+    "romaji": "chīfàn",
+    "en": "have a meal"
+   }
+  },
+  {
+   "id": "zh.h.he1-559d",
+   "group": "food",
+   "ja": "喝",
+   "ruby": "喝[hē]",
+   "kana": "he",
+   "romaji": "hē",
+   "en": "drink",
+   "hsk": 1,
+   "radical": "口",
+   "ex": {
+    "ja": "喝茶",
+    "ruby": "喝茶[hē chá]",
+    "romaji": "hēchá",
+    "en": "drink tea"
+   }
+  },
+  {
+   "id": "zh.h.fan4-996d",
+   "group": "food",
+   "ja": "饭",
+   "ruby": "饭[fàn]",
+   "kana": "fan",
+   "romaji": "fàn",
+   "en": "cooked rice; meal",
+   "hsk": 1,
+   "radical": "饣",
+   "ex": {
+    "ja": "米饭",
+    "ruby": "米饭[mǐ fàn]",
+    "romaji": "mǐfàn",
+    "en": "rice"
+   }
+  },
+  {
+   "id": "zh.h.cai4-83dc",
+   "group": "food",
+   "ja": "菜",
+   "ruby": "菜[cài]",
+   "kana": "cai",
+   "romaji": "cài",
+   "en": "dish; vegetable",
+   "hsk": 1,
+   "radical": "艹",
+   "ex": {
+    "ja": "菜单",
+    "ruby": "菜单[cài dān]",
+    "romaji": "càidān",
+    "en": "menu"
+   }
+  },
+  {
+   "id": "zh.h.cha2-8336",
+   "group": "food",
+   "ja": "茶",
+   "ruby": "茶[chá]",
+   "kana": "cha",
+   "romaji": "chá",
+   "en": "tea",
+   "hsk": 1,
+   "radical": "艹",
+   "ex": {
+    "ja": "绿茶",
+    "ruby": "绿茶[lǜ chá]",
+    "romaji": "lǜchá",
+    "en": "green tea"
+   }
+  },
+  {
+   "id": "zh.h.mi3-7c73",
+   "group": "food",
+   "ja": "米",
+   "ruby": "米[mǐ]",
+   "kana": "mi",
+   "romaji": "mǐ",
+   "en": "rice (grain); metre",
+   "hsk": 1,
+   "radical": "米",
+   "ex": {
+    "ja": "大米",
+    "ruby": "大米[dà mǐ]",
+    "romaji": "dàmǐ",
+    "en": "rice (uncooked)"
+   }
+  },
+  {
+   "id": "zh.h.mian4-9762",
+   "group": "food",
+   "ja": "面",
+   "ruby": "面[miàn]",
+   "kana": "mian",
+   "romaji": "miàn",
+   "en": "noodles; flour; face",
+   "hsk": 1,
+   "radical": "面",
+   "ex": {
+    "ja": "面包",
+    "ruby": "面包[miàn bāo]",
+    "romaji": "miànbāo",
+    "en": "bread"
+   }
+  },
+  {
+   "id": "zh.h.rou4-8089",
+   "group": "food",
+   "ja": "肉",
+   "ruby": "肉[ròu]",
+   "kana": "rou",
+   "romaji": "ròu",
+   "en": "meat",
+   "hsk": 2,
+   "radical": "肉",
+   "ex": {
+    "ja": "牛肉",
+    "ruby": "牛肉[niú ròu]",
+    "romaji": "niúròu",
+    "en": "beef"
+   }
+  },
+  {
+   "id": "zh.h.dan4-86cb",
+   "group": "food",
+   "ja": "蛋",
+   "ruby": "蛋[dàn]",
+   "kana": "dan",
+   "romaji": "dàn",
+   "en": "egg",
+   "hsk": 2,
+   "radical": "虫",
+   "ex": {
+    "ja": "蛋糕",
+    "ruby": "蛋糕[dàn gāo]",
+    "romaji": "dàngāo",
+    "en": "cake"
+   }
+  },
+  {
+   "id": "zh.h.guo3-679c",
+   "group": "food",
+   "ja": "果",
+   "ruby": "果[guǒ]",
+   "kana": "guo",
+   "romaji": "guǒ",
+   "en": "fruit; result",
+   "hsk": 1,
+   "ex": {
+    "ja": "苹果",
+    "ruby": "苹果[píng guǒ]",
+    "romaji": "píngguǒ",
+    "en": "apple"
+   }
+  },
+  {
+   "id": "zh.h.nai3-5976",
+   "group": "food",
+   "ja": "奶",
+   "ruby": "奶[nǎi]",
+   "kana": "nai",
+   "romaji": "nǎi",
+   "en": "milk",
+   "hsk": 2,
+   "radical": "女",
+   "ex": {
+    "ja": "奶茶",
+    "ruby": "奶茶[nǎi chá]",
+    "romaji": "nǎichá",
+    "en": "milk tea"
+   }
+  },
+  {
+   "id": "zh.h.jiu3-9152",
+   "group": "food",
+   "ja": "酒",
+   "ruby": "酒[jiǔ]",
+   "kana": "jiu",
+   "romaji": "jiǔ",
+   "en": "alcoholic drink",
+   "hsk": 3,
+   "radical": "酉",
+   "ex": {
+    "ja": "啤酒",
+    "ruby": "啤酒[pí jiǔ]",
+    "romaji": "píjiǔ",
+    "en": "beer"
+   }
+  },
+  {
+   "id": "zh.h.tang2-7cd6",
+   "group": "food",
+   "ja": "糖",
+   "ruby": "糖[táng]",
+   "kana": "tang",
+   "romaji": "táng",
+   "en": "sugar; sweets",
+   "hsk": 3,
+   "radical": "米",
+   "ex": {
+    "ja": "白糖",
+    "ruby": "白糖[bái táng]",
+    "romaji": "báitáng",
+    "en": "white sugar"
+   }
+  },
+  {
+   "id": "zh.h.yan2-76d0",
+   "group": "food",
+   "ja": "盐",
+   "ruby": "盐[yán]",
+   "kana": "yan",
+   "romaji": "yán",
+   "en": "salt",
+   "hsk": 4,
+   "radical": "皿",
+   "ex": {
+    "ja": "少盐",
+    "ruby": "少盐[shǎo yán]",
+    "romaji": "shǎoyán",
+    "en": "less salt"
+   }
+  },
+  {
+   "id": "zh.h.la4-8fa3",
+   "group": "food",
+   "ja": "辣",
+   "ruby": "辣[là]",
+   "kana": "la",
+   "romaji": "là",
+   "en": "spicy",
+   "hsk": 4,
+   "radical": "辛",
+   "ex": {
+    "ja": "辣椒",
+    "ruby": "辣椒[là jiāo]",
+    "romaji": "làjiāo",
+    "en": "chilli"
+   }
+  },
+  {
+   "id": "zh.h.tian2-751c",
+   "group": "food",
+   "ja": "甜",
+   "ruby": "甜[tián]",
+   "kana": "tian",
+   "romaji": "tián",
+   "en": "sweet",
+   "hsk": 3,
+   "radical": "甘",
+   "ex": {
+    "ja": "甜点",
+    "ruby": "甜点[tián diǎn]",
+    "romaji": "tiándiǎn",
+    "en": "dessert"
+   }
+  },
+  {
+   "id": "zh.h.suan1-9178",
+   "group": "food",
+   "ja": "酸",
+   "ruby": "酸[suān]",
+   "kana": "suan",
+   "romaji": "suān",
+   "en": "sour",
+   "hsk": 4,
+   "radical": "酉",
+   "ex": {
+    "ja": "酸奶",
+    "ruby": "酸奶[suān nǎi]",
+    "romaji": "suānnǎi",
+    "en": "yoghurt"
+   }
+  },
+  {
+   "id": "zh.h.tang1-6c64",
+   "group": "food",
+   "ja": "汤",
+   "ruby": "汤[tāng]",
+   "kana": "tang",
+   "romaji": "tāng",
+   "en": "soup",
+   "hsk": 4,
+   "radical": "氵",
+   "ex": {
+    "ja": "鸡汤",
+    "ruby": "鸡汤[jī tāng]",
+    "romaji": "jītāng",
+    "en": "chicken soup"
+   }
+  },
+  {
+   "id": "zh.h.jiao3-997a",
+   "group": "food",
+   "ja": "饺",
+   "ruby": "饺[jiǎo]",
+   "kana": "jiao",
+   "romaji": "jiǎo",
+   "en": "dumpling",
+   "hsk": 4,
+   "ex": {
+    "ja": "饺子",
+    "ruby": "饺子[jiǎo zi]",
+    "romaji": "jiǎozi",
+    "en": "dumplings"
+   }
+  },
+  {
+   "id": "zh.h.bao1-5305",
+   "group": "food",
+   "ja": "包",
+   "ruby": "包[bāo]",
+   "kana": "bao",
+   "romaji": "bāo",
+   "en": "bag; wrap; bun",
+   "hsk": 3,
+   "radical": "勹",
+   "ex": {
+    "ja": "包子",
+    "ruby": "包子[bāo zi]",
+    "romaji": "bāozi",
+    "en": "steamed bun"
+   }
+  },
+  {
+   "id": "zh.h.wan3-7897",
+   "group": "food",
+   "ja": "碗",
+   "ruby": "碗[wǎn]",
+   "kana": "wan",
+   "romaji": "wǎn",
+   "en": "bowl",
+   "hsk": 3,
+   "radical": "石",
+   "ex": {
+    "ja": "洗碗",
+    "ruby": "洗碗[xǐ wǎn]",
+    "romaji": "xǐwǎn",
+    "en": "wash the dishes"
+   }
+  },
+  {
+   "id": "zh.h.kuai4-7b77",
+   "group": "food",
+   "ja": "筷",
+   "ruby": "筷[kuài]",
+   "kana": "kuai",
+   "romaji": "kuài",
+   "en": "chopstick",
+   "hsk": 3,
+   "ex": {
+    "ja": "筷子",
+    "ruby": "筷子[kuài zi]",
+    "romaji": "kuàizi",
+    "en": "chopsticks"
+   }
+  },
+  {
+   "id": "zh.h.dan1-5355",
+   "group": "food",
+   "ja": "单",
+   "ruby": "单[dān]",
+   "kana": "dan",
+   "romaji": "dān",
+   "en": "single; list",
+   "hsk": 3,
+   "radical": "丷",
+   "ex": {
+    "ja": "买单",
+    "ruby": "买单[mǎi dān]",
+    "romaji": "mǎidān",
+    "en": "pay the bill"
+   }
+  },
+  {
+   "id": "zh.h.can1-9910",
+   "group": "food",
+   "ja": "餐",
+   "ruby": "餐[cān]",
+   "kana": "can",
+   "romaji": "cān",
+   "en": "meal",
+   "hsk": 5,
+   "radical": "食",
+   "ex": {
+    "ja": "早餐",
+    "ruby": "早餐[zǎo cān]",
+    "romaji": "zǎocān",
+    "en": "breakfast"
+   }
+  },
+  {
+   "id": "zh.h.wei4-5473",
+   "group": "food",
+   "ja": "味",
+   "ruby": "味[wèi]",
+   "kana": "wei",
+   "romaji": "wèi",
+   "en": "taste, flavour",
+   "hsk": 4,
+   "ex": {
+    "ja": "味道",
+    "ruby": "味道[wèi dao]",
+    "romaji": "wèidao",
+    "en": "taste"
+   }
+  },
+  {
+   "id": "zh.h.ya1-9e2d",
+   "group": "food",
+   "ja": "鸭",
+   "ruby": "鸭[yā]",
+   "kana": "ya",
+   "romaji": "yā",
+   "en": "duck",
+   "hsk": 5,
+   "ex": {
+    "ja": "烤鸭",
+    "ruby": "烤鸭[kǎo yā]",
+    "romaji": "kǎoyā",
+    "en": "roast duck"
+   }
+  },
+  {
+   "id": "zh.h.dou4-8c46",
+   "group": "food",
+   "ja": "豆",
+   "ruby": "豆[dòu]",
+   "kana": "dou",
+   "romaji": "dòu",
+   "en": "bean",
+   "hsk": 5,
+   "ex": {
+    "ja": "豆腐",
+    "ruby": "豆腐[dòu fu]",
+    "romaji": "dòufu",
+    "en": "tofu"
+   }
+  },
+  {
+   "id": "zh.h.you2-6cb9",
+   "group": "food",
+   "ja": "油",
+   "ruby": "油[yóu]",
+   "kana": "you",
+   "romaji": "yóu",
+   "en": "oil",
+   "hsk": 4,
+   "radical": "氵",
+   "ex": {
+    "ja": "加油",
+    "ruby": "加油[jiā yóu]",
+    "romaji": "jiāyóu",
+    "en": "go for it!; refuel"
+   }
+  },
+  {
+   "id": "zh.h.xiang1-9999",
+   "group": "food",
+   "ja": "香",
+   "ruby": "香[xiāng]",
+   "kana": "xiang",
+   "romaji": "xiāng",
+   "en": "fragrant",
+   "hsk": 3,
+   "radical": "香",
+   "ex": {
+    "ja": "香菜",
+    "ruby": "香菜[xiāng cài]",
+    "romaji": "xiāngcài",
+    "en": "coriander"
+   }
+  },
+  {
+   "id": "zh.h.fang2-623f",
+   "group": "home",
+   "ja": "房",
+   "ruby": "房[fáng]",
+   "kana": "fang",
+   "romaji": "fáng",
+   "en": "house; room",
+   "hsk": 2,
+   "ex": {
+    "ja": "房间",
+    "ruby": "房间[fáng jiān]",
+    "romaji": "fángjiān",
+    "en": "room"
+   }
+  },
+  {
+   "id": "zh.h.chuang2-5e8a",
+   "group": "home",
+   "ja": "床",
+   "ruby": "床[chuáng]",
+   "kana": "chuang",
+   "romaji": "chuáng",
+   "en": "bed",
+   "hsk": 2,
+   "radical": "广",
+   "ex": {
+    "ja": "起床",
+    "ruby": "起床[qǐ chuáng]",
+    "romaji": "qǐchuáng",
+    "en": "get up"
+   }
+  },
+  {
+   "id": "zh.h.zhuo1-684c",
+   "group": "home",
+   "ja": "桌",
+   "ruby": "桌[zhuō]",
+   "kana": "zhuo",
+   "romaji": "zhuō",
+   "en": "table, desk",
+   "hsk": 1,
+   "ex": {
+    "ja": "桌子",
+    "ruby": "桌子[zhuō zi]",
+    "romaji": "zhuōzi",
+    "en": "table"
+   }
+  },
+  {
+   "id": "zh.h.yi3-6905",
+   "group": "home",
+   "ja": "椅",
+   "ruby": "椅[yǐ]",
+   "kana": "yi",
+   "romaji": "yǐ",
+   "en": "chair",
+   "hsk": 1,
+   "ex": {
+    "ja": "椅子",
+    "ruby": "椅子[yǐ zi]",
+    "romaji": "yǐzi",
+    "en": "chair"
+   }
+  },
+  {
+   "id": "zh.h.deng1-706f",
+   "group": "home",
+   "ja": "灯",
+   "ruby": "灯[dēng]",
+   "kana": "deng",
+   "romaji": "dēng",
+   "en": "lamp, light",
+   "hsk": 3,
+   "radical": "火",
+   "ex": {
+    "ja": "开灯",
+    "ruby": "开灯[kāi dēng]",
+    "romaji": "kāidēng",
+    "en": "turn on the light"
+   }
+  },
+  {
+   "id": "zh.h.chuang1-7a97",
+   "group": "home",
+   "ja": "窗",
+   "ruby": "窗[chuāng]",
+   "kana": "chuang",
+   "romaji": "chuāng",
+   "en": "window",
+   "hsk": 4,
+   "ex": {
+    "ja": "窗户",
+    "ruby": "窗户[chuāng hu]",
+    "romaji": "chuānghu",
+    "en": "window"
+   }
+  },
+  {
+   "id": "zh.h.dian4-7535",
+   "group": "home",
+   "ja": "电",
+   "ruby": "电[diàn]",
+   "kana": "dian",
+   "romaji": "diàn",
+   "en": "electricity",
+   "hsk": 1,
+   "radical": "曰",
+   "ex": {
+    "ja": "电话",
+    "ruby": "电话[diàn huà]",
+    "romaji": "diànhuà",
+    "en": "telephone"
+   }
+  },
+  {
+   "id": "zh.h.shi4-89c6",
+   "group": "home",
+   "ja": "视",
+   "ruby": "视[shì]",
+   "kana": "shi",
+   "romaji": "shì",
+   "en": "look at",
+   "hsk": 1,
+   "ex": {
+    "ja": "电视",
+    "ruby": "电视[diàn shì]",
+    "romaji": "diànshì",
+    "en": "television"
+   }
+  },
+  {
+   "id": "zh.h.nao3-8111",
+   "group": "home",
+   "ja": "脑",
+   "ruby": "脑[nǎo]",
+   "kana": "nao",
+   "romaji": "nǎo",
+   "en": "brain",
+   "hsk": 1,
+   "ex": {
+    "ja": "电脑",
+    "ruby": "电脑[diàn nǎo]",
+    "romaji": "diànnǎo",
+    "en": "computer"
+   }
+  },
+  {
+   "id": "zh.h.ji1-673a",
+   "group": "home",
+   "ja": "机",
+   "ruby": "机[jī]",
+   "kana": "ji",
+   "romaji": "jī",
+   "en": "machine",
+   "hsk": 1,
+   "ex": {
+    "ja": "手机",
+    "ruby": "手机[shǒu jī]",
+    "romaji": "shǒujī",
+    "en": "mobile phone"
+   }
+  },
+  {
+   "id": "zh.h.yi1-8863",
+   "group": "home",
+   "ja": "衣",
+   "ruby": "衣[yī]",
+   "kana": "yi",
+   "romaji": "yī",
+   "en": "clothes",
+   "hsk": 1,
+   "ex": {
+    "ja": "衣服",
+    "ruby": "衣服[yī fu]",
+    "romaji": "yīfu",
+    "en": "clothes"
+   }
+  },
+  {
+   "id": "zh.h.fu2-670d",
+   "group": "home",
+   "ja": "服",
+   "ruby": "服[fú]",
+   "kana": "fu",
+   "romaji": "fú",
+   "en": "clothes; serve",
+   "hsk": 1,
+   "radical": "月",
+   "ex": {
+    "ja": "服务员",
+    "ruby": "服务员[fú wù yuán]",
+    "romaji": "fúwùyuán",
+    "en": "waiter, attendant"
+   },
+   "alt": "fu: neutral in 衣服, 舒服"
+  },
+  {
+   "id": "zh.h.ku4-88e4",
+   "group": "home",
+   "ja": "裤",
+   "ruby": "裤[kù]",
+   "kana": "ku",
+   "romaji": "kù",
+   "en": "trousers",
+   "hsk": 3,
+   "ex": {
+    "ja": "裤子",
+    "ruby": "裤子[kù zi]",
+    "romaji": "kùzi",
+    "en": "trousers"
+   }
+  },
+  {
+   "id": "zh.h.xie2-978b",
+   "group": "home",
+   "ja": "鞋",
+   "ruby": "鞋[xié]",
+   "kana": "xie",
+   "romaji": "xié",
+   "en": "shoe",
+   "hsk": 3,
+   "radical": "革",
+   "ex": {
+    "ja": "皮鞋",
+    "ruby": "皮鞋[pí xié]",
+    "romaji": "píxié",
+    "en": "leather shoes"
+   }
+  },
+  {
+   "id": "zh.h.mao4-5e3d",
+   "group": "home",
+   "ja": "帽",
+   "ruby": "帽[mào]",
+   "kana": "mao",
+   "romaji": "mào",
+   "en": "hat",
+   "hsk": 3,
+   "ex": {
+    "ja": "帽子",
+    "ruby": "帽子[mào zi]",
+    "romaji": "màozi",
+    "en": "hat"
+   }
+  },
+  {
+   "id": "zh.h.shu1-4e66",
+   "group": "home",
+   "ja": "书",
+   "ruby": "书[shū]",
+   "kana": "shu",
+   "romaji": "shū",
+   "en": "book",
+   "hsk": 1,
+   "radical": "丨",
+   "ex": {
+    "ja": "书包",
+    "ruby": "书包[shū bāo]",
+    "romaji": "shūbāo",
+    "en": "school bag"
+   }
+  },
+  {
+   "id": "zh.h.bi3-7b14",
+   "group": "home",
+   "ja": "笔",
+   "ruby": "笔[bǐ]",
+   "kana": "bi",
+   "romaji": "bǐ",
+   "en": "pen",
+   "hsk": 3,
+   "radical": "⺮",
+   "ex": {
+    "ja": "铅笔",
+    "ruby": "铅笔[qiān bǐ]",
+    "romaji": "qiānbǐ",
+    "en": "pencil"
+   }
+  },
+  {
+   "id": "zh.h.zhi3-7eb8",
+   "group": "home",
+   "ja": "纸",
+   "ruby": "纸[zhǐ]",
+   "kana": "zhi",
+   "romaji": "zhǐ",
+   "en": "paper",
+   "hsk": 2,
+   "radical": "纟",
+   "ex": {
+    "ja": "报纸",
+    "ruby": "报纸[bào zhǐ]",
+    "romaji": "bàozhǐ",
+    "en": "newspaper"
+   }
+  },
+  {
+   "id": "zh.h.yao4-94a5",
+   "group": "home",
+   "ja": "钥",
+   "ruby": "钥[yào]",
+   "kana": "yao",
+   "romaji": "yào",
+   "en": "key",
+   "hsk": 4,
+   "ex": {
+    "ja": "钥匙",
+    "ruby": "钥匙[yào shi]",
+    "romaji": "yàoshi",
+    "en": "key"
+   },
+   "alt": "yuè: literary reading"
+  },
+  {
+   "id": "zh.h.san3-4f1e",
+   "group": "home",
+   "ja": "伞",
+   "ruby": "伞[sǎn]",
+   "kana": "san",
+   "romaji": "sǎn",
+   "en": "umbrella",
+   "hsk": 3,
+   "radical": "人",
+   "ex": {
+    "ja": "雨伞",
+    "ruby": "雨伞[yǔ sǎn]",
+    "romaji": "yǔsǎn",
+    "en": "umbrella"
+   }
+  },
+  {
+   "id": "zh.h.xiang1-7bb1",
+   "group": "home",
+   "ja": "箱",
+   "ruby": "箱[xiāng]",
+   "kana": "xiang",
+   "romaji": "xiāng",
+   "en": "box, case",
+   "hsk": 3,
+   "radical": "⺮",
+   "ex": {
+    "ja": "冰箱",
+    "ruby": "冰箱[bīng xiāng]",
+    "romaji": "bīngxiāng",
+    "en": "fridge"
+   }
+  },
+  {
+   "id": "zh.h.che1-8f66",
+   "group": "home",
+   "ja": "车",
+   "ruby": "车[chē]",
+   "kana": "che",
+   "romaji": "chē",
+   "en": "vehicle",
+   "hsk": 1,
+   "radical": "车",
+   "ex": {
+    "ja": "汽车",
+    "ruby": "汽车[qì chē]",
+    "romaji": "qìchē",
+    "en": "car"
+   }
+  },
+  {
+   "id": "zh.h.xi3-6d17",
+   "group": "home",
+   "ja": "洗",
+   "ruby": "洗[xǐ]",
+   "kana": "xi",
+   "romaji": "xǐ",
+   "en": "wash",
+   "hsk": 2,
+   "radical": "氵",
+   "ex": {
+    "ja": "洗手",
+    "ruby": "洗手[xǐ shǒu]",
+    "romaji": "xǐshǒu",
+    "en": "wash your hands"
+   }
+  },
+  {
+   "id": "zh.h.zao3-6fa1",
+   "group": "home",
+   "ja": "澡",
+   "ruby": "澡[zǎo]",
+   "kana": "zao",
+   "romaji": "zǎo",
+   "en": "bath",
+   "hsk": 3,
+   "ex": {
+    "ja": "洗澡",
+    "ruby": "洗澡[xǐ zǎo]",
+    "romaji": "xǐzǎo",
+    "en": "have a shower or bath"
    }
   }
  ]
