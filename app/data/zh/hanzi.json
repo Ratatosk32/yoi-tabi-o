@@ -3839,6 +3839,1631 @@
     "romaji": "xǐzǎo",
     "en": "have a shower or bath"
    }
+  },
+  {
+   "id": "zh.h.qian2-94b1",
+   "group": "city",
+   "ja": "钱",
+   "ruby": "钱[qián]",
+   "kana": "qian",
+   "romaji": "qián",
+   "en": "money",
+   "hsk": 1,
+   "radical": "钅",
+   "ex": {
+    "ja": "多少钱",
+    "ruby": "多少[duō shao]钱[qián]",
+    "romaji": "duōshao qián",
+    "en": "how much?"
+   }
+  },
+  {
+   "id": "zh.h.mai3-4e70",
+   "group": "city",
+   "ja": "买",
+   "ruby": "买[mǎi]",
+   "kana": "mai",
+   "romaji": "mǎi",
+   "en": "buy",
+   "hsk": 1,
+   "radical": "大",
+   "ex": {
+    "ja": "买单",
+    "ruby": "买单[mǎi dān]",
+    "romaji": "mǎidān",
+    "en": "pay the bill"
+   }
+  },
+  {
+   "id": "zh.h.mai4-5356",
+   "group": "city",
+   "ja": "卖",
+   "ruby": "卖[mài]",
+   "kana": "mai",
+   "romaji": "mài",
+   "en": "sell",
+   "hsk": 2,
+   "radical": "十",
+   "ex": {
+    "ja": "卖完",
+    "ruby": "卖完[mài wán]",
+    "romaji": "màiwán",
+    "en": "sold out"
+   }
+  },
+  {
+   "id": "zh.h.gui4-8d35",
+   "group": "city",
+   "ja": "贵",
+   "ruby": "贵[guì]",
+   "kana": "gui",
+   "romaji": "guì",
+   "en": "expensive; honoured",
+   "hsk": 2,
+   "radical": "贝",
+   "ex": {
+    "ja": "贵姓",
+    "ruby": "贵姓[guì xìng]",
+    "romaji": "guìxìng",
+    "en": "your surname (polite)"
+   }
+  },
+  {
+   "id": "zh.h.bian4-4fbf",
+   "group": "city",
+   "ja": "便",
+   "ruby": "便[biàn]",
+   "kana": "bian",
+   "romaji": "biàn",
+   "en": "convenient",
+   "hsk": 2,
+   "radical": "亻",
+   "ex": {
+    "ja": "方便",
+    "ruby": "方便[fāng biàn]",
+    "romaji": "fāngbiàn",
+    "en": "convenient"
+   },
+   "alt": "pián: as in 便宜 piányi (cheap)"
+  },
+  {
+   "id": "zh.h.yi2-5b9c",
+   "group": "city",
+   "ja": "宜",
+   "ruby": "宜[yí]",
+   "kana": "yi",
+   "romaji": "yí",
+   "en": "suitable",
+   "hsk": 2,
+   "ex": {
+    "ja": "便宜",
+    "ruby": "便宜[pián yi]",
+    "romaji": "piányi",
+    "en": "cheap"
+   }
+  },
+  {
+   "id": "zh.h.yuan2-5143",
+   "group": "city",
+   "ja": "元",
+   "ruby": "元[yuán]",
+   "kana": "yuan",
+   "romaji": "yuán",
+   "en": "yuan (written)",
+   "hsk": 2,
+   "radical": "儿",
+   "ex": {
+    "ja": "美元",
+    "ruby": "美元[Měi yuán]",
+    "romaji": "Měiyuán",
+    "en": "US dollar"
+   }
+  },
+  {
+   "id": "zh.h.yin2-94f6",
+   "group": "city",
+   "ja": "银",
+   "ruby": "银[yín]",
+   "kana": "yin",
+   "romaji": "yín",
+   "en": "silver",
+   "hsk": 3,
+   "radical": "钅",
+   "ex": {
+    "ja": "银行",
+    "ruby": "银行[yín háng]",
+    "romaji": "yínháng",
+    "en": "bank"
+   }
+  },
+  {
+   "id": "zh.h.xing2-884c",
+   "group": "city",
+   "ja": "行",
+   "ruby": "行[xíng]",
+   "kana": "xing",
+   "romaji": "xíng",
+   "en": "go; OK",
+   "hsk": 2,
+   "radical": "行",
+   "ex": {
+    "ja": "自行车",
+    "ruby": "自行车[zì xíng chē]",
+    "romaji": "zìxíngchē",
+    "en": "bicycle"
+   },
+   "alt": "háng: row, trade, as in 银行"
+  },
+  {
+   "id": "zh.h.piao4-7968",
+   "group": "city",
+   "ja": "票",
+   "ruby": "票[piào]",
+   "kana": "piao",
+   "romaji": "piào",
+   "en": "ticket",
+   "hsk": 2,
+   "radical": "示",
+   "ex": {
+    "ja": "车票",
+    "ruby": "车票[chē piào]",
+    "romaji": "chēpiào",
+    "en": "train or bus ticket"
+   }
+  },
+  {
+   "id": "zh.h.ka3-5361",
+   "group": "city",
+   "ja": "卡",
+   "ruby": "卡[kǎ]",
+   "kana": "ka",
+   "romaji": "kǎ",
+   "en": "card",
+   "hsk": 4,
+   "radical": "卜",
+   "ex": {
+    "ja": "刷卡",
+    "ruby": "刷卡[shuā kǎ]",
+    "romaji": "shuākǎ",
+    "en": "pay by card"
+   }
+  },
+  {
+   "id": "zh.h.fu4-4ed8",
+   "group": "city",
+   "ja": "付",
+   "ruby": "付[fù]",
+   "kana": "fu",
+   "romaji": "fù",
+   "en": "pay",
+   "hsk": 5,
+   "radical": "亻",
+   "ex": {
+    "ja": "付钱",
+    "ruby": "付钱[fù qián]",
+    "romaji": "fùqián",
+    "en": "pay"
+   }
+  },
+  {
+   "id": "zh.h.shang1-5546",
+   "group": "city",
+   "ja": "商",
+   "ruby": "商[shāng]",
+   "kana": "shang",
+   "romaji": "shāng",
+   "en": "trade, business",
+   "hsk": 1,
+   "ex": {
+    "ja": "商场",
+    "ruby": "商场[shāng chǎng]",
+    "romaji": "shāngchǎng",
+    "en": "shopping mall"
+   }
+  },
+  {
+   "id": "zh.h.gong1-516c",
+   "group": "city",
+   "ja": "公",
+   "ruby": "公[gōng]",
+   "kana": "gong",
+   "romaji": "gōng",
+   "en": "public",
+   "hsk": 2,
+   "radical": "八",
+   "ex": {
+    "ja": "公园",
+    "ruby": "公园[gōng yuán]",
+    "romaji": "gōngyuán",
+    "en": "park"
+   }
+  },
+  {
+   "id": "zh.h.si1-53f8",
+   "group": "city",
+   "ja": "司",
+   "ruby": "司[sī]",
+   "kana": "si",
+   "romaji": "sī",
+   "en": "manage",
+   "hsk": 2,
+   "ex": {
+    "ja": "公司",
+    "ruby": "公司[gōng sī]",
+    "romaji": "gōngsī",
+    "en": "company"
+   }
+  },
+  {
+   "id": "zh.h.gong1-5de5",
+   "group": "city",
+   "ja": "工",
+   "ruby": "工[gōng]",
+   "kana": "gong",
+   "romaji": "gōng",
+   "en": "work",
+   "hsk": 1,
+   "ex": {
+    "ja": "工作",
+    "ruby": "工作[gōng zuò]",
+    "romaji": "gōngzuò",
+    "en": "work, job"
+   }
+  },
+  {
+   "id": "zh.h.zuo4-4f5c",
+   "group": "city",
+   "ja": "作",
+   "ruby": "作[zuò]",
+   "kana": "zuo",
+   "romaji": "zuò",
+   "en": "do, make",
+   "hsk": 1,
+   "radical": "亻",
+   "ex": {
+    "ja": "作业",
+    "ruby": "作业[zuò yè]",
+    "romaji": "zuòyè",
+    "en": "homework"
+   }
+  },
+  {
+   "id": "zh.h.ban1-73ed",
+   "group": "city",
+   "ja": "班",
+   "ruby": "班[bān]",
+   "kana": "ban",
+   "romaji": "bān",
+   "en": "class; shift",
+   "hsk": 2,
+   "radical": "王",
+   "ex": {
+    "ja": "上班",
+    "ruby": "上班[shàng bān]",
+    "romaji": "shàngbān",
+    "en": "go to work"
+   }
+  },
+  {
+   "id": "zh.h.xue2-5b66",
+   "group": "city",
+   "ja": "学",
+   "ruby": "学[xué]",
+   "kana": "xue",
+   "romaji": "xué",
+   "en": "study, learn",
+   "hsk": 1,
+   "radical": "子",
+   "ex": {
+    "ja": "学生",
+    "ruby": "学生[xué sheng]",
+    "romaji": "xuésheng",
+    "en": "student"
+   }
+  },
+  {
+   "id": "zh.h.xi2-4e60",
+   "group": "city",
+   "ja": "习",
+   "ruby": "习[xí]",
+   "kana": "xi",
+   "romaji": "xí",
+   "en": "practise",
+   "hsk": 1,
+   "ex": {
+    "ja": "学习",
+    "ruby": "学习[xué xí]",
+    "romaji": "xuéxí",
+    "en": "study"
+   }
+  },
+  {
+   "id": "zh.h.ke4-8bfe",
+   "group": "city",
+   "ja": "课",
+   "ruby": "课[kè]",
+   "kana": "ke",
+   "romaji": "kè",
+   "en": "lesson, class",
+   "hsk": 2,
+   "radical": "讠",
+   "ex": {
+    "ja": "上课",
+    "ruby": "上课[shàng kè]",
+    "romaji": "shàngkè",
+    "en": "have a class"
+   }
+  },
+  {
+   "id": "zh.h.kao3-8003",
+   "group": "city",
+   "ja": "考",
+   "ruby": "考[kǎo]",
+   "kana": "kao",
+   "romaji": "kǎo",
+   "en": "test",
+   "hsk": 2,
+   "radical": "耂",
+   "ex": {
+    "ja": "考试",
+    "ruby": "考试[kǎo shì]",
+    "romaji": "kǎoshì",
+    "en": "exam"
+   }
+  },
+  {
+   "id": "zh.h.shi4-8bd5",
+   "group": "city",
+   "ja": "试",
+   "ruby": "试[shì]",
+   "kana": "shi",
+   "romaji": "shì",
+   "en": "try; test",
+   "hsk": 2,
+   "radical": "讠",
+   "ex": {
+    "ja": "试试",
+    "ruby": "试试[shì shi]",
+    "romaji": "shìshi",
+    "en": "have a try"
+   }
+  },
+  {
+   "id": "zh.h.ti2-9898",
+   "group": "city",
+   "ja": "题",
+   "ruby": "题[tí]",
+   "kana": "ti",
+   "romaji": "tí",
+   "en": "question, topic",
+   "hsk": 2,
+   "radical": "页",
+   "ex": {
+    "ja": "问题",
+    "ruby": "问题[wèn tí]",
+    "romaji": "wèntí",
+    "en": "question; problem"
+   }
+  },
+  {
+   "id": "zh.h.han4-6c49",
+   "group": "city",
+   "ja": "汉",
+   "ruby": "汉[hàn]",
+   "kana": "han",
+   "romaji": "hàn",
+   "en": "Han (Chinese)",
+   "hsk": 1,
+   "ex": {
+    "ja": "汉语",
+    "ruby": "汉语[Hàn yǔ]",
+    "romaji": "Hànyǔ",
+    "en": "Chinese language"
+   }
+  },
+  {
+   "id": "zh.h.yu3-8bed",
+   "group": "city",
+   "ja": "语",
+   "ruby": "语[yǔ]",
+   "kana": "yu",
+   "romaji": "yǔ",
+   "en": "language",
+   "hsk": 1,
+   "ex": {
+    "ja": "英语",
+    "ruby": "英语[Yīng yǔ]",
+    "romaji": "Yīngyǔ",
+    "en": "English"
+   }
+  },
+  {
+   "id": "zh.h.wen2-6587",
+   "group": "city",
+   "ja": "文",
+   "ruby": "文[wén]",
+   "kana": "wen",
+   "romaji": "wén",
+   "en": "writing; culture",
+   "hsk": 3,
+   "radical": "文",
+   "ex": {
+    "ja": "中文",
+    "ruby": "中文[Zhōng wén]",
+    "romaji": "Zhōngwén",
+    "en": "Chinese"
+   }
+  },
+  {
+   "id": "zh.h.tie3-94c1",
+   "group": "city",
+   "ja": "铁",
+   "ruby": "铁[tiě]",
+   "kana": "tie",
+   "romaji": "tiě",
+   "en": "iron",
+   "hsk": 3,
+   "radical": "钅",
+   "ex": {
+    "ja": "高铁",
+    "ruby": "高铁[gāo tiě]",
+    "romaji": "gāotiě",
+    "en": "high-speed rail"
+   }
+  },
+  {
+   "id": "zh.h.fei1-98de",
+   "group": "city",
+   "ja": "飞",
+   "ruby": "飞[fēi]",
+   "kana": "fei",
+   "romaji": "fēi",
+   "en": "fly",
+   "hsk": 1,
+   "radical": "飞",
+   "ex": {
+    "ja": "飞机",
+    "ruby": "飞机[fēi jī]",
+    "romaji": "fēijī",
+    "en": "plane"
+   }
+  },
+  {
+   "id": "zh.h.chu1-51fa",
+   "group": "city",
+   "ja": "出",
+   "ruby": "出[chū]",
+   "kana": "chu",
+   "romaji": "chū",
+   "en": "go out",
+   "hsk": 1,
+   "radical": "凵",
+   "ex": {
+    "ja": "出口",
+    "ruby": "出口[chū kǒu]",
+    "romaji": "chūkǒu",
+    "en": "exit"
+   }
+  },
+  {
+   "id": "zh.h.zu1-79df",
+   "group": "city",
+   "ja": "租",
+   "ruby": "租[zū]",
+   "kana": "zu",
+   "romaji": "zū",
+   "en": "rent",
+   "hsk": 1,
+   "radical": "禾",
+   "ex": {
+    "ja": "出租车",
+    "ruby": "出租车[chū zū chē]",
+    "romaji": "chūzūchē",
+    "en": "taxi"
+   }
+  },
+  {
+   "id": "zh.h.lv3-65c5",
+   "group": "city",
+   "ja": "旅",
+   "ruby": "旅[lǚ]",
+   "kana": "lv",
+   "romaji": "lǚ",
+   "en": "travel",
+   "hsk": 2,
+   "ex": {
+    "ja": "旅游",
+    "ruby": "旅游[lǚ yóu]",
+    "romaji": "lǚyóu",
+    "en": "tourism, travel"
+   }
+  },
+  {
+   "id": "zh.h.you2-6e38",
+   "group": "city",
+   "ja": "游",
+   "ruby": "游[yóu]",
+   "kana": "you",
+   "romaji": "yóu",
+   "en": "swim; tour",
+   "hsk": 2,
+   "radical": "氵",
+   "ex": {
+    "ja": "游泳",
+    "ruby": "游泳[yóu yǒng]",
+    "romaji": "yóuyǒng",
+    "en": "swim"
+   }
+  },
+  {
+   "id": "zh.h.hu4-62a4",
+   "group": "city",
+   "ja": "护",
+   "ruby": "护[hù]",
+   "kana": "hu",
+   "romaji": "hù",
+   "en": "protect",
+   "hsk": 3,
+   "radical": "扌",
+   "ex": {
+    "ja": "护照",
+    "ruby": "护照[hù zhào]",
+    "romaji": "hùzhào",
+    "en": "passport"
+   }
+  },
+  {
+   "id": "zh.h.zhao4-7167",
+   "group": "city",
+   "ja": "照",
+   "ruby": "照[zhào]",
+   "kana": "zhao",
+   "romaji": "zhào",
+   "en": "photo; shine",
+   "hsk": 3,
+   "radical": "灬",
+   "ex": {
+    "ja": "照片",
+    "ruby": "照片[zhào piàn]",
+    "romaji": "zhàopiàn",
+    "en": "photo"
+   }
+  },
+  {
+   "id": "zh.h.hua4-8bdd",
+   "group": "city",
+   "ja": "话",
+   "ruby": "话[huà]",
+   "kana": "hua",
+   "romaji": "huà",
+   "en": "speech, words",
+   "hsk": 1,
+   "radical": "讠",
+   "ex": {
+    "ja": "电话",
+    "ruby": "电话[diàn huà]",
+    "romaji": "diànhuà",
+    "en": "telephone"
+   }
+  },
+  {
+   "id": "zh.h.wang3-7f51",
+   "group": "city",
+   "ja": "网",
+   "ruby": "网[wǎng]",
+   "kana": "wang",
+   "romaji": "wǎng",
+   "en": "net, internet",
+   "hsk": 3,
+   "radical": "网",
+   "ex": {
+    "ja": "上网",
+    "ruby": "上网[shàng wǎng]",
+    "romaji": "shàngwǎng",
+    "en": "go online"
+   }
+  },
+  {
+   "id": "zh.h.xin4-4fe1",
+   "group": "city",
+   "ja": "信",
+   "ruby": "信[xìn]",
+   "kana": "xin",
+   "romaji": "xìn",
+   "en": "letter; believe",
+   "hsk": 3,
+   "radical": "亻",
+   "ex": {
+    "ja": "微信",
+    "ruby": "微信[Wēi xìn]",
+    "romaji": "Wēixìn",
+    "en": "WeChat"
+   }
+  },
+  {
+   "id": "zh.h.shi4-662f",
+   "group": "verb",
+   "ja": "是",
+   "ruby": "是[shì]",
+   "kana": "shi",
+   "romaji": "shì",
+   "en": "be (is, am, are)",
+   "hsk": 1,
+   "radical": "日",
+   "ex": {
+    "ja": "还是",
+    "ruby": "还是[hái shi]",
+    "romaji": "háishi",
+    "en": "or (in questions); still"
+   }
+  },
+  {
+   "id": "zh.h.you3-6709",
+   "group": "verb",
+   "ja": "有",
+   "ruby": "有[yǒu]",
+   "kana": "you",
+   "romaji": "yǒu",
+   "en": "have; there is",
+   "hsk": 1,
+   "radical": "月",
+   "ex": {
+    "ja": "没有",
+    "ruby": "没有[méi yǒu]",
+    "romaji": "méiyǒu",
+    "en": "not have; there is not"
+   }
+  },
+  {
+   "id": "zh.h.lai2-6765",
+   "group": "verb",
+   "ja": "来",
+   "ruby": "来[lái]",
+   "kana": "lai",
+   "romaji": "lái",
+   "en": "come",
+   "hsk": 1,
+   "radical": "木",
+   "ex": {
+    "ja": "后来",
+    "ruby": "后来[hòu lái]",
+    "romaji": "hòulái",
+    "en": "afterwards"
+   }
+  },
+  {
+   "id": "zh.h.qu4-53bb",
+   "group": "verb",
+   "ja": "去",
+   "ruby": "去[qù]",
+   "kana": "qu",
+   "romaji": "qù",
+   "en": "go",
+   "hsk": 1,
+   "radical": "厶",
+   "ex": {
+    "ja": "去年",
+    "ruby": "去年[qù nián]",
+    "romaji": "qùnián",
+    "en": "last year"
+   }
+  },
+  {
+   "id": "zh.h.shuo1-8bf4",
+   "group": "verb",
+   "ja": "说",
+   "ruby": "说[shuō]",
+   "kana": "shuo",
+   "romaji": "shuō",
+   "en": "speak, say",
+   "hsk": 1,
+   "radical": "讠",
+   "ex": {
+    "ja": "小说",
+    "ruby": "小说[xiǎo shuō]",
+    "romaji": "xiǎoshuō",
+    "en": "novel"
+   }
+  },
+  {
+   "id": "zh.h.kan4-770b",
+   "group": "verb",
+   "ja": "看",
+   "ruby": "看[kàn]",
+   "kana": "kan",
+   "romaji": "kàn",
+   "en": "look, watch, read",
+   "hsk": 1,
+   "radical": "目",
+   "ex": {
+    "ja": "好看",
+    "ruby": "好看[hǎo kàn]",
+    "romaji": "hǎokàn",
+    "en": "good-looking"
+   }
+  },
+  {
+   "id": "zh.h.ting1-542c",
+   "group": "verb",
+   "ja": "听",
+   "ruby": "听[tīng]",
+   "kana": "ting",
+   "romaji": "tīng",
+   "en": "listen",
+   "hsk": 1,
+   "radical": "口",
+   "ex": {
+    "ja": "听说",
+    "ruby": "听说[tīng shuō]",
+    "romaji": "tīngshuō",
+    "en": "hear (that)"
+   }
+  },
+  {
+   "id": "zh.h.du2-8bfb",
+   "group": "verb",
+   "ja": "读",
+   "ruby": "读[dú]",
+   "kana": "du",
+   "romaji": "dú",
+   "en": "read aloud; study",
+   "hsk": 1,
+   "radical": "讠",
+   "ex": {
+    "ja": "读书",
+    "ruby": "读书[dú shū]",
+    "romaji": "dúshū",
+    "en": "read; study"
+   }
+  },
+  {
+   "id": "zh.h.xie3-5199",
+   "group": "verb",
+   "ja": "写",
+   "ruby": "写[xiě]",
+   "kana": "xie",
+   "romaji": "xiě",
+   "en": "write",
+   "hsk": 1,
+   "radical": "冖",
+   "ex": {
+    "ja": "写字",
+    "ruby": "写字[xiě zì]",
+    "romaji": "xiězì",
+    "en": "write characters"
+   }
+  },
+  {
+   "id": "zh.h.zou3-8d70",
+   "group": "verb",
+   "ja": "走",
+   "ruby": "走[zǒu]",
+   "kana": "zou",
+   "romaji": "zǒu",
+   "en": "walk; leave",
+   "hsk": 2,
+   "radical": "走",
+   "ex": {
+    "ja": "走路",
+    "ruby": "走路[zǒu lù]",
+    "romaji": "zǒulù",
+    "en": "walk"
+   }
+  },
+  {
+   "id": "zh.h.pao3-8dd1",
+   "group": "verb",
+   "ja": "跑",
+   "ruby": "跑[pǎo]",
+   "kana": "pao",
+   "romaji": "pǎo",
+   "en": "run",
+   "hsk": 2,
+   "radical": "足",
+   "ex": {
+    "ja": "跑步",
+    "ruby": "跑步[pǎo bù]",
+    "romaji": "pǎobù",
+    "en": "jog, go running"
+   }
+  },
+  {
+   "id": "zh.h.zuo4-5750",
+   "group": "verb",
+   "ja": "坐",
+   "ruby": "坐[zuò]",
+   "kana": "zuo",
+   "romaji": "zuò",
+   "en": "sit; travel by",
+   "hsk": 1,
+   "radical": "土",
+   "ex": {
+    "ja": "坐车",
+    "ruby": "坐车[zuò chē]",
+    "romaji": "zuòchē",
+    "en": "go by car or bus"
+   }
+  },
+  {
+   "id": "zh.h.zhu4-4f4f",
+   "group": "verb",
+   "ja": "住",
+   "ruby": "住[zhù]",
+   "kana": "zhu",
+   "romaji": "zhù",
+   "en": "live, stay",
+   "hsk": 1,
+   "radical": "亻",
+   "ex": {
+    "ja": "住院",
+    "ruby": "住院[zhù yuàn]",
+    "romaji": "zhùyuàn",
+    "en": "be in hospital"
+   }
+  },
+  {
+   "id": "zh.h.zuo4-505a",
+   "group": "verb",
+   "ja": "做",
+   "ruby": "做[zuò]",
+   "kana": "zuo",
+   "romaji": "zuò",
+   "en": "do, make",
+   "hsk": 1,
+   "radical": "亻",
+   "ex": {
+    "ja": "做饭",
+    "ruby": "做饭[zuò fàn]",
+    "romaji": "zuòfàn",
+    "en": "cook"
+   }
+  },
+  {
+   "id": "zh.h.xiang3-60f3",
+   "group": "verb",
+   "ja": "想",
+   "ruby": "想[xiǎng]",
+   "kana": "xiang",
+   "romaji": "xiǎng",
+   "en": "think; want to; miss",
+   "hsk": 1,
+   "radical": "心",
+   "ex": {
+    "ja": "想法",
+    "ruby": "想法[xiǎng fǎ]",
+    "romaji": "xiǎngfǎ",
+    "en": "idea, opinion"
+   }
+  },
+  {
+   "id": "zh.h.yao4-8981",
+   "group": "verb",
+   "ja": "要",
+   "ruby": "要[yào]",
+   "kana": "yao",
+   "romaji": "yào",
+   "en": "want; need; will",
+   "hsk": 2,
+   "radical": "覀",
+   "ex": {
+    "ja": "需要",
+    "ruby": "需要[xū yào]",
+    "romaji": "xūyào",
+    "en": "need"
+   }
+  },
+  {
+   "id": "zh.h.hui4-4f1a",
+   "group": "verb",
+   "ja": "会",
+   "ruby": "会[huì]",
+   "kana": "hui",
+   "romaji": "huì",
+   "en": "can (learned); will; meeting",
+   "hsk": 1,
+   "radical": "人",
+   "ex": {
+    "ja": "开会",
+    "ruby": "开会[kāi huì]",
+    "romaji": "kāihuì",
+    "en": "have a meeting"
+   }
+  },
+  {
+   "id": "zh.h.neng2-80fd",
+   "group": "verb",
+   "ja": "能",
+   "ruby": "能[néng]",
+   "kana": "neng",
+   "romaji": "néng",
+   "en": "can, be able",
+   "hsk": 1,
+   "radical": "⺼",
+   "ex": {
+    "ja": "可能",
+    "ruby": "可能[kě néng]",
+    "romaji": "kěnéng",
+    "en": "possible; maybe"
+   }
+  },
+  {
+   "id": "zh.h.ai4-7231",
+   "group": "verb",
+   "ja": "爱",
+   "ruby": "爱[ài]",
+   "kana": "ai",
+   "romaji": "ài",
+   "en": "love",
+   "hsk": 1,
+   "radical": "爫",
+   "ex": {
+    "ja": "爱好",
+    "ruby": "爱好[ài hào]",
+    "romaji": "àihào",
+    "en": "hobby"
+   }
+  },
+  {
+   "id": "zh.h.xi3-559c",
+   "group": "verb",
+   "ja": "喜",
+   "ruby": "喜[xǐ]",
+   "kana": "xi",
+   "romaji": "xǐ",
+   "en": "happy; like",
+   "hsk": 1,
+   "ex": {
+    "ja": "喜欢",
+    "ruby": "喜欢[xǐ huan]",
+    "romaji": "xǐhuan",
+    "en": "like"
+   }
+  },
+  {
+   "id": "zh.h.huan1-6b22",
+   "group": "verb",
+   "ja": "欢",
+   "ruby": "欢[huān]",
+   "kana": "huan",
+   "romaji": "huān",
+   "en": "joyful",
+   "hsk": 1,
+   "ex": {
+    "ja": "欢迎",
+    "ruby": "欢迎[huān yíng]",
+    "romaji": "huānyíng",
+    "en": "welcome"
+   }
+  },
+  {
+   "id": "zh.h.zhi1-77e5",
+   "group": "verb",
+   "ja": "知",
+   "ruby": "知[zhī]",
+   "kana": "zhi",
+   "romaji": "zhī",
+   "en": "know",
+   "hsk": 2,
+   "ex": {
+    "ja": "知道",
+    "ruby": "知道[zhī dào]",
+    "romaji": "zhīdào",
+    "en": "know"
+   }
+  },
+  {
+   "id": "zh.h.dao4-9053",
+   "group": "verb",
+   "ja": "道",
+   "ruby": "道[dào]",
+   "kana": "dao",
+   "romaji": "dào",
+   "en": "road; way; say",
+   "hsk": 2,
+   "radical": "辶",
+   "ex": {
+    "ja": "道歉",
+    "ruby": "道歉[dào qiàn]",
+    "romaji": "dàoqiàn",
+    "en": "apologize"
+   }
+  },
+  {
+   "id": "zh.h.ren4-8ba4",
+   "group": "verb",
+   "ja": "认",
+   "ruby": "认[rèn]",
+   "kana": "ren",
+   "romaji": "rèn",
+   "en": "recognize",
+   "hsk": 1,
+   "radical": "讠",
+   "ex": {
+    "ja": "认为",
+    "ruby": "认为[rèn wéi]",
+    "romaji": "rènwéi",
+    "en": "believe, think"
+   }
+  },
+  {
+   "id": "zh.h.shi2-8bc6",
+   "group": "verb",
+   "ja": "识",
+   "ruby": "识[shí]",
+   "kana": "shi",
+   "romaji": "shí",
+   "en": "know, recognize",
+   "hsk": 1,
+   "radical": "讠",
+   "ex": {
+    "ja": "认识",
+    "ruby": "认识[rèn shi]",
+    "romaji": "rènshi",
+    "en": "know (a person)"
+   }
+  },
+  {
+   "id": "zh.h.gei3-7ed9",
+   "group": "verb",
+   "ja": "给",
+   "ruby": "给[gěi]",
+   "kana": "gei",
+   "romaji": "gěi",
+   "en": "give; for, to",
+   "hsk": 2,
+   "radical": "纟",
+   "ex": {
+    "ja": "送给",
+    "ruby": "送给[sòng gěi]",
+    "romaji": "sònggěi",
+    "en": "give as a present"
+   }
+  },
+  {
+   "id": "zh.h.zhao3-627e",
+   "group": "verb",
+   "ja": "找",
+   "ruby": "找[zhǎo]",
+   "kana": "zhao",
+   "romaji": "zhǎo",
+   "en": "look for; give change",
+   "hsk": 2,
+   "radical": "扌",
+   "ex": {
+    "ja": "找到",
+    "ruby": "找到[zhǎo dào]",
+    "romaji": "zhǎodào",
+    "en": "find"
+   }
+  },
+  {
+   "id": "zh.h.deng3-7b49",
+   "group": "verb",
+   "ja": "等",
+   "ruby": "等[děng]",
+   "kana": "deng",
+   "romaji": "děng",
+   "en": "wait",
+   "hsk": 4,
+   "radical": "⺮",
+   "ex": {
+    "ja": "等等",
+    "ruby": "等等[děng děng]",
+    "romaji": "děngděng",
+    "en": "wait a moment; and so on"
+   }
+  },
+  {
+   "id": "zh.h.kai1-5f00",
+   "group": "verb",
+   "ja": "开",
+   "ruby": "开[kāi]",
+   "kana": "kai",
+   "romaji": "kāi",
+   "en": "open; drive; turn on",
+   "hsk": 1,
+   "radical": "廾",
+   "ex": {
+    "ja": "开车",
+    "ruby": "开车[kāi chē]",
+    "romaji": "kāichē",
+    "en": "drive"
+   }
+  },
+  {
+   "id": "zh.h.guan1-5173",
+   "group": "verb",
+   "ja": "关",
+   "ruby": "关[guān]",
+   "kana": "guan",
+   "romaji": "guān",
+   "en": "close; turn off",
+   "hsk": 1,
+   "radical": "丷",
+   "ex": {
+    "ja": "关门",
+    "ruby": "关门[guān mén]",
+    "romaji": "guānmén",
+    "en": "close (the door)"
+   }
+  },
+  {
+   "id": "zh.h.hui2-56de",
+   "group": "verb",
+   "ja": "回",
+   "ruby": "回[huí]",
+   "kana": "hui",
+   "romaji": "huí",
+   "en": "return",
+   "hsk": 1,
+   "radical": "囗",
+   "ex": {
+    "ja": "回家",
+    "ruby": "回家[huí jiā]",
+    "romaji": "huíjiā",
+    "en": "go home"
+   }
+  },
+  {
+   "id": "zh.h.dao4-5230",
+   "group": "verb",
+   "ja": "到",
+   "ruby": "到[dào]",
+   "kana": "dao",
+   "romaji": "dào",
+   "en": "arrive; to",
+   "hsk": 2,
+   "radical": "刂",
+   "ex": {
+    "ja": "迟到",
+    "ruby": "迟到[chí dào]",
+    "romaji": "chídào",
+    "en": "be late"
+   }
+  },
+  {
+   "id": "zh.h.jin4-8fdb",
+   "group": "verb",
+   "ja": "进",
+   "ruby": "进[jìn]",
+   "kana": "jin",
+   "romaji": "jìn",
+   "en": "enter",
+   "hsk": 2,
+   "radical": "辶",
+   "ex": {
+    "ja": "进口",
+    "ruby": "进口[jìn kǒu]",
+    "romaji": "jìnkǒu",
+    "en": "import; entrance"
+   }
+  },
+  {
+   "id": "zh.h.qi3-8d77",
+   "group": "verb",
+   "ja": "起",
+   "ruby": "起[qǐ]",
+   "kana": "qi",
+   "romaji": "qǐ",
+   "en": "rise, get up",
+   "hsk": 1,
+   "radical": "走",
+   "ex": {
+    "ja": "一起",
+    "ruby": "一起[yì qǐ]",
+    "romaji": "yìqǐ",
+    "en": "together"
+   }
+  },
+  {
+   "id": "zh.h.shui4-7761",
+   "group": "verb",
+   "ja": "睡",
+   "ruby": "睡[shuì]",
+   "kana": "shui",
+   "romaji": "shuì",
+   "en": "sleep",
+   "hsk": 1,
+   "radical": "目",
+   "ex": {
+    "ja": "睡觉",
+    "ruby": "睡觉[shuì jiào]",
+    "romaji": "shuìjiào",
+    "en": "sleep, go to bed"
+   }
+  },
+  {
+   "id": "zh.h.jiao4-89c9",
+   "group": "verb",
+   "ja": "觉",
+   "ruby": "觉[jiào]",
+   "kana": "jiao",
+   "romaji": "jiào",
+   "en": "sleep",
+   "hsk": 1,
+   "radical": "见",
+   "ex": {
+    "ja": "午觉",
+    "ruby": "午觉[wǔ jiào]",
+    "romaji": "wǔjiào",
+    "en": "nap"
+   },
+   "alt": "jué: feel, as in 觉得"
+  },
+  {
+   "id": "zh.h.da3-6253",
+   "group": "verb",
+   "ja": "打",
+   "ruby": "打[dǎ]",
+   "kana": "da",
+   "romaji": "dǎ",
+   "en": "hit; make (a call); play",
+   "hsk": 1,
+   "radical": "扌",
+   "ex": {
+    "ja": "打车",
+    "ruby": "打车[dǎ chē]",
+    "romaji": "dǎchē",
+    "en": "take a taxi"
+   }
+  },
+  {
+   "id": "zh.h.yong4-7528",
+   "group": "verb",
+   "ja": "用",
+   "ruby": "用[yòng]",
+   "kana": "yong",
+   "romaji": "yòng",
+   "en": "use",
+   "hsk": 3,
+   "radical": "用",
+   "ex": {
+    "ja": "不用",
+    "ruby": "不用[bú yòng]",
+    "romaji": "búyòng",
+    "en": "no need"
+   }
+  },
+  {
+   "id": "zh.h.wen4-95ee",
+   "group": "verb",
+   "ja": "问",
+   "ruby": "问[wèn]",
+   "kana": "wen",
+   "romaji": "wèn",
+   "en": "ask",
+   "hsk": 2,
+   "radical": "门",
+   "ex": {
+    "ja": "请问",
+    "ruby": "请问[qǐng wèn]",
+    "romaji": "qǐngwèn",
+    "en": "excuse me, may I ask"
+   }
+  },
+  {
+   "id": "zh.h.gao4-544a",
+   "group": "verb",
+   "ja": "告",
+   "ruby": "告[gào]",
+   "kana": "gao",
+   "romaji": "gào",
+   "en": "tell, inform",
+   "hsk": 2,
+   "radical": "口",
+   "ex": {
+    "ja": "告诉",
+    "ruby": "告诉[gào su]",
+    "romaji": "gàosu",
+    "en": "tell"
+   }
+  },
+  {
+   "id": "zh.h.bang1-5e2e",
+   "group": "verb",
+   "ja": "帮",
+   "ruby": "帮[bāng]",
+   "kana": "bang",
+   "romaji": "bāng",
+   "en": "help",
+   "hsk": 2,
+   "radical": "巾",
+   "ex": {
+    "ja": "帮忙",
+    "ruby": "帮忙[bāng máng]",
+    "romaji": "bāngmáng",
+    "en": "help out"
+   }
+  },
+  {
+   "id": "zh.h.na2-62ff",
+   "group": "verb",
+   "ja": "拿",
+   "ruby": "拿[ná]",
+   "kana": "na",
+   "romaji": "ná",
+   "en": "take, hold",
+   "hsk": 3,
+   "radical": "手",
+   "ex": {
+    "ja": "拿走",
+    "ruby": "拿走[ná zǒu]",
+    "romaji": "názǒu",
+    "en": "take away"
+   }
+  },
+  {
+   "id": "zh.h.fang4-653e",
+   "group": "verb",
+   "ja": "放",
+   "ruby": "放[fàng]",
+   "kana": "fang",
+   "romaji": "fàng",
+   "en": "put; let go",
+   "hsk": 3,
+   "radical": "攵",
+   "ex": {
+    "ja": "放假",
+    "ruby": "放假[fàng jià]",
+    "romaji": "fàngjià",
+    "en": "have a holiday"
+   }
+  },
+  {
+   "id": "zh.h.chuan1-7a7f",
+   "group": "verb",
+   "ja": "穿",
+   "ruby": "穿[chuān]",
+   "kana": "chuan",
+   "romaji": "chuān",
+   "en": "wear, put on",
+   "hsk": 2,
+   "radical": "穴",
+   "ex": {
+    "ja": "穿衣",
+    "ruby": "穿衣[chuān yī]",
+    "romaji": "chuānyī",
+    "en": "get dressed"
+   }
+  },
+  {
+   "id": "zh.h.dai4-5e26",
+   "group": "verb",
+   "ja": "带",
+   "ruby": "带[dài]",
+   "kana": "dai",
+   "romaji": "dài",
+   "en": "bring, take; belt",
+   "hsk": 3,
+   "radical": "巾",
+   "ex": {
+    "ja": "带走",
+    "ruby": "带走[dài zǒu]",
+    "romaji": "dàizǒu",
+    "en": "take away"
+   }
+  },
+  {
+   "id": "zh.h.song4-9001",
+   "group": "verb",
+   "ja": "送",
+   "ruby": "送[sòng]",
+   "kana": "song",
+   "romaji": "sòng",
+   "en": "give; see off; deliver",
+   "hsk": 2,
+   "radical": "辶",
+   "ex": {
+    "ja": "送礼",
+    "ruby": "送礼[sòng lǐ]",
+    "romaji": "sònglǐ",
+    "en": "give a present"
+   }
+  },
+  {
+   "id": "zh.h.jie4-501f",
+   "group": "verb",
+   "ja": "借",
+   "ruby": "借[jiè]",
+   "kana": "jie",
+   "romaji": "jiè",
+   "en": "borrow, lend",
+   "hsk": 3,
+   "radical": "亻",
+   "ex": {
+    "ja": "借书",
+    "ruby": "借书[jiè shū]",
+    "romaji": "jièshū",
+    "en": "borrow a book"
+   }
+  },
+  {
+   "id": "zh.h.wan2-73a9",
+   "group": "verb",
+   "ja": "玩",
+   "ruby": "玩[wán]",
+   "kana": "wan",
+   "romaji": "wán",
+   "en": "play, have fun",
+   "hsk": 2,
+   "radical": "王",
+   "ex": {
+    "ja": "好玩",
+    "ruby": "好玩[hǎo wán]",
+    "romaji": "hǎowán",
+    "en": "fun"
+   }
+  },
+  {
+   "id": "zh.h.chang4-5531",
+   "group": "verb",
+   "ja": "唱",
+   "ruby": "唱[chàng]",
+   "kana": "chang",
+   "romaji": "chàng",
+   "en": "sing",
+   "hsk": 2,
+   "radical": "口",
+   "ex": {
+    "ja": "唱歌",
+    "ruby": "唱歌[chàng gē]",
+    "romaji": "chànggē",
+    "en": "sing"
+   }
+  },
+  {
+   "id": "zh.h.tiao4-8df3",
+   "group": "verb",
+   "ja": "跳",
+   "ruby": "跳[tiào]",
+   "kana": "tiao",
+   "romaji": "tiào",
+   "en": "jump",
+   "hsk": 2,
+   "radical": "足",
+   "ex": {
+    "ja": "跳舞",
+    "ruby": "跳舞[tiào wǔ]",
+    "romaji": "tiàowǔ",
+    "en": "dance"
+   }
+  },
+  {
+   "id": "zh.h.jiao1-6559",
+   "group": "verb",
+   "ja": "教",
+   "ruby": "教[jiāo]",
+   "kana": "jiao",
+   "romaji": "jiāo",
+   "en": "teach",
+   "hsk": 2,
+   "radical": "攵",
+   "ex": {
+    "ja": "教书",
+    "ruby": "教书[jiāo shū]",
+    "romaji": "jiāoshū",
+    "en": "teach"
+   },
+   "alt": "jiào: teaching, as in 教室 (classroom)"
+  },
+  {
+   "id": "zh.h.rang4-8ba9",
+   "group": "verb",
+   "ja": "让",
+   "ruby": "让[ràng]",
+   "kana": "rang",
+   "romaji": "ràng",
+   "en": "let; make",
+   "hsk": 2,
+   "radical": "讠",
+   "ex": {
+    "ja": "让开",
+    "ruby": "让开[ràng kāi]",
+    "romaji": "ràngkāi",
+    "en": "get out of the way"
+   }
+  },
+  {
+   "id": "zh.h.huan4-6362",
+   "group": "verb",
+   "ja": "换",
+   "ruby": "换[huàn]",
+   "kana": "huan",
+   "romaji": "huàn",
+   "en": "change, exchange",
+   "hsk": 3,
+   "radical": "扌",
+   "ex": {
+    "ja": "换钱",
+    "ruby": "换钱[huàn qián]",
+    "romaji": "huànqián",
+    "en": "change money"
+   }
+  },
+  {
+   "id": "zh.h.wang4-5fd8",
+   "group": "verb",
+   "ja": "忘",
+   "ruby": "忘[wàng]",
+   "kana": "wang",
+   "romaji": "wàng",
+   "en": "forget",
+   "hsk": 3,
+   "radical": "心",
+   "ex": {
+    "ja": "忘记",
+    "ruby": "忘记[wàng jì]",
+    "romaji": "wàngjì",
+    "en": "forget"
+   }
+  },
+  {
+   "id": "zh.h.ji4-8bb0",
+   "group": "verb",
+   "ja": "记",
+   "ruby": "记[jì]",
+   "kana": "ji",
+   "romaji": "jì",
+   "en": "remember; note down",
+   "hsk": 3,
+   "radical": "讠",
+   "ex": {
+    "ja": "日记",
+    "ruby": "日记[rì jì]",
+    "romaji": "rìjì",
+    "en": "diary"
+   }
+  },
+  {
+   "id": "zh.h.wan2-5b8c",
+   "group": "verb",
+   "ja": "完",
+   "ruby": "完[wán]",
+   "kana": "wan",
+   "romaji": "wán",
+   "en": "finish",
+   "hsk": 2,
+   "radical": "宀",
+   "ex": {
+    "ja": "完成",
+    "ruby": "完成[wán chéng]",
+    "romaji": "wánchéng",
+    "en": "complete"
+   }
+  },
+  {
+   "id": "zh.h.dong3-61c2",
+   "group": "verb",
+   "ja": "懂",
+   "ruby": "懂[dǒng]",
+   "kana": "dong",
+   "romaji": "dǒng",
+   "en": "understand",
+   "hsk": 2,
+   "radical": "忄",
+   "ex": {
+    "ja": "听懂",
+    "ruby": "听懂[tīng dǒng]",
+    "romaji": "tīngdǒng",
+    "en": "understand (by ear)"
+   }
+  },
+  {
+   "id": "zh.h.jian4-89c1",
+   "group": "verb",
+   "ja": "见",
+   "ruby": "见[jiàn]",
+   "kana": "jian",
+   "romaji": "jiàn",
+   "en": "see, meet",
+   "hsk": 1,
+   "radical": "见",
+   "ex": {
+    "ja": "再见",
+    "ruby": "再见[zài jiàn]",
+    "romaji": "zàijiàn",
+    "en": "goodbye"
+   }
   }
  ]
 }
