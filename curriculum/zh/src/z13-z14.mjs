@@ -61,7 +61,7 @@ export const LESSONS = [
       ['daily.hear-shen-me-shi-hou-hui-lai', 'hear', '你[nǐ]什么[shén me]时候[shí hou]回来[huí lai]？', 'When will you be back?', null, { replies: ['daily.qi-dian-zuo-you'] }],
       ['daily.qi-dian-zuo-you', 'say', '晚上[wǎn shang]七[qī]点[diǎn]左右[zuǒ yòu]。', 'Around seven in the evening.', '左右 after a number = about.'],
       ['daily.lu-shang-xiao-xin', 'say', '路上[lù shang]小心[xiǎo xīn]！', 'Take care on the way!'],
-      ['daily.chu-qu-yi-xia', 'say', '我[wǒ]出去[chū qù]一下[yí xià]。', 'I\'m popping out for a moment.'],
+      ['daily.chu-qu-yi-xia', 'say', '我[wǒ]出去[chū qu]一下[yí xià]。', 'I\'m popping out for a moment.'],
     ] },
   { code: 'Z14-L01', level: 2, title: 'Today\'s weather', goal: 'Talk about the weather and the forecast.', patterns: ['天气 + adjective', '会 + verb (will probably)', '听说……'],
     items: [

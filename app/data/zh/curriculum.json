@@ -2088,6 +2088,183 @@
     "zh.health.word-shen-ti",
     "zh.health.word-jian-kang"
    ]
+  },
+  {
+   "code": "Z17-L01",
+   "unit": "Z17",
+   "title": "Hobbies",
+   "goal": "Talk about what you like doing in your free time.",
+   "level": 3,
+   "path": "core",
+   "hsk": 3,
+   "patterns": [
+    "对 + thing + 感兴趣",
+    "……的时候",
+    "什么样的 + noun"
+   ],
+   "count": 12,
+   "ids": [
+    "zh.talk.hear-you-shen-me-ai-hao",
+    "zh.talk.xi-huan-pa-shan",
+    "zh.patterns.dui-she-ying-gan-xing-qu",
+    "zh.talk.ti-zu-qiu",
+    "zh.talk.hear-hui-da-lan-qiu-ma",
+    "zh.talk.hui-dan-da-de-bu-hao",
+    "zh.talk.you-kong-ting-yin-yue",
+    "zh.talk.hear-shen-me-yang-de-dian-ying",
+    "zh.talk.xi-ju-pian",
+    "zh.talk.word-hua-hua",
+    "zh.talk.word-chang-ge",
+    "zh.talk.word-tiao-wu"
+   ]
+  },
+  {
+   "code": "Z17-L02",
+   "unit": "Z17",
+   "title": "Results: finished, found, understood",
+   "goal": "Add a result to a verb; say what you can or cannot manage.",
+   "level": 3,
+   "path": "core",
+   "hsk": 3,
+   "patterns": [
+    "verb + result (完 / 到 / 懂 / 错 / 好 / 见 / 干净)",
+    "没 + verb + result",
+    "verb + 得 / 不 + result"
+   ],
+   "count": 12,
+   "ids": [
+    "zh.patterns.kan-wan-le",
+    "zh.patterns.zhao-dao-le",
+    "zh.patterns.mei-ting-dong",
+    "zh.talk.xie-cuo-le",
+    "zh.talk.fan-zuo-hao-le",
+    "zh.talk.ting-jian-le-ma",
+    "zh.talk.kan-jian-ta-le",
+    "zh.talk.xi-gan-jing-le",
+    "zh.patterns.ting-de-dong-ma",
+    "zh.talk.kan-bu-qing-chu",
+    "zh.talk.mai-bu-dao",
+    "zh.talk.hai-lai-de-ji"
+   ]
+  },
+  {
+   "code": "Z17-L03",
+   "unit": "Z17",
+   "title": "Come in, go out: direction complements",
+   "goal": "Show the direction of a movement with 来 and 去.",
+   "level": 3,
+   "path": "core",
+   "hsk": 3,
+   "patterns": [
+    "verb + 来 / 去",
+    "verb + 上 / 下 / 进 / 出 / 回 / 过 + 来 / 去",
+    "verb + 起来"
+   ],
+   "count": 12,
+   "ids": [
+    "zh.patterns.qing-jin-lai",
+    "zh.talk.ta-chu-qu-le",
+    "zh.talk.hear-ji-dian-hui-lai",
+    "zh.talk.jiu-dian-yi-qian-hui-lai",
+    "zh.patterns.shang-lai-ba",
+    "zh.talk.xia-qu-jie-ni",
+    "zh.patterns.zhan-qi-lai",
+    "zh.talk.zou-guo-qu",
+    "zh.talk.dai-hui-qu",
+    "zh.talk.pao-guo-lai",
+    "zh.talk.hear-kuai-jin-lai",
+    "zh.talk.word-jin-qu"
+   ]
+  },
+  {
+   "code": "Z18-L01",
+   "unit": "Z18",
+   "title": "Feelings",
+   "goal": "Say how you feel and react to other people's news.",
+   "level": 3,
+   "path": "core",
+   "hsk": 3,
+   "patterns": [
+    "A 让 B + feeling",
+    "为 + person + 高兴",
+    "别 + verb"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.feelings.hen-kai-xin",
+    "zh.feelings.bie-dan-xin",
+    "zh.feelings.you-dian-zhao-ji",
+    "zh.feelings.ta-sheng-qi-le",
+    "zh.feelings.hen-nan-guo",
+    "zh.patterns.rang-wo-hen-gao-xing",
+    "zh.feelings.wei-ni-gao-xing",
+    "zh.feelings.hear-zen-me-bu-gao-xing",
+    "zh.feelings.mei-shen-me",
+    "zh.feelings.ya-li-tai-da",
+    "zh.feelings.tai-bang-le",
+    "zh.feelings.zhen-ke-xi",
+    "zh.feelings.word-hai-pa"
+   ]
+  },
+  {
+   "code": "Z18-L02",
+   "unit": "Z18",
+   "title": "Opinions",
+   "goal": "Give an opinion, agree or disagree, and give reasons.",
+   "level": 3,
+   "path": "core",
+   "hsk": 3,
+   "patterns": [
+    "我觉得……",
+    "因为……所以……",
+    "虽然……但是……",
+    "为什么？"
+   ],
+   "count": 12,
+   "ids": [
+    "zh.patterns.wo-jue-de",
+    "zh.feelings.hear-ni-jue-de-zen-me-yang",
+    "zh.feelings.wo-tong-yi",
+    "zh.feelings.bu-tai-tong-yi",
+    "zh.patterns.yin-wei-suo-yi",
+    "zh.patterns.sui-ran-dan-shi",
+    "zh.feelings.ren-wei-ta-shuo-de-dui",
+    "zh.feelings.hear-wei-shen-me",
+    "zh.feelings.yin-wei-tai-yuan-le",
+    "zh.feelings.bu-zhe-me-xiang",
+    "zh.feelings.ni-shuo-de-dui",
+    "zh.feelings.mei-xiang-dao"
+   ]
+  },
+  {
+   "code": "Z18-L03",
+   "unit": "Z18",
+   "title": "Doing something to it: 把",
+   "goal": "Ask people to do things to objects with 把.",
+   "level": 3,
+   "path": "core",
+   "hsk": 3,
+   "patterns": [
+    "把 + object + verb + result",
+    "把 + object + verb + 在 + place",
+    "把 + object + 给 + person",
+    "别把……"
+   ],
+   "count": 12,
+   "ids": [
+    "zh.patterns.ba-men-guan-shang",
+    "zh.patterns.ba-shou-ji-gei-wo",
+    "zh.daily.ba-yi-fu-fang-zai-chuang-shang",
+    "zh.daily.ba-zuo-ye-zuo-wan",
+    "zh.feelings.bie-ba-zhe-jian-shi-gao-su-ta",
+    "zh.daily.qian-bao-wang-zai-che-shang",
+    "zh.daily.ba-kong-tiao-kai-xiao",
+    "zh.daily.ba-hu-zhao-na-chu-lai",
+    "zh.daily.hear-ba-shu-fang-nar-le",
+    "zh.daily.fang-zai-shu-jia-shang",
+    "zh.daily.fan-yi-cheng-ying-wen",
+    "zh.daily.ba-fang-jian-da-sao-gan-jing"
+   ]
   }
  ],
  "items": [
@@ -2246,7 +2423,8 @@
     "zh.city.hear-qian-mian-you-yi-ge",
     "zh.food.hear-qing-zuo",
     "zh.shopping.hear-zhao-nin-wu-kuai",
-    "zh.city.hear-zai-xi-dan-huan"
+    "zh.city.hear-zai-xi-dan-huan",
+    "zh.talk.hear-kuai-jin-lai"
    ],
    "tags": [
     "core"
@@ -15176,9 +15354,9 @@
    "kind": "say",
    "en": "I'm popping out for a moment.",
    "ja": "我出去一下。",
-   "ruby": "我[wǒ]出去[chū qù]一下[yí xià]。",
+   "ruby": "我[wǒ]出去[chū qu]一下[yí xià]。",
    "kana": "wo chuqu yixia",
-   "romaji": "Wǒ chūqù yíxià.",
+   "romaji": "Wǒ chūqu yíxià.",
    "tags": [
     "core"
    ],
@@ -17571,6 +17749,1356 @@
    "lesson": "Z16-L03",
    "level": 3,
    "order": 817,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.hear-you-shen-me-ai-hao",
+   "cat": "talk",
+   "kind": "hear",
+   "en": "What are your hobbies?",
+   "ja": "你有什么爱好？",
+   "ruby": "你[nǐ]有[yǒu]什么[shén me]爱好[ài hào]？",
+   "kana": "ni you shenme aihao",
+   "romaji": "Nǐ yǒu shénme àihào?",
+   "replies": [
+    "zh.talk.xi-huan-pa-shan",
+    "zh.patterns.dui-she-ying-gan-xing-qu"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z17-L01",
+   "level": 3,
+   "order": 818,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.xi-huan-pa-shan",
+   "cat": "talk",
+   "kind": "say",
+   "en": "I like hiking and swimming.",
+   "ja": "我喜欢爬山和游泳。",
+   "ruby": "我[wǒ]喜欢[xǐ huan]爬山[pá shān]和[hé]游泳[yóu yǒng]。",
+   "kana": "wo xihuan pashan he youyong",
+   "romaji": "Wǒ xǐhuan páshān hé yóuyǒng.",
+   "replyTo": [
+    "zh.talk.hear-you-shen-me-ai-hao"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z17-L01",
+   "level": 3,
+   "order": 819,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.dui-she-ying-gan-xing-qu",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "I'm very interested in photography.",
+   "ja": "我对摄影很感兴趣。",
+   "ruby": "我[wǒ]对[duì]摄影[shè yǐng]很[hěn]感兴趣[gǎn xìng qù]。",
+   "kana": "wo dui sheying hen ganxingqu",
+   "romaji": "Wǒ duì shèyǐng hěn gǎnxìngqù.",
+   "note": "对 + thing + 感兴趣 = be interested in.",
+   "pattern": "对 + thing + 感兴趣",
+   "replyTo": [
+    "zh.talk.hear-you-shen-me-ai-hao"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z17-L01",
+   "level": 3,
+   "order": 820,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.ti-zu-qiu",
+   "cat": "talk",
+   "kind": "say",
+   "en": "At weekends I often play football with friends.",
+   "ja": "周末我常常跟朋友踢足球。",
+   "ruby": "周末[zhōu mò]我[wǒ]常常[cháng cháng]跟[gēn]朋友[péng you]踢[tī]足球[zú qiú]。",
+   "kana": "zhoumo wo changchang gen pengyou ti zuqiu",
+   "romaji": "Zhōumò wǒ chángcháng gēn péngyou tī zúqiú.",
+   "note": "踢 (kick) for football; 打 for ball games played with the hands: 打篮球.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z17-L01",
+   "level": 3,
+   "order": 821,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.hear-hui-da-lan-qiu-ma",
+   "cat": "talk",
+   "kind": "hear",
+   "en": "Can you play basketball?",
+   "ja": "你会打篮球吗？",
+   "ruby": "你[nǐ]会[huì]打[dǎ]篮球[lán qiú]吗[ma]？",
+   "kana": "ni hui da lanqiu ma",
+   "romaji": "Nǐ huì dǎ lánqiú ma?",
+   "replies": [
+    "zh.talk.hui-dan-da-de-bu-hao"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z17-L01",
+   "level": 3,
+   "order": 822,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.hui-dan-da-de-bu-hao",
+   "cat": "talk",
+   "kind": "say",
+   "en": "Yes, but not very well.",
+   "ja": "会，但是打得不好。",
+   "ruby": "会[huì]，但是[dàn shì]打[dǎ]得[de]不[bù]好[hǎo]。",
+   "kana": "hui danshi da de bu hao",
+   "romaji": "Huì, dànshì dǎ de bù hǎo.",
+   "replyTo": [
+    "zh.talk.hear-hui-da-lan-qiu-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z17-L01",
+   "level": 3,
+   "order": 823,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.you-kong-ting-yin-yue",
+   "cat": "talk",
+   "kind": "say",
+   "en": "When I have free time I like listening to music.",
+   "ja": "我有空的时候喜欢听音乐。",
+   "ruby": "我[wǒ]有空[yǒu kòng]的[de]时候[shí hou]喜欢[xǐ huan]听[tīng]音乐[yīn yuè]。",
+   "kana": "wo youkong de shihou xihuan ting yinyue",
+   "romaji": "Wǒ yǒukòng de shíhou xǐhuan tīng yīnyuè.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z17-L01",
+   "level": 3,
+   "order": 824,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.hear-shen-me-yang-de-dian-ying",
+   "cat": "talk",
+   "kind": "hear",
+   "en": "What kind of films do you like?",
+   "ja": "你喜欢什么样的电影？",
+   "ruby": "你[nǐ]喜欢[xǐ huan]什么样[shén me yàng]的[de]电影[diàn yǐng]？",
+   "kana": "ni xihuan shenmeyang de dianying",
+   "romaji": "Nǐ xǐhuan shénmeyàng de diànyǐng?",
+   "replies": [
+    "zh.talk.xi-ju-pian"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z17-L01",
+   "level": 3,
+   "order": 825,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.xi-ju-pian",
+   "cat": "talk",
+   "kind": "say",
+   "en": "I like comedies.",
+   "ja": "我喜欢看喜剧片。",
+   "ruby": "我[wǒ]喜欢[xǐ huan]看[kàn]喜剧片[xǐ jù piàn]。",
+   "kana": "wo xihuan kan xijupian",
+   "romaji": "Wǒ xǐhuan kàn xǐjùpiàn.",
+   "replyTo": [
+    "zh.talk.hear-shen-me-yang-de-dian-ying"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z17-L01",
+   "level": 3,
+   "order": 826,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.word-hua-hua",
+   "cat": "talk",
+   "kind": "say",
+   "en": "draw, paint",
+   "ja": "画画儿",
+   "ruby": "画画儿[huà huà r]",
+   "kana": "huahuar",
+   "romaji": "huàhuàr",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z17-L01",
+   "level": 3,
+   "order": 827,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.word-chang-ge",
+   "cat": "talk",
+   "kind": "say",
+   "en": "sing",
+   "ja": "唱歌",
+   "ruby": "唱歌[chàng gē]",
+   "kana": "changge",
+   "romaji": "chànggē",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z17-L01",
+   "level": 3,
+   "order": 828,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.word-tiao-wu",
+   "cat": "talk",
+   "kind": "say",
+   "en": "dance",
+   "ja": "跳舞",
+   "ruby": "跳舞[tiào wǔ]",
+   "kana": "tiaowu",
+   "romaji": "tiàowǔ",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z17-L01",
+   "level": 3,
+   "order": 829,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.kan-wan-le",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "I've finished reading this book.",
+   "ja": "这本书我看完了。",
+   "ruby": "这[zhè]本[běn]书[shū]我[wǒ]看完[kàn wán]了[le]。",
+   "kana": "zhe ben shu wo kanwan le",
+   "romaji": "Zhè běn shū wǒ kànwán le.",
+   "note": "A result after the verb: 看完 = read to the end.",
+   "pattern": "verb + 完",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z17-L02",
+   "level": 3,
+   "order": 830,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.zhao-dao-le",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "I've found the keys!",
+   "ja": "我找到钥匙了！",
+   "ruby": "我[wǒ]找到[zhǎo dào]钥匙[yào shi]了[le]！",
+   "kana": "wo zhaodao yaoshi le",
+   "romaji": "Wǒ zhǎodào yàoshi le!",
+   "note": "找 = look for; 找到 = find (succeed).",
+   "pattern": "verb + 到",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z17-L02",
+   "level": 3,
+   "order": 831,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.mei-ting-dong",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "I didn't catch that.",
+   "ja": "我没听懂。",
+   "ruby": "我[wǒ]没[méi]听懂[tīng dǒng]。",
+   "kana": "wo mei tingdong",
+   "romaji": "Wǒ méi tīngdǒng.",
+   "note": "A result is negated with 没.",
+   "pattern": "没 + verb + result",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z17-L02",
+   "level": 3,
+   "order": 832,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.xie-cuo-le",
+   "cat": "talk",
+   "kind": "say",
+   "en": "Sorry, I wrote it wrong.",
+   "ja": "对不起，我写错了。",
+   "ruby": "对不起[duì bu qǐ]，我[wǒ]写错[xiě cuò]了[le]。",
+   "kana": "duibuqi wo xiecuo le",
+   "romaji": "Duìbuqǐ, wǒ xiěcuò le.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z17-L02",
+   "level": 3,
+   "order": 833,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.fan-zuo-hao-le",
+   "cat": "talk",
+   "kind": "say",
+   "en": "Dinner's ready, come and eat!",
+   "ja": "饭做好了，来吃吧！",
+   "ruby": "饭[fàn]做好[zuò hǎo]了[le]，来[lái]吃[chī]吧[ba]！",
+   "kana": "fan zuohao le lai chi ba",
+   "romaji": "Fàn zuòhǎo le, lái chī ba!",
+   "note": "好 as a result = done and ready.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z17-L02",
+   "level": 3,
+   "order": 834,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.ting-jian-le-ma",
+   "cat": "talk",
+   "kind": "say",
+   "en": "Did you hear that?",
+   "ja": "你听见了吗？",
+   "ruby": "你[nǐ]听见[tīng jiàn]了[le]吗[ma]？",
+   "kana": "ni tingjian le ma",
+   "romaji": "Nǐ tīngjiàn le ma?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z17-L02",
+   "level": 3,
+   "order": 835,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.kan-jian-ta-le",
+   "cat": "talk",
+   "kind": "say",
+   "en": "I've spotted him: he's over there.",
+   "ja": "我看见他了，他在那儿。",
+   "ruby": "我[wǒ]看见[kàn jiàn]他[tā]了[le]，他[tā]在[zài]那儿[nà r]。",
+   "kana": "wo kanjian ta le ta zai nar",
+   "romaji": "Wǒ kànjiàn tā le, tā zài nàr.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z17-L02",
+   "level": 3,
+   "order": 836,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.xi-gan-jing-le",
+   "cat": "talk",
+   "kind": "say",
+   "en": "The clothes are washed clean.",
+   "ja": "衣服洗干净了。",
+   "ruby": "衣服[yī fu]洗[xǐ]干净[gān jìng]了[le]。",
+   "kana": "yifu xi ganjing le",
+   "romaji": "Yīfu xǐ gānjìng le.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z17-L02",
+   "level": 3,
+   "order": 837,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.ting-de-dong-ma",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "Can you understand what you hear?",
+   "ja": "你听得懂吗？",
+   "ruby": "你[nǐ]听得懂[tīng de dǒng]吗[ma]？",
+   "kana": "ni tingdedong ma",
+   "romaji": "Nǐ tīngdedǒng ma?",
+   "note": "Potential form: 听得懂 = can understand, 听不懂 = can't.",
+   "pattern": "verb + 得 / 不 + result",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z17-L02",
+   "level": 3,
+   "order": 838,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.kan-bu-qing-chu",
+   "cat": "talk",
+   "kind": "say",
+   "en": "The writing is too small; I can't read it clearly.",
+   "ja": "字太小了，我看不清楚。",
+   "ruby": "字[zì]太[tài]小[xiǎo]了[le]，我[wǒ]看[kàn]不[bu]清楚[qīng chu]。",
+   "kana": "zi tai xiao le wo kan bu qingchu",
+   "romaji": "Zì tài xiǎo le, wǒ kàn bu qīngchu.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z17-L02",
+   "level": 3,
+   "order": 839,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.mai-bu-dao",
+   "cat": "talk",
+   "kind": "say",
+   "en": "You can't get this kind of tea abroad.",
+   "ja": "这种茶在国外买不到。",
+   "ruby": "这[zhè]种[zhǒng]茶[chá]在[zài]国外[guó wài]买不到[mǎi bu dào]。",
+   "kana": "zhe zhong cha zai guowai maibudao",
+   "romaji": "Zhè zhǒng chá zài guówài mǎibudào.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z17-L02",
+   "level": 3,
+   "order": 840,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.hai-lai-de-ji",
+   "cat": "talk",
+   "kind": "say",
+   "en": "If we go now, we'll still make it.",
+   "ja": "现在去还来得及。",
+   "ruby": "现在[xiàn zài]去[qù]还[hái]来得及[lái de jí]。",
+   "kana": "xianzai qu hai laideji",
+   "romaji": "Xiànzài qù hái láidejí.",
+   "note": "来得及 = there is still time; 来不及 = too late.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z17-L02",
+   "level": 3,
+   "order": 841,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.qing-jin-lai",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "Please come in.",
+   "ja": "请进来。",
+   "ruby": "请[qǐng]进来[jìn lai]。",
+   "kana": "qing jinlai",
+   "romaji": "Qǐng jìnlai.",
+   "note": "来 = towards the speaker, 去 = away from the speaker.",
+   "pattern": "verb + 来 / 去",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z17-L03",
+   "level": 3,
+   "order": 842,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.ta-chu-qu-le",
+   "cat": "talk",
+   "kind": "say",
+   "en": "He's gone out; he's not at home.",
+   "ja": "他出去了，不在家。",
+   "ruby": "他[tā]出去[chū qu]了[le]，不[bú]在[zài]家[jiā]。",
+   "kana": "ta chuqu le bu zai jia",
+   "romaji": "Tā chūqu le, bú zài jiā.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z17-L03",
+   "level": 3,
+   "order": 843,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.hear-ji-dian-hui-lai",
+   "cat": "talk",
+   "kind": "hear",
+   "en": "What time are you coming back?",
+   "ja": "你几点回来？",
+   "ruby": "你[nǐ]几[jǐ]点[diǎn]回来[huí lai]？",
+   "kana": "ni ji dian huilai",
+   "romaji": "Nǐ jǐ diǎn huílai?",
+   "replies": [
+    "zh.talk.jiu-dian-yi-qian-hui-lai"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z17-L03",
+   "level": 3,
+   "order": 844,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.jiu-dian-yi-qian-hui-lai",
+   "cat": "talk",
+   "kind": "say",
+   "en": "Before nine.",
+   "ja": "九点以前回来。",
+   "ruby": "九[jiǔ]点[diǎn]以前[yǐ qián]回来[huí lai]。",
+   "kana": "jiu dian yiqian huilai",
+   "romaji": "Jiǔ diǎn yǐqián huílai.",
+   "replyTo": [
+    "zh.talk.hear-ji-dian-hui-lai"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z17-L03",
+   "level": 3,
+   "order": 845,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.shang-lai-ba",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "Come on up, I'm on the third floor.",
+   "ja": "你上来吧，我在三楼。",
+   "ruby": "你[nǐ]上来[shàng lai]吧[ba]，我[wǒ]在[zài]三[sān]楼[lóu]。",
+   "kana": "ni shanglai ba wo zai san lou",
+   "romaji": "Nǐ shànglai ba, wǒ zài sān lóu.",
+   "note": "Direction words combine with 来 / 去: 上来, 下去, 进来, 出去, 回来, 过去.",
+   "pattern": "上 / 下 / 进 / 出 / 回 / 过 + 来 / 去",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z17-L03",
+   "level": 3,
+   "order": 846,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.xia-qu-jie-ni",
+   "cat": "talk",
+   "kind": "say",
+   "en": "Wait a moment, I'll come down and get you.",
+   "ja": "等一下，我下去接你。",
+   "ruby": "等[děng]一下[yí xià]，我[wǒ]下去[xià qu]接[jiē]你[nǐ]。",
+   "kana": "deng yixia wo xiaqu jie ni",
+   "romaji": "Děng yíxià, wǒ xiàqu jiē nǐ.",
+   "note": "Chinese takes the speaker's view: 下去 = go down from where I am.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z17-L03",
+   "level": 3,
+   "order": 847,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.zhan-qi-lai",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "Everybody, please stand up.",
+   "ja": "大家站起来吧。",
+   "ruby": "大家[dà jiā]站起来[zhàn qǐ lai]吧[ba]。",
+   "kana": "dajia zhanqilai ba",
+   "romaji": "Dàjiā zhànqǐlai ba.",
+   "note": "起来 = up (from sitting or lying).",
+   "pattern": "verb + 起来",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z17-L03",
+   "level": 3,
+   "order": 848,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.zou-guo-qu",
+   "cat": "talk",
+   "kind": "say",
+   "en": "Let's walk over; it's not far.",
+   "ja": "我们走过去吧，不远。",
+   "ruby": "我们[wǒ men]走[zǒu]过去[guò qu]吧[ba]，不[bù]远[yuǎn]。",
+   "kana": "women zou guoqu ba bu yuan",
+   "romaji": "Wǒmen zǒu guòqu ba, bù yuǎn.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z17-L03",
+   "level": 3,
+   "order": 849,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.dai-hui-qu",
+   "cat": "talk",
+   "kind": "say",
+   "en": "Take this cake home with you.",
+   "ja": "这个蛋糕你带回去吧。",
+   "ruby": "这个[zhè ge]蛋糕[dàn gāo]你[nǐ]带[dài]回去[huí qu]吧[ba]。",
+   "kana": "zhege dangao ni dai huiqu ba",
+   "romaji": "Zhège dàngāo nǐ dài huíqu ba.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z17-L03",
+   "level": 3,
+   "order": 850,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.pao-guo-lai",
+   "cat": "talk",
+   "kind": "say",
+   "en": "The puppy came running towards me.",
+   "ja": "小狗向我跑过来了。",
+   "ruby": "小狗[xiǎo gǒu]向[xiàng]我[wǒ]跑[pǎo]过来[guò lai]了[le]。",
+   "kana": "xiaogou xiang wo pao guolai le",
+   "romaji": "Xiǎogǒu xiàng wǒ pǎo guòlai le.",
+   "note": "3rd + 3rd tone: xiáo gǒu.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z17-L03",
+   "level": 3,
+   "order": 851,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.hear-kuai-jin-lai",
+   "cat": "talk",
+   "kind": "hear",
+   "en": "It's cold outside, come on in!",
+   "ja": "外面冷，快进来吧！",
+   "ruby": "外面[wài miàn]冷[lěng]，快[kuài]进来[jìn lai]吧[ba]！",
+   "kana": "waimian leng kuai jinlai ba",
+   "romaji": "Wàimiàn lěng, kuài jìnlai ba!",
+   "replies": [
+    "zh.basics.xie-xie"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z17-L03",
+   "level": 3,
+   "order": 852,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.word-jin-qu",
+   "cat": "talk",
+   "kind": "say",
+   "en": "go in",
+   "ja": "进去",
+   "ruby": "进去[jìn qu]",
+   "kana": "jinqu",
+   "romaji": "jìnqu",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z17-L03",
+   "level": 3,
+   "order": 853,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.hen-kai-xin",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "I'm really happy today.",
+   "ja": "我今天很开心。",
+   "ruby": "我[wǒ]今天[jīn tiān]很[hěn]开心[kāi xīn]。",
+   "kana": "wo jintian hen kaixin",
+   "romaji": "Wǒ jīntiān hěn kāixīn.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L01",
+   "level": 3,
+   "order": 854,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.bie-dan-xin",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "Don't worry, it'll be fine.",
+   "ja": "别担心，没事的。",
+   "ruby": "别[bié]担心[dān xīn]，没事[méi shì]的[de]。",
+   "kana": "bie danxin meishi de",
+   "romaji": "Bié dānxīn, méishì de.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L01",
+   "level": 3,
+   "order": 855,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.you-dian-zhao-ji",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "I'm a bit anxious.",
+   "ja": "我有点儿着急。",
+   "ruby": "我[wǒ]有点儿[yǒu diǎn r]着急[zháo jí]。",
+   "kana": "wo youdianr zhaoji",
+   "romaji": "Wǒ yǒudiǎnr zháojí.",
+   "note": "着急 zháojí = worried, in a hurry: 着 is zháo here.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L01",
+   "level": 3,
+   "order": 856,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.ta-sheng-qi-le",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "He's angry.",
+   "ja": "他生气了。",
+   "ruby": "他[tā]生气[shēng qì]了[le]。",
+   "kana": "ta shengqi le",
+   "romaji": "Tā shēngqì le.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L01",
+   "level": 3,
+   "order": 857,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.hen-nan-guo",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "I was very sad to hear the news.",
+   "ja": "听到这个消息，我很难过。",
+   "ruby": "听到[tīng dào]这个[zhè ge]消息[xiāo xi]，我[wǒ]很[hěn]难过[nán guò]。",
+   "kana": "tingdao zhege xiaoxi wo hen nanguo",
+   "romaji": "Tīngdào zhège xiāoxi, wǒ hěn nánguò.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L01",
+   "level": 3,
+   "order": 858,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.rang-wo-hen-gao-xing",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "What you said made me very happy.",
+   "ja": "你的话让我很高兴。",
+   "ruby": "你[nǐ]的[de]话[huà]让[ràng]我[wǒ]很[hěn]高兴[gāo xìng]。",
+   "kana": "ni de hua rang wo hen gaoxing",
+   "romaji": "Nǐ de huà ràng wǒ hěn gāoxìng.",
+   "note": "让 = make (someone feel or do something).",
+   "pattern": "A 让 B + feeling",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L01",
+   "level": 3,
+   "order": 859,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.wei-ni-gao-xing",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "I'm so happy for you!",
+   "ja": "我真为你高兴！",
+   "ruby": "我[wǒ]真[zhēn]为[wèi]你[nǐ]高兴[gāo xìng]！",
+   "kana": "wo zhen wei ni gaoxing",
+   "romaji": "Wǒ zhēn wèi nǐ gāoxìng!",
+   "note": "为 wèi = for.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L01",
+   "level": 3,
+   "order": 860,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.hear-zen-me-bu-gao-xing",
+   "cat": "feelings",
+   "kind": "hear",
+   "en": "Why are you down?",
+   "ja": "你怎么不高兴了？",
+   "ruby": "你[nǐ]怎么[zěn me]不[bù]高兴[gāo xìng]了[le]？",
+   "kana": "ni zenme bu gaoxing le",
+   "romaji": "Nǐ zěnme bù gāoxìng le?",
+   "replies": [
+    "zh.feelings.mei-shen-me",
+    "zh.feelings.ya-li-tai-da"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L01",
+   "level": 3,
+   "order": 861,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.mei-shen-me",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "Nothing, I'm just a bit tired.",
+   "ja": "没什么，就是有点儿累。",
+   "ruby": "没[méi]什么[shén me]，就是[jiù shì]有点儿[yǒu diǎn r]累[lèi]。",
+   "kana": "mei shenme jiushi youdianr lei",
+   "romaji": "Méi shénme, jiùshì yǒudiǎnr lèi.",
+   "replyTo": [
+    "zh.feelings.hear-zen-me-bu-gao-xing"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L01",
+   "level": 3,
+   "order": 862,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.ya-li-tai-da",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "There's been too much pressure at work lately.",
+   "ja": "最近工作压力太大了。",
+   "ruby": "最近[zuì jìn]工作[gōng zuò]压力[yā lì]太[tài]大[dà]了[le]。",
+   "kana": "zuijin gongzuo yali tai da le",
+   "romaji": "Zuìjìn gōngzuò yālì tài dà le.",
+   "replyTo": [
+    "zh.feelings.hear-zen-me-bu-gao-xing"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L01",
+   "level": 3,
+   "order": 863,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.tai-bang-le",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "Brilliant!",
+   "ja": "太棒了！",
+   "ruby": "太[tài]棒[bàng]了[le]！",
+   "kana": "tai bang le",
+   "romaji": "Tài bàng le!",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L01",
+   "level": 3,
+   "order": 864,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.zhen-ke-xi",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "What a pity!",
+   "ja": "真可惜！",
+   "ruby": "真[zhēn]可惜[kě xī]！",
+   "kana": "zhen kexi",
+   "romaji": "Zhēn kěxī!",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L01",
+   "level": 3,
+   "order": 865,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.word-hai-pa",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "be afraid",
+   "ja": "害怕",
+   "ruby": "害怕[hài pà]",
+   "kana": "haipa",
+   "romaji": "hàipà",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z18-L01",
+   "level": 3,
+   "order": 866,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.wo-jue-de",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "I think this idea is pretty good.",
+   "ja": "我觉得这个主意不错。",
+   "ruby": "我[wǒ]觉得[jué de]这个[zhè ge]主意[zhǔ yi]不错[bú cuò]。",
+   "kana": "wo juede zhege zhuyi bucuo",
+   "romaji": "Wǒ juéde zhège zhǔyi búcuò.",
+   "note": "觉得 = think, feel (an opinion).",
+   "pattern": "我觉得……",
+   "replyTo": [
+    "zh.feelings.hear-ni-jue-de-zen-me-yang"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L02",
+   "level": 3,
+   "order": 867,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.hear-ni-jue-de-zen-me-yang",
+   "cat": "feelings",
+   "kind": "hear",
+   "en": "What do you think?",
+   "ja": "你觉得怎么样？",
+   "ruby": "你[nǐ]觉得[jué de]怎么样[zěn me yàng]？",
+   "kana": "ni juede zenmeyang",
+   "romaji": "Nǐ juéde zěnmeyàng?",
+   "replies": [
+    "zh.patterns.wo-jue-de",
+    "zh.feelings.wo-tong-yi",
+    "zh.feelings.bu-tai-tong-yi"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L02",
+   "level": 3,
+   "order": 868,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.wo-tong-yi",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "I agree.",
+   "ja": "我同意。",
+   "ruby": "我[wǒ]同意[tóng yì]。",
+   "kana": "wo tongyi",
+   "romaji": "Wǒ tóngyì.",
+   "replyTo": [
+    "zh.feelings.hear-ni-jue-de-zen-me-yang"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L02",
+   "level": 3,
+   "order": 869,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.bu-tai-tong-yi",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "I don't really agree.",
+   "ja": "我不太同意。",
+   "ruby": "我[wǒ]不[bú]太[tài]同意[tóng yì]。",
+   "kana": "wo bu tai tongyi",
+   "romaji": "Wǒ bú tài tóngyì.",
+   "replyTo": [
+    "zh.feelings.hear-ni-jue-de-zen-me-yang"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L02",
+   "level": 3,
+   "order": 870,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.yin-wei-suo-yi",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "Because it rained, we didn't go.",
+   "ja": "因为下雨，所以我们没去。",
+   "ruby": "因为[yīn wèi]下雨[xià yǔ]，所以[suǒ yǐ]我们[wǒ men]没[méi]去[qù]。",
+   "kana": "yinwei xiayu suoyi women mei qu",
+   "romaji": "Yīnwèi xiàyǔ, suǒyǐ wǒmen méi qù.",
+   "note": "Chinese often uses both words: 因为 (because) ... 所以 (so). 3rd + 3rd tone: suó yǐ.",
+   "pattern": "因为……所以……",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L02",
+   "level": 3,
+   "order": 871,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.sui-ran-dan-shi",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "It's expensive, but it's good.",
+   "ja": "虽然很贵，但是很好。",
+   "ruby": "虽然[suī rán]很[hěn]贵[guì]，但是[dàn shì]很[hěn]好[hǎo]。",
+   "kana": "suiran hen gui danshi hen hao",
+   "romaji": "Suīrán hěn guì, dànshì hěn hǎo.",
+   "note": "Both halves are marked: 虽然 (although) ... 但是 (but).",
+   "pattern": "虽然……但是……",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L02",
+   "level": 3,
+   "order": 872,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.ren-wei-ta-shuo-de-dui",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "I believe he's right.",
+   "ja": "我认为他说得对。",
+   "ruby": "我[wǒ]认为[rèn wéi]他[tā]说[shuō]得[de]对[duì]。",
+   "kana": "wo renwei ta shuo de dui",
+   "romaji": "Wǒ rènwéi tā shuō de duì.",
+   "note": "认为 is more formal than 觉得.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L02",
+   "level": 3,
+   "order": 873,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.hear-wei-shen-me",
+   "cat": "feelings",
+   "kind": "hear",
+   "en": "Why?",
+   "ja": "为什么？",
+   "ruby": "为什么[wèi shén me]？",
+   "kana": "weishenme",
+   "romaji": "Wèishénme?",
+   "replies": [
+    "zh.feelings.yin-wei-tai-yuan-le"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L02",
+   "level": 3,
+   "order": 874,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.yin-wei-tai-yuan-le",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "Because it's too far.",
+   "ja": "因为太远了。",
+   "ruby": "因为[yīn wèi]太[tài]远[yuǎn]了[le]。",
+   "kana": "yinwei tai yuan le",
+   "romaji": "Yīnwèi tài yuǎn le.",
+   "replyTo": [
+    "zh.feelings.hear-wei-shen-me"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L02",
+   "level": 3,
+   "order": 875,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.bu-zhe-me-xiang",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "I don't see it that way.",
+   "ja": "我不这么想。",
+   "ruby": "我[wǒ]不[bú]这么[zhè me]想[xiǎng]。",
+   "kana": "wo bu zheme xiang",
+   "romaji": "Wǒ bú zhème xiǎng.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L02",
+   "level": 3,
+   "order": 876,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.ni-shuo-de-dui",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "You're right.",
+   "ja": "你说得对。",
+   "ruby": "你[nǐ]说[shuō]得[de]对[duì]。",
+   "kana": "ni shuo de dui",
+   "romaji": "Nǐ shuō de duì.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L02",
+   "level": 3,
+   "order": 877,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.mei-xiang-dao",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "I didn't expect it to be so hard.",
+   "ja": "我没想到会这么难。",
+   "ruby": "我[wǒ]没[méi]想到[xiǎng dào]会[huì]这么[zhè me]难[nán]。",
+   "kana": "wo mei xiangdao hui zheme nan",
+   "romaji": "Wǒ méi xiǎngdào huì zhème nán.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L02",
+   "level": 3,
+   "order": 878,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.ba-men-guan-shang",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "Please close the door.",
+   "ja": "请把门关上。",
+   "ruby": "请[qǐng]把[bǎ]门[mén]关上[guān shàng]。",
+   "kana": "qing ba men guanshang",
+   "romaji": "Qǐng bǎ mén guānshàng.",
+   "note": "把 brings the object before the verb when you do something to it; the verb needs a result or a place after it. 3rd + 3rd tone: qíng bǎ.",
+   "pattern": "把 + object + verb + result",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L03",
+   "level": 3,
+   "order": 879,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.ba-shou-ji-gei-wo",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "Give me the phone.",
+   "ja": "把手机给我。",
+   "ruby": "把[bǎ]手机[shǒu jī]给[gěi]我[wǒ]。",
+   "kana": "ba shouji gei wo",
+   "romaji": "Bǎ shǒujī gěi wǒ.",
+   "pattern": "把 + object + 给 + person",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L03",
+   "level": 3,
+   "order": 880,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.ba-yi-fu-fang-zai-chuang-shang",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I've put the clothes on the bed.",
+   "ja": "我把衣服放在床上了。",
+   "ruby": "我[wǒ]把[bǎ]衣服[yī fu]放[fàng]在[zài]床[chuáng]上[shang]了[le]。",
+   "kana": "wo ba yifu fang zai chuang shang le",
+   "romaji": "Wǒ bǎ yīfu fàng zài chuáng shang le.",
+   "note": "把 + object + 放在 + place.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L03",
+   "level": 3,
+   "order": 881,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.ba-zuo-ye-zuo-wan",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Finish your homework first.",
+   "ja": "你先把作业做完。",
+   "ruby": "你[nǐ]先[xiān]把[bǎ]作业[zuò yè]做完[zuò wán]。",
+   "kana": "ni xian ba zuoye zuowan",
+   "romaji": "Nǐ xiān bǎ zuòyè zuòwán.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L03",
+   "level": 3,
+   "order": 882,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.bie-ba-zhe-jian-shi-gao-su-ta",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "Don't tell him about this.",
+   "ja": "别把这件事告诉他。",
+   "ruby": "别[bié]把[bǎ]这[zhè]件[jiàn]事[shì]告诉[gào su]他[tā]。",
+   "kana": "bie ba zhe jian shi gaosu ta",
+   "romaji": "Bié bǎ zhè jiàn shì gàosu tā.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L03",
+   "level": 3,
+   "order": 883,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.qian-bao-wang-zai-che-shang",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I left my wallet in the taxi.",
+   "ja": "我把钱包忘在出租车上了。",
+   "ruby": "我[wǒ]把[bǎ]钱包[qián bāo]忘[wàng]在[zài]出租车[chū zū chē]上[shang]了[le]。",
+   "kana": "wo ba qianbao wang zai chuzuche shang le",
+   "romaji": "Wǒ bǎ qiánbāo wàng zài chūzūchē shang le.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L03",
+   "level": 3,
+   "order": 884,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.ba-kong-tiao-kai-xiao",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Please turn the air conditioning down a bit.",
+   "ja": "请把空调开小一点儿。",
+   "ruby": "请[qǐng]把[bǎ]空调[kōng tiáo]开[kāi]小[xiǎo]一点儿[yì diǎn r]。",
+   "kana": "qing ba kongtiao kai xiao yidianr",
+   "romaji": "Qǐng bǎ kōngtiáo kāi xiǎo yìdiǎnr.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L03",
+   "level": 3,
+   "order": 885,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.ba-hu-zhao-na-chu-lai",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Please take out your passport.",
+   "ja": "请把护照拿出来。",
+   "ruby": "请[qǐng]把[bǎ]护照[hù zhào]拿[ná]出来[chū lai]。",
+   "kana": "qing ba huzhao na chulai",
+   "romaji": "Qǐng bǎ hùzhào ná chūlai.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L03",
+   "level": 3,
+   "order": 886,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hear-ba-shu-fang-nar-le",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "Where did you put my book?",
+   "ja": "你把我的书放哪儿了？",
+   "ruby": "你[nǐ]把[bǎ]我[wǒ]的[de]书[shū]放[fàng]哪儿[nǎ r]了[le]？",
+   "kana": "ni ba wo de shu fang nar le",
+   "romaji": "Nǐ bǎ wǒ de shū fàng nǎr le?",
+   "replies": [
+    "zh.daily.fang-zai-shu-jia-shang"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L03",
+   "level": 3,
+   "order": 887,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.fang-zai-shu-jia-shang",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I put it on the bookshelf.",
+   "ja": "放在书架上了。",
+   "ruby": "放[fàng]在[zài]书架[shū jià]上[shang]了[le]。",
+   "kana": "fang zai shujia shang le",
+   "romaji": "Fàng zài shūjià shang le.",
+   "replyTo": [
+    "zh.daily.hear-ba-shu-fang-nar-le"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L03",
+   "level": 3,
+   "order": 888,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.fan-yi-cheng-ying-wen",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Could you translate this sentence into English?",
+   "ja": "你能把这句话翻译成英文吗？",
+   "ruby": "你[nǐ]能[néng]把[bǎ]这[zhè]句[jù]话[huà]翻译[fān yì]成[chéng]英文[Yīng wén]吗[ma]？",
+   "kana": "ni neng ba zhe ju hua fanyi cheng yingwen ma",
+   "romaji": "Nǐ néng bǎ zhè jù huà fānyì chéng Yīngwén ma?",
+   "note": "把 A 翻译成 B = translate A into B.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L03",
+   "level": 3,
+   "order": 889,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.ba-fang-jian-da-sao-gan-jing",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Let's give the room a good clean.",
+   "ja": "我们把房间打扫干净吧。",
+   "ruby": "我们[wǒ men]把[bǎ]房间[fáng jiān]打扫[dǎ sǎo]干净[gān jìng]吧[ba]。",
+   "kana": "women ba fangjian dasao ganjing ba",
+   "romaji": "Wǒmen bǎ fángjiān dǎsǎo gānjìng ba.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z18-L03",
+   "level": 3,
+   "order": 890,
    "src": "new"
   }
  ]
