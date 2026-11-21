@@ -16,11 +16,12 @@ const TYPES = {
 };
 
 // overrides (tests only): Map of path → content served instead of the file, e.g. a newer /sw.js
-export function startServer(port = PORT, { quiet = false, overrides = new Map() } = {}) {
+export function startServer(port = PORT, { quiet = false, overrides = new Map(), onRequest = null } = {}) {
   const server = createServer(async (req, res) => {
     try {
       const u = new URL(req.url, 'http://x');
       let p = decodeURIComponent(u.pathname);
+      onRequest?.(p);
       // Mimic Cloudflare Pages "pretty URLs": /index.html → 308 /, /x.html → 308 /x (the SW must cope with this).
       if (p.endsWith('.html')) {
         const target = p.endsWith('/index.html') ? p.slice(0, -'index.html'.length) : p.slice(0, -'.html'.length);

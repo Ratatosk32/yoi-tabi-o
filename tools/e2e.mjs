@@ -4,7 +4,7 @@
 // no horizontal scroll, search, SRS, quiz, cards; the SW installs; after the server is STOPPED
 // the app reloads offline. Screenshots → tools/out/.
 import { spawn } from 'node:child_process';
-import { mkdirSync, writeFileSync, rmSync, readFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync, rmSync, readFileSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { startServer } from './serve.mjs';
@@ -54,7 +54,12 @@ async function main() {
   rmSync(profile, { recursive: true, force: true });
 
   const overrides = new Map(); // served instead of files: a newer sw.js for the update test
-  let server = await startServer(PORT, { quiet: true, overrides });
+  const ZH_FILES = ['curriculum.json', 'pinyin.json', 'hanzi.json', 'dict-core.json', 'dict-rest.json'];
+  const zhFixture = ZH_FILES.filter((f) => !existsSync(join(ROOT, 'app', 'data', 'zh', f)));
+  for (const f of zhFixture) overrides.set('/data/zh/' + f, readFileSync(join(ROOT, 'tests', 'fixtures', 'zh', f)));
+  if (zhFixture.length) console.log('zh data not delivered yet, serving the test fixture for: ' + zhFixture.join(', '));
+  const zhRequests = [];
+  let server = await startServer(PORT, { quiet: true, overrides, onRequest: (path) => { if (path.startsWith('/data/zh/')) zhRequests.push(path); } });
   const chrome = spawn(CHROME, [
     '--headless=new', `--remote-debugging-port=${DEBUG_PORT}`, `--user-data-dir=${profile}`,
     '--no-first-run', '--no-default-browser-check', '--disable-gpu', '--hide-scrollbars', 'about:blank',
@@ -512,7 +517,206 @@ async function main() {
     check(`${vp.name}: no exceptions or console.error`, newErr.length === 0, newErr.join(' | '));
   }
 
-  for (const vp of VIEWPORTS) await runViewport(vp);
+
+  // ---------- Chinese course: lazy download, own progress, generic views ----------
+  let zhRuns = 0;
+  async function runChinese(vp) {
+    const firstRun = zhRuns++ === 0;
+    console.log(`\n=== Chinese course (${vp.name}) ===`);
+    await cdp.send('Emulation.setDeviceMetricsOverride', { width: vp.width, height: vp.height, deviceScaleFactor: 1, mobile: true });
+    await cdp.send('Emulation.setUserAgentOverride', { userAgent: vp.ua, platform: vp.navPlatform });
+    const e0 = errors.length;
+    await navigate(BASE + '#/phrases');
+    await waitFor("document.documentElement.dataset.ready === '1'");
+    if (firstRun) check('zh: no request for Chinese data before the switch (all Japanese runs so far)', zhRequests.length === 0, zhRequests.join(', '));
+    const requestsBefore = zhRequests.length;
+    await evaluate(`(() => {
+      const s = window.__app.rootStore;
+      s.set('favs', ['basics.hai', 'konbini.bag-none']);
+      s.set('srs', { 'basics.hai|en2ja': { box: 3, due: '2026-12-01', seen: 2, lapses: 0 } });
+      s.set('lessons', { started: { 'U01-L01': '2026-11-20' }, passed: {}, quiz: {}, badges: {} });
+    })()`);
+    const jaSnapshot = `JSON.stringify(Object.keys(localStorage).filter((k) => k.startsWith('jt.') && !k.startsWith('jt.zh.') && k !== 'jt.lang').sort().map((k) => {
+      let v = localStorage.getItem(k);
+      if (k === 'jt.settings') { const o = JSON.parse(v); delete o.lastBackup; v = JSON.stringify(o); }
+      return [k, v];
+    }))`;
+    const jaBefore = await evaluate(jaSnapshot);
+    check('zh: language switch in the header next to the theme toggle (日本語 / 中文 or JA / ZH)', await evaluate(`(() => {
+      const sw = document.querySelector('header.top .lang-switch'), t = document.querySelector('header.top .theme-toggle');
+      if (!sw || !t) return false;
+      const a = sw.getBoundingClientRect(), b = t.getBoundingClientRect();
+      return sw.nextElementSibling === t && a.right <= b.left + 1 && Math.abs((a.top + a.bottom) / 2 - (b.top + b.bottom) / 2) < 4 && sw.querySelectorAll('button').length === 2
+        && sw.querySelector('[data-lang="ja"]').getAttribute('aria-pressed') === 'true' && a.height >= 30;
+    })()`));
+    await shot(`zh-${vp.name}-0-switch-ja`);
+    const titleOneLine = "(() => { const h = document.querySelector('header.top h1'); const r = document.createRange(); r.selectNodeContents(h); return r.getClientRects().length === 1 && h.getBoundingClientRect().height < parseFloat(getComputedStyle(h).fontSize) * 1.6; })()";
+    check('ja: the Phrases title stays on one line next to Furigana, the switch and the theme toggle', await evaluate(titleOneLine));
+    await click('.lang-switch [data-lang="zh"]');
+    check('zh: switching downloads the course and shows Chinese phrases', await waitFor(
+      "document.documentElement.lang === 'zh-CN' && document.documentElement.dataset.lang === 'zh' && document.querySelectorAll('.phrase[data-id^=\"zh.\"]').length > 3", 15000));
+    if (firstRun) check('zh: the switch requests only data/zh/ files', zhRequests.length >= 3 && zhRequests.every((p) => /^\/data\/zh\/[a-z-]+\.json$/.test(p)), zhRequests.join(', '));
+    else check('zh: switching again uses the course already in memory (no new download)', zhRequests.length === requestsBefore, zhRequests.slice(requestsBefore).join(', '));
+    check('zh: every Chinese text node is lang="zh-CN" (none tagged ja)', await evaluate(`(() => {
+      const ja = [...document.querySelectorAll('#view [lang="ja"]:not(.lang-opt)')];
+      const zh = [...document.querySelectorAll('#view .phrase .ja')];
+      return !ja.length && zh.length > 3 && zh.every((e) => e.lang === 'zh-CN');
+    })()`));
+    check('zh: SC system font stack, not Shippori Mincho', await evaluate(
+      "(() => { const f = getComputedStyle(document.querySelector('.phrase .ja')).fontFamily; return /Noto Sans SC|PingFang SC/.test(f) && !/Shippori/.test(f); })()"),
+      await evaluate("getComputedStyle(document.querySelector('.phrase .ja')).fontFamily"));
+    check('zh: pinyin ruby has one syllable per character', await evaluate(`(() => {
+      const rubies = [...document.querySelectorAll('.phrase .ja ruby')];
+      return rubies.length > 3 && rubies.every((r) => [...r.firstChild.textContent].length === 1 && !/\\s/.test(r.querySelector('rt').textContent));
+    })()`));
+    check('zh: Pinyin toggle replaces Furigana; the switch shows ZH active', await evaluate(
+      "/Pinyin/.test(document.querySelector('header.top label.toggle').textContent) && document.querySelector('.lang-switch [data-lang=\"zh\"]').getAttribute('aria-pressed') === 'true'"));
+    check('zh: no horizontal scroll (phrases)', await noHScroll());
+    check('zh: the Phrases title stays on one line', await evaluate(titleOneLine));
+    await shot(`zh-${vp.name}-1-phrases`);
+    for (const q of ['xuesheng', 'xue sheng', '学生', 'student']) {
+      await evaluate(`(() => { const i = document.querySelector('#phrase-search'); i.value = ${JSON.stringify(q)}; i.dispatchEvent(new Event('input')); })()`);
+      check(`zh: phrase search "${q}" finds a phrase with 学生`, await waitFor("/^Found/.test(document.querySelector('#phrase-list h2')?.textContent || '') && [...document.querySelectorAll('#phrase-list > .phrase')].some((p) => /学生/.test(window.__app.data.byId[p.dataset.id]?.ja || ''))", 3000));
+    }
+    await evaluate(`(() => { const i = document.querySelector('#phrase-search'); i.value = ''; i.dispatchEvent(new Event('input')); })()`);
+    await sleep(200);
+    await click('.phrase .fav');
+    check('zh: a Chinese favourite goes to jt.zh.favs, not jt.favs', await waitFor(
+      "JSON.parse(localStorage.getItem('jt.zh.favs') || '[]').some((id) => id.startsWith('zh.')) && !JSON.parse(localStorage.getItem('jt.favs') || '[]').some((id) => id.startsWith('zh.'))"));
+
+    await navigate(BASE + '#/kanji/dict/xuesheng');
+    check('zh: dictionary (CC-CEDICT): "xuesheng" → 学生 first', await waitFor("document.querySelector('#dict-results .dict-entry .ja')?.textContent === '学生'", 20000),
+      await evaluate("document.querySelector('#dict-status')?.textContent"));
+    for (const q of ['lvcha', '学生', 'student']) {
+      await evaluate(`(() => { const i = document.querySelector('#dict-search'); i.value = ${JSON.stringify(q)}; i.dispatchEvent(new Event('input')); })()`);
+      const want = q === 'lvcha' ? '绿茶' : '学生';
+      check(`zh: dictionary "${q}" lists ${want} in the top 3`, await waitFor(`[...document.querySelectorAll('#dict-results .dict-entry .ja')].slice(0, 3).some((e) => e.textContent === '${want}')`, 5000));
+    }
+    check('zh: dictionary rows are lang="zh-CN" and show pinyin, credit says CC-CEDICT', await evaluate(
+      "document.querySelector('#dict-results .dict-entry .ja').lang === 'zh-CN' && !!document.querySelector('#dict-results .dict-entry .romaji').textContent && /CC-CEDICT/.test(document.querySelector('.dict-credit').textContent) && !document.querySelector('#dict-results .kana-line')"));
+    check('zh: no horizontal scroll (dictionary)', await noHScroll());
+    await shot(`zh-${vp.name}-2-dictionary`);
+
+    await navigate(BASE + '#/study/today');
+    check('zh: Study tabs: the Kana tab is called Pinyin; no Trip section', await waitFor(
+      "document.querySelector('.subnav [data-sub=\"kana\"]')?.textContent === 'Pinyin' && document.querySelectorAll('.tile').length === 4 && !document.querySelector('#start-preflight')"));
+    await shot(`zh-${vp.name}-3-today`);
+    await click('#start-morning');
+    check('zh: the morning session shows a Chinese study card', await waitFor("!!document.querySelector('.flash[data-id^=\"zh.\"]')", 5000));
+    await click('#reveal');
+    check('zh: the answer is Chinese with pinyin ruby', await waitFor("!!document.querySelector('.flash .back .jp .ja[lang=\"zh-CN\"] rt')"));
+    await shot(`zh-${vp.name}-4-card`);
+    await click('.grade .good');
+    check('zh: the grade is stored under jt.zh.*, never in the Japanese keys', await waitFor(
+      "Object.keys(JSON.parse(localStorage.getItem('jt.zh.srs') || '{}')).some((k) => k.startsWith('zh.')) || Object.keys(JSON.parse(localStorage.getItem('jt.zh.learned') || '{}')).some((k) => k.startsWith('zh.'))"));
+    await navigate(BASE + '#/study/lessons');
+    check('zh: lessons list with Z.. codes', await waitFor("document.querySelectorAll('.lesson-row[data-lesson^=\"Z\"]').length >= 2"));
+    check('zh: no horizontal scroll (lessons)', await noHScroll());
+
+    await navigate(BASE + '#/study/kana');
+    check('zh: Pinyin tab: tones and tables', await waitFor("document.querySelectorAll('.tone-row').length >= 4 && document.querySelectorAll('.py-table .kana').length >= 8"));
+    await shot(`zh-${vp.name}-5-pinyin`);
+    const quizSets = await evaluate("[...document.querySelectorAll('.quiz-sets [data-set]')].map((b) => b.dataset.set)");
+    check('zh: pinyin quizzes offered', quizSets.length >= 1, quizSets.join(', '));
+    const listenSet = await evaluate("(() => { const q = window.__app.data.pinyin.quizzes.find((x) => x.mode === 'listen'); return q ? q.id : null; })()");
+    if (listenSet) {
+      await click(`.quiz-sets [data-set="${listenSet}"]`);
+      check('zh: listening quiz hides the answer and plays the sound, options from opts', await waitFor("!!document.querySelector('#py-play') && document.querySelectorAll('#pinyin-quiz .opt').length >= 2 && !document.querySelector('#pinyin-quiz .kana-big')"));
+      await click('#pinyin-quiz .opt');
+      check('zh: quiz feedback reveals the syllable', await waitFor("!!document.querySelector('#pinyin-quiz .opt.right') && !!document.querySelector('#pinyin-quiz .quiz-reveal')"));
+      await shot(`zh-${vp.name}-5b-pinyin-quiz`);
+    }
+    check('zh: no horizontal scroll (pinyin)', await noHScroll());
+
+    await navigate(BASE + '#/study/numbers');
+    check('zh: price trainer in yuan', await waitFor("!!document.querySelector('#num-play') && /¥/.test(document.querySelector('#num-card .sess-head').textContent)"));
+    await evaluate("(() => { const i = document.querySelector('#num-answer'); i.value = '3.5'; document.querySelector('#num-check').click(); })()");
+    check('zh: price answer in 块 with pinyin', await waitFor("/块|毛|分/.test(document.querySelector('#num-feedback').textContent) && !!document.querySelector('#num-feedback .romaji')"));
+    await shot(`zh-${vp.name}-6-prices`);
+    await navigate(BASE + '#/study/time');
+    check('zh: clock time trainer and weekdays', await waitFor("!!document.querySelector('#time-play') && document.querySelectorAll('.cnt').length === 7"));
+    check('zh: no horizontal scroll (time)', await noHScroll());
+
+    await navigate(BASE + '#/kanji');
+    check('zh: Characters sheet (hanzi) without a kana line', await waitFor("document.querySelector('.subnav [data-sub=\"signs\"]')?.textContent === 'Characters' && document.querySelectorAll('.kcell').length >= 5 && !document.querySelector('.kcell .kkana')"));
+    check('zh: no horizontal scroll (characters)', await noHScroll());
+    await shot(`zh-${vp.name}-7-characters`);
+
+    await navigate(BASE + '#/show');
+    check('zh: Show: Chinese cards, no allergy card', await waitFor("document.querySelectorAll('.showcard').length >= 3 && !document.querySelector('#card-allergy') && !!document.querySelector('#card-address')"));
+    await click('.showcard');
+    check('zh: full-screen card in Chinese', await waitFor("!!document.querySelector('#fs .fs-ja[lang=\"zh-CN\"]')"));
+    await shot(`zh-${vp.name}-8-show-card`);
+    await click('#fs .btn.primary');
+    await waitFor("!document.querySelector('#fs')");
+
+    await navigate(BASE + '#/tools');
+    check('zh: Tools: Translate to zh-CN, no Japan emergency numbers or maps', await waitFor(
+      "!!document.querySelector('#translate') && /EN → ZH/.test(document.querySelector('#translate h2').textContent) && !document.querySelector('#emergency') && !document.querySelector('#maps')"));
+    await evaluate("window.__opened = []; window.open = (u) => { window.__opened.push(u); }; document.querySelector('#tr-text').value = 'student'; document.querySelector('#translate .btn.primary').click()");
+    check('zh: Translate link uses tl=zh-CN', await waitFor("(window.__opened || []).some((u) => /tl=zh-CN/.test(u))"), await evaluate("JSON.stringify(window.__opened)"));
+    check('zh: backup line mentions both courses', await evaluate("/both courses/.test(document.querySelector('#backup-langs')?.textContent || '')"));
+    check('zh: no horizontal scroll (tools)', await noHScroll());
+    await shot(`zh-${vp.name}-9-tools`);
+    await evaluate(`(() => {
+      window.__copied = null;
+      Object.defineProperty(navigator, 'clipboard', { configurable: true, value: { writeText: async (t) => { window.__copied = t; } } });
+    })()`);
+    await click('#copy-backup');
+    check('zh: one backup holds both courses', await waitFor("!!window.__copied && (() => { const b = JSON.parse(window.__copied); return b.data.favs.includes('basics.hai') && b.langs.zh.favs.some((id) => id.startsWith('zh.')); })()"));
+    await navigate(BASE + '#/tools/credits');
+    check('zh: Credits list CC-CEDICT (MDBG, CC BY-SA 4.0) next to JMdict', await waitFor(
+      "(() => { const t = document.querySelector('#view').textContent; const hrefs = [...document.querySelectorAll('#view a')].map((a) => a.href); return /CC-CEDICT/.test(t) && /MDBG/.test(t) && /JMdict/.test(t) && hrefs.some((h) => h.includes('mdbg.net')) && hrefs.includes('https://cc-cedict.org/wiki/'); })()"));
+
+    for (const theme of ['light', 'dark']) {
+      await evaluate(`localStorage.setItem('theme', '${theme}'); document.documentElement.dataset.theme = '${theme}'`);
+      for (const [name, hash] of [['phrases', '#/phrases'], ['today', '#/study/today'], ['lessons', '#/study/lessons'], ['pinyin', '#/study/kana'], ['prices', '#/study/numbers'],
+        ['time', '#/study/time'], ['characters', '#/kanji'], ['dictionary', '#/kanji/dict/xuesheng'], ['show', '#/show'], ['tools', '#/tools']]) {
+        await navigate(BASE + hash);
+        await waitFor("document.documentElement.dataset.ready === '1' && document.querySelector('#view').children.length > 1");
+        if (name === 'phrases') await click('.phrase.is-collapsed .jp');
+        if (name === 'dictionary') await waitFor("!!document.querySelector('#dict-results .dict-entry')", 5000);
+        await sleep(150);
+        const st = await evaluate(`(() => {
+          const de = document.documentElement;
+          const ctrls = [...document.querySelectorAll('#view button, #view a.btn, #view select')].filter((e) => e.offsetParent);
+          const tiny = ctrls.filter((e) => e.getBoundingClientRect().height < 30 && !e.closest('.reply-to, .linklike, details summary') && !e.classList.contains('linklike'));
+          return { theme: de.dataset.theme, lang: de.lang, hscroll: de.scrollWidth > innerWidth + 1, tiny: tiny.map((e) => e.className).slice(0, 4),
+            jaTagged: document.querySelectorAll('#view [lang="ja"]:not(.lang-opt)').length };
+        })()`);
+        check(`zh ${vp.name} ${theme} ${name}: theme, lang zh-CN, no h-scroll, controls >= 30 px, nothing tagged ja`,
+          st.theme === theme && st.lang === 'zh-CN' && !st.hscroll && !st.tiny.length && !st.jaTagged, JSON.stringify(st));
+        await shot(`zh-theme-${vp.name}-${theme}-${name}`);
+      }
+    }
+    await evaluate("localStorage.removeItem('theme'); document.documentElement.removeAttribute('data-theme')");
+
+    await navigate(BASE + '#/phrases');
+    await waitFor("!!document.querySelector('.lang-switch')");
+    await click('.lang-switch [data-lang="ja"]');
+    check('zh → ja: Japanese phrases are back, html lang en', await waitFor("document.documentElement.lang === 'en' && !!document.querySelector('.phrase[data-id=\"konbini.bag-none\"], .phrase[data-id^=\"basics.\"]') && document.querySelector('.phrase .ja').lang === 'ja'", 8000));
+    const jaAfter = await evaluate(jaSnapshot);
+    check('ja → zh → ja: Japanese progress is byte-for-byte untouched', jaAfter === jaBefore, jaAfter === jaBefore ? '' : `${jaBefore.slice(0, 200)} ≠ ${jaAfter.slice(0, 200)}`);
+    check('zh → ja: the Japanese font is back (Shippori Mincho)', await evaluate("/Shippori/.test(getComputedStyle(document.querySelector('.phrase .ja')).fontFamily)"));
+    await click('.lang-switch [data-lang="zh"]');
+    check('ja → zh again: instant from memory, Chinese progress kept', await waitFor("document.documentElement.lang === 'zh-CN' && JSON.parse(localStorage.getItem('jt.zh.favs') || '[]').length > 0", 4000));
+    await click('.lang-switch [data-lang="ja"]');
+    await waitFor("document.documentElement.lang === 'en'");
+    await waitFor("caches.keys().then(async (k) => { const z = k.find((x) => x.startsWith('zh-')); return !!z && (await (await caches.open(z)).keys()).length === 5; })", 15000);
+    const zhCache = await evaluate("caches.keys().then(async (k) => { const z = k.find((x) => x.startsWith('zh-')); const shell = k.find((x) => x.startsWith('jt-')); return { z, files: z ? (await (await caches.open(z)).keys()).map((r) => new URL(r.url).pathname).sort() : [], inShell: shell ? (await (await caches.open(shell)).keys()).some((r) => r.url.includes('/data/zh/')) : null }; })");
+    check('zh: the five zh files sit in their own zh-* cache, not in the shell cache', zhCache.files.length === 5 && zhCache.inShell === false, JSON.stringify(zhCache));
+    await evaluate(`(() => {
+      const root = window.__app.rootStore, zh = root.lang('zh');
+      root.set('favs', []); root.remove('srs'); root.remove('lessons');
+      for (const k of ['favs', 'srs', 'settings', 'cards', 'userItems', 'history', 'quizStats', 'lessons', 'learned', 'activity', 'dictFavs']) zh.remove(k);
+      localStorage.removeItem('jt.lang');
+    })()`);
+    const newErr = errors.slice(e0);
+    check('zh: no exceptions or console.error', newErr.length === 0, newErr.join(' | '));
+  }
+
+  if (process.env.E2E_ONLY !== 'zh') for (const vp of VIEWPORTS) await runViewport(vp);
+  for (const vp of VIEWPORTS) await runChinese(vp);
 
   // ---------- Service Worker and offline ----------
   console.log('\n=== Service Worker / offline ===');
@@ -553,6 +757,7 @@ async function main() {
   await sleep(1500);
   check('hard refresh reloads with a fresh worker and a refilled shell cache', await waitFor(
     `document.documentElement.dataset.ready === '1' && !!navigator.serviceWorker.controller && caches.open('jt-${newVer}').then((c) => c.keys()).then((k) => k.length >= 25)`, 20000));
+  check('hard refresh keeps the Chinese course cache', await evaluate("caches.keys().then((k) => k.some((x) => x.startsWith('zh-')))"));
   check('hard refresh keeps localStorage and the dictionary cache', await evaluate(
     "caches.keys().then((k) => localStorage.getItem('jt.e2eMarker') === 'keep-me' && k.includes('dict-2026-11-16'))"));
   // back to the real sw.js (also exercises a second update)
@@ -595,6 +800,20 @@ async function main() {
   }
   await navigate(BASE + 'diag.html');
   check('offline: diag.html opens', await waitFor("!!document.querySelector('#checks')"));
+
+  const zhBeforeOffline = zhRequests.length;
+  await navigate(BASE + '#/phrases');
+  await waitFor("document.documentElement.dataset.ready === '1'");
+  await click('.lang-switch [data-lang="zh"]');
+  check('offline: the Chinese course opens from its cache after the first download', await waitFor(
+    "document.documentElement.lang === 'zh-CN' && document.querySelectorAll('.phrase[data-id^=\"zh.\"]').length > 3", 10000));
+  await navigate(BASE + '#/kanji/dict/xuesheng');
+  check('offline: Chinese dictionary from its cache finds 学生', await waitFor("document.querySelector('#dict-results .dict-entry .ja')?.textContent === '学生'", 20000));
+  await cdp.send('Page.reload');
+  check('offline: reload keeps the Chinese course', await waitFor("document.documentElement.dataset.ready === '1' && document.documentElement.lang === 'zh-CN' && !!document.querySelector('#dict-search')", 10000));
+  await shot('offline-zh');
+  check('offline: no request reached the (stopped) server for zh data', zhRequests.length === zhBeforeOffline);
+  await evaluate("localStorage.removeItem('jt.lang')");
 
   cdp.close();
   chrome.kill();
