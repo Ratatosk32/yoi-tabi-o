@@ -27,7 +27,8 @@ for (const ch of [...chars].sort()) {
     if (n != null && (neu == null || n < neu)) neu = n;
     if (w.simplified === ch && w.radical) radical = w.radical;
   }
-  out[ch] = [old ?? (neu != null ? Math.min(neu, 6) : 0), radical];
+  const levels = [old, neu].filter((x) => x != null);
+  out[ch] = [levels.length ? Math.min(...levels, 6) : 0, radical];
 }
 const body = Object.entries(out).map(([c, v]) => `  '${c}': [${v[0]}, '${v[1]}'],`).join('\n');
 writeFileSync(join(zh, 'src', 'hanzi-hsk.mjs'), `export const HSK = {\n${body}\n};\n`, 'utf8');

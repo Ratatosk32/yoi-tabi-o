@@ -240,7 +240,7 @@
    "kana": "bai",
    "romaji": "bǎi",
    "en": "hundred",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "白",
    "ex": {
     "ja": "一百",
@@ -274,7 +274,7 @@
    "kana": "wan",
    "romaji": "wàn",
    "en": "ten thousand",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "一",
    "ex": {
     "ja": "一万",
@@ -308,7 +308,7 @@
    "kana": "liang",
    "romaji": "liǎng",
    "en": "two (before a measure word)",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "一",
    "ex": {
     "ja": "两个",
@@ -325,7 +325,7 @@
    "kana": "ban",
    "romaji": "bàn",
    "en": "half",
-   "hsk": 3,
+   "hsk": 1,
    "radical": "十",
    "ex": {
     "ja": "一半",
@@ -342,7 +342,7 @@
    "kana": "di",
    "romaji": "dì",
    "en": "ordinal prefix (-th)",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "⺮",
    "ex": {
     "ja": "第一",
@@ -462,7 +462,7 @@
    "kana": "ci",
    "romaji": "cì",
    "en": "time(s), occurrence",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "欠",
    "ex": {
     "ja": "一次",
@@ -496,7 +496,7 @@
    "kana": "hao",
    "romaji": "hào",
    "en": "number; day of the month",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "口",
    "ex": {
     "ja": "号码",
@@ -513,7 +513,7 @@
    "kana": "wei",
    "romaji": "wèi",
    "en": "polite measure word for people",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "亻",
    "ex": {
     "ja": "座位",
@@ -530,7 +530,7 @@
    "kana": "tiao",
    "romaji": "tiáo",
    "en": "measure word for long things",
-   "hsk": 3,
+   "hsk": 1,
    "radical": "木",
    "ex": {
     "ja": "面条",
@@ -633,7 +633,7 @@
    "kana": "nin",
    "romaji": "nín",
    "en": "you (polite)",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "心",
    "ex": {
     "ja": "您好",
@@ -769,7 +769,7 @@
    "kana": "ge",
    "romaji": "gē",
    "en": "older brother",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "口",
    "ex": {
     "ja": "哥哥",
@@ -803,7 +803,7 @@
    "kana": "di",
    "romaji": "dì",
    "en": "younger brother",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "弓",
    "ex": {
     "ja": "弟弟",
@@ -820,7 +820,7 @@
    "kana": "mei",
    "romaji": "mèi",
    "en": "younger sister",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "女",
    "ex": {
     "ja": "妹妹",
@@ -871,7 +871,7 @@
    "kana": "nan",
    "romaji": "nán",
    "en": "man, male",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "田",
    "ex": {
     "ja": "男人",
@@ -906,7 +906,7 @@
    "kana": "hai",
    "romaji": "hái",
    "en": "child",
-   "hsk": 2,
+   "hsk": 1,
    "ex": {
     "ja": "女孩",
     "ruby": "女孩[nǚ hái]",
@@ -1139,7 +1139,7 @@
    "kana": "ji",
    "romaji": "jǐ",
    "en": "self",
-   "hsk": 3,
+   "hsk": 2,
    "ex": {
     "ja": "自己",
     "ruby": "自己[zì jǐ]",
@@ -1155,7 +1155,7 @@
    "kana": "kou",
    "romaji": "kǒu",
    "en": "mouth; opening",
-   "hsk": 3,
+   "hsk": 1,
    "radical": "口",
    "ex": {
     "ja": "门口",
@@ -1172,7 +1172,7 @@
    "kana": "shou",
    "romaji": "shǒu",
    "en": "hand",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "手",
    "ex": {
     "ja": "手机",
@@ -1189,7 +1189,7 @@
    "kana": "tou",
    "romaji": "tóu",
    "en": "head",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "大",
    "ex": {
     "ja": "头发",
@@ -1239,7 +1239,7 @@
    "kana": "xin",
    "romaji": "xīn",
    "en": "heart",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "心",
    "ex": {
     "ja": "小心",
@@ -1256,7 +1256,7 @@
    "kana": "shen",
    "romaji": "shēn",
    "en": "body",
-   "hsk": 2,
+   "hsk": 1,
    "ex": {
     "ja": "身体",
     "ruby": "身体[shēn tǐ]",
@@ -1272,7 +1272,7 @@
    "kana": "ti",
    "romaji": "tǐ",
    "en": "body; form",
-   "hsk": 2,
+   "hsk": 1,
    "ex": {
     "ja": "体育",
     "ruby": "体育[tǐ yù]",
@@ -1288,7 +1288,7 @@
    "kana": "jiao",
    "romaji": "jiǎo",
    "en": "foot",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "⺼",
    "ex": {
     "ja": "手脚",
@@ -1322,7 +1322,7 @@
    "kana": "bing",
    "romaji": "bìng",
    "en": "illness; ill",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "疒",
    "ex": {
     "ja": "生病",
@@ -1389,7 +1389,7 @@
    "kana": "teng",
    "romaji": "téng",
    "en": "hurt, ache",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "疒",
    "ex": {
     "ja": "头疼",
@@ -1406,7 +1406,7 @@
    "kana": "lei",
    "romaji": "lèi",
    "en": "tired",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "糸",
    "ex": {
     "ja": "劳累",
@@ -1423,7 +1423,7 @@
    "kana": "e",
    "romaji": "è",
    "en": "hungry",
-   "hsk": 3,
+   "hsk": 1,
    "radical": "饣",
    "ex": {
     "ja": "饥饿",
@@ -1440,7 +1440,7 @@
    "kana": "ke",
    "romaji": "kě",
    "en": "thirsty",
-   "hsk": 3,
+   "hsk": 1,
    "radical": "氵",
    "ex": {
     "ja": "口渴",
@@ -1575,7 +1575,7 @@
    "kana": "jian",
    "romaji": "jiān",
    "en": "between; room",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "门",
    "ex": {
     "ja": "房间",
@@ -1645,7 +1645,7 @@
    "kana": "zao",
    "romaji": "zǎo",
    "en": "early; morning",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "日",
    "ex": {
     "ja": "早上",
@@ -1662,7 +1662,7 @@
    "kana": "wan",
    "romaji": "wǎn",
    "en": "late; evening",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "日",
    "ex": {
     "ja": "晚上",
@@ -1759,7 +1759,7 @@
    "kana": "zhou",
    "romaji": "zhōu",
    "en": "week; around",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "口",
    "ex": {
     "ja": "周末",
@@ -1776,7 +1776,7 @@
    "kana": "mo",
    "romaji": "mò",
    "en": "end",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "木",
    "ex": {
     "ja": "月末",
@@ -1827,7 +1827,7 @@
    "kana": "chun",
    "romaji": "chūn",
    "en": "spring",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "日",
    "ex": {
     "ja": "春天",
@@ -1844,7 +1844,7 @@
    "kana": "xia",
    "romaji": "xià",
    "en": "summer",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "夊",
    "ex": {
     "ja": "夏天",
@@ -1861,7 +1861,7 @@
    "kana": "qiu",
    "romaji": "qiū",
    "en": "autumn",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "禾",
    "ex": {
     "ja": "秋天",
@@ -1878,7 +1878,7 @@
    "kana": "dong",
    "romaji": "dōng",
    "en": "winter",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "⺀",
    "ex": {
     "ja": "冬天",
@@ -1895,7 +1895,7 @@
    "kana": "jie",
    "romaji": "jié",
    "en": "festival; section",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "艹",
    "ex": {
     "ja": "节日",
@@ -1912,7 +1912,7 @@
    "kana": "jiu",
    "romaji": "jiǔ",
    "en": "long (time)",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "丿",
    "ex": {
     "ja": "多久",
@@ -1929,7 +1929,7 @@
    "kana": "chang",
    "romaji": "cháng",
    "en": "often; usual",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "巾",
    "ex": {
     "ja": "常常",
@@ -1997,7 +1997,7 @@
    "kana": "zuo",
    "romaji": "zuǒ",
    "en": "left",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "工",
    "ex": {
     "ja": "左边",
@@ -2014,7 +2014,7 @@
    "kana": "you",
    "romaji": "yòu",
    "en": "right",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "口",
    "ex": {
     "ja": "右边",
@@ -2048,7 +2048,7 @@
    "kana": "wai",
    "romaji": "wài",
    "en": "outside",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "夕",
    "ex": {
     "ja": "外国",
@@ -2116,7 +2116,7 @@
    "kana": "nan",
    "romaji": "nán",
    "en": "south",
-   "hsk": 3,
+   "hsk": 1,
    "radical": "十",
    "ex": {
     "ja": "南方",
@@ -2150,7 +2150,7 @@
    "kana": "bian",
    "romaji": "biān",
    "en": "side, edge",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "辶",
    "ex": {
     "ja": "旁边",
@@ -2167,7 +2167,7 @@
    "kana": "pang",
    "romaji": "páng",
    "en": "side",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "方",
    "ex": {
     "ja": "旁边",
@@ -2217,7 +2217,7 @@
    "kana": "hai",
    "romaji": "hǎi",
    "en": "sea",
-   "hsk": 4,
+   "hsk": 2,
    "radical": "氵",
    "ex": {
     "ja": "上海",
@@ -2234,7 +2234,7 @@
    "kana": "lu",
    "romaji": "lù",
    "en": "road",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "足",
    "ex": {
     "ja": "马路",
@@ -2251,7 +2251,7 @@
    "kana": "men",
    "romaji": "mén",
    "en": "door, gate",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "门",
    "ex": {
     "ja": "门口",
@@ -2318,7 +2318,7 @@
    "kana": "chang",
    "romaji": "chǎng",
    "en": "open space, field",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "土",
    "ex": {
     "ja": "机场",
@@ -2351,7 +2351,7 @@
    "kana": "lou",
    "romaji": "lóu",
    "en": "building; floor",
-   "hsk": 3,
+   "hsk": 1,
    "radical": "木",
    "ex": {
     "ja": "楼上",
@@ -2368,7 +2368,7 @@
    "kana": "fang",
    "romaji": "fāng",
    "en": "square; direction",
-   "hsk": 3,
+   "hsk": 1,
    "radical": "方",
    "ex": {
     "ja": "地方",
@@ -2385,7 +2385,7 @@
    "kana": "di",
    "romaji": "dì",
    "en": "ground, earth",
-   "hsk": 3,
+   "hsk": 1,
    "radical": "土",
    "ex": {
     "ja": "地铁",
@@ -2420,7 +2420,7 @@
    "kana": "yuan",
    "romaji": "yuǎn",
    "en": "far",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "辶",
    "ex": {
     "ja": "远方",
@@ -2454,7 +2454,7 @@
    "kana": "shi",
    "romaji": "shì",
    "en": "city; market",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "巾",
    "ex": {
     "ja": "超市",
@@ -2471,7 +2471,7 @@
    "kana": "shan",
    "romaji": "shān",
    "en": "mountain",
-   "hsk": 3,
+   "hsk": 1,
    "radical": "山",
    "ex": {
     "ja": "爬山",
@@ -2522,7 +2522,7 @@
    "kana": "mu",
    "romaji": "mù",
    "en": "wood, tree",
-   "hsk": 5,
+   "hsk": 3,
    "ex": {
     "ja": "木头",
     "ruby": "木头[mù tou]",
@@ -2538,7 +2538,7 @@
    "kana": "tu",
    "romaji": "tǔ",
    "en": "earth, soil",
-   "hsk": 5,
+   "hsk": 3,
    "radical": "土",
    "ex": {
     "ja": "土豆",
@@ -2555,7 +2555,7 @@
    "kana": "jin",
    "romaji": "jīn",
    "en": "gold; metal",
-   "hsk": 4,
+   "hsk": 3,
    "radical": "金",
    "ex": {
     "ja": "现金",
@@ -2572,7 +2572,7 @@
    "kana": "feng",
    "romaji": "fēng",
    "en": "wind",
-   "hsk": 4,
+   "hsk": 1,
    "radical": "风",
    "ex": {
     "ja": "刮风",
@@ -2623,7 +2623,7 @@
    "kana": "yun",
    "romaji": "yún",
    "en": "cloud",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "二",
    "ex": {
     "ja": "白云",
@@ -2691,7 +2691,7 @@
    "kana": "hua",
    "romaji": "huā",
    "en": "flower; spend",
-   "hsk": 3,
+   "hsk": 1,
    "radical": "艹",
    "ex": {
     "ja": "花园",
@@ -2708,7 +2708,7 @@
    "kana": "cao",
    "romaji": "cǎo",
    "en": "grass",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "艹",
    "ex": {
     "ja": "草地",
@@ -2725,7 +2725,7 @@
    "kana": "shu",
    "romaji": "shù",
    "en": "tree",
-   "hsk": 3,
+   "hsk": 1,
    "radical": "木",
    "ex": {
     "ja": "树叶",
@@ -2742,7 +2742,7 @@
    "kana": "he",
    "romaji": "hé",
    "en": "river",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "氵",
    "ex": {
     "ja": "河边",
@@ -2810,7 +2810,7 @@
    "kana": "niao",
    "romaji": "niǎo",
    "en": "bird",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "鸟",
    "ex": {
     "ja": "小鸟",
@@ -2827,7 +2827,7 @@
    "kana": "ma",
    "romaji": "mǎ",
    "en": "horse",
-   "hsk": 3,
+   "hsk": 1,
    "radical": "马",
    "ex": {
     "ja": "马上",
@@ -2844,7 +2844,7 @@
    "kana": "niu",
    "romaji": "niú",
    "en": "cow, ox",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "牛",
    "ex": {
     "ja": "牛奶",
@@ -2878,7 +2878,7 @@
    "kana": "ji",
    "romaji": "jī",
    "en": "chicken",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "鸟",
    "ex": {
     "ja": "鸡蛋",
@@ -2929,7 +2929,7 @@
    "kana": "yang",
    "romaji": "yáng",
    "en": "sun",
-   "hsk": 3,
+   "hsk": 2,
    "ex": {
     "ja": "太阳",
     "ruby": "太阳[tài yang]",
@@ -2945,7 +2945,7 @@
    "kana": "kong",
    "romaji": "kōng",
    "en": "sky; empty",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "穴",
    "ex": {
     "ja": "空气",
@@ -3082,7 +3082,7 @@
    "kana": "rou",
    "romaji": "ròu",
    "en": "meat",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "肉",
    "ex": {
     "ja": "牛肉",
@@ -3099,7 +3099,7 @@
    "kana": "dan",
    "romaji": "dàn",
    "en": "egg",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "虫",
    "ex": {
     "ja": "蛋糕",
@@ -3132,7 +3132,7 @@
    "kana": "nai",
    "romaji": "nǎi",
    "en": "milk",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "女",
    "ex": {
     "ja": "奶茶",
@@ -3149,7 +3149,7 @@
    "kana": "jiu",
    "romaji": "jiǔ",
    "en": "alcoholic drink",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "酉",
    "ex": {
     "ja": "啤酒",
@@ -3251,7 +3251,7 @@
    "kana": "tang",
    "romaji": "tāng",
    "en": "soup",
-   "hsk": 4,
+   "hsk": 3,
    "radical": "氵",
    "ex": {
     "ja": "鸡汤",
@@ -3268,7 +3268,7 @@
    "kana": "jiao",
    "romaji": "jiǎo",
    "en": "dumpling",
-   "hsk": 4,
+   "hsk": 2,
    "ex": {
     "ja": "饺子",
     "ruby": "饺子[jiǎo zi]",
@@ -3284,7 +3284,7 @@
    "kana": "bao",
    "romaji": "bāo",
    "en": "bag; wrap; bun",
-   "hsk": 3,
+   "hsk": 1,
    "radical": "勹",
    "ex": {
     "ja": "包子",
@@ -3301,7 +3301,7 @@
    "kana": "wan",
    "romaji": "wǎn",
    "en": "bowl",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "石",
    "ex": {
     "ja": "洗碗",
@@ -3318,7 +3318,7 @@
    "kana": "kuai",
    "romaji": "kuài",
    "en": "chopstick",
-   "hsk": 3,
+   "hsk": 2,
    "ex": {
     "ja": "筷子",
     "ruby": "筷子[kuài zi]",
@@ -3334,7 +3334,7 @@
    "kana": "dan",
    "romaji": "dān",
    "en": "single; list",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "丷",
    "ex": {
     "ja": "买单",
@@ -3351,7 +3351,7 @@
    "kana": "can",
    "romaji": "cān",
    "en": "meal",
-   "hsk": 5,
+   "hsk": 2,
    "radical": "食",
    "ex": {
     "ja": "早餐",
@@ -3368,7 +3368,7 @@
    "kana": "wei",
    "romaji": "wèi",
    "en": "taste, flavour",
-   "hsk": 4,
+   "hsk": 2,
    "ex": {
     "ja": "味道",
     "ruby": "味道[wèi dao]",
@@ -3400,7 +3400,7 @@
    "kana": "dou",
    "romaji": "dòu",
    "en": "bean",
-   "hsk": 5,
+   "hsk": 4,
    "ex": {
     "ja": "豆腐",
     "ruby": "豆腐[dòu fu]",
@@ -3416,7 +3416,7 @@
    "kana": "you",
    "romaji": "yóu",
    "en": "oil",
-   "hsk": 4,
+   "hsk": 2,
    "radical": "氵",
    "ex": {
     "ja": "加油",
@@ -3450,7 +3450,7 @@
    "kana": "fang",
    "romaji": "fáng",
    "en": "house; room",
-   "hsk": 2,
+   "hsk": 1,
    "ex": {
     "ja": "房间",
     "ruby": "房间[fáng jiān]",
@@ -3466,7 +3466,7 @@
    "kana": "chuang",
    "romaji": "chuáng",
    "en": "bed",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "广",
    "ex": {
     "ja": "起床",
@@ -3515,7 +3515,7 @@
    "kana": "deng",
    "romaji": "dēng",
    "en": "lamp, light",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "火",
    "ex": {
     "ja": "开灯",
@@ -3663,7 +3663,7 @@
    "kana": "xie",
    "romaji": "xié",
    "en": "shoe",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "革",
    "ex": {
     "ja": "皮鞋",
@@ -3713,7 +3713,7 @@
    "kana": "bi",
    "romaji": "bǐ",
    "en": "pen",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "⺮",
    "ex": {
     "ja": "铅笔",
@@ -3815,7 +3815,7 @@
    "kana": "xi",
    "romaji": "xǐ",
    "en": "wash",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "氵",
    "ex": {
     "ja": "洗手",
@@ -3832,7 +3832,7 @@
    "kana": "zao",
    "romaji": "zǎo",
    "en": "bath",
-   "hsk": 3,
+   "hsk": 2,
    "ex": {
     "ja": "洗澡",
     "ruby": "洗澡[xǐ zǎo]",
@@ -3899,7 +3899,7 @@
    "kana": "gui",
    "romaji": "guì",
    "en": "expensive; honoured",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "贝",
    "ex": {
     "ja": "贵姓",
@@ -3950,7 +3950,7 @@
    "kana": "yuan",
    "romaji": "yuán",
    "en": "yuan (written)",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "儿",
    "ex": {
     "ja": "美元",
@@ -3967,7 +3967,7 @@
    "kana": "yin",
    "romaji": "yín",
    "en": "silver",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "钅",
    "ex": {
     "ja": "银行",
@@ -3984,7 +3984,7 @@
    "kana": "xing",
    "romaji": "xíng",
    "en": "go; OK",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "行",
    "ex": {
     "ja": "自行车",
@@ -4002,7 +4002,7 @@
    "kana": "piao",
    "romaji": "piào",
    "en": "ticket",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "示",
    "ex": {
     "ja": "车票",
@@ -4019,7 +4019,7 @@
    "kana": "ka",
    "romaji": "kǎ",
    "en": "card",
-   "hsk": 4,
+   "hsk": 2,
    "radical": "卜",
    "ex": {
     "ja": "刷卡",
@@ -4036,7 +4036,7 @@
    "kana": "fu",
    "romaji": "fù",
    "en": "pay",
-   "hsk": 5,
+   "hsk": 3,
    "radical": "亻",
    "ex": {
     "ja": "付钱",
@@ -4135,7 +4135,7 @@
    "kana": "ban",
    "romaji": "bān",
    "en": "class; shift",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "王",
    "ex": {
     "ja": "上班",
@@ -4185,7 +4185,7 @@
    "kana": "ke",
    "romaji": "kè",
    "en": "lesson, class",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "讠",
    "ex": {
     "ja": "上课",
@@ -4202,7 +4202,7 @@
    "kana": "kao",
    "romaji": "kǎo",
    "en": "test",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "耂",
    "ex": {
     "ja": "考试",
@@ -4219,7 +4219,7 @@
    "kana": "shi",
    "romaji": "shì",
    "en": "try; test",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "讠",
    "ex": {
     "ja": "试试",
@@ -4285,7 +4285,7 @@
    "kana": "wen",
    "romaji": "wén",
    "en": "writing; culture",
-   "hsk": 3,
+   "hsk": 1,
    "radical": "文",
    "ex": {
     "ja": "中文",
@@ -4302,7 +4302,7 @@
    "kana": "tie",
    "romaji": "tiě",
    "en": "iron",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "钅",
    "ex": {
     "ja": "高铁",
@@ -4403,7 +4403,7 @@
    "kana": "hu",
    "romaji": "hù",
    "en": "protect",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "扌",
    "ex": {
     "ja": "护照",
@@ -4420,7 +4420,7 @@
    "kana": "zhao",
    "romaji": "zhào",
    "en": "photo; shine",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "灬",
    "ex": {
     "ja": "照片",
@@ -4454,7 +4454,7 @@
    "kana": "wang",
    "romaji": "wǎng",
    "en": "net, internet",
-   "hsk": 3,
+   "hsk": 1,
    "radical": "网",
    "ex": {
     "ja": "上网",
@@ -4471,7 +4471,7 @@
    "kana": "xin",
    "romaji": "xìn",
    "en": "letter; believe",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "亻",
    "ex": {
     "ja": "微信",
@@ -4641,7 +4641,7 @@
    "kana": "zou",
    "romaji": "zǒu",
    "en": "walk; leave",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "走",
    "ex": {
     "ja": "走路",
@@ -4658,7 +4658,7 @@
    "kana": "pao",
    "romaji": "pǎo",
    "en": "run",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "足",
    "ex": {
     "ja": "跑步",
@@ -4743,7 +4743,7 @@
    "kana": "yao",
    "romaji": "yào",
    "en": "want; need; will",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "覀",
    "ex": {
     "ja": "需要",
@@ -4843,7 +4843,7 @@
    "kana": "zhi",
    "romaji": "zhī",
    "en": "know",
-   "hsk": 2,
+   "hsk": 1,
    "ex": {
     "ja": "知道",
     "ruby": "知道[zhī dào]",
@@ -4859,7 +4859,7 @@
    "kana": "dao",
    "romaji": "dào",
    "en": "road; way; say",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "辶",
    "ex": {
     "ja": "道歉",
@@ -4910,7 +4910,7 @@
    "kana": "gei",
    "romaji": "gěi",
    "en": "give; for, to",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "纟",
    "ex": {
     "ja": "送给",
@@ -4927,7 +4927,7 @@
    "kana": "zhao",
    "romaji": "zhǎo",
    "en": "look for; give change",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "扌",
    "ex": {
     "ja": "找到",
@@ -4944,7 +4944,7 @@
    "kana": "deng",
    "romaji": "děng",
    "en": "wait",
-   "hsk": 4,
+   "hsk": 1,
    "radical": "⺮",
    "ex": {
     "ja": "等等",
@@ -5012,7 +5012,7 @@
    "kana": "dao",
    "romaji": "dào",
    "en": "arrive; to",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "刂",
    "ex": {
     "ja": "迟到",
@@ -5029,7 +5029,7 @@
    "kana": "jin",
    "romaji": "jìn",
    "en": "enter",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "辶",
    "ex": {
     "ja": "进口",
@@ -5115,7 +5115,7 @@
    "kana": "yong",
    "romaji": "yòng",
    "en": "use",
-   "hsk": 3,
+   "hsk": 1,
    "radical": "用",
    "ex": {
     "ja": "不用",
@@ -5132,7 +5132,7 @@
    "kana": "wen",
    "romaji": "wèn",
    "en": "ask",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "门",
    "ex": {
     "ja": "请问",
@@ -5149,7 +5149,7 @@
    "kana": "gao",
    "romaji": "gào",
    "en": "tell, inform",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "口",
    "ex": {
     "ja": "告诉",
@@ -5166,7 +5166,7 @@
    "kana": "bang",
    "romaji": "bāng",
    "en": "help",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "巾",
    "ex": {
     "ja": "帮忙",
@@ -5183,7 +5183,7 @@
    "kana": "na",
    "romaji": "ná",
    "en": "take, hold",
-   "hsk": 3,
+   "hsk": 1,
    "radical": "手",
    "ex": {
     "ja": "拿走",
@@ -5200,7 +5200,7 @@
    "kana": "fang",
    "romaji": "fàng",
    "en": "put; let go",
-   "hsk": 3,
+   "hsk": 1,
    "radical": "攵",
    "ex": {
     "ja": "放假",
@@ -5217,7 +5217,7 @@
    "kana": "chuan",
    "romaji": "chuān",
    "en": "wear, put on",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "穴",
    "ex": {
     "ja": "穿衣",
@@ -5234,7 +5234,7 @@
    "kana": "dai",
    "romaji": "dài",
    "en": "bring, take; belt",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "巾",
    "ex": {
     "ja": "带走",
@@ -5251,7 +5251,7 @@
    "kana": "song",
    "romaji": "sòng",
    "en": "give; see off; deliver",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "辶",
    "ex": {
     "ja": "送礼",
@@ -5268,7 +5268,7 @@
    "kana": "jie",
    "romaji": "jiè",
    "en": "borrow, lend",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "亻",
    "ex": {
     "ja": "借书",
@@ -5285,7 +5285,7 @@
    "kana": "wan",
    "romaji": "wán",
    "en": "play, have fun",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "王",
    "ex": {
     "ja": "好玩",
@@ -5302,7 +5302,7 @@
    "kana": "chang",
    "romaji": "chàng",
    "en": "sing",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "口",
    "ex": {
     "ja": "唱歌",
@@ -5336,7 +5336,7 @@
    "kana": "jiao",
    "romaji": "jiāo",
    "en": "teach",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "攵",
    "ex": {
     "ja": "教书",
@@ -5371,7 +5371,7 @@
    "kana": "huan",
    "romaji": "huàn",
    "en": "change, exchange",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "扌",
    "ex": {
     "ja": "换钱",
@@ -5388,7 +5388,7 @@
    "kana": "wang",
    "romaji": "wàng",
    "en": "forget",
-   "hsk": 3,
+   "hsk": 1,
    "radical": "心",
    "ex": {
     "ja": "忘记",
@@ -5405,7 +5405,7 @@
    "kana": "ji",
    "romaji": "jì",
    "en": "remember; note down",
-   "hsk": 3,
+   "hsk": 1,
    "radical": "讠",
    "ex": {
     "ja": "日记",
@@ -5596,7 +5596,7 @@
    "kana": "duan",
    "romaji": "duǎn",
    "en": "short",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "矢",
    "ex": {
     "ja": "短信",
@@ -5613,7 +5613,7 @@
    "kana": "xin",
    "romaji": "xīn",
    "en": "new",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "斤",
    "ex": {
     "ja": "新年",
@@ -5647,7 +5647,7 @@
    "kana": "kuai",
    "romaji": "kuài",
    "en": "fast; soon",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "忄",
    "ex": {
     "ja": "快乐",
@@ -5664,7 +5664,7 @@
    "kana": "man",
    "romaji": "màn",
    "en": "slow",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "忄",
    "ex": {
     "ja": "慢走",
@@ -5681,7 +5681,7 @@
    "kana": "mang",
    "romaji": "máng",
    "en": "busy",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "忄",
    "ex": {
     "ja": "帮忙",
@@ -5698,7 +5698,7 @@
    "kana": "nan",
    "romaji": "nán",
    "en": "difficult",
-   "hsk": 3,
+   "hsk": 1,
    "radical": "又",
    "ex": {
     "ja": "难过",
@@ -5765,7 +5765,7 @@
    "kana": "cuo",
    "romaji": "cuò",
    "en": "wrong",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "钅",
    "ex": {
     "ja": "不错",
@@ -5782,7 +5782,7 @@
    "kana": "zhen",
    "romaji": "zhēn",
    "en": "real, true; really",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "目",
    "ex": {
     "ja": "真的",
@@ -5834,7 +5834,7 @@
    "kana": "mei",
    "romaji": "měi",
    "en": "beautiful",
-   "hsk": 4,
+   "hsk": 3,
    "radical": "羊",
    "ex": {
     "ja": "美国",
@@ -5851,7 +5851,7 @@
    "kana": "bai",
    "romaji": "bái",
    "en": "white",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "白",
    "ex": {
     "ja": "白色",
@@ -5902,7 +5902,7 @@
    "kana": "lan",
    "romaji": "lán",
    "en": "blue",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "艹",
    "ex": {
     "ja": "蓝色",
@@ -5919,7 +5919,7 @@
    "kana": "lv",
    "romaji": "lǜ",
    "en": "green",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "纟",
    "ex": {
     "ja": "绿色",
@@ -5953,7 +5953,7 @@
    "kana": "gan",
    "romaji": "gān",
    "en": "dry",
-   "hsk": 3,
+   "hsk": 1,
    "radical": "十",
    "ex": {
     "ja": "干净",
@@ -5971,7 +5971,7 @@
    "kana": "jing",
    "romaji": "jìng",
    "en": "clean",
-   "hsk": 3,
+   "hsk": 1,
    "radical": "冫",
    "ex": {
     "ja": "干净",
@@ -5988,7 +5988,7 @@
    "kana": "an",
    "romaji": "ān",
    "en": "safe; calm",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "宀",
    "ex": {
     "ja": "安全",
@@ -6005,7 +6005,7 @@
    "kana": "jing",
    "romaji": "jìng",
    "en": "quiet",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "青",
    "ex": {
     "ja": "安静",
@@ -6022,7 +6022,7 @@
    "kana": "shu",
    "romaji": "shū",
    "en": "relaxed",
-   "hsk": 3,
+   "hsk": 2,
    "ex": {
     "ja": "舒服",
     "ruby": "舒服[shū fu]",
@@ -6143,7 +6143,7 @@
    "kana": "ba",
    "romaji": "ba",
    "en": "particle: suggestion; guess",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "口",
    "ex": {
     "ja": "好吧",
@@ -6195,7 +6195,7 @@
    "kana": "ye",
    "romaji": "yě",
    "en": "also",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "乚",
    "ex": {
     "ja": "也许",
@@ -6264,7 +6264,7 @@
    "kana": "zui",
    "romaji": "zuì",
    "en": "most",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "曰",
    "ex": {
     "ja": "最好",
@@ -6298,7 +6298,7 @@
    "kana": "gen",
    "romaji": "gēn",
    "en": "with; follow",
-   "hsk": 3,
+   "hsk": 1,
    "radical": "足",
    "ex": {
     "ja": "跟着",
@@ -6501,7 +6501,7 @@
    "kana": "ru",
    "romaji": "rú",
    "en": "if; like",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "女",
    "ex": {
     "ja": "如果",
@@ -6518,7 +6518,7 @@
    "kana": "jiu",
    "romaji": "jiù",
    "en": "then; just; right away",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "尢",
    "ex": {
     "ja": "就是",
@@ -6552,7 +6552,7 @@
    "kana": "hai",
    "romaji": "hái",
    "en": "still; also",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "辶",
    "ex": {
     "ja": "还是",
@@ -6604,7 +6604,7 @@
    "kana": "zhe",
    "romaji": "zhe",
    "en": "particle: ongoing state",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "目",
    "ex": {
     "ja": "跟着",
@@ -6622,7 +6622,7 @@
    "kana": "guo",
    "romaji": "guò",
    "en": "pass, cross; spend",
-   "hsk": 3,
+   "hsk": 1,
    "radical": "辶",
    "ex": {
     "ja": "不过",
@@ -6640,7 +6640,7 @@
    "kana": "de",
    "romaji": "de",
    "en": "particle: how well (跑得快)",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "彳",
    "ex": {
     "ja": "觉得",
@@ -6692,7 +6692,7 @@
    "kana": "bi",
    "romaji": "bǐ",
    "en": "compare; than",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "比",
    "ex": {
     "ja": "比较",
@@ -6726,7 +6726,7 @@
    "kana": "cong",
    "romaji": "cóng",
    "en": "from",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "人",
    "ex": {
     "ja": "从来",
@@ -6777,7 +6777,7 @@
    "kana": "ying",
    "romaji": "yīng",
    "en": "should",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "广",
    "ex": {
     "ja": "应该",
@@ -6794,7 +6794,7 @@
    "kana": "gai",
    "romaji": "gāi",
    "en": "should; ought to",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "讠",
    "ex": {
     "ja": "应该",
@@ -6811,7 +6811,7 @@
    "kana": "bie",
    "romaji": "bié",
    "en": "other; don't",
-   "hsk": 2,
+   "hsk": 1,
    "radical": "刂",
    "ex": {
     "ja": "别的",
@@ -6828,7 +6828,7 @@
    "kana": "you",
    "romaji": "yòu",
    "en": "again; both ... and",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "又",
    "ex": {
     "ja": "又好又快",
@@ -6845,7 +6845,7 @@
    "kana": "zhi",
    "romaji": "zhǐ",
    "en": "only",
-   "hsk": 3,
+   "hsk": 2,
    "radical": "口",
    "ex": {
     "ja": "只有",
