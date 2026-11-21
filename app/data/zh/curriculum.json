@@ -1667,6 +1667,249 @@
     "zh.city.yi-lu-ping-an",
     "zh.city.word-di-tu"
    ]
+  },
+  {
+   "code": "Z13-L01",
+   "unit": "Z13",
+   "title": "My home",
+   "goal": "Describe your home and the rooms in it.",
+   "level": 2,
+   "path": "core",
+   "hsk": 2,
+   "patterns": [
+    "verb phrase + 的 + noun",
+    "跟 + person + 一起"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.daily.san-ge-fang-jian",
+    "zh.daily.hear-zhu-de-di-fang-zen-me-yang",
+    "zh.daily.bu-da-dan-hen-shu-fu",
+    "zh.patterns.wo-zhu-de-di-fang",
+    "zh.daily.word-ke-ting",
+    "zh.daily.word-wo-shi",
+    "zh.daily.word-chu-fang",
+    "zh.daily.word-wei-sheng-jian",
+    "zh.daily.zu-le-yi-tao-gong-yu",
+    "zh.daily.hear-fang-zu-duo-shao",
+    "zh.daily.san-qian-wu",
+    "zh.daily.gen-peng-you-yi-qi-zhu",
+    "zh.daily.xia-ge-yue-ban-jia"
+   ]
+  },
+  {
+   "code": "Z13-L02",
+   "unit": "Z13",
+   "title": "Furniture and things",
+   "goal": "Name things at home; say where you put them.",
+   "level": 2,
+   "path": "core",
+   "hsk": 2,
+   "patterns": [
+    "verb + 在 + place",
+    "noun + 呢？",
+    "……坏了"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.daily.word-sha-fa",
+    "zh.daily.word-chuang",
+    "zh.daily.word-yi-zi",
+    "zh.daily.word-zhuo-zi",
+    "zh.daily.word-bing-xiang",
+    "zh.daily.word-xi-yi-ji",
+    "zh.daily.word-kong-tiao",
+    "zh.patterns.fang-zai-zhuo-zi-shang",
+    "zh.daily.hear-yao-shi-ne",
+    "zh.daily.zai-men-pang-bian",
+    "zh.daily.mei-you-niu-nai-le",
+    "zh.daily.kong-tiao-huai-le",
+    "zh.daily.zuo-zai-sha-fa-shang"
+   ]
+  },
+  {
+   "code": "Z13-L03",
+   "unit": "Z13",
+   "title": "The door is open: 着",
+   "goal": "Describe states and scenes with 着.",
+   "level": 3,
+   "path": "core",
+   "hsk": 2,
+   "patterns": [
+    "verb + 着 (lasting state)",
+    "place + verb + 着 + thing",
+    "verb + 着 + verb",
+    "别 + verb"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.patterns.men-kai-zhe",
+    "zh.daily.deng-hai-kai-zhe",
+    "zh.daily.hear-chuang-hu-guan-zhe-ma",
+    "zh.daily.guan-zhe-ne",
+    "zh.daily.mei-guan",
+    "zh.patterns.qiang-shang-gua-zhe",
+    "zh.daily.zhuo-zi-shang-fang-zhe",
+    "zh.patterns.zuo-zhe-shuo",
+    "zh.daily.chuan-zhe-hong-yi-fu",
+    "zh.daily.shui-zhao-le",
+    "zh.daily.na-zhe-ka-fei",
+    "zh.daily.bie-zhan-zhe",
+    "zh.daily.deng-zhe-ni"
+   ]
+  },
+  {
+   "code": "Z13-L04",
+   "unit": "Z13",
+   "title": "Chores and favours",
+   "goal": "Ask for and offer help; share the chores.",
+   "level": 3,
+   "path": "core",
+   "hsk": 2,
+   "patterns": [
+    "帮 + person + verb",
+    "得 děi + verb",
+    "别忘了……",
+    "number + 左右"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.daily.bang-wo-yi-xia",
+    "zh.daily.hear-xu-yao-bang-mang-ma",
+    "zh.daily.wo-zi-ji-lai",
+    "zh.daily.tai-gan-xie-le",
+    "zh.daily.dei-da-sao-fang-jian",
+    "zh.daily.bie-wang-le-guan-deng",
+    "zh.daily.ni-zuo-fan-wo-xi-wan",
+    "zh.daily.word-dao-la-ji",
+    "zh.daily.word-shou-shi",
+    "zh.daily.hear-shen-me-shi-hou-hui-lai",
+    "zh.daily.qi-dian-zuo-you",
+    "zh.daily.lu-shang-xiao-xin",
+    "zh.daily.chu-qu-yi-xia"
+   ]
+  },
+  {
+   "code": "Z14-L01",
+   "unit": "Z14",
+   "title": "Today's weather",
+   "goal": "Talk about the weather and the forecast.",
+   "level": 2,
+   "path": "core",
+   "hsk": 2,
+   "patterns": [
+    "天气 + adjective",
+    "会 + verb (will probably)",
+    "听说……"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.daily.hear-tian-qi-zen-me-yang",
+    "zh.daily.tian-qi-hen-hao",
+    "zh.daily.you-dian-leng",
+    "zh.patterns.ming-tian-hui-xia-yu",
+    "zh.daily.ting-shuo-xia-xue",
+    "zh.daily.hear-duo-shao-du",
+    "zh.daily.ling-xia-wu-du",
+    "zh.daily.er-shi-ba-du",
+    "zh.daily.dai-ba-san",
+    "zh.daily.word-yin-tian",
+    "zh.daily.word-gua-feng",
+    "zh.daily.word-tian-qi-yu-bao",
+    "zh.daily.jin-tian-zhen-re"
+   ]
+  },
+  {
+   "code": "Z14-L02",
+   "unit": "Z14",
+   "title": "Seasons",
+   "goal": "Talk about seasons and the climate where you live.",
+   "level": 2,
+   "path": "core",
+   "hsk": 2,
+   "patterns": [
+    "……的时候",
+    "最 + verb / adjective",
+    "不 A 也不 B"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.daily.hear-zui-xi-huan-na-ge-ji-jie",
+    "zh.daily.zui-xi-huan-qiu-tian",
+    "zh.daily.word-chun-tian",
+    "zh.daily.word-xia-tian",
+    "zh.daily.word-dong-tian",
+    "zh.patterns.xia-tian-de-shi-hou",
+    "zh.daily.dong-tian-you-leng-you-gan",
+    "zh.daily.nan-fang-chao-shi",
+    "zh.daily.hear-dong-tian-leng-bu-leng",
+    "zh.daily.bu-tai-leng-chang-xia-yu",
+    "zh.daily.hua-dou-kai-le",
+    "zh.daily.word-ji-jie",
+    "zh.daily.word-wen-du"
+   ]
+  },
+  {
+   "code": "Z14-L03",
+   "unit": "Z14",
+   "title": "Comparing: 比",
+   "goal": "Compare two things with 比, 没有 and 更.",
+   "level": 3,
+   "path": "core",
+   "hsk": 2,
+   "patterns": [
+    "A 比 B + adjective",
+    "A 比 B + adjective + difference",
+    "A 没有 B 那么 + adjective",
+    "更 / 最"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.patterns.bi-zuo-tian-leng",
+    "zh.daily.leng-duo-le",
+    "zh.people.bi-wo-da-san-sui",
+    "zh.patterns.mei-you-na-me-leng",
+    "zh.daily.hear-na-ge-geng-hao",
+    "zh.daily.zhe-ge-hao-yi-dian",
+    "zh.daily.di-tie-bi-da-che-kuai",
+    "zh.people.bi-wo-gao-yi-dian",
+    "zh.daily.geng-xi-huan-he-cha",
+    "zh.daily.hear-na-ge-pian-yi",
+    "zh.daily.pian-yi-wu-shi-kuai",
+    "zh.daily.zui-gui-de",
+    "zh.daily.word-geng"
+   ]
+  },
+  {
+   "code": "Z14-L04",
+   "unit": "Z14",
+   "title": "Same and different",
+   "goal": "Say that things are the same, similar or different.",
+   "level": 3,
+   "path": "core",
+   "hsk": 2,
+   "patterns": [
+    "A 跟 B 一样",
+    "A 跟 B 一样 + adjective",
+    "A 跟 B 不一样",
+    "像"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.patterns.gen-ni-de-yi-yang",
+    "zh.patterns.gen-ta-yi-yang-gao",
+    "zh.daily.liang-ge-zi-bu-yi-yang",
+    "zh.daily.hear-you-shen-me-bu-tong",
+    "zh.daily.yan-se-bu-yi-yang",
+    "zh.daily.cha-bu-duo",
+    "zh.people.hen-xiang-ma-ma",
+    "zh.daily.gen-yi-qian-bu-yi-yang-le",
+    "zh.daily.wo-ye-yi-yang",
+    "zh.daily.hear-jue-de-na-ge-hao-kan",
+    "zh.daily.dou-ting-hao-kan",
+    "zh.daily.word-yi-yang",
+    "zh.daily.word-bu-tong"
+   ]
   }
  ],
  "items": [
@@ -13803,6 +14046,1940 @@
    "lesson": "Z12-L04",
    "level": 3,
    "order": 639,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.san-ge-fang-jian",
+   "cat": "daily",
+   "kind": "say",
+   "en": "My home has three rooms.",
+   "ja": "我家有三个房间。",
+   "ruby": "我[wǒ]家[jiā]有[yǒu]三[sān]个[ge]房间[fáng jiān]。",
+   "kana": "wo jia you san ge fangjian",
+   "romaji": "Wǒ jiā yǒu sān ge fángjiān.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L01",
+   "level": 2,
+   "order": 640,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hear-zhu-de-di-fang-zen-me-yang",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "What's your place like?",
+   "ja": "你住的地方怎么样？",
+   "ruby": "你[nǐ]住[zhù]的[de]地方[dì fang]怎么样[zěn me yàng]？",
+   "kana": "ni zhu de difang zenmeyang",
+   "romaji": "Nǐ zhù de dìfang zěnmeyàng?",
+   "replies": [
+    "zh.daily.bu-da-dan-hen-shu-fu"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L01",
+   "level": 2,
+   "order": 641,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.bu-da-dan-hen-shu-fu",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Not big, but very comfortable.",
+   "ja": "不大，但是很舒服。",
+   "ruby": "不[bú]大[dà]，但是[dàn shì]很[hěn]舒服[shū fu]。",
+   "kana": "bu da danshi hen shufu",
+   "romaji": "Bú dà, dànshì hěn shūfu.",
+   "replyTo": [
+    "zh.daily.hear-zhu-de-di-fang-zen-me-yang"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L01",
+   "level": 2,
+   "order": 642,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.wo-zhu-de-di-fang",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "The place where I live is close to the metro.",
+   "ja": "我住的地方离地铁站很近。",
+   "ruby": "我[wǒ]住[zhù]的[de]地方[dì fang]离[lí]地铁站[dì tiě zhàn]很[hěn]近[jìn]。",
+   "kana": "wo zhu de difang li ditiezhan hen jin",
+   "romaji": "Wǒ zhù de dìfang lí dìtiězhàn hěn jìn.",
+   "note": "A whole phrase can describe a noun with 的: 我住的地方 = the place (that) I live.",
+   "pattern": "verb phrase + 的 + noun",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L01",
+   "level": 2,
+   "order": 643,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-ke-ting",
+   "cat": "daily",
+   "kind": "say",
+   "en": "living room",
+   "ja": "客厅",
+   "ruby": "客厅[kè tīng]",
+   "kana": "keting",
+   "romaji": "kètīng",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z13-L01",
+   "level": 2,
+   "order": 644,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-wo-shi",
+   "cat": "daily",
+   "kind": "say",
+   "en": "bedroom",
+   "ja": "卧室",
+   "ruby": "卧室[wò shì]",
+   "kana": "woshi",
+   "romaji": "wòshì",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z13-L01",
+   "level": 2,
+   "order": 645,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-chu-fang",
+   "cat": "daily",
+   "kind": "say",
+   "en": "kitchen",
+   "ja": "厨房",
+   "ruby": "厨房[chú fáng]",
+   "kana": "chufang",
+   "romaji": "chúfáng",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z13-L01",
+   "level": 2,
+   "order": 646,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-wei-sheng-jian",
+   "cat": "daily",
+   "kind": "say",
+   "en": "bathroom",
+   "ja": "卫生间",
+   "ruby": "卫生间[wèi shēng jiān]",
+   "kana": "weishengjian",
+   "romaji": "wèishēngjiān",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z13-L01",
+   "level": 2,
+   "order": 647,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.zu-le-yi-tao-gong-yu",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I've rented a flat.",
+   "ja": "我租了一套公寓。",
+   "ruby": "我[wǒ]租[zū]了[le]一[yí]套[tào]公寓[gōng yù]。",
+   "kana": "wo zu le yi tao gongyu",
+   "romaji": "Wǒ zū le yí tào gōngyù.",
+   "note": "套 is the measure word for flats and sets.",
+   "tags": [
+    "core",
+    "mw"
+   ],
+   "lesson": "Z13-L01",
+   "level": 2,
+   "order": 648,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hear-fang-zu-duo-shao",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "How much is the rent a month?",
+   "ja": "房租一个月多少钱？",
+   "ruby": "房租[fáng zū]一[yí]个[ge]月[yuè]多少[duō shao]钱[qián]？",
+   "kana": "fangzu yi ge yue duoshao qian",
+   "romaji": "Fángzū yí ge yuè duōshao qián?",
+   "replies": [
+    "zh.daily.san-qian-wu"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L01",
+   "level": 2,
+   "order": 649,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.san-qian-wu",
+   "cat": "daily",
+   "kind": "say",
+   "en": "3,500 yuan.",
+   "ja": "三千五。",
+   "ruby": "三千五[sān qiān wǔ]。",
+   "kana": "sanqianwu",
+   "romaji": "Sānqiānwǔ.",
+   "replyTo": [
+    "zh.daily.hear-fang-zu-duo-shao"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L01",
+   "level": 2,
+   "order": 650,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.gen-peng-you-yi-qi-zhu",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I share a flat with a friend.",
+   "ja": "我跟朋友一起住。",
+   "ruby": "我[wǒ]跟[gēn]朋友[péng you]一起[yì qǐ]住[zhù]。",
+   "kana": "wo gen pengyou yiqi zhu",
+   "romaji": "Wǒ gēn péngyou yìqǐ zhù.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L01",
+   "level": 2,
+   "order": 651,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.xia-ge-yue-ban-jia",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I'm moving house next month.",
+   "ja": "我下个月搬家。",
+   "ruby": "我[wǒ]下[xià]个[ge]月[yuè]搬家[bān jiā]。",
+   "kana": "wo xia ge yue banjia",
+   "romaji": "Wǒ xià ge yuè bānjiā.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L01",
+   "level": 2,
+   "order": 652,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-sha-fa",
+   "cat": "daily",
+   "kind": "say",
+   "en": "sofa",
+   "ja": "沙发",
+   "ruby": "沙发[shā fā]",
+   "kana": "shafa",
+   "romaji": "shāfā",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z13-L02",
+   "level": 2,
+   "order": 653,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-chuang",
+   "cat": "daily",
+   "kind": "say",
+   "en": "bed",
+   "ja": "床",
+   "ruby": "床[chuáng]",
+   "kana": "chuang",
+   "romaji": "chuáng",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z13-L02",
+   "level": 2,
+   "order": 654,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-yi-zi",
+   "cat": "daily",
+   "kind": "say",
+   "en": "chair",
+   "ja": "椅子",
+   "ruby": "椅子[yǐ zi]",
+   "kana": "yizi",
+   "romaji": "yǐzi",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z13-L02",
+   "level": 2,
+   "order": 655,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-zhuo-zi",
+   "cat": "daily",
+   "kind": "say",
+   "en": "table, desk",
+   "ja": "桌子",
+   "ruby": "桌子[zhuō zi]",
+   "kana": "zhuozi",
+   "romaji": "zhuōzi",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z13-L02",
+   "level": 2,
+   "order": 656,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-bing-xiang",
+   "cat": "daily",
+   "kind": "say",
+   "en": "fridge",
+   "ja": "冰箱",
+   "ruby": "冰箱[bīng xiāng]",
+   "kana": "bingxiang",
+   "romaji": "bīngxiāng",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z13-L02",
+   "level": 2,
+   "order": 657,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-xi-yi-ji",
+   "cat": "daily",
+   "kind": "say",
+   "en": "washing machine",
+   "ja": "洗衣机",
+   "ruby": "洗衣机[xǐ yī jī]",
+   "kana": "xiyiji",
+   "romaji": "xǐyījī",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z13-L02",
+   "level": 2,
+   "order": 658,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-kong-tiao",
+   "cat": "daily",
+   "kind": "say",
+   "en": "air conditioner",
+   "ja": "空调",
+   "ruby": "空调[kōng tiáo]",
+   "kana": "kongtiao",
+   "romaji": "kōngtiáo",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z13-L02",
+   "level": 2,
+   "order": 659,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.fang-zai-zhuo-zi-shang",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "I've put your book on the table.",
+   "ja": "你的书我放在桌子上了。",
+   "ruby": "你[nǐ]的[de]书[shū]我[wǒ]放[fàng]在[zài]桌子[zhuō zi]上[shang]了[le]。",
+   "kana": "ni de shu wo fang zai zhuozi shang le",
+   "romaji": "Nǐ de shū wǒ fàng zài zhuōzi shang le.",
+   "note": "After verbs like 放, 住, 坐, 在 + place says where the thing ends up.",
+   "pattern": "verb + 在 + place",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L02",
+   "level": 2,
+   "order": 660,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hear-yao-shi-ne",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "Where are my keys?",
+   "ja": "我的钥匙呢？",
+   "ruby": "我[wǒ]的[de]钥匙[yào shi]呢[ne]？",
+   "kana": "wo de yaoshi ne",
+   "romaji": "Wǒ de yàoshi ne?",
+   "note": "Noun + 呢？ = where is ...?",
+   "replies": [
+    "zh.daily.zai-men-pang-bian"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L02",
+   "level": 2,
+   "order": 661,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.zai-men-pang-bian",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Next to the door.",
+   "ja": "在门旁边。",
+   "ruby": "在[zài]门[mén]旁边[páng biān]。",
+   "kana": "zai men pangbian",
+   "romaji": "Zài mén pángbiān.",
+   "replyTo": [
+    "zh.daily.hear-yao-shi-ne"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L02",
+   "level": 2,
+   "order": 662,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.mei-you-niu-nai-le",
+   "cat": "daily",
+   "kind": "say",
+   "en": "There's no milk left in the fridge.",
+   "ja": "冰箱里没有牛奶了。",
+   "ruby": "冰箱[bīng xiāng]里[li]没有[méi yǒu]牛奶[niú nǎi]了[le]。",
+   "kana": "bingxiang li meiyou niunai le",
+   "romaji": "Bīngxiāng li méiyǒu niúnǎi le.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L02",
+   "level": 2,
+   "order": 663,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.kong-tiao-huai-le",
+   "cat": "daily",
+   "kind": "say",
+   "en": "The air conditioner is broken.",
+   "ja": "空调坏了。",
+   "ruby": "空调[kōng tiáo]坏[huài]了[le]。",
+   "kana": "kongtiao huai le",
+   "romaji": "Kōngtiáo huài le.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L02",
+   "level": 2,
+   "order": 664,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.zuo-zai-sha-fa-shang",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Please sit on the sofa.",
+   "ja": "请坐在沙发上。",
+   "ruby": "请[qǐng]坐[zuò]在[zài]沙发[shā fā]上[shang]。",
+   "kana": "qing zuo zai shafa shang",
+   "romaji": "Qǐng zuò zài shāfā shang.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L02",
+   "level": 2,
+   "order": 665,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.men-kai-zhe",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "The door is open.",
+   "ja": "门开着。",
+   "ruby": "门[mén]开[kāi]着[zhe]。",
+   "kana": "men kai zhe",
+   "romaji": "Mén kāi zhe.",
+   "note": "着 = a state that continues: 开着 = (stays) open.",
+   "pattern": "verb + 着",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L03",
+   "level": 3,
+   "order": 666,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.deng-hai-kai-zhe",
+   "cat": "daily",
+   "kind": "say",
+   "en": "The light is still on.",
+   "ja": "灯还开着呢。",
+   "ruby": "灯[dēng]还[hái]开[kāi]着[zhe]呢[ne]。",
+   "kana": "deng hai kai zhe ne",
+   "romaji": "Dēng hái kāi zhe ne.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L03",
+   "level": 3,
+   "order": 667,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hear-chuang-hu-guan-zhe-ma",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "Is the window shut?",
+   "ja": "窗户关着吗？",
+   "ruby": "窗户[chuāng hu]关[guān]着[zhe]吗[ma]？",
+   "kana": "chuanghu guan zhe ma",
+   "romaji": "Chuānghu guān zhe ma?",
+   "replies": [
+    "zh.daily.guan-zhe-ne",
+    "zh.daily.mei-guan"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L03",
+   "level": 3,
+   "order": 668,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.guan-zhe-ne",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Yes, it's shut.",
+   "ja": "关着呢。",
+   "ruby": "关[guān]着[zhe]呢[ne]。",
+   "kana": "guan zhe ne",
+   "romaji": "Guān zhe ne.",
+   "replyTo": [
+    "zh.daily.hear-chuang-hu-guan-zhe-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L03",
+   "level": 3,
+   "order": 669,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.mei-guan",
+   "cat": "daily",
+   "kind": "say",
+   "en": "No, it's open.",
+   "ja": "没关。",
+   "ruby": "没[méi]关[guān]。",
+   "kana": "mei guan",
+   "romaji": "Méi guān.",
+   "note": "Literally \"not shut\".",
+   "replyTo": [
+    "zh.daily.hear-chuang-hu-guan-zhe-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L03",
+   "level": 3,
+   "order": 670,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.qiang-shang-gua-zhe",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "There's a map hanging on the wall.",
+   "ja": "墙上挂着一张地图。",
+   "ruby": "墙[qiáng]上[shang]挂[guà]着[zhe]一[yì]张[zhāng]地图[dì tú]。",
+   "kana": "qiang shang gua zhe yi zhang ditu",
+   "romaji": "Qiáng shang guà zhe yì zhāng dìtú.",
+   "note": "Describing a scene: place + verb + 着 + thing.",
+   "pattern": "place + verb + 着 + thing",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L03",
+   "level": 3,
+   "order": 671,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.zhuo-zi-shang-fang-zhe",
+   "cat": "daily",
+   "kind": "say",
+   "en": "There are lots of books on the table.",
+   "ja": "桌子上放着很多书。",
+   "ruby": "桌子[zhuō zi]上[shang]放[fàng]着[zhe]很[hěn]多[duō]书[shū]。",
+   "kana": "zhuozi shang fang zhe hen duo shu",
+   "romaji": "Zhuōzi shang fàng zhe hěn duō shū.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L03",
+   "level": 3,
+   "order": 672,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.zuo-zhe-shuo",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "Let's sit down and talk.",
+   "ja": "我们坐着说吧。",
+   "ruby": "我们[wǒ men]坐[zuò]着[zhe]说[shuō]吧[ba]。",
+   "kana": "women zuo zhe shuo ba",
+   "romaji": "Wǒmen zuò zhe shuō ba.",
+   "note": "A + 着 + B = do B while A (sitting, standing, walking).",
+   "pattern": "verb + 着 + verb",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L03",
+   "level": 3,
+   "order": 673,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.chuan-zhe-hong-yi-fu",
+   "cat": "daily",
+   "kind": "say",
+   "en": "She's wearing a red top.",
+   "ja": "她穿着一件红衣服。",
+   "ruby": "她[tā]穿[chuān]着[zhe]一[yí]件[jiàn]红[hóng]衣服[yī fu]。",
+   "kana": "ta chuan zhe yi jian hong yifu",
+   "romaji": "Tā chuān zhe yí jiàn hóng yīfu.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L03",
+   "level": 3,
+   "order": 674,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.shui-zhao-le",
+   "cat": "daily",
+   "kind": "say",
+   "en": "The child has fallen asleep.",
+   "ja": "孩子睡着了。",
+   "ruby": "孩子[hái zi]睡着[shuì zháo]了[le]。",
+   "kana": "haizi shuizhao le",
+   "romaji": "Háizi shuìzháo le.",
+   "note": "睡着 shuìzháo = fall asleep: here 着 is zháo, a result, not zhe.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L03",
+   "level": 3,
+   "order": 675,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.na-zhe-ka-fei",
+   "cat": "daily",
+   "kind": "say",
+   "en": "He's holding a cup of coffee.",
+   "ja": "他手里拿着一杯咖啡。",
+   "ruby": "他[tā]手[shǒu]里[li]拿[ná]着[zhe]一[yì]杯[bēi]咖啡[kā fēi]。",
+   "kana": "ta shou li na zhe yi bei kafei",
+   "romaji": "Tā shǒu li ná zhe yì bēi kāfēi.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L03",
+   "level": 3,
+   "order": 676,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.bie-zhan-zhe",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Don't stand, sit down.",
+   "ja": "别站着，坐吧。",
+   "ruby": "别[bié]站[zhàn]着[zhe]，坐[zuò]吧[ba]。",
+   "kana": "bie zhan zhe zuo ba",
+   "romaji": "Bié zhàn zhe, zuò ba.",
+   "note": "别 + verb = don't.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L03",
+   "level": 3,
+   "order": 677,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.deng-zhe-ni",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I'll be waiting for you at the door.",
+   "ja": "我在门口等着你。",
+   "ruby": "我[wǒ]在[zài]门口[mén kǒu]等[děng]着[zhe]你[nǐ]。",
+   "kana": "wo zai menkou deng zhe ni",
+   "romaji": "Wǒ zài ménkǒu děng zhe nǐ.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L03",
+   "level": 3,
+   "order": 678,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.bang-wo-yi-xia",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Could you give me a hand?",
+   "ja": "你能帮我一下吗？",
+   "ruby": "你[nǐ]能[néng]帮[bāng]我[wǒ]一下[yí xià]吗[ma]？",
+   "kana": "ni neng bang wo yixia ma",
+   "romaji": "Nǐ néng bāng wǒ yíxià ma?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L04",
+   "level": 3,
+   "order": 679,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hear-xu-yao-bang-mang-ma",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "Do you need any help?",
+   "ja": "需要帮忙吗？",
+   "ruby": "需要[xū yào]帮忙[bāng máng]吗[ma]？",
+   "kana": "xuyao bangmang ma",
+   "romaji": "Xūyào bāngmáng ma?",
+   "replies": [
+    "zh.daily.wo-zi-ji-lai",
+    "zh.daily.tai-gan-xie-le"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L04",
+   "level": 3,
+   "order": 680,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.wo-zi-ji-lai",
+   "cat": "daily",
+   "kind": "say",
+   "en": "No need, I'll do it myself.",
+   "ja": "不用，我自己来。",
+   "ruby": "不用[bú yòng]，我[wǒ]自己[zì jǐ]来[lái]。",
+   "kana": "buyong wo ziji lai",
+   "romaji": "Búyòng, wǒ zìjǐ lái.",
+   "note": "自己来 = do it yourself; also \"help yourself\".",
+   "replyTo": [
+    "zh.daily.hear-xu-yao-bang-mang-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L04",
+   "level": 3,
+   "order": 681,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.tai-gan-xie-le",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Thanks so much!",
+   "ja": "太感谢了！",
+   "ruby": "太[tài]感谢[gǎn xiè]了[le]！",
+   "kana": "tai ganxie le",
+   "romaji": "Tài gǎnxiè le!",
+   "replyTo": [
+    "zh.daily.hear-xu-yao-bang-mang-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L04",
+   "level": 3,
+   "order": 682,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.dei-da-sao-fang-jian",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I have to clean my room today.",
+   "ja": "今天我得打扫房间。",
+   "ruby": "今天[jīn tiān]我[wǒ]得[děi]打扫[dǎ sǎo]房间[fáng jiān]。",
+   "kana": "jintian wo dei dasao fangjian",
+   "romaji": "Jīntiān wǒ děi dǎsǎo fángjiān.",
+   "note": "得 děi = must, have to (spoken). The same character is de in 跑得快.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L04",
+   "level": 3,
+   "order": 683,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.bie-wang-le-guan-deng",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Don't forget to turn off the light.",
+   "ja": "别忘了关灯。",
+   "ruby": "别[bié]忘[wàng]了[le]关[guān]灯[dēng]。",
+   "kana": "bie wang le guan deng",
+   "romaji": "Bié wàng le guān dēng.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L04",
+   "level": 3,
+   "order": 684,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.ni-zuo-fan-wo-xi-wan",
+   "cat": "daily",
+   "kind": "say",
+   "en": "You cook, I'll do the dishes.",
+   "ja": "你做饭，我洗碗。",
+   "ruby": "你[nǐ]做饭[zuò fàn]，我[wǒ]洗[xǐ]碗[wǎn]。",
+   "kana": "ni zuofan wo xi wan",
+   "romaji": "Nǐ zuòfàn, wǒ xǐ wǎn.",
+   "note": "3rd + 3rd tone: xí wǎn.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L04",
+   "level": 3,
+   "order": 685,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-dao-la-ji",
+   "cat": "daily",
+   "kind": "say",
+   "en": "take out the rubbish",
+   "ja": "倒垃圾",
+   "ruby": "倒[dào]垃圾[lā jī]",
+   "kana": "dao laji",
+   "romaji": "dào lājī",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z13-L04",
+   "level": 3,
+   "order": 686,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-shou-shi",
+   "cat": "daily",
+   "kind": "say",
+   "en": "tidy up",
+   "ja": "收拾",
+   "ruby": "收拾[shōu shi]",
+   "kana": "shoushi",
+   "romaji": "shōushi",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z13-L04",
+   "level": 3,
+   "order": 687,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hear-shen-me-shi-hou-hui-lai",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "When will you be back?",
+   "ja": "你什么时候回来？",
+   "ruby": "你[nǐ]什么[shén me]时候[shí hou]回来[huí lai]？",
+   "kana": "ni shenme shihou huilai",
+   "romaji": "Nǐ shénme shíhou huílai?",
+   "replies": [
+    "zh.daily.qi-dian-zuo-you"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L04",
+   "level": 3,
+   "order": 688,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.qi-dian-zuo-you",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Around seven in the evening.",
+   "ja": "晚上七点左右。",
+   "ruby": "晚上[wǎn shang]七[qī]点[diǎn]左右[zuǒ yòu]。",
+   "kana": "wanshang qi dian zuoyou",
+   "romaji": "Wǎnshang qī diǎn zuǒyòu.",
+   "note": "左右 after a number = about.",
+   "replyTo": [
+    "zh.daily.hear-shen-me-shi-hou-hui-lai"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L04",
+   "level": 3,
+   "order": 689,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.lu-shang-xiao-xin",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Take care on the way!",
+   "ja": "路上小心！",
+   "ruby": "路上[lù shang]小心[xiǎo xīn]！",
+   "kana": "lushang xiaoxin",
+   "romaji": "Lùshang xiǎoxīn!",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L04",
+   "level": 3,
+   "order": 690,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.chu-qu-yi-xia",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I'm popping out for a moment.",
+   "ja": "我出去一下。",
+   "ruby": "我[wǒ]出去[chū qù]一下[yí xià]。",
+   "kana": "wo chuqu yixia",
+   "romaji": "Wǒ chūqù yíxià.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z13-L04",
+   "level": 3,
+   "order": 691,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hear-tian-qi-zen-me-yang",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "What's the weather like today?",
+   "ja": "今天天气怎么样？",
+   "ruby": "今天[jīn tiān]天气[tiān qì]怎么样[zěn me yàng]？",
+   "kana": "jintian tianqi zenmeyang",
+   "romaji": "Jīntiān tiānqì zěnmeyàng?",
+   "replies": [
+    "zh.daily.tian-qi-hen-hao",
+    "zh.daily.you-dian-leng"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L01",
+   "level": 2,
+   "order": 692,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.tian-qi-hen-hao",
+   "cat": "daily",
+   "kind": "say",
+   "en": "The weather is lovely: it's sunny.",
+   "ja": "天气很好，是晴天。",
+   "ruby": "天气[tiān qì]很[hěn]好[hǎo]，是[shì]晴天[qíng tiān]。",
+   "kana": "tianqi hen hao shi qingtian",
+   "romaji": "Tiānqì hěn hǎo, shì qíngtiān.",
+   "replyTo": [
+    "zh.daily.hear-tian-qi-zen-me-yang"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L01",
+   "level": 2,
+   "order": 693,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.you-dian-leng",
+   "cat": "daily",
+   "kind": "say",
+   "en": "It's a bit cold.",
+   "ja": "有点儿冷。",
+   "ruby": "有点儿[yǒu diǎn r]冷[lěng]。",
+   "kana": "youdianr leng",
+   "romaji": "Yǒudiǎnr lěng.",
+   "replyTo": [
+    "zh.daily.hear-tian-qi-zen-me-yang"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L01",
+   "level": 2,
+   "order": 694,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.ming-tian-hui-xia-yu",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "Will it rain tomorrow?",
+   "ja": "明天会下雨吗？",
+   "ruby": "明天[míng tiān]会[huì]下雨[xià yǔ]吗[ma]？",
+   "kana": "mingtian hui xiayu ma",
+   "romaji": "Míngtiān huì xiàyǔ ma?",
+   "note": "会 can also mean \"will (probably)\".",
+   "pattern": "会 + verb (prediction)",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L01",
+   "level": 2,
+   "order": 695,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.ting-shuo-xia-xue",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I hear it's going to snow tomorrow.",
+   "ja": "听说明天下雪。",
+   "ruby": "听说[tīng shuō]明天[míng tiān]下雪[xià xuě]。",
+   "kana": "tingshuo mingtian xiaxue",
+   "romaji": "Tīngshuō míngtiān xiàxuě.",
+   "note": "听说 = I heard that ...",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L01",
+   "level": 2,
+   "order": 696,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hear-duo-shao-du",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "What's the temperature today?",
+   "ja": "今天多少度？",
+   "ruby": "今天[jīn tiān]多少[duō shao]度[dù]？",
+   "kana": "jintian duoshao du",
+   "romaji": "Jīntiān duōshao dù?",
+   "replies": [
+    "zh.daily.ling-xia-wu-du",
+    "zh.daily.er-shi-ba-du"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L01",
+   "level": 2,
+   "order": 697,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.ling-xia-wu-du",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Minus five.",
+   "ja": "零下五度。",
+   "ruby": "零下[líng xià]五[wǔ]度[dù]。",
+   "kana": "lingxia wu du",
+   "romaji": "Língxià wǔ dù.",
+   "replyTo": [
+    "zh.daily.hear-duo-shao-du"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L01",
+   "level": 2,
+   "order": 698,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.er-shi-ba-du",
+   "cat": "daily",
+   "kind": "say",
+   "en": "28 degrees: very hot.",
+   "ja": "二十八度，很热。",
+   "ruby": "二十八[èr shí bā]度[dù]，很[hěn]热[rè]。",
+   "kana": "ershiba du hen re",
+   "romaji": "Èrshíbā dù, hěn rè.",
+   "replyTo": [
+    "zh.daily.hear-duo-shao-du"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L01",
+   "level": 2,
+   "order": 699,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.dai-ba-san",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Take an umbrella.",
+   "ja": "带把伞吧。",
+   "ruby": "带[dài]把[bǎ]伞[sǎn]吧[ba]。",
+   "kana": "dai ba san ba",
+   "romaji": "Dài bǎ sǎn ba.",
+   "note": "把 is the measure word for things with a handle: umbrellas, chairs, knives. 3rd + 3rd tone: bá sǎn.",
+   "tags": [
+    "core",
+    "mw"
+   ],
+   "lesson": "Z14-L01",
+   "level": 2,
+   "order": 700,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-yin-tian",
+   "cat": "daily",
+   "kind": "say",
+   "en": "cloudy day",
+   "ja": "阴天",
+   "ruby": "阴天[yīn tiān]",
+   "kana": "yintian",
+   "romaji": "yīntiān",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z14-L01",
+   "level": 2,
+   "order": 701,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-gua-feng",
+   "cat": "daily",
+   "kind": "say",
+   "en": "be windy",
+   "ja": "刮风",
+   "ruby": "刮风[guā fēng]",
+   "kana": "guafeng",
+   "romaji": "guāfēng",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z14-L01",
+   "level": 2,
+   "order": 702,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-tian-qi-yu-bao",
+   "cat": "daily",
+   "kind": "say",
+   "en": "weather forecast",
+   "ja": "天气预报",
+   "ruby": "天气预报[tiān qì yù bào]",
+   "kana": "tianqiyubao",
+   "romaji": "tiānqìyùbào",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z14-L01",
+   "level": 2,
+   "order": 703,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.jin-tian-zhen-re",
+   "cat": "daily",
+   "kind": "say",
+   "en": "It's so hot today!",
+   "ja": "今天真热啊！",
+   "ruby": "今天[jīn tiān]真[zhēn]热[rè]啊[a]！",
+   "kana": "jintian zhen re a",
+   "romaji": "Jīntiān zhēn rè a!",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L01",
+   "level": 2,
+   "order": 704,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hear-zui-xi-huan-na-ge-ji-jie",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "Which season do you like best?",
+   "ja": "你最喜欢哪个季节？",
+   "ruby": "你[nǐ]最[zuì]喜欢[xǐ huan]哪[nǎ]个[ge]季节[jì jié]？",
+   "kana": "ni zui xihuan na ge jijie",
+   "romaji": "Nǐ zuì xǐhuan nǎ ge jìjié?",
+   "replies": [
+    "zh.daily.zui-xi-huan-qiu-tian"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L02",
+   "level": 2,
+   "order": 705,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.zui-xi-huan-qiu-tian",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I like autumn best: not cold and not hot.",
+   "ja": "我最喜欢秋天，不冷也不热。",
+   "ruby": "我[wǒ]最[zuì]喜欢[xǐ huan]秋天[qiū tiān]，不[bù]冷[lěng]也[yě]不[bú]热[rè]。",
+   "kana": "wo zui xihuan qiutian bu leng ye bu re",
+   "romaji": "Wǒ zuì xǐhuan qiūtiān, bù lěng yě bú rè.",
+   "replyTo": [
+    "zh.daily.hear-zui-xi-huan-na-ge-ji-jie"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L02",
+   "level": 2,
+   "order": 706,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-chun-tian",
+   "cat": "daily",
+   "kind": "say",
+   "en": "spring",
+   "ja": "春天",
+   "ruby": "春天[chūn tiān]",
+   "kana": "chuntian",
+   "romaji": "chūntiān",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z14-L02",
+   "level": 2,
+   "order": 707,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-xia-tian",
+   "cat": "daily",
+   "kind": "say",
+   "en": "summer",
+   "ja": "夏天",
+   "ruby": "夏天[xià tiān]",
+   "kana": "xiatian",
+   "romaji": "xiàtiān",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z14-L02",
+   "level": 2,
+   "order": 708,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-dong-tian",
+   "cat": "daily",
+   "kind": "say",
+   "en": "winter",
+   "ja": "冬天",
+   "ruby": "冬天[dōng tiān]",
+   "kana": "dongtian",
+   "romaji": "dōngtiān",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z14-L02",
+   "level": 2,
+   "order": 709,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.xia-tian-de-shi-hou",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "In summer it's very hot here.",
+   "ja": "夏天的时候，这里很热。",
+   "ruby": "夏天[xià tiān]的[de]时候[shí hou]，这里[zhè lǐ]很[hěn]热[rè]。",
+   "kana": "xiatian de shihou zheli hen re",
+   "romaji": "Xiàtiān de shíhou, zhèlǐ hěn rè.",
+   "note": "……的时候 = when ...",
+   "pattern": "……的时候",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L02",
+   "level": 2,
+   "order": 710,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.dong-tian-you-leng-you-gan",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Winters in Beijing are cold and dry.",
+   "ja": "北京的冬天又冷又干。",
+   "ruby": "北京[Běi jīng]的[de]冬天[dōng tiān]又[yòu]冷[lěng]又[yòu]干[gān]。",
+   "kana": "beijing de dongtian you leng you gan",
+   "romaji": "Běijīng de dōngtiān yòu lěng yòu gān.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L02",
+   "level": 2,
+   "order": 711,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.nan-fang-chao-shi",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Summers in the south are very humid.",
+   "ja": "南方的夏天很潮湿。",
+   "ruby": "南方[nán fāng]的[de]夏天[xià tiān]很[hěn]潮湿[cháo shī]。",
+   "kana": "nanfang de xiatian hen chaoshi",
+   "romaji": "Nánfāng de xiàtiān hěn cháoshī.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L02",
+   "level": 2,
+   "order": 712,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hear-dong-tian-leng-bu-leng",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "Are the winters cold where you live?",
+   "ja": "你们那儿冬天冷不冷？",
+   "ruby": "你们[nǐ men]那儿[nà r]冬天[dōng tiān]冷[lěng]不[bu]冷[lěng]？",
+   "kana": "nimen nar dongtian leng bu leng",
+   "romaji": "Nǐmen nàr dōngtiān lěng bu lěng?",
+   "replies": [
+    "zh.daily.bu-tai-leng-chang-xia-yu"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L02",
+   "level": 2,
+   "order": 713,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.bu-tai-leng-chang-xia-yu",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Not very cold, but it often rains.",
+   "ja": "不太冷，但是常常下雨。",
+   "ruby": "不[bú]太[tài]冷[lěng]，但是[dàn shì]常常[cháng cháng]下雨[xià yǔ]。",
+   "kana": "bu tai leng danshi changchang xiayu",
+   "romaji": "Bú tài lěng, dànshì chángcháng xiàyǔ.",
+   "replyTo": [
+    "zh.daily.hear-dong-tian-leng-bu-leng"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L02",
+   "level": 2,
+   "order": 714,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hua-dou-kai-le",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Spring is here and the flowers are all out.",
+   "ja": "春天到了，花都开了。",
+   "ruby": "春天[chūn tiān]到[dào]了[le]，花[huā]都[dōu]开[kāi]了[le]。",
+   "kana": "chuntian dao le hua dou kai le",
+   "romaji": "Chūntiān dào le, huā dōu kāi le.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L02",
+   "level": 2,
+   "order": 715,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-ji-jie",
+   "cat": "daily",
+   "kind": "say",
+   "en": "season",
+   "ja": "季节",
+   "ruby": "季节[jì jié]",
+   "kana": "jijie",
+   "romaji": "jìjié",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z14-L02",
+   "level": 2,
+   "order": 716,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-wen-du",
+   "cat": "daily",
+   "kind": "say",
+   "en": "temperature",
+   "ja": "温度",
+   "ruby": "温度[wēn dù]",
+   "kana": "wendu",
+   "romaji": "wēndù",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z14-L02",
+   "level": 2,
+   "order": 717,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.bi-zuo-tian-leng",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "Today is colder than yesterday.",
+   "ja": "今天比昨天冷。",
+   "ruby": "今天[jīn tiān]比[bǐ]昨天[zuó tiān]冷[lěng]。",
+   "kana": "jintian bi zuotian leng",
+   "romaji": "Jīntiān bǐ zuótiān lěng.",
+   "note": "No 很 after 比: 比昨天冷, never 比昨天很冷.",
+   "pattern": "A 比 B + adjective",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L03",
+   "level": 3,
+   "order": 718,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.leng-duo-le",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Today is much colder than yesterday.",
+   "ja": "今天比昨天冷多了。",
+   "ruby": "今天[jīn tiān]比[bǐ]昨天[zuó tiān]冷[lěng]多[duō]了[le]。",
+   "kana": "jintian bi zuotian leng duo le",
+   "romaji": "Jīntiān bǐ zuótiān lěng duō le.",
+   "note": "Adjective + 多了 = much more ...",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L03",
+   "level": 3,
+   "order": 719,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.bi-wo-da-san-sui",
+   "cat": "people",
+   "kind": "say",
+   "en": "My brother is three years older than me.",
+   "ja": "哥哥比我大三岁。",
+   "ruby": "哥哥[gē ge]比[bǐ]我[wǒ]大[dà]三[sān]岁[suì]。",
+   "kana": "gege bi wo da san sui",
+   "romaji": "Gēge bǐ wǒ dà sān suì.",
+   "note": "The difference goes after the adjective. 3rd + 3rd tone: bí wǒ.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L03",
+   "level": 3,
+   "order": 720,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.mei-you-na-me-leng",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "Shanghai isn't as cold as Beijing.",
+   "ja": "上海没有北京那么冷。",
+   "ruby": "上海[Shàng hǎi]没有[méi yǒu]北京[Běi jīng]那么[nà me]冷[lěng]。",
+   "kana": "shanghai meiyou beijing name leng",
+   "romaji": "Shànghǎi méiyǒu Běijīng nàme lěng.",
+   "note": "A 没有 B (那么) + adjective = A is not as ... as B.",
+   "pattern": "A 没有 B 那么 + adjective",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L03",
+   "level": 3,
+   "order": 721,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hear-na-ge-geng-hao",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "Of these two, which is better?",
+   "ja": "这两个，哪个更好？",
+   "ruby": "这[zhè]两[liǎng]个[ge]，哪[nǎ]个[ge]更[gèng]好[hǎo]？",
+   "kana": "zhe liang ge na ge geng hao",
+   "romaji": "Zhè liǎng ge, nǎ ge gèng hǎo?",
+   "replies": [
+    "zh.daily.zhe-ge-hao-yi-dian"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L03",
+   "level": 3,
+   "order": 722,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.zhe-ge-hao-yi-dian",
+   "cat": "daily",
+   "kind": "say",
+   "en": "This one is a little better than that one.",
+   "ja": "这个比那个好一点儿。",
+   "ruby": "这个[zhè ge]比[bǐ]那个[nà ge]好[hǎo]一点儿[yì diǎn r]。",
+   "kana": "zhege bi nage hao yidianr",
+   "romaji": "Zhège bǐ nàge hǎo yìdiǎnr.",
+   "replyTo": [
+    "zh.daily.hear-na-ge-geng-hao"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L03",
+   "level": 3,
+   "order": 723,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.di-tie-bi-da-che-kuai",
+   "cat": "daily",
+   "kind": "say",
+   "en": "The metro is faster than a taxi.",
+   "ja": "坐地铁比打车快。",
+   "ruby": "坐[zuò]地铁[dì tiě]比[bǐ]打车[dǎ chē]快[kuài]。",
+   "kana": "zuo ditie bi dache kuai",
+   "romaji": "Zuò dìtiě bǐ dǎchē kuài.",
+   "note": "3rd + 3rd tone: bí dǎ.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L03",
+   "level": 3,
+   "order": 724,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.bi-wo-gao-yi-dian",
+   "cat": "people",
+   "kind": "say",
+   "en": "He's a bit taller than me.",
+   "ja": "他比我高一点儿。",
+   "ruby": "他[tā]比[bǐ]我[wǒ]高[gāo]一点儿[yì diǎn r]。",
+   "kana": "ta bi wo gao yidianr",
+   "romaji": "Tā bǐ wǒ gāo yìdiǎnr.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L03",
+   "level": 3,
+   "order": 725,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.geng-xi-huan-he-cha",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I prefer tea.",
+   "ja": "我更喜欢喝茶。",
+   "ruby": "我[wǒ]更[gèng]喜欢[xǐ huan]喝[hē]茶[chá]。",
+   "kana": "wo geng xihuan he cha",
+   "romaji": "Wǒ gèng xǐhuan hē chá.",
+   "note": "更 = even more; 更喜欢 = prefer.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L03",
+   "level": 3,
+   "order": 726,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hear-na-ge-pian-yi",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "Which one is cheaper?",
+   "ja": "哪个便宜？",
+   "ruby": "哪[nǎ]个[ge]便宜[pián yi]？",
+   "kana": "na ge pianyi",
+   "romaji": "Nǎ ge piányi?",
+   "replies": [
+    "zh.daily.pian-yi-wu-shi-kuai"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L03",
+   "level": 3,
+   "order": 727,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.pian-yi-wu-shi-kuai",
+   "cat": "daily",
+   "kind": "say",
+   "en": "This one is 50 yuan cheaper.",
+   "ja": "这个便宜五十块。",
+   "ruby": "这个[zhè ge]便宜[pián yi]五十[wǔ shí]块[kuài]。",
+   "kana": "zhege pianyi wushi kuai",
+   "romaji": "Zhège piányi wǔshí kuài.",
+   "replyTo": [
+    "zh.daily.hear-na-ge-pian-yi"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L03",
+   "level": 3,
+   "order": 728,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.zui-gui-de",
+   "cat": "daily",
+   "kind": "say",
+   "en": "This is the most expensive one.",
+   "ja": "这是最贵的。",
+   "ruby": "这[zhè]是[shì]最[zuì]贵[guì]的[de]。",
+   "kana": "zhe shi zui gui de",
+   "romaji": "Zhè shì zuì guì de.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L03",
+   "level": 3,
+   "order": 729,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-geng",
+   "cat": "daily",
+   "kind": "say",
+   "en": "even more",
+   "ja": "更",
+   "ruby": "更[gèng]",
+   "kana": "geng",
+   "romaji": "gèng",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z14-L03",
+   "level": 3,
+   "order": 730,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.gen-ni-de-yi-yang",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "My phone is the same as yours.",
+   "ja": "我的手机跟你的一样。",
+   "ruby": "我[wǒ]的[de]手机[shǒu jī]跟[gēn]你[nǐ]的[de]一样[yí yàng]。",
+   "kana": "wo de shouji gen ni de yiyang",
+   "romaji": "Wǒ de shǒujī gēn nǐ de yíyàng.",
+   "note": "一样 yíyàng: 一 rises before a 4th tone.",
+   "pattern": "A 跟 B 一样",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L04",
+   "level": 3,
+   "order": 731,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.gen-ta-yi-yang-gao",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "I'm as tall as him.",
+   "ja": "我跟他一样高。",
+   "ruby": "我[wǒ]跟[gēn]他[tā]一样[yí yàng]高[gāo]。",
+   "kana": "wo gen ta yiyang gao",
+   "romaji": "Wǒ gēn tā yíyàng gāo.",
+   "pattern": "A 跟 B 一样 + adjective",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L04",
+   "level": 3,
+   "order": 732,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.liang-ge-zi-bu-yi-yang",
+   "cat": "daily",
+   "kind": "say",
+   "en": "These two characters are different.",
+   "ja": "这两个字不一样。",
+   "ruby": "这[zhè]两[liǎng]个[ge]字[zì]不[bù]一样[yí yàng]。",
+   "kana": "zhe liang ge zi bu yiyang",
+   "romaji": "Zhè liǎng ge zì bù yíyàng.",
+   "note": "不一样 bù yíyàng: 不 stays bù because 一 is spoken yí.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L04",
+   "level": 3,
+   "order": 733,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hear-you-shen-me-bu-tong",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "What's the difference?",
+   "ja": "有什么不同？",
+   "ruby": "有[yǒu]什么[shén me]不同[bù tóng]？",
+   "kana": "you shenme butong",
+   "romaji": "Yǒu shénme bùtóng?",
+   "replies": [
+    "zh.daily.yan-se-bu-yi-yang"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L04",
+   "level": 3,
+   "order": 734,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.yan-se-bu-yi-yang",
+   "cat": "daily",
+   "kind": "say",
+   "en": "The colour is different; the size is the same.",
+   "ja": "颜色不一样，大小一样。",
+   "ruby": "颜色[yán sè]不[bù]一样[yí yàng]，大小[dà xiǎo]一样[yí yàng]。",
+   "kana": "yanse bu yiyang daxiao yiyang",
+   "romaji": "Yánsè bù yíyàng, dàxiǎo yíyàng.",
+   "replyTo": [
+    "zh.daily.hear-you-shen-me-bu-tong"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L04",
+   "level": 3,
+   "order": 735,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.cha-bu-duo",
+   "cat": "daily",
+   "kind": "say",
+   "en": "About the same.",
+   "ja": "差不多。",
+   "ruby": "差不多[chà bu duō]。",
+   "kana": "chabuduo",
+   "romaji": "Chàbuduō.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L04",
+   "level": 3,
+   "order": 736,
+   "src": "new"
+  },
+  {
+   "id": "zh.people.hen-xiang-ma-ma",
+   "cat": "people",
+   "kind": "say",
+   "en": "She looks a lot like her mother.",
+   "ja": "她很像她妈妈。",
+   "ruby": "她[tā]很[hěn]像[xiàng]她[tā]妈妈[mā ma]。",
+   "kana": "ta hen xiang ta mama",
+   "romaji": "Tā hěn xiàng tā māma.",
+   "note": "像 = resemble, be like.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L04",
+   "level": 3,
+   "order": 737,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.gen-yi-qian-bu-yi-yang-le",
+   "cat": "daily",
+   "kind": "say",
+   "en": "This place isn't what it used to be.",
+   "ja": "这里跟以前不一样了。",
+   "ruby": "这里[zhè lǐ]跟[gēn]以前[yǐ qián]不[bù]一样[yí yàng]了[le]。",
+   "kana": "zheli gen yiqian bu yiyang le",
+   "romaji": "Zhèlǐ gēn yǐqián bù yíyàng le.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L04",
+   "level": 3,
+   "order": 738,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.wo-ye-yi-yang",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Same here.",
+   "ja": "我也一样。",
+   "ruby": "我[wǒ]也[yě]一样[yí yàng]。",
+   "kana": "wo ye yiyang",
+   "romaji": "Wǒ yě yíyàng.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L04",
+   "level": 3,
+   "order": 739,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hear-jue-de-na-ge-hao-kan",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "Which one do you think looks better?",
+   "ja": "你觉得哪个好看？",
+   "ruby": "你[nǐ]觉得[jué de]哪[nǎ]个[ge]好看[hǎo kàn]？",
+   "kana": "ni juede na ge haokan",
+   "romaji": "Nǐ juéde nǎ ge hǎokàn?",
+   "note": "觉得 = think, feel (an opinion).",
+   "replies": [
+    "zh.daily.dou-ting-hao-kan"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L04",
+   "level": 3,
+   "order": 740,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.dou-ting-hao-kan",
+   "cat": "daily",
+   "kind": "say",
+   "en": "They both look nice.",
+   "ja": "都挺好看的。",
+   "ruby": "都[dōu]挺[tǐng]好看[hǎo kàn]的[de]。",
+   "kana": "dou ting haokan de",
+   "romaji": "Dōu tǐng hǎokàn de.",
+   "note": "3rd + 3rd tone: tíng hǎo.",
+   "replyTo": [
+    "zh.daily.hear-jue-de-na-ge-hao-kan"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z14-L04",
+   "level": 3,
+   "order": 741,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-yi-yang",
+   "cat": "daily",
+   "kind": "say",
+   "en": "the same",
+   "ja": "一样",
+   "ruby": "一样[yí yàng]",
+   "kana": "yiyang",
+   "romaji": "yíyàng",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z14-L04",
+   "level": 3,
+   "order": 742,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-bu-tong",
+   "cat": "daily",
+   "kind": "say",
+   "en": "different",
+   "ja": "不同",
+   "ruby": "不同[bù tóng]",
+   "kana": "butong",
+   "romaji": "bùtóng",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z14-L04",
+   "level": 3,
+   "order": 743,
    "src": "new"
   }
  ]
