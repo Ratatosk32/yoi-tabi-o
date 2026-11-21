@@ -1910,6 +1910,184 @@
     "zh.daily.word-yi-yang",
     "zh.daily.word-bu-tong"
    ]
+  },
+  {
+   "code": "Z15-L01",
+   "unit": "Z15",
+   "title": "At work",
+   "goal": "Talk about your job, colleagues, meetings and days off.",
+   "level": 3,
+   "path": "core",
+   "hsk": 3,
+   "patterns": [
+    "在 + place + 上班",
+    "一边……一边……",
+    "verb 不 verb？"
+   ],
+   "count": 12,
+   "ids": [
+    "zh.work.hear-zai-na-jia-gong-si",
+    "zh.work.zai-yi-jia-yin-hang",
+    "zh.work.hear-gong-zuo-mang-bu-mang",
+    "zh.work.te-bie-mang",
+    "zh.work.hai-hao",
+    "zh.work.xia-wu-kai-hui",
+    "zh.patterns.yi-bian-yi-bian",
+    "zh.work.lao-ban-ren-hen-hao",
+    "zh.work.gen-tong-shi-guan-xi-hao",
+    "zh.work.xiang-qing-jia",
+    "zh.work.word-gong-zi",
+    "zh.work.word-chu-chai"
+   ]
+  },
+  {
+   "code": "Z15-L02",
+   "unit": "Z15",
+   "title": "How well: 得",
+   "goal": "Say how well something is done; talk about study and exams.",
+   "level": 3,
+   "path": "core",
+   "hsk": 3,
+   "patterns": [
+    "verb + 得 + adjective",
+    "verb + object + verb + 得 + adjective",
+    "verb + 了 + time + 了"
+   ],
+   "count": 12,
+   "ids": [
+    "zh.patterns.pao-de-hen-kuai",
+    "zh.patterns.shuo-zhong-wen-shuo-de-hao",
+    "zh.work.na-li-na-li",
+    "zh.work.hear-xue-le-duo-chang-shi-jian",
+    "zh.work.xue-le-ban-nian-le",
+    "zh.work.hear-kao-de-zen-me-yang",
+    "zh.work.kao-de-bu-cuo",
+    "zh.work.kao-de-bu-tai-hao",
+    "zh.work.han-zi-xie-de-piao-liang",
+    "zh.work.word-zuo-ye",
+    "zh.work.word-kao-shi",
+    "zh.work.word-bi-ye"
+   ]
+  },
+  {
+   "code": "Z15-L03",
+   "unit": "Z15",
+   "title": "Can, able, allowed: 会 / 能 / 可以",
+   "goal": "Tell apart a learned skill, being able and being allowed.",
+   "level": 3,
+   "path": "core",
+   "hsk": 3,
+   "patterns": [
+    "会 + verb (learned skill)",
+    "能 + verb (able, possible)",
+    "可以 + verb (allowed)",
+    "不行"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.patterns.hui-you-yong",
+    "zh.patterns.bu-neng-you",
+    "zh.patterns.ke-yi-you-yong-ma",
+    "zh.work.hear-hui-kai-che-ma",
+    "zh.work.bu-hui-zheng-zai-xue",
+    "zh.work.hear-ming-tian-neng-lai-ma",
+    "zh.work.neng-mei-wen-ti",
+    "zh.work.bu-xing-you-shi",
+    "zh.work.yong-yi-xia-ni-de-bi",
+    "zh.work.dang-ran-ke-yi",
+    "zh.work.yi-fen-zhong-yi-bai-ge-zi",
+    "zh.work.hear-ji-zhong-yu-yan",
+    "zh.work.san-zhong"
+   ]
+  },
+  {
+   "code": "Z16-L01",
+   "unit": "Z16",
+   "title": "How do you feel?",
+   "goal": "Say what hurts and how long it has been.",
+   "level": 3,
+   "path": "core",
+   "hsk": 3,
+   "patterns": [
+    "body part + 疼",
+    "有点儿不舒服",
+    "……多久了？"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.health.hear-na-r-bu-shu-fu",
+    "zh.health.you-dian-bu-shu-fu",
+    "zh.health.tou-teng",
+    "zh.health.du-zi-teng",
+    "zh.health.gan-mao-le",
+    "zh.health.fa-shao-le",
+    "zh.health.ke-sou-li-hai",
+    "zh.health.hear-duo-jiu-le",
+    "zh.health.liang-tian-le",
+    "zh.health.word-sang-zi",
+    "zh.health.word-ya",
+    "zh.health.word-tui",
+    "zh.health.word-wei"
+   ]
+  },
+  {
+   "code": "Z16-L02",
+   "unit": "Z16",
+   "title": "At the doctor's",
+   "goal": "Register, answer the doctor, understand how to take medicine.",
+   "level": 3,
+   "path": "core",
+   "hsk": 3,
+   "patterns": [
+    "对 + thing + 过敏",
+    "给 + person + verb",
+    "number + 次 + per day"
+   ],
+   "count": 12,
+   "ids": [
+    "zh.health.qu-yi-yuan-kan-bing",
+    "zh.health.xiang-gua-hao",
+    "zh.health.hear-zhang-kai-zui",
+    "zh.health.hear-guo-min-ma",
+    "zh.health.dui-qing-mei-su-guo-min",
+    "zh.health.mei-you-guo-min",
+    "zh.health.hear-kai-dian-yao",
+    "zh.health.yao-zen-me-chi",
+    "zh.health.hear-yi-tian-san-ci",
+    "zh.health.xie-xie-dai-fu",
+    "zh.health.hear-duo-he-shui",
+    "zh.health.yao-da-zhen-ma"
+   ]
+  },
+  {
+   "code": "Z16-L03",
+   "unit": "Z16",
+   "title": "Staying healthy",
+   "goal": "Give and take advice; wish someone well.",
+   "level": 3,
+   "path": "core",
+   "hsk": 3,
+   "patterns": [
+    "应该 + verb",
+    "最好 + verb",
+    "越来越 + adjective",
+    "多 / 少 + verb"
+   ],
+   "count": 12,
+   "ids": [
+    "zh.patterns.ying-gai-duo-yun-dong",
+    "zh.patterns.zui-hao-zao-dian-shui",
+    "zh.health.bie-he-tai-duo-ka-fei",
+    "zh.health.hear-hao-dian-le-ma",
+    "zh.health.hao-duo-le",
+    "zh.health.hai-shi-bu-tai-shu-fu",
+    "zh.patterns.yue-lai-yue-hao",
+    "zh.health.zao-ri-kang-fu",
+    "zh.health.yi-wan-bu",
+    "zh.health.duo-chi-shu-cai",
+    "zh.health.word-shen-ti",
+    "zh.health.word-jian-kang"
+   ]
   }
  ],
  "items": [
@@ -15980,6 +16158,1419 @@
    "lesson": "Z14-L04",
    "level": 3,
    "order": 743,
+   "src": "new"
+  },
+  {
+   "id": "zh.work.hear-zai-na-jia-gong-si",
+   "cat": "work",
+   "kind": "hear",
+   "en": "Which company do you work for?",
+   "ja": "你在哪家公司上班？",
+   "ruby": "你[nǐ]在[zài]哪[nǎ]家[jiā]公司[gōng sī]上班[shàng bān]？",
+   "kana": "ni zai na jia gongsi shangban",
+   "romaji": "Nǐ zài nǎ jiā gōngsī shàngbān?",
+   "replies": [
+    "zh.work.zai-yi-jia-yin-hang"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z15-L01",
+   "level": 3,
+   "order": 744,
+   "src": "new"
+  },
+  {
+   "id": "zh.work.zai-yi-jia-yin-hang",
+   "cat": "work",
+   "kind": "say",
+   "en": "I work at a bank.",
+   "ja": "我在一家银行上班。",
+   "ruby": "我[wǒ]在[zài]一[yì]家[jiā]银行[yín háng]上班[shàng bān]。",
+   "kana": "wo zai yi jia yinhang shangban",
+   "romaji": "Wǒ zài yì jiā yínháng shàngbān.",
+   "replyTo": [
+    "zh.work.hear-zai-na-jia-gong-si"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z15-L01",
+   "level": 3,
+   "order": 745,
+   "src": "new"
+  },
+  {
+   "id": "zh.work.hear-gong-zuo-mang-bu-mang",
+   "cat": "work",
+   "kind": "hear",
+   "en": "Is your job busy?",
+   "ja": "你的工作忙不忙？",
+   "ruby": "你[nǐ]的[de]工作[gōng zuò]忙[máng]不[bu]忙[máng]？",
+   "kana": "ni de gongzuo mang bu mang",
+   "romaji": "Nǐ de gōngzuò máng bu máng?",
+   "replies": [
+    "zh.work.te-bie-mang",
+    "zh.work.hai-hao"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z15-L01",
+   "level": 3,
+   "order": 746,
+   "src": "new"
+  },
+  {
+   "id": "zh.work.te-bie-mang",
+   "cat": "work",
+   "kind": "say",
+   "en": "Really busy; I often work overtime.",
+   "ja": "特别忙，常常加班。",
+   "ruby": "特别[tè bié]忙[máng]，常常[cháng cháng]加班[jiā bān]。",
+   "kana": "tebie mang changchang jiaban",
+   "romaji": "Tèbié máng, chángcháng jiābān.",
+   "replyTo": [
+    "zh.work.hear-gong-zuo-mang-bu-mang"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z15-L01",
+   "level": 3,
+   "order": 747,
+   "src": "new"
+  },
+  {
+   "id": "zh.work.hai-hao",
+   "cat": "work",
+   "kind": "say",
+   "en": "It's OK, not too busy.",
+   "ja": "还好，不太忙。",
+   "ruby": "还好[hái hǎo]，不[bú]太[tài]忙[máng]。",
+   "kana": "haihao bu tai mang",
+   "romaji": "Háihǎo, bú tài máng.",
+   "replyTo": [
+    "zh.work.hear-gong-zuo-mang-bu-mang"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z15-L01",
+   "level": 3,
+   "order": 748,
+   "src": "new"
+  },
+  {
+   "id": "zh.work.xia-wu-kai-hui",
+   "cat": "work",
+   "kind": "say",
+   "en": "I have a meeting this afternoon.",
+   "ja": "我下午要开会。",
+   "ruby": "我[wǒ]下午[xià wǔ]要[yào]开会[kāi huì]。",
+   "kana": "wo xiawu yao kaihui",
+   "romaji": "Wǒ xiàwǔ yào kāihuì.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z15-L01",
+   "level": 3,
+   "order": 749,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.yi-bian-yi-bian",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "He eats while looking at his phone.",
+   "ja": "他一边吃饭，一边看手机。",
+   "ruby": "他[tā]一边[yì biān]吃饭[chī fàn]，一边[yì biān]看[kàn]手机[shǒu jī]。",
+   "kana": "ta yibian chifan yibian kan shouji",
+   "romaji": "Tā yìbiān chīfàn, yìbiān kàn shǒujī.",
+   "note": "一边 A 一边 B = do A and B at the same time.",
+   "pattern": "一边……一边……",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z15-L01",
+   "level": 3,
+   "order": 750,
+   "src": "new"
+  },
+  {
+   "id": "zh.work.lao-ban-ren-hen-hao",
+   "cat": "work",
+   "kind": "say",
+   "en": "My boss is a very nice person.",
+   "ja": "我的老板人很好。",
+   "ruby": "我[wǒ]的[de]老板[lǎo bǎn]人[rén]很[hěn]好[hǎo]。",
+   "kana": "wo de laoban ren hen hao",
+   "romaji": "Wǒ de lǎobǎn rén hěn hǎo.",
+   "note": "3rd + 3rd tone: láo bǎn.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z15-L01",
+   "level": 3,
+   "order": 751,
+   "src": "new"
+  },
+  {
+   "id": "zh.work.gen-tong-shi-guan-xi-hao",
+   "cat": "work",
+   "kind": "say",
+   "en": "I get on well with my colleagues.",
+   "ja": "我跟同事关系很好。",
+   "ruby": "我[wǒ]跟[gēn]同事[tóng shì]关系[guān xi]很[hěn]好[hǎo]。",
+   "kana": "wo gen tongshi guanxi hen hao",
+   "romaji": "Wǒ gēn tóngshì guānxi hěn hǎo.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z15-L01",
+   "level": 3,
+   "order": 752,
+   "src": "new"
+  },
+  {
+   "id": "zh.work.xiang-qing-jia",
+   "cat": "work",
+   "kind": "say",
+   "en": "I'd like to take tomorrow off.",
+   "ja": "我明天想请假。",
+   "ruby": "我[wǒ]明天[míng tiān]想[xiǎng]请假[qǐng jià]。",
+   "kana": "wo mingtian xiang qingjia",
+   "romaji": "Wǒ míngtiān xiǎng qǐngjià.",
+   "note": "请假 = ask for leave. 3rd + 3rd tone: xiáng qǐng.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z15-L01",
+   "level": 3,
+   "order": 753,
+   "src": "new"
+  },
+  {
+   "id": "zh.work.word-gong-zi",
+   "cat": "work",
+   "kind": "say",
+   "en": "salary, pay",
+   "ja": "工资",
+   "ruby": "工资[gōng zī]",
+   "kana": "gongzi",
+   "romaji": "gōngzī",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z15-L01",
+   "level": 3,
+   "order": 754,
+   "src": "new"
+  },
+  {
+   "id": "zh.work.word-chu-chai",
+   "cat": "work",
+   "kind": "say",
+   "en": "go on a business trip",
+   "ja": "出差",
+   "ruby": "出差[chū chāi]",
+   "kana": "chuchai",
+   "romaji": "chūchāi",
+   "note": "差 is chāi here (chà = lacking).",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z15-L01",
+   "level": 3,
+   "order": 755,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.pao-de-hen-kuai",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "He runs fast.",
+   "ja": "他跑得很快。",
+   "ruby": "他[tā]跑[pǎo]得[de]很[hěn]快[kuài]。",
+   "kana": "ta pao de hen kuai",
+   "romaji": "Tā pǎo de hěn kuài.",
+   "note": "得 de links a verb to how it is done.",
+   "pattern": "verb + 得 + adjective",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z15-L02",
+   "level": 3,
+   "order": 756,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.shuo-zhong-wen-shuo-de-hao",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "You speak Chinese very well.",
+   "ja": "你说中文说得很好。",
+   "ruby": "你[nǐ]说[shuō]中文[Zhōng wén]说[shuō]得[de]很[hěn]好[hǎo]。",
+   "kana": "ni shuo zhongwen shuo de hen hao",
+   "romaji": "Nǐ shuō Zhōngwén shuō de hěn hǎo.",
+   "note": "With an object, repeat the verb: 说中文说得很好 (or just 中文说得很好).",
+   "pattern": "verb + object + verb + 得 + adjective",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z15-L02",
+   "level": 3,
+   "order": 757,
+   "src": "new"
+  },
+  {
+   "id": "zh.work.na-li-na-li",
+   "cat": "work",
+   "kind": "say",
+   "en": "Not at all, I still have a long way to go.",
+   "ja": "哪里哪里，还差得远呢。",
+   "ruby": "哪里[nǎ lǐ]哪里[nǎ lǐ]，还[hái]差[chà]得[de]远[yuǎn]呢[ne]。",
+   "kana": "nali nali hai cha de yuan ne",
+   "romaji": "Nǎlǐ nǎlǐ, hái chà de yuǎn ne.",
+   "note": "哪里哪里 is the modest reply to praise; spoken ná li ná li.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z15-L02",
+   "level": 3,
+   "order": 758,
+   "src": "new"
+  },
+  {
+   "id": "zh.work.hear-xue-le-duo-chang-shi-jian",
+   "cat": "work",
+   "kind": "hear",
+   "en": "How long have you been learning Chinese?",
+   "ja": "你学中文学了多长时间了？",
+   "ruby": "你[nǐ]学[xué]中文[Zhōng wén]学[xué]了[le]多[duō]长[cháng]时间[shí jiān]了[le]？",
+   "kana": "ni xue zhongwen xue le duo chang shijian le",
+   "romaji": "Nǐ xué Zhōngwén xué le duō cháng shíjiān le?",
+   "note": "Verb + 了 + time + 了 = and it is still going on.",
+   "replies": [
+    "zh.work.xue-le-ban-nian-le"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z15-L02",
+   "level": 3,
+   "order": 759,
+   "src": "new"
+  },
+  {
+   "id": "zh.work.xue-le-ban-nian-le",
+   "cat": "work",
+   "kind": "say",
+   "en": "Half a year now.",
+   "ja": "学了半年了。",
+   "ruby": "学[xué]了[le]半[bàn]年[nián]了[le]。",
+   "kana": "xue le ban nian le",
+   "romaji": "Xué le bàn nián le.",
+   "replyTo": [
+    "zh.work.hear-xue-le-duo-chang-shi-jian"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z15-L02",
+   "level": 3,
+   "order": 760,
+   "src": "new"
+  },
+  {
+   "id": "zh.work.hear-kao-de-zen-me-yang",
+   "cat": "work",
+   "kind": "hear",
+   "en": "How did the exam go?",
+   "ja": "考试考得怎么样？",
+   "ruby": "考试[kǎo shì]考[kǎo]得[de]怎么样[zěn me yàng]？",
+   "kana": "kaoshi kao de zenmeyang",
+   "romaji": "Kǎoshì kǎo de zěnmeyàng?",
+   "replies": [
+    "zh.work.kao-de-bu-cuo",
+    "zh.work.kao-de-bu-tai-hao"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z15-L02",
+   "level": 3,
+   "order": 761,
+   "src": "new"
+  },
+  {
+   "id": "zh.work.kao-de-bu-cuo",
+   "cat": "work",
+   "kind": "say",
+   "en": "It went well.",
+   "ja": "考得不错。",
+   "ruby": "考[kǎo]得[de]不错[bú cuò]。",
+   "kana": "kao de bucuo",
+   "romaji": "Kǎo de búcuò.",
+   "note": "不错 búcuò = not bad, pretty good.",
+   "replyTo": [
+    "zh.work.hear-kao-de-zen-me-yang"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z15-L02",
+   "level": 3,
+   "order": 762,
+   "src": "new"
+  },
+  {
+   "id": "zh.work.kao-de-bu-tai-hao",
+   "cat": "work",
+   "kind": "say",
+   "en": "It didn't go very well.",
+   "ja": "考得不太好。",
+   "ruby": "考[kǎo]得[de]不[bú]太[tài]好[hǎo]。",
+   "kana": "kao de bu tai hao",
+   "romaji": "Kǎo de bú tài hǎo.",
+   "note": "Negative: verb + 得 + 不 + adjective.",
+   "replyTo": [
+    "zh.work.hear-kao-de-zen-me-yang"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z15-L02",
+   "level": 3,
+   "order": 763,
+   "src": "new"
+  },
+  {
+   "id": "zh.work.han-zi-xie-de-piao-liang",
+   "cat": "work",
+   "kind": "say",
+   "en": "She writes characters beautifully.",
+   "ja": "她汉字写得很漂亮。",
+   "ruby": "她[tā]汉字[Hàn zì]写[xiě]得[de]很[hěn]漂亮[piào liang]。",
+   "kana": "ta hanzi xie de hen piaoliang",
+   "romaji": "Tā Hànzì xiě de hěn piàoliang.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z15-L02",
+   "level": 3,
+   "order": 764,
+   "src": "new"
+  },
+  {
+   "id": "zh.work.word-zuo-ye",
+   "cat": "work",
+   "kind": "say",
+   "en": "homework",
+   "ja": "作业",
+   "ruby": "作业[zuò yè]",
+   "kana": "zuoye",
+   "romaji": "zuòyè",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z15-L02",
+   "level": 3,
+   "order": 765,
+   "src": "new"
+  },
+  {
+   "id": "zh.work.word-kao-shi",
+   "cat": "work",
+   "kind": "say",
+   "en": "exam",
+   "ja": "考试",
+   "ruby": "考试[kǎo shì]",
+   "kana": "kaoshi",
+   "romaji": "kǎoshì",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z15-L02",
+   "level": 3,
+   "order": 766,
+   "src": "new"
+  },
+  {
+   "id": "zh.work.word-bi-ye",
+   "cat": "work",
+   "kind": "say",
+   "en": "graduate",
+   "ja": "毕业",
+   "ruby": "毕业[bì yè]",
+   "kana": "biye",
+   "romaji": "bìyè",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z15-L02",
+   "level": 3,
+   "order": 767,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.hui-you-yong",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "I can swim.",
+   "ja": "我会游泳。",
+   "ruby": "我[wǒ]会[huì]游泳[yóu yǒng]。",
+   "kana": "wo hui youyong",
+   "romaji": "Wǒ huì yóuyǒng.",
+   "note": "会 = you have learned how.",
+   "pattern": "会 + verb",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z15-L03",
+   "level": 3,
+   "order": 768,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.bu-neng-you",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "I have a cold today, so I can't swim.",
+   "ja": "今天我感冒了，不能游。",
+   "ruby": "今天[jīn tiān]我[wǒ]感冒[gǎn mào]了[le]，不能[bù néng]游[yóu]。",
+   "kana": "jintian wo ganmao le buneng you",
+   "romaji": "Jīntiān wǒ gǎnmào le, bùnéng yóu.",
+   "note": "能 = able right now; circumstances allow it.",
+   "pattern": "能 + verb",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z15-L03",
+   "level": 3,
+   "order": 769,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.ke-yi-you-yong-ma",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "Is swimming allowed here?",
+   "ja": "这里可以游泳吗？",
+   "ruby": "这里[zhè lǐ]可以[kě yǐ]游泳[yóu yǒng]吗[ma]？",
+   "kana": "zheli keyi youyong ma",
+   "romaji": "Zhèlǐ kěyǐ yóuyǒng ma?",
+   "note": "可以 = allowed, permitted.",
+   "pattern": "可以 + verb",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z15-L03",
+   "level": 3,
+   "order": 770,
+   "src": "new"
+  },
+  {
+   "id": "zh.work.hear-hui-kai-che-ma",
+   "cat": "work",
+   "kind": "hear",
+   "en": "Can you drive?",
+   "ja": "你会开车吗？",
+   "ruby": "你[nǐ]会[huì]开车[kāi chē]吗[ma]？",
+   "kana": "ni hui kaiche ma",
+   "romaji": "Nǐ huì kāichē ma?",
+   "replies": [
+    "zh.work.bu-hui-zheng-zai-xue"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z15-L03",
+   "level": 3,
+   "order": 771,
+   "src": "new"
+  },
+  {
+   "id": "zh.work.bu-hui-zheng-zai-xue",
+   "cat": "work",
+   "kind": "say",
+   "en": "No, I'm learning at the moment.",
+   "ja": "不会，我正在学。",
+   "ruby": "不[bú]会[huì]，我[wǒ]正在[zhèng zài]学[xué]。",
+   "kana": "bu hui wo zhengzai xue",
+   "romaji": "Bú huì, wǒ zhèngzài xué.",
+   "replyTo": [
+    "zh.work.hear-hui-kai-che-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z15-L03",
+   "level": 3,
+   "order": 772,
+   "src": "new"
+  },
+  {
+   "id": "zh.work.hear-ming-tian-neng-lai-ma",
+   "cat": "work",
+   "kind": "hear",
+   "en": "Can you come tomorrow?",
+   "ja": "你明天能来吗？",
+   "ruby": "你[nǐ]明天[míng tiān]能[néng]来[lái]吗[ma]？",
+   "kana": "ni mingtian neng lai ma",
+   "romaji": "Nǐ míngtiān néng lái ma?",
+   "replies": [
+    "zh.work.neng-mei-wen-ti",
+    "zh.work.bu-xing-you-shi"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z15-L03",
+   "level": 3,
+   "order": 773,
+   "src": "new"
+  },
+  {
+   "id": "zh.work.neng-mei-wen-ti",
+   "cat": "work",
+   "kind": "say",
+   "en": "Yes, no problem.",
+   "ja": "能，没问题。",
+   "ruby": "能[néng]，没[méi]问题[wèn tí]。",
+   "kana": "neng mei wenti",
+   "romaji": "Néng, méi wèntí.",
+   "replyTo": [
+    "zh.work.hear-ming-tian-neng-lai-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z15-L03",
+   "level": 3,
+   "order": 774,
+   "src": "new"
+  },
+  {
+   "id": "zh.work.bu-xing-you-shi",
+   "cat": "work",
+   "kind": "say",
+   "en": "I can't, I have something on tomorrow.",
+   "ja": "不行，我明天有事。",
+   "ruby": "不[bù]行[xíng]，我[wǒ]明天[míng tiān]有[yǒu]事[shì]。",
+   "kana": "bu xing wo mingtian you shi",
+   "romaji": "Bù xíng, wǒ míngtiān yǒu shì.",
+   "note": "不行 = no can do; that won't work.",
+   "replyTo": [
+    "zh.work.hear-ming-tian-neng-lai-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z15-L03",
+   "level": 3,
+   "order": 775,
+   "src": "new"
+  },
+  {
+   "id": "zh.work.yong-yi-xia-ni-de-bi",
+   "cat": "work",
+   "kind": "say",
+   "en": "May I use your pen for a moment?",
+   "ja": "我可以用一下你的笔吗？",
+   "ruby": "我[wǒ]可以[kě yǐ]用[yòng]一下[yí xià]你[nǐ]的[de]笔[bǐ]吗[ma]？",
+   "kana": "wo keyi yong yixia ni de bi ma",
+   "romaji": "Wǒ kěyǐ yòng yíxià nǐ de bǐ ma?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z15-L03",
+   "level": 3,
+   "order": 776,
+   "src": "new"
+  },
+  {
+   "id": "zh.work.dang-ran-ke-yi",
+   "cat": "work",
+   "kind": "say",
+   "en": "Of course.",
+   "ja": "当然可以。",
+   "ruby": "当然[dāng rán]可以[kě yǐ]。",
+   "kana": "dangran keyi",
+   "romaji": "Dāngrán kěyǐ.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z15-L03",
+   "level": 3,
+   "order": 777,
+   "src": "new"
+  },
+  {
+   "id": "zh.work.yi-fen-zhong-yi-bai-ge-zi",
+   "cat": "work",
+   "kind": "say",
+   "en": "He can type 100 characters a minute.",
+   "ja": "他一分钟能打一百个字。",
+   "ruby": "他[tā]一[yì]分钟[fēn zhōng]能[néng]打[dǎ]一百[yì bǎi]个[ge]字[zì]。",
+   "kana": "ta yi fenzhong neng da yibai ge zi",
+   "romaji": "Tā yì fēnzhōng néng dǎ yìbǎi ge zì.",
+   "note": "能 also states how much someone can do.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z15-L03",
+   "level": 3,
+   "order": 778,
+   "src": "new"
+  },
+  {
+   "id": "zh.work.hear-ji-zhong-yu-yan",
+   "cat": "work",
+   "kind": "hear",
+   "en": "How many languages do you speak?",
+   "ja": "你会说几种语言？",
+   "ruby": "你[nǐ]会[huì]说[shuō]几[jǐ]种[zhǒng]语言[yǔ yán]？",
+   "kana": "ni hui shuo ji zhong yuyan",
+   "romaji": "Nǐ huì shuō jǐ zhǒng yǔyán?",
+   "note": "种 = kind, type.",
+   "replies": [
+    "zh.work.san-zhong"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z15-L03",
+   "level": 3,
+   "order": 779,
+   "src": "new"
+  },
+  {
+   "id": "zh.work.san-zhong",
+   "cat": "work",
+   "kind": "say",
+   "en": "Three: English, French and a little Chinese.",
+   "ja": "三种：英语、法语和一点儿中文。",
+   "ruby": "三[sān]种[zhǒng]：英语[Yīng yǔ]、法语[Fǎ yǔ]和[hé]一点儿[yì diǎn r]中文[Zhōng wén]。",
+   "kana": "san zhong yingyu fayu he yidianr zhongwen",
+   "romaji": "Sān zhǒng: Yīngyǔ, Fǎyǔ hé yìdiǎnr Zhōngwén.",
+   "replyTo": [
+    "zh.work.hear-ji-zhong-yu-yan"
+   ],
+   "tags": [
+    "core",
+    "mw"
+   ],
+   "lesson": "Z15-L03",
+   "level": 3,
+   "order": 780,
+   "src": "new"
+  },
+  {
+   "id": "zh.health.hear-na-r-bu-shu-fu",
+   "cat": "health",
+   "kind": "hear",
+   "en": "What seems to be the problem?",
+   "ja": "你哪儿不舒服？",
+   "ruby": "你[nǐ]哪儿[nǎ r]不[bù]舒服[shū fu]？",
+   "kana": "ni nar bu shufu",
+   "romaji": "Nǐ nǎr bù shūfu?",
+   "note": "Literally \"where are you uncomfortable?\"",
+   "replies": [
+    "zh.health.tou-teng",
+    "zh.health.du-zi-teng"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z16-L01",
+   "level": 3,
+   "order": 781,
+   "src": "new"
+  },
+  {
+   "id": "zh.health.you-dian-bu-shu-fu",
+   "cat": "health",
+   "kind": "say",
+   "en": "I don't feel very well.",
+   "ja": "我有点儿不舒服。",
+   "ruby": "我[wǒ]有点儿[yǒu diǎn r]不[bù]舒服[shū fu]。",
+   "kana": "wo youdianr bu shufu",
+   "romaji": "Wǒ yǒudiǎnr bù shūfu.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z16-L01",
+   "level": 3,
+   "order": 782,
+   "src": "new"
+  },
+  {
+   "id": "zh.health.tou-teng",
+   "cat": "health",
+   "kind": "say",
+   "en": "I have a headache.",
+   "ja": "我头疼。",
+   "ruby": "我[wǒ]头[tóu]疼[téng]。",
+   "kana": "wo tou teng",
+   "romaji": "Wǒ tóu téng.",
+   "note": "Body part + 疼 = it hurts.",
+   "replyTo": [
+    "zh.health.hear-na-r-bu-shu-fu"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z16-L01",
+   "level": 3,
+   "order": 783,
+   "src": "new"
+  },
+  {
+   "id": "zh.health.du-zi-teng",
+   "cat": "health",
+   "kind": "say",
+   "en": "I have a stomach ache.",
+   "ja": "我肚子疼。",
+   "ruby": "我[wǒ]肚子[dù zi]疼[téng]。",
+   "kana": "wo duzi teng",
+   "romaji": "Wǒ dùzi téng.",
+   "replyTo": [
+    "zh.health.hear-na-r-bu-shu-fu"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z16-L01",
+   "level": 3,
+   "order": 784,
+   "src": "new"
+  },
+  {
+   "id": "zh.health.gan-mao-le",
+   "cat": "health",
+   "kind": "say",
+   "en": "I've caught a cold.",
+   "ja": "我感冒了。",
+   "ruby": "我[wǒ]感冒[gǎn mào]了[le]。",
+   "kana": "wo ganmao le",
+   "romaji": "Wǒ gǎnmào le.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z16-L01",
+   "level": 3,
+   "order": 785,
+   "src": "new"
+  },
+  {
+   "id": "zh.health.fa-shao-le",
+   "cat": "health",
+   "kind": "say",
+   "en": "I have a fever: 38 degrees.",
+   "ja": "我发烧了，三十八度。",
+   "ruby": "我[wǒ]发烧[fā shāo]了[le]，三十八[sān shí bā]度[dù]。",
+   "kana": "wo fashao le sanshiba du",
+   "romaji": "Wǒ fāshāo le, sānshíbā dù.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z16-L01",
+   "level": 3,
+   "order": 786,
+   "src": "new"
+  },
+  {
+   "id": "zh.health.ke-sou-li-hai",
+   "cat": "health",
+   "kind": "say",
+   "en": "I have a bad cough.",
+   "ja": "我咳嗽得很厉害。",
+   "ruby": "我[wǒ]咳嗽[ké sou]得[de]很[hěn]厉害[lì hai]。",
+   "kana": "wo kesou de hen lihai",
+   "romaji": "Wǒ késou de hěn lìhai.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z16-L01",
+   "level": 3,
+   "order": 787,
+   "src": "new"
+  },
+  {
+   "id": "zh.health.hear-duo-jiu-le",
+   "cat": "health",
+   "kind": "hear",
+   "en": "How long has it been like this?",
+   "ja": "这样多久了？",
+   "ruby": "这样[zhè yàng]多久[duō jiǔ]了[le]？",
+   "kana": "zheyang duojiu le",
+   "romaji": "Zhèyàng duōjiǔ le?",
+   "replies": [
+    "zh.health.liang-tian-le"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z16-L01",
+   "level": 3,
+   "order": 788,
+   "src": "new"
+  },
+  {
+   "id": "zh.health.liang-tian-le",
+   "cat": "health",
+   "kind": "say",
+   "en": "Two days.",
+   "ja": "两天了。",
+   "ruby": "两[liǎng]天[tiān]了[le]。",
+   "kana": "liang tian le",
+   "romaji": "Liǎng tiān le.",
+   "replyTo": [
+    "zh.health.hear-duo-jiu-le"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z16-L01",
+   "level": 3,
+   "order": 789,
+   "src": "new"
+  },
+  {
+   "id": "zh.health.word-sang-zi",
+   "cat": "health",
+   "kind": "say",
+   "en": "throat",
+   "ja": "嗓子",
+   "ruby": "嗓子[sǎng zi]",
+   "kana": "sangzi",
+   "romaji": "sǎngzi",
+   "note": "嗓子疼 = sore throat.",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z16-L01",
+   "level": 3,
+   "order": 790,
+   "src": "new"
+  },
+  {
+   "id": "zh.health.word-ya",
+   "cat": "health",
+   "kind": "say",
+   "en": "tooth",
+   "ja": "牙",
+   "ruby": "牙[yá]",
+   "kana": "ya",
+   "romaji": "yá",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z16-L01",
+   "level": 3,
+   "order": 791,
+   "src": "new"
+  },
+  {
+   "id": "zh.health.word-tui",
+   "cat": "health",
+   "kind": "say",
+   "en": "leg",
+   "ja": "腿",
+   "ruby": "腿[tuǐ]",
+   "kana": "tui",
+   "romaji": "tuǐ",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z16-L01",
+   "level": 3,
+   "order": 792,
+   "src": "new"
+  },
+  {
+   "id": "zh.health.word-wei",
+   "cat": "health",
+   "kind": "say",
+   "en": "stomach",
+   "ja": "胃",
+   "ruby": "胃[wèi]",
+   "kana": "wei",
+   "romaji": "wèi",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z16-L01",
+   "level": 3,
+   "order": 793,
+   "src": "new"
+  },
+  {
+   "id": "zh.health.qu-yi-yuan-kan-bing",
+   "cat": "health",
+   "kind": "say",
+   "en": "I need to go to the hospital to see a doctor.",
+   "ja": "我要去医院看病。",
+   "ruby": "我[wǒ]要[yào]去[qù]医院[yī yuàn]看病[kàn bìng]。",
+   "kana": "wo yao qu yiyuan kanbing",
+   "romaji": "Wǒ yào qù yīyuàn kànbìng.",
+   "note": "看病 = see a doctor (patient) or treat patients (doctor).",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z16-L02",
+   "level": 3,
+   "order": 794,
+   "src": "new"
+  },
+  {
+   "id": "zh.health.xiang-gua-hao",
+   "cat": "health",
+   "kind": "say",
+   "en": "I'd like to register to see a doctor.",
+   "ja": "我想挂号。",
+   "ruby": "我[wǒ]想[xiǎng]挂号[guà hào]。",
+   "kana": "wo xiang guahao",
+   "romaji": "Wǒ xiǎng guàhào.",
+   "note": "In Chinese hospitals you first register at the 挂号 counter.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z16-L02",
+   "level": 3,
+   "order": 795,
+   "src": "new"
+  },
+  {
+   "id": "zh.health.hear-zhang-kai-zui",
+   "cat": "health",
+   "kind": "hear",
+   "en": "Please open your mouth.",
+   "ja": "请张开嘴。",
+   "ruby": "请[qǐng]张开[zhāng kāi]嘴[zuǐ]。",
+   "kana": "qing zhangkai zui",
+   "romaji": "Qǐng zhāngkāi zuǐ.",
+   "note": "Just listen: no reply needed.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z16-L02",
+   "level": 3,
+   "order": 796,
+   "src": "new"
+  },
+  {
+   "id": "zh.health.hear-guo-min-ma",
+   "cat": "health",
+   "kind": "hear",
+   "en": "Are you allergic to any medicine?",
+   "ja": "你对什么药过敏吗？",
+   "ruby": "你[nǐ]对[duì]什么[shén me]药[yào]过敏[guò mǐn]吗[ma]？",
+   "kana": "ni dui shenme yao guomin ma",
+   "romaji": "Nǐ duì shénme yào guòmǐn ma?",
+   "note": "什么 in a 吗 question = \"any\".",
+   "replies": [
+    "zh.health.dui-qing-mei-su-guo-min",
+    "zh.health.mei-you-guo-min"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z16-L02",
+   "level": 3,
+   "order": 797,
+   "src": "new"
+  },
+  {
+   "id": "zh.health.dui-qing-mei-su-guo-min",
+   "cat": "health",
+   "kind": "say",
+   "en": "I'm allergic to penicillin.",
+   "ja": "我对青霉素过敏。",
+   "ruby": "我[wǒ]对[duì]青霉素[qīng méi sù]过敏[guò mǐn]。",
+   "kana": "wo dui qingmeisu guomin",
+   "romaji": "Wǒ duì qīngméisù guòmǐn.",
+   "replyTo": [
+    "zh.health.hear-guo-min-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z16-L02",
+   "level": 3,
+   "order": 798,
+   "src": "new"
+  },
+  {
+   "id": "zh.health.mei-you-guo-min",
+   "cat": "health",
+   "kind": "say",
+   "en": "I don't have any allergies.",
+   "ja": "我没有过敏。",
+   "ruby": "我[wǒ]没有[méi yǒu]过敏[guò mǐn]。",
+   "kana": "wo meiyou guomin",
+   "romaji": "Wǒ méiyǒu guòmǐn.",
+   "replyTo": [
+    "zh.health.hear-guo-min-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z16-L02",
+   "level": 3,
+   "order": 799,
+   "src": "new"
+  },
+  {
+   "id": "zh.health.hear-kai-dian-yao",
+   "cat": "health",
+   "kind": "hear",
+   "en": "I'll prescribe you some medicine.",
+   "ja": "我给你开点儿药。",
+   "ruby": "我[wǒ]给[gěi]你[nǐ]开[kāi]点儿[diǎn r]药[yào]。",
+   "kana": "wo gei ni kai dianr yao",
+   "romaji": "Wǒ gěi nǐ kāi diǎnr yào.",
+   "note": "开药 = prescribe medicine.",
+   "replies": [
+    "zh.health.yao-zen-me-chi"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z16-L02",
+   "level": 3,
+   "order": 800,
+   "src": "new"
+  },
+  {
+   "id": "zh.health.yao-zen-me-chi",
+   "cat": "health",
+   "kind": "say",
+   "en": "How do I take this medicine?",
+   "ja": "这个药怎么吃？",
+   "ruby": "这个[zhè ge]药[yào]怎么[zěn me]吃[chī]？",
+   "kana": "zhege yao zenme chi",
+   "romaji": "Zhège yào zěnme chī?",
+   "note": "Medicine is \"eaten\": 吃药.",
+   "replyTo": [
+    "zh.health.hear-kai-dian-yao"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z16-L02",
+   "level": 3,
+   "order": 801,
+   "src": "new"
+  },
+  {
+   "id": "zh.health.hear-yi-tian-san-ci",
+   "cat": "health",
+   "kind": "hear",
+   "en": "Three times a day, after meals.",
+   "ja": "一天三次，饭后吃。",
+   "ruby": "一[yì]天[tiān]三[sān]次[cì]，饭[fàn]后[hòu]吃[chī]。",
+   "kana": "yi tian san ci fan hou chi",
+   "romaji": "Yì tiān sān cì, fàn hòu chī.",
+   "replies": [
+    "zh.health.xie-xie-dai-fu"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z16-L02",
+   "level": 3,
+   "order": 802,
+   "src": "new"
+  },
+  {
+   "id": "zh.health.xie-xie-dai-fu",
+   "cat": "health",
+   "kind": "say",
+   "en": "OK, thank you, doctor.",
+   "ja": "好的，谢谢大夫。",
+   "ruby": "好[hǎo]的[de]，谢谢[xiè xie]大夫[dài fu]。",
+   "kana": "hao de xiexie daifu",
+   "romaji": "Hǎo de, xièxie dàifu.",
+   "note": "大夫 dàifu = doctor (spoken); 大 is dài here.",
+   "replyTo": [
+    "zh.health.hear-yi-tian-san-ci"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z16-L02",
+   "level": 3,
+   "order": 803,
+   "src": "new"
+  },
+  {
+   "id": "zh.health.hear-duo-he-shui",
+   "cat": "health",
+   "kind": "hear",
+   "en": "Drink plenty of water and get lots of rest.",
+   "ja": "多喝水，多休息。",
+   "ruby": "多[duō]喝[hē]水[shuǐ]，多[duō]休息[xiū xi]。",
+   "kana": "duo he shui duo xiuxi",
+   "romaji": "Duō hē shuǐ, duō xiūxi.",
+   "note": "Just listen: no reply needed.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z16-L02",
+   "level": 3,
+   "order": 804,
+   "src": "new"
+  },
+  {
+   "id": "zh.health.yao-da-zhen-ma",
+   "cat": "health",
+   "kind": "say",
+   "en": "Do I need an injection?",
+   "ja": "要打针吗？",
+   "ruby": "要[yào]打针[dǎ zhēn]吗[ma]？",
+   "kana": "yao dazhen ma",
+   "romaji": "Yào dǎzhēn ma?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z16-L02",
+   "level": 3,
+   "order": 805,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.ying-gai-duo-yun-dong",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "You should exercise more.",
+   "ja": "你应该多运动。",
+   "ruby": "你[nǐ]应该[yīng gāi]多[duō]运动[yùn dòng]。",
+   "kana": "ni yinggai duo yundong",
+   "romaji": "Nǐ yīnggāi duō yùndòng.",
+   "note": "多 + verb = do more of it; 少 + verb = do less.",
+   "pattern": "应该 + verb",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z16-L03",
+   "level": 3,
+   "order": 806,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.zui-hao-zao-dian-shui",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "You'd better go to bed earlier.",
+   "ja": "你最好早点儿睡。",
+   "ruby": "你[nǐ]最好[zuì hǎo]早[zǎo]点儿[diǎn r]睡[shuì]。",
+   "kana": "ni zuihao zao dianr shui",
+   "romaji": "Nǐ zuìhǎo zǎo diǎnr shuì.",
+   "note": "最好 = had better. 3rd + 3rd tone: záo diǎnr.",
+   "pattern": "最好 + verb",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z16-L03",
+   "level": 3,
+   "order": 807,
+   "src": "new"
+  },
+  {
+   "id": "zh.health.bie-he-tai-duo-ka-fei",
+   "cat": "health",
+   "kind": "say",
+   "en": "Don't drink too much coffee.",
+   "ja": "别喝太多咖啡。",
+   "ruby": "别[bié]喝[hē]太[tài]多[duō]咖啡[kā fēi]。",
+   "kana": "bie he tai duo kafei",
+   "romaji": "Bié hē tài duō kāfēi.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z16-L03",
+   "level": 3,
+   "order": 808,
+   "src": "new"
+  },
+  {
+   "id": "zh.health.hear-hao-dian-le-ma",
+   "cat": "health",
+   "kind": "hear",
+   "en": "Are you feeling better?",
+   "ja": "你好点儿了吗？",
+   "ruby": "你[nǐ]好[hǎo]点儿[diǎn r]了[le]吗[ma]？",
+   "kana": "ni hao dianr le ma",
+   "romaji": "Nǐ hǎo diǎnr le ma?",
+   "replies": [
+    "zh.health.hao-duo-le",
+    "zh.health.hai-shi-bu-tai-shu-fu"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z16-L03",
+   "level": 3,
+   "order": 809,
+   "src": "new"
+  },
+  {
+   "id": "zh.health.hao-duo-le",
+   "cat": "health",
+   "kind": "say",
+   "en": "Much better, thanks.",
+   "ja": "好多了，谢谢。",
+   "ruby": "好[hǎo]多[duō]了[le]，谢谢[xiè xie]。",
+   "kana": "hao duo le xiexie",
+   "romaji": "Hǎo duō le, xièxie.",
+   "replyTo": [
+    "zh.health.hear-hao-dian-le-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z16-L03",
+   "level": 3,
+   "order": 810,
+   "src": "new"
+  },
+  {
+   "id": "zh.health.hai-shi-bu-tai-shu-fu",
+   "cat": "health",
+   "kind": "say",
+   "en": "I still don't feel too good.",
+   "ja": "还是不太舒服。",
+   "ruby": "还是[hái shi]不[bú]太[tài]舒服[shū fu]。",
+   "kana": "haishi bu tai shufu",
+   "romaji": "Háishi bú tài shūfu.",
+   "note": "还是 here = still.",
+   "replyTo": [
+    "zh.health.hear-hao-dian-le-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z16-L03",
+   "level": 3,
+   "order": 811,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.yue-lai-yue-hao",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "His health is getting better and better.",
+   "ja": "他的身体越来越好了。",
+   "ruby": "他[tā]的[de]身体[shēn tǐ]越来越[yuè lái yuè]好[hǎo]了[le]。",
+   "kana": "ta de shenti yuelaiyue hao le",
+   "romaji": "Tā de shēntǐ yuèláiyuè hǎo le.",
+   "note": "越来越 + adjective = more and more ...",
+   "pattern": "越来越 + adjective",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z16-L03",
+   "level": 3,
+   "order": 812,
+   "src": "new"
+  },
+  {
+   "id": "zh.health.zao-ri-kang-fu",
+   "cat": "health",
+   "kind": "say",
+   "en": "Get well soon!",
+   "ja": "祝你早日康复！",
+   "ruby": "祝[zhù]你[nǐ]早日[zǎo rì]康复[kāng fù]！",
+   "kana": "zhu ni zaori kangfu",
+   "romaji": "Zhù nǐ zǎorì kāngfù!",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z16-L03",
+   "level": 3,
+   "order": 813,
+   "src": "new"
+  },
+  {
+   "id": "zh.health.yi-wan-bu",
+   "cat": "health",
+   "kind": "say",
+   "en": "I walk 10,000 steps a day.",
+   "ja": "我每天走一万步。",
+   "ruby": "我[wǒ]每天[měi tiān]走[zǒu]一万[yí wàn]步[bù]。",
+   "kana": "wo meitian zou yiwan bu",
+   "romaji": "Wǒ měitiān zǒu yíwàn bù.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z16-L03",
+   "level": 3,
+   "order": 814,
+   "src": "new"
+  },
+  {
+   "id": "zh.health.duo-chi-shu-cai",
+   "cat": "health",
+   "kind": "say",
+   "en": "Eat more vegetables and less sugar.",
+   "ja": "多吃蔬菜，少吃糖。",
+   "ruby": "多[duō]吃[chī]蔬菜[shū cài]，少[shǎo]吃[chī]糖[táng]。",
+   "kana": "duo chi shucai shao chi tang",
+   "romaji": "Duō chī shūcài, shǎo chī táng.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z16-L03",
+   "level": 3,
+   "order": 815,
+   "src": "new"
+  },
+  {
+   "id": "zh.health.word-shen-ti",
+   "cat": "health",
+   "kind": "say",
+   "en": "body; health",
+   "ja": "身体",
+   "ruby": "身体[shēn tǐ]",
+   "kana": "shenti",
+   "romaji": "shēntǐ",
+   "note": "身体好 = in good health.",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z16-L03",
+   "level": 3,
+   "order": 816,
+   "src": "new"
+  },
+  {
+   "id": "zh.health.word-jian-kang",
+   "cat": "health",
+   "kind": "say",
+   "en": "healthy; health",
+   "ja": "健康",
+   "ruby": "健康[jiàn kāng]",
+   "kana": "jiankang",
+   "romaji": "jiànkāng",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z16-L03",
+   "level": 3,
+   "order": 817,
    "src": "new"
   }
  ]
