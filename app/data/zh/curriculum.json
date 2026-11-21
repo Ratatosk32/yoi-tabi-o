@@ -2437,6 +2437,124 @@
     "zh.phone.yi-hui-r-jian",
     "zh.phone.de-qu-xiao"
    ]
+  },
+  {
+   "code": "Z21-L01",
+   "unit": "Z21",
+   "title": "Linking ideas",
+   "goal": "Join ideas with HSK 4 connectors.",
+   "level": 5,
+   "path": "ext",
+   "hsk": 4,
+   "patterns": [
+    "不但……而且……",
+    "除了……以外，还……",
+    "即使……也……",
+    "只要……就……",
+    "如果……就……",
+    "不是……而是……"
+   ],
+   "count": 11,
+   "ids": [
+    "zh.patterns.bu-dan-er-qie",
+    "zh.patterns.chu-le-yi-wai",
+    "zh.patterns.ji-shi-ye",
+    "zh.patterns.zhi-yao-jiu",
+    "zh.patterns.ru-guo-jiu",
+    "zh.feelings.bu-guan-duo-mang",
+    "zh.patterns.bu-shi-er-shi",
+    "zh.feelings.jue-ding-ming-nian-zai-qu",
+    "zh.feelings.ling-wai",
+    "zh.feelings.zong-zhi",
+    "zh.feelings.word-er-qie"
+   ]
+  },
+  {
+   "code": "Z21-L02",
+   "unit": "Z21",
+   "title": "Discussing",
+   "goal": "Use the passive, \"even\", \"for me\" and balanced arguments.",
+   "level": 5,
+   "path": "ext",
+   "hsk": 4,
+   "patterns": [
+    "A 被 (B) + verb",
+    "连……都……",
+    "对……来说",
+    "一方面……另一方面……",
+    "其实"
+   ],
+   "count": 11,
+   "ids": [
+    "zh.patterns.bei-tou-le",
+    "zh.feelings.bei-biao-yang",
+    "zh.patterns.lian-dou",
+    "zh.patterns.dui-wo-lai-shuo",
+    "zh.feelings.yi-fang-mian",
+    "zh.feelings.hear-ni-de-kan-fa-ne",
+    "zh.feelings.kan-fa-bu-tai-yi-yang",
+    "zh.feelings.wan-quan-tong-yi",
+    "zh.feelings.qi-shi",
+    "zh.feelings.fan-zheng",
+    "zh.feelings.word-kan-fa"
+   ]
+  },
+  {
+   "code": "Z22-L01",
+   "unit": "Z22",
+   "title": "Plans and hopes",
+   "goal": "Talk about plans, hopes and conditions.",
+   "level": 5,
+   "path": "ext",
+   "hsk": 4,
+   "patterns": [
+    "打算 / 计划 + verb",
+    "等……以后",
+    "如果……的话",
+    "希望……"
+   ],
+   "count": 11,
+   "ids": [
+    "zh.talk.hear-you-shen-me-da-suan",
+    "zh.talk.da-suan-qu-liu-xue",
+    "zh.talk.hai-mei-xiang-hao",
+    "zh.patterns.deng-bi-ye-yi-hou",
+    "zh.patterns.ru-guo-de-hua",
+    "zh.talk.zhun-bei-hsk",
+    "zh.talk.xi-wang-zhao-dao-gong-zuo",
+    "zh.talk.ji-hua-qu-yun-nan",
+    "zh.talk.zhu-ni-cheng-gong",
+    "zh.talk.jiang-lai-de-shi",
+    "zh.talk.word-ji-hui"
+   ]
+  },
+  {
+   "code": "Z22-L02",
+   "unit": "Z22",
+   "title": "Life events",
+   "goal": "Talk about changes in life: moves, jobs, families.",
+   "level": 5,
+   "path": "ext",
+   "hsk": 4,
+   "patterns": [
+    "一……就……",
+    "越 A 越 B",
+    "自从……"
+   ],
+   "count": 11,
+   "ids": [
+    "zh.patterns.yi-dao-jia-jiu",
+    "zh.patterns.yue-xue-yue-you-yi-si",
+    "zh.talk.zi-cong-lai-le-bei-jing",
+    "zh.talk.qu-nian-jie-hun-le",
+    "zh.talk.sheng-le-nv-er",
+    "zh.talk.huan-le-gong-zuo",
+    "zh.talk.hear-zhao-dao-xin-gong-zuo",
+    "zh.talk.yun-qi-hao",
+    "zh.talk.ban-dao-shang-hai",
+    "zh.talk.shi-jian-guo-de-kuai",
+    "zh.talk.word-tui-xiu"
+   ]
   }
  ],
  "items": [
@@ -20508,6 +20626,808 @@
    "lesson": "Z20-L03",
    "level": 3,
    "order": 956,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.bu-dan-er-qie",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "This restaurant is not only cheap but also tasty.",
+   "ja": "这家饭馆不但便宜，而且好吃。",
+   "ruby": "这[zhè]家[jiā]饭馆[fàn guǎn]不但[bú dàn]便宜[pián yi]，而且[ér qiě]好吃[hǎo chī]。",
+   "kana": "zhe jia fanguan budan pianyi erqie haochi",
+   "romaji": "Zhè jiā fànguǎn búdàn piányi, érqiě hǎochī.",
+   "pattern": "不但……而且……",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z21-L01",
+   "level": 5,
+   "order": 957,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.chu-le-yi-wai",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "Besides English, he also speaks Japanese.",
+   "ja": "除了英语以外，他还会说日语。",
+   "ruby": "除了[chú le]英语[Yīng yǔ]以外[yǐ wài]，他[tā]还[hái]会[huì]说[shuō]日语[Rì yǔ]。",
+   "kana": "chule yingyu yiwai ta hai hui shuo riyu",
+   "romaji": "Chúle Yīngyǔ yǐwài, tā hái huì shuō Rìyǔ.",
+   "note": "除了……以外，还…… = besides ..., also ...; with 都 it means \"except\".",
+   "pattern": "除了……以外，还……",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z21-L01",
+   "level": 5,
+   "order": 958,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.ji-shi-ye",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "Even if it rains, we're still going.",
+   "ja": "即使下雨，我们也要去。",
+   "ruby": "即使[jí shǐ]下雨[xià yǔ]，我们[wǒ men]也[yě]要[yào]去[qù]。",
+   "kana": "jishi xiayu women ye yao qu",
+   "romaji": "Jíshǐ xiàyǔ, wǒmen yě yào qù.",
+   "pattern": "即使……也……",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z21-L01",
+   "level": 5,
+   "order": 959,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.zhi-yao-jiu",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "As long as you work hard, you'll definitely master it.",
+   "ja": "只要你努力，就一定能学好。",
+   "ruby": "只要[zhǐ yào]你[nǐ]努力[nǔ lì]，就[jiù]一定[yí dìng]能[néng]学好[xué hǎo]。",
+   "kana": "zhiyao ni nuli jiu yiding neng xuehao",
+   "romaji": "Zhǐyào nǐ nǔlì, jiù yídìng néng xuéhǎo.",
+   "note": "3rd + 3rd tone: ní nǔlì.",
+   "pattern": "只要……就……",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z21-L01",
+   "level": 5,
+   "order": 960,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.ru-guo-jiu",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "If the weather is good tomorrow, we'll go hiking.",
+   "ja": "如果明天天气好，我们就去爬山。",
+   "ruby": "如果[rú guǒ]明天[míng tiān]天气[tiān qì]好[hǎo]，我们[wǒ men]就[jiù]去[qù]爬山[pá shān]。",
+   "kana": "ruguo mingtian tianqi hao women jiu qu pashan",
+   "romaji": "Rúguǒ míngtiān tiānqì hǎo, wǒmen jiù qù páshān.",
+   "pattern": "如果……就……",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z21-L01",
+   "level": 5,
+   "order": 961,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.bu-guan-duo-mang",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "However busy he is, he exercises every day.",
+   "ja": "不管多忙，他每天都运动。",
+   "ruby": "不管[bù guǎn]多[duō]忙[máng]，他[tā]每天[měi tiān]都[dōu]运动[yùn dòng]。",
+   "kana": "buguan duo mang ta meitian dou yundong",
+   "romaji": "Bùguǎn duō máng, tā měitiān dōu yùndòng.",
+   "note": "不管……都…… = no matter ...",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z21-L01",
+   "level": 5,
+   "order": 962,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.bu-shi-er-shi",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "It's not that he doesn't want to come; he just has no time.",
+   "ja": "他不是不想来，而是没有时间。",
+   "ruby": "他[tā]不[bú]是[shì]不[bù]想[xiǎng]来[lái]，而是[ér shì]没有[méi yǒu]时间[shí jiān]。",
+   "kana": "ta bu shi bu xiang lai ershi meiyou shijian",
+   "romaji": "Tā bú shì bù xiǎng lái, érshì méiyǒu shíjiān.",
+   "note": "不是 A，而是 B = not A but B.",
+   "pattern": "不是……而是……",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z21-L01",
+   "level": 5,
+   "order": 963,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.jue-ding-ming-nian-zai-qu",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "So I've decided to go next year instead.",
+   "ja": "所以我决定明年再去。",
+   "ruby": "所以[suǒ yǐ]我[wǒ]决定[jué dìng]明年[míng nián]再[zài]去[qù]。",
+   "kana": "suoyi wo jueding mingnian zai qu",
+   "romaji": "Suǒyǐ wǒ juédìng míngnián zài qù.",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z21-L01",
+   "level": 5,
+   "order": 964,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.ling-wai",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "Also, I have one more question.",
+   "ja": "另外，我还有一个问题。",
+   "ruby": "另外[lìng wài]，我[wǒ]还[hái]有[yǒu]一[yí]个[ge]问题[wèn tí]。",
+   "kana": "lingwai wo hai you yi ge wenti",
+   "romaji": "Lìngwài, wǒ hái yǒu yí ge wèntí.",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z21-L01",
+   "level": 5,
+   "order": 965,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.zong-zhi",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "In short, I think this approach is worth a try.",
+   "ja": "总之，我觉得这个办法可以试试。",
+   "ruby": "总之[zǒng zhī]，我[wǒ]觉得[jué de]这个[zhè ge]办法[bàn fǎ]可以[kě yǐ]试试[shì shi]。",
+   "kana": "zongzhi wo juede zhege banfa keyi shishi",
+   "romaji": "Zǒngzhī, wǒ juéde zhège bànfǎ kěyǐ shìshi.",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z21-L01",
+   "level": 5,
+   "order": 966,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.word-er-qie",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "moreover, and also",
+   "ja": "而且",
+   "ruby": "而且[ér qiě]",
+   "kana": "erqie",
+   "romaji": "érqiě",
+   "tags": [
+    "ext",
+    "word"
+   ],
+   "lesson": "Z21-L01",
+   "level": 5,
+   "order": 967,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.bei-tou-le",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "My bike has been stolen.",
+   "ja": "我的自行车被偷了。",
+   "ruby": "我[wǒ]的[de]自行车[zì xíng chē]被[bèi]偷[tōu]了[le]。",
+   "kana": "wo de zixingche bei tou le",
+   "romaji": "Wǒ de zìxíngchē bèi tōu le.",
+   "note": "被 marks the passive, usually for something unwelcome.",
+   "pattern": "A 被 (B) + verb",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z21-L02",
+   "level": 5,
+   "order": 968,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.bei-biao-yang",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "He was praised by his boss.",
+   "ja": "他被老板表扬了。",
+   "ruby": "他[tā]被[bèi]老板[lǎo bǎn]表扬[biǎo yáng]了[le]。",
+   "kana": "ta bei laoban biaoyang le",
+   "romaji": "Tā bèi lǎobǎn biǎoyáng le.",
+   "note": "3rd + 3rd tone: láo bǎn.",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z21-L02",
+   "level": 5,
+   "order": 969,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.lian-dou",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "He's so busy he doesn't even have time to eat.",
+   "ja": "他忙得连吃饭的时间都没有。",
+   "ruby": "他[tā]忙[máng]得[de]连[lián]吃饭[chī fàn]的[de]时间[shí jiān]都[dōu]没有[méi yǒu]。",
+   "kana": "ta mang de lian chifan de shijian dou meiyou",
+   "romaji": "Tā máng de lián chīfàn de shíjiān dōu méiyǒu.",
+   "note": "连 A 都 = even A.",
+   "pattern": "连……都……",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z21-L02",
+   "level": 5,
+   "order": 970,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.dui-wo-lai-shuo",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "For me, the tones are the hardest part.",
+   "ja": "对我来说，声调最难。",
+   "ruby": "对[duì]我[wǒ]来说[lái shuō]，声调[shēng diào]最[zuì]难[nán]。",
+   "kana": "dui wo laishuo shengdiao zui nan",
+   "romaji": "Duì wǒ láishuō, shēngdiào zuì nán.",
+   "pattern": "对……来说",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z21-L02",
+   "level": 5,
+   "order": 971,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.yi-fang-mian",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "On the one hand the pay is good; on the other, there's a lot of pressure.",
+   "ja": "一方面工资高，另一方面压力也大。",
+   "ruby": "一方面[yì fāng miàn]工资[gōng zī]高[gāo]，另一方面[lìng yì fāng miàn]压力[yā lì]也[yě]大[dà]。",
+   "kana": "yifangmian gongzi gao lingyifangmian yali ye da",
+   "romaji": "Yìfāngmiàn gōngzī gāo, lìngyìfāngmiàn yālì yě dà.",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z21-L02",
+   "level": 5,
+   "order": 972,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.hear-ni-de-kan-fa-ne",
+   "cat": "feelings",
+   "kind": "hear",
+   "en": "What's your view?",
+   "ja": "你的看法呢？",
+   "ruby": "你[nǐ]的[de]看法[kàn fǎ]呢[ne]？",
+   "kana": "ni de kanfa ne",
+   "romaji": "Nǐ de kànfǎ ne?",
+   "replies": [
+    "zh.feelings.kan-fa-bu-tai-yi-yang",
+    "zh.feelings.wan-quan-tong-yi"
+   ],
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z21-L02",
+   "level": 5,
+   "order": 973,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.kan-fa-bu-tai-yi-yang",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "I see it a little differently.",
+   "ja": "我的看法跟你不太一样。",
+   "ruby": "我[wǒ]的[de]看法[kàn fǎ]跟[gēn]你[nǐ]不[bú]太[tài]一样[yí yàng]。",
+   "kana": "wo de kanfa gen ni bu tai yiyang",
+   "romaji": "Wǒ de kànfǎ gēn nǐ bú tài yíyàng.",
+   "replyTo": [
+    "zh.feelings.hear-ni-de-kan-fa-ne"
+   ],
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z21-L02",
+   "level": 5,
+   "order": 974,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.wan-quan-tong-yi",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "I completely agree with you.",
+   "ja": "我完全同意你的看法。",
+   "ruby": "我[wǒ]完全[wán quán]同意[tóng yì]你[nǐ]的[de]看法[kàn fǎ]。",
+   "kana": "wo wanquan tongyi ni de kanfa",
+   "romaji": "Wǒ wánquán tóngyì nǐ de kànfǎ.",
+   "replyTo": [
+    "zh.feelings.hear-ni-de-kan-fa-ne"
+   ],
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z21-L02",
+   "level": 5,
+   "order": 975,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.qi-shi",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "Actually, it isn't that simple.",
+   "ja": "其实，这个问题没有那么简单。",
+   "ruby": "其实[qí shí]，这个[zhè ge]问题[wèn tí]没有[méi yǒu]那么[nà me]简单[jiǎn dān]。",
+   "kana": "qishi zhege wenti meiyou name jiandan",
+   "romaji": "Qíshí, zhège wèntí méiyǒu nàme jiǎndān.",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z21-L02",
+   "level": 5,
+   "order": 976,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.fan-zheng",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "I'm free tomorrow anyway; I'll come with you.",
+   "ja": "反正我明天没事，我陪你去吧。",
+   "ruby": "反正[fǎn zhèng]我[wǒ]明天[míng tiān]没[méi]事[shì]，我[wǒ]陪[péi]你[nǐ]去[qù]吧[ba]。",
+   "kana": "fanzheng wo mingtian mei shi wo pei ni qu ba",
+   "romaji": "Fǎnzhèng wǒ míngtiān méi shì, wǒ péi nǐ qù ba.",
+   "note": "反正 = anyway, in any case.",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z21-L02",
+   "level": 5,
+   "order": 977,
+   "src": "new"
+  },
+  {
+   "id": "zh.feelings.word-kan-fa",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "view, opinion",
+   "ja": "看法",
+   "ruby": "看法[kàn fǎ]",
+   "kana": "kanfa",
+   "romaji": "kànfǎ",
+   "tags": [
+    "ext",
+    "word"
+   ],
+   "lesson": "Z21-L02",
+   "level": 5,
+   "order": 978,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.hear-you-shen-me-da-suan",
+   "cat": "talk",
+   "kind": "hear",
+   "en": "What are your plans for the future?",
+   "ja": "你以后有什么打算？",
+   "ruby": "你[nǐ]以后[yǐ hòu]有[yǒu]什么[shén me]打算[dǎ suàn]？",
+   "kana": "ni yihou you shenme dasuan",
+   "romaji": "Nǐ yǐhòu yǒu shénme dǎsuàn?",
+   "replies": [
+    "zh.talk.da-suan-qu-liu-xue",
+    "zh.talk.hai-mei-xiang-hao"
+   ],
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z22-L01",
+   "level": 5,
+   "order": 979,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.da-suan-qu-liu-xue",
+   "cat": "talk",
+   "kind": "say",
+   "en": "I'm planning to study in China next year.",
+   "ja": "我打算明年去中国留学。",
+   "ruby": "我[wǒ]打算[dǎ suàn]明年[míng nián]去[qù]中国[Zhōng guó]留学[liú xué]。",
+   "kana": "wo dasuan mingnian qu zhongguo liuxue",
+   "romaji": "Wǒ dǎsuàn míngnián qù Zhōngguó liúxué.",
+   "replyTo": [
+    "zh.talk.hear-you-shen-me-da-suan"
+   ],
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z22-L01",
+   "level": 5,
+   "order": 980,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.hai-mei-xiang-hao",
+   "cat": "talk",
+   "kind": "say",
+   "en": "I haven't decided yet.",
+   "ja": "我还没想好。",
+   "ruby": "我[wǒ]还[hái]没[méi]想好[xiǎng hǎo]。",
+   "kana": "wo hai mei xianghao",
+   "romaji": "Wǒ hái méi xiǎnghǎo.",
+   "note": "3rd + 3rd tone: xiáng hǎo.",
+   "replyTo": [
+    "zh.talk.hear-you-shen-me-da-suan"
+   ],
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z22-L01",
+   "level": 5,
+   "order": 981,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.deng-bi-ye-yi-hou",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "Once I graduate, I want to go travelling.",
+   "ja": "等我毕业以后，我想去旅行。",
+   "ruby": "等[děng]我[wǒ]毕业[bì yè]以后[yǐ hòu]，我[wǒ]想[xiǎng]去[qù]旅行[lǚ xíng]。",
+   "kana": "deng wo biye yihou wo xiang qu lvxing",
+   "romaji": "Děng wǒ bìyè yǐhòu, wǒ xiǎng qù lǚxíng.",
+   "note": "等……以后 = once ... (in the future).",
+   "pattern": "等……以后",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z22-L01",
+   "level": 5,
+   "order": 982,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.ru-guo-de-hua",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "If I get the chance, I'd like to work abroad.",
+   "ja": "如果有机会的话，我想在国外工作。",
+   "ruby": "如果[rú guǒ]有[yǒu]机会[jī huì]的话[de huà]，我[wǒ]想[xiǎng]在[zài]国外[guó wài]工作[gōng zuò]。",
+   "kana": "ruguo you jihui dehua wo xiang zai guowai gongzuo",
+   "romaji": "Rúguǒ yǒu jīhuì dehuà, wǒ xiǎng zài guówài gōngzuò.",
+   "pattern": "如果……的话",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z22-L01",
+   "level": 5,
+   "order": 983,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.zhun-bei-hsk",
+   "cat": "talk",
+   "kind": "say",
+   "en": "I'm preparing for the HSK 4 exam.",
+   "ja": "我正在准备HSK四级考试。",
+   "ruby": "我[wǒ]正在[zhèng zài]准备[zhǔn bèi]{HSK|HSK}四级[sì jí]考试[kǎo shì]。",
+   "kana": "wo zhengzai zhunbei hsk siji kaoshi",
+   "romaji": "Wǒ zhèngzài zhǔnbèi HSK sìjí kǎoshì.",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z22-L01",
+   "level": 5,
+   "order": 984,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.xi-wang-zhao-dao-gong-zuo",
+   "cat": "talk",
+   "kind": "say",
+   "en": "I hope I can find a good job.",
+   "ja": "我希望能找到一个好工作。",
+   "ruby": "我[wǒ]希望[xī wàng]能[néng]找到[zhǎo dào]一[yí]个[ge]好[hǎo]工作[gōng zuò]。",
+   "kana": "wo xiwang neng zhaodao yi ge hao gongzuo",
+   "romaji": "Wǒ xīwàng néng zhǎodào yí ge hǎo gōngzuò.",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z22-L01",
+   "level": 5,
+   "order": 985,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.ji-hua-qu-yun-nan",
+   "cat": "talk",
+   "kind": "say",
+   "en": "We're planning a trip to Yunnan next month.",
+   "ja": "我们计划下个月去云南旅行。",
+   "ruby": "我们[wǒ men]计划[jì huà]下[xià]个[ge]月[yuè]去[qù]云南[Yún nán]旅行[lǚ xíng]。",
+   "kana": "women jihua xia ge yue qu yunnan lvxing",
+   "romaji": "Wǒmen jìhuà xià ge yuè qù Yúnnán lǚxíng.",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z22-L01",
+   "level": 5,
+   "order": 986,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.zhu-ni-cheng-gong",
+   "cat": "talk",
+   "kind": "say",
+   "en": "Good luck! I wish you success!",
+   "ja": "祝你成功！",
+   "ruby": "祝[zhù]你[nǐ]成功[chéng gōng]！",
+   "kana": "zhu ni chenggong",
+   "romaji": "Zhù nǐ chénggōng!",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z22-L01",
+   "level": 5,
+   "order": 987,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.jiang-lai-de-shi",
+   "cat": "talk",
+   "kind": "say",
+   "en": "Nobody knows what the future holds.",
+   "ja": "将来的事，谁也不知道。",
+   "ruby": "将来[jiāng lái]的[de]事[shì]，谁[shéi]也[yě]不[bù]知道[zhī dào]。",
+   "kana": "jianglai de shi shei ye bu zhidao",
+   "romaji": "Jiānglái de shì, shéi yě bù zhīdào.",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z22-L01",
+   "level": 5,
+   "order": 988,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.word-ji-hui",
+   "cat": "talk",
+   "kind": "say",
+   "en": "chance, opportunity",
+   "ja": "机会",
+   "ruby": "机会[jī huì]",
+   "kana": "jihui",
+   "romaji": "jīhuì",
+   "tags": [
+    "ext",
+    "word"
+   ],
+   "lesson": "Z22-L01",
+   "level": 5,
+   "order": 989,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.yi-dao-jia-jiu",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "I'll call you as soon as I get home.",
+   "ja": "我一到家就给你打电话。",
+   "ruby": "我[wǒ]一[yí]到[dào]家[jiā]就[jiù]给[gěi]你[nǐ]打[dǎ]电话[diàn huà]。",
+   "kana": "wo yi dao jia jiu gei ni da dianhua",
+   "romaji": "Wǒ yí dào jiā jiù gěi nǐ dǎ diànhuà.",
+   "note": "一 A 就 B = as soon as A, B.",
+   "pattern": "一……就……",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z22-L02",
+   "level": 5,
+   "order": 990,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.yue-xue-yue-you-yi-si",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "The more you learn Chinese, the more interesting it gets.",
+   "ja": "中文越学越有意思。",
+   "ruby": "中文[Zhōng wén]越[yuè]学[xué]越[yuè]有意思[yǒu yì si]。",
+   "kana": "zhongwen yue xue yue youyisi",
+   "romaji": "Zhōngwén yuè xué yuè yǒuyìsi.",
+   "pattern": "越 A 越 B",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z22-L02",
+   "level": 5,
+   "order": 991,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.zi-cong-lai-le-bei-jing",
+   "cat": "talk",
+   "kind": "say",
+   "en": "Since I came to Beijing I've spoken Chinese every day.",
+   "ja": "自从来了北京，我每天都说中文。",
+   "ruby": "自从[zì cóng]来[lái]了[le]北京[Běi jīng]，我[wǒ]每天[měi tiān]都[dōu]说[shuō]中文[Zhōng wén]。",
+   "kana": "zicong lai le beijing wo meitian dou shuo zhongwen",
+   "romaji": "Zìcóng lái le Běijīng, wǒ měitiān dōu shuō Zhōngwén.",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z22-L02",
+   "level": 5,
+   "order": 992,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.qu-nian-jie-hun-le",
+   "cat": "talk",
+   "kind": "say",
+   "en": "They got married last year.",
+   "ja": "他们去年结婚了。",
+   "ruby": "他们[tā men]去年[qù nián]结婚[jié hūn]了[le]。",
+   "kana": "tamen qunian jiehun le",
+   "romaji": "Tāmen qùnián jiéhūn le.",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z22-L02",
+   "level": 5,
+   "order": 993,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.sheng-le-nv-er",
+   "cat": "talk",
+   "kind": "say",
+   "en": "She had a baby girl last month.",
+   "ja": "她上个月生了一个女儿。",
+   "ruby": "她[tā]上[shàng]个[ge]月[yuè]生[shēng]了[le]一[yí]个[ge]女儿[nǚ ér]。",
+   "kana": "ta shang ge yue sheng le yi ge nver",
+   "romaji": "Tā shàng ge yuè shēng le yí ge nǚ'ér.",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z22-L02",
+   "level": 5,
+   "order": 994,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.huan-le-gong-zuo",
+   "cat": "talk",
+   "kind": "say",
+   "en": "I changed jobs recently.",
+   "ja": "我最近换了工作。",
+   "ruby": "我[wǒ]最近[zuì jìn]换[huàn]了[le]工作[gōng zuò]。",
+   "kana": "wo zuijin huan le gongzuo",
+   "romaji": "Wǒ zuìjìn huàn le gōngzuò.",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z22-L02",
+   "level": 5,
+   "order": 995,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.hear-zhao-dao-xin-gong-zuo",
+   "cat": "talk",
+   "kind": "hear",
+   "en": "I hear you've found a new job: congratulations!",
+   "ja": "听说你找到新工作了，恭喜！",
+   "ruby": "听说[tīng shuō]你[nǐ]找到[zhǎo dào]新[xīn]工作[gōng zuò]了[le]，恭喜[gōng xǐ]！",
+   "kana": "tingshuo ni zhaodao xin gongzuo le gongxi",
+   "romaji": "Tīngshuō nǐ zhǎodào xīn gōngzuò le, gōngxǐ!",
+   "replies": [
+    "zh.talk.yun-qi-hao"
+   ],
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z22-L02",
+   "level": 5,
+   "order": 996,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.yun-qi-hao",
+   "cat": "talk",
+   "kind": "say",
+   "en": "Thanks! I got lucky.",
+   "ja": "谢谢！运气好。",
+   "ruby": "谢谢[xiè xie]！运气[yùn qi]好[hǎo]。",
+   "kana": "xiexie yunqi hao",
+   "romaji": "Xièxie! Yùnqi hǎo.",
+   "replyTo": [
+    "zh.talk.hear-zhao-dao-xin-gong-zuo"
+   ],
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z22-L02",
+   "level": 5,
+   "order": 997,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.ban-dao-shang-hai",
+   "cat": "talk",
+   "kind": "say",
+   "en": "Our family has moved to Shanghai.",
+   "ja": "我们家搬到上海了。",
+   "ruby": "我们[wǒ men]家[jiā]搬[bān]到[dào]上海[Shàng hǎi]了[le]。",
+   "kana": "women jia ban dao shanghai le",
+   "romaji": "Wǒmen jiā bān dào Shànghǎi le.",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z22-L02",
+   "level": 5,
+   "order": 998,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.shi-jian-guo-de-kuai",
+   "cat": "talk",
+   "kind": "say",
+   "en": "Time flies!",
+   "ja": "时间过得真快！",
+   "ruby": "时间[shí jiān]过[guò]得[de]真[zhēn]快[kuài]！",
+   "kana": "shijian guo de zhen kuai",
+   "romaji": "Shíjiān guò de zhēn kuài!",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z22-L02",
+   "level": 5,
+   "order": 999,
+   "src": "new"
+  },
+  {
+   "id": "zh.talk.word-tui-xiu",
+   "cat": "talk",
+   "kind": "say",
+   "en": "retire",
+   "ja": "退休",
+   "ruby": "退休[tuì xiū]",
+   "kana": "tuixiu",
+   "romaji": "tuìxiū",
+   "tags": [
+    "ext",
+    "word"
+   ],
+   "lesson": "Z22-L02",
+   "level": 5,
+   "order": 1000,
    "src": "new"
   }
  ]
