@@ -60,6 +60,10 @@ export const CAMERA_FALLBACKS = {
   other: ['Use Google Lens on your phone.'],
 };
 
+export function cameraFallbacks(platform = PLATFORM, langName = 'Japanese') {
+  return (CAMERA_FALLBACKS[platform] || CAMERA_FALLBACKS.other).map((t) => t.replace(/Japanese/g, langName));
+}
+
 export function translateUrl(text, sl = 'ru', tl = 'ja') {
   return `https://translate.google.com/?sl=${sl}&tl=${tl}&text=${enc(text || '')}&op=translate`;
 }

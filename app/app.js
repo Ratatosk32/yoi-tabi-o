@@ -10,7 +10,9 @@ import * as studyView from './modules/view-study.js';
 import * as showView from './modules/view-show.js';
 import * as kanjiView from './modules/view-kanji.js';
 import * as toolsView from './modules/view-tools.js';
-import * as dict from './modules/dict.js';
+import { dictFor } from './modules/dict.js';
+import * as L from './modules/lang.js';
+import { loadLangData } from './modules/loader.js';
 import { appVersion, consumeUpdatedFlag } from './modules/updates.js';
 import { takeDailySnapshot, idbKV } from './modules/snapshots.js';
 
@@ -33,63 +35,37 @@ const DEFAULT_SETTINGS = {
   lastBackup: null,
 };
 
-const store = createStore();
+const GLOBAL_SETTINGS = ['lensVariant', 'lastBackup'];
+
+const rootStore = createStore();
 
 const ctx = {
-  store,
+  rootStore,
+  store: rootStore,
+  lang: L.current(),
   data: null,
-  settings() { return { ...DEFAULT_SETTINGS, ...store.get('settings', {}) }; },
-  setSetting(k, v) { store.update('settings', {}, (s) => ({ ...s, [k]: v })); },
+  dataByLang: {},
+  settings() {
+    const global = rootStore.get('settings', {}) || {};
+    const own = this.store.get('settings', {}) || {};
+    const shared = Object.fromEntries(GLOBAL_SETTINGS.filter((k) => k in global).map((k) => [k, global[k]]));
+    return { ...DEFAULT_SETTINGS, ...own, ...shared };
+  },
+  setSetting(k, v) {
+    const target = GLOBAL_SETTINGS.includes(k) ? rootStore : this.store;
+    target.update('settings', {}, (s) => ({ ...s, [k]: v }));
+  },
+  switchLang(id) { return switchLang(id); },
   go(hash) { if (location.hash !== hash) location.hash = hash; else route(); },
   rerender() { route(); },
   allItems() {
     // built-in + user phrases (a user phrase with the same id overrides the built-in one)
-    const user = (store.get('userItems', []) || []).map(completeItem);
+    const user = (this.store.get('userItems', []) || []).map(completeItem);
     if (!user.length) return this.data.items;
     const ids = new Set(user.map((u) => u.id));
     return [...this.data.items.filter((it) => !ids.has(it.id)), ...user];
   },
 };
-
-const LOAD_TIMEOUT_MS = 12000;
-
-/** fetch + JSON with a timeout: a stalled request must end in an error the user can retry, not an endless spinner. */
-async function loadJson(path) {
-  const ctl = new AbortController();
-  const timer = setTimeout(() => ctl.abort(), LOAD_TIMEOUT_MS);
-  try {
-    const r = await fetch(path, { signal: ctl.signal });
-    if (!r.ok) throw new Error(`${path}: HTTP ${r.status}`);
-    return await r.json();
-  } catch (e) {
-    if (e.name === 'AbortError') throw new Error(`${path}: no response in ${LOAD_TIMEOUT_MS / 1000} s`);
-    throw e;
-  } finally {
-    clearTimeout(timer);
-  }
-}
-
-async function loadData() {
-  // The curriculum (1003 items in 79 lessons) is the phrase source; v1 ids are kept, so SRS progress survives.
-  const [cur, kana, kanji] = await Promise.all([
-    loadJson('data/curriculum.json'), loadJson('data/kana.json'), loadJson('data/kanji.json'),
-  ]);
-  const items = cur.items.map(completeItem);
-  const lessons = cur.lessons.map((l, i) => ({ ...l, index: i }));
-  return {
-    version: `${cur.format}.${cur.version}`,
-    categories: cur.categories,
-    catById: Object.fromEntries(cur.categories.map((c) => [c.id, c])),
-    items,
-    byId: Object.fromEntries(items.map((it) => [it.id, it])),
-    units: cur.units,
-    unitById: Object.fromEntries(cur.units.map((u) => [u.id, u])),
-    lessons,
-    lessonByCode: Object.fromEntries(lessons.map((l) => [l.code, l])),
-    kana,
-    kanji,
-  };
-}
 
 // ---------- Router ----------
 function parseHash() {
@@ -116,7 +92,7 @@ function route() {
     view.append(h('div.card.error', 'Render error: ' + e.message));
   }
   const header = view.querySelector('header.top');
-  if (header) header.append(themeToggle());
+  if (header) header.append(langSwitch(), themeToggle());
   view.scrollTop = 0;
   window.scrollTo(0, 0);
 }
@@ -141,6 +117,95 @@ function themeToggle() {
     on: { click: () => { setTheme(currentTheme() === 'dark' ? 'light' : 'dark'); btn.setAttribute('aria-label', label()); btn.title = label(); } },
   });
   return btn;
+}
+
+function langSwitch() {
+  return h('div.lang-switch', { role: 'group', 'aria-label': 'Course language' },
+    L.LANG_IDS.map((id) => {
+      const lang = L.LANGS[id];
+      const on = id === ctx.lang.id;
+      return h('button.lang-opt' + (on ? '.on' : ''), {
+        type: 'button', lang: lang.tag, 'data-lang': id, 'aria-pressed': on ? 'true' : 'false', title: `${lang.name} course`,
+        on: { click: () => { if (!on) switchLang(id); } },
+      }, h('span.lang-full', lang.label), h('span.lang-short', { 'aria-hidden': 'true' }, lang.short));
+    }));
+}
+
+function applyLangToDocument() {
+  const el = document.documentElement;
+  el.lang = ctx.lang.id === 'ja' ? 'en' : ctx.lang.tag;
+  el.dataset.lang = ctx.lang.id;
+}
+
+function activate(id, data) {
+  ctx.lang = L.setActive(id);
+  L.saveLang(id);
+  ctx.store = rootStore.lang(id);
+  ctx.data = data;
+  if (!ctx.settings().startDate) ctx.setSetting('startDate', todayStr());
+  applyLangToDocument();
+}
+
+function showLangLoading(lang) {
+  clear(document.getElementById('view')).append(h('p.loading#lang-loading', { role: 'status' }, `Loading the ${lang.name} course…`));
+}
+
+function showLangError(lang, e, fallback) {
+  console.warn(e);
+  const view = clear(document.getElementById('view'));
+  view.append(h('div.card.error#lang-error', { role: 'alert' },
+    h('p', h('strong', `The ${lang.name} course could not be downloaded.`)),
+    h('p.small', navigator.onLine === false
+      ? 'You are offline and it is not saved on this device yet. Connect once and tap Retry.'
+      : 'Check the connection and tap Retry. After one download it works offline.'),
+    h('p.small.muted', String(e?.message || e)),
+    h('div.actions.wrap',
+      h('button.btn.primary#lang-retry', { type: 'button', on: { click: () => switchLang(lang.id, { force: true }) } }, 'Retry'),
+      fallback ? h('button.btn#lang-back', { type: 'button', on: { click: fallback.go } }, fallback.label) : null)));
+}
+
+let switching = null;
+async function switchLang(id, { force = false } = {}) {
+  if (!L.isLang(id) || (!force && id === ctx.lang.id && ctx.data)) return;
+  const lang = L.LANGS[id];
+  const previous = ctx.data ? ctx.lang : null;
+  const token = {};
+  switching = token;
+  if (!ctx.dataByLang[id]) showLangLoading(lang);
+  let data;
+  try {
+    data = ctx.dataByLang[id] || await loadLangData(id);
+  } catch (e) {
+    if (switching !== token) return;
+    const fallback = previous ? { label: `Stay with ${previous.name}`, go: () => route() } : { label: 'Use Japanese', go: () => switchLang('ja') };
+    showLangError(lang, e, fallback);
+    return;
+  }
+  if (switching !== token) return;
+  ctx.dataByLang[id] = data;
+  activate(id, data);
+  if (id !== 'ja') globalThis.navigator?.serviceWorker?.ready.then((reg) => reg.active?.postMessage('cacheZh')).catch(() => {});
+  warnIfNoVoice();
+  scheduleDictLoad();
+  const { tab } = parseHash();
+  const hash = '#/' + tab;
+  if (location.hash !== hash) location.hash = hash; else route();
+}
+
+function warnIfNoVoice() {
+  if (!ctx.ttsStatus?.supported) return;
+  const zh = ctx.lang.id === 'zh';
+  const has = zh ? ctx.ttsStatus.hasChinese : ctx.ttsStatus.hasJapanese;
+  const key = 'ttsWarned.' + ctx.lang.id;
+  if (has || sessionStorageGet(key)) return;
+  sessionStorageSet(key, '1');
+  toast(`No ${ctx.lang.name} voice found — see Tools → Speech`, 4000);
+}
+
+function scheduleDictLoad() {
+  const idle = (fn) => (typeof requestIdleCallback === 'function' ? requestIdleCallback(fn, { timeout: 3000 }) : setTimeout(fn, 1500));
+  const d = dictFor(ctx.lang.id);
+  idle(() => d.load().catch(() => {}));
 }
 
 function buildShell() {
@@ -219,40 +284,37 @@ function showLoadError(e) {
 
 let booted = false;
 async function boot() {
-  showLoading();
+  const id = L.savedLang();
+  const lang = L.LANGS[id];
+  if (id === 'ja') showLoading(); else showLangLoading(lang);
+  let data;
   try {
-    ctx.data = await loadData();
+    data = ctx.dataByLang[id] || await loadLangData(id);
   } catch (e) {
-    showLoadError(e);
+    clearTimeout(window.__bootTimer);
+    if (id === 'ja') showLoadError(e);
+    else showLangError(lang, e, { label: 'Use Japanese', go: () => { L.saveLang('ja'); boot(); } });
     return;
   }
+  ctx.dataByLang[id] = data;
+  activate(id, data);
   clearTimeout(window.__bootTimer);
   if (!booted) {
     booted = true;
     window.addEventListener('hashchange', route);
-    tts.init().then((st) => {
-      ctx.ttsStatus = st;
-      if (st.supported && !st.hasJapanese && !sessionStorageGet('ttsWarned')) {
-        sessionStorageSet('ttsWarned', '1');
-        toast('No Japanese voice found — see Tools → Speech', 4000);
-      }
-    });
+    tts.init().then((st) => { ctx.ttsStatus = st; warnIfNoVoice(); });
   }
   route();
   document.documentElement.dataset.ready = '1';
-  if (consumeUpdatedFlag()) appVersion().then((v) => toast(v ? `Updated to ${v}` : 'Updated')); // after Tools > Check for updates
-  // The dictionary loads after the first paint, when the browser is idle (core first, then the rest in chunks)
-  const idle = (fn) => (typeof requestIdleCallback === 'function' ? requestIdleCallback(fn, { timeout: 3000 }) : setTimeout(fn, 1500));
-  idle(() => dict.load().catch(() => { /* offline before the first download: retried when the dictionary is opened */ }));
+  if (consumeUpdatedFlag()) appVersion().then((v) => toast(v ? `Updated to ${v}` : 'Updated'));
+  scheduleDictLoad();
 }
 
 async function start() {
   document.documentElement.dataset.platform = PLATFORM;
   try {
     buildShell();
-    const s = ctx.settings();
-    store.migrate(); // data saved by older versions (SRS mode keys, user phrases ru → en)
-    if (!s.startDate) ctx.setSetting('startDate', todayStr());
+    rootStore.migrate(); // data saved by older versions (SRS mode keys, user phrases ru → en)
   } catch (e) {
     // e.g. storage blocked: the shell is up, so say what happened instead of hanging on "Loading…"
     showLoadError(e);
@@ -265,7 +327,7 @@ async function start() {
   addEventListener('pointerdown', askPersist, true);
   addEventListener('keydown', askPersist, true);
   // Daily local snapshot (IndexedDB, last 3 days): 'Restore yesterday's state' in Tools
-  setTimeout(() => takeDailySnapshot(ctx.store, idbKV(), todayStr()).catch(() => { /* no IndexedDB */ }), 1000);
+  setTimeout(() => takeDailySnapshot(rootStore, idbKV(), todayStr()).catch(() => { /* no IndexedDB */ }), 1000);
 }
 
 export async function requestPersist() {

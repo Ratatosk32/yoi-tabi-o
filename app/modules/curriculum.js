@@ -184,6 +184,11 @@ export function lessonHasChain(data, code) {
   return lessonItems(data, code).filter((it) => it.kind === 'hear' && it.replies?.length).length >= 2;
 }
 
+export function lessonScenes(data) {
+  return data.lessons.filter((l) => lessonHasChain(data, l.code))
+    .map((l) => ({ id: l.code, title: `${l.code} ${l.title}`, lessons: [l.code], badge: `Ready: ${l.title}` }));
+}
+
 // ---------- Trip: situations and pre-flight (§3.7) ----------
 export const SITUATIONS = [
   { id: 'register', title: 'Register (konbini, shops)', lessons: ['U01-L04', 'U01-L05', 'U04-L05', 'U14-L01'] },

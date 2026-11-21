@@ -27,6 +27,7 @@
         document.documentElement.dataset.theme = t;
         document.querySelectorAll('meta[name=theme-color]').forEach(function (m) { m.content = t === 'dark' ? '#171613' : '#f5f1e7'; });
       }
+      if (localStorage.getItem('jt.lang') === 'zh') { document.documentElement.lang = 'zh-CN'; document.documentElement.dataset.lang = 'zh'; }
     } catch (e) { /* storage unavailable — system theme */ }
   </script>
   <link rel="preload" href="fonts/shippori-mincho-500.kana.woff2" as="font" type="font/woff2" crossorigin>

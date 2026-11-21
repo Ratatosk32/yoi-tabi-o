@@ -1,6 +1,7 @@
 // Shared UI helpers: DOM creation, furigana, speak buttons, full-screen card, toasts.
-import { parseRuby, ttsText } from './text.js';
+import { parseRuby, ttsText, rubyPairs } from './text.js';
 import * as tts from './tts.js';
+import * as L from './lang.js';
 
 /** h('div.cls#id', {attrs, on:{click}}, ...children) */
 export function h(sel, props, ...children) {
@@ -43,18 +44,22 @@ export function add(el, ...children) { append(el, children); return el; }
 
 export function clear(el) { while (el.firstChild) el.firstChild.remove(); return el; }
 
-/** Japanese text with furigana (<ruby>), always lang="ja". */
+/** Target-language text with readings (<ruby>), tagged with the active course language. */
 export function rubyEl(ruby, { furigana = true, cls = 'ja' } = {}) {
-  const span = h('span', { class: cls, lang: 'ja' });
+  const span = h('span', { class: cls, lang: L.tag() });
+  const perSyllable = L.isZh();
   for (const seg of parseRuby(ruby || '')) {
     if (seg.text != null) span.append(seg.text);
-    else if (furigana) span.append(h('ruby', seg.base, h('rp', '('), h('rt', seg.rt), h('rp', ')')));
-    else span.append(seg.base);
+    else if (!furigana) span.append(seg.base);
+    else {
+      const pairs = perSyllable ? rubyPairs(seg.base, seg.rt) : [[seg.base, seg.rt]];
+      for (const [base, rt] of pairs) span.append(h('ruby', base, h('rp', '('), h('rt', rt), h('rp', ')')));
+    }
   }
   return span;
 }
 
-export function jaText(text, cls = 'ja') { return h('span', { class: cls, lang: 'ja' }, text); }
+export function jaText(text, cls = 'ja') { return h('span', { class: cls, lang: L.tag() }, text); }
 
 /** Design icon mask (uses currentColor; never turns into an emoji on iOS). */
 export function ico(name) { return h('span.ico.ico-' + name, { 'aria-hidden': 'true' }); }
@@ -75,10 +80,10 @@ export function speakButtons(item, { text } = {}) {
 }
 
 export function speakItem(item, rate = 1.0, text) {
-  const t = text || ttsText(item);
+  const t = text || ttsText(item, L.activeId());
   return tts.speak(t, rate).then((r) => {
     if (r === 'unsupported') toast('Speech is not available in this browser');
-    else if (r.startsWith('error') && !/interrupted|canceled|not-allowed/.test(r)) toast('Could not speak: ' + r.slice(6) + '. Check the Japanese voice in Tools.');
+    else if (r.startsWith('error') && !/interrupted|canceled|not-allowed/.test(r)) toast('Could not speak: ' + r.slice(6) + `. Check the ${L.current().name} voice in Tools.`);
     return r;
   });
 }
@@ -93,7 +98,7 @@ export function toast(msg, ms = 2600) {
   toastTimer = setTimeout(() => el.classList.remove('show'), ms);
 }
 
-// ---------- Full-screen "show to a Japanese person" card ----------
+// ---------- Full-screen "show to a speaker" card ----------
 let wakeLock = null;
 async function lockScreen() {
   try { if ('wakeLock' in navigator) wakeLock = await navigator.wakeLock.request('screen'); } catch { wakeLock = null; }
@@ -111,7 +116,7 @@ export function showFullscreen({ lines, caption, speakText }) {
   const body = h('div.fs-body', { style: { '--fs-n': String(size) } },
     lines.map((l) => h('p.fs-line' + (l.small ? '.small' : ''),
       l.ruby ? rubyEl(l.ruby, { furigana: false, cls: 'fs-ja' }) : jaText(l.text, 'fs-ja'))));
-  const ov = h('div#fs.fs', { role: 'dialog', 'aria-modal': 'true', 'aria-label': 'Card to show' },
+  const ov = h('div#fs.fs', { role: 'dialog', 'aria-modal': 'true', 'aria-label': 'Card to show', 'data-lang': L.activeId() },
     body,
     caption ? h('p.fs-caption', caption) : null,
     h('div.fs-bar',
@@ -192,7 +197,7 @@ export function openSheet({ title, options, current, onPick, attr = 'data-opt' }
     type: 'button', [attr]: o.id, 'aria-pressed': o.id === current ? 'true' : 'false',
     on: { click: () => { closeSheet(); onPick(o.id); } },
   },
-  o.icon ? h('span.ci', { lang: 'ja', 'aria-hidden': 'true' }, o.icon) : null,
+  o.icon ? h('span.ci', { lang: L.tag(), 'aria-hidden': 'true' }, o.icon) : null,
   h('span.opt-label', o.label),
   o.count != null ? h('span.opt-count', String(o.count)) : null));
   const wrap = h('div#sheet.sheet-wrap', { on: { click: (e) => { if (e.target === wrap) closeSheet(); } } },
@@ -224,7 +229,7 @@ export function closeSheet(fromPop = false) {
 /** The button that opens a picker sheet: icon, current value, count, chevron. */
 export function pickerButton({ id, icon, label, count, onClick, title }) {
   return h('button.btn.picker', { type: 'button', id, 'aria-haspopup': 'dialog', 'aria-label': `${title}: ${label}. Change`, on: { click: onClick } },
-    icon ? h('span.ci', { lang: 'ja', 'aria-hidden': 'true' }, icon) : null,
+    icon ? h('span.ci', { lang: L.tag(), 'aria-hidden': 'true' }, icon) : null,
     h('span.picker-label', label),
     count != null ? h('span.picker-count', String(count)) : null,
     ico('chevron'));
@@ -251,9 +256,10 @@ export function downloadJson(obj, filename) {
 export function romajiEl(text, mode = 'show', cls = 'romaji') {
   if (!text) return null;
   if (mode !== 'tap') return h('div.' + cls, text);
+  const label = 'Show ' + L.current().words.reading;
   const btn = h('button.romaji-tap', {
-    type: 'button', 'aria-label': 'Show romaji',
+    type: 'button', 'aria-label': label,
     on: { click: (e) => { e.stopPropagation(); btn.replaceWith(h('div.' + cls, text)); } },
-  }, 'Show romaji');
+  }, label);
   return btn;
 }

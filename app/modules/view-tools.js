@@ -6,19 +6,25 @@ import { stats, todayStr } from './srs.js';
 import { KEYS } from './store.js';
 import * as S from './snapshots.js';
 import { kanaToHepburn } from './text.js';
-import * as D from './dict.js';
+import { dictFor } from './dict.js';
+import * as Lang from './lang.js';
+import { pinyinNumbersToMarks, pinyinSearchKey } from './text.js';
 import * as U from './updates.js';
 
 export function render(ctx, root, params = []) {
   if (params[0] === 'credits') { renderCredits(ctx, root); return; }
   const s = ctx.settings();
+  const zh = ctx.lang.id === 'zh';
+  const W = ctx.lang.words;
+  const langName = ctx.lang.name;
+  const D = dictFor(ctx.lang.id);
 
   // --- Camera / Lens ---
   const variant = L.lensVariant(s.lensVariant);
-  const fallbacks = L.CAMERA_FALLBACKS[L.PLATFORM] || L.CAMERA_FALLBACKS.other;
+  const fallbacks = L.cameraFallbacks(L.PLATFORM, langName);
   // This page is long: a row of jump links keeps every section (emergency numbers first) one tap away
   const JUMPS = [['emergency', 'Emergency'], ['lens', 'Camera'], ['translate', 'Translate'], ['maps', 'Maps'], ['tts-box', 'Speech'],
-    ['settings', 'Settings'], ['user-phrases', 'My phrases'], ['backup', 'Backup']];
+    ['settings', 'Settings'], ['user-phrases', 'My phrases'], ['backup', 'Backup']].filter(([id]) => !zh || (id !== 'emergency' && id !== 'maps'));
   root.append(
     h('header.top', h('h1', 'Tools')),
     h('nav.chips.jump', { 'aria-label': 'On this page' }, JUMPS.map(([id, label]) => h('button.chip', {
@@ -50,21 +56,20 @@ export function render(ctx, root, params = []) {
     for (const t of arr.slice(0, 8)) histBox.append(h('button.chip', { type: 'button', on: { click: () => { ta.value = t; } } }, t.length > 40 ? t.slice(0, 40) + '…' : t));
   };
   root.append(h('section.block#translate',
-    h('h2.section', 'Translate EN → JA'),
-    h('p.hint', 'Google Translate does the translation (download the offline Japanese pack). Copy the result and paste it into Show → Your own text.'),
+    h('h2.section', `Translate EN → ${ctx.lang.short}`),
+    h('p.hint', `Google Translate does the translation (download the offline ${langName} pack). Copy the result and paste it into Show → Your own text.`),
     ta,
     h('div.actions.wrap',
-      h('button.btn.primary', { type: 'button', on: { click: () => { const t = need(); if (t) L.open(L.translateUrl(t, 'en', 'ja')); drawHist(); } } }, 'Open in Translate'),
+      h('button.btn.primary', { type: 'button', on: { click: () => { const t = need(); if (t) L.open(L.translateUrl(t, 'en', W.translateTo)); drawHist(); } } }, 'Open in Translate'),
       h('button.btn', { type: 'button', on: { click: async () => { const t = need(); if (!t) return; const r = await L.shareText(t); if (r === 'unsupported') toast('Share is not available in this browser'); drawHist(); } } }, ico('share'), 'Share…'),
-      h('button.btn', { type: 'button', on: { click: () => { const t = need(); if (t) L.open(L.translateAppUrl(t, 'en', 'ja')); drawHist(); } } }, 'In the Translate app'),
+      h('button.btn', { type: 'button', on: { click: () => { const t = need(); if (t) L.open(L.translateAppUrl(t, 'en', W.translateTo)); drawHist(); } } }, 'In the Translate app'),
     ),
     histBox,
   ));
   drawHist();
 
-  // --- Maps ---
   const q = h('input#maps-q', { type: 'text', placeholder: 'Station, address or place', 'aria-label': 'Place' });
-  root.append(h('section.block#maps',
+  if (!zh) root.append(h('section.block#maps',
     h('h2.section', 'Maps'),
     q,
     h('div.actions.wrap',
@@ -72,8 +77,7 @@ export function render(ctx, root, params = []) {
       h('button.btn', { type: 'button', on: { click: () => L.open(L.mapsTransitUrl(q.value.trim())) } }, 'Transit directions')),
   ));
 
-  // --- Emergency numbers ---
-  root.append(h('section.block#emergency',
+  if (!zh) root.append(h('section.block#emergency',
     h('h2.section', 'Emergency numbers'),
     h('div.tels',
       h('a.tel', { href: 'tel:110' }, h('b', '110'), h('span', 'Police'), ico('phone')),
@@ -83,26 +87,29 @@ export function render(ctx, root, params = []) {
     h('p.hint', 'Tap a number to call. Emergency phrases are in Phrases → “Child, health, emergencies”.'),
   ));
 
-  // --- Speech ---
-  const ttsBox = h('section.block#tts-box', h('h2.section', 'Speech (Japanese voice)'));
+  const ttsBox = h('section.block#tts-box');
   root.append(ttsBox);
   const drawTts = (st) => {
-    clear(ttsBox).append(h('h2.section', 'Speech (Japanese voice)'));
+    const has = zh ? st.hasChinese : st.hasJapanese;
+    const voiceName = zh ? st.zhVoiceName : st.jaVoiceName;
+    const androidPack = zh ? 'Chinese (Mandarin, China)' : 'Japanese (日本語)';
+    const iosVoices = zh ? 'Chinese (China mainland), e.g. Tingting or Lili' : 'Japanese';
+    clear(ttsBox).append(h('h2.section', `Speech (${langName} voice)`));
     if (!st.supported) ttsBox.append(h('p.warn', 'This browser does not support speech.'));
-    else if (st.hasJapanese) ttsBox.append(h('p.ok', 'Japanese voice found: ' + st.jaVoiceName));
-    else ttsBox.append(h('p.warn', `No Japanese voice found (voices on this device: ${st.voiceCount}). Speech may be silent offline.`),
+    else if (has) ttsBox.append(h('p.ok', `${langName} voice found: ` + voiceName));
+    else ttsBox.append(h('p.warn', `No ${langName} voice found (voices on this device: ${st.voiceCount}). Speech may be silent offline.`),
       L.PLATFORM === 'ios'
         ? h('ol.small',
-          h('li', 'iPhone Settings → Accessibility → Spoken Content → Voices → Japanese.'),
-          h('li', 'Download a voice (e.g. Kyoko or Otoya; Enhanced quality is a bigger download).'),
+          h('li', `iPhone Settings → Accessibility → Spoken Content → Voices → ${iosVoices}.`),
+          h('li', zh ? 'Download a voice (Enhanced quality is a bigger download).' : 'Download a voice (e.g. Kyoko or Otoya; Enhanced quality is a bigger download).'),
           h('li', 'Close and reopen the app from the home screen, then test in airplane mode.'))
         : h('ol.small',
           h('li', 'Android Settings → System → Languages → Text-to-speech output.'),
-          h('li', 'Engine: Speech Services by Google → gear icon → Install voice data → Japanese (日本語).'),
+          h('li', `Engine: Speech Services by Google → gear icon → Install voice data → ${androidPack}.`),
           h('li', 'Restart the app and test in airplane mode.')));
+    const samples = zh ? ['你好，我是学生。', '三块五'] : ['袋はご利用ですか', '12800円'];
     ttsBox.append(h('div.actions.wrap',
-      h('button.btn', { type: 'button', on: { click: () => tts.speak('袋はご利用ですか', 1.0) } }, ico('play'), 'Test: 袋はご利用ですか'),
-      h('button.btn', { type: 'button', on: { click: () => tts.speak('12800円', 1.0) } }, ico('play'), 'Test: 12800円'),
+      samples.map((t) => h('button.btn', { type: 'button', on: { click: () => tts.speak(t, 1.0) } }, ico('play'), 'Test: ', h('span', { lang: ctx.lang.tag }, t))),
       h('a.btn', { href: 'diag.html' }, 'Diagnostics')));
   };
   drawTts(tts.status());
@@ -121,33 +128,35 @@ export function render(ctx, root, params = []) {
   root.append(h('section.block#settings',
     h('h2.section', 'Settings'),
     h('label.field', h('span', 'How to launch Lens'), lensSel),
-    h('label.field', h('span', 'Romaji'), romajiSel),
-    h('label.field', h('span', 'Flight date (pre-flight run on the last 3 days)'), tripIn),
-    h('label.field', h('span', 'Study start date (for the weekly plan)'), startIn),
-    h('label.toggle', h('input', { type: 'checkbox', checked: s.furigana, on: { change: (e) => ctx.setSetting('furigana', e.target.checked) } }), h('span', 'Show furigana (readings above kanji)')),
+    h('label.field', h('span', W.Reading), romajiSel),
+    zh ? null : h('label.field', h('span', 'Flight date (pre-flight run on the last 3 days)'), tripIn),
+    h('label.field', h('span', zh ? 'Study start date (Chinese course)' : 'Study start date (for the weekly plan)'), startIn),
+    h('label.toggle', h('input', { type: 'checkbox', checked: s.furigana, on: { change: (e) => ctx.setSetting('furigana', e.target.checked) } }), h('span', W.rubyLong)),
   ));
 
   // --- My phrases ---
-  root.append(userPhrases(ctx));
+  root.append(zh ? userPhrasesZh(ctx) : userPhrases(ctx));
 
   // --- Backup ---
   const st = stats(ctx.store.get('srs', {}));
+  const backupStore = ctx.rootStore || ctx.store;
+  const perLang = Lang.LANG_IDS.map((id) => `${Lang.LANGS[id].name} ${stats(backupStore.lang(id).get('srs', {}) || {}).total}`).join(', ');
   const imp = h('input', { type: 'file', accept: 'application/json,.json', on: { change: async (e) => {
     const f = e.target.files[0]; if (!f) return;
     try {
-      const changed = ctx.store.importAll(await f.text(), 'merge');
+      const changed = backupStore.importAll(await f.text(), 'merge');
       toast('Imported: ' + changed.join(', '));
     } catch (err) { toast('Import failed: ' + err.message, 4000); }
   } } });
   const last = s.lastBackup ? new Date(s.lastBackup).toLocaleDateString('en-US') : 'never';
-  const backupText = () => JSON.stringify(ctx.store.exportAll());
+  const backupText = () => JSON.stringify(backupStore.exportAll());
   const backedUp = (msg) => { ctx.setSetting('lastBackup', new Date().toISOString()); toast(msg); };
   // Paste: a text box (works everywhere; reading the clipboard directly needs a permission prompt)
   const pasteBox = h('textarea#backup-text', { rows: '4', placeholder: 'Paste a backup here (it starts with {"app":"japan-trip"…)', 'aria-label': 'Backup text', spellcheck: 'false' });
   const pastePanel = h('div.paste-panel#paste-panel', { hidden: true }, pasteBox,
     h('button.btn.primary.wide#restore-text', { type: 'button', on: { click: () => {
       try {
-        const changed = ctx.store.importAll(pasteBox.value.trim(), 'merge');
+        const changed = backupStore.importAll(pasteBox.value.trim(), 'merge');
         toast(changed.length ? 'Restored: ' + changed.join(', ') : 'Nothing to restore in this text', 3500);
         if (changed.length) { pasteBox.value = ''; pastePanel.hidden = true; }
       } catch (err) { toast('This is not a Japan Trip backup: ' + err.message, 4000); }
@@ -170,7 +179,7 @@ export function render(ctx, root, params = []) {
     const when = (sn) => new Date(sn.at).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
     const restore = (sn) => {
       if (!confirm(`Put progress back to how it was on ${when(sn)}? Changes made after that are replaced.`)) return;
-      S.restoreSnapshot(ctx.store, sn, KEYS);
+      S.restoreSnapshot(backupStore, sn, KEYS);
       toast('Restored the state from ' + when(sn), 3500);
       ctx.rerender();
     };
@@ -183,7 +192,8 @@ export function render(ctx, root, params = []) {
   drawSnaps();
   root.append(h('section.block#backup',
     h('h2.section', 'Progress & backup'),
-    h('p.small', `Cards in progress: ${st.total}, due today: ${st.due}. By box: ${st.boxes.join(' / ')}.`),
+    h('p.small', `${langName} cards in progress: ${st.total}, due today: ${st.due}. By box: ${st.boxes.join(' / ')}.`),
+    h('p.small#backup-langs', `One backup holds both courses (cards: ${perLang}).`),
     h('p.small.help-line', 'Progress is stored in this browser for this site; reinstalling the app icon on Android keeps it.'),
     persistLine,
     h('p.small', 'A backup is a short text with your progress, favorites and the Allergy / Hotel cards. Keep a copy somewhere else (Notes, Telegram, email). ' +
@@ -201,7 +211,7 @@ export function render(ctx, root, params = []) {
     snapBox,
     h('p.small.file-links',
       h('button.textlink#backup-btn', { type: 'button', on: { click: () => {
-        downloadJson(ctx.store.exportAll(), `japan-trip-backup-${new Date().toISOString().slice(0, 10)}.json`);
+        downloadJson(backupStore.exportAll(), `japan-trip-backup-${new Date().toISOString().slice(0, 10)}.json`);
         backedUp('Backup saved to Downloads / Files');
       } } }, 'Download as a file'),
       ' · ',
@@ -214,7 +224,7 @@ export function render(ctx, root, params = []) {
     h('h2.section', 'About'),
     h('p.small', `Data v${ctx.data.version}. Offline mode: ${sw.controlled ? 'on' : sw.supported ? 'on after a restart' : 'not supported'}.` +
       (ctx.persisted === true ? ' Storage is persistent.' : '')),
-    h('p.small', 'Phrases: ' + ctx.data.items.length + ', kanji: ' + ctx.data.kanji.items.length + '.'),
+    h('p.small', 'Phrases: ' + ctx.data.items.length + (zh ? ', characters: ' : ', kanji: ') + ctx.data.kanji.items.length + '.'),
     h('p.small', D.progressText()),
     h('button.btn.wide#open-credits', { type: 'button', on: { click: () => ctx.go('#/tools/credits') } }, 'Credits and licences'),
   ));
@@ -258,6 +268,8 @@ function updatesBlock() {
 // ---------- Credits and licences (required by the JMdict / EDRDG licence: a separate screen reachable from a menu) ----------
 const A = (href, text) => h('a', { href, target: '_blank', rel: 'noopener' }, text || href);
 export function renderCredits(ctx, root) {
+  const D = dictFor('ja');
+  const zhDict = dictFor('zh');
   const st = D.status();
   const date = st.dictDate || '2026-11-16';
   root.append(
@@ -272,6 +284,15 @@ export function renderCredits(ctx, root) {
       h('p.small', `JMdict version: dictDate ${date}. JSON conversion: `, A('https://github.com/scriptin/jmdict-simplified', 'jmdict-simplified'),
         ' (CC BY-SA 4.0, same EDRDG terms). No copyright is claimed over the dictionary material.'),
       h('p.small', D.progressText())),
+    h('section.block.credits#credits-cedict',
+      h('h2.section', 'Chinese dictionary: CC-CEDICT'),
+      h('p', 'The Chinese course uses ', A('https://cc-cedict.org/wiki/', 'CC-CEDICT'), ', maintained by ',
+        A('https://www.mdbg.net/chinese/dictionary?page=cc-cedict', 'MDBG'), ' and licensed under ',
+        A('https://creativecommons.org/licenses/by-sa/4.0/', 'CC BY-SA 4.0'),
+        '. The dictionary in this app is a selected, ranked and abridged version of CC-CEDICT and is available under the same licence.'),
+      h('p.small', 'Word frequencies: ', A('https://github.com/rspeer/wordfreq', 'wordfreq'), ' by Robyn Speer (data CC BY-SA 4.0). HSK levels: ',
+        A('https://github.com/drkameleon/complete-hsk-vocabulary', 'complete-hsk-vocabulary'), ' (MIT).'),
+      zhDict.status().status === 'idle' ? null : h('p.small', zhDict.progressText())),
     h('section.block.credits#credits-fonts',
       h('h2.section', 'Fonts'),
       h('p', 'Shippori Mincho, Copyright 2021 The Shippori Mincho Project Authors (', A('https://github.com/fontdasu/ShipporiMincho', 'github.com/fontdasu/ShipporiMincho'), ').'),
@@ -303,6 +324,64 @@ export function readingFrom(input) {
     return { kana, romaji: tokens.join(' ') };
   }
   return { kana: s.replace(/\s+/g, ''), romaji: kanaToHepburn(s.replace(/\s+/g, '')) };
+}
+
+export function readingFromPinyin(input) {
+  const romaji = pinyinNumbersToMarks(String(input || '').trim().replace(/\s+/g, ' '));
+  return { romaji, kana: pinyinSearchKey(romaji) };
+}
+
+function userPhrasesZh(ctx) {
+  const box = h('section.block#user-phrases');
+  const tag = ctx.lang.tag;
+  const draw = () => {
+    clear(box);
+    const list = ctx.store.get('userItems', []);
+    const cats = ctx.data.categories;
+    const en = h('input', { type: 'text', placeholder: 'Where is the subway?' });
+    const hanzi = h('input', { type: 'text', lang: tag, placeholder: '地铁在哪儿？' });
+    const pinyin = h('input', { type: 'text', placeholder: 'ditie4 zai4 nar3 or dìtiě zài nǎr', autocapitalize: 'off', autocomplete: 'off' });
+    const preview = h('div.small#user-reading');
+    const cat = h('select', cats.map((c) => h('option', { value: c.id }, c.en)));
+    const kind = h('select', h('option', { value: 'say' }, 'I say it'), h('option', { value: 'hear' }, 'Others say it'));
+    const upd = () => {
+      const r = readingFromPinyin(pinyin.value);
+      preview.textContent = r.romaji ? `Pinyin: ${r.romaji}` : 'Pinyin with tone marks or tone numbers (ni3 hao3 → nǐ hǎo; v or u: for ü).';
+    };
+    upd();
+    pinyin.addEventListener('input', upd);
+    const field = (label, control) => h('label.field', h('span', label), control);
+    add(box,
+      h('h2.section', 'My phrases'),
+      h('p.small', 'Your phrases appear in Phrases, in search and in Study cards. They are included in the backup.'),
+      field('Meaning in English', en),
+      field('Chinese (hanzi)', hanzi),
+      field('Pinyin', pinyin),
+      preview,
+      h('div.field-row', field('Category', cat), field('Who says it', kind)),
+      h('div.actions', h('button.btn.primary#add-phrase', { type: 'button', on: { click: () => {
+        const meaning = en.value.trim(), text = hanzi.value.trim();
+        const rd = readingFromPinyin(pinyin.value);
+        if (!meaning || !text) { toast('Both English and Chinese text are required'); (meaning ? hanzi : en).focus(); return; }
+        const item = {
+          id: 'zh.u.' + Date.now().toString(36), cat: cat.value, kind: kind.value, en: meaning, ja: text,
+          kana: rd.kana, ruby: rd.romaji ? `{${text}|${rd.romaji}}` : text, romaji: rd.romaji, tags: ['user'],
+        };
+        ctx.store.update('userItems', [], (arr) => [...arr, item]);
+        toast('Added to ' + (ctx.data.catById[item.cat]?.en || 'Phrases'));
+        draw();
+      } } }, 'Add phrase')),
+      list.length ? h('div.userlist', h('div.small.chips-label', `Added: ${list.length}`), list.map((it) => h('div.userrow',
+        h('div.userrow-text', h('div', { lang: tag }, it.ja), h('div.small', `${it.romaji} — ${it.en}`)),
+        h('button.btn.small', { type: 'button', 'aria-label': `Delete: ${it.en}`, on: { click: () => {
+          ctx.store.update('userItems', [], (arr) => arr.filter((x) => x.id !== it.id));
+          toast('Deleted');
+          draw();
+        } } }, 'Delete')))) : null,
+    );
+  };
+  draw();
+  return box;
 }
 
 function userPhrases(ctx) {

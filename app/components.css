@@ -70,7 +70,7 @@ p { margin: 0 0 var(--sp-3); }
 .visually-hidden input { position: absolute; width: 1px; height: 1px; opacity: 0; }
 
 /* ---------- 1. Japanese, furigana, romaji ---------- */
-[lang="ja"], .ja {
+:is([lang="ja"], [lang="zh-CN"]), .ja {
   font-family: var(--font-ja-display);
   font-weight: 500;
   font-feature-settings: "palt" 0;
@@ -80,7 +80,7 @@ p { margin: 0 0 var(--sp-3); }
 }
 /* Chrome 119+ breaks Japanese at phrase boundaries; other browsers ignore it. */
 @supports (word-break: auto-phrase) {
-  .jp [lang="ja"], .fs-line [lang="ja"], .preview [lang="ja"] { word-break: auto-phrase; }
+  .jp :is([lang="ja"], [lang="zh-CN"]), .fs-line :is([lang="ja"], [lang="zh-CN"]), .preview :is([lang="ja"], [lang="zh-CN"]) { word-break: auto-phrase; }
 }
 .ja.big { font-size: var(--fs-ja-lg); line-height: var(--lh-tight); }
 
@@ -382,7 +382,7 @@ label:has(> input[type=radio]) { display: inline-flex; align-items: center; min-
 .checks { display: flex; flex-wrap: wrap; gap: var(--sp-1) var(--sp-4); margin: var(--sp-2) 0; }
 .check { display: inline-flex; align-items: center; gap: 0; min-height: var(--tap); font-size: var(--fs-label); cursor: pointer; }
 .check small { color: var(--ink-3); margin-left: .4em; }
-.check [lang="ja"] { font-family: var(--font-ja-ui); font-weight: 500; }
+.check :is([lang="ja"], [lang="zh-CN"]) { font-family: var(--font-ja-ui); font-weight: 500; }
 
 /* ---------- 7. Phrases ----------
  * A phrase is an entry on the page, not a box: Japanese, how to say it, what it
@@ -418,7 +418,7 @@ label:has(> input[type=radio]) { display: inline-flex; align-items: center; min-
   line-height: var(--lh-ui);
   color: var(--ink-3);
 }
-.small [lang="ja"], .hint [lang="ja"], .prompt [lang="ja"], .note [lang="ja"] { font-family: var(--font-ja-ui); font-weight: 400; color: var(--ink-2); }
+.small :is([lang="ja"], [lang="zh-CN"]), .hint :is([lang="ja"], [lang="zh-CN"]), .prompt :is([lang="ja"], [lang="zh-CN"]), .note :is([lang="ja"], [lang="zh-CN"]) { font-family: var(--font-ja-ui); font-weight: 400; color: var(--ink-2); }
 /* [NEW] a reading in kana under a big Japanese line */
 .kana-line { font-family: var(--font-ja-ui); font-weight: 400; font-size: var(--fs-label); letter-spacing: .04em; color: var(--ink-3); }
 
@@ -460,7 +460,7 @@ label:has(> input[type=radio]) { display: inline-flex; align-items: center; min-
   font-size: var(--fs-label);
   text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .22em;
 }
-.linklike [lang="ja"] { font-family: var(--font-ja-ui); font-weight: 400; }
+.linklike :is([lang="ja"], [lang="zh-CN"]) { font-family: var(--font-ja-ui); font-weight: 400; }
 
 /* What staff will say to you: an indigo rule in the margin, like a quotation. */
 .phrase.hear { padding-left: var(--sp-4); box-shadow: inset 2px 0 0 var(--ai); }
@@ -539,7 +539,7 @@ label:has(> input[type=radio]) { display: inline-flex; align-items: center; min-
   .fs-line { font-size: var(--fs, calc(var(--fs-n, 9) * 1cqmin)); }
 }
 .fs-line.small { font-size: calc(var(--fs, calc(var(--fs-n, 9) * 1vmin)) * .68); font-weight: 600; }
-.fs .fs-ja, .fs [lang="ja"] { font-family: var(--font-ja-ui); font-weight: inherit; }
+.fs .fs-ja, .fs :is([lang="ja"], [lang="zh-CN"]) { font-family: var(--font-ja-ui); font-weight: inherit; }
 .fs rt { color: var(--show-caption); font-weight: 600; }
 .fs-caption {
   margin: 0; padding: var(--sp-3) 0;
@@ -733,7 +733,7 @@ label:has(> input[type=radio]) { display: inline-flex; align-items: center; min-
   font-variant-numeric: tabular-nums lining-nums;
   letter-spacing: -.01em;
 }
-.price-big[lang="ja"], .price-big.ja { font-family: var(--font-ja-display); font-weight: 500; font-size: var(--fs-ja-xl); letter-spacing: .04em; display: inline-block; }
+.price-big:is([lang="ja"], [lang="zh-CN"]), .price-big.ja { font-family: var(--font-ja-display); font-weight: 500; font-size: var(--fs-ja-xl); letter-spacing: .04em; display: inline-block; }
 .num-input {
   margin-top: var(--sp-3);
   border: 0 !important; border-bottom: 1.5px solid var(--ink) !important; border-radius: 0 !important;
@@ -1025,7 +1025,7 @@ select {
 .userlist { margin-top: var(--sp-4); }
 .userrow { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-3); padding: var(--sp-3) 0; border-top: 1px solid var(--line); }
 .userrow-text { min-width: 0; }
-.userrow-text [lang="ja"] { font-size: var(--fs-ja-sm); }
+.userrow-text :is([lang="ja"], [lang="zh-CN"]) { font-size: var(--fs-ja-sm); }
 
 /* emergency numbers: number, who answers, a phone mark; the long number stacks */
 .tel { align-items: center; gap: var(--sp-3); }
@@ -1175,3 +1175,63 @@ section.block, .card.edit { scroll-margin-top: var(--sp-3); }
   border: 0; background: none; color: var(--ai); cursor: pointer; font: inherit; font-size: var(--fs-small);
   text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .22em;
 }
+
+:root[lang="zh-CN"], [lang="zh-CN"] {
+  --font-ja-display: var(--font-zh);
+  --font-ja-ui: var(--font-zh);
+}
+[lang="zh-CN"] rt { font-family: var(--font-ui); font-size: .42em; font-weight: 400; letter-spacing: 0; }
+[lang="zh-CN"] .ja, .ja[lang="zh-CN"] { font-weight: 400; }
+
+.lang-switch {
+  flex: none;
+  display: inline-flex; align-items: stretch;
+  border: 1px solid var(--line-strong); border-radius: var(--r-btn);
+  overflow: hidden;
+}
+.lang-opt {
+  min-width: 44px; min-height: 36px; padding: 0 10px;
+  border: 0; background: transparent; color: var(--ink-3);
+  font: 400 var(--fs-small)/1 var(--font-ja-ui); letter-spacing: .02em;
+  cursor: pointer;
+}
+.lang-opt[lang="zh-CN"] { font-family: var(--font-zh); }
+.lang-opt + .lang-opt { border-left: 1px solid var(--line); }
+.lang-opt.on { background: var(--fill); color: var(--ink); font-weight: 600; }
+.lang-opt:active { background: var(--fill); }
+.lang-short { display: none; font-family: var(--font-ui); }
+header.top:has(label.toggle) .lang-full { display: none; }
+header.top:has(label.toggle) .lang-short { display: inline; }
+header.top:has(label.toggle) { gap: var(--sp-2); }
+header.top:has(label.toggle) .lang-opt { min-width: 30px; padding: 0 6px; font-size: var(--fs-micro); }
+@media (max-width: 359px) {
+  .lang-full { display: none; }
+  .lang-short { display: inline; }
+}
+
+.tone-list { display: grid; gap: 0; background: var(--surface); box-shadow: var(--shadow-sheet); border-radius: var(--r-sheet); }
+.tone-row {
+  display: grid; grid-template-columns: 3rem minmax(0, 1fr) auto; align-items: center; gap: var(--sp-3);
+  min-height: var(--tap); padding: var(--sp-2) var(--sp-3);
+  border: 0; border-bottom: 1px solid var(--line); background: transparent; color: var(--ink);
+  text-align: left; cursor: pointer;
+}
+.tone-row:last-child { border-bottom: 0; }
+.tone-row:active { background: var(--fill); }
+.tone-mark { font: 500 1.75rem/1 var(--font-ui); text-align: center; }
+.tone-text { display: flex; flex-direction: column; gap: 2px; }
+.tone-text strong { font: 600 var(--fs-label)/1.2 var(--font-ui); }
+.tone-text small, .tone-ex small { font-size: var(--fs-micro); color: var(--ink-3); }
+.tone-ex { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
+.tone-ex-h { font-size: 1.5rem; line-height: 1; }
+.py-cell .kch.py-h { font-family: var(--font-ui); font-size: 1.375rem; font-weight: 500; }
+.py-cell .kr { display: flex; align-items: baseline; gap: 3px; }
+.py-cell .py-ex { font-size: var(--fs-small); color: var(--ink-2); }
+.note-mark { font-weight: 600; }
+.listen-cue { margin: var(--sp-4) 0; }
+.quiz-reveal { margin: var(--sp-2) 0; }
+.quiz-reveal-q { font-family: var(--font-ui); font-size: var(--fs-ja-md); }
+.quiz-reveal-q[lang] { font-family: var(--font-ja-display); }
+.kcell .kex { margin-top: var(--sp-1); font-size: var(--fs-small); color: var(--ink-3); line-height: 1.35; }
+.kcell .kex [lang="zh-CN"] { color: var(--ink-2); }
+.price-forms { margin-top: var(--sp-2); }

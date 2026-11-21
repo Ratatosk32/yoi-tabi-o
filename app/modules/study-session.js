@@ -4,12 +4,13 @@ import { h, clear, rubyEl, speakButtons, speakItem, ico, romajiEl, toast } from 
 import { grade, todayStr, MODES, studyWeek, addDays, INTERVALS } from './srs.js';
 import { romajiMode } from './curriculum.js';
 import { replyBlock } from './view-phrases.js';
+import * as L from './lang.js';
 
 const PROMPTS = {
-  en2ja: 'Say it in Japanese out loud, then show the answer.',
-  ja2en: 'What does it mean? Think, then show the answer.',
-  audio: 'Listen. What does it mean? Then show the answer.',
-  hear: 'What did they say? How will you reply?',
+  en2ja: () => `Say it in ${L.current().name} out loud, then show the answer.`,
+  ja2en: () => 'What does it mean? Think, then show the answer.',
+  audio: () => 'Listen. What does it mean? Then show the answer.',
+  hear: () => 'What did they say? How will you reply?',
 };
 
 /** Shared bookkeeping after any SRS grade: first-learned date and today's activity (streak). */
@@ -63,19 +64,19 @@ function renderCard(ctx, box, ses, draw) {
   // Cue: no Japanese text before an audio answer; hear items are audio only.
   if (cur.mode === 'ja2en') {
     card.append(jp(), h('div.actions.center', h('button.btn.icon', { type: 'button', 'aria-label': 'Play', on: { click: () => speakItem(it, 1.0) } }, ico('play'))),
-      h('p.prompt', PROMPTS.ja2en));
+      h('p.prompt', PROMPTS.ja2en()));
   } else if (cur.mode === 'en2ja') {
-    card.append(h('div.en.big.center', it.en), h('p.prompt', PROMPTS.en2ja));
+    card.append(h('div.en.big.center', it.en), h('p.prompt', PROMPTS.en2ja()));
   } else {
     card.append(h('div.actions.center', h('button.btn.big.primary.listen', { type: 'button', on: { click: () => speakItem(it, 1.0) } }, ico('play'), 'Listen')),
-      h('p.prompt', it.kind === 'hear' ? PROMPTS.hear : PROMPTS.audio));
+      h('p.prompt', it.kind === 'hear' ? PROMPTS.hear() : PROMPTS.audio()));
   }
 
   const back = h('div.back');
   if (ses.revealed) {
     if (cur.mode !== 'ja2en') back.append(jp());
     back.append(h('div.center', speakButtons(it))); // 0.7× appears only with the answer, as a hint
-    back.append(h('div.center', romajiEl(it.romaji, currentRomajiMode(ctx))));
+    if (!L.isZh()) back.append(h('div.center', romajiEl(it.romaji, currentRomajiMode(ctx))));
     if (cur.mode !== 'en2ja') back.append(h('div.en.center', it.en));
     if (it.note) back.append(h('div.note', it.note));
     const rb = replyBlock(ctx, it);

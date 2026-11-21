@@ -1,12 +1,16 @@
 // Service Worker (same-origin separate file — Blob SWs are not allowed, PLAN.md 2d).
 // Bump VERSION whenever app files change — the browser sees a new sw.js
 // and the app offers "Update" (no silent reloads).
-const VERSION = 'v17';
+const VERSION = 'v18';
 const CACHE = `jt-${VERSION}`;
 // Dictionary (JMdict) files: their own cache, cache-first, NOT part of the shell precache. Bump with the data
 // (dictDate) only: a shell update does not re-download the dictionary, a dictionary update does not touch the shell.
 const DICT_CACHE = 'dict-2026-11-16';
 const DICT_FILES = /\/data\/dict-(core|rest)\.json$/;
+const ZH_CACHE = 'zh-2026-11-21';
+const ZH_FILES = /\/data\/zh\/[a-z-]+\.json$/;
+const ZH_DICT_FILES = /\/data\/zh\/dict-(core|rest)\.json$/;
+const ZH_DATA = ['data/zh/curriculum.json', 'data/zh/pinyin.json', 'data/zh/hanzi.json', 'data/zh/dict-core.json', 'data/zh/dict-rest.json'];
 
 const PRECACHE = [
   './',
@@ -23,8 +27,11 @@ const PRECACHE = [
   'modules/dict-search.js',
   'modules/dict.js',
   'modules/view-dict.js',
+  'modules/lang.js',
+  'modules/loader.js',
   'modules/launchers.js',
   'modules/numbers.js',
+  'modules/numbers-zh.js',
   'modules/srs.js',
   'modules/study-session.js',
   'modules/snapshots.js',
@@ -34,6 +41,8 @@ const PRECACHE = [
   'modules/updates.js',
   'modules/ui.js',
   'modules/view-kanji.js',
+  'modules/view-numbers-zh.js',
+  'modules/view-pinyin.js',
   'modules/view-lessons.js',
   'modules/view-phrases.js',
   'modules/view-show.js',
@@ -65,7 +74,7 @@ self.addEventListener('install', (event) => {
 self.addEventListener('activate', (event) => {
   event.waitUntil((async () => {
     const keys = await caches.keys();
-    await Promise.all(keys.filter((k) => (k.startsWith('jt-') && k !== CACHE) || (k.startsWith('dict-') && k !== DICT_CACHE)).map((k) => caches.delete(k)));
+    await Promise.all(keys.filter((k) => (k.startsWith('jt-') && k !== CACHE) || (k.startsWith('dict-') && k !== DICT_CACHE) || (k.startsWith('zh-') && k !== ZH_CACHE)).map((k) => caches.delete(k)));
     await self.clients.claim();
   })());
 });
@@ -75,12 +84,13 @@ self.addEventListener('message', (event) => {
   if (event.data === 'version') event.ports[0]?.postMessage(VERSION); // Tools: "App version v.."
   // The page loaded the dictionary (maybe before this SW controlled it): make sure both files are in the
   // dictionary cache, so it works offline from now on. Usually a no-op or an HTTP-cache hit.
-  if (event.data === 'cacheDict') event.waitUntil(fillDict());
+  if (event.data === 'cacheDict') event.waitUntil(fillCache(DICT_CACHE, ['data/dict-core.json', 'data/dict-rest.json']));
+  if (event.data === 'cacheZh') event.waitUntil(fillCache(ZH_CACHE, ZH_DATA));
 });
 
-async function fillDict() {
-  const cache = await caches.open(DICT_CACHE);
-  for (const f of ['data/dict-core.json', 'data/dict-rest.json']) {
+async function fillCache(name, files) {
+  const cache = await caches.open(name);
+  for (const f of files) {
     const url = new URL(f, self.registration.scope).href;
     if (await cache.match(url)) continue;
     try {
@@ -120,6 +130,21 @@ self.addEventListener('fetch', (event) => {
       const res = await fetch(req);
       if (res.ok) await cache.put(req, res.clone());
       return res;
+    })());
+    return;
+  }
+
+  if (ZH_FILES.test(url.pathname)) {
+    event.respondWith((async () => {
+      const cache = await caches.open(ZH_CACHE);
+      const cached = await cache.match(req, { ignoreSearch: true });
+      if (cached && ZH_DICT_FILES.test(url.pathname)) return cached;
+      const network = fetch(req).then((res) => {
+        if (res.ok) cache.put(req, res.clone());
+        return res;
+      }).catch(() => null);
+      if (cached) return cached;
+      return (await network) || new Response('{"error":"offline"}', { status: 503, headers: { 'Content-Type': 'application/json' } });
     })());
     return;
   }

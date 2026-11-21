@@ -6,6 +6,8 @@ import * as tts from './tts.js';
 import * as C from './curriculum.js';
 import { runSession, doneCard } from './study-session.js';
 import { renderLessons, renderLesson, runQuiz, runChain, markStarted } from './view-lessons.js';
+import { renderPinyin } from './view-pinyin.js';
+import { renderPricesZh, renderTimeZh } from './view-numbers-zh.js';
 
 const SUBS = [
   { id: 'today', label: 'Today' },
@@ -19,14 +21,19 @@ export function render(ctx, root, params) {
   const route = params[0] || 'today';
   const sub = route === 'lesson' || route === 'cards' ? 'lessons' : SUBS.find((s) => s.id === route) ? route : 'today';
   // Five equal segments that always fit the width (no sideways scrolling)
+  const zh = ctx.lang.id === 'zh';
+  const label = (s) => (s.id === 'kana' ? ctx.lang.words.alphabet : s.label);
   const subnav = h('div.chips.subnav.seg', { 'aria-label': 'Study sections' },
-    SUBS.map((s) => chip(s.label, s.id === sub, () => ctx.go('#/study/' + s.id), { 'data-sub': s.id, title: s.title || s.label })));
+    SUBS.map((s) => chip(label(s), s.id === sub, () => ctx.go('#/study/' + s.id), { 'data-sub': s.id, title: s.id === 'time' && zh ? 'Clock time' : s.title || label(s) })));
   root.append(h('header.top', h('h1', 'Study')), subnav);
   const box = h('div.study#study-box');
   root.append(box);
   if (route === 'lesson') return renderLesson(ctx, box, params[1]);
   if (route === 'cards') return renderCustom(ctx, box);
-  ({ today: renderToday, lessons: renderLessons, kana: renderKana, numbers: renderNumbers, time: renderTime })[sub](ctx, box);
+  const views = zh
+    ? { today: renderToday, lessons: renderLessons, kana: renderPinyin, numbers: renderPricesZh, time: renderTimeZh }
+    : { today: renderToday, lessons: renderLessons, kana: renderKana, numbers: renderNumbers, time: renderTime };
+  views[sub](ctx, box);
 }
 
 const trainable = (ctx) => ctx.allItems().filter((it) => it.kind !== 'card');
@@ -43,7 +50,9 @@ function renderToday(ctx, box) {
   const core = C.coreStats(ctx.data, state);
   const streak = C.streak(ctx.store.get('activity', []), today);
   const st = stats(state);
-  const toTrip = C.daysUntil(s.tripDate, today);
+  const zh = ctx.lang.id === 'zh';
+  const toTrip = zh ? null : C.daysUntil(s.tripDate, today);
+  const scenes = zh ? C.lessonScenes(ctx.data) : C.SCENES;
 
   const lastBackup = s.lastBackup ? new Date(s.lastBackup) : null;
   if (st.total >= 10 && (!lastBackup || (Date.now() - lastBackup.getTime()) > 7 * 86400000)) {
@@ -58,10 +67,10 @@ function renderToday(ctx, box) {
     ? `${plan.continuing ? 'Continue' : 'New'}: ${plan.lesson.code} ${plan.lesson.title}` + (plan.learn.length ? ` (${plan.learn.length} new)` : '')
     : plan.allowNew ? 'Core done — pick an extended lesson' : `No new lesson today: ${plan.due.length} reviews due`;
   box.append(h('div.card.today',
-    h('div.dayline.today-line', h('strong', `Day ${day}`), h('span', `week ${week} of 3`), h('span', `streak ${streak} ${streak === 1 ? 'day' : 'days'}`)),
+    h('div.dayline.today-line', h('strong', `Day ${day}`), zh ? null : h('span', `week ${week} of 3`), h('span', `streak ${streak} ${streak === 1 ? 'day' : 'days'}`)),
     h('div.small', `Core ${core.learned} / ${core.total} learned`),
     h('div.progress', h('span', { style: { width: `${Math.round((core.learned / Math.max(1, core.total)) * 100)}%` } })),
-    day <= 5 ? h('p.small', `Kana block: ${day <= 2 ? 'hiragana today' : 'katakana today'} — Study → Kana.`) : null));
+    day <= 5 ? h('p.small', zh ? 'First days: tones and pinyin — Study → Pinyin.' : `Kana block: ${day <= 2 ? 'hiragana today' : 'katakana today'} — Study → Kana.`) : null));
 
   box.append(h('div.tiles',
     tile('Morning', `${plan.due.length} due · ${lessonLine}`, '12–15 min: reviews → pretest → lesson → quiz', () => runMorning(ctx, box), 'start-morning'),
@@ -72,13 +81,19 @@ function renderToday(ctx, box) {
 
   // Reply chains and the trip
   const badges = log.badges || {};
-  box.append(h('h2.section', 'Practice a scene'),
-    h('p.small', 'A staff line plays; reply within 3 seconds. Badges: ' + (Object.keys(badges).length ? C.SCENES.filter((x) => badges[x.id]).map((x) => x.badge).join(', ') : 'none yet') + '.'),
-    h('button.btn.wide#pick-scene', { type: 'button', on: { click: () => openSheet({
-      title: 'Scene', attr: 'data-scene',
-      options: C.SCENES.map((x) => ({ id: x.id, label: x.title, icon: badges[x.id] ? '★' : null })),
-      onPick: (id) => runChain(ctx, box, C.SCENES.find((x) => x.id === id), () => ctx.rerender()),
-    }) } }, ico('sound'), 'Reply chain: pick a scene'));
+  if (scenes.length) {
+    box.append(h('h2.section', 'Practice a scene'),
+      h('p.small', (zh ? 'A line plays; reply within 3 seconds. Badges: ' : 'A staff line plays; reply within 3 seconds. Badges: ') + (Object.keys(badges).length ? scenes.filter((x) => badges[x.id]).map((x) => x.badge).join(', ') || 'none yet' : 'none yet') + '.'),
+      h('button.btn.wide#pick-scene', { type: 'button', on: { click: () => openSheet({
+        title: 'Scene', attr: 'data-scene',
+        options: scenes.map((x) => ({ id: x.id, label: x.title, icon: badges[x.id] ? '★' : null })),
+        onPick: (id) => runChain(ctx, box, scenes.find((x) => x.id === id), () => ctx.rerender()),
+      }) } }, ico('sound'), 'Reply chain: pick a scene'));
+  }
+  if (zh) {
+    box.append(h('p.small.muted', `Cards in progress: ${st.total}. Boxes 1–5: ${st.boxes.join(' / ')}.`));
+    return;
+  }
 
   box.append(h('h2.section', 'Trip'),
     toTrip == null ? h('p.small', 'Set your flight date in Tools → Settings to get the pre-flight run on the last 3 days.')
@@ -178,7 +193,7 @@ function renderCustom(ctx, box) {
       h('p.small', 'Any category and mode, outside the lesson plan. Progress is shared with the lessons.'),
       h('label.field', h('span', 'Category'),
         h('select#custom-cat', { on: { change: (e) => { cat = e.target.value; draw(); } } },
-          [['all', 'All'], ['hear', 'Staff will say'], ...cats.map((c) => [c.id, c.en])].map(([id, label]) => h('option', { value: id, selected: cat === id }, label)))),
+          [['all', 'All'], ['hear', ctx.lang.words.hear], ...cats.map((c) => [c.id, c.en])].map(([id, label]) => h('option', { value: id, selected: cat === id }, label)))),
       h('div.small.chips-label', 'Mode'),
       h('div.chips', Object.entries(MODES).map(([k, v]) => chip(v, mode === k, () => { mode = k; draw(); }))),
       h('label.check', h('input', { type: 'checkbox', checked: onlyFav, on: { change: (e) => { onlyFav = e.target.checked; draw(); } } }), ' favorites only'),

@@ -4,7 +4,7 @@
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { dirname, join, relative, extname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
-import { rubyToJa, rubyToKana, kanjiWithoutReading, romajiComparable, kanaComparable, romajiMatchesKana } from '../app/modules/text.js';
+import { parseRuby, rubyToJa, rubyToKana, kanjiWithoutReading, romajiComparable, kanaComparable, romajiMatchesKana } from '../app/modules/text.js';
 import { ROMAJI_REVIEWED } from './content/phrases.src.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -140,6 +140,8 @@ export function validateAll() {
   // curriculum (app/data/curriculum.json, built by tools/build-curriculum.mjs)
   const cur = existsSync(join(APP, 'data', 'curriculum.json')) ? validateCurriculum(load('curriculum.json'), ph, kj, errors, warnings) : null;
 
+  const zh = validateZhData(errors);
+
   // English-only app
   for (const h of cyrillicInApp()) errors.push('Cyrillic in shipped file: ' + h);
 
@@ -152,8 +154,65 @@ export function validateAll() {
       kanji: (kj.items || []).length,
       kanaWords: (kn.words || []).length,
       ...(cur ? { curriculum: cur } : {}),
+      ...(zh ? { zh } : {}),
     },
   };
+}
+
+const ZH_DIR = join(APP, 'data', 'zh');
+const ZH_KEY = /^[a-z v]*$/;
+const HAN_RUN = /^[\u3400-\u4DBF\u4E00-\u9FFF]+$/u;
+
+function zhRubyErrors(ruby) {
+  return parseRuby(ruby).filter((seg) => seg.rt != null && HAN_RUN.test(seg.base) && [...seg.base].length !== seg.rt.trim().split(/\s+/).length)
+    .map((seg) => `${seg.base}[${seg.rt}]: syllables ≠ characters`);
+}
+
+export function validateZhData(errors) {
+  if (!existsSync(ZH_DIR)) return null;
+  const read = (n) => (existsSync(join(ZH_DIR, n)) ? JSON.parse(readFileSync(join(ZH_DIR, n), 'utf8')) : null);
+  const E = (m) => errors.push('zh ' + m);
+  const counts = {};
+  for (const n of readdirSync(ZH_DIR).filter((f) => f.endsWith('.json'))) {
+    if (read(n).lang !== 'zh') E(`${n}: header lang must be "zh"`);
+  }
+  const cur = read('curriculum.json');
+  if (cur) {
+    const ids = new Set();
+    for (const it of cur.items || []) {
+      const where = `curriculum[${it.id}]`;
+      if (!/^zh\.[a-z0-9.\-]+$/.test(it.id || '')) E(`${where}: id must start with zh.`);
+      if (ids.has(it.id)) E(`${where}: duplicate id`);
+      ids.add(it.id);
+      for (const f of ['ja', 'ruby', 'kana', 'romaji', 'en']) if (!it[f] || typeof it[f] !== 'string') E(`${where}: missing ${f}`);
+      if (it.ruby && rubyToJa(it.ruby) !== it.ja) E(`${where}: ruby→ja "${rubyToJa(it.ruby)}" ≠ ja "${it.ja}"`);
+      if (it.ruby) for (const m of zhRubyErrors(it.ruby)) E(`${where}: ${m}`);
+      if (it.kana && !ZH_KEY.test(it.kana)) E(`${where}: kana must be toneless lowercase pinyin "${it.kana}"`);
+    }
+    for (const l of cur.lessons || []) {
+      if (!/^Z\d\d-L\d\d$/.test(l.code || '')) E(`lesson ${l.code}: code must look like Z01-L01`);
+      for (const id of l.ids || []) if (!ids.has(id)) E(`lesson ${l.code}: unknown item ${id}`);
+    }
+    for (const it of cur.items || []) for (const r of [...(it.replies || []), ...(it.replyTo || [])]) if (!ids.has(r)) E(`curriculum[${it.id}]: link to unknown ${r}`);
+    counts.items = ids.size;
+    counts.lessons = (cur.lessons || []).length;
+  }
+  const hz = read('hanzi.json');
+  if (hz) {
+    for (const it of hz.items || []) if (!/^zh\.h\./.test(it.id || '')) E(`hanzi[${it.id}]: id must start with zh.h.`);
+    counts.hanzi = (hz.items || []).length;
+  }
+  const py = read('pinyin.json');
+  if (py) {
+    for (const q of py.quizzes || []) {
+      if (!['listen', 'read'].includes(q.mode)) E(`pinyin quiz ${q.id}: mode must be listen or read`);
+      for (const x of q.items || []) if (x.opts && !x.opts.includes(x.a)) E(`pinyin quiz ${q.id}: answer "${x.a}" missing from opts`);
+    }
+    counts.pinyinQuizzes = (py.quizzes || []).length;
+  }
+  const dict = read('dict-core.json');
+  if (dict) counts.dictCore = dict.count;
+  return counts;
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {

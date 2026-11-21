@@ -3,23 +3,34 @@ import { h, clear, rubyEl, speakButtons, speakItem, showFullscreen, toast, ico, 
 import { romajiMode } from './curriculum.js';
 import { studyWeek, todayStr } from './srs.js';
 import { dictMatches, dictFavsSection } from './view-dict.js';
-import * as D from './dict.js';
-import { search } from './text.js';
+import { dictFor } from './dict.js';
+import { search, normalize, normalizeZh } from './text.js';
+import * as L from './lang.js';
 
 const SPECIAL = {
   fav: { en: 'Favorites', icon: '★' },
   hear: { en: 'Staff will say', icon: '聞' },
 };
 
+export const searchNorm = () => (L.isZh() ? normalizeZh : normalize);
+
+export function readingLine(ctx, it, rubyShown) {
+  if (L.isZh() && rubyShown) return null;
+  const s = ctx.settings();
+  return romajiEl(it.romaji, romajiMode(s.romaji || 'auto', studyWeek(s.startDate || todayStr()).week));
+}
+
 export function render(ctx, root, params) {
   const s = ctx.settings();
   let cat = params[0] || s.phrasesCat || 'basics';
   let query = '';
   const items = ctx.allItems();
+  const W = ctx.lang.words;
+  const D = dictFor(ctx.lang.id);
 
   const list = h('div.list#phrase-list');
   const input = h('input.search#phrase-search', {
-    type: 'search', placeholder: 'Search: bag, fukuro, ふくろ…', autocomplete: 'off',
+    type: 'search', placeholder: W.searchPhrases, autocomplete: 'off',
     'aria-label': 'Search phrases', enterkeyhint: 'search',
   });
   const bar = h('div.chips.toolbar', { 'aria-label': 'Category' });
@@ -28,8 +39,8 @@ export function render(ctx, root, params) {
   function favs() { return new Set(ctx.store.get('favs', [])); }
 
   const inCat = (id) => (id === 'fav' ? items.filter((it) => favs().has(it.id)) : id === 'hear' ? items.filter((it) => it.kind === 'hear') : items.filter((it) => it.cat === id));
-  const catName = (id) => SPECIAL[id]?.en || ctx.data.catById[id]?.en || '';
-  const catIcon = (id) => SPECIAL[id]?.icon || ctx.data.catById[id]?.icon || '';
+  const catName = (id) => (id === 'hear' ? W.hear : SPECIAL[id]?.en) || ctx.data.catById[id]?.en || '';
+  const catIcon = (id) => (id === 'hear' && L.isZh() ? '听' : SPECIAL[id]?.icon) || ctx.data.catById[id]?.icon || '';
   function setCat(id) {
     if (id !== 'fav') lastCat = id;
     cat = id; query = ''; input.value = '';
@@ -59,7 +70,7 @@ export function render(ctx, root, params) {
   }
 
   function current() {
-    if (query) return search(items, query);
+    if (query) return search(items, query, 100, searchNorm());
     if (cat === 'fav') { const f = favs(); return items.filter((it) => f.has(it.id)); }
     if (cat === 'hear') return items.filter((it) => it.kind === 'hear');
     return items.filter((it) => it.cat === cat);
@@ -83,10 +94,10 @@ export function render(ctx, root, params) {
     // The category name is on the picker button; a heading is only needed for what the button does not say
     if (query) list.append(h('h2.section', `Found: ${arr.length}`));
     else if (cat === 'fav') list.append(h('h2.section', arr.length ? `Favorites · ${arr.length}` : 'Favorites'));
-    if (cat === 'hear' && !query) list.append(h('p.hint', 'Staff will say these to you. Train your ear: Study → Listening.'));
+    if (cat === 'hear' && !query) list.append(h('p.hint', W.hearHint));
     if (!arr.length) {
       if (query) {
-        list.append(h('div.empty', h('p', `Nothing found for “${query}”.`), h('p.small', 'Try English, romaji or kana.'),
+        list.append(h('div.empty', h('p', `Nothing found for “${query}”.`), h('p.small', W.searchTry),
           h('button.btn', { type: 'button', on: { click: () => { query = ''; input.value = ''; draw(); input.focus(); } } }, 'Clear search')));
       } else if (cat === 'fav') {
         if ((ctx.store.get('dictFavs', []) || []).length) return; // only dictionary words are starred
@@ -117,7 +128,7 @@ export function render(ctx, root, params) {
       h('h1', 'Phrases'),
       h('label.toggle',
         h('input', { type: 'checkbox', checked: s.furigana, on: { change: (e) => { ctx.setSetting('furigana', e.target.checked); draw(); } } }),
-        h('span', 'Furigana')),
+        h('span', W.ruby)),
     ),
     input, bar, list,
   );
@@ -146,16 +157,16 @@ export function phraseCard(ctx, it, isFav, onChange, { collapsed = true } = {}) 
     },
   }, ico(isFav ? 'star-fill' : 'star'));
   const showBtn = h('button.btn.icon', {
-    type: 'button', title: 'Show to a Japanese person', 'aria-label': 'Show full screen',
+    type: 'button', title: `Show to ${ctx.lang.speaker}`, 'aria-label': 'Show full screen',
     on: { click: (e) => { e.stopPropagation(); showFullscreen({ lines: [{ ruby: it.ruby }], caption: it.en, speakText: it.tts || it.ja }); } },
   }, ico('show'));
 
   const reply = replyBlock(ctx, it);
   const hasMore = !!(it.note || reply);
   const text = h('div.phrase-text',
-    it.kind === 'hear' ? h('div.badge', 'You will hear') : it.kind === 'pattern' && it.pattern ? h('div.badge.pat', { lang: 'ja' }, it.pattern) : null,
+    it.kind === 'hear' ? h('div.badge', 'You will hear') : it.kind === 'pattern' && it.pattern ? h('div.badge.pat', { lang: ctx.lang.tag }, it.pattern) : null,
     h('div.jp', rubyEl(it.ruby, { furigana: s.furigana })),
-    romajiEl(it.romaji, romajiMode(s.romaji || 'auto', studyWeek(s.startDate || todayStr()).week)), // §3.6: week 1 shown, then tap
+    readingLine(ctx, it, s.furigana),
     h('div.en', it.en, collapsed && hasMore
       ? h('span.more-hint', { 'aria-hidden': 'true' }, it.kind === 'hear' && reply ? 'replies' : reply ? 'reply to' : 'note', ico('chevron'))
       : null));
@@ -195,7 +206,7 @@ export function replyBlock(ctx, it) {
       it.replies.map((rid) => byId[rid]).filter(Boolean).map((r) => h('div.reply', { 'data-id': r.id },
         h('div.reply-text',
           h('span.jp', rubyEl(r.ruby, { furigana: s.furigana })),
-          h('span.romaji', r.romaji),
+          L.isZh() && s.furigana ? null : h('span.romaji', r.romaji),
           h('span.en', r.en)),
         speakButtons(r))));
   }
@@ -203,7 +214,7 @@ export function replyBlock(ctx, it) {
     const qs = it.replyTo.map((qid) => byId[qid]).filter(Boolean);
     return h('div.reply-to', h('span.reply-to-label', 'Reply to'),
       qs.map((q) => h('button.linklike', { type: 'button', title: q.en, 'aria-label': `Play: ${q.en}`, on: { click: (e) => { e.stopPropagation(); speakItem(q, 1.0); } } },
-        ico('play'), h('span', { lang: 'ja' }, q.ja))));
+        ico('play'), h('span', { lang: ctx.lang.tag }, q.ja))));
   }
   return null;
 }

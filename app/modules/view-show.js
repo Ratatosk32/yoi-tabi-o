@@ -1,6 +1,7 @@
 // Show tab: full-screen cards for Japanese people.
 // Personal data (allergy, hotel address) are PLACEHOLDERS the user fills in; stored only in this browser.
 import { h, add, clear, showFullscreen, rubyEl, toast } from './ui.js';
+import { rubyToJa } from './text.js';
 
 export const ALLERGENS = [
   { id: 'tamago', ja: '卵', ruby: '卵[たまご]', en: 'egg' },
@@ -45,7 +46,23 @@ export function hotelText(card) {
   return { lines, en: 'Please take me to this hotel.' };
 }
 
+export const ZH_CARDS = [
+  { id: 'zh.card.not-fluent', ruby: '我[wǒ]的[de]中文[Zhōng wén]不[bú]太[tài]好[hǎo]，请[qǐng]您[nín]看[kàn]一下[yí xià]。', romaji: 'Wǒ de Zhōngwén bú tài hǎo, qǐng nín kàn yíxià.', en: 'My Chinese is not very good. Please have a look.' },
+  { id: 'zh.card.slowly', ruby: '请[qǐng]说[shuō]慢[màn]一点[yì diǎn]。', romaji: 'Qǐng shuō màn yìdiǎn.', en: 'Please speak a little more slowly.' },
+  { id: 'zh.card.write', ruby: '请[qǐng]写[xiě]下来[xià lai]。', romaji: 'Qǐng xiě xiàlai.', en: 'Please write it down.' },
+];
+
+export function addressText(card) {
+  if (!card || !(card.name || card.address)) return null;
+  const lines = ['请[qǐng]带[dài]我[wǒ]去[qù]这个[zhè ge]地址[dì zhǐ]。'];
+  if (card.name) lines.push(card.name);
+  if (card.address) lines.push(card.address);
+  if (card.phone) lines.push('☎ ' + card.phone);
+  return { lines, en: 'Please take me to this address.' };
+}
+
 export function render(ctx, root) {
+  if (ctx.lang.id === 'zh') { renderZh(ctx, root); return; }
   const cards = () => ctx.store.get('cards', {});
   const saveCard = (key, val) => ctx.store.update('cards', {}, (c) => ({ ...c, [key]: val }));
 
@@ -161,5 +178,80 @@ export function render(ctx, root) {
       } } }, 'Paste from clipboard')),
   ));
 
+  drawQuick();
+}
+
+function renderZh(ctx, root) {
+  const tag = ctx.lang.tag;
+  const cards = () => ctx.store.get('cards', {});
+  const saveCard = (key, val) => ctx.store.update('cards', {}, (c) => ({ ...c, [key]: val }));
+  const showLines = (gen) => showFullscreen({ lines: gen.lines.map((t, i) => (i === 0 ? { ruby: t } : { text: t, small: i > 1 })), caption: gen.en });
+  const showFree = (v) => showFullscreen({ lines: [{ text: v }], speakText: v });
+  const jumpTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  root.append(h('header.top', h('h1', 'Show')),
+    h('p.hint', `Cards to show to ${ctx.lang.speaker}. Tap one: it opens full screen in large type and keeps the screen on. Back closes it.`));
+  const quick = h('section.block#show-cards');
+  root.append(quick);
+  function drawQuick() {
+    clear(quick);
+    const c = cards();
+    const addr = addressText(c.address), free = (c.free || '').trim();
+    add(quick,
+      h('h2.section', 'Cards'),
+      ZH_CARDS.map((it) => h('button.card.showcard', {
+        type: 'button', 'data-id': it.id,
+        on: { click: () => showFullscreen({ lines: [{ ruby: it.ruby }], caption: it.en, speakText: rubyToJa(it.ruby) }) },
+      }, h('div.jp', rubyEl(it.ruby, { furigana: false })), h('div.romaji', it.romaji), h('div.en', it.en))),
+      addr
+        ? h('button.card.showcard.mine', { type: 'button', 'data-card': 'address', on: { click: () => showLines(addr) } },
+          h('div.badge', 'Address (taxi)'), h('div.jp', { lang: tag }, c.address.name || c.address.address))
+        : h('button.card.todo-card', { type: 'button', 'data-card': 'address', on: { click: () => jumpTo('card-address') } },
+          h('strong', 'Address (taxi)'), h('span.warn', 'Not filled in'), h('span.small', 'Fill it in below')),
+      free ? h('button.card.showcard.mine', { type: 'button', 'data-card': 'free', on: { click: () => showFree(free) } },
+        h('div.badge', 'Your own text'), h('div.jp', { lang: tag }, free.length > 60 ? free.slice(0, 60) + '…' : free)) : null);
+  }
+
+  const mine = h('section.block', h('h2.section', 'Edit my cards'), h('p.hint', 'Stored only on this phone.'));
+  root.append(mine);
+  const addressBox = h('div.card.edit#card-address');
+  mine.append(addressBox);
+  function drawAddress() {
+    clear(addressBox);
+    const c = cards().address || {};
+    const gen = addressText(c);
+    const field = (key, label, ph, multiline) => {
+      const attrs = { placeholder: ph, value: c[key] || '', lang: tag, on: { change: (e) => { saveCard('address', { ...cards().address, [key]: e.target.value.trim() }); drawAddress(); } } };
+      return h('label.field', h('span', label), multiline ? h('textarea', { rows: 3, ...attrs }) : h('input', { type: 'text', ...attrs }));
+    };
+    addressBox.append(
+      h('div.card-head', h('strong', 'Address (for taxis)'), gen ? h('span.ok', 'Ready') : h('span.warn', 'NOT FILLED IN')),
+      h('p.hint', 'Copy the name and address IN CHINESE from a booking or a map app.'),
+      field('name', 'Place name (in Chinese)', '例如：北京饭店'),
+      field('address', 'Address (in Chinese)', '北京市…', true),
+      field('phone', 'Phone (optional)', '010-0000-0000'),
+      h('div.actions', h('button.btn.primary', { type: 'button', disabled: !gen, on: { click: () => gen && showLines(gen) } }, 'Show full screen')));
+    drawQuick();
+  }
+  drawAddress();
+
+  const ta = h('textarea#free-text', { rows: 3, lang: tag, placeholder: 'Paste Chinese text (e.g. from Google Translate)', value: cards().free || '' });
+  ta.setAttribute('aria-label', 'Chinese text to show');
+  ta.addEventListener('change', () => { saveCard('free', ta.value.trim()); drawQuick(); });
+  mine.append(h('div.card.edit#card-free',
+    h('div.card-head', h('strong', 'Your own text')),
+    h('p.hint', 'Paste a translation from Google Translate and show it large.'),
+    ta,
+    h('div.actions',
+      h('button.btn.primary', { type: 'button', on: { click: () => {
+        const v = ta.value.trim();
+        saveCard('free', v);
+        drawQuick();
+        if (!v) { toast('Paste some text first'); return; }
+        showFree(v);
+      } } }, 'Show full screen'),
+      h('button.btn', { type: 'button', on: { click: async () => {
+        try { ta.value = await navigator.clipboard.readText(); saveCard('free', ta.value.trim()); drawQuick(); } catch { toast('No clipboard access — long-press to paste'); }
+      } } }, 'Paste from clipboard'))));
   drawQuick();
 }

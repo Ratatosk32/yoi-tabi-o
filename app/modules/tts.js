@@ -1,9 +1,15 @@
 // Speech via the Web Speech API (Android Chrome → system engine, Speech Services by Google).
 // Never throws if the API or a Japanese voice is missing (PLAN.md 2a).
 
+import { current as currentLang } from './lang.js';
+
 const JA_RE = /^ja([-_]JP)?$/i;
+const ZH_RE = /^(zh|cmn)([-_](CN|Hans|Hans[-_]CN))?$/i;
+const ZH_ANY = /^(zh|cmn)/i;
+const ZH_OTHER = /^(zh|cmn)[-_](TW|HK|Hant|yue)/i;
 let voices = [];
 let jaVoice = null;
+let zhVoice = null;
 let ready = null;
 
 function synth() {
@@ -20,7 +26,12 @@ function refresh() {
   try { voices = s.getVoices() || []; } catch { voices = []; }
   const ja = voices.filter((v) => JA_RE.test(v.lang || '') || /^ja/i.test(v.lang || ''));
   jaVoice = ja.find((v) => v.localService) || ja[0] || null;
+  const zhAll = voices.filter((v) => ZH_ANY.test(v.lang || ''));
+  const zhCN = zhAll.filter((v) => ZH_RE.test(v.lang || '') && !ZH_OTHER.test(v.lang || ''));
+  zhVoice = zhCN.find((v) => v.localService) || zhCN[0] || zhAll.find((v) => !ZH_OTHER.test(v.lang || '')) || null;
 }
+
+const voiceFor = (locale) => (/^zh/i.test(locale) ? zhVoice : jaVoice);
 
 /** Wait for the voice list (async on Android); at most ~1.5 s. */
 export function init() {
@@ -45,6 +56,8 @@ export function status() {
     voiceCount: voices.length,
     hasJapanese: !!jaVoice,
     jaVoiceName: jaVoice ? `${jaVoice.name} (${jaVoice.lang}${jaVoice.localService ? ', local' : ''})` : null,
+    hasChinese: !!zhVoice,
+    zhVoiceName: zhVoice ? `${zhVoice.name} (${zhVoice.lang}${zhVoice.localService ? ', local' : ''})` : null,
   };
 }
 
@@ -57,7 +70,7 @@ export function listVoices() {
  * Speak Japanese text. Call from a click handler (Chrome requires user activation).
  * Returns Promise<'end'|'error:…'|'timeout'|'unsupported'>.
  */
-export function speak(text, rate = 1.0) {
+export function speak(text, rate = 1.0, locale = currentLang().locale) {
   const s = synth();
   if (!s || !text) return Promise.resolve('unsupported');
   return new Promise((resolve) => {
@@ -67,8 +80,9 @@ export function speak(text, rate = 1.0) {
       if (s.speaking || s.pending) s.cancel();
       if (!voices.length) refresh(); // iOS loads voices lazily — try again during the gesture
       const u = new SpeechSynthesisUtterance(text);
-      u.lang = 'ja-JP';
-      if (jaVoice) u.voice = jaVoice;
+      u.lang = locale;
+      const voice = voiceFor(locale);
+      if (voice) u.voice = voice;
       u.rate = rate;
       // Some engines send neither onend nor onerror — guard with polling and a timeout (QA note)
       let done = false, poll = null, hard = null;

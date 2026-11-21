@@ -20,12 +20,19 @@ function selfCheck(box, showAnswer, onGrade) {
   return slot;
 }
 import { phraseCard } from './view-phrases.js';
+import * as L from './lang.js';
 
 const PATH_INFO = {
   core: { title: 'Core', hint: 'One lesson a day before the flight. The next lesson opens when 80 % of the current one is learned (box 2+), or test out.' },
   ext: { title: 'Extended', hint: 'Study by situation: the evening before a camera-shop day, a shinkansen trip or an onsen. Always open.' },
   ref: { title: 'Reference', hint: 'Look things up and show them. Always open.' },
 };
+const PATH_INFO_ZH = {
+  core: { title: 'Core', hint: 'HSK 1–3 in order, one lesson a day. The next lesson opens when 80 % of the current one is learned (box 2+), or test out.' },
+  ext: { title: 'Extended', hint: 'HSK 4 topics. Always open.' },
+  ref: { title: 'Reference', hint: 'Look things up. Always open.' },
+};
+const pathInfo = () => (L.isZh() ? PATH_INFO_ZH : PATH_INFO);
 
 const lessonLog = (ctx) => ctx.store.get('lessons', {}) || {};
 const updateLog = (ctx, fn) => ctx.store.update('lessons', {}, (l) => fn({ started: {}, passed: {}, quiz: {}, badges: {}, ...l }));
@@ -44,8 +51,10 @@ export function renderLessons(ctx, box) {
       `Continue: ${cur.code} ${cur.title}`) : h('p.small', 'The core is done. Pick extended lessons by situation.')));
 
   for (const path of ['core', 'ext', 'ref']) {
-    box.append(h('h2.section', PATH_INFO[path].title), h('p.small.path-hint', PATH_INFO[path].hint));
-    for (const unit of ctx.data.units.filter((u) => u.path === path)) {
+    const units = ctx.data.units.filter((u) => u.path === path);
+    if (!units.length) continue;
+    box.append(h('h2.section', pathInfo()[path].title), h('p.small.path-hint', pathInfo()[path].hint));
+    for (const unit of units) {
       const ls = ctx.data.lessons.filter((l) => l.unit === unit.id);
       box.append(h('div.unit',
         h('h3.unit-head', h('span.unit-code', unit.id), ' ', unit.title),
@@ -86,7 +95,7 @@ export function renderLesson(ctx, box, code) {
   box.append(
     h('button.btn.small.back-link', { type: 'button', on: { click: () => ctx.go('#/study/lessons') } }, ico('chevron'), 'All lessons'),
     h('div.card.lesson-card', { 'data-lesson': code },
-      h('div.small.muted', `${l.code} · ${unit ? unit.title : ''} · ${PATH_INFO[l.path].title}`),
+      h('div.small.muted', `${l.code} · ${unit ? unit.title : ''} · ${(pathInfo()[l.path] || pathInfo().core).title}`),
       h('h2.lesson-h', l.title),
       h('p', l.goal),
       l.patterns?.length ? h('p.small', 'Patterns: ', l.patterns.map((pt, i) => [i ? ', ' : '', jaText(pt)])) : null,
@@ -166,7 +175,7 @@ export function runQuiz(ctx, box, code, onDone) {
       if (q.type === 'audio') setTimeout(() => speakItem(it, 1.0), 0);
     } else if (q.type === 'reply') {
       card.append(h('div.actions.center', h('button.btn.big.primary.listen', { type: 'button', on: { click: () => speakItem(it, 1.0) } }, ico('play'), 'Listen')),
-        h('p.prompt', 'Staff said this. Pick your reply.'),
+        h('p.prompt', L.isZh() ? 'Someone said this. Pick your reply.' : 'Staff said this. Pick your reply.'),
         h('div.opts.ja-opts', q.options.map((o) => h('button.btn.opt', { type: 'button', 'data-id': o.id, on: { click: (e) => {
           if (card.dataset.answered) return; card.dataset.answered = '1';
           const ok = q.correct.has(o.id);
@@ -179,7 +188,7 @@ export function runQuiz(ctx, box, code, onDone) {
       setTimeout(() => speakItem(it, 1.0), 0);
     } else {
       // EN → JA aloud, self-graded
-      card.append(h('div.en.big.center', it.en), h('p.prompt', 'Say it in Japanese out loud.'),
+      card.append(h('div.en.big.center', it.en), h('p.prompt', `Say it in ${L.current().name} out loud.`),
         selfCheck(box, () => { card.append(h('div.back', h('div.jp.center', rubyEl(it.ruby, { furigana: true })))); speakItem(it, 1.0); },
           (r) => { if (r === 'good') score += 1; i += 1; step(); }));
     }
@@ -214,7 +223,7 @@ export function runTestOut(ctx, box, code, onDone) {
     card.append(audio
       ? h('div.actions.center', h('button.btn.big.primary.listen', { type: 'button', on: { click: () => speakItem(it, 1.0) } }, ico('play'), 'Listen'))
       : h('div.en.big.center', it.en),
-    h('p.prompt', audio ? 'What does it mean?' : 'Say it in Japanese out loud.'));
+    h('p.prompt', audio ? 'What does it mean?' : `Say it in ${L.current().name} out loud.`));
     const grade = selfCheck(box, () => {
       card.append(h('div.back', h('div.jp.center', rubyEl(it.ruby, { furigana: true })), h('div.en.center', it.en)));
       if (!audio) speakItem(it, 1.0);
@@ -251,7 +260,7 @@ export function runChain(ctx, box, scene, onDone) {
     const timer = h('div.countdown', { style: { '--secs': CHAIN_SECONDS + 's' } }, h('span'));
     const feedback = h('div.feedback');
     card.append(
-      h('div.actions.center', h('button.btn.big.primary.listen', { type: 'button', on: { click: () => speakItem(st.item, 1.0) } }, ico('play'), 'Staff line')),
+      h('div.actions.center', h('button.btn.big.primary.listen', { type: 'button', on: { click: () => speakItem(st.item, 1.0) } }, ico('play'), L.isZh() ? 'Their line' : 'Staff line')),
       timer,
       h('p.prompt', 'Answer within 3 seconds: pick or say your reply.'),
       h('div.opts.ja-opts', st.options.map((o) => h('button.btn.opt', { type: 'button', 'data-id': o.id, on: { click: (e) => {

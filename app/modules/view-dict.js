@@ -1,7 +1,9 @@
 // Dictionary UI (JMdict): search box, download status, ranked results, and the "Dictionary matches"
 // block for the Phrases search. Rows reuse the phrase-row layout (text left, actions right).
 import { h, clear, speakItem, ico, showFullscreen, toast } from './ui.js';
-import * as D from './dict.js';
+import { dictFor } from './dict.js';
+
+const dictOf = (ctx) => dictFor(ctx.lang.id);
 
 const POS = {
   n: 'noun', v1: 'verb', v5: 'verb', vk: 'verb', vs: 'suru verb', 'adj-i': 'i-adj', 'adj-na': 'na-adj', adj: 'adj',
@@ -24,7 +26,9 @@ export function toggleDictFav(ctx, e) {
 
 /** One dictionary entry: headword, reading, romaji, glosses, part of speech; play / show / favorite. */
 export function dictRow(ctx, e) {
-  const say = () => speakItem({ ja: e.ja, tts: e.kana }, 1.0); // the kana reading avoids TTS kanji misreadings
+  const zh = ctx.lang.id === 'zh';
+  const say = () => speakItem(zh ? { ja: e.ja } : { ja: e.ja, tts: e.kana }, 1.0);
+  const showReadingLine = !zh && e.kana !== e.ja;
   const fav = isDictFav(ctx, e.id);
   const favBtn = h('button.btn.icon.fav' + (fav ? '.on' : ''), {
     type: 'button', 'aria-label': 'Favorite', 'aria-pressed': fav ? 'true' : 'false', title: fav ? 'Remove from favorites' : 'Add to favorites',
@@ -40,22 +44,23 @@ export function dictRow(ctx, e) {
   return h('article.phrase.dict-entry', { 'data-dict-id': String(e.id) },
     h('div.phrase-head',
       h('div.phrase-text',
-        h('div.jp', h('span.ja', { lang: 'ja' }, e.ja)),
-        e.kana !== e.ja ? h('div.kana-line', { lang: 'ja' }, e.kana) : null,
+        h('div.jp', h('span.ja', { lang: ctx.lang.tag }, e.ja)),
+        showReadingLine ? h('div.kana-line', { lang: ctx.lang.tag }, e.kana) : null,
         h('div.romaji', e.romaji),
         h('div.en', e.en),
         h('div.dict-meta', posText(e.pos), e.core ? null : ' · less common')),
       h('div.actions',
         h('button.btn.icon', { type: 'button', 'aria-label': 'Play', title: 'Play', on: { click: (ev) => { ev.stopPropagation(); say(); } } }, ico('play')),
-        h('button.btn.icon', { type: 'button', 'aria-label': 'Show full screen', title: 'Show to a Japanese person', on: { click: (ev) => {
+        h('button.btn.icon', { type: 'button', 'aria-label': 'Show full screen', title: `Show to ${ctx.lang.speaker}`, on: { click: (ev) => {
           ev.stopPropagation();
-          showFullscreen({ lines: [{ text: e.ja }, ...(e.kana !== e.ja ? [{ text: e.kana, small: true }] : [])], caption: e.en, speakText: e.kana });
+          showFullscreen({ lines: [{ text: e.ja }, ...(showReadingLine ? [{ text: e.kana, small: true }] : [])], caption: zh ? `${e.romaji} · ${e.en}` : e.en, speakText: zh ? e.ja : e.kana });
         } } }, ico('show')),
         favBtn)));
 }
 
 /** Download status line that updates itself. */
-export function statusLine() {
+export function statusLine(ctx) {
+  const D = dictOf(ctx);
   const el = h('p.small.dict-status#dict-status', { role: 'status' }, D.progressText());
   const off = D.onChange((s) => { if (!el.isConnected) { off(); return; } el.textContent = D.progressText(s); el.dataset.state = s.status; });
   el.dataset.state = D.status().status;
@@ -64,8 +69,10 @@ export function statusLine() {
 
 /** The Dictionary pane of the Words tab. */
 export function renderDictionary(ctx, box, initial = '') {
+  const D = dictOf(ctx);
+  const zh = ctx.lang.id === 'zh';
   const input = h('input.search#dict-search', {
-    type: 'search', placeholder: 'English, kana, romaji or kanji: coffee, kōhī, コーヒー', 'aria-label': 'Search the dictionary', enterkeyhint: 'search', value: initial,
+    type: 'search', placeholder: ctx.lang.words.searchDict, 'aria-label': 'Search the dictionary', enterkeyhint: 'search', value: initial,
   });
   const list = h('div.list#dict-results');
   let q = initial;
@@ -81,7 +88,7 @@ export function renderDictionary(ctx, box, initial = '') {
     list.append(h('h2.section', `Found: ${res.length}${res.length === 40 ? '+' : ''}`));
     if (!res.length) {
       list.append(h('div.empty', h('p', `No dictionary entry for “${q}”.`),
-        h('p.small', s.status === 'ready' ? 'Try another spelling, English or kana.' : 'The full dictionary is still loading; try again in a moment.')));
+        h('p.small', s.status === 'ready' ? (zh ? 'Try another spelling, English or pinyin without tones.' : 'Try another spelling, English or kana.') : 'The full dictionary is still loading; try again in a moment.')));
       return;
     }
     res.forEach((e) => list.append(dictRow(ctx, e)));
@@ -91,8 +98,8 @@ export function renderDictionary(ctx, box, initial = '') {
   input.addEventListener('keydown', (e) => { if (e.key === 'Enter') input.blur(); });
   // results appear (or get fuller) as the dictionary loads
   const off = D.onChange(() => { if (!box.isConnected) { off(); return; } if (q) draw(); });
-  box.append(input, statusLine(), list,
-    h('p.small.dict-credit', 'Dictionary data: JMdict © EDRDG, CC BY-SA 4.0. ',
+  box.append(input, statusLine(ctx), list,
+    h('p.small.dict-credit', zh ? 'Dictionary data: CC-CEDICT (MDBG), CC BY-SA 4.0. ' : 'Dictionary data: JMdict © EDRDG, CC BY-SA 4.0. ',
       h('button.linklike#dict-credits', { type: 'button', on: { click: () => ctx.go('#/tools/credits') } }, 'Credits')));
   draw();
   D.load().catch(() => { /* status line shows the error; the SW caches the files once online */ });
@@ -100,6 +107,7 @@ export function renderDictionary(ctx, box, initial = '') {
 
 /** "Dictionary matches" under the Phrases search (null when there is nothing to show). */
 export function dictMatches(ctx, query, limit = 5) {
+  const D = dictOf(ctx);
   if (!query || D.status().status === 'idle') return null;
   const res = D.search(query, limit);
   if (!res.length) return null;

@@ -72,6 +72,7 @@
   --font-ja-ui: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans CJK JP", "Noto Sans JP", "BIZ UDPGothic", "Yu Gothic UI", "Yu Gothic", "Meiryo", sans-serif;
   --font-read: "Lora", "Iowan Old Style", "Noto Serif", Georgia, "Times New Roman", serif;
   --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-zh: "Noto Sans SC", "PingFang SC", "Source Han Sans SC", "Microsoft YaHei", sans-serif;
   --font-num: var(--font-ui);
 
   /* rem-based so the OS text-size setting is honoured (1rem = 16px by default) */
