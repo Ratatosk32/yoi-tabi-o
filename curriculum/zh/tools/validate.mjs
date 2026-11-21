@@ -249,6 +249,7 @@ if (existsSync(join(dataDir, 'pinyin.json'))) {
       if (x.q == null || x.a == null) E(`${w}: missing q/a`);
       if (x.opts && !x.opts.includes(x.a)) E(`${w}: answer not among opts`);
       if (x.opts && new Set(x.opts).size !== x.opts.length) E(`${w}: duplicate opts`);
+      if (x.opts && x.py && !checkSyllable(x.a)) for (const o of x.opts) { const err = checkSyllable(o); if (err) E(`${w}: option ${o}: ${err}`); }
       if (q.mode === 'listen' && !x.tts) E(`${w}: listen item without tts`);
       if (x.py && x.tts && !pyMatches(x.py, x.tts)) E(`${w}: ${x.tts} is not read ${x.py} in CC-CEDICT`);
     }

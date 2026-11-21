@@ -1,0 +1,3501 @@
+{
+ "format": 1,
+ "lang": "zh",
+ "locale": "zh-CN",
+ "script": "Hans",
+ "version": 1,
+ "generated": "2026-11-21",
+ "tones": [
+  {
+   "n": 1,
+   "name": "1st tone",
+   "shape": "high, level",
+   "contour": "55",
+   "mark": "ā",
+   "ex": {
+    "h": "妈",
+    "r": "mā",
+    "en": "mother"
+   }
+  },
+  {
+   "n": 2,
+   "name": "2nd tone",
+   "shape": "rising, like a surprised \"what?\"",
+   "contour": "35",
+   "mark": "á",
+   "ex": {
+    "h": "麻",
+    "r": "má",
+    "en": "hemp; numb"
+   }
+  },
+  {
+   "n": 3,
+   "name": "3rd tone",
+   "shape": "low, dipping; in speech mostly just low",
+   "contour": "214",
+   "mark": "ǎ",
+   "ex": {
+    "h": "马",
+    "r": "mǎ",
+    "en": "horse"
+   }
+  },
+  {
+   "n": 4,
+   "name": "4th tone",
+   "shape": "falling sharply, like a firm \"no!\"",
+   "contour": "51",
+   "mark": "à",
+   "ex": {
+    "h": "骂",
+    "r": "mà",
+    "en": "scold"
+   }
+  },
+  {
+   "n": 5,
+   "name": "neutral tone",
+   "shape": "short and light, no mark",
+   "contour": "",
+   "mark": "a",
+   "ex": {
+    "h": "吗",
+    "r": "ma",
+    "en": "question particle"
+   }
+  }
+ ],
+ "tables": [
+  {
+   "id": "initials",
+   "title": "Initials",
+   "cols": 4,
+   "rows": [
+    [
+     {
+      "h": "b",
+      "r": "soft p",
+      "ex": "八",
+      "py": "bā",
+      "en": "eight",
+      "tts": "八"
+     },
+     {
+      "h": "p",
+      "r": "p with a puff",
+      "ex": "跑",
+      "py": "pǎo",
+      "en": "run",
+      "tts": "跑"
+     },
+     {
+      "h": "m",
+      "r": "m",
+      "ex": "妈",
+      "py": "mā",
+      "en": "mother",
+      "tts": "妈"
+     },
+     {
+      "h": "f",
+      "r": "f",
+      "ex": "飞",
+      "py": "fēi",
+      "en": "fly",
+      "tts": "飞"
+     }
+    ],
+    [
+     {
+      "h": "d",
+      "r": "soft t",
+      "ex": "大",
+      "py": "dà",
+      "en": "big",
+      "tts": "大"
+     },
+     {
+      "h": "t",
+      "r": "t with a puff",
+      "ex": "他",
+      "py": "tā",
+      "en": "he",
+      "tts": "他"
+     },
+     {
+      "h": "n",
+      "r": "n",
+      "ex": "你",
+      "py": "nǐ",
+      "en": "you",
+      "tts": "你"
+     },
+     {
+      "h": "l",
+      "r": "l",
+      "ex": "来",
+      "py": "lái",
+      "en": "come",
+      "tts": "来"
+     }
+    ],
+    [
+     {
+      "h": "g",
+      "r": "soft k",
+      "ex": "哥",
+      "py": "gē",
+      "en": "older brother",
+      "tts": "哥"
+     },
+     {
+      "h": "k",
+      "r": "k with a puff",
+      "ex": "看",
+      "py": "kàn",
+      "en": "look",
+      "tts": "看"
+     },
+     {
+      "h": "h",
+      "r": "rough h, as in Scottish \"loch\"",
+      "ex": "好",
+      "py": "hǎo",
+      "en": "good",
+      "tts": "好"
+     },
+     null
+    ],
+    [
+     {
+      "h": "j",
+      "r": "like \"jee\", tongue tip down",
+      "ex": "鸡",
+      "py": "jī",
+      "en": "chicken",
+      "tts": "鸡"
+     },
+     {
+      "h": "q",
+      "r": "like \"chee\", tongue tip down",
+      "ex": "七",
+      "py": "qī",
+      "en": "seven",
+      "tts": "七"
+     },
+     {
+      "h": "x",
+      "r": "like \"shee\", tongue tip down",
+      "ex": "西",
+      "py": "xī",
+      "en": "west",
+      "tts": "西"
+     },
+     null
+    ],
+    [
+     {
+      "h": "zh",
+      "r": "like \"j\" in \"jar\", tongue curled back",
+      "ex": "中",
+      "py": "zhōng",
+      "en": "middle",
+      "tts": "中"
+     },
+     {
+      "h": "ch",
+      "r": "like \"ch\" in \"church\", tongue curled back",
+      "ex": "吃",
+      "py": "chī",
+      "en": "eat",
+      "tts": "吃"
+     },
+     {
+      "h": "sh",
+      "r": "like \"sh\", tongue curled back",
+      "ex": "是",
+      "py": "shì",
+      "en": "be",
+      "tts": "是"
+     },
+     {
+      "h": "r",
+      "r": "like the \"s\" in \"pleasure\", curled back",
+      "ex": "人",
+      "py": "rén",
+      "en": "person",
+      "tts": "人"
+     }
+    ],
+    [
+     {
+      "h": "z",
+      "r": "like \"ds\" in \"beds\"",
+      "ex": "字",
+      "py": "zì",
+      "en": "character",
+      "tts": "字"
+     },
+     {
+      "h": "c",
+      "r": "like \"ts\" in \"cats\", with a puff",
+      "ex": "菜",
+      "py": "cài",
+      "en": "dish",
+      "tts": "菜"
+     },
+     {
+      "h": "s",
+      "r": "s",
+      "ex": "三",
+      "py": "sān",
+      "en": "three",
+      "tts": "三"
+     },
+     null
+    ],
+    [
+     {
+      "h": "y",
+      "r": "y (spelling for i- at the start)",
+      "ex": "有",
+      "py": "yǒu",
+      "en": "have",
+      "tts": "有"
+     },
+     {
+      "h": "w",
+      "r": "w (spelling for u- at the start)",
+      "ex": "我",
+      "py": "wǒ",
+      "en": "I",
+      "tts": "我"
+     },
+     null,
+     null
+    ]
+   ]
+  },
+  {
+   "id": "finals-simple",
+   "title": "Finals: simple and compound",
+   "cols": 4,
+   "rows": [
+    [
+     {
+      "h": "a",
+      "r": "as in \"father\"",
+      "ex": "他",
+      "py": "tā",
+      "en": "he",
+      "tts": "他"
+     },
+     {
+      "h": "o",
+      "r": "as in \"or\" (after b p m f)",
+      "ex": "波",
+      "py": "bō",
+      "en": "wave",
+      "tts": "波"
+     },
+     {
+      "h": "e",
+      "r": "like \"uh\", from the throat",
+      "ex": "饿",
+      "py": "è",
+      "en": "hungry",
+      "tts": "饿"
+     },
+     {
+      "h": "er",
+      "r": "like \"are\" (American)",
+      "ex": "二",
+      "py": "èr",
+      "en": "two",
+      "tts": "二"
+     }
+    ],
+    [
+     {
+      "h": "ai",
+      "r": "as in \"eye\"",
+      "ex": "爱",
+      "py": "ài",
+      "en": "love",
+      "tts": "爱"
+     },
+     {
+      "h": "ei",
+      "r": "as in \"day\"",
+      "ex": "黑",
+      "py": "hēi",
+      "en": "black",
+      "tts": "黑"
+     },
+     {
+      "h": "ao",
+      "r": "as in \"now\"",
+      "ex": "好",
+      "py": "hǎo",
+      "en": "good",
+      "tts": "好"
+     },
+     {
+      "h": "ou",
+      "r": "as in \"go\"",
+      "ex": "口",
+      "py": "kǒu",
+      "en": "mouth",
+      "tts": "口"
+     }
+    ],
+    [
+     {
+      "h": "an",
+      "r": "as in \"fun\" but open",
+      "ex": "三",
+      "py": "sān",
+      "en": "three",
+      "tts": "三"
+     },
+     {
+      "h": "en",
+      "r": "as in \"taken\"",
+      "ex": "人",
+      "py": "rén",
+      "en": "person",
+      "tts": "人"
+     },
+     {
+      "h": "ang",
+      "r": "as in \"long\" but with a",
+      "ex": "忙",
+      "py": "máng",
+      "en": "busy",
+      "tts": "忙"
+     },
+     {
+      "h": "eng",
+      "r": "as in \"sung\"",
+      "ex": "冷",
+      "py": "lěng",
+      "en": "cold",
+      "tts": "冷"
+     }
+    ],
+    [
+     {
+      "h": "ong",
+      "r": "as in German \"Lunge\"",
+      "ex": "红",
+      "py": "hóng",
+      "en": "red",
+      "tts": "红"
+     },
+     {
+      "h": "-i (zh ch sh r)",
+      "r": "a buzzing \"r\"-like vowel",
+      "ex": "吃",
+      "py": "chī",
+      "en": "eat",
+      "tts": "吃"
+     },
+     {
+      "h": "-i (z c s)",
+      "r": "a buzzing \"z\"-like vowel",
+      "ex": "字",
+      "py": "zì",
+      "en": "character",
+      "tts": "字"
+     },
+     null
+    ]
+   ]
+  },
+  {
+   "id": "finals-i",
+   "title": "Finals starting with i",
+   "cols": 4,
+   "rows": [
+    [
+     {
+      "h": "i",
+      "r": "as in \"see\" (yi alone)",
+      "ex": "衣",
+      "py": "yī",
+      "en": "clothes",
+      "tts": "衣"
+     },
+     {
+      "h": "ia",
+      "r": "\"ya\"",
+      "ex": "家",
+      "py": "jiā",
+      "en": "home",
+      "tts": "家"
+     },
+     {
+      "h": "ie",
+      "r": "\"ye\" as in \"yes\"",
+      "ex": "谢",
+      "py": "xiè",
+      "en": "thank",
+      "tts": "谢"
+     },
+     {
+      "h": "iao",
+      "r": "\"yow\"",
+      "ex": "小",
+      "py": "xiǎo",
+      "en": "small",
+      "tts": "小"
+     }
+    ],
+    [
+     {
+      "h": "iu",
+      "r": "\"yo\" (written iu, from iou)",
+      "ex": "六",
+      "py": "liù",
+      "en": "six",
+      "tts": "六"
+     },
+     {
+      "h": "ian",
+      "r": "\"yen\"",
+      "ex": "天",
+      "py": "tiān",
+      "en": "sky",
+      "tts": "天"
+     },
+     {
+      "h": "in",
+      "r": "as in \"in\"",
+      "ex": "心",
+      "py": "xīn",
+      "en": "heart",
+      "tts": "心"
+     },
+     {
+      "h": "iang",
+      "r": "\"yahng\"",
+      "ex": "想",
+      "py": "xiǎng",
+      "en": "think",
+      "tts": "想"
+     }
+    ],
+    [
+     {
+      "h": "ing",
+      "r": "as in \"sing\"",
+      "ex": "星",
+      "py": "xīng",
+      "en": "star",
+      "tts": "星"
+     },
+     {
+      "h": "iong",
+      "r": "\"yong\"",
+      "ex": "熊",
+      "py": "xióng",
+      "en": "bear",
+      "tts": "熊"
+     },
+     null,
+     null
+    ]
+   ]
+  },
+  {
+   "id": "finals-u",
+   "title": "Finals starting with u",
+   "cols": 4,
+   "rows": [
+    [
+     {
+      "h": "u",
+      "r": "as in \"moon\"",
+      "ex": "五",
+      "py": "wǔ",
+      "en": "five",
+      "tts": "五"
+     },
+     {
+      "h": "ua",
+      "r": "\"wa\"",
+      "ex": "花",
+      "py": "huā",
+      "en": "flower",
+      "tts": "花"
+     },
+     {
+      "h": "uo",
+      "r": "\"wo\"",
+      "ex": "我",
+      "py": "wǒ",
+      "en": "I",
+      "tts": "我"
+     },
+     {
+      "h": "uai",
+      "r": "\"why\"",
+      "ex": "快",
+      "py": "kuài",
+      "en": "fast",
+      "tts": "快"
+     }
+    ],
+    [
+     {
+      "h": "ui",
+      "r": "\"way\" (written ui, from uei)",
+      "ex": "对",
+      "py": "duì",
+      "en": "right",
+      "tts": "对"
+     },
+     {
+      "h": "uan",
+      "r": "\"wan\"",
+      "ex": "晚",
+      "py": "wǎn",
+      "en": "late",
+      "tts": "晚"
+     },
+     {
+      "h": "un",
+      "r": "\"won\" (written un, from uen)",
+      "ex": "春",
+      "py": "chūn",
+      "en": "spring",
+      "tts": "春"
+     },
+     {
+      "h": "uang",
+      "r": "\"wahng\"",
+      "ex": "黄",
+      "py": "huáng",
+      "en": "yellow",
+      "tts": "黄"
+     }
+    ],
+    [
+     {
+      "h": "ueng",
+      "r": "\"weng\" (only as weng)",
+      "ex": "翁",
+      "py": "wēng",
+      "en": "old man",
+      "tts": "翁"
+     },
+     null,
+     null,
+     null
+    ]
+   ]
+  },
+  {
+   "id": "finals-v",
+   "title": "Finals with ü",
+   "cols": 4,
+   "rows": [
+    [
+     {
+      "h": "ü",
+      "r": "say \"ee\" with rounded lips",
+      "ex": "女",
+      "py": "nǚ",
+      "en": "woman",
+      "tts": "女"
+     },
+     {
+      "h": "üe",
+      "r": "\"ü\" + \"e\" (written ue after j q x y)",
+      "ex": "学",
+      "py": "xué",
+      "en": "study",
+      "tts": "学"
+     },
+     {
+      "h": "üan",
+      "r": "\"ü\" + \"an\" (written uan after j q x y)",
+      "ex": "远",
+      "py": "yuǎn",
+      "en": "far",
+      "tts": "远"
+     },
+     {
+      "h": "ün",
+      "r": "\"ü\" + \"n\" (written un after j q x y)",
+      "ex": "云",
+      "py": "yún",
+      "en": "cloud",
+      "tts": "云"
+     }
+    ]
+   ]
+  },
+  {
+   "id": "tones",
+   "title": "Tones",
+   "cols": 4,
+   "rows": [
+    [
+     {
+      "h": "mā",
+      "r": "1",
+      "ex": "妈",
+      "py": "mā",
+      "en": "mother",
+      "tts": "妈"
+     },
+     {
+      "h": "má",
+      "r": "2",
+      "ex": "麻",
+      "py": "má",
+      "en": "hemp; numb",
+      "tts": "麻"
+     },
+     {
+      "h": "mǎ",
+      "r": "3",
+      "ex": "马",
+      "py": "mǎ",
+      "en": "horse",
+      "tts": "马"
+     },
+     {
+      "h": "mà",
+      "r": "4",
+      "ex": "骂",
+      "py": "mà",
+      "en": "scold",
+      "tts": "骂"
+     }
+    ],
+    [
+     {
+      "h": "bā",
+      "r": "1",
+      "ex": "八",
+      "py": "bā",
+      "en": "eight",
+      "tts": "八"
+     },
+     {
+      "h": "bá",
+      "r": "2",
+      "ex": "拔",
+      "py": "bá",
+      "en": "pull out",
+      "tts": "拔"
+     },
+     {
+      "h": "bǎ",
+      "r": "3",
+      "ex": "把",
+      "py": "bǎ",
+      "en": "hold",
+      "tts": "把"
+     },
+     {
+      "h": "bà",
+      "r": "4",
+      "ex": "爸",
+      "py": "bà",
+      "en": "dad",
+      "tts": "爸"
+     }
+    ],
+    [
+     {
+      "h": "tāng",
+      "r": "1",
+      "ex": "汤",
+      "py": "tāng",
+      "en": "soup",
+      "tts": "汤"
+     },
+     {
+      "h": "táng",
+      "r": "2",
+      "ex": "糖",
+      "py": "táng",
+      "en": "sugar",
+      "tts": "糖"
+     },
+     {
+      "h": "tǎng",
+      "r": "3",
+      "ex": "躺",
+      "py": "tǎng",
+      "en": "lie down",
+      "tts": "躺"
+     },
+     {
+      "h": "tàng",
+      "r": "4",
+      "ex": "烫",
+      "py": "tàng",
+      "en": "scalding hot",
+      "tts": "烫"
+     }
+    ],
+    [
+     {
+      "h": "yī",
+      "r": "1",
+      "ex": "衣",
+      "py": "yī",
+      "en": "clothes",
+      "tts": "衣"
+     },
+     {
+      "h": "yí",
+      "r": "2",
+      "ex": "姨",
+      "py": "yí",
+      "en": "aunt",
+      "tts": "姨"
+     },
+     {
+      "h": "yǐ",
+      "r": "3",
+      "ex": "椅",
+      "py": "yǐ",
+      "en": "chair",
+      "tts": "椅"
+     },
+     {
+      "h": "yì",
+      "r": "4",
+      "ex": "亿",
+      "py": "yì",
+      "en": "hundred million",
+      "tts": "亿"
+     }
+    ]
+   ]
+  },
+  {
+   "id": "confusable",
+   "title": "Confusable sounds",
+   "cols": 3,
+   "rows": [
+    [
+     {
+      "h": "zh",
+      "r": "zhī",
+      "ex": "知",
+      "py": "zhī",
+      "en": "know",
+      "tts": "知"
+     },
+     {
+      "h": "z",
+      "r": "zī",
+      "ex": "资",
+      "py": "zī",
+      "en": "funds",
+      "tts": "资"
+     },
+     {
+      "h": "j",
+      "r": "jī",
+      "ex": "鸡",
+      "py": "jī",
+      "en": "chicken",
+      "tts": "鸡"
+     }
+    ],
+    [
+     {
+      "h": "ch",
+      "r": "chí",
+      "ex": "迟",
+      "py": "chí",
+      "en": "late",
+      "tts": "迟"
+     },
+     {
+      "h": "c",
+      "r": "cí",
+      "ex": "词",
+      "py": "cí",
+      "en": "word",
+      "tts": "词"
+     },
+     {
+      "h": "q",
+      "r": "qí",
+      "ex": "骑",
+      "py": "qí",
+      "en": "ride",
+      "tts": "骑"
+     }
+    ],
+    [
+     {
+      "h": "sh",
+      "r": "shī",
+      "ex": "诗",
+      "py": "shī",
+      "en": "poem",
+      "tts": "诗"
+     },
+     {
+      "h": "s",
+      "r": "sī",
+      "ex": "丝",
+      "py": "sī",
+      "en": "silk",
+      "tts": "丝"
+     },
+     {
+      "h": "x",
+      "r": "xī",
+      "ex": "西",
+      "py": "xī",
+      "en": "west",
+      "tts": "西"
+     }
+    ],
+    [
+     {
+      "h": "r",
+      "r": "rì",
+      "ex": "日",
+      "py": "rì",
+      "en": "sun, day",
+      "tts": "日"
+     },
+     {
+      "h": "l",
+      "r": "lì",
+      "ex": "力",
+      "py": "lì",
+      "en": "strength",
+      "tts": "力"
+     },
+     null
+    ],
+    [
+     {
+      "h": "u",
+      "r": "lù",
+      "ex": "路",
+      "py": "lù",
+      "en": "road",
+      "tts": "路"
+     },
+     {
+      "h": "ü",
+      "r": "lǜ",
+      "ex": "绿",
+      "py": "lǜ",
+      "en": "green",
+      "tts": "绿"
+     },
+     null
+    ],
+    [
+     {
+      "h": "an",
+      "r": "shān",
+      "ex": "山",
+      "py": "shān",
+      "en": "mountain",
+      "tts": "山"
+     },
+     {
+      "h": "ang",
+      "r": "shāng",
+      "ex": "商",
+      "py": "shāng",
+      "en": "trade",
+      "tts": "商"
+     },
+     null
+    ],
+    [
+     {
+      "h": "en",
+      "r": "shēn",
+      "ex": "身",
+      "py": "shēn",
+      "en": "body",
+      "tts": "身"
+     },
+     {
+      "h": "eng",
+      "r": "shēng",
+      "ex": "生",
+      "py": "shēng",
+      "en": "be born",
+      "tts": "生"
+     },
+     null
+    ],
+    [
+     {
+      "h": "in",
+      "r": "xīn",
+      "ex": "新",
+      "py": "xīn",
+      "en": "new",
+      "tts": "新"
+     },
+     {
+      "h": "ing",
+      "r": "xīng",
+      "ex": "星",
+      "py": "xīng",
+      "en": "star",
+      "tts": "星"
+     },
+     null
+    ]
+   ]
+  }
+ ],
+ "notes": [
+  {
+   "mark": "3 + 3",
+   "en": "Two 3rd tones in a row: the first is spoken as a 2nd tone. 你好 is written nǐ hǎo but said ní hǎo. The written marks do not change."
+  },
+  {
+   "mark": "3",
+   "en": "Before any other tone, a 3rd tone is usually just low (it does not rise again): 老师 lǎoshī = low + high."
+  },
+  {
+   "mark": "不",
+   "en": "不 is bù, but bú before a 4th tone: 不是 bú shì, 不对 bú duì. In verb + 不 + verb it is neutral: 是不是 shì bu shì. This course writes the tone that is spoken."
+  },
+  {
+   "mark": "一",
+   "en": "一 is yī alone, when counting and in dates; yí before a 4th tone (一个 yí ge, 一样 yíyàng); yì before tones 1-3 (一天 yì tiān, 一起 yìqǐ). This course writes the tone that is spoken."
+  },
+  {
+   "mark": "ma",
+   "en": "Neutral tone: short and light, written without a mark. Particles (吗 ma, 的 de, 了 le), noun suffixes (子 zi, 们 men) and the second half of many words (谢谢 xièxie, 朋友 péngyou)."
+  },
+  {
+   "mark": "ü",
+   "en": "After j, q, x and y the two dots of ü are dropped: 去 qù, 学 xué, 鱼 yú all have ü. After n and l they stay: 女 nǚ, 绿 lǜ (because nu and lu also exist)."
+  },
+  {
+   "mark": "iu ui un",
+   "en": "Shortened spellings: iou is written iu (六 liù), uei is written ui (对 duì), uen is written un (春 chūn)."
+  },
+  {
+   "mark": "y w",
+   "en": "At the start of a syllable i- is written y and u- is written w: ia = ya, uo = wo, i = yi, u = wu, ü = yu."
+  },
+  {
+   "mark": "zhi ci",
+   "en": "The i in zhi, chi, shi, ri, zi, ci, si is not \"ee\": it is a buzzing continuation of the consonant."
+  },
+  {
+   "mark": "'",
+   "en": "An apostrophe separates syllables when the next one starts with a, o or e: 西安 Xī'ān (two syllables), not xiān."
+  },
+  {
+   "mark": "ǎ",
+   "en": "Where the mark goes: on a or e if present; on o in ou; otherwise on the last vowel (liù, duì)."
+  },
+  {
+   "mark": "儿",
+   "en": "Northern r-ending: 哪儿 nǎr, 一点儿 yìdiǎnr, 玩儿 wánr. The 儿 adds an r sound to the syllable before it."
+  },
+  {
+   "mark": "b / p",
+   "en": "b d g are not voiced like English b d g; they are plain p t k without a puff of air. p t k have a strong puff."
+  }
+ ],
+ "quizzes": [
+  {
+   "id": "tones",
+   "label": "Tones",
+   "mode": "listen",
+   "hint": "Listen and pick the tone you hear.",
+   "items": [
+    {
+     "q": "mā",
+     "a": "mā",
+     "opts": [
+      "mā",
+      "má",
+      "mǎ",
+      "mà"
+     ],
+     "tts": "妈",
+     "sub": "妈 mother",
+     "py": "mā"
+    },
+    {
+     "q": "má",
+     "a": "má",
+     "opts": [
+      "mā",
+      "má",
+      "mǎ",
+      "mà"
+     ],
+     "tts": "麻",
+     "sub": "麻 hemp; numb",
+     "py": "má"
+    },
+    {
+     "q": "mǎ",
+     "a": "mǎ",
+     "opts": [
+      "mā",
+      "má",
+      "mǎ",
+      "mà"
+     ],
+     "tts": "马",
+     "sub": "马 horse",
+     "py": "mǎ"
+    },
+    {
+     "q": "mà",
+     "a": "mà",
+     "opts": [
+      "mā",
+      "má",
+      "mǎ",
+      "mà"
+     ],
+     "tts": "骂",
+     "sub": "骂 scold",
+     "py": "mà"
+    },
+    {
+     "q": "bā",
+     "a": "bā",
+     "opts": [
+      "bā",
+      "bá",
+      "bǎ",
+      "bà"
+     ],
+     "tts": "八",
+     "sub": "八 eight",
+     "py": "bā"
+    },
+    {
+     "q": "bá",
+     "a": "bá",
+     "opts": [
+      "bā",
+      "bá",
+      "bǎ",
+      "bà"
+     ],
+     "tts": "拔",
+     "sub": "拔 pull out",
+     "py": "bá"
+    },
+    {
+     "q": "bǎ",
+     "a": "bǎ",
+     "opts": [
+      "bā",
+      "bá",
+      "bǎ",
+      "bà"
+     ],
+     "tts": "把",
+     "sub": "把 hold",
+     "py": "bǎ"
+    },
+    {
+     "q": "bà",
+     "a": "bà",
+     "opts": [
+      "bā",
+      "bá",
+      "bǎ",
+      "bà"
+     ],
+     "tts": "爸",
+     "sub": "爸 dad",
+     "py": "bà"
+    },
+    {
+     "q": "tāng",
+     "a": "tāng",
+     "opts": [
+      "tāng",
+      "táng",
+      "tǎng",
+      "tàng"
+     ],
+     "tts": "汤",
+     "sub": "汤 soup",
+     "py": "tāng"
+    },
+    {
+     "q": "táng",
+     "a": "táng",
+     "opts": [
+      "tāng",
+      "táng",
+      "tǎng",
+      "tàng"
+     ],
+     "tts": "糖",
+     "sub": "糖 sugar",
+     "py": "táng"
+    },
+    {
+     "q": "tǎng",
+     "a": "tǎng",
+     "opts": [
+      "tāng",
+      "táng",
+      "tǎng",
+      "tàng"
+     ],
+     "tts": "躺",
+     "sub": "躺 lie down",
+     "py": "tǎng"
+    },
+    {
+     "q": "tàng",
+     "a": "tàng",
+     "opts": [
+      "tāng",
+      "táng",
+      "tǎng",
+      "tàng"
+     ],
+     "tts": "烫",
+     "sub": "烫 scalding hot",
+     "py": "tàng"
+    },
+    {
+     "q": "yī",
+     "a": "yī",
+     "opts": [
+      "yī",
+      "yí",
+      "yǐ",
+      "yì"
+     ],
+     "tts": "衣",
+     "sub": "衣 clothes",
+     "py": "yī"
+    },
+    {
+     "q": "yí",
+     "a": "yí",
+     "opts": [
+      "yī",
+      "yí",
+      "yǐ",
+      "yì"
+     ],
+     "tts": "姨",
+     "sub": "姨 aunt",
+     "py": "yí"
+    },
+    {
+     "q": "yǐ",
+     "a": "yǐ",
+     "opts": [
+      "yī",
+      "yí",
+      "yǐ",
+      "yì"
+     ],
+     "tts": "椅",
+     "sub": "椅 chair",
+     "py": "yǐ"
+    },
+    {
+     "q": "yì",
+     "a": "yì",
+     "opts": [
+      "yī",
+      "yí",
+      "yǐ",
+      "yì"
+     ],
+     "tts": "亿",
+     "sub": "亿 hundred million",
+     "py": "yì"
+    },
+    {
+     "q": "wū",
+     "a": "wū",
+     "opts": [
+      "wū",
+      "wú",
+      "wǔ",
+      "wù"
+     ],
+     "tts": "屋",
+     "sub": "屋 house",
+     "py": "wū"
+    },
+    {
+     "q": "wú",
+     "a": "wú",
+     "opts": [
+      "wū",
+      "wú",
+      "wǔ",
+      "wù"
+     ],
+     "tts": "无",
+     "sub": "无 without",
+     "py": "wú"
+    },
+    {
+     "q": "wǔ",
+     "a": "wǔ",
+     "opts": [
+      "wū",
+      "wú",
+      "wǔ",
+      "wù"
+     ],
+     "tts": "五",
+     "sub": "五 five",
+     "py": "wǔ"
+    },
+    {
+     "q": "wù",
+     "a": "wù",
+     "opts": [
+      "wū",
+      "wú",
+      "wǔ",
+      "wù"
+     ],
+     "tts": "雾",
+     "sub": "雾 fog",
+     "py": "wù"
+    },
+    {
+     "q": "fēi",
+     "a": "fēi",
+     "opts": [
+      "fēi",
+      "féi",
+      "fěi",
+      "fèi"
+     ],
+     "tts": "飞",
+     "sub": "飞 fly",
+     "py": "fēi"
+    },
+    {
+     "q": "féi",
+     "a": "féi",
+     "opts": [
+      "fēi",
+      "féi",
+      "fěi",
+      "fèi"
+     ],
+     "tts": "肥",
+     "sub": "肥 fat",
+     "py": "féi"
+    },
+    {
+     "q": "mǎi",
+     "a": "mǎi",
+     "opts": [
+      "māi",
+      "mái",
+      "mǎi",
+      "mài"
+     ],
+     "tts": "买",
+     "sub": "买 buy",
+     "py": "mǎi"
+    },
+    {
+     "q": "mài",
+     "a": "mài",
+     "opts": [
+      "māi",
+      "mái",
+      "mǎi",
+      "mài"
+     ],
+     "tts": "卖",
+     "sub": "卖 sell",
+     "py": "mài"
+    },
+    {
+     "q": "tiān",
+     "a": "tiān",
+     "opts": [
+      "tiān",
+      "tián",
+      "tiǎn",
+      "tiàn"
+     ],
+     "tts": "天",
+     "sub": "天 sky",
+     "py": "tiān"
+    },
+    {
+     "q": "tián",
+     "a": "tián",
+     "opts": [
+      "tiān",
+      "tián",
+      "tiǎn",
+      "tiàn"
+     ],
+     "tts": "甜",
+     "sub": "甜 sweet",
+     "py": "tián"
+    },
+    {
+     "q": "wén",
+     "a": "wén",
+     "opts": [
+      "wēn",
+      "wén",
+      "wěn",
+      "wèn"
+     ],
+     "tts": "文",
+     "sub": "文 writing",
+     "py": "wén"
+    },
+    {
+     "q": "wèn",
+     "a": "wèn",
+     "opts": [
+      "wēn",
+      "wén",
+      "wěn",
+      "wèn"
+     ],
+     "tts": "问",
+     "sub": "问 ask",
+     "py": "wèn"
+    }
+   ]
+  },
+  {
+   "id": "tone-marks",
+   "label": "Tone marks",
+   "mode": "read",
+   "hint": "Which tone does the mark show?",
+   "items": [
+    {
+     "q": "mā",
+     "a": "1st tone",
+     "opts": [
+      "1st tone",
+      "2nd tone",
+      "3rd tone",
+      "4th tone"
+     ],
+     "sub": "妈 mother"
+    },
+    {
+     "q": "má",
+     "a": "2nd tone",
+     "opts": [
+      "1st tone",
+      "2nd tone",
+      "3rd tone",
+      "4th tone"
+     ],
+     "sub": "麻 hemp; numb"
+    },
+    {
+     "q": "mǎ",
+     "a": "3rd tone",
+     "opts": [
+      "1st tone",
+      "2nd tone",
+      "3rd tone",
+      "4th tone"
+     ],
+     "sub": "马 horse"
+    },
+    {
+     "q": "mà",
+     "a": "4th tone",
+     "opts": [
+      "1st tone",
+      "2nd tone",
+      "3rd tone",
+      "4th tone"
+     ],
+     "sub": "骂 scold"
+    },
+    {
+     "q": "bā",
+     "a": "1st tone",
+     "opts": [
+      "1st tone",
+      "2nd tone",
+      "3rd tone",
+      "4th tone"
+     ],
+     "sub": "八 eight"
+    },
+    {
+     "q": "bá",
+     "a": "2nd tone",
+     "opts": [
+      "1st tone",
+      "2nd tone",
+      "3rd tone",
+      "4th tone"
+     ],
+     "sub": "拔 pull out"
+    },
+    {
+     "q": "bǎ",
+     "a": "3rd tone",
+     "opts": [
+      "1st tone",
+      "2nd tone",
+      "3rd tone",
+      "4th tone"
+     ],
+     "sub": "把 hold"
+    },
+    {
+     "q": "bà",
+     "a": "4th tone",
+     "opts": [
+      "1st tone",
+      "2nd tone",
+      "3rd tone",
+      "4th tone"
+     ],
+     "sub": "爸 dad"
+    },
+    {
+     "q": "tāng",
+     "a": "1st tone",
+     "opts": [
+      "1st tone",
+      "2nd tone",
+      "3rd tone",
+      "4th tone"
+     ],
+     "sub": "汤 soup"
+    },
+    {
+     "q": "táng",
+     "a": "2nd tone",
+     "opts": [
+      "1st tone",
+      "2nd tone",
+      "3rd tone",
+      "4th tone"
+     ],
+     "sub": "糖 sugar"
+    },
+    {
+     "q": "tǎng",
+     "a": "3rd tone",
+     "opts": [
+      "1st tone",
+      "2nd tone",
+      "3rd tone",
+      "4th tone"
+     ],
+     "sub": "躺 lie down"
+    },
+    {
+     "q": "tàng",
+     "a": "4th tone",
+     "opts": [
+      "1st tone",
+      "2nd tone",
+      "3rd tone",
+      "4th tone"
+     ],
+     "sub": "烫 scalding hot"
+    },
+    {
+     "q": "yī",
+     "a": "1st tone",
+     "opts": [
+      "1st tone",
+      "2nd tone",
+      "3rd tone",
+      "4th tone"
+     ],
+     "sub": "衣 clothes"
+    },
+    {
+     "q": "yí",
+     "a": "2nd tone",
+     "opts": [
+      "1st tone",
+      "2nd tone",
+      "3rd tone",
+      "4th tone"
+     ],
+     "sub": "姨 aunt"
+    },
+    {
+     "q": "yǐ",
+     "a": "3rd tone",
+     "opts": [
+      "1st tone",
+      "2nd tone",
+      "3rd tone",
+      "4th tone"
+     ],
+     "sub": "椅 chair"
+    },
+    {
+     "q": "yì",
+     "a": "4th tone",
+     "opts": [
+      "1st tone",
+      "2nd tone",
+      "3rd tone",
+      "4th tone"
+     ],
+     "sub": "亿 hundred million"
+    },
+    {
+     "q": "wū",
+     "a": "1st tone",
+     "opts": [
+      "1st tone",
+      "2nd tone",
+      "3rd tone",
+      "4th tone"
+     ],
+     "sub": "屋 house"
+    },
+    {
+     "q": "wú",
+     "a": "2nd tone",
+     "opts": [
+      "1st tone",
+      "2nd tone",
+      "3rd tone",
+      "4th tone"
+     ],
+     "sub": "无 without"
+    },
+    {
+     "q": "wǔ",
+     "a": "3rd tone",
+     "opts": [
+      "1st tone",
+      "2nd tone",
+      "3rd tone",
+      "4th tone"
+     ],
+     "sub": "五 five"
+    },
+    {
+     "q": "wù",
+     "a": "4th tone",
+     "opts": [
+      "1st tone",
+      "2nd tone",
+      "3rd tone",
+      "4th tone"
+     ],
+     "sub": "雾 fog"
+    },
+    {
+     "q": "fēi",
+     "a": "1st tone",
+     "opts": [
+      "1st tone",
+      "2nd tone",
+      "3rd tone",
+      "4th tone"
+     ],
+     "sub": "飞 fly"
+    },
+    {
+     "q": "féi",
+     "a": "2nd tone",
+     "opts": [
+      "1st tone",
+      "2nd tone",
+      "3rd tone",
+      "4th tone"
+     ],
+     "sub": "肥 fat"
+    },
+    {
+     "q": "mǎi",
+     "a": "3rd tone",
+     "opts": [
+      "1st tone",
+      "2nd tone",
+      "3rd tone",
+      "4th tone"
+     ],
+     "sub": "买 buy"
+    },
+    {
+     "q": "mài",
+     "a": "4th tone",
+     "opts": [
+      "1st tone",
+      "2nd tone",
+      "3rd tone",
+      "4th tone"
+     ],
+     "sub": "卖 sell"
+    },
+    {
+     "q": "tiān",
+     "a": "1st tone",
+     "opts": [
+      "1st tone",
+      "2nd tone",
+      "3rd tone",
+      "4th tone"
+     ],
+     "sub": "天 sky"
+    },
+    {
+     "q": "tián",
+     "a": "2nd tone",
+     "opts": [
+      "1st tone",
+      "2nd tone",
+      "3rd tone",
+      "4th tone"
+     ],
+     "sub": "甜 sweet"
+    },
+    {
+     "q": "wén",
+     "a": "2nd tone",
+     "opts": [
+      "1st tone",
+      "2nd tone",
+      "3rd tone",
+      "4th tone"
+     ],
+     "sub": "文 writing"
+    },
+    {
+     "q": "wèn",
+     "a": "4th tone",
+     "opts": [
+      "1st tone",
+      "2nd tone",
+      "3rd tone",
+      "4th tone"
+     ],
+     "sub": "问 ask"
+    }
+   ]
+  },
+  {
+   "id": "tone-pairs",
+   "label": "Tone pairs",
+   "mode": "listen",
+   "hint": "Listen to the word and pick its two tones.",
+   "items": [
+    {
+     "q": "Zhōngguó",
+     "a": "Zhōngguó",
+     "opts": [
+      "Zhóngguó",
+      "Zhōngguó",
+      "Zhōngguǒ",
+      "Zhǒngguǒ"
+     ],
+     "tts": "中国",
+     "sub": "中国 China",
+     "py": "Zhōngguó"
+    },
+    {
+     "q": "fēijī",
+     "a": "fēijī",
+     "opts": [
+      "féijī",
+      "fēijí",
+      "fēijī",
+      "fěijí"
+     ],
+     "tts": "飞机",
+     "sub": "飞机 plane",
+     "py": "fēijī"
+    },
+    {
+     "q": "gōngyuán",
+     "a": "gōngyuán",
+     "opts": [
+      "góngyuán",
+      "gōngyuán",
+      "gōngyuǎn",
+      "gǒngyuǎn"
+     ],
+     "tts": "公园",
+     "sub": "公园 park",
+     "py": "gōngyuán"
+    },
+    {
+     "q": "yīshēng",
+     "a": "yīshēng",
+     "opts": [
+      "yíshēng",
+      "yīshéng",
+      "yīshēng",
+      "yǐshéng"
+     ],
+     "tts": "医生",
+     "sub": "医生 doctor",
+     "py": "yīshēng"
+    },
+    {
+     "q": "kāfēi",
+     "a": "kāfēi",
+     "opts": [
+      "káfēi",
+      "kāféi",
+      "kāfēi",
+      "kǎféi"
+     ],
+     "tts": "咖啡",
+     "sub": "咖啡 coffee",
+     "py": "kāfēi"
+    },
+    {
+     "q": "shāngdiàn",
+     "a": "shāngdiàn",
+     "opts": [
+      "shángdiàn",
+      "shāngdiàn",
+      "shāngdiān",
+      "shǎngdiān"
+     ],
+     "tts": "商店",
+     "sub": "商店 shop",
+     "py": "shāngdiàn"
+    },
+    {
+     "q": "shíjiān",
+     "a": "shíjiān",
+     "opts": [
+      "shìjián",
+      "shíjián",
+      "shíjiān",
+      "shǐjiān"
+     ],
+     "tts": "时间",
+     "sub": "时间 time",
+     "py": "shíjiān"
+    },
+    {
+     "q": "xióngmāo",
+     "a": "xióngmāo",
+     "opts": [
+      "xiòngmáo",
+      "xióngmáo",
+      "xióngmāo",
+      "xiǒngmāo"
+     ],
+     "tts": "熊猫",
+     "sub": "熊猫 panda",
+     "py": "xióngmāo"
+    },
+    {
+     "q": "yínháng",
+     "a": "yínháng",
+     "opts": [
+      "yìnhǎng",
+      "yínháng",
+      "yínhǎng",
+      "yǐnháng"
+     ],
+     "tts": "银行",
+     "sub": "银行 bank",
+     "py": "yínháng"
+    },
+    {
+     "q": "míngnián",
+     "a": "míngnián",
+     "opts": [
+      "mìngniǎn",
+      "míngnián",
+      "míngniǎn",
+      "mǐngnián"
+     ],
+     "tts": "明年",
+     "sub": "明年 next year",
+     "py": "míngnián"
+    },
+    {
+     "q": "niúnǎi",
+     "a": "niúnǎi",
+     "opts": [
+      "niùnài",
+      "niúnài",
+      "niúnǎi",
+      "niǔnǎi"
+     ],
+     "tts": "牛奶",
+     "sub": "牛奶 milk",
+     "py": "niúnǎi"
+    },
+    {
+     "q": "xuéxiào",
+     "a": "xuéxiào",
+     "opts": [
+      "xuèxiāo",
+      "xuéxiào",
+      "xuéxiāo",
+      "xuěxiào"
+     ],
+     "tts": "学校",
+     "sub": "学校 school",
+     "py": "xuéxiào"
+    },
+    {
+     "q": "Běijīng",
+     "a": "Běijīng",
+     "opts": [
+      "Bèijīng",
+      "Bēijíng",
+      "Běijíng",
+      "Běijīng"
+     ],
+     "tts": "北京",
+     "sub": "北京 Beijing",
+     "py": "Běijīng"
+    },
+    {
+     "q": "lǎoshī",
+     "a": "lǎoshī",
+     "opts": [
+      "làoshī",
+      "lāoshí",
+      "lǎoshí",
+      "lǎoshī"
+     ],
+     "tts": "老师",
+     "sub": "老师 teacher",
+     "py": "lǎoshī"
+    },
+    {
+     "q": "shǒujī",
+     "a": "shǒujī",
+     "opts": [
+      "shòujī",
+      "shōují",
+      "shǒují",
+      "shǒujī"
+     ],
+     "tts": "手机",
+     "sub": "手机 mobile phone",
+     "py": "shǒujī"
+    },
+    {
+     "q": "mǐfàn",
+     "a": "mǐfàn",
+     "opts": [
+      "mìfàn",
+      "mīfān",
+      "mǐfàn",
+      "mǐfān"
+     ],
+     "tts": "米饭",
+     "sub": "米饭 rice",
+     "py": "mǐfàn"
+    },
+    {
+     "q": "huǒchē",
+     "a": "huǒchē",
+     "opts": [
+      "huòchē",
+      "huōché",
+      "huǒché",
+      "huǒchē"
+     ],
+     "tts": "火车",
+     "sub": "火车 train",
+     "py": "huǒchē"
+    },
+    {
+     "q": "diànnǎo",
+     "a": "diànnǎo",
+     "opts": [
+      "diànnào",
+      "diànnǎo",
+      "diánnào",
+      "diānnǎo"
+     ],
+     "tts": "电脑",
+     "sub": "电脑 computer",
+     "py": "diànnǎo"
+    },
+    {
+     "q": "Hànyǔ",
+     "a": "Hànyǔ",
+     "opts": [
+      "Hànyù",
+      "Hànyǔ",
+      "Hányù",
+      "Hānyǔ"
+     ],
+     "tts": "汉语",
+     "sub": "汉语 Chinese language",
+     "py": "Hànyǔ"
+    },
+    {
+     "q": "Shànghǎi",
+     "a": "Shànghǎi",
+     "opts": [
+      "Shànghài",
+      "Shànghǎi",
+      "Shánghài",
+      "Shānghǎi"
+     ],
+     "tts": "上海",
+     "sub": "上海 Shanghai",
+     "py": "Shànghǎi"
+    },
+    {
+     "q": "zàijiàn",
+     "a": "zàijiàn",
+     "opts": [
+      "zàijiàn",
+      "zàijiān",
+      "záijiān",
+      "zāijiàn"
+     ],
+     "tts": "再见",
+     "sub": "再见 goodbye",
+     "py": "zàijiàn"
+    },
+    {
+     "q": "diànhuà",
+     "a": "diànhuà",
+     "opts": [
+      "diànhuà",
+      "diànhuā",
+      "diánhuā",
+      "diānhuà"
+     ],
+     "tts": "电话",
+     "sub": "电话 telephone",
+     "py": "diànhuà"
+    },
+    {
+     "q": "dìtiě",
+     "a": "dìtiě",
+     "opts": [
+      "dìtiè",
+      "dìtiě",
+      "dítiè",
+      "dītiě"
+     ],
+     "tts": "地铁",
+     "sub": "地铁 metro",
+     "py": "dìtiě"
+    },
+    {
+     "q": "miàntiáo",
+     "a": "miàntiáo",
+     "opts": [
+      "miàntiáo",
+      "miàntiǎo",
+      "miántiǎo",
+      "miāntiáo"
+     ],
+     "tts": "面条",
+     "sub": "面条 noodles",
+     "py": "miàntiáo"
+    }
+   ]
+  },
+  {
+   "id": "initials",
+   "label": "zh z j, ch c q, sh s x, r l",
+   "mode": "listen",
+   "hint": "Curled tongue (zh ch sh r), flat tongue (z c s), or tongue tip down behind the teeth (j q x)?",
+   "items": [
+    {
+     "q": "zhī",
+     "a": "zhī",
+     "opts": [
+      "zhī",
+      "zī",
+      "jī"
+     ],
+     "group": "zh z j",
+     "tts": "知",
+     "sub": "知 know",
+     "py": "zhī"
+    },
+    {
+     "q": "zī",
+     "a": "zī",
+     "opts": [
+      "zhī",
+      "zī",
+      "jī"
+     ],
+     "group": "zh z j",
+     "tts": "资",
+     "sub": "资 funds",
+     "py": "zī"
+    },
+    {
+     "q": "jī",
+     "a": "jī",
+     "opts": [
+      "zhī",
+      "zī",
+      "jī"
+     ],
+     "group": "zh z j",
+     "tts": "鸡",
+     "sub": "鸡 chicken",
+     "py": "jī"
+    },
+    {
+     "q": "zhù",
+     "a": "zhù",
+     "opts": [
+      "zhù",
+      "zù",
+      "jù"
+     ],
+     "group": "zh z j",
+     "tts": "住",
+     "sub": "住 live",
+     "py": "zhù"
+    },
+    {
+     "q": "jù",
+     "a": "jù",
+     "opts": [
+      "zhù",
+      "zù",
+      "jù"
+     ],
+     "group": "zh z j",
+     "tts": "句",
+     "sub": "句 sentence",
+     "py": "jù"
+    },
+    {
+     "q": "zū",
+     "a": "zū",
+     "opts": [
+      "zhū",
+      "zū",
+      "jū"
+     ],
+     "group": "zh z j",
+     "tts": "租",
+     "sub": "租 rent",
+     "py": "zū"
+    },
+    {
+     "q": "chī",
+     "a": "chī",
+     "opts": [
+      "chī",
+      "cī",
+      "qī"
+     ],
+     "group": "ch c q",
+     "tts": "吃",
+     "sub": "吃 eat",
+     "py": "chī"
+    },
+    {
+     "q": "qī",
+     "a": "qī",
+     "opts": [
+      "chī",
+      "cī",
+      "qī"
+     ],
+     "group": "ch c q",
+     "tts": "七",
+     "sub": "七 seven",
+     "py": "qī"
+    },
+    {
+     "q": "cì",
+     "a": "cì",
+     "opts": [
+      "chì",
+      "cì",
+      "qì"
+     ],
+     "group": "ch c q",
+     "tts": "次",
+     "sub": "次 time(s)",
+     "py": "cì"
+    },
+    {
+     "q": "chū",
+     "a": "chū",
+     "opts": [
+      "chū",
+      "cū",
+      "qū"
+     ],
+     "group": "ch c q",
+     "tts": "出",
+     "sub": "出 go out",
+     "py": "chū"
+    },
+    {
+     "q": "qù",
+     "a": "qù",
+     "opts": [
+      "chù",
+      "cù",
+      "qù"
+     ],
+     "group": "ch c q",
+     "tts": "去",
+     "sub": "去 go",
+     "py": "qù"
+    },
+    {
+     "q": "cū",
+     "a": "cū",
+     "opts": [
+      "chū",
+      "cū",
+      "qū"
+     ],
+     "group": "ch c q",
+     "tts": "粗",
+     "sub": "粗 thick",
+     "py": "cū"
+    },
+    {
+     "q": "shì",
+     "a": "shì",
+     "opts": [
+      "shì",
+      "sì",
+      "xì"
+     ],
+     "group": "sh s x",
+     "tts": "是",
+     "sub": "是 be",
+     "py": "shì"
+    },
+    {
+     "q": "sì",
+     "a": "sì",
+     "opts": [
+      "shì",
+      "sì",
+      "xì"
+     ],
+     "group": "sh s x",
+     "tts": "四",
+     "sub": "四 four",
+     "py": "sì"
+    },
+    {
+     "q": "xì",
+     "a": "xì",
+     "opts": [
+      "shì",
+      "sì",
+      "xì"
+     ],
+     "group": "sh s x",
+     "tts": "戏",
+     "sub": "戏 play, drama",
+     "py": "xì"
+    },
+    {
+     "q": "shū",
+     "a": "shū",
+     "opts": [
+      "shū",
+      "sū",
+      "xū"
+     ],
+     "group": "sh s x",
+     "tts": "书",
+     "sub": "书 book",
+     "py": "shū"
+    },
+    {
+     "q": "xū",
+     "a": "xū",
+     "opts": [
+      "shū",
+      "sū",
+      "xū"
+     ],
+     "group": "sh s x",
+     "tts": "需",
+     "sub": "需 need",
+     "py": "xū"
+    },
+    {
+     "q": "sù",
+     "a": "sù",
+     "opts": [
+      "shù",
+      "sù",
+      "xù"
+     ],
+     "group": "sh s x",
+     "tts": "诉",
+     "sub": "诉 tell",
+     "py": "sù"
+    },
+    {
+     "q": "rì",
+     "a": "rì",
+     "opts": [
+      "rì",
+      "lì"
+     ],
+     "group": "r l",
+     "tts": "日",
+     "sub": "日 sun, day",
+     "py": "rì"
+    },
+    {
+     "q": "lì",
+     "a": "lì",
+     "opts": [
+      "rì",
+      "lì"
+     ],
+     "group": "r l",
+     "tts": "力",
+     "sub": "力 strength",
+     "py": "lì"
+    },
+    {
+     "q": "lù",
+     "a": "lù",
+     "opts": [
+      "rù",
+      "lù"
+     ],
+     "group": "r l",
+     "tts": "路",
+     "sub": "路 road",
+     "py": "lù"
+    },
+    {
+     "q": "rù",
+     "a": "rù",
+     "opts": [
+      "rù",
+      "lù"
+     ],
+     "group": "r l",
+     "tts": "入",
+     "sub": "入 enter",
+     "py": "rù"
+    },
+    {
+     "q": "rè",
+     "a": "rè",
+     "opts": [
+      "rè",
+      "lè"
+     ],
+     "group": "r l",
+     "tts": "热",
+     "sub": "热 hot",
+     "py": "rè"
+    },
+    {
+     "q": "ròu",
+     "a": "ròu",
+     "opts": [
+      "ròu",
+      "lòu"
+     ],
+     "group": "r l",
+     "tts": "肉",
+     "sub": "肉 meat",
+     "py": "ròu"
+    }
+   ]
+  },
+  {
+   "id": "u-umlaut",
+   "label": "u or ü (listen)",
+   "mode": "listen",
+   "hint": "Rounded \"oo\" (u) or \"ee\" with rounded lips (ü)?",
+   "items": [
+    {
+     "q": "lù",
+     "a": "lù",
+     "opts": [
+      "lù",
+      "lǜ"
+     ],
+     "tts": "路",
+     "sub": "路 road",
+     "py": "lù"
+    },
+    {
+     "q": "lǜ",
+     "a": "lǜ",
+     "opts": [
+      "lù",
+      "lǜ"
+     ],
+     "tts": "绿",
+     "sub": "绿 green",
+     "py": "lǜ"
+    },
+    {
+     "q": "nǔ",
+     "a": "nǔ",
+     "opts": [
+      "nǔ",
+      "nǚ"
+     ],
+     "tts": "努",
+     "sub": "努 make an effort",
+     "py": "nǔ"
+    },
+    {
+     "q": "nǚ",
+     "a": "nǚ",
+     "opts": [
+      "nǔ",
+      "nǚ"
+     ],
+     "tts": "女",
+     "sub": "女 woman",
+     "py": "nǚ"
+    },
+    {
+     "q": "lǔ",
+     "a": "lǔ",
+     "opts": [
+      "lǔ",
+      "lǚ"
+     ],
+     "tts": "鲁",
+     "sub": "鲁 Lu (Shandong)",
+     "py": "lǔ"
+    },
+    {
+     "q": "lǚ",
+     "a": "lǚ",
+     "opts": [
+      "lǔ",
+      "lǚ"
+     ],
+     "tts": "旅",
+     "sub": "旅 travel",
+     "py": "lǚ"
+    },
+    {
+     "q": "nù",
+     "a": "nù",
+     "opts": [
+      "nù",
+      "nǜ"
+     ],
+     "tts": "怒",
+     "sub": "怒 anger",
+     "py": "nù"
+    },
+    {
+     "q": "lǜ",
+     "a": "lǜ",
+     "opts": [
+      "lù",
+      "lǜ"
+     ],
+     "tts": "律",
+     "sub": "律 law",
+     "py": "lǜ"
+    }
+   ]
+  },
+  {
+   "id": "u-umlaut-read",
+   "label": "u or ü (spelling)",
+   "mode": "read",
+   "hint": "After j, q, x and y a written u is really ü.",
+   "items": [
+    {
+     "q": "qù",
+     "a": "ü",
+     "opts": [
+      "u",
+      "ü",
+      "none"
+     ],
+     "sub": "去"
+    },
+    {
+     "q": "xué",
+     "a": "ü",
+     "opts": [
+      "u",
+      "ü",
+      "none"
+     ],
+     "sub": "学"
+    },
+    {
+     "q": "yú",
+     "a": "ü",
+     "opts": [
+      "u",
+      "ü",
+      "none"
+     ],
+     "sub": "鱼"
+    },
+    {
+     "q": "jù",
+     "a": "ü",
+     "opts": [
+      "u",
+      "ü",
+      "none"
+     ],
+     "sub": "句"
+    },
+    {
+     "q": "yuǎn",
+     "a": "ü",
+     "opts": [
+      "u",
+      "ü",
+      "none"
+     ],
+     "sub": "远"
+    },
+    {
+     "q": "yún",
+     "a": "ü",
+     "opts": [
+      "u",
+      "ü",
+      "none"
+     ],
+     "sub": "云"
+    },
+    {
+     "q": "xū",
+     "a": "ü",
+     "opts": [
+      "u",
+      "ü",
+      "none"
+     ],
+     "sub": "需"
+    },
+    {
+     "q": "nǚ",
+     "a": "ü",
+     "opts": [
+      "u",
+      "ü",
+      "none"
+     ],
+     "sub": "女"
+    },
+    {
+     "q": "lù",
+     "a": "u",
+     "opts": [
+      "u",
+      "ü",
+      "none"
+     ],
+     "sub": "路"
+    },
+    {
+     "q": "shū",
+     "a": "u",
+     "opts": [
+      "u",
+      "ü",
+      "none"
+     ],
+     "sub": "书"
+    },
+    {
+     "q": "wǔ",
+     "a": "u",
+     "opts": [
+      "u",
+      "ü",
+      "none"
+     ],
+     "sub": "五"
+    },
+    {
+     "q": "chū",
+     "a": "u",
+     "opts": [
+      "u",
+      "ü",
+      "none"
+     ],
+     "sub": "出"
+    },
+    {
+     "q": "zhù",
+     "a": "u",
+     "opts": [
+      "u",
+      "ü",
+      "none"
+     ],
+     "sub": "住"
+    },
+    {
+     "q": "chūn",
+     "a": "u",
+     "opts": [
+      "u",
+      "ü",
+      "none"
+     ],
+     "sub": "春"
+    },
+    {
+     "q": "mài",
+     "a": "none",
+     "opts": [
+      "u",
+      "ü",
+      "none"
+     ],
+     "sub": "卖"
+    },
+    {
+     "q": "lǜ",
+     "a": "ü",
+     "opts": [
+      "u",
+      "ü",
+      "none"
+     ],
+     "sub": "绿"
+    }
+   ]
+  },
+  {
+   "id": "finals",
+   "label": "an ang, en eng, in ing",
+   "mode": "listen",
+   "hint": "Does the syllable end in -n (tongue up front) or -ng (back of the throat)?",
+   "items": [
+    {
+     "q": "shān",
+     "a": "shān",
+     "opts": [
+      "shān",
+      "shāng"
+     ],
+     "group": "an ang",
+     "tts": "山",
+     "sub": "山 mountain",
+     "py": "shān"
+    },
+    {
+     "q": "shāng",
+     "a": "shāng",
+     "opts": [
+      "shān",
+      "shāng"
+     ],
+     "group": "an ang",
+     "tts": "商",
+     "sub": "商 trade",
+     "py": "shāng"
+    },
+    {
+     "q": "fàn",
+     "a": "fàn",
+     "opts": [
+      "fàn",
+      "fàng"
+     ],
+     "group": "an ang",
+     "tts": "饭",
+     "sub": "饭 meal",
+     "py": "fàn"
+    },
+    {
+     "q": "fàng",
+     "a": "fàng",
+     "opts": [
+      "fàn",
+      "fàng"
+     ],
+     "group": "an ang",
+     "tts": "放",
+     "sub": "放 put",
+     "py": "fàng"
+    },
+    {
+     "q": "wǎn",
+     "a": "wǎn",
+     "opts": [
+      "wǎn",
+      "wǎng"
+     ],
+     "group": "an ang",
+     "tts": "晚",
+     "sub": "晚 late",
+     "py": "wǎn"
+    },
+    {
+     "q": "wǎng",
+     "a": "wǎng",
+     "opts": [
+      "wǎn",
+      "wǎng"
+     ],
+     "group": "an ang",
+     "tts": "网",
+     "sub": "网 net",
+     "py": "wǎng"
+    },
+    {
+     "q": "shēn",
+     "a": "shēn",
+     "opts": [
+      "shēn",
+      "shēng"
+     ],
+     "group": "en eng",
+     "tts": "身",
+     "sub": "身 body",
+     "py": "shēn"
+    },
+    {
+     "q": "shēng",
+     "a": "shēng",
+     "opts": [
+      "shēn",
+      "shēng"
+     ],
+     "group": "en eng",
+     "tts": "生",
+     "sub": "生 be born",
+     "py": "shēng"
+    },
+    {
+     "q": "mén",
+     "a": "mén",
+     "opts": [
+      "mén",
+      "méng"
+     ],
+     "group": "en eng",
+     "tts": "门",
+     "sub": "门 door",
+     "py": "mén"
+    },
+    {
+     "q": "gēn",
+     "a": "gēn",
+     "opts": [
+      "gēn",
+      "gēng"
+     ],
+     "group": "en eng",
+     "tts": "根",
+     "sub": "根 root",
+     "py": "gēn"
+    },
+    {
+     "q": "rén",
+     "a": "rén",
+     "opts": [
+      "rén",
+      "réng"
+     ],
+     "group": "en eng",
+     "tts": "人",
+     "sub": "人 person",
+     "py": "rén"
+    },
+    {
+     "q": "péng",
+     "a": "péng",
+     "opts": [
+      "pén",
+      "péng"
+     ],
+     "group": "en eng",
+     "tts": "朋",
+     "sub": "朋 friend",
+     "py": "péng"
+    },
+    {
+     "q": "pén",
+     "a": "pén",
+     "opts": [
+      "pén",
+      "péng"
+     ],
+     "group": "en eng",
+     "tts": "盆",
+     "sub": "盆 basin",
+     "py": "pén"
+    },
+    {
+     "q": "xīn",
+     "a": "xīn",
+     "opts": [
+      "xīn",
+      "xīng"
+     ],
+     "group": "in ing",
+     "tts": "新",
+     "sub": "新 new",
+     "py": "xīn"
+    },
+    {
+     "q": "xīng",
+     "a": "xīng",
+     "opts": [
+      "xīn",
+      "xīng"
+     ],
+     "group": "in ing",
+     "tts": "星",
+     "sub": "星 star",
+     "py": "xīng"
+    },
+    {
+     "q": "jīn",
+     "a": "jīn",
+     "opts": [
+      "jīn",
+      "jīng"
+     ],
+     "group": "in ing",
+     "tts": "金",
+     "sub": "金 gold",
+     "py": "jīn"
+    },
+    {
+     "q": "jīng",
+     "a": "jīng",
+     "opts": [
+      "jīn",
+      "jīng"
+     ],
+     "group": "in ing",
+     "tts": "京",
+     "sub": "京 capital",
+     "py": "jīng"
+    },
+    {
+     "q": "lín",
+     "a": "lín",
+     "opts": [
+      "lín",
+      "líng"
+     ],
+     "group": "in ing",
+     "tts": "林",
+     "sub": "林 forest",
+     "py": "lín"
+    },
+    {
+     "q": "líng",
+     "a": "líng",
+     "opts": [
+      "lín",
+      "líng"
+     ],
+     "group": "in ing",
+     "tts": "零",
+     "sub": "零 zero",
+     "py": "líng"
+    }
+   ]
+  },
+  {
+   "id": "words",
+   "label": "Words",
+   "mode": "read",
+   "hint": "What does the word mean?",
+   "items": [
+    {
+     "q": "你好",
+     "a": "hello",
+     "sub": "nǐhǎo"
+    },
+    {
+     "q": "谢谢",
+     "a": "thank you",
+     "sub": "xièxie"
+    },
+    {
+     "q": "再见",
+     "a": "goodbye",
+     "sub": "zàijiàn"
+    },
+    {
+     "q": "对不起",
+     "a": "sorry",
+     "sub": "duìbuqǐ"
+    },
+    {
+     "q": "没关系",
+     "a": "never mind",
+     "sub": "méiguānxi"
+    },
+    {
+     "q": "中国",
+     "a": "China",
+     "sub": "Zhōngguó"
+    },
+    {
+     "q": "老师",
+     "a": "teacher",
+     "sub": "lǎoshī"
+    },
+    {
+     "q": "学生",
+     "a": "student",
+     "sub": "xuésheng"
+    },
+    {
+     "q": "朋友",
+     "a": "friend",
+     "sub": "péngyou"
+    },
+    {
+     "q": "喜欢",
+     "a": "like",
+     "sub": "xǐhuan"
+    },
+    {
+     "q": "吃饭",
+     "a": "have a meal",
+     "sub": "chīfàn"
+    },
+    {
+     "q": "水果",
+     "a": "fruit",
+     "sub": "shuǐguǒ"
+    },
+    {
+     "q": "米饭",
+     "a": "rice",
+     "sub": "mǐfàn"
+    },
+    {
+     "q": "咖啡",
+     "a": "coffee",
+     "sub": "kāfēi"
+    },
+    {
+     "q": "手机",
+     "a": "mobile phone",
+     "sub": "shǒujī"
+    },
+    {
+     "q": "电脑",
+     "a": "computer",
+     "sub": "diànnǎo"
+    },
+    {
+     "q": "今天",
+     "a": "today",
+     "sub": "jīntiān"
+    },
+    {
+     "q": "明天",
+     "a": "tomorrow",
+     "sub": "míngtiān"
+    },
+    {
+     "q": "昨天",
+     "a": "yesterday",
+     "sub": "zuótiān"
+    },
+    {
+     "q": "现在",
+     "a": "now",
+     "sub": "xiànzài"
+    },
+    {
+     "q": "时间",
+     "a": "time",
+     "sub": "shíjiān"
+    },
+    {
+     "q": "多少",
+     "a": "how many",
+     "sub": "duōshao"
+    },
+    {
+     "q": "什么",
+     "a": "what",
+     "sub": "shénme"
+    },
+    {
+     "q": "哪儿",
+     "a": "where",
+     "sub": "nǎr"
+    },
+    {
+     "q": "医院",
+     "a": "hospital",
+     "sub": "yīyuàn"
+    },
+    {
+     "q": "商店",
+     "a": "shop",
+     "sub": "shāngdiàn"
+    },
+    {
+     "q": "飞机",
+     "a": "plane",
+     "sub": "fēijī"
+    },
+    {
+     "q": "火车",
+     "a": "train",
+     "sub": "huǒchē"
+    },
+    {
+     "q": "出租车",
+     "a": "taxi",
+     "sub": "chūzūchē"
+    },
+    {
+     "q": "北京",
+     "a": "Beijing",
+     "sub": "Běijīng"
+    },
+    {
+     "q": "上海",
+     "a": "Shanghai",
+     "sub": "Shànghǎi"
+    },
+    {
+     "q": "漂亮",
+     "a": "pretty",
+     "sub": "piàoliang"
+    },
+    {
+     "q": "高兴",
+     "a": "glad",
+     "sub": "gāoxìng"
+    },
+    {
+     "q": "天气",
+     "a": "weather",
+     "sub": "tiānqì"
+    },
+    {
+     "q": "便宜",
+     "a": "cheap",
+     "sub": "piányi"
+    },
+    {
+     "q": "好吃",
+     "a": "tasty",
+     "sub": "hǎochī"
+    },
+    {
+     "q": "工作",
+     "a": "work",
+     "sub": "gōngzuò"
+    },
+    {
+     "q": "银行",
+     "a": "bank",
+     "sub": "yínháng"
+    },
+    {
+     "q": "汉字",
+     "a": "Chinese character",
+     "sub": "Hànzì"
+    },
+    {
+     "q": "熊猫",
+     "a": "panda",
+     "sub": "xióngmāo"
+    }
+   ]
+  },
+  {
+   "id": "words-listen",
+   "label": "Words by ear",
+   "mode": "listen",
+   "hint": "Listen and pick the meaning.",
+   "items": [
+    {
+     "q": "你好",
+     "a": "hello",
+     "tts": "你好",
+     "sub": "nǐhǎo"
+    },
+    {
+     "q": "谢谢",
+     "a": "thank you",
+     "tts": "谢谢",
+     "sub": "xièxie"
+    },
+    {
+     "q": "再见",
+     "a": "goodbye",
+     "tts": "再见",
+     "sub": "zàijiàn"
+    },
+    {
+     "q": "对不起",
+     "a": "sorry",
+     "tts": "对不起",
+     "sub": "duìbuqǐ"
+    },
+    {
+     "q": "没关系",
+     "a": "never mind",
+     "tts": "没关系",
+     "sub": "méiguānxi"
+    },
+    {
+     "q": "中国",
+     "a": "China",
+     "tts": "中国",
+     "sub": "Zhōngguó"
+    },
+    {
+     "q": "老师",
+     "a": "teacher",
+     "tts": "老师",
+     "sub": "lǎoshī"
+    },
+    {
+     "q": "学生",
+     "a": "student",
+     "tts": "学生",
+     "sub": "xuésheng"
+    },
+    {
+     "q": "朋友",
+     "a": "friend",
+     "tts": "朋友",
+     "sub": "péngyou"
+    },
+    {
+     "q": "喜欢",
+     "a": "like",
+     "tts": "喜欢",
+     "sub": "xǐhuan"
+    },
+    {
+     "q": "吃饭",
+     "a": "have a meal",
+     "tts": "吃饭",
+     "sub": "chīfàn"
+    },
+    {
+     "q": "水果",
+     "a": "fruit",
+     "tts": "水果",
+     "sub": "shuǐguǒ"
+    },
+    {
+     "q": "米饭",
+     "a": "rice",
+     "tts": "米饭",
+     "sub": "mǐfàn"
+    },
+    {
+     "q": "咖啡",
+     "a": "coffee",
+     "tts": "咖啡",
+     "sub": "kāfēi"
+    },
+    {
+     "q": "手机",
+     "a": "mobile phone",
+     "tts": "手机",
+     "sub": "shǒujī"
+    },
+    {
+     "q": "电脑",
+     "a": "computer",
+     "tts": "电脑",
+     "sub": "diànnǎo"
+    },
+    {
+     "q": "今天",
+     "a": "today",
+     "tts": "今天",
+     "sub": "jīntiān"
+    },
+    {
+     "q": "明天",
+     "a": "tomorrow",
+     "tts": "明天",
+     "sub": "míngtiān"
+    },
+    {
+     "q": "昨天",
+     "a": "yesterday",
+     "tts": "昨天",
+     "sub": "zuótiān"
+    },
+    {
+     "q": "现在",
+     "a": "now",
+     "tts": "现在",
+     "sub": "xiànzài"
+    },
+    {
+     "q": "时间",
+     "a": "time",
+     "tts": "时间",
+     "sub": "shíjiān"
+    },
+    {
+     "q": "多少",
+     "a": "how many",
+     "tts": "多少",
+     "sub": "duōshao"
+    },
+    {
+     "q": "什么",
+     "a": "what",
+     "tts": "什么",
+     "sub": "shénme"
+    },
+    {
+     "q": "哪儿",
+     "a": "where",
+     "tts": "哪儿",
+     "sub": "nǎr"
+    },
+    {
+     "q": "医院",
+     "a": "hospital",
+     "tts": "医院",
+     "sub": "yīyuàn"
+    },
+    {
+     "q": "商店",
+     "a": "shop",
+     "tts": "商店",
+     "sub": "shāngdiàn"
+    },
+    {
+     "q": "飞机",
+     "a": "plane",
+     "tts": "飞机",
+     "sub": "fēijī"
+    },
+    {
+     "q": "火车",
+     "a": "train",
+     "tts": "火车",
+     "sub": "huǒchē"
+    },
+    {
+     "q": "出租车",
+     "a": "taxi",
+     "tts": "出租车",
+     "sub": "chūzūchē"
+    },
+    {
+     "q": "北京",
+     "a": "Beijing",
+     "tts": "北京",
+     "sub": "Běijīng"
+    },
+    {
+     "q": "上海",
+     "a": "Shanghai",
+     "tts": "上海",
+     "sub": "Shànghǎi"
+    },
+    {
+     "q": "漂亮",
+     "a": "pretty",
+     "tts": "漂亮",
+     "sub": "piàoliang"
+    },
+    {
+     "q": "高兴",
+     "a": "glad",
+     "tts": "高兴",
+     "sub": "gāoxìng"
+    },
+    {
+     "q": "天气",
+     "a": "weather",
+     "tts": "天气",
+     "sub": "tiānqì"
+    },
+    {
+     "q": "便宜",
+     "a": "cheap",
+     "tts": "便宜",
+     "sub": "piányi"
+    },
+    {
+     "q": "好吃",
+     "a": "tasty",
+     "tts": "好吃",
+     "sub": "hǎochī"
+    },
+    {
+     "q": "工作",
+     "a": "work",
+     "tts": "工作",
+     "sub": "gōngzuò"
+    },
+    {
+     "q": "银行",
+     "a": "bank",
+     "tts": "银行",
+     "sub": "yínháng"
+    },
+    {
+     "q": "汉字",
+     "a": "Chinese character",
+     "tts": "汉字",
+     "sub": "Hànzì"
+    },
+    {
+     "q": "熊猫",
+     "a": "panda",
+     "tts": "熊猫",
+     "sub": "xióngmāo"
+    }
+   ]
+  }
+ ],
+ "words": [
+  {
+   "k": "你好",
+   "r": "nǐ hǎo",
+   "en": "hello"
+  },
+  {
+   "k": "谢谢",
+   "r": "xiè xie",
+   "en": "thank you"
+  },
+  {
+   "k": "再见",
+   "r": "zài jiàn",
+   "en": "goodbye"
+  },
+  {
+   "k": "对不起",
+   "r": "duì bu qǐ",
+   "en": "sorry"
+  },
+  {
+   "k": "没关系",
+   "r": "méi guān xi",
+   "en": "never mind"
+  },
+  {
+   "k": "中国",
+   "r": "Zhōng guó",
+   "en": "China"
+  },
+  {
+   "k": "老师",
+   "r": "lǎo shī",
+   "en": "teacher"
+  },
+  {
+   "k": "学生",
+   "r": "xué sheng",
+   "en": "student"
+  },
+  {
+   "k": "朋友",
+   "r": "péng you",
+   "en": "friend"
+  },
+  {
+   "k": "喜欢",
+   "r": "xǐ huan",
+   "en": "like"
+  },
+  {
+   "k": "吃饭",
+   "r": "chī fàn",
+   "en": "have a meal"
+  },
+  {
+   "k": "水果",
+   "r": "shuǐ guǒ",
+   "en": "fruit"
+  },
+  {
+   "k": "米饭",
+   "r": "mǐ fàn",
+   "en": "rice"
+  },
+  {
+   "k": "咖啡",
+   "r": "kā fēi",
+   "en": "coffee"
+  },
+  {
+   "k": "手机",
+   "r": "shǒu jī",
+   "en": "mobile phone"
+  },
+  {
+   "k": "电脑",
+   "r": "diàn nǎo",
+   "en": "computer"
+  },
+  {
+   "k": "今天",
+   "r": "jīn tiān",
+   "en": "today"
+  },
+  {
+   "k": "明天",
+   "r": "míng tiān",
+   "en": "tomorrow"
+  },
+  {
+   "k": "昨天",
+   "r": "zuó tiān",
+   "en": "yesterday"
+  },
+  {
+   "k": "现在",
+   "r": "xiàn zài",
+   "en": "now"
+  },
+  {
+   "k": "时间",
+   "r": "shí jiān",
+   "en": "time"
+  },
+  {
+   "k": "多少",
+   "r": "duō shao",
+   "en": "how many"
+  },
+  {
+   "k": "什么",
+   "r": "shén me",
+   "en": "what"
+  },
+  {
+   "k": "哪儿",
+   "r": "nǎ r",
+   "en": "where"
+  },
+  {
+   "k": "医院",
+   "r": "yī yuàn",
+   "en": "hospital"
+  },
+  {
+   "k": "商店",
+   "r": "shāng diàn",
+   "en": "shop"
+  },
+  {
+   "k": "飞机",
+   "r": "fēi jī",
+   "en": "plane"
+  },
+  {
+   "k": "火车",
+   "r": "huǒ chē",
+   "en": "train"
+  },
+  {
+   "k": "出租车",
+   "r": "chū zū chē",
+   "en": "taxi"
+  },
+  {
+   "k": "北京",
+   "r": "Běi jīng",
+   "en": "Beijing"
+  },
+  {
+   "k": "上海",
+   "r": "Shàng hǎi",
+   "en": "Shanghai"
+  },
+  {
+   "k": "漂亮",
+   "r": "piào liang",
+   "en": "pretty"
+  },
+  {
+   "k": "高兴",
+   "r": "gāo xìng",
+   "en": "glad"
+  },
+  {
+   "k": "天气",
+   "r": "tiān qì",
+   "en": "weather"
+  },
+  {
+   "k": "便宜",
+   "r": "pián yi",
+   "en": "cheap"
+  },
+  {
+   "k": "好吃",
+   "r": "hǎo chī",
+   "en": "tasty"
+  },
+  {
+   "k": "工作",
+   "r": "gōng zuò",
+   "en": "work"
+  },
+  {
+   "k": "银行",
+   "r": "yín háng",
+   "en": "bank"
+  },
+  {
+   "k": "汉字",
+   "r": "Hàn zì",
+   "en": "Chinese character"
+  },
+  {
+   "k": "熊猫",
+   "r": "xióng māo",
+   "en": "panda"
+  }
+ ]
+}
