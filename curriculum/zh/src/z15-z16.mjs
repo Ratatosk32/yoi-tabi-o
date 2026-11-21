@@ -1,7 +1,7 @@
 const LISTEN = 'Just listen: no reply needed.';
 
 export const LESSONS = [
-  { code: 'Z15-L01', level: 3, title: 'At work', goal: 'Talk about your job, colleagues, meetings and days off.', patterns: ['在 + place + 上班', '一边……一边……', 'verb 不 verb？'],
+  { code: 'Z15-L01', level: 4, title: 'At work', goal: 'Talk about your job, colleagues, meetings and days off.', patterns: ['在 + place + 上班', '一边……一边……', 'verb 不 verb？'],
     items: [
       ['work.hear-zai-na-jia-gong-si', 'hear', '你[nǐ]在[zài]哪[nǎ]家[jiā]公司[gōng sī]上班[shàng bān]？', 'Which company do you work for?', null, { replies: ['work.zai-yi-jia-yin-hang'] }],
       ['work.zai-yi-jia-yin-hang', 'say', '我[wǒ]在[zài]一[yì]家[jiā]银行[yín háng]上班[shàng bān]。', 'I work at a bank.'],
@@ -16,7 +16,7 @@ export const LESSONS = [
       ['work.word-gong-zi', 'say', '工资[gōng zī]', 'salary, pay', null, { tags: ['word'] }],
       ['work.word-chu-chai', 'say', '出差[chū chāi]', 'go on a business trip', '差 is chāi here (chà = lacking).', { tags: ['word'] }],
     ] },
-  { code: 'Z15-L02', level: 3, title: 'How well: 得', goal: 'Say how well something is done; talk about study and exams.', patterns: ['verb + 得 + adjective', 'verb + object + verb + 得 + adjective', 'verb + 了 + time + 了'],
+  { code: 'Z15-L02', level: 4, title: 'How well: 得', goal: 'Say how well something is done; talk about study and exams.', patterns: ['verb + 得 + adjective', 'verb + object + verb + 得 + adjective', 'verb + 了 + time + 了'],
     items: [
       ['patterns.pao-de-hen-kuai', 'pattern', '他[tā]跑[pǎo]得[de]很[hěn]快[kuài]。', 'He runs fast.', '得 de links a verb to how it is done.', { pattern: 'verb + 得 + adjective' }],
       ['patterns.shuo-zhong-wen-shuo-de-hao', 'pattern', '你[nǐ]说[shuō]中文[Zhōng wén]说[shuō]得[de]很[hěn]好[hǎo]。', 'You speak Chinese very well.', 'With an object, repeat the verb: 说中文说得很好 (or just 中文说得很好).', { pattern: 'verb + object + verb + 得 + adjective' }],
@@ -31,7 +31,7 @@ export const LESSONS = [
       ['work.word-kao-shi', 'say', '考试[kǎo shì]', 'exam', null, { tags: ['word'] }],
       ['work.word-bi-ye', 'say', '毕业[bì yè]', 'graduate', null, { tags: ['word'] }],
     ] },
-  { code: 'Z15-L03', level: 3, title: 'Can, able, allowed: 会 / 能 / 可以', goal: 'Tell apart a learned skill, being able and being allowed.', patterns: ['会 + verb (learned skill)', '能 + verb (able, possible)', '可以 + verb (allowed)', '不行'],
+  { code: 'Z15-L03', level: 4, title: 'Can, able, allowed: 会 / 能 / 可以', goal: 'Tell apart a learned skill, being able and being allowed.', patterns: ['会 + verb (learned skill)', '能 + verb (able, possible)', '可以 + verb (allowed)', '不行'],
     items: [
       ['patterns.hui-you-yong', 'pattern', '我[wǒ]会[huì]游泳[yóu yǒng]。', 'I can swim.', '会 = you have learned how.', { pattern: '会 + verb' }],
       ['patterns.bu-neng-you', 'pattern', '今天[jīn tiān]我[wǒ]感冒[gǎn mào]了[le]，不能[bù néng]游[yóu]。', 'I have a cold today, so I can\'t swim.', '能 = able right now; circumstances allow it.', { pattern: '能 + verb' }],
@@ -47,7 +47,7 @@ export const LESSONS = [
       ['work.hear-ji-zhong-yu-yan', 'hear', '你[nǐ]会[huì]说[shuō]几[jǐ]种[zhǒng]语言[yǔ yán]？', 'How many languages do you speak?', '种 = kind, type.', { replies: ['work.san-zhong'] }],
       ['work.san-zhong', 'say', '三[sān]种[zhǒng]：英语[Yīng yǔ]、法语[Fǎ yǔ]和[hé]一点儿[yì diǎn r]中文[Zhōng wén]。', 'Three: English, French and a little Chinese.', null, { tags: ['mw'] }],
     ] },
-  { code: 'Z16-L01', level: 3, title: 'How do you feel?', goal: 'Say what hurts and how long it has been.', patterns: ['body part + 疼', '有点儿不舒服', '……多久了？'],
+  { code: 'Z16-L01', level: 4, title: 'How do you feel?', goal: 'Say what hurts and how long it has been.', patterns: ['body part + 疼', '有点儿不舒服', '……多久了？'],
     items: [
       ['health.hear-na-r-bu-shu-fu', 'hear', '你[nǐ]哪儿[nǎ r]不[bù]舒服[shū fu]？', 'What seems to be the problem?', 'Literally "where are you uncomfortable?"', { replies: ['health.tou-teng', 'health.du-zi-teng'] }],
       ['health.you-dian-bu-shu-fu', 'say', '我[wǒ]有点儿[yǒu diǎn r]不[bù]舒服[shū fu]。', 'I don\'t feel very well.'],
@@ -63,7 +63,7 @@ export const LESSONS = [
       ['health.word-tui', 'say', '腿[tuǐ]', 'leg', null, { tags: ['word'] }],
       ['health.word-wei', 'say', '胃[wèi]', 'stomach', null, { tags: ['word'] }],
     ] },
-  { code: 'Z16-L02', level: 3, title: 'At the doctor\'s', goal: 'Register, answer the doctor, understand how to take medicine.', patterns: ['对 + thing + 过敏', '给 + person + verb', 'number + 次 + per day'],
+  { code: 'Z16-L02', level: 4, title: 'At the doctor\'s', goal: 'Register, answer the doctor, understand how to take medicine.', patterns: ['对 + thing + 过敏', '给 + person + verb', 'number + 次 + per day'],
     items: [
       ['health.qu-yi-yuan-kan-bing', 'say', '我[wǒ]要[yào]去[qù]医院[yī yuàn]看病[kàn bìng]。', 'I need to go to the hospital to see a doctor.', '看病 = see a doctor (patient) or treat patients (doctor).'],
       ['health.xiang-gua-hao', 'say', '我[wǒ]想[xiǎng]挂号[guà hào]。', 'I\'d like to register to see a doctor.', 'In Chinese hospitals you first register at the 挂号 counter.'],
@@ -78,7 +78,7 @@ export const LESSONS = [
       ['health.hear-duo-he-shui', 'hear', '多[duō]喝[hē]水[shuǐ]，多[duō]休息[xiū xi]。', 'Drink plenty of water and get lots of rest.', LISTEN],
       ['health.yao-da-zhen-ma', 'say', '要[yào]打针[dǎ zhēn]吗[ma]？', 'Do I need an injection?'],
     ] },
-  { code: 'Z16-L03', level: 3, title: 'Staying healthy', goal: 'Give and take advice; wish someone well.', patterns: ['应该 + verb', '最好 + verb', '越来越 + adjective', '多 / 少 + verb'],
+  { code: 'Z16-L03', level: 4, title: 'Staying healthy', goal: 'Give and take advice; wish someone well.', patterns: ['应该 + verb', '最好 + verb', '越来越 + adjective', '多 / 少 + verb'],
     items: [
       ['patterns.ying-gai-duo-yun-dong', 'pattern', '你[nǐ]应该[yīng gāi]多[duō]运动[yùn dòng]。', 'You should exercise more.', '多 + verb = do more of it; 少 + verb = do less.', { pattern: '应该 + verb' }],
       ['patterns.zui-hao-zao-dian-shui', 'pattern', '你[nǐ]最好[zuì hǎo]早[zǎo]点儿[diǎn r]睡[shuì]。', 'You\'d better go to bed earlier.', '最好 = had better. 3rd + 3rd tone: záo diǎnr.', { pattern: '最好 + verb' }],

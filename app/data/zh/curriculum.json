@@ -1916,7 +1916,7 @@
    "unit": "Z15",
    "title": "At work",
    "goal": "Talk about your job, colleagues, meetings and days off.",
-   "level": 3,
+   "level": 4,
    "path": "core",
    "hsk": 3,
    "patterns": [
@@ -1945,7 +1945,7 @@
    "unit": "Z15",
    "title": "How well: 得",
    "goal": "Say how well something is done; talk about study and exams.",
-   "level": 3,
+   "level": 4,
    "path": "core",
    "hsk": 3,
    "patterns": [
@@ -1974,7 +1974,7 @@
    "unit": "Z15",
    "title": "Can, able, allowed: 会 / 能 / 可以",
    "goal": "Tell apart a learned skill, being able and being allowed.",
-   "level": 3,
+   "level": 4,
    "path": "core",
    "hsk": 3,
    "patterns": [
@@ -2005,7 +2005,7 @@
    "unit": "Z16",
    "title": "How do you feel?",
    "goal": "Say what hurts and how long it has been.",
-   "level": 3,
+   "level": 4,
    "path": "core",
    "hsk": 3,
    "patterns": [
@@ -2035,7 +2035,7 @@
    "unit": "Z16",
    "title": "At the doctor's",
    "goal": "Register, answer the doctor, understand how to take medicine.",
-   "level": 3,
+   "level": 4,
    "path": "core",
    "hsk": 3,
    "patterns": [
@@ -2064,7 +2064,7 @@
    "unit": "Z16",
    "title": "Staying healthy",
    "goal": "Give and take advice; wish someone well.",
-   "level": 3,
+   "level": 4,
    "path": "core",
    "hsk": 3,
    "patterns": [
@@ -2094,7 +2094,7 @@
    "unit": "Z17",
    "title": "Hobbies",
    "goal": "Talk about what you like doing in your free time.",
-   "level": 3,
+   "level": 4,
    "path": "core",
    "hsk": 3,
    "patterns": [
@@ -2123,7 +2123,7 @@
    "unit": "Z17",
    "title": "Results: finished, found, understood",
    "goal": "Add a result to a verb; say what you can or cannot manage.",
-   "level": 3,
+   "level": 4,
    "path": "core",
    "hsk": 3,
    "patterns": [
@@ -2152,7 +2152,7 @@
    "unit": "Z17",
    "title": "Come in, go out: direction complements",
    "goal": "Show the direction of a movement with 来 and 去.",
-   "level": 3,
+   "level": 4,
    "path": "core",
    "hsk": 3,
    "patterns": [
@@ -2181,7 +2181,7 @@
    "unit": "Z18",
    "title": "Feelings",
    "goal": "Say how you feel and react to other people's news.",
-   "level": 3,
+   "level": 4,
    "path": "core",
    "hsk": 3,
    "patterns": [
@@ -2211,7 +2211,7 @@
    "unit": "Z18",
    "title": "Opinions",
    "goal": "Give an opinion, agree or disagree, and give reasons.",
-   "level": 3,
+   "level": 4,
    "path": "core",
    "hsk": 3,
    "patterns": [
@@ -2241,7 +2241,7 @@
    "unit": "Z18",
    "title": "Doing something to it: 把",
    "goal": "Ask people to do things to objects with 把.",
-   "level": 3,
+   "level": 4,
    "path": "core",
    "hsk": 3,
    "patterns": [
@@ -2271,7 +2271,7 @@
    "unit": "Z19",
    "title": "Getting to know someone",
    "goal": "Answer the usual questions about your stay, your reasons and your home town.",
-   "level": 3,
+   "level": 4,
    "path": "core",
    "hsk": 3,
    "patterns": [
@@ -2299,7 +2299,7 @@
    "unit": "Z19",
    "title": "Compliments and courtesy",
    "goal": "Take a compliment, thank, apologize for trouble, wish people well.",
-   "level": 3,
+   "level": 4,
    "path": "core",
    "hsk": 3,
    "patterns": [
@@ -2328,7 +2328,7 @@
    "unit": "Z19",
    "title": "Keeping a chat going",
    "goal": "Check guesses, react, change the subject, fill a pause.",
-   "level": 3,
+   "level": 4,
    "path": "core",
    "hsk": 3,
    "patterns": [
@@ -2357,7 +2357,7 @@
    "unit": "Z20",
    "title": "On the phone",
    "goal": "Answer and make calls, leave a message, deal with a bad line.",
-   "level": 3,
+   "level": 4,
    "path": "core",
    "hsk": 3,
    "patterns": [
@@ -2386,7 +2386,7 @@
    "unit": "Z20",
    "title": "Messages and apps",
    "goal": "Send messages and locations, ask for the WiFi, charge your phone.",
-   "level": 3,
+   "level": 4,
    "path": "core",
    "hsk": 3,
    "patterns": [
@@ -2414,7 +2414,7 @@
    "unit": "Z20",
    "title": "Running late, changing plans",
    "goal": "Say you are on your way or late; move or cancel a meeting.",
-   "level": 3,
+   "level": 4,
    "path": "core",
    "hsk": 3,
    "patterns": [
@@ -16651,7 +16651,7 @@
     "core"
    ],
    "lesson": "Z15-L01",
-   "level": 3,
+   "level": 4,
    "order": 744,
    "src": "new"
   },
@@ -16671,7 +16671,7 @@
     "core"
    ],
    "lesson": "Z15-L01",
-   "level": 3,
+   "level": 4,
    "order": 745,
    "src": "new"
   },
@@ -16692,7 +16692,7 @@
     "core"
    ],
    "lesson": "Z15-L01",
-   "level": 3,
+   "level": 4,
    "order": 746,
    "src": "new"
   },
@@ -16712,7 +16712,7 @@
     "core"
    ],
    "lesson": "Z15-L01",
-   "level": 3,
+   "level": 4,
    "order": 747,
    "src": "new"
   },
@@ -16732,7 +16732,7 @@
     "core"
    ],
    "lesson": "Z15-L01",
-   "level": 3,
+   "level": 4,
    "order": 748,
    "src": "new"
   },
@@ -16749,7 +16749,7 @@
     "core"
    ],
    "lesson": "Z15-L01",
-   "level": 3,
+   "level": 4,
    "order": 749,
    "src": "new"
   },
@@ -16768,7 +16768,7 @@
     "core"
    ],
    "lesson": "Z15-L01",
-   "level": 3,
+   "level": 4,
    "order": 750,
    "src": "new"
   },
@@ -16786,7 +16786,7 @@
     "core"
    ],
    "lesson": "Z15-L01",
-   "level": 3,
+   "level": 4,
    "order": 751,
    "src": "new"
   },
@@ -16803,7 +16803,7 @@
     "core"
    ],
    "lesson": "Z15-L01",
-   "level": 3,
+   "level": 4,
    "order": 752,
    "src": "new"
   },
@@ -16821,7 +16821,7 @@
     "core"
    ],
    "lesson": "Z15-L01",
-   "level": 3,
+   "level": 4,
    "order": 753,
    "src": "new"
   },
@@ -16839,7 +16839,7 @@
     "word"
    ],
    "lesson": "Z15-L01",
-   "level": 3,
+   "level": 4,
    "order": 754,
    "src": "new"
   },
@@ -16858,7 +16858,7 @@
     "word"
    ],
    "lesson": "Z15-L01",
-   "level": 3,
+   "level": 4,
    "order": 755,
    "src": "new"
   },
@@ -16877,7 +16877,7 @@
     "core"
    ],
    "lesson": "Z15-L02",
-   "level": 3,
+   "level": 4,
    "order": 756,
    "src": "new"
   },
@@ -16896,7 +16896,7 @@
     "core"
    ],
    "lesson": "Z15-L02",
-   "level": 3,
+   "level": 4,
    "order": 757,
    "src": "new"
   },
@@ -16917,7 +16917,7 @@
     "core"
    ],
    "lesson": "Z15-L02",
-   "level": 3,
+   "level": 4,
    "order": 758,
    "src": "new"
   },
@@ -16938,7 +16938,7 @@
     "core"
    ],
    "lesson": "Z15-L02",
-   "level": 3,
+   "level": 4,
    "order": 759,
    "src": "new"
   },
@@ -16958,7 +16958,7 @@
     "core"
    ],
    "lesson": "Z15-L02",
-   "level": 3,
+   "level": 4,
    "order": 760,
    "src": "new"
   },
@@ -16979,7 +16979,7 @@
     "core"
    ],
    "lesson": "Z15-L02",
-   "level": 3,
+   "level": 4,
    "order": 761,
    "src": "new"
   },
@@ -17000,7 +17000,7 @@
     "core"
    ],
    "lesson": "Z15-L02",
-   "level": 3,
+   "level": 4,
    "order": 762,
    "src": "new"
   },
@@ -17021,7 +17021,7 @@
     "core"
    ],
    "lesson": "Z15-L02",
-   "level": 3,
+   "level": 4,
    "order": 763,
    "src": "new"
   },
@@ -17038,7 +17038,7 @@
     "core"
    ],
    "lesson": "Z15-L02",
-   "level": 3,
+   "level": 4,
    "order": 764,
    "src": "new"
   },
@@ -17056,7 +17056,7 @@
     "word"
    ],
    "lesson": "Z15-L02",
-   "level": 3,
+   "level": 4,
    "order": 765,
    "src": "new"
   },
@@ -17074,7 +17074,7 @@
     "word"
    ],
    "lesson": "Z15-L02",
-   "level": 3,
+   "level": 4,
    "order": 766,
    "src": "new"
   },
@@ -17092,7 +17092,7 @@
     "word"
    ],
    "lesson": "Z15-L02",
-   "level": 3,
+   "level": 4,
    "order": 767,
    "src": "new"
   },
@@ -17111,7 +17111,7 @@
     "core"
    ],
    "lesson": "Z15-L03",
-   "level": 3,
+   "level": 4,
    "order": 768,
    "src": "new"
   },
@@ -17130,7 +17130,7 @@
     "core"
    ],
    "lesson": "Z15-L03",
-   "level": 3,
+   "level": 4,
    "order": 769,
    "src": "new"
   },
@@ -17149,7 +17149,7 @@
     "core"
    ],
    "lesson": "Z15-L03",
-   "level": 3,
+   "level": 4,
    "order": 770,
    "src": "new"
   },
@@ -17169,7 +17169,7 @@
     "core"
    ],
    "lesson": "Z15-L03",
-   "level": 3,
+   "level": 4,
    "order": 771,
    "src": "new"
   },
@@ -17189,7 +17189,7 @@
     "core"
    ],
    "lesson": "Z15-L03",
-   "level": 3,
+   "level": 4,
    "order": 772,
    "src": "new"
   },
@@ -17210,7 +17210,7 @@
     "core"
    ],
    "lesson": "Z15-L03",
-   "level": 3,
+   "level": 4,
    "order": 773,
    "src": "new"
   },
@@ -17230,7 +17230,7 @@
     "core"
    ],
    "lesson": "Z15-L03",
-   "level": 3,
+   "level": 4,
    "order": 774,
    "src": "new"
   },
@@ -17251,7 +17251,7 @@
     "core"
    ],
    "lesson": "Z15-L03",
-   "level": 3,
+   "level": 4,
    "order": 775,
    "src": "new"
   },
@@ -17268,7 +17268,7 @@
     "core"
    ],
    "lesson": "Z15-L03",
-   "level": 3,
+   "level": 4,
    "order": 776,
    "src": "new"
   },
@@ -17285,7 +17285,7 @@
     "core"
    ],
    "lesson": "Z15-L03",
-   "level": 3,
+   "level": 4,
    "order": 777,
    "src": "new"
   },
@@ -17303,7 +17303,7 @@
     "core"
    ],
    "lesson": "Z15-L03",
-   "level": 3,
+   "level": 4,
    "order": 778,
    "src": "new"
   },
@@ -17324,7 +17324,7 @@
     "core"
    ],
    "lesson": "Z15-L03",
-   "level": 3,
+   "level": 4,
    "order": 779,
    "src": "new"
   },
@@ -17345,7 +17345,7 @@
     "mw"
    ],
    "lesson": "Z15-L03",
-   "level": 3,
+   "level": 4,
    "order": 780,
    "src": "new"
   },
@@ -17367,7 +17367,7 @@
     "core"
    ],
    "lesson": "Z16-L01",
-   "level": 3,
+   "level": 4,
    "order": 781,
    "src": "new"
   },
@@ -17384,7 +17384,7 @@
     "core"
    ],
    "lesson": "Z16-L01",
-   "level": 3,
+   "level": 4,
    "order": 782,
    "src": "new"
   },
@@ -17405,7 +17405,7 @@
     "core"
    ],
    "lesson": "Z16-L01",
-   "level": 3,
+   "level": 4,
    "order": 783,
    "src": "new"
   },
@@ -17425,7 +17425,7 @@
     "core"
    ],
    "lesson": "Z16-L01",
-   "level": 3,
+   "level": 4,
    "order": 784,
    "src": "new"
   },
@@ -17442,7 +17442,7 @@
     "core"
    ],
    "lesson": "Z16-L01",
-   "level": 3,
+   "level": 4,
    "order": 785,
    "src": "new"
   },
@@ -17459,7 +17459,7 @@
     "core"
    ],
    "lesson": "Z16-L01",
-   "level": 3,
+   "level": 4,
    "order": 786,
    "src": "new"
   },
@@ -17476,7 +17476,7 @@
     "core"
    ],
    "lesson": "Z16-L01",
-   "level": 3,
+   "level": 4,
    "order": 787,
    "src": "new"
   },
@@ -17496,7 +17496,7 @@
     "core"
    ],
    "lesson": "Z16-L01",
-   "level": 3,
+   "level": 4,
    "order": 788,
    "src": "new"
   },
@@ -17516,7 +17516,7 @@
     "core"
    ],
    "lesson": "Z16-L01",
-   "level": 3,
+   "level": 4,
    "order": 789,
    "src": "new"
   },
@@ -17535,7 +17535,7 @@
     "word"
    ],
    "lesson": "Z16-L01",
-   "level": 3,
+   "level": 4,
    "order": 790,
    "src": "new"
   },
@@ -17553,7 +17553,7 @@
     "word"
    ],
    "lesson": "Z16-L01",
-   "level": 3,
+   "level": 4,
    "order": 791,
    "src": "new"
   },
@@ -17571,7 +17571,7 @@
     "word"
    ],
    "lesson": "Z16-L01",
-   "level": 3,
+   "level": 4,
    "order": 792,
    "src": "new"
   },
@@ -17589,7 +17589,7 @@
     "word"
    ],
    "lesson": "Z16-L01",
-   "level": 3,
+   "level": 4,
    "order": 793,
    "src": "new"
   },
@@ -17607,7 +17607,7 @@
     "core"
    ],
    "lesson": "Z16-L02",
-   "level": 3,
+   "level": 4,
    "order": 794,
    "src": "new"
   },
@@ -17625,7 +17625,7 @@
     "core"
    ],
    "lesson": "Z16-L02",
-   "level": 3,
+   "level": 4,
    "order": 795,
    "src": "new"
   },
@@ -17643,7 +17643,7 @@
     "core"
    ],
    "lesson": "Z16-L02",
-   "level": 3,
+   "level": 4,
    "order": 796,
    "src": "new"
   },
@@ -17665,7 +17665,7 @@
     "core"
    ],
    "lesson": "Z16-L02",
-   "level": 3,
+   "level": 4,
    "order": 797,
    "src": "new"
   },
@@ -17685,7 +17685,7 @@
     "core"
    ],
    "lesson": "Z16-L02",
-   "level": 3,
+   "level": 4,
    "order": 798,
    "src": "new"
   },
@@ -17705,7 +17705,7 @@
     "core"
    ],
    "lesson": "Z16-L02",
-   "level": 3,
+   "level": 4,
    "order": 799,
    "src": "new"
   },
@@ -17726,7 +17726,7 @@
     "core"
    ],
    "lesson": "Z16-L02",
-   "level": 3,
+   "level": 4,
    "order": 800,
    "src": "new"
   },
@@ -17747,7 +17747,7 @@
     "core"
    ],
    "lesson": "Z16-L02",
-   "level": 3,
+   "level": 4,
    "order": 801,
    "src": "new"
   },
@@ -17767,7 +17767,7 @@
     "core"
    ],
    "lesson": "Z16-L02",
-   "level": 3,
+   "level": 4,
    "order": 802,
    "src": "new"
   },
@@ -17788,7 +17788,7 @@
     "core"
    ],
    "lesson": "Z16-L02",
-   "level": 3,
+   "level": 4,
    "order": 803,
    "src": "new"
   },
@@ -17806,7 +17806,7 @@
     "core"
    ],
    "lesson": "Z16-L02",
-   "level": 3,
+   "level": 4,
    "order": 804,
    "src": "new"
   },
@@ -17823,7 +17823,7 @@
     "core"
    ],
    "lesson": "Z16-L02",
-   "level": 3,
+   "level": 4,
    "order": 805,
    "src": "new"
   },
@@ -17842,7 +17842,7 @@
     "core"
    ],
    "lesson": "Z16-L03",
-   "level": 3,
+   "level": 4,
    "order": 806,
    "src": "new"
   },
@@ -17861,7 +17861,7 @@
     "core"
    ],
    "lesson": "Z16-L03",
-   "level": 3,
+   "level": 4,
    "order": 807,
    "src": "new"
   },
@@ -17878,7 +17878,7 @@
     "core"
    ],
    "lesson": "Z16-L03",
-   "level": 3,
+   "level": 4,
    "order": 808,
    "src": "new"
   },
@@ -17899,7 +17899,7 @@
     "core"
    ],
    "lesson": "Z16-L03",
-   "level": 3,
+   "level": 4,
    "order": 809,
    "src": "new"
   },
@@ -17919,7 +17919,7 @@
     "core"
    ],
    "lesson": "Z16-L03",
-   "level": 3,
+   "level": 4,
    "order": 810,
    "src": "new"
   },
@@ -17940,7 +17940,7 @@
     "core"
    ],
    "lesson": "Z16-L03",
-   "level": 3,
+   "level": 4,
    "order": 811,
    "src": "new"
   },
@@ -17959,7 +17959,7 @@
     "core"
    ],
    "lesson": "Z16-L03",
-   "level": 3,
+   "level": 4,
    "order": 812,
    "src": "new"
   },
@@ -17976,7 +17976,7 @@
     "core"
    ],
    "lesson": "Z16-L03",
-   "level": 3,
+   "level": 4,
    "order": 813,
    "src": "new"
   },
@@ -17993,7 +17993,7 @@
     "core"
    ],
    "lesson": "Z16-L03",
-   "level": 3,
+   "level": 4,
    "order": 814,
    "src": "new"
   },
@@ -18010,7 +18010,7 @@
     "core"
    ],
    "lesson": "Z16-L03",
-   "level": 3,
+   "level": 4,
    "order": 815,
    "src": "new"
   },
@@ -18029,7 +18029,7 @@
     "word"
    ],
    "lesson": "Z16-L03",
-   "level": 3,
+   "level": 4,
    "order": 816,
    "src": "new"
   },
@@ -18047,7 +18047,7 @@
     "word"
    ],
    "lesson": "Z16-L03",
-   "level": 3,
+   "level": 4,
    "order": 817,
    "src": "new"
   },
@@ -18068,7 +18068,7 @@
     "core"
    ],
    "lesson": "Z17-L01",
-   "level": 3,
+   "level": 4,
    "order": 818,
    "src": "new"
   },
@@ -18088,7 +18088,7 @@
     "core"
    ],
    "lesson": "Z17-L01",
-   "level": 3,
+   "level": 4,
    "order": 819,
    "src": "new"
   },
@@ -18110,7 +18110,7 @@
     "core"
    ],
    "lesson": "Z17-L01",
-   "level": 3,
+   "level": 4,
    "order": 820,
    "src": "new"
   },
@@ -18128,7 +18128,7 @@
     "core"
    ],
    "lesson": "Z17-L01",
-   "level": 3,
+   "level": 4,
    "order": 821,
    "src": "new"
   },
@@ -18148,7 +18148,7 @@
     "core"
    ],
    "lesson": "Z17-L01",
-   "level": 3,
+   "level": 4,
    "order": 822,
    "src": "new"
   },
@@ -18168,7 +18168,7 @@
     "core"
    ],
    "lesson": "Z17-L01",
-   "level": 3,
+   "level": 4,
    "order": 823,
    "src": "new"
   },
@@ -18185,7 +18185,7 @@
     "core"
    ],
    "lesson": "Z17-L01",
-   "level": 3,
+   "level": 4,
    "order": 824,
    "src": "new"
   },
@@ -18205,7 +18205,7 @@
     "core"
    ],
    "lesson": "Z17-L01",
-   "level": 3,
+   "level": 4,
    "order": 825,
    "src": "new"
   },
@@ -18225,7 +18225,7 @@
     "core"
    ],
    "lesson": "Z17-L01",
-   "level": 3,
+   "level": 4,
    "order": 826,
    "src": "new"
   },
@@ -18243,7 +18243,7 @@
     "word"
    ],
    "lesson": "Z17-L01",
-   "level": 3,
+   "level": 4,
    "order": 827,
    "src": "new"
   },
@@ -18261,7 +18261,7 @@
     "word"
    ],
    "lesson": "Z17-L01",
-   "level": 3,
+   "level": 4,
    "order": 828,
    "src": "new"
   },
@@ -18279,7 +18279,7 @@
     "word"
    ],
    "lesson": "Z17-L01",
-   "level": 3,
+   "level": 4,
    "order": 829,
    "src": "new"
   },
@@ -18298,7 +18298,7 @@
     "core"
    ],
    "lesson": "Z17-L02",
-   "level": 3,
+   "level": 4,
    "order": 830,
    "src": "new"
   },
@@ -18317,7 +18317,7 @@
     "core"
    ],
    "lesson": "Z17-L02",
-   "level": 3,
+   "level": 4,
    "order": 831,
    "src": "new"
   },
@@ -18336,7 +18336,7 @@
     "core"
    ],
    "lesson": "Z17-L02",
-   "level": 3,
+   "level": 4,
    "order": 832,
    "src": "new"
   },
@@ -18353,7 +18353,7 @@
     "core"
    ],
    "lesson": "Z17-L02",
-   "level": 3,
+   "level": 4,
    "order": 833,
    "src": "new"
   },
@@ -18371,7 +18371,7 @@
     "core"
    ],
    "lesson": "Z17-L02",
-   "level": 3,
+   "level": 4,
    "order": 834,
    "src": "new"
   },
@@ -18388,7 +18388,7 @@
     "core"
    ],
    "lesson": "Z17-L02",
-   "level": 3,
+   "level": 4,
    "order": 835,
    "src": "new"
   },
@@ -18405,7 +18405,7 @@
     "core"
    ],
    "lesson": "Z17-L02",
-   "level": 3,
+   "level": 4,
    "order": 836,
    "src": "new"
   },
@@ -18422,7 +18422,7 @@
     "core"
    ],
    "lesson": "Z17-L02",
-   "level": 3,
+   "level": 4,
    "order": 837,
    "src": "new"
   },
@@ -18441,7 +18441,7 @@
     "core"
    ],
    "lesson": "Z17-L02",
-   "level": 3,
+   "level": 4,
    "order": 838,
    "src": "new"
   },
@@ -18458,7 +18458,7 @@
     "core"
    ],
    "lesson": "Z17-L02",
-   "level": 3,
+   "level": 4,
    "order": 839,
    "src": "new"
   },
@@ -18475,7 +18475,7 @@
     "core"
    ],
    "lesson": "Z17-L02",
-   "level": 3,
+   "level": 4,
    "order": 840,
    "src": "new"
   },
@@ -18493,7 +18493,7 @@
     "core"
    ],
    "lesson": "Z17-L02",
-   "level": 3,
+   "level": 4,
    "order": 841,
    "src": "new"
   },
@@ -18512,7 +18512,7 @@
     "core"
    ],
    "lesson": "Z17-L03",
-   "level": 3,
+   "level": 4,
    "order": 842,
    "src": "new"
   },
@@ -18529,7 +18529,7 @@
     "core"
    ],
    "lesson": "Z17-L03",
-   "level": 3,
+   "level": 4,
    "order": 843,
    "src": "new"
   },
@@ -18549,7 +18549,7 @@
     "core"
    ],
    "lesson": "Z17-L03",
-   "level": 3,
+   "level": 4,
    "order": 844,
    "src": "new"
   },
@@ -18569,7 +18569,7 @@
     "core"
    ],
    "lesson": "Z17-L03",
-   "level": 3,
+   "level": 4,
    "order": 845,
    "src": "new"
   },
@@ -18588,7 +18588,7 @@
     "core"
    ],
    "lesson": "Z17-L03",
-   "level": 3,
+   "level": 4,
    "order": 846,
    "src": "new"
   },
@@ -18606,7 +18606,7 @@
     "core"
    ],
    "lesson": "Z17-L03",
-   "level": 3,
+   "level": 4,
    "order": 847,
    "src": "new"
   },
@@ -18625,7 +18625,7 @@
     "core"
    ],
    "lesson": "Z17-L03",
-   "level": 3,
+   "level": 4,
    "order": 848,
    "src": "new"
   },
@@ -18642,7 +18642,7 @@
     "core"
    ],
    "lesson": "Z17-L03",
-   "level": 3,
+   "level": 4,
    "order": 849,
    "src": "new"
   },
@@ -18659,7 +18659,7 @@
     "core"
    ],
    "lesson": "Z17-L03",
-   "level": 3,
+   "level": 4,
    "order": 850,
    "src": "new"
   },
@@ -18677,7 +18677,7 @@
     "core"
    ],
    "lesson": "Z17-L03",
-   "level": 3,
+   "level": 4,
    "order": 851,
    "src": "new"
   },
@@ -18697,7 +18697,7 @@
     "core"
    ],
    "lesson": "Z17-L03",
-   "level": 3,
+   "level": 4,
    "order": 852,
    "src": "new"
   },
@@ -18715,7 +18715,7 @@
     "word"
    ],
    "lesson": "Z17-L03",
-   "level": 3,
+   "level": 4,
    "order": 853,
    "src": "new"
   },
@@ -18732,7 +18732,7 @@
     "core"
    ],
    "lesson": "Z18-L01",
-   "level": 3,
+   "level": 4,
    "order": 854,
    "src": "new"
   },
@@ -18749,7 +18749,7 @@
     "core"
    ],
    "lesson": "Z18-L01",
-   "level": 3,
+   "level": 4,
    "order": 855,
    "src": "new"
   },
@@ -18767,7 +18767,7 @@
     "core"
    ],
    "lesson": "Z18-L01",
-   "level": 3,
+   "level": 4,
    "order": 856,
    "src": "new"
   },
@@ -18784,7 +18784,7 @@
     "core"
    ],
    "lesson": "Z18-L01",
-   "level": 3,
+   "level": 4,
    "order": 857,
    "src": "new"
   },
@@ -18801,7 +18801,7 @@
     "core"
    ],
    "lesson": "Z18-L01",
-   "level": 3,
+   "level": 4,
    "order": 858,
    "src": "new"
   },
@@ -18820,7 +18820,7 @@
     "core"
    ],
    "lesson": "Z18-L01",
-   "level": 3,
+   "level": 4,
    "order": 859,
    "src": "new"
   },
@@ -18838,7 +18838,7 @@
     "core"
    ],
    "lesson": "Z18-L01",
-   "level": 3,
+   "level": 4,
    "order": 860,
    "src": "new"
   },
@@ -18859,7 +18859,7 @@
     "core"
    ],
    "lesson": "Z18-L01",
-   "level": 3,
+   "level": 4,
    "order": 861,
    "src": "new"
   },
@@ -18879,7 +18879,7 @@
     "core"
    ],
    "lesson": "Z18-L01",
-   "level": 3,
+   "level": 4,
    "order": 862,
    "src": "new"
   },
@@ -18899,7 +18899,7 @@
     "core"
    ],
    "lesson": "Z18-L01",
-   "level": 3,
+   "level": 4,
    "order": 863,
    "src": "new"
   },
@@ -18916,7 +18916,7 @@
     "core"
    ],
    "lesson": "Z18-L01",
-   "level": 3,
+   "level": 4,
    "order": 864,
    "src": "new"
   },
@@ -18933,7 +18933,7 @@
     "core"
    ],
    "lesson": "Z18-L01",
-   "level": 3,
+   "level": 4,
    "order": 865,
    "src": "new"
   },
@@ -18951,7 +18951,7 @@
     "word"
    ],
    "lesson": "Z18-L01",
-   "level": 3,
+   "level": 4,
    "order": 866,
    "src": "new"
   },
@@ -18973,7 +18973,7 @@
     "core"
    ],
    "lesson": "Z18-L02",
-   "level": 3,
+   "level": 4,
    "order": 867,
    "src": "new"
   },
@@ -18995,7 +18995,7 @@
     "core"
    ],
    "lesson": "Z18-L02",
-   "level": 3,
+   "level": 4,
    "order": 868,
    "src": "new"
   },
@@ -19015,7 +19015,7 @@
     "core"
    ],
    "lesson": "Z18-L02",
-   "level": 3,
+   "level": 4,
    "order": 869,
    "src": "new"
   },
@@ -19035,7 +19035,7 @@
     "core"
    ],
    "lesson": "Z18-L02",
-   "level": 3,
+   "level": 4,
    "order": 870,
    "src": "new"
   },
@@ -19054,7 +19054,7 @@
     "core"
    ],
    "lesson": "Z18-L02",
-   "level": 3,
+   "level": 4,
    "order": 871,
    "src": "new"
   },
@@ -19073,7 +19073,7 @@
     "core"
    ],
    "lesson": "Z18-L02",
-   "level": 3,
+   "level": 4,
    "order": 872,
    "src": "new"
   },
@@ -19091,7 +19091,7 @@
     "core"
    ],
    "lesson": "Z18-L02",
-   "level": 3,
+   "level": 4,
    "order": 873,
    "src": "new"
   },
@@ -19111,7 +19111,7 @@
     "core"
    ],
    "lesson": "Z18-L02",
-   "level": 3,
+   "level": 4,
    "order": 874,
    "src": "new"
   },
@@ -19131,7 +19131,7 @@
     "core"
    ],
    "lesson": "Z18-L02",
-   "level": 3,
+   "level": 4,
    "order": 875,
    "src": "new"
   },
@@ -19148,7 +19148,7 @@
     "core"
    ],
    "lesson": "Z18-L02",
-   "level": 3,
+   "level": 4,
    "order": 876,
    "src": "new"
   },
@@ -19165,7 +19165,7 @@
     "core"
    ],
    "lesson": "Z18-L02",
-   "level": 3,
+   "level": 4,
    "order": 877,
    "src": "new"
   },
@@ -19182,7 +19182,7 @@
     "core"
    ],
    "lesson": "Z18-L02",
-   "level": 3,
+   "level": 4,
    "order": 878,
    "src": "new"
   },
@@ -19201,7 +19201,7 @@
     "core"
    ],
    "lesson": "Z18-L03",
-   "level": 3,
+   "level": 4,
    "order": 879,
    "src": "new"
   },
@@ -19219,7 +19219,7 @@
     "core"
    ],
    "lesson": "Z18-L03",
-   "level": 3,
+   "level": 4,
    "order": 880,
    "src": "new"
   },
@@ -19237,7 +19237,7 @@
     "core"
    ],
    "lesson": "Z18-L03",
-   "level": 3,
+   "level": 4,
    "order": 881,
    "src": "new"
   },
@@ -19254,7 +19254,7 @@
     "core"
    ],
    "lesson": "Z18-L03",
-   "level": 3,
+   "level": 4,
    "order": 882,
    "src": "new"
   },
@@ -19271,7 +19271,7 @@
     "core"
    ],
    "lesson": "Z18-L03",
-   "level": 3,
+   "level": 4,
    "order": 883,
    "src": "new"
   },
@@ -19288,7 +19288,7 @@
     "core"
    ],
    "lesson": "Z18-L03",
-   "level": 3,
+   "level": 4,
    "order": 884,
    "src": "new"
   },
@@ -19305,7 +19305,7 @@
     "core"
    ],
    "lesson": "Z18-L03",
-   "level": 3,
+   "level": 4,
    "order": 885,
    "src": "new"
   },
@@ -19322,7 +19322,7 @@
     "core"
    ],
    "lesson": "Z18-L03",
-   "level": 3,
+   "level": 4,
    "order": 886,
    "src": "new"
   },
@@ -19342,7 +19342,7 @@
     "core"
    ],
    "lesson": "Z18-L03",
-   "level": 3,
+   "level": 4,
    "order": 887,
    "src": "new"
   },
@@ -19362,7 +19362,7 @@
     "core"
    ],
    "lesson": "Z18-L03",
-   "level": 3,
+   "level": 4,
    "order": 888,
    "src": "new"
   },
@@ -19380,7 +19380,7 @@
     "core"
    ],
    "lesson": "Z18-L03",
-   "level": 3,
+   "level": 4,
    "order": 889,
    "src": "new"
   },
@@ -19397,7 +19397,7 @@
     "core"
    ],
    "lesson": "Z18-L03",
-   "level": 3,
+   "level": 4,
    "order": 890,
    "src": "new"
   },
@@ -19417,7 +19417,7 @@
     "core"
    ],
    "lesson": "Z19-L01",
-   "level": 3,
+   "level": 4,
    "order": 891,
    "src": "new"
   },
@@ -19437,7 +19437,7 @@
     "core"
    ],
    "lesson": "Z19-L01",
-   "level": 3,
+   "level": 4,
    "order": 892,
    "src": "new"
   },
@@ -19458,7 +19458,7 @@
     "core"
    ],
    "lesson": "Z19-L01",
-   "level": 3,
+   "level": 4,
    "order": 893,
    "src": "new"
   },
@@ -19478,7 +19478,7 @@
     "core"
    ],
    "lesson": "Z19-L01",
-   "level": 3,
+   "level": 4,
    "order": 894,
    "src": "new"
   },
@@ -19498,7 +19498,7 @@
     "core"
    ],
    "lesson": "Z19-L01",
-   "level": 3,
+   "level": 4,
    "order": 895,
    "src": "new"
   },
@@ -19518,7 +19518,7 @@
     "core"
    ],
    "lesson": "Z19-L01",
-   "level": 3,
+   "level": 4,
    "order": 896,
    "src": "new"
   },
@@ -19538,7 +19538,7 @@
     "core"
    ],
    "lesson": "Z19-L01",
-   "level": 3,
+   "level": 4,
    "order": 897,
    "src": "new"
   },
@@ -19559,7 +19559,7 @@
     "core"
    ],
    "lesson": "Z19-L01",
-   "level": 3,
+   "level": 4,
    "order": 898,
    "src": "new"
   },
@@ -19580,7 +19580,7 @@
     "core"
    ],
    "lesson": "Z19-L01",
-   "level": 3,
+   "level": 4,
    "order": 899,
    "src": "new"
   },
@@ -19597,7 +19597,7 @@
     "core"
    ],
    "lesson": "Z19-L01",
-   "level": 3,
+   "level": 4,
    "order": 900,
    "src": "new"
   },
@@ -19615,7 +19615,7 @@
     "core"
    ],
    "lesson": "Z19-L01",
-   "level": 3,
+   "level": 4,
    "order": 901,
    "src": "new"
   },
@@ -19636,7 +19636,7 @@
     "core"
    ],
    "lesson": "Z19-L02",
-   "level": 3,
+   "level": 4,
    "order": 902,
    "src": "new"
   },
@@ -19656,7 +19656,7 @@
     "core"
    ],
    "lesson": "Z19-L02",
-   "level": 3,
+   "level": 4,
    "order": 903,
    "src": "new"
   },
@@ -19673,7 +19673,7 @@
     "core"
    ],
    "lesson": "Z19-L02",
-   "level": 3,
+   "level": 4,
    "order": 904,
    "src": "new"
   },
@@ -19691,7 +19691,7 @@
     "core"
    ],
    "lesson": "Z19-L02",
-   "level": 3,
+   "level": 4,
    "order": 905,
    "src": "new"
   },
@@ -19709,7 +19709,7 @@
     "core"
    ],
    "lesson": "Z19-L02",
-   "level": 3,
+   "level": 4,
    "order": 906,
    "src": "new"
   },
@@ -19727,7 +19727,7 @@
     "core"
    ],
    "lesson": "Z19-L02",
-   "level": 3,
+   "level": 4,
    "order": 907,
    "src": "new"
   },
@@ -19745,7 +19745,7 @@
     "core"
    ],
    "lesson": "Z19-L02",
-   "level": 3,
+   "level": 4,
    "order": 908,
    "src": "new"
   },
@@ -19765,7 +19765,7 @@
     "core"
    ],
    "lesson": "Z19-L02",
-   "level": 3,
+   "level": 4,
    "order": 909,
    "src": "new"
   },
@@ -19783,7 +19783,7 @@
     "core"
    ],
    "lesson": "Z19-L02",
-   "level": 3,
+   "level": 4,
    "order": 910,
    "src": "new"
   },
@@ -19800,7 +19800,7 @@
     "core"
    ],
    "lesson": "Z19-L02",
-   "level": 3,
+   "level": 4,
    "order": 911,
    "src": "new"
   },
@@ -19817,7 +19817,7 @@
     "core"
    ],
    "lesson": "Z19-L02",
-   "level": 3,
+   "level": 4,
    "order": 912,
    "src": "new"
   },
@@ -19839,7 +19839,7 @@
     "core"
    ],
    "lesson": "Z19-L03",
-   "level": 3,
+   "level": 4,
    "order": 913,
    "src": "new"
   },
@@ -19858,7 +19858,7 @@
     "core"
    ],
    "lesson": "Z19-L03",
-   "level": 3,
+   "level": 4,
    "order": 914,
    "src": "new"
   },
@@ -19876,7 +19876,7 @@
     "core"
    ],
    "lesson": "Z19-L03",
-   "level": 3,
+   "level": 4,
    "order": 915,
    "src": "new"
   },
@@ -19894,7 +19894,7 @@
     "core"
    ],
    "lesson": "Z19-L03",
-   "level": 3,
+   "level": 4,
    "order": 916,
    "src": "new"
   },
@@ -19911,7 +19911,7 @@
     "core"
    ],
    "lesson": "Z19-L03",
-   "level": 3,
+   "level": 4,
    "order": 917,
    "src": "new"
   },
@@ -19928,7 +19928,7 @@
     "core"
    ],
    "lesson": "Z19-L03",
-   "level": 3,
+   "level": 4,
    "order": 918,
    "src": "new"
   },
@@ -19946,7 +19946,7 @@
     "core"
    ],
    "lesson": "Z19-L03",
-   "level": 3,
+   "level": 4,
    "order": 919,
    "src": "new"
   },
@@ -19966,7 +19966,7 @@
     "core"
    ],
    "lesson": "Z19-L03",
-   "level": 3,
+   "level": 4,
    "order": 920,
    "src": "new"
   },
@@ -19986,7 +19986,7 @@
     "core"
    ],
    "lesson": "Z19-L03",
-   "level": 3,
+   "level": 4,
    "order": 921,
    "src": "new"
   },
@@ -20003,7 +20003,7 @@
     "core"
    ],
    "lesson": "Z19-L03",
-   "level": 3,
+   "level": 4,
    "order": 922,
    "src": "new"
   },
@@ -20020,7 +20020,7 @@
     "core"
    ],
    "lesson": "Z19-L03",
-   "level": 3,
+   "level": 4,
    "order": 923,
    "src": "new"
   },
@@ -20038,7 +20038,7 @@
     "core"
    ],
    "lesson": "Z20-L01",
-   "level": 3,
+   "level": 4,
    "order": 924,
    "src": "new"
   },
@@ -20055,7 +20055,7 @@
     "core"
    ],
    "lesson": "Z20-L01",
-   "level": 3,
+   "level": 4,
    "order": 925,
    "src": "new"
   },
@@ -20075,7 +20075,7 @@
     "core"
    ],
    "lesson": "Z20-L01",
-   "level": 3,
+   "level": 4,
    "order": 926,
    "src": "new"
   },
@@ -20096,7 +20096,7 @@
     "core"
    ],
    "lesson": "Z20-L01",
-   "level": 3,
+   "level": 4,
    "order": 927,
    "src": "new"
   },
@@ -20116,7 +20116,7 @@
     "core"
    ],
    "lesson": "Z20-L01",
-   "level": 3,
+   "level": 4,
    "order": 928,
    "src": "new"
   },
@@ -20136,7 +20136,7 @@
     "core"
    ],
    "lesson": "Z20-L01",
-   "level": 3,
+   "level": 4,
    "order": 929,
    "src": "new"
   },
@@ -20153,7 +20153,7 @@
     "core"
    ],
    "lesson": "Z20-L01",
-   "level": 3,
+   "level": 4,
    "order": 930,
    "src": "new"
   },
@@ -20170,7 +20170,7 @@
     "core"
    ],
    "lesson": "Z20-L01",
-   "level": 3,
+   "level": 4,
    "order": 931,
    "src": "new"
   },
@@ -20187,7 +20187,7 @@
     "core"
    ],
    "lesson": "Z20-L01",
-   "level": 3,
+   "level": 4,
    "order": 932,
    "src": "new"
   },
@@ -20205,7 +20205,7 @@
     "core"
    ],
    "lesson": "Z20-L01",
-   "level": 3,
+   "level": 4,
    "order": 933,
    "src": "new"
   },
@@ -20223,7 +20223,7 @@
     "word"
    ],
    "lesson": "Z20-L01",
-   "level": 3,
+   "level": 4,
    "order": 934,
    "src": "new"
   },
@@ -20240,7 +20240,7 @@
     "core"
    ],
    "lesson": "Z20-L02",
-   "level": 3,
+   "level": 4,
    "order": 935,
    "src": "new"
   },
@@ -20258,7 +20258,7 @@
     "core"
    ],
    "lesson": "Z20-L02",
-   "level": 3,
+   "level": 4,
    "order": 936,
    "src": "new"
   },
@@ -20275,7 +20275,7 @@
     "core"
    ],
    "lesson": "Z20-L02",
-   "level": 3,
+   "level": 4,
    "order": 937,
    "src": "new"
   },
@@ -20292,7 +20292,7 @@
     "core"
    ],
    "lesson": "Z20-L02",
-   "level": 3,
+   "level": 4,
    "order": 938,
    "src": "new"
   },
@@ -20310,7 +20310,7 @@
     "core"
    ],
    "lesson": "Z20-L02",
-   "level": 3,
+   "level": 4,
    "order": 939,
    "src": "new"
   },
@@ -20330,7 +20330,7 @@
     "core"
    ],
    "lesson": "Z20-L02",
-   "level": 3,
+   "level": 4,
    "order": 940,
    "src": "new"
   },
@@ -20347,7 +20347,7 @@
     "core"
    ],
    "lesson": "Z20-L02",
-   "level": 3,
+   "level": 4,
    "order": 941,
    "src": "new"
   },
@@ -20364,7 +20364,7 @@
     "core"
    ],
    "lesson": "Z20-L02",
-   "level": 3,
+   "level": 4,
    "order": 942,
    "src": "new"
   },
@@ -20381,7 +20381,7 @@
     "core"
    ],
    "lesson": "Z20-L02",
-   "level": 3,
+   "level": 4,
    "order": 943,
    "src": "new"
   },
@@ -20399,7 +20399,7 @@
     "word"
    ],
    "lesson": "Z20-L02",
-   "level": 3,
+   "level": 4,
    "order": 944,
    "src": "new"
   },
@@ -20418,7 +20418,7 @@
     "word"
    ],
    "lesson": "Z20-L02",
-   "level": 3,
+   "level": 4,
    "order": 945,
    "src": "new"
   },
@@ -20438,7 +20438,7 @@
     "core"
    ],
    "lesson": "Z20-L03",
-   "level": 3,
+   "level": 4,
    "order": 946,
    "src": "new"
   },
@@ -20455,7 +20455,7 @@
     "core"
    ],
    "lesson": "Z20-L03",
-   "level": 3,
+   "level": 4,
    "order": 947,
    "src": "new"
   },
@@ -20475,7 +20475,7 @@
     "core"
    ],
    "lesson": "Z20-L03",
-   "level": 3,
+   "level": 4,
    "order": 948,
    "src": "new"
   },
@@ -20492,7 +20492,7 @@
     "core"
    ],
    "lesson": "Z20-L03",
-   "level": 3,
+   "level": 4,
    "order": 949,
    "src": "new"
   },
@@ -20509,7 +20509,7 @@
     "core"
    ],
    "lesson": "Z20-L03",
-   "level": 3,
+   "level": 4,
    "order": 950,
    "src": "new"
   },
@@ -20530,7 +20530,7 @@
     "core"
    ],
    "lesson": "Z20-L03",
-   "level": 3,
+   "level": 4,
    "order": 951,
    "src": "new"
   },
@@ -20550,7 +20550,7 @@
     "core"
    ],
    "lesson": "Z20-L03",
-   "level": 3,
+   "level": 4,
    "order": 952,
    "src": "new"
   },
@@ -20570,7 +20570,7 @@
     "core"
    ],
    "lesson": "Z20-L03",
-   "level": 3,
+   "level": 4,
    "order": 953,
    "src": "new"
   },
@@ -20590,7 +20590,7 @@
     "core"
    ],
    "lesson": "Z20-L03",
-   "level": 3,
+   "level": 4,
    "order": 954,
    "src": "new"
   },
@@ -20607,7 +20607,7 @@
     "core"
    ],
    "lesson": "Z20-L03",
-   "level": 3,
+   "level": 4,
    "order": 955,
    "src": "new"
   },
@@ -20624,7 +20624,7 @@
     "core"
    ],
    "lesson": "Z20-L03",
-   "level": 3,
+   "level": 4,
    "order": 956,
    "src": "new"
   },

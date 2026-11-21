@@ -1,5 +1,5 @@
 export const LESSONS = [
-  { code: 'Z19-L01', level: 3, title: 'Getting to know someone', goal: 'Answer the usual questions about your stay, your reasons and your home town.', patterns: ['……多久了？', '习惯 + noun', '加个微信'],
+  { code: 'Z19-L01', level: 4, title: 'Getting to know someone', goal: 'Answer the usual questions about your stay, your reasons and your home town.', patterns: ['……多久了？', '习惯 + noun', '加个微信'],
     items: [
       ['talk.hear-lai-zhong-guo-duo-jiu-le', 'hear', '你[nǐ]来[lái]中国[Zhōng guó]多久[duō jiǔ]了[le]？', 'How long have you been in China?', null, { replies: ['talk.kuai-yi-nian-le'] }],
       ['talk.kuai-yi-nian-le', 'say', '快[kuài]一[yì]年[nián]了[le]。', 'Almost a year.'],
@@ -13,7 +13,7 @@ export const LESSONS = [
       ['talk.yi-qi-he-bei-ka-fei', 'say', '有空[yǒu kòng]一起[yì qǐ]喝[hē]杯[bēi]咖啡[kā fēi]吧[ba]。', 'Let\'s have a coffee together some time.'],
       ['talk.jia-ge-wei-xin', 'say', '我们[wǒ men]加[jiā]个[ge]微信[Wēi xìn]吧[ba]。', 'Let\'s add each other on WeChat.', '加微信 = add someone on WeChat: the usual way to swap contacts.'],
     ] },
-  { code: 'Z19-L02', level: 3, title: 'Compliments and courtesy', goal: 'Take a compliment, thank, apologize for trouble, wish people well.', patterns: ['麻烦你了', '辛苦了', '别客气', '祝 + person + wish'],
+  { code: 'Z19-L02', level: 4, title: 'Compliments and courtesy', goal: 'Take a compliment, thank, apologize for trouble, wish people well.', patterns: ['麻烦你了', '辛苦了', '别客气', '祝 + person + wish'],
     items: [
       ['talk.hear-zhong-wen-zhen-hao', 'hear', '你[nǐ]的[de]中文[Zhōng wén]真[zhēn]好[hǎo]！', 'Your Chinese is really good!', null, { replies: ['work.na-li-na-li', 'talk.hai-zai-xue'] }],
       ['talk.hai-zai-xue', 'say', '谢谢[xiè xie]，我[wǒ]还[hái]在[zài]学[xué]。', 'Thank you, I\'m still learning.'],
@@ -27,7 +27,7 @@ export const LESSONS = [
       ['talk.xin-nian-kuai-le', 'say', '新年[xīn nián]快乐[kuài lè]！', 'Happy New Year!'],
       ['talk.gong-xi', 'say', '恭喜[gōng xǐ]！', 'Congratulations!'],
     ] },
-  { code: 'Z19-L03', level: 3, title: 'Keeping a chat going', goal: 'Check guesses, react, change the subject, fill a pause.', patterns: ['是不是……？', '……吧？', '对了', '好像……'],
+  { code: 'Z19-L03', level: 4, title: 'Keeping a chat going', goal: 'Check guesses, react, change the subject, fill a pause.', patterns: ['是不是……？', '……吧？', '对了', '好像……'],
     items: [
       ['talk.hear-shi-bu-shi-lao-shi', 'hear', '你[nǐ]是不是[shì bu shì]老师[lǎo shī]？', 'You\'re a teacher, aren\'t you?', '是不是 = isn\'t it? / is it or not?', { replies: ['basics.dui', 'people.wo-shi-lao-shi'] }],
       ['patterns.shi-ying-guo-ren-ba', 'pattern', '你[nǐ]是[shì]英国人[Yīng guó rén]吧[ba]？', 'You\'re British, right?', '……吧？ checks a guess.', { pattern: '……吧？' }],
@@ -41,7 +41,7 @@ export const LESSONS = [
       ['talk.ye-jiu-shi-shuo', 'say', '也[yě]就是[jiù shì]说[shuō]，你[nǐ]不[bù]来[lái]了[le]？', 'So you mean you\'re not coming?'],
       ['talk.hao-xiang-yao-xia-yu', 'say', '好像[hǎo xiàng]要[yào]下雨[xià yǔ]了[le]。', 'It looks like it\'s going to rain.'],
     ] },
-  { code: 'Z20-L01', level: 3, title: 'On the phone', goal: 'Answer and make calls, leave a message, deal with a bad line.', patterns: ['喂', '请问……在吗？', '给 + person + 回电话', 'verb + 错'],
+  { code: 'Z20-L01', level: 4, title: 'On the phone', goal: 'Answer and make calls, leave a message, deal with a bad line.', patterns: ['喂', '请问……在吗？', '给 + person + 回电话', 'verb + 错'],
     items: [
       ['phone.wei-ni-hao', 'say', '喂[wéi]，你[nǐ]好[hǎo]！', 'Hello? (on the phone)', '喂 is wéi on the phone (wèi when calling out to someone).'],
       ['phone.wang-xian-sheng-zai-ma', 'say', '请问[qǐng wèn]，王[Wáng]先生[xiān sheng]在[zài]吗[ma]？', 'May I speak to Mr Wang, please?'],
@@ -55,7 +55,7 @@ export const LESSONS = [
       ['phone.dai-hui-r-da-gei-ni', 'say', '我[wǒ]现在[xiàn zài]有点儿[yǒu diǎn r]忙[máng]，待会儿[dāi huì r]打[dǎ]给[gěi]你[nǐ]。', 'I\'m a bit busy now; I\'ll call you in a bit.', '待会儿 dāihuìr = in a moment (spoken).'],
       ['phone.word-shou-ji-hao', 'say', '手机号[shǒu jī hào]', 'mobile number', null, { tags: ['word'] }],
     ] },
-  { code: 'Z20-L02', level: 3, title: 'Messages and apps', goal: 'Send messages and locations, ask for the WiFi, charge your phone.', patterns: ['给 + person + 发……', '快没电了', 'verb + 一下'],
+  { code: 'Z20-L02', level: 4, title: 'Messages and apps', goal: 'Send messages and locations, ask for the WiFi, charge your phone.', patterns: ['给 + person + 发……', '快没电了', 'verb + 一下'],
     items: [
       ['phone.dao-le-fa-wei-xin', 'say', '到[dào]了[le]给[gěi]我[wǒ]发[fā]个[ge]微信[Wēi xìn]。', 'Send me a WeChat message when you get there.'],
       ['phone.fa-ge-ding-wei', 'say', '我[wǒ]给[gěi]你[nǐ]发[fā]个[ge]定位[dìng wèi]。', 'I\'ll send you my location.', '定位 = location pin. Three 3rd tones: wó géi nǐ.'],
@@ -69,7 +69,7 @@ export const LESSONS = [
       ['phone.word-shang-wang', 'say', '上网[shàng wǎng]', 'go online', null, { tags: ['word'] }],
       ['phone.word-ying-yong', 'say', '应用[yìng yòng]', 'app', 'Also just "App".', { tags: ['word'] }],
     ] },
-  { code: 'Z20-L03', level: 3, title: 'Running late, changing plans', goal: 'Say you are on your way or late; move or cancel a meeting.', patterns: ['在路上了', '可能 + verb', '改到 + time', '来不及'],
+  { code: 'Z20-L03', level: 4, title: 'Running late, changing plans', goal: 'Say you are on your way or late; move or cancel a meeting.', patterns: ['在路上了', '可能 + verb', '改到 + time', '来不及'],
     items: [
       ['phone.zai-lu-shang-le', 'say', '我[wǒ]已经[yǐ jīng]在[zài]路上[lù shang]了[le]。', 'I\'m already on my way.'],
       ['phone.ke-neng-chi-dao', 'say', '我[wǒ]可能[kě néng]要[yào]迟到[chí dào]十[shí]分钟[fēn zhōng]。', 'I might be ten minutes late.'],

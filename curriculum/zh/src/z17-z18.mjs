@@ -1,5 +1,5 @@
 export const LESSONS = [
-  { code: 'Z17-L01', level: 3, title: 'Hobbies', goal: 'Talk about what you like doing in your free time.', patterns: ['对 + thing + 感兴趣', '……的时候', '什么样的 + noun'],
+  { code: 'Z17-L01', level: 4, title: 'Hobbies', goal: 'Talk about what you like doing in your free time.', patterns: ['对 + thing + 感兴趣', '……的时候', '什么样的 + noun'],
     items: [
       ['talk.hear-you-shen-me-ai-hao', 'hear', '你[nǐ]有[yǒu]什么[shén me]爱好[ài hào]？', 'What are your hobbies?', null, { replies: ['talk.xi-huan-pa-shan', 'patterns.dui-she-ying-gan-xing-qu'] }],
       ['talk.xi-huan-pa-shan', 'say', '我[wǒ]喜欢[xǐ huan]爬山[pá shān]和[hé]游泳[yóu yǒng]。', 'I like hiking and swimming.'],
@@ -14,7 +14,7 @@ export const LESSONS = [
       ['talk.word-chang-ge', 'say', '唱歌[chàng gē]', 'sing', null, { tags: ['word'] }],
       ['talk.word-tiao-wu', 'say', '跳舞[tiào wǔ]', 'dance', null, { tags: ['word'] }],
     ] },
-  { code: 'Z17-L02', level: 3, title: 'Results: finished, found, understood', goal: 'Add a result to a verb; say what you can or cannot manage.', patterns: ['verb + result (完 / 到 / 懂 / 错 / 好 / 见 / 干净)', '没 + verb + result', 'verb + 得 / 不 + result'],
+  { code: 'Z17-L02', level: 4, title: 'Results: finished, found, understood', goal: 'Add a result to a verb; say what you can or cannot manage.', patterns: ['verb + result (完 / 到 / 懂 / 错 / 好 / 见 / 干净)', '没 + verb + result', 'verb + 得 / 不 + result'],
     items: [
       ['patterns.kan-wan-le', 'pattern', '这[zhè]本[běn]书[shū]我[wǒ]看完[kàn wán]了[le]。', 'I\'ve finished reading this book.', 'A result after the verb: 看完 = read to the end.', { pattern: 'verb + 完' }],
       ['patterns.zhao-dao-le', 'pattern', '我[wǒ]找到[zhǎo dào]钥匙[yào shi]了[le]！', 'I\'ve found the keys!', '找 = look for; 找到 = find (succeed).', { pattern: 'verb + 到' }],
@@ -29,7 +29,7 @@ export const LESSONS = [
       ['talk.mai-bu-dao', 'say', '这[zhè]种[zhǒng]茶[chá]在[zài]国外[guó wài]买不到[mǎi bu dào]。', 'You can\'t get this kind of tea abroad.'],
       ['talk.hai-lai-de-ji', 'say', '现在[xiàn zài]去[qù]还[hái]来得及[lái de jí]。', 'If we go now, we\'ll still make it.', '来得及 = there is still time; 来不及 = too late.'],
     ] },
-  { code: 'Z17-L03', level: 3, title: 'Come in, go out: direction complements', goal: 'Show the direction of a movement with 来 and 去.', patterns: ['verb + 来 / 去', 'verb + 上 / 下 / 进 / 出 / 回 / 过 + 来 / 去', 'verb + 起来'],
+  { code: 'Z17-L03', level: 4, title: 'Come in, go out: direction complements', goal: 'Show the direction of a movement with 来 and 去.', patterns: ['verb + 来 / 去', 'verb + 上 / 下 / 进 / 出 / 回 / 过 + 来 / 去', 'verb + 起来'],
     items: [
       ['patterns.qing-jin-lai', 'pattern', '请[qǐng]进来[jìn lai]。', 'Please come in.', '来 = towards the speaker, 去 = away from the speaker.', { pattern: 'verb + 来 / 去' }],
       ['talk.ta-chu-qu-le', 'say', '他[tā]出去[chū qu]了[le]，不[bú]在[zài]家[jiā]。', 'He\'s gone out; he\'s not at home.'],
@@ -44,7 +44,7 @@ export const LESSONS = [
       ['talk.hear-kuai-jin-lai', 'hear', '外面[wài miàn]冷[lěng]，快[kuài]进来[jìn lai]吧[ba]！', 'It\'s cold outside, come on in!', null, { replies: ['basics.xie-xie'] }],
       ['talk.word-jin-qu', 'say', '进去[jìn qu]', 'go in', null, { tags: ['word'] }],
     ] },
-  { code: 'Z18-L01', level: 3, title: 'Feelings', goal: 'Say how you feel and react to other people\'s news.', patterns: ['A 让 B + feeling', '为 + person + 高兴', '别 + verb'],
+  { code: 'Z18-L01', level: 4, title: 'Feelings', goal: 'Say how you feel and react to other people\'s news.', patterns: ['A 让 B + feeling', '为 + person + 高兴', '别 + verb'],
     items: [
       ['feelings.hen-kai-xin', 'say', '我[wǒ]今天[jīn tiān]很[hěn]开心[kāi xīn]。', 'I\'m really happy today.'],
       ['feelings.bie-dan-xin', 'say', '别[bié]担心[dān xīn]，没事[méi shì]的[de]。', 'Don\'t worry, it\'ll be fine.'],
@@ -60,7 +60,7 @@ export const LESSONS = [
       ['feelings.zhen-ke-xi', 'say', '真[zhēn]可惜[kě xī]！', 'What a pity!'],
       ['feelings.word-hai-pa', 'say', '害怕[hài pà]', 'be afraid', null, { tags: ['word'] }],
     ] },
-  { code: 'Z18-L02', level: 3, title: 'Opinions', goal: 'Give an opinion, agree or disagree, and give reasons.', patterns: ['我觉得……', '因为……所以……', '虽然……但是……', '为什么？'],
+  { code: 'Z18-L02', level: 4, title: 'Opinions', goal: 'Give an opinion, agree or disagree, and give reasons.', patterns: ['我觉得……', '因为……所以……', '虽然……但是……', '为什么？'],
     items: [
       ['patterns.wo-jue-de', 'pattern', '我[wǒ]觉得[jué de]这个[zhè ge]主意[zhǔ yi]不错[bú cuò]。', 'I think this idea is pretty good.', '觉得 = think, feel (an opinion).', { pattern: '我觉得……' }],
       ['feelings.hear-ni-jue-de-zen-me-yang', 'hear', '你[nǐ]觉得[jué de]怎么样[zěn me yàng]？', 'What do you think?', null, { replies: ['patterns.wo-jue-de', 'feelings.wo-tong-yi', 'feelings.bu-tai-tong-yi'] }],
@@ -75,7 +75,7 @@ export const LESSONS = [
       ['feelings.ni-shuo-de-dui', 'say', '你[nǐ]说[shuō]得[de]对[duì]。', 'You\'re right.'],
       ['feelings.mei-xiang-dao', 'say', '我[wǒ]没[méi]想到[xiǎng dào]会[huì]这么[zhè me]难[nán]。', 'I didn\'t expect it to be so hard.'],
     ] },
-  { code: 'Z18-L03', level: 3, title: 'Doing something to it: 把', goal: 'Ask people to do things to objects with 把.', patterns: ['把 + object + verb + result', '把 + object + verb + 在 + place', '把 + object + 给 + person', '别把……'],
+  { code: 'Z18-L03', level: 4, title: 'Doing something to it: 把', goal: 'Ask people to do things to objects with 把.', patterns: ['把 + object + verb + result', '把 + object + verb + 在 + place', '把 + object + 给 + person', '别把……'],
     items: [
       ['patterns.ba-men-guan-shang', 'pattern', '请[qǐng]把[bǎ]门[mén]关上[guān shàng]。', 'Please close the door.', '把 brings the object before the verb when you do something to it; the verb needs a result or a place after it. 3rd + 3rd tone: qíng bǎ.', { pattern: '把 + object + verb + result' }],
       ['patterns.ba-shou-ji-gei-wo', 'pattern', '把[bǎ]手机[shǒu jī]给[gěi]我[wǒ]。', 'Give me the phone.', null, { pattern: '把 + object + 给 + person' }],
