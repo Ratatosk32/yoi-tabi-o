@@ -105,6 +105,10 @@ function checkRuby(w, ruby, ja) {
   const plain = parseRuby(ruby).filter((x) => x.text != null).map((x) => x.text).join('');
   if (HAN_RE.test(plain)) E(`${w} hanzi without pinyin: ${ruby}`);
   if (/[\[\]{}|]/.test(plain)) E(`${w} stray ruby syntax: ${ruby}`);
+  for (const seg of parseRuby(ruby)) {
+    if (!seg.explicit || !/^[0-9]+$/.test(seg.base)) continue;
+    for (const s of seg.rt.trim().split(/\s+/)) { const err = checkSyllable(s); if (err) E(`${w} {${seg.base}}: ${err}`); }
+  }
   const us = units(ruby);
   for (const u of us) {
     if (u.syls.length !== u.chars.length) { E(`${w} ${u.run}: ${u.chars.length} characters but ${u.syls.length} syllables`); continue; }

@@ -37,7 +37,7 @@ export function rubyToRomaji(src) {
       for (const ch of seg.text) out += PUNCT[ch] ?? ch;
       continue;
     }
-    const word = joinWord(seg.rt.trim().split(/\s+/));
+    const word = seg.explicit ? seg.rt.trim() : joinWord(seg.rt.trim().split(/\s+/));
     if (out && !/[\s(]$/.test(out)) out += ' ';
     out += word;
   }

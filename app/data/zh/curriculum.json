@@ -451,6 +451,253 @@
     "zh.people.hear-duo-gao",
     "zh.people.yi-mi-ba"
    ]
+  },
+  {
+   "code": "Z03-L01",
+   "unit": "Z03",
+   "title": "Numbers 0 to 99",
+   "goal": "Count, and ask \"how many\" with 几 and 多少.",
+   "level": 1,
+   "path": "core",
+   "hsk": 1,
+   "patterns": [
+    "几 + measure word",
+    "多少",
+    "二 / 两"
+   ],
+   "count": 14,
+   "ids": [
+    "zh.numbers.yi-er-san",
+    "zh.numbers.si-wu-liu",
+    "zh.numbers.qi-ba-jiu-shi",
+    "zh.numbers.word-ling",
+    "zh.numbers.word-shi-yi",
+    "zh.numbers.word-er-shi",
+    "zh.numbers.word-jiu-shi-jiu",
+    "zh.numbers.word-liang",
+    "zh.numbers.hear-yao-ji-ge",
+    "zh.numbers.san-ge",
+    "zh.numbers.yi-ge",
+    "zh.patterns.ji-ge-hai-zi",
+    "zh.numbers.hear-duo-shao-ren",
+    "zh.numbers.shi-er-ge-ren"
+   ]
+  },
+  {
+   "code": "Z03-L02",
+   "unit": "Z03",
+   "title": "Big numbers and phone numbers",
+   "goal": "Hundreds, thousands, 万; read phone and room numbers.",
+   "level": 2,
+   "path": "core",
+   "hsk": 1,
+   "patterns": [
+    "百 / 千 / 万",
+    "零 for a gap",
+    "第 + number"
+   ],
+   "count": 14,
+   "ids": [
+    "zh.numbers.word-yi-bai",
+    "zh.numbers.yi-bai-ling-wu",
+    "zh.numbers.word-liang-bai",
+    "zh.numbers.word-yi-qian-1000",
+    "zh.numbers.word-yi-wan",
+    "zh.numbers.san-wan-wu",
+    "zh.numbers.hear-dian-hua-hao-ma",
+    "zh.numbers.phone-number",
+    "zh.numbers.hear-ji-hao-fang-jian",
+    "zh.numbers.fang-jian-305",
+    "zh.numbers.word-di-yi",
+    "zh.numbers.di-er-ci",
+    "zh.numbers.bai-fen-zhi-wu-shi",
+    "zh.numbers.word-yi-ban"
+   ]
+  },
+  {
+   "code": "Z03-L03",
+   "unit": "Z03",
+   "title": "Measure words",
+   "goal": "Count things with the right measure word.",
+   "level": 1,
+   "path": "core",
+   "hsk": 1,
+   "patterns": [
+    "number + measure word + noun",
+    "这 / 那 + measure word + noun"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.patterns.yi-ben-shu",
+    "zh.numbers.liang-bei-cha",
+    "zh.numbers.san-zhang-piao",
+    "zh.numbers.yi-jian-yi-fu",
+    "zh.numbers.yi-tiao-ku-zi",
+    "zh.numbers.liang-zhi-mao",
+    "zh.numbers.yi-wei-lao-shi",
+    "zh.patterns.zhe-ge-ren",
+    "zh.numbers.na-liang-che",
+    "zh.numbers.yi-shuang-xie",
+    "zh.numbers.yi-ping-shui",
+    "zh.numbers.hear-yao-ji-ping",
+    "zh.numbers.liang-ping"
+   ]
+  },
+  {
+   "code": "Z03-L04",
+   "unit": "Z03",
+   "title": "How much and which one",
+   "goal": "Some, a little, every, both; pick the one you want.",
+   "level": 2,
+   "path": "core",
+   "hsk": 1,
+   "patterns": [
+    "一些 / 一点儿",
+    "每 + measure word",
+    "都",
+    "哪 + measure word"
+   ],
+   "count": 14,
+   "ids": [
+    "zh.numbers.yi-xie-shui-guo",
+    "zh.numbers.yi-dian-shui",
+    "zh.numbers.mei-ge-ren",
+    "zh.numbers.word-mei-tian",
+    "zh.numbers.hen-duo-ren",
+    "zh.numbers.hear-ji-ge-ren",
+    "zh.numbers.san-ge-ren",
+    "zh.numbers.yi-wan-mi-fan",
+    "zh.numbers.yi-kuai-dan-gao",
+    "zh.numbers.yi-fen-jiao-zi",
+    "zh.numbers.zhe-ben-shu-hen-hao",
+    "zh.numbers.hear-yao-na-ge",
+    "zh.numbers.wo-yao-zhe-ge",
+    "zh.numbers.liang-ge-dou-yao"
+   ]
+  },
+  {
+   "code": "Z04-L01",
+   "unit": "Z04",
+   "title": "What time is it?",
+   "goal": "Tell the time; opening hours; arrange a time.",
+   "level": 1,
+   "path": "core",
+   "hsk": 1,
+   "patterns": [
+    "几点",
+    "点 / 分 / 半 / 刻 / 差",
+    "time word + verb",
+    "……吧"
+   ],
+   "count": 14,
+   "ids": [
+    "zh.numbers.hear-xian-zai-ji-dian",
+    "zh.numbers.san-dian",
+    "zh.numbers.liang-dian-ban",
+    "zh.numbers.ba-dian-shi-wu",
+    "zh.numbers.jiu-dian-yi-ke",
+    "zh.numbers.cha-wu-fen-shi-dian",
+    "zh.numbers.shi-er-dian",
+    "zh.numbers.hear-ji-dian-kai-men",
+    "zh.numbers.jiu-dian-kai-men",
+    "zh.numbers.shi-dian-guan-men",
+    "zh.patterns.ji-dian-jian-mian",
+    "zh.numbers.san-dian-jian-mian",
+    "zh.numbers.word-fen-zhong",
+    "zh.numbers.word-xiao-shi"
+   ]
+  },
+  {
+   "code": "Z04-L02",
+   "unit": "Z04",
+   "title": "Days of the week",
+   "goal": "Days, this week and next, when you are free.",
+   "level": 1,
+   "path": "core",
+   "hsk": 1,
+   "patterns": [
+    "星期 + number",
+    "上 / 下 + 个星期",
+    "什么时候"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.numbers.hear-xing-qi-ji",
+    "zh.numbers.jin-tian-xing-qi-san",
+    "zh.numbers.word-xing-qi-yi",
+    "zh.numbers.word-xing-qi-tian",
+    "zh.numbers.word-zhou-mo",
+    "zh.numbers.word-zuo-tian",
+    "zh.numbers.ming-tian-xing-qi-liu",
+    "zh.numbers.word-hou-tian",
+    "zh.numbers.word-qian-tian",
+    "zh.numbers.xia-ge-xing-qi-jian",
+    "zh.numbers.hear-shen-me-shi-hou-you-kong",
+    "zh.numbers.zhou-mo-you-kong",
+    "zh.numbers.xing-qi-wu-wan-shang"
+   ]
+  },
+  {
+   "code": "Z04-L03",
+   "unit": "Z04",
+   "title": "Dates and birthdays",
+   "goal": "Say dates, years and birthdays; ask when with 是……的.",
+   "level": 2,
+   "path": "core",
+   "hsk": 1,
+   "patterns": [
+    "年 / 月 / 号",
+    "big unit before small unit",
+    "是……的"
+   ],
+   "count": 14,
+   "ids": [
+    "zh.numbers.hear-ji-yue-ji-hao",
+    "zh.numbers.shi-yi-yue-er-shi-yi-hao",
+    "zh.numbers.word-yi-yue",
+    "zh.numbers.word-shi-er-yue",
+    "zh.numbers.year-2026",
+    "zh.numbers.hear-sheng-ri",
+    "zh.numbers.wu-yue-ba-hao",
+    "zh.numbers.sheng-ri-kuai-le",
+    "zh.numbers.hear-na-nian-chu-sheng",
+    "zh.numbers.year-1995",
+    "zh.numbers.word-qu-nian",
+    "zh.numbers.word-ming-nian",
+    "zh.numbers.word-jin-nian",
+    "zh.numbers.chun-jie"
+   ]
+  },
+  {
+   "code": "Z04-L04",
+   "unit": "Z04",
+   "title": "Parts of the day, how long",
+   "goal": "Morning to evening; say how long something takes.",
+   "level": 2,
+   "path": "core",
+   "hsk": 1,
+   "patterns": [
+    "day → part of day → clock time",
+    "verb + duration",
+    "以前 / 以后"
+   ],
+   "count": 14,
+   "ids": [
+    "zh.numbers.word-shang-wu",
+    "zh.numbers.word-zhong-wu",
+    "zh.numbers.word-xia-wu",
+    "zh.numbers.ming-tian-xia-wu-san-dian",
+    "zh.numbers.hear-duo-chang-shi-jian",
+    "zh.numbers.ban-ge-xiao-shi",
+    "zh.numbers.yi-ge-duo-xiao-shi",
+    "zh.numbers.deng-wo-wu-fen-zhong",
+    "zh.patterns.gong-zuo-ba-ge-xiao-shi",
+    "zh.numbers.hear-shen-me-shi-hou-lai",
+    "zh.numbers.ming-tian-shang-wu-lai",
+    "zh.numbers.word-yi-hou",
+    "zh.numbers.word-yi-qian",
+    "zh.numbers.chi-fan-yi-qian-xi-shou"
+   ]
   }
  ],
  "items": [
@@ -2555,6 +2802,2114 @@
    "lesson": "Z02-L04",
    "level": 2,
    "order": 109,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.yi-er-san",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "one, two, three",
+   "ja": "一、二、三",
+   "ruby": "一[yī]、二[èr]、三[sān]",
+   "kana": "yi er san",
+   "romaji": "yī, èr, sān",
+   "note": "When counting, 一 keeps its 1st tone: yī.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z03-L01",
+   "level": 1,
+   "order": 110,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.si-wu-liu",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "four, five, six",
+   "ja": "四、五、六",
+   "ruby": "四[sì]、五[wǔ]、六[liù]",
+   "kana": "si wu liu",
+   "romaji": "sì, wǔ, liù",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z03-L01",
+   "level": 1,
+   "order": 111,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.qi-ba-jiu-shi",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "seven, eight, nine, ten",
+   "ja": "七、八、九、十",
+   "ruby": "七[qī]、八[bā]、九[jiǔ]、十[shí]",
+   "kana": "qi ba jiu shi",
+   "romaji": "qī, bā, jiǔ, shí",
+   "note": "四 sì and 十 shí sound close: s versus sh.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z03-L01",
+   "level": 1,
+   "order": 112,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.word-ling",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "zero",
+   "ja": "零",
+   "ruby": "零[líng]",
+   "kana": "ling",
+   "romaji": "líng",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z03-L01",
+   "level": 1,
+   "order": 113,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.word-shi-yi",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "eleven",
+   "ja": "十一",
+   "ruby": "十一[shí yī]",
+   "kana": "shiyi",
+   "romaji": "shíyī",
+   "note": "11-19: 十 + digit.",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z03-L01",
+   "level": 1,
+   "order": 114,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.word-er-shi",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "twenty",
+   "ja": "二十",
+   "ruby": "二十[èr shí]",
+   "kana": "ershi",
+   "romaji": "èrshí",
+   "note": "20, 30 ...: digit + 十.",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z03-L01",
+   "level": 1,
+   "order": 115,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.word-jiu-shi-jiu",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "ninety-nine",
+   "ja": "九十九",
+   "ruby": "九十九[jiǔ shí jiǔ]",
+   "kana": "jiushijiu",
+   "romaji": "jiǔshíjiǔ",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z03-L01",
+   "level": 1,
+   "order": 116,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.word-liang",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "two (before a measure word)",
+   "ja": "两",
+   "ruby": "两[liǎng]",
+   "kana": "liang",
+   "romaji": "liǎng",
+   "note": "二 èr when counting; 两 liǎng + measure word: 两个人.",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z03-L01",
+   "level": 1,
+   "order": 117,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.hear-yao-ji-ge",
+   "cat": "numbers",
+   "kind": "hear",
+   "en": "How many do you want?",
+   "ja": "你要几个？",
+   "ruby": "你[nǐ]要[yào]几[jǐ]个[ge]？",
+   "kana": "ni yao ji ge",
+   "romaji": "Nǐ yào jǐ ge?",
+   "replies": [
+    "zh.numbers.san-ge",
+    "zh.numbers.yi-ge"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z03-L01",
+   "level": 1,
+   "order": 118,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.san-ge",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "Three.",
+   "ja": "三个。",
+   "ruby": "三[sān]个[ge]。",
+   "kana": "san ge",
+   "romaji": "Sān ge.",
+   "note": "个 is the all-purpose measure word.",
+   "replyTo": [
+    "zh.numbers.hear-yao-ji-ge"
+   ],
+   "tags": [
+    "core",
+    "mw"
+   ],
+   "lesson": "Z03-L01",
+   "level": 1,
+   "order": 119,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.yi-ge",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "One.",
+   "ja": "一个。",
+   "ruby": "一[yí]个[ge]。",
+   "kana": "yi ge",
+   "romaji": "Yí ge.",
+   "note": "一个 yí ge: 一 rises before 个.",
+   "replyTo": [
+    "zh.numbers.hear-yao-ji-ge"
+   ],
+   "tags": [
+    "core",
+    "mw",
+    "sandhi"
+   ],
+   "lesson": "Z03-L01",
+   "level": 1,
+   "order": 120,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.ji-ge-hai-zi",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "How many children do you have?",
+   "ja": "你有几个孩子？",
+   "ruby": "你[nǐ]有[yǒu]几[jǐ]个[ge]孩子[hái zi]？",
+   "kana": "ni you ji ge haizi",
+   "romaji": "Nǐ yǒu jǐ ge háizi?",
+   "note": "几 expects a small number and needs a measure word; 多少 is for any number.",
+   "pattern": "几 + measure word + noun",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z03-L01",
+   "level": 1,
+   "order": 121,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.hear-duo-shao-ren",
+   "cat": "numbers",
+   "kind": "hear",
+   "en": "How many of you are there?",
+   "ja": "你们有多少人？",
+   "ruby": "你们[nǐ men]有[yǒu]多少[duō shao]人[rén]？",
+   "kana": "nimen you duoshao ren",
+   "romaji": "Nǐmen yǒu duōshao rén?",
+   "replies": [
+    "zh.numbers.shi-er-ge-ren"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z03-L01",
+   "level": 1,
+   "order": 122,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.shi-er-ge-ren",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "Twelve people.",
+   "ja": "十二个人。",
+   "ruby": "十二[shí èr]个[ge]人[rén]。",
+   "kana": "shier ge ren",
+   "romaji": "Shí'èr ge rén.",
+   "replyTo": [
+    "zh.numbers.hear-duo-shao-ren"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z03-L01",
+   "level": 1,
+   "order": 123,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.word-yi-bai",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "one hundred",
+   "ja": "一百",
+   "ruby": "一百[yì bǎi]",
+   "kana": "yibai",
+   "romaji": "yìbǎi",
+   "note": "一 is yì before a 1st, 2nd or 3rd tone.",
+   "tags": [
+    "core",
+    "word",
+    "sandhi"
+   ],
+   "lesson": "Z03-L02",
+   "level": 2,
+   "order": 124,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.yi-bai-ling-wu",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "105",
+   "ja": "一百零五",
+   "ruby": "一百[yì bǎi]零[líng]五[wǔ]",
+   "kana": "yibai ling wu",
+   "romaji": "yìbǎi líng wǔ",
+   "note": "零 fills a gap: 一百零五 = 105.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z03-L02",
+   "level": 2,
+   "order": 125,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.word-liang-bai",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "two hundred",
+   "ja": "两百",
+   "ruby": "两百[liǎng bǎi]",
+   "kana": "liangbai",
+   "romaji": "liǎngbǎi",
+   "note": "Also 二百.",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z03-L02",
+   "level": 2,
+   "order": 126,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.word-yi-qian-1000",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "one thousand",
+   "ja": "一千",
+   "ruby": "一千[yì qiān]",
+   "kana": "yiqian",
+   "romaji": "yìqiān",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z03-L02",
+   "level": 2,
+   "order": 127,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.word-yi-wan",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "ten thousand",
+   "ja": "一万",
+   "ruby": "一万[yí wàn]",
+   "kana": "yiwan",
+   "romaji": "yíwàn",
+   "note": "万 = 10,000: Chinese groups big numbers by four digits.",
+   "tags": [
+    "core",
+    "word",
+    "sandhi"
+   ],
+   "lesson": "Z03-L02",
+   "level": 2,
+   "order": 128,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.san-wan-wu",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "35,000",
+   "ja": "三万五",
+   "ruby": "三万五[sān wàn wǔ]",
+   "kana": "sanwanwu",
+   "romaji": "sānwànwǔ",
+   "note": "The last unit is often dropped: 三万五 = 三万五千.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z03-L02",
+   "level": 2,
+   "order": 129,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.hear-dian-hua-hao-ma",
+   "cat": "numbers",
+   "kind": "hear",
+   "en": "What's your phone number?",
+   "ja": "你的电话号码是多少？",
+   "ruby": "你[nǐ]的[de]电话[diàn huà]号码[hào mǎ]是[shì]多少[duō shao]？",
+   "kana": "ni de dianhua haoma shi duoshao",
+   "romaji": "Nǐ de diànhuà hàomǎ shì duōshao?",
+   "replies": [
+    "zh.numbers.phone-number"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z03-L02",
+   "level": 2,
+   "order": 130,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.phone-number",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "138 1234 5678.",
+   "ja": "138 1234 5678。",
+   "ruby": "{138|yāo sān bā} {1234|yāo èr sān sì} {5678|wǔ liù qī bā}。",
+   "kana": "yao san ba yao er san si wu liu qi ba",
+   "romaji": "Yāo sān bā yāo èr sān sì wǔ liù qī bā.",
+   "tts": "幺三八，幺二三四，五六七八。",
+   "note": "In phone and room numbers 1 is read yāo, so it is not confused with 七 qī.",
+   "replyTo": [
+    "zh.numbers.hear-dian-hua-hao-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z03-L02",
+   "level": 2,
+   "order": 131,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.hear-ji-hao-fang-jian",
+   "cat": "numbers",
+   "kind": "hear",
+   "en": "Which room are you in?",
+   "ja": "你住几号房间？",
+   "ruby": "你[nǐ]住[zhù]几[jǐ]号[hào]房间[fáng jiān]？",
+   "kana": "ni zhu ji hao fangjian",
+   "romaji": "Nǐ zhù jǐ hào fángjiān?",
+   "replies": [
+    "zh.numbers.fang-jian-305"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z03-L02",
+   "level": 2,
+   "order": 132,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.fang-jian-305",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "I'm in room 305.",
+   "ja": "我住305。",
+   "ruby": "我[wǒ]住[zhù]{305|sān líng wǔ}。",
+   "kana": "wo zhu san ling wu",
+   "romaji": "Wǒ zhù sān líng wǔ.",
+   "tts": "我住三零五。",
+   "note": "Room numbers are read digit by digit.",
+   "replyTo": [
+    "zh.numbers.hear-ji-hao-fang-jian"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z03-L02",
+   "level": 2,
+   "order": 133,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.word-di-yi",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "the first",
+   "ja": "第一",
+   "ruby": "第一[dì yī]",
+   "kana": "diyi",
+   "romaji": "dìyī",
+   "note": "第 + number = ordinal; 一 keeps yī.",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z03-L02",
+   "level": 2,
+   "order": 134,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.di-er-ci",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "This is my second time in China.",
+   "ja": "这是我第二次来中国。",
+   "ruby": "这[zhè]是[shì]我[wǒ]第二[dì èr]次[cì]来[lái]中国[Zhōng guó]。",
+   "kana": "zhe shi wo dier ci lai zhongguo",
+   "romaji": "Zhè shì wǒ dì'èr cì lái Zhōngguó.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z03-L02",
+   "level": 2,
+   "order": 135,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.bai-fen-zhi-wu-shi",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "50 percent",
+   "ja": "百分之五十",
+   "ruby": "百分之[bǎi fēn zhī]五十[wǔ shí]",
+   "kana": "baifenzhi wushi",
+   "romaji": "bǎifēnzhī wǔshí",
+   "note": "Hundred-parts-of fifty: the whole comes first.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z03-L02",
+   "level": 2,
+   "order": 136,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.word-yi-ban",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "half",
+   "ja": "一半",
+   "ruby": "一半[yí bàn]",
+   "kana": "yiban",
+   "romaji": "yíbàn",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z03-L02",
+   "level": 2,
+   "order": 137,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.yi-ben-shu",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "a book",
+   "ja": "一本书",
+   "ruby": "一[yì]本[běn]书[shū]",
+   "kana": "yi ben shu",
+   "romaji": "yì běn shū",
+   "note": "Between a number and a noun there is always a measure word. 本 is for books.",
+   "pattern": "number + measure word + noun",
+   "tags": [
+    "core",
+    "mw"
+   ],
+   "lesson": "Z03-L03",
+   "level": 1,
+   "order": 138,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.liang-bei-cha",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "two cups of tea",
+   "ja": "两杯茶",
+   "ruby": "两[liǎng]杯[bēi]茶[chá]",
+   "kana": "liang bei cha",
+   "romaji": "liǎng bēi chá",
+   "note": "杯 = cup, glass.",
+   "tags": [
+    "core",
+    "mw"
+   ],
+   "lesson": "Z03-L03",
+   "level": 1,
+   "order": 139,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.san-zhang-piao",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "three tickets",
+   "ja": "三张票",
+   "ruby": "三[sān]张[zhāng]票[piào]",
+   "kana": "san zhang piao",
+   "romaji": "sān zhāng piào",
+   "note": "张 is for flat things: tickets, paper, tables, beds.",
+   "tags": [
+    "core",
+    "mw"
+   ],
+   "lesson": "Z03-L03",
+   "level": 1,
+   "order": 140,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.yi-jian-yi-fu",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "a piece of clothing",
+   "ja": "一件衣服",
+   "ruby": "一[yí]件[jiàn]衣服[yī fu]",
+   "kana": "yi jian yifu",
+   "romaji": "yí jiàn yīfu",
+   "note": "件 is for tops and coats, and for matters: 一件事.",
+   "tags": [
+    "core",
+    "mw"
+   ],
+   "lesson": "Z03-L03",
+   "level": 1,
+   "order": 141,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.yi-tiao-ku-zi",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "a pair of trousers",
+   "ja": "一条裤子",
+   "ruby": "一[yì]条[tiáo]裤子[kù zi]",
+   "kana": "yi tiao kuzi",
+   "romaji": "yì tiáo kùzi",
+   "note": "条 is for long things: trousers, roads, rivers, fish.",
+   "tags": [
+    "core",
+    "mw"
+   ],
+   "lesson": "Z03-L03",
+   "level": 1,
+   "order": 142,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.liang-zhi-mao",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "two cats",
+   "ja": "两只猫",
+   "ruby": "两[liǎng]只[zhī]猫[māo]",
+   "kana": "liang zhi mao",
+   "romaji": "liǎng zhī māo",
+   "note": "只 is for most animals.",
+   "tags": [
+    "core",
+    "mw"
+   ],
+   "lesson": "Z03-L03",
+   "level": 1,
+   "order": 143,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.yi-wei-lao-shi",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "a teacher (polite)",
+   "ja": "一位老师",
+   "ruby": "一[yí]位[wèi]老师[lǎo shī]",
+   "kana": "yi wei laoshi",
+   "romaji": "yí wèi lǎoshī",
+   "note": "位 is the polite measure word for people.",
+   "tags": [
+    "core",
+    "mw"
+   ],
+   "lesson": "Z03-L03",
+   "level": 1,
+   "order": 144,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.zhe-ge-ren",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "this person",
+   "ja": "这个人",
+   "ruby": "这个[zhè ge]人[rén]",
+   "kana": "zhege ren",
+   "romaji": "zhège rén",
+   "note": "这 / 那 also need a measure word: 这个人, 那本书.",
+   "pattern": "这 / 那 + measure word + noun",
+   "tags": [
+    "core",
+    "mw"
+   ],
+   "lesson": "Z03-L03",
+   "level": 1,
+   "order": 145,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.na-liang-che",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "that car",
+   "ja": "那辆车",
+   "ruby": "那[nà]辆[liàng]车[chē]",
+   "kana": "na liang che",
+   "romaji": "nà liàng chē",
+   "note": "辆 is for vehicles.",
+   "tags": [
+    "core",
+    "mw"
+   ],
+   "lesson": "Z03-L03",
+   "level": 1,
+   "order": 146,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.yi-shuang-xie",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "a pair of shoes",
+   "ja": "一双鞋",
+   "ruby": "一[yì]双[shuāng]鞋[xié]",
+   "kana": "yi shuang xie",
+   "romaji": "yì shuāng xié",
+   "note": "双 is for pairs: shoes, socks, chopsticks.",
+   "tags": [
+    "core",
+    "mw"
+   ],
+   "lesson": "Z03-L03",
+   "level": 1,
+   "order": 147,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.yi-ping-shui",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "a bottle of water",
+   "ja": "一瓶水",
+   "ruby": "一[yì]瓶[píng]水[shuǐ]",
+   "kana": "yi ping shui",
+   "romaji": "yì píng shuǐ",
+   "tags": [
+    "core",
+    "mw"
+   ],
+   "lesson": "Z03-L03",
+   "level": 1,
+   "order": 148,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.hear-yao-ji-ping",
+   "cat": "numbers",
+   "kind": "hear",
+   "en": "How many bottles do you want?",
+   "ja": "你要几瓶？",
+   "ruby": "你[nǐ]要[yào]几[jǐ]瓶[píng]？",
+   "kana": "ni yao ji ping",
+   "romaji": "Nǐ yào jǐ píng?",
+   "replies": [
+    "zh.numbers.liang-ping"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z03-L03",
+   "level": 1,
+   "order": 149,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.liang-ping",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "Two bottles.",
+   "ja": "两瓶。",
+   "ruby": "两[liǎng]瓶[píng]。",
+   "kana": "liang ping",
+   "romaji": "Liǎng píng.",
+   "note": "The measure word can stand alone when the noun is clear.",
+   "replyTo": [
+    "zh.numbers.hear-yao-ji-ping"
+   ],
+   "tags": [
+    "core",
+    "mw"
+   ],
+   "lesson": "Z03-L03",
+   "level": 1,
+   "order": 150,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.yi-xie-shui-guo",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "some fruit",
+   "ja": "一些水果",
+   "ruby": "一些[yì xiē]水果[shuǐ guǒ]",
+   "kana": "yixie shuiguo",
+   "romaji": "yìxiē shuǐguǒ",
+   "note": "一些 = some (a few or a bit); no other measure word needed.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z03-L04",
+   "level": 2,
+   "order": 151,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.yi-dian-shui",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "a little water",
+   "ja": "一点儿水",
+   "ruby": "一点儿[yì diǎn r]水[shuǐ]",
+   "kana": "yidianr shui",
+   "romaji": "yìdiǎnr shuǐ",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z03-L04",
+   "level": 2,
+   "order": 152,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.mei-ge-ren",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "every person",
+   "ja": "每个人",
+   "ruby": "每[měi]个[ge]人[rén]",
+   "kana": "mei ge ren",
+   "romaji": "měi ge rén",
+   "note": "每 + measure word + noun.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z03-L04",
+   "level": 2,
+   "order": 153,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.word-mei-tian",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "every day",
+   "ja": "每天",
+   "ruby": "每天[měi tiān]",
+   "kana": "meitian",
+   "romaji": "měitiān",
+   "note": "天 is its own measure word: 每天, not 每个天.",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z03-L04",
+   "level": 2,
+   "order": 154,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.hen-duo-ren",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "a lot of people",
+   "ja": "很多人",
+   "ruby": "很[hěn]多[duō]人[rén]",
+   "kana": "hen duo ren",
+   "romaji": "hěn duō rén",
+   "note": "很多 + noun needs no measure word.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z03-L04",
+   "level": 2,
+   "order": 155,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.hear-ji-ge-ren",
+   "cat": "numbers",
+   "kind": "hear",
+   "en": "How many of you are there?",
+   "ja": "你们几个人？",
+   "ruby": "你们[nǐ men]几[jǐ]个[ge]人[rén]？",
+   "kana": "nimen ji ge ren",
+   "romaji": "Nǐmen jǐ ge rén?",
+   "replies": [
+    "zh.numbers.san-ge-ren"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z03-L04",
+   "level": 2,
+   "order": 156,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.san-ge-ren",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "There are three of us.",
+   "ja": "我们三个人。",
+   "ruby": "我们[wǒ men]三[sān]个[ge]人[rén]。",
+   "kana": "women san ge ren",
+   "romaji": "Wǒmen sān ge rén.",
+   "replyTo": [
+    "zh.numbers.hear-ji-ge-ren"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z03-L04",
+   "level": 2,
+   "order": 157,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.yi-wan-mi-fan",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "a bowl of rice",
+   "ja": "一碗米饭",
+   "ruby": "一[yì]碗[wǎn]米饭[mǐ fàn]",
+   "kana": "yi wan mifan",
+   "romaji": "yì wǎn mǐfàn",
+   "note": "碗 = bowl.",
+   "tags": [
+    "core",
+    "mw"
+   ],
+   "lesson": "Z03-L04",
+   "level": 2,
+   "order": 158,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.yi-kuai-dan-gao",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "a piece of cake",
+   "ja": "一块蛋糕",
+   "ruby": "一[yí]块[kuài]蛋糕[dàn gāo]",
+   "kana": "yi kuai dangao",
+   "romaji": "yí kuài dàngāo",
+   "note": "块 = piece (cake, soap); in speech also = yuan.",
+   "tags": [
+    "core",
+    "mw"
+   ],
+   "lesson": "Z03-L04",
+   "level": 2,
+   "order": 159,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.yi-fen-jiao-zi",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "a portion of dumplings",
+   "ja": "一份饺子",
+   "ruby": "一[yí]份[fèn]饺子[jiǎo zi]",
+   "kana": "yi fen jiaozi",
+   "romaji": "yí fèn jiǎozi",
+   "note": "份 = a portion or a copy.",
+   "tags": [
+    "core",
+    "mw"
+   ],
+   "lesson": "Z03-L04",
+   "level": 2,
+   "order": 160,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.zhe-ben-shu-hen-hao",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "This book is good.",
+   "ja": "这本书很好。",
+   "ruby": "这[zhè]本[běn]书[shū]很[hěn]好[hǎo]。",
+   "kana": "zhe ben shu hen hao",
+   "romaji": "Zhè běn shū hěn hǎo.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z03-L04",
+   "level": 2,
+   "order": 161,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.hear-yao-na-ge",
+   "cat": "numbers",
+   "kind": "hear",
+   "en": "Which one do you want?",
+   "ja": "你要哪个？",
+   "ruby": "你[nǐ]要[yào]哪[nǎ]个[ge]？",
+   "kana": "ni yao na ge",
+   "romaji": "Nǐ yào nǎ ge?",
+   "note": "哪 nǎ = which; 那 nà = that. Many people say něi ge.",
+   "replies": [
+    "zh.numbers.wo-yao-zhe-ge",
+    "zh.numbers.liang-ge-dou-yao"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z03-L04",
+   "level": 2,
+   "order": 162,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.wo-yao-zhe-ge",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "I want this one.",
+   "ja": "我要这个。",
+   "ruby": "我[wǒ]要[yào]这个[zhè ge]。",
+   "kana": "wo yao zhege",
+   "romaji": "Wǒ yào zhège.",
+   "replyTo": [
+    "zh.numbers.hear-yao-na-ge"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z03-L04",
+   "level": 2,
+   "order": 163,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.liang-ge-dou-yao",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "I'll take both.",
+   "ja": "两个都要。",
+   "ruby": "两[liǎng]个[ge]都[dōu]要[yào]。",
+   "kana": "liang ge dou yao",
+   "romaji": "Liǎng ge dōu yào.",
+   "note": "都 (all, both) goes before the verb.",
+   "replyTo": [
+    "zh.numbers.hear-yao-na-ge"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z03-L04",
+   "level": 2,
+   "order": 164,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.hear-xian-zai-ji-dian",
+   "cat": "numbers",
+   "kind": "hear",
+   "en": "What time is it now?",
+   "ja": "现在几点？",
+   "ruby": "现在[xiàn zài]几[jǐ]点[diǎn]？",
+   "kana": "xianzai ji dian",
+   "romaji": "Xiànzài jǐ diǎn?",
+   "replies": [
+    "zh.numbers.san-dian",
+    "zh.numbers.liang-dian-ban",
+    "zh.numbers.ba-dian-shi-wu"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L01",
+   "level": 1,
+   "order": 165,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.san-dian",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "Three o'clock.",
+   "ja": "三点。",
+   "ruby": "三[sān]点[diǎn]。",
+   "kana": "san dian",
+   "romaji": "Sān diǎn.",
+   "replyTo": [
+    "zh.numbers.hear-xian-zai-ji-dian"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L01",
+   "level": 1,
+   "order": 166,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.liang-dian-ban",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "Half past two.",
+   "ja": "两点半。",
+   "ruby": "两[liǎng]点[diǎn]半[bàn]。",
+   "kana": "liang dian ban",
+   "romaji": "Liǎng diǎn bàn.",
+   "note": "Two o'clock is 两点, never 二点.",
+   "replyTo": [
+    "zh.numbers.hear-xian-zai-ji-dian"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L01",
+   "level": 1,
+   "order": 167,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.ba-dian-shi-wu",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "Eight fifteen.",
+   "ja": "八点十五分。",
+   "ruby": "八[bā]点[diǎn]十五[shí wǔ]分[fēn]。",
+   "kana": "ba dian shiwu fen",
+   "romaji": "Bā diǎn shíwǔ fēn.",
+   "replyTo": [
+    "zh.numbers.hear-xian-zai-ji-dian"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L01",
+   "level": 1,
+   "order": 168,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.jiu-dian-yi-ke",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "A quarter past nine.",
+   "ja": "九点一刻。",
+   "ruby": "九[jiǔ]点[diǎn]一[yí]刻[kè]。",
+   "kana": "jiu dian yi ke",
+   "romaji": "Jiǔ diǎn yí kè.",
+   "note": "一刻 = a quarter of an hour; 三刻 = three quarters.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L01",
+   "level": 1,
+   "order": 169,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.cha-wu-fen-shi-dian",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "Five to ten.",
+   "ja": "差五分十点。",
+   "ruby": "差[chà]五[wǔ]分[fēn]十[shí]点[diǎn]。",
+   "kana": "cha wu fen shi dian",
+   "romaji": "Chà wǔ fēn shí diǎn.",
+   "note": "差 = short of.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L01",
+   "level": 1,
+   "order": 170,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.shi-er-dian",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "Twelve o'clock.",
+   "ja": "十二点。",
+   "ruby": "十二[shí èr]点[diǎn]。",
+   "kana": "shier dian",
+   "romaji": "Shí'èr diǎn.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L01",
+   "level": 1,
+   "order": 171,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.hear-ji-dian-kai-men",
+   "cat": "numbers",
+   "kind": "hear",
+   "en": "What time does the shop open?",
+   "ja": "商店几点开门？",
+   "ruby": "商店[shāng diàn]几[jǐ]点[diǎn]开门[kāi mén]？",
+   "kana": "shangdian ji dian kaimen",
+   "romaji": "Shāngdiàn jǐ diǎn kāimén?",
+   "replies": [
+    "zh.numbers.jiu-dian-kai-men"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L01",
+   "level": 1,
+   "order": 172,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.jiu-dian-kai-men",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "It opens at nine in the morning.",
+   "ja": "早上九点开门。",
+   "ruby": "早上[zǎo shang]九[jiǔ]点[diǎn]开门[kāi mén]。",
+   "kana": "zaoshang jiu dian kaimen",
+   "romaji": "Zǎoshang jiǔ diǎn kāimén.",
+   "replyTo": [
+    "zh.numbers.hear-ji-dian-kai-men"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L01",
+   "level": 1,
+   "order": 173,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.shi-dian-guan-men",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "It closes at ten in the evening.",
+   "ja": "晚上十点关门。",
+   "ruby": "晚上[wǎn shang]十[shí]点[diǎn]关门[guān mén]。",
+   "kana": "wanshang shi dian guanmen",
+   "romaji": "Wǎnshang shí diǎn guānmén.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L01",
+   "level": 1,
+   "order": 174,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.ji-dian-jian-mian",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "What time shall we meet?",
+   "ja": "我们几点见面？",
+   "ruby": "我们[wǒ men]几[jǐ]点[diǎn]见面[jiàn miàn]？",
+   "kana": "women ji dian jianmian",
+   "romaji": "Wǒmen jǐ diǎn jiànmiàn?",
+   "note": "Time words go before the verb, never at the end.",
+   "pattern": "time word + verb",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L01",
+   "level": 1,
+   "order": 175,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.san-dian-jian-mian",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "Let's meet at three.",
+   "ja": "我们三点见面吧。",
+   "ruby": "我们[wǒ men]三[sān]点[diǎn]见面[jiàn miàn]吧[ba]。",
+   "kana": "women san dian jianmian ba",
+   "romaji": "Wǒmen sān diǎn jiànmiàn ba.",
+   "note": "吧 at the end makes a suggestion: \"let's ...\".",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L01",
+   "level": 1,
+   "order": 176,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.word-fen-zhong",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "minute (length of time)",
+   "ja": "分钟",
+   "ruby": "分钟[fēn zhōng]",
+   "kana": "fenzhong",
+   "romaji": "fēnzhōng",
+   "note": "五分 = five past (clock time); 五分钟 = five minutes (duration).",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z04-L01",
+   "level": 1,
+   "order": 177,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.word-xiao-shi",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "hour (length of time)",
+   "ja": "小时",
+   "ruby": "小时[xiǎo shí]",
+   "kana": "xiaoshi",
+   "romaji": "xiǎoshí",
+   "note": "一个小时 = one hour.",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z04-L01",
+   "level": 1,
+   "order": 178,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.hear-xing-qi-ji",
+   "cat": "numbers",
+   "kind": "hear",
+   "en": "What day is it today?",
+   "ja": "今天星期几？",
+   "ruby": "今天[jīn tiān]星期[xīng qī]几[jǐ]？",
+   "kana": "jintian xingqi ji",
+   "romaji": "Jīntiān xīngqī jǐ?",
+   "replies": [
+    "zh.numbers.jin-tian-xing-qi-san"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L02",
+   "level": 1,
+   "order": 179,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.jin-tian-xing-qi-san",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "Today is Wednesday.",
+   "ja": "今天星期三。",
+   "ruby": "今天[jīn tiān]星期三[xīng qī sān]。",
+   "kana": "jintian xingqisan",
+   "romaji": "Jīntiān xīngqīsān.",
+   "note": "Monday to Saturday: 星期一 to 星期六 (1 to 6). No 是 needed.",
+   "replyTo": [
+    "zh.numbers.hear-xing-qi-ji"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L02",
+   "level": 1,
+   "order": 180,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.word-xing-qi-yi",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "Monday",
+   "ja": "星期一",
+   "ruby": "星期一[xīng qī yī]",
+   "kana": "xingqiyi",
+   "romaji": "xīngqīyī",
+   "note": "一 keeps yī here: it is a number in a name.",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z04-L02",
+   "level": 1,
+   "order": 181,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.word-xing-qi-tian",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "Sunday",
+   "ja": "星期天",
+   "ruby": "星期天[xīng qī tiān]",
+   "kana": "xingqitian",
+   "romaji": "xīngqītiān",
+   "note": "Also 星期日 (more formal).",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z04-L02",
+   "level": 1,
+   "order": 182,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.word-zhou-mo",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "weekend",
+   "ja": "周末",
+   "ruby": "周末[zhōu mò]",
+   "kana": "zhoumo",
+   "romaji": "zhōumò",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z04-L02",
+   "level": 1,
+   "order": 183,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.word-zuo-tian",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "yesterday",
+   "ja": "昨天",
+   "ruby": "昨天[zuó tiān]",
+   "kana": "zuotian",
+   "romaji": "zuótiān",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z04-L02",
+   "level": 1,
+   "order": 184,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.ming-tian-xing-qi-liu",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "Tomorrow is Saturday.",
+   "ja": "明天是星期六。",
+   "ruby": "明天[míng tiān]是[shì]星期六[xīng qī liù]。",
+   "kana": "mingtian shi xingqiliu",
+   "romaji": "Míngtiān shì xīngqīliù.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L02",
+   "level": 1,
+   "order": 185,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.word-hou-tian",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "the day after tomorrow",
+   "ja": "后天",
+   "ruby": "后天[hòu tiān]",
+   "kana": "houtian",
+   "romaji": "hòutiān",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z04-L02",
+   "level": 1,
+   "order": 186,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.word-qian-tian",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "the day before yesterday",
+   "ja": "前天",
+   "ruby": "前天[qián tiān]",
+   "kana": "qiantian",
+   "romaji": "qiántiān",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z04-L02",
+   "level": 1,
+   "order": 187,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.xia-ge-xing-qi-jian",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "See you next week!",
+   "ja": "下个星期见！",
+   "ruby": "下[xià]个[ge]星期[xīng qī]见[jiàn]！",
+   "kana": "xia ge xingqi jian",
+   "romaji": "Xià ge xīngqī jiàn!",
+   "note": "上个星期 = last week; 下个星期 = next week.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L02",
+   "level": 1,
+   "order": 188,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.hear-shen-me-shi-hou-you-kong",
+   "cat": "numbers",
+   "kind": "hear",
+   "en": "When are you free?",
+   "ja": "你什么时候有空？",
+   "ruby": "你[nǐ]什么[shén me]时候[shí hou]有[yǒu]空[kòng]？",
+   "kana": "ni shenme shihou you kong",
+   "romaji": "Nǐ shénme shíhou yǒu kòng?",
+   "replies": [
+    "zh.numbers.zhou-mo-you-kong",
+    "zh.numbers.xing-qi-wu-wan-shang"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L02",
+   "level": 1,
+   "order": 189,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.zhou-mo-you-kong",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "I'm free at the weekend.",
+   "ja": "我周末有空。",
+   "ruby": "我[wǒ]周末[zhōu mò]有[yǒu]空[kòng]。",
+   "kana": "wo zhoumo you kong",
+   "romaji": "Wǒ zhōumò yǒu kòng.",
+   "note": "空 kòng = free time; kōng = empty.",
+   "replyTo": [
+    "zh.numbers.hear-shen-me-shi-hou-you-kong"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L02",
+   "level": 1,
+   "order": 190,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.xing-qi-wu-wan-shang",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "How about Friday evening?",
+   "ja": "星期五晚上怎么样？",
+   "ruby": "星期五[xīng qī wǔ]晚上[wǎn shang]怎么样[zěn me yàng]？",
+   "kana": "xingqiwu wanshang zenmeyang",
+   "romaji": "Xīngqīwǔ wǎnshang zěnmeyàng?",
+   "replyTo": [
+    "zh.numbers.hear-shen-me-shi-hou-you-kong"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L02",
+   "level": 1,
+   "order": 191,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.hear-ji-yue-ji-hao",
+   "cat": "numbers",
+   "kind": "hear",
+   "en": "What's the date today?",
+   "ja": "今天几月几号？",
+   "ruby": "今天[jīn tiān]几[jǐ]月[yuè]几[jǐ]号[hào]？",
+   "kana": "jintian ji yue ji hao",
+   "romaji": "Jīntiān jǐ yuè jǐ hào?",
+   "replies": [
+    "zh.numbers.shi-yi-yue-er-shi-yi-hao"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L03",
+   "level": 2,
+   "order": 192,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.shi-yi-yue-er-shi-yi-hao",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "Today is the 21st of November.",
+   "ja": "今天十一月二十一号。",
+   "ruby": "今天[jīn tiān]十一月[shí yī yuè]二十一[èr shí yī]号[hào]。",
+   "kana": "jintian shiyiyue ershiyi hao",
+   "romaji": "Jīntiān shíyīyuè èrshíyī hào.",
+   "note": "Big unit first: year, month, day. 号 in speech, 日 in writing.",
+   "replyTo": [
+    "zh.numbers.hear-ji-yue-ji-hao"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L03",
+   "level": 2,
+   "order": 193,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.word-yi-yue",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "January",
+   "ja": "一月",
+   "ruby": "一月[yī yuè]",
+   "kana": "yiyue",
+   "romaji": "yīyuè",
+   "note": "Months are just numbers: 一月 to 十二月.",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z04-L03",
+   "level": 2,
+   "order": 194,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.word-shi-er-yue",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "December",
+   "ja": "十二月",
+   "ruby": "十二月[shí èr yuè]",
+   "kana": "shieryue",
+   "romaji": "shí'èryuè",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z04-L03",
+   "level": 2,
+   "order": 195,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.year-2026",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "the year 2026",
+   "ja": "2026年",
+   "ruby": "{2026|èr líng èr liù}年[nián]",
+   "kana": "er ling er liu nian",
+   "romaji": "èr líng èr liù nián",
+   "tts": "二零二六年",
+   "note": "Years are read digit by digit.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L03",
+   "level": 2,
+   "order": 196,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.hear-sheng-ri",
+   "cat": "numbers",
+   "kind": "hear",
+   "en": "When is your birthday?",
+   "ja": "你的生日是几月几号？",
+   "ruby": "你[nǐ]的[de]生日[shēng rì]是[shì]几[jǐ]月[yuè]几[jǐ]号[hào]？",
+   "kana": "ni de shengri shi ji yue ji hao",
+   "romaji": "Nǐ de shēngrì shì jǐ yuè jǐ hào?",
+   "replies": [
+    "zh.numbers.wu-yue-ba-hao"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L03",
+   "level": 2,
+   "order": 197,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.wu-yue-ba-hao",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "The 8th of May.",
+   "ja": "五月八号。",
+   "ruby": "五月[wǔ yuè]八[bā]号[hào]。",
+   "kana": "wuyue ba hao",
+   "romaji": "Wǔyuè bā hào.",
+   "replyTo": [
+    "zh.numbers.hear-sheng-ri"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L03",
+   "level": 2,
+   "order": 198,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.sheng-ri-kuai-le",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "Happy birthday!",
+   "ja": "生日快乐！",
+   "ruby": "生日[shēng rì]快乐[kuài lè]！",
+   "kana": "shengri kuaile",
+   "romaji": "Shēngrì kuàilè!",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L03",
+   "level": 2,
+   "order": 199,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.hear-na-nian-chu-sheng",
+   "cat": "numbers",
+   "kind": "hear",
+   "en": "What year were you born?",
+   "ja": "你是哪年出生的？",
+   "ruby": "你[nǐ]是[shì]哪[nǎ]年[nián]出生[chū shēng]的[de]？",
+   "kana": "ni shi na nian chusheng de",
+   "romaji": "Nǐ shì nǎ nián chūshēng de?",
+   "note": "是……的 asks about the details of a past event: when, where, how.",
+   "replies": [
+    "zh.numbers.year-1995"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L03",
+   "level": 2,
+   "order": 200,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.year-1995",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "I was born in 1995.",
+   "ja": "我是1995年出生的。",
+   "ruby": "我[wǒ]是[shì]{1995|yī jiǔ jiǔ wǔ}年[nián]出生[chū shēng]的[de]。",
+   "kana": "wo shi yi jiu jiu wu nian chusheng de",
+   "romaji": "Wǒ shì yī jiǔ jiǔ wǔ nián chūshēng de.",
+   "tts": "我是一九九五年出生的。",
+   "replyTo": [
+    "zh.numbers.hear-na-nian-chu-sheng"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L03",
+   "level": 2,
+   "order": 201,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.word-qu-nian",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "last year",
+   "ja": "去年",
+   "ruby": "去年[qù nián]",
+   "kana": "qunian",
+   "romaji": "qùnián",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z04-L03",
+   "level": 2,
+   "order": 202,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.word-ming-nian",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "next year",
+   "ja": "明年",
+   "ruby": "明年[míng nián]",
+   "kana": "mingnian",
+   "romaji": "míngnián",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z04-L03",
+   "level": 2,
+   "order": 203,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.word-jin-nian",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "this year",
+   "ja": "今年",
+   "ruby": "今年[jīn nián]",
+   "kana": "jinnian",
+   "romaji": "jīnnián",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z04-L03",
+   "level": 2,
+   "order": 204,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.chun-jie",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "The Spring Festival is the Chinese New Year.",
+   "ja": "春节是中国的新年。",
+   "ruby": "春节[Chūn jié]是[shì]中国[Zhōng guó]的[de]新年[xīn nián]。",
+   "kana": "chunjie shi zhongguo de xinnian",
+   "romaji": "Chūnjié shì Zhōngguó de xīnnián.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L03",
+   "level": 2,
+   "order": 205,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.word-shang-wu",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "morning (before noon)",
+   "ja": "上午",
+   "ruby": "上午[shàng wǔ]",
+   "kana": "shangwu",
+   "romaji": "shàngwǔ",
+   "note": "早上 = early morning; 上午 = the rest of the morning.",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z04-L04",
+   "level": 2,
+   "order": 206,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.word-zhong-wu",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "noon, midday",
+   "ja": "中午",
+   "ruby": "中午[zhōng wǔ]",
+   "kana": "zhongwu",
+   "romaji": "zhōngwǔ",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z04-L04",
+   "level": 2,
+   "order": 207,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.word-xia-wu",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "afternoon",
+   "ja": "下午",
+   "ruby": "下午[xià wǔ]",
+   "kana": "xiawu",
+   "romaji": "xiàwǔ",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z04-L04",
+   "level": 2,
+   "order": 208,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.ming-tian-xia-wu-san-dian",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "tomorrow at 3 p.m.",
+   "ja": "明天下午三点",
+   "ruby": "明天[míng tiān]下午[xià wǔ]三[sān]点[diǎn]",
+   "kana": "mingtian xiawu san dian",
+   "romaji": "míngtiān xiàwǔ sān diǎn",
+   "note": "Order: day, part of day, clock time.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L04",
+   "level": 2,
+   "order": 209,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.hear-duo-chang-shi-jian",
+   "cat": "numbers",
+   "kind": "hear",
+   "en": "How long does it take?",
+   "ja": "要多长时间？",
+   "ruby": "要[yào]多[duō]长[cháng]时间[shí jiān]？",
+   "kana": "yao duo chang shijian",
+   "romaji": "Yào duō cháng shíjiān?",
+   "replies": [
+    "zh.numbers.ban-ge-xiao-shi",
+    "zh.numbers.yi-ge-duo-xiao-shi"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L04",
+   "level": 2,
+   "order": 210,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.ban-ge-xiao-shi",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "Half an hour.",
+   "ja": "半个小时。",
+   "ruby": "半[bàn]个[ge]小时[xiǎo shí]。",
+   "kana": "ban ge xiaoshi",
+   "romaji": "Bàn ge xiǎoshí.",
+   "replyTo": [
+    "zh.numbers.hear-duo-chang-shi-jian"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L04",
+   "level": 2,
+   "order": 211,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.yi-ge-duo-xiao-shi",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "A bit over an hour.",
+   "ja": "一个多小时。",
+   "ruby": "一[yí]个[ge]多[duō]小时[xiǎo shí]。",
+   "kana": "yi ge duo xiaoshi",
+   "romaji": "Yí ge duō xiǎoshí.",
+   "note": "多 after the measure word = \"and a bit more\".",
+   "replyTo": [
+    "zh.numbers.hear-duo-chang-shi-jian"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L04",
+   "level": 2,
+   "order": 212,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.deng-wo-wu-fen-zhong",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "Give me five minutes.",
+   "ja": "等我五分钟。",
+   "ruby": "等[děng]我[wǒ]五[wǔ]分钟[fēn zhōng]。",
+   "kana": "deng wo wu fenzhong",
+   "romaji": "Děng wǒ wǔ fēnzhōng.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L04",
+   "level": 2,
+   "order": 213,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.gong-zuo-ba-ge-xiao-shi",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "I work eight hours a day.",
+   "ja": "我每天工作八个小时。",
+   "ruby": "我[wǒ]每天[měi tiān]工作[gōng zuò]八[bā]个[ge]小时[xiǎo shí]。",
+   "kana": "wo meitian gongzuo ba ge xiaoshi",
+   "romaji": "Wǒ měitiān gōngzuò bā ge xiǎoshí.",
+   "note": "How long you do something comes after the verb.",
+   "pattern": "verb + duration",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L04",
+   "level": 2,
+   "order": 214,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.hear-shen-me-shi-hou-lai",
+   "cat": "numbers",
+   "kind": "hear",
+   "en": "When are you coming?",
+   "ja": "你什么时候来？",
+   "ruby": "你[nǐ]什么[shén me]时候[shí hou]来[lái]？",
+   "kana": "ni shenme shihou lai",
+   "romaji": "Nǐ shénme shíhou lái?",
+   "replies": [
+    "zh.numbers.ming-tian-shang-wu-lai"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L04",
+   "level": 2,
+   "order": 215,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.ming-tian-shang-wu-lai",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "I'm coming tomorrow morning.",
+   "ja": "我明天上午来。",
+   "ruby": "我[wǒ]明天[míng tiān]上午[shàng wǔ]来[lái]。",
+   "kana": "wo mingtian shangwu lai",
+   "romaji": "Wǒ míngtiān shàngwǔ lái.",
+   "replyTo": [
+    "zh.numbers.hear-shen-me-shi-hou-lai"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L04",
+   "level": 2,
+   "order": 216,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.word-yi-hou",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "after; later",
+   "ja": "以后",
+   "ruby": "以后[yǐ hòu]",
+   "kana": "yihou",
+   "romaji": "yǐhòu",
+   "note": "下班以后 = after work.",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z04-L04",
+   "level": 2,
+   "order": 217,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.word-yi-qian",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "before; in the past",
+   "ja": "以前",
+   "ruby": "以前[yǐ qián]",
+   "kana": "yiqian",
+   "romaji": "yǐqián",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z04-L04",
+   "level": 2,
+   "order": 218,
+   "src": "new"
+  },
+  {
+   "id": "zh.numbers.chi-fan-yi-qian-xi-shou",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "Wash your hands before eating.",
+   "ja": "吃饭以前洗手。",
+   "ruby": "吃饭[chī fàn]以前[yǐ qián]洗[xǐ]手[shǒu]。",
+   "kana": "chifan yiqian xi shou",
+   "romaji": "Chīfàn yǐqián xǐ shǒu.",
+   "note": "3rd + 3rd tone: xí shǒu.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z04-L04",
+   "level": 2,
+   "order": 219,
    "src": "new"
   }
  ]
