@@ -19,7 +19,7 @@ export const LESSONS = [
       ['feelings.bei-biao-yang', 'say', '他[tā]被[bèi]老板[lǎo bǎn]表扬[biǎo yáng]了[le]。', 'He was praised by his boss.', '3rd + 3rd tone: láo bǎn.'],
       ['patterns.lian-dou', 'pattern', '他[tā]忙[máng]得[de]连[lián]吃饭[chī fàn]的[de]时间[shí jiān]都[dōu]没有[méi yǒu]。', 'He\'s so busy he doesn\'t even have time to eat.', '连 A 都 = even A.', { pattern: '连……都……' }],
       ['patterns.dui-wo-lai-shuo', 'pattern', '对[duì]我[wǒ]来说[lái shuō]，声调[shēng diào]最[zuì]难[nán]。', 'For me, the tones are the hardest part.', null, { pattern: '对……来说' }],
-      ['feelings.yi-fang-mian', 'say', '一方面[yì fāng miàn]工资[gōng zī]高[gāo]，另一方面[lìng yì fāng miàn]压力[yā lì]也[yě]大[dà]。', 'On the one hand the pay is good; on the other, there\'s a lot of pressure.'],
+      ['feelings.yi-fang-mian', 'say', '一方面[yì fāng miàn]工资[gōng zī]高[gāo]，另[lìng]一方面[yì fāng miàn]压力[yā lì]也[yě]大[dà]。', 'On the one hand the pay is good; on the other, there\'s a lot of pressure.'],
       ['feelings.hear-ni-de-kan-fa-ne', 'hear', '你[nǐ]的[de]看法[kàn fǎ]呢[ne]？', 'What\'s your view?', null, { replies: ['feelings.kan-fa-bu-tai-yi-yang', 'feelings.wan-quan-tong-yi'] }],
       ['feelings.kan-fa-bu-tai-yi-yang', 'say', '我[wǒ]的[de]看法[kàn fǎ]跟[gēn]你[nǐ]不[bú]太[tài]一样[yí yàng]。', 'I see it a little differently.'],
       ['feelings.wan-quan-tong-yi', 'say', '我[wǒ]完全[wán quán]同意[tóng yì]你[nǐ]的[de]看法[kàn fǎ]。', 'I completely agree with you.'],

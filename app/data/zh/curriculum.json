@@ -20906,9 +20906,9 @@
    "kind": "say",
    "en": "On the one hand the pay is good; on the other, there's a lot of pressure.",
    "ja": "一方面工资高，另一方面压力也大。",
-   "ruby": "一方面[yì fāng miàn]工资[gōng zī]高[gāo]，另一方面[lìng yì fāng miàn]压力[yā lì]也[yě]大[dà]。",
-   "kana": "yifangmian gongzi gao lingyifangmian yali ye da",
-   "romaji": "Yìfāngmiàn gōngzī gāo, lìngyìfāngmiàn yālì yě dà.",
+   "ruby": "一方面[yì fāng miàn]工资[gōng zī]高[gāo]，另[lìng]一方面[yì fāng miàn]压力[yā lì]也[yě]大[dà]。",
+   "kana": "yifangmian gongzi gao ling yifangmian yali ye da",
+   "romaji": "Yìfāngmiàn gōngzī gāo, lìng yìfāngmiàn yālì yě dà.",
    "tags": [
     "ext"
    ],
