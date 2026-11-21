@@ -7,3 +7,5 @@ design/fonts/src/
 design/tools/.venv/
 qa/node_modules/
 qa/shots/
+dictionary/zh/raw/
+dictionary/zh/out/
