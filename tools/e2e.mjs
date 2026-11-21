@@ -694,7 +694,7 @@ async function main() {
     await navigate(BASE + '#/phrases');
     await waitFor("!!document.querySelector('.lang-switch')");
     await click('.lang-switch [data-lang="ja"]');
-    check('zh → ja: Japanese phrases are back, html lang en', await waitFor("document.documentElement.lang === 'en' && !!document.querySelector('.phrase[data-id=\"konbini.bag-none\"], .phrase[data-id^=\"basics.\"]') && document.querySelector('.phrase .ja').lang === 'ja'", 8000));
+    check('zh → ja: Japanese phrases are back, html lang en', await waitFor("document.documentElement.lang === 'en' && document.querySelectorAll('.phrase').length > 0 && [...document.querySelectorAll('.phrase')].every((p) => !p.dataset.id.startsWith('zh.')) && document.querySelector('.phrase .ja').lang === 'ja'", 8000));
     const jaAfter = await evaluate(jaSnapshot);
     check('ja → zh → ja: Japanese progress is byte-for-byte untouched', jaAfter === jaBefore, jaAfter === jaBefore ? '' : `${jaBefore.slice(0, 200)} ≠ ${jaAfter.slice(0, 200)}`);
     check('zh → ja: the Japanese font is back (Shippori Mincho)', await evaluate("/Shippori/.test(getComputedStyle(document.querySelector('.phrase .ja')).fontFamily)"));
