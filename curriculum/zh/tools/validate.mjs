@@ -15,6 +15,7 @@ const load = (f) => JSON.parse(readFileSync(join(dataDir, f), 'utf8'));
 const cedictText = findCedict(root);
 const CEDICT = cedictText ? loadCedict(cedictText) : null;
 if (!CEDICT) W('CC-CEDICT not found (dictionary/zh/raw/cedict or $CEDICT_DIR): reading checks skipped');
+const REVIEWED = new Set(['后面 hòu miàn']);
 const NEUTRAL_OK = new Set([...'个们子么的了吗呢吧着过得地啊呀哪啦上下里来去起开头候道儿么西气思服友生']);
 
 function units(ruby) {
@@ -44,6 +45,7 @@ function sylMatch(mine, ced, ch) {
 function readingCheck(w, chars, syls) {
   if (!CEDICT) return;
   const run = chars.join('');
+  if (REVIEWED.has(run + ' ' + syls.join(' '))) return;
   const entries = CEDICT.get(run);
   if (entries && chars.length > 1) {
     let best = 'no';

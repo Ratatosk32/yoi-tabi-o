@@ -698,6 +698,248 @@
     "zh.numbers.word-yi-qian",
     "zh.numbers.chi-fan-yi-qian-xi-shou"
    ]
+  },
+  {
+   "code": "Z05-L01",
+   "unit": "Z05",
+   "title": "Where is it?",
+   "goal": "Ask where people and places are with 在 and 哪儿.",
+   "level": 1,
+   "path": "core",
+   "hsk": 1,
+   "patterns": [
+    "A 在 + place",
+    "哪儿 / 这儿 / 那儿",
+    "不在"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.city.xi-shou-jian-zai-nar",
+    "zh.patterns.ta-zai-jia",
+    "zh.city.zai-zher",
+    "zh.city.zai-nar",
+    "zh.city.hear-ni-zai-nar",
+    "zh.city.zai-men-kou",
+    "zh.city.yin-hang-zai-nar",
+    "zh.city.ta-bu-zai",
+    "zh.city.hear-wang-lao-shi-zai-ma",
+    "zh.city.zai-qing-deng",
+    "zh.city.word-chao-shi",
+    "zh.city.word-di-tie-zhan",
+    "zh.city.word-xue-xiao"
+   ]
+  },
+  {
+   "code": "Z05-L02",
+   "unit": "Z05",
+   "title": "On, in, under, next to",
+   "goal": "Say where things are; say what is somewhere with 有.",
+   "level": 1,
+   "path": "core",
+   "hsk": 1,
+   "patterns": [
+    "A 在 + noun + 上 / 里 / 下面 / 旁边",
+    "place + 有 + thing"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.patterns.zai-zhuo-zi-shang",
+    "zh.daily.yao-shi-zai-bao-li",
+    "zh.daily.mao-zai-chuang-xia-mian",
+    "zh.daily.yin-hang-pang-bian",
+    "zh.patterns.zhuo-zi-shang-you-shu",
+    "zh.daily.hear-fang-jian-li-you-ren-ma",
+    "zh.daily.mei-you-ren",
+    "zh.city.fu-jin-you-chao-shi-ma",
+    "zh.city.hear-qian-mian-you-yi-ge",
+    "zh.daily.word-li-mian",
+    "zh.daily.word-wai-mian",
+    "zh.daily.word-hou-mian",
+    "zh.daily.word-shang-mian"
+   ]
+  },
+  {
+   "code": "Z05-L03",
+   "unit": "Z05",
+   "title": "Places in town",
+   "goal": "Say where you are going, where you live, where you do things.",
+   "level": 1,
+   "path": "core",
+   "hsk": 1,
+   "patterns": [
+    "去 + place",
+    "来 / 去",
+    "住在 + place"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.patterns.wo-qu-chao-shi",
+    "zh.city.hear-ni-qu-nar",
+    "zh.city.wo-hui-jia",
+    "zh.city.zai-ka-fei-guan-deng-ni",
+    "zh.city.zai-tu-shu-guan-kan-shu",
+    "zh.city.lai-wo-jia-wan",
+    "zh.city.word-gong-yuan",
+    "zh.city.word-shang-dian",
+    "zh.city.word-fan-guan",
+    "zh.city.word-ji-chang",
+    "zh.city.word-huo-che-zhan",
+    "zh.city.hear-zhu-zai-nar",
+    "zh.city.zhu-zai-bei-jing"
+   ]
+  },
+  {
+   "code": "Z05-L04",
+   "unit": "Z05",
+   "title": "Near and far",
+   "goal": "Say how far a place is and describe it.",
+   "level": 2,
+   "path": "core",
+   "hsk": 1,
+   "patterns": [
+    "A 离 B 远 / 近",
+    "verb 不 verb？",
+    "这里 / 那里 / 哪里"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.patterns.li-zher-yuan-ma",
+    "zh.city.hear-yuan-bu-yuan",
+    "zh.city.bu-yuan-hen-jin",
+    "zh.city.ting-yuan-de",
+    "zh.city.zou-lu-wu-fen-zhong",
+    "zh.city.jia-li-gong-si-hen-jin",
+    "zh.city.zhe-li-ren-hen-duo",
+    "zh.city.na-li-hen-an-jing",
+    "zh.city.bei-jing-hen-da",
+    "zh.city.di-fang-hen-piao-liang",
+    "zh.city.word-fu-jin",
+    "zh.city.word-dui-mian",
+    "zh.city.word-zhong-jian"
+   ]
+  },
+  {
+   "code": "Z06-L01",
+   "unit": "Z06",
+   "title": "My day",
+   "goal": "Describe your daily routine in time order.",
+   "level": 2,
+   "path": "core",
+   "hsk": 1,
+   "patterns": [
+    "time + verb",
+    "先……然后……"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.daily.hear-ji-dian-qi-chuang",
+    "zh.daily.qi-dian-qi-chuang",
+    "zh.daily.chi-zao-fan",
+    "zh.daily.ba-dian-shang-ban",
+    "zh.daily.liu-dian-xia-ban",
+    "zh.patterns.xian-ran-hou",
+    "zh.daily.shi-yi-dian-shui-jiao",
+    "zh.daily.mei-tian-pao-bu",
+    "zh.daily.word-shua-ya",
+    "zh.daily.word-xi-lian",
+    "zh.daily.word-chuan-yi-fu",
+    "zh.daily.hear-zhong-wu-zai-nar-chi",
+    "zh.daily.zai-gong-si-chi"
+   ]
+  },
+  {
+   "code": "Z06-L02",
+   "unit": "Z06",
+   "title": "What are you doing?",
+   "goal": "Say what is happening now with 在 and 正在.",
+   "level": 2,
+   "path": "core",
+   "hsk": 1,
+   "patterns": [
+    "在 / 正在 + verb",
+    "……呢",
+    "没在 + verb",
+    "有点儿 + adjective"
+   ],
+   "count": 14,
+   "ids": [
+    "zh.daily.hear-zai-gan-shen-me",
+    "zh.patterns.wo-zai-zuo-fan",
+    "zh.daily.zai-kan-dian-shi",
+    "zh.daily.zheng-zai-shui-jiao",
+    "zh.daily.zai-da-dian-hua",
+    "zh.daily.mei-zai-shui-jiao",
+    "zh.daily.hai-zi-men-zai-wan",
+    "zh.daily.wai-mian-zai-xia-yu",
+    "zh.daily.hear-ni-mang-ma",
+    "zh.daily.bu-mang",
+    "zh.daily.you-dian-mang",
+    "zh.daily.yi-hui-r-da-gei-ni",
+    "zh.daily.word-xi-yi-fu",
+    "zh.daily.word-da-sao"
+   ]
+  },
+  {
+   "code": "Z06-L03",
+   "unit": "Z06",
+   "title": "Weekend plans",
+   "goal": "Make plans and suggestions; choose with 还是.",
+   "level": 2,
+   "path": "core",
+   "hsk": 1,
+   "patterns": [
+    "要 + verb (plan)",
+    "想 + verb",
+    "一起 + verb + 吧",
+    "A 还是 B？"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.daily.hear-zhou-mo-zuo-shen-me",
+    "zh.daily.yao-qu-kan-peng-you",
+    "zh.daily.zai-jia-xiu-xi",
+    "zh.patterns.yi-qi-qu-ba",
+    "zh.daily.hao-a",
+    "zh.daily.bu-hao-yi-si-you-shi",
+    "zh.patterns.cha-hai-shi-ka-fei",
+    "zh.daily.xiang-qu-guang-jie",
+    "zh.daily.qu-kan-dian-ying-ba",
+    "zh.daily.hear-ji-dian-jian",
+    "zh.daily.liang-dian-di-tie-zhan",
+    "zh.daily.word-shui-lan-jiao",
+    "zh.daily.word-zuo-jia-wu"
+   ]
+  },
+  {
+   "code": "Z06-L04",
+   "unit": "Z06",
+   "title": "Habits",
+   "goal": "Say how often you do things.",
+   "level": 2,
+   "path": "core",
+   "hsk": 1,
+   "patterns": [
+    "常常 / 有时候 / 一般",
+    "每 + time + 都",
+    "从来不",
+    "number + 次"
+   ],
+   "count": 13,
+   "ids": [
+    "zh.daily.chang-chang-zuo-fan",
+    "zh.daily.you-shi-hou-jian-shen",
+    "zh.patterns.mei-tian-dou",
+    "zh.daily.cong-lai-bu-he-jiu",
+    "zh.daily.yi-ban-zuo-di-tie",
+    "zh.daily.hear-chang-yun-dong-ma",
+    "zh.daily.bu-tai-chang",
+    "zh.daily.yi-ge-xing-qi-liang-ci",
+    "zh.daily.yi-ding-yao-he-ka-fei",
+    "zh.daily.shui-jiao-yi-qian-kan-shu",
+    "zh.daily.zhou-mo-bu-shang-ban",
+    "zh.daily.word-ping-shi",
+    "zh.daily.word-zao-shui-zao-qi"
+   ]
   }
  ],
  "items": [
@@ -852,6 +1094,9 @@
    "kana": "xiexie",
    "romaji": "Xièxie!",
    "note": "The second 谢 is in the neutral tone: short and light.",
+   "replyTo": [
+    "zh.city.hear-qian-mian-you-yi-ge"
+   ],
    "tags": [
     "core"
    ],
@@ -4910,6 +5155,1972 @@
    "lesson": "Z04-L04",
    "level": 2,
    "order": 219,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.xi-shou-jian-zai-nar",
+   "cat": "city",
+   "kind": "say",
+   "en": "Where is the toilet?",
+   "ja": "洗手间在哪儿？",
+   "ruby": "洗手间[xǐ shǒu jiān]在[zài]哪儿[nǎ r]？",
+   "kana": "xishoujian zai nar",
+   "romaji": "Xǐshǒujiān zài nǎr?",
+   "note": "洗手间 is the polite word. 3rd + 3rd tone: xí shǒu.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L01",
+   "level": 1,
+   "order": 220,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.ta-zai-jia",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "He's at home.",
+   "ja": "他在家。",
+   "ruby": "他[tā]在[zài]家[jiā]。",
+   "kana": "ta zai jia",
+   "romaji": "Tā zài jiā.",
+   "note": "在 = to be at a place.",
+   "pattern": "A 在 + place",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L01",
+   "level": 1,
+   "order": 221,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.zai-zher",
+   "cat": "city",
+   "kind": "say",
+   "en": "It's here.",
+   "ja": "在这儿。",
+   "ruby": "在[zài]这儿[zhè r]。",
+   "kana": "zai zher",
+   "romaji": "Zài zhèr.",
+   "note": "这儿 zhèr (north) = 这里 zhèlǐ.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L01",
+   "level": 1,
+   "order": 222,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.zai-nar",
+   "cat": "city",
+   "kind": "say",
+   "en": "It's over there.",
+   "ja": "在那儿。",
+   "ruby": "在[zài]那儿[nà r]。",
+   "kana": "zai nar",
+   "romaji": "Zài nàr.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L01",
+   "level": 1,
+   "order": 223,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.hear-ni-zai-nar",
+   "cat": "city",
+   "kind": "hear",
+   "en": "Where are you?",
+   "ja": "你在哪儿？",
+   "ruby": "你[nǐ]在[zài]哪儿[nǎ r]？",
+   "kana": "ni zai nar",
+   "romaji": "Nǐ zài nǎr?",
+   "replies": [
+    "zh.city.zai-men-kou"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L01",
+   "level": 1,
+   "order": 224,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.zai-men-kou",
+   "cat": "city",
+   "kind": "say",
+   "en": "I'm at the shop entrance.",
+   "ja": "我在商店门口。",
+   "ruby": "我[wǒ]在[zài]商店[shāng diàn]门口[mén kǒu]。",
+   "kana": "wo zai shangdian menkou",
+   "romaji": "Wǒ zài shāngdiàn ménkǒu.",
+   "replyTo": [
+    "zh.city.hear-ni-zai-nar"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L01",
+   "level": 1,
+   "order": 225,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.yin-hang-zai-nar",
+   "cat": "city",
+   "kind": "say",
+   "en": "Where is the bank?",
+   "ja": "银行在哪儿？",
+   "ruby": "银行[yín háng]在[zài]哪儿[nǎ r]？",
+   "kana": "yinhang zai nar",
+   "romaji": "Yínháng zài nǎr?",
+   "note": "银行 yínháng: 行 is háng here, not xíng.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L01",
+   "level": 1,
+   "order": 226,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.ta-bu-zai",
+   "cat": "city",
+   "kind": "say",
+   "en": "He's not here.",
+   "ja": "他不在。",
+   "ruby": "他[tā]不[bú]在[zài]。",
+   "kana": "ta bu zai",
+   "romaji": "Tā bú zài.",
+   "replyTo": [
+    "zh.city.hear-wang-lao-shi-zai-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L01",
+   "level": 1,
+   "order": 227,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.hear-wang-lao-shi-zai-ma",
+   "cat": "city",
+   "kind": "hear",
+   "en": "Is Teacher Wang in?",
+   "ja": "王老师在吗？",
+   "ruby": "王[Wáng]老师[lǎo shī]在[zài]吗[ma]？",
+   "kana": "wang laoshi zai ma",
+   "romaji": "Wáng lǎoshī zài ma?",
+   "replies": [
+    "zh.city.ta-bu-zai",
+    "zh.city.zai-qing-deng"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L01",
+   "level": 1,
+   "order": 228,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.zai-qing-deng",
+   "cat": "city",
+   "kind": "say",
+   "en": "Yes, one moment please.",
+   "ja": "在，请等一下。",
+   "ruby": "在[zài]，请[qǐng]等[děng]一下[yí xià]。",
+   "kana": "zai qing deng yixia",
+   "romaji": "Zài, qǐng děng yíxià.",
+   "note": "3rd + 3rd tone: qíng děng.",
+   "replyTo": [
+    "zh.city.hear-wang-lao-shi-zai-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L01",
+   "level": 1,
+   "order": 229,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.word-chao-shi",
+   "cat": "city",
+   "kind": "say",
+   "en": "supermarket",
+   "ja": "超市",
+   "ruby": "超市[chāo shì]",
+   "kana": "chaoshi",
+   "romaji": "chāoshì",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z05-L01",
+   "level": 1,
+   "order": 230,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.word-di-tie-zhan",
+   "cat": "city",
+   "kind": "say",
+   "en": "metro station",
+   "ja": "地铁站",
+   "ruby": "地铁站[dì tiě zhàn]",
+   "kana": "ditiezhan",
+   "romaji": "dìtiězhàn",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z05-L01",
+   "level": 1,
+   "order": 231,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.word-xue-xiao",
+   "cat": "city",
+   "kind": "say",
+   "en": "school",
+   "ja": "学校",
+   "ruby": "学校[xué xiào]",
+   "kana": "xuexiao",
+   "romaji": "xuéxiào",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z05-L01",
+   "level": 1,
+   "order": 232,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.zai-zhuo-zi-shang",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "The phone is on the table.",
+   "ja": "手机在桌子上。",
+   "ruby": "手机[shǒu jī]在[zài]桌子[zhuō zi]上[shang]。",
+   "kana": "shouji zai zhuozi shang",
+   "romaji": "Shǒujī zài zhuōzi shang.",
+   "note": "The location word goes after the noun: 桌子上 = on the table.",
+   "pattern": "A 在 + noun + 上 / 里",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L02",
+   "level": 1,
+   "order": 233,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.yao-shi-zai-bao-li",
+   "cat": "daily",
+   "kind": "say",
+   "en": "The keys are in the bag.",
+   "ja": "钥匙在包里。",
+   "ruby": "钥匙[yào shi]在[zài]包[bāo]里[li]。",
+   "kana": "yaoshi zai bao li",
+   "romaji": "Yàoshi zài bāo li.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L02",
+   "level": 1,
+   "order": 234,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.mao-zai-chuang-xia-mian",
+   "cat": "daily",
+   "kind": "say",
+   "en": "The cat is under the bed.",
+   "ja": "猫在床下面。",
+   "ruby": "猫[māo]在[zài]床[chuáng]下面[xià miàn]。",
+   "kana": "mao zai chuang xiamian",
+   "romaji": "Māo zài chuáng xiàmiàn.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L02",
+   "level": 1,
+   "order": 235,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.yin-hang-pang-bian",
+   "cat": "daily",
+   "kind": "say",
+   "en": "The bank is next to the hospital.",
+   "ja": "银行在医院旁边。",
+   "ruby": "银行[yín háng]在[zài]医院[yī yuàn]旁边[páng biān]。",
+   "kana": "yinhang zai yiyuan pangbian",
+   "romaji": "Yínháng zài yīyuàn pángbiān.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L02",
+   "level": 1,
+   "order": 236,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.zhuo-zi-shang-you-shu",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "There's a book on the table.",
+   "ja": "桌子上有一本书。",
+   "ruby": "桌子[zhuō zi]上[shang]有[yǒu]一[yì]本[běn]书[shū]。",
+   "kana": "zhuozi shang you yi ben shu",
+   "romaji": "Zhuōzi shang yǒu yì běn shū.",
+   "note": "在: you know the thing and ask where it is. 有: you know the place and say what is there.",
+   "pattern": "place + 有 + thing",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L02",
+   "level": 1,
+   "order": 237,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hear-fang-jian-li-you-ren-ma",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "Is anyone in the room?",
+   "ja": "房间里有人吗？",
+   "ruby": "房间[fáng jiān]里[li]有[yǒu]人[rén]吗[ma]？",
+   "kana": "fangjian li you ren ma",
+   "romaji": "Fángjiān li yǒu rén ma?",
+   "replies": [
+    "zh.daily.mei-you-ren"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L02",
+   "level": 1,
+   "order": 238,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.mei-you-ren",
+   "cat": "daily",
+   "kind": "say",
+   "en": "There's nobody.",
+   "ja": "没有人。",
+   "ruby": "没有[méi yǒu]人[rén]。",
+   "kana": "meiyou ren",
+   "romaji": "Méiyǒu rén.",
+   "replyTo": [
+    "zh.daily.hear-fang-jian-li-you-ren-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L02",
+   "level": 1,
+   "order": 239,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.fu-jin-you-chao-shi-ma",
+   "cat": "city",
+   "kind": "say",
+   "en": "Is there a supermarket near here?",
+   "ja": "这儿附近有超市吗？",
+   "ruby": "这儿[zhè r]附近[fù jìn]有[yǒu]超市[chāo shì]吗[ma]？",
+   "kana": "zher fujin you chaoshi ma",
+   "romaji": "Zhèr fùjìn yǒu chāoshì ma?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L02",
+   "level": 1,
+   "order": 240,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.hear-qian-mian-you-yi-ge",
+   "cat": "city",
+   "kind": "hear",
+   "en": "There's one up ahead.",
+   "ja": "前面有一个。",
+   "ruby": "前面[qián miàn]有[yǒu]一[yí]个[ge]。",
+   "kana": "qianmian you yi ge",
+   "romaji": "Qiánmiàn yǒu yí ge.",
+   "note": "Just say thanks.",
+   "replies": [
+    "zh.basics.xie-xie"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L02",
+   "level": 1,
+   "order": 241,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-li-mian",
+   "cat": "daily",
+   "kind": "say",
+   "en": "inside",
+   "ja": "里面",
+   "ruby": "里面[lǐ miàn]",
+   "kana": "limian",
+   "romaji": "lǐmiàn",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z05-L02",
+   "level": 1,
+   "order": 242,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-wai-mian",
+   "cat": "daily",
+   "kind": "say",
+   "en": "outside",
+   "ja": "外面",
+   "ruby": "外面[wài miàn]",
+   "kana": "waimian",
+   "romaji": "wàimiàn",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z05-L02",
+   "level": 1,
+   "order": 243,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-hou-mian",
+   "cat": "daily",
+   "kind": "say",
+   "en": "behind",
+   "ja": "后面",
+   "ruby": "后面[hòu miàn]",
+   "kana": "houmian",
+   "romaji": "hòumiàn",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z05-L02",
+   "level": 1,
+   "order": 244,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-shang-mian",
+   "cat": "daily",
+   "kind": "say",
+   "en": "on top; above",
+   "ja": "上面",
+   "ruby": "上面[shàng miàn]",
+   "kana": "shangmian",
+   "romaji": "shàngmiàn",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z05-L02",
+   "level": 1,
+   "order": 245,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.wo-qu-chao-shi",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "I'm going to the supermarket.",
+   "ja": "我去超市。",
+   "ruby": "我[wǒ]去[qù]超市[chāo shì]。",
+   "kana": "wo qu chaoshi",
+   "romaji": "Wǒ qù chāoshì.",
+   "note": "No word for \"to\": 去 + place.",
+   "pattern": "去 + place",
+   "replyTo": [
+    "zh.city.hear-ni-qu-nar"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L03",
+   "level": 1,
+   "order": 246,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.hear-ni-qu-nar",
+   "cat": "city",
+   "kind": "hear",
+   "en": "Where are you going?",
+   "ja": "你去哪儿？",
+   "ruby": "你[nǐ]去[qù]哪儿[nǎ r]？",
+   "kana": "ni qu nar",
+   "romaji": "Nǐ qù nǎr?",
+   "replies": [
+    "zh.patterns.wo-qu-chao-shi",
+    "zh.city.wo-hui-jia"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L03",
+   "level": 1,
+   "order": 247,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.wo-hui-jia",
+   "cat": "city",
+   "kind": "say",
+   "en": "I'm going home.",
+   "ja": "我回家。",
+   "ruby": "我[wǒ]回[huí]家[jiā]。",
+   "kana": "wo hui jia",
+   "romaji": "Wǒ huí jiā.",
+   "note": "回 = go back: 回家, 回国.",
+   "replyTo": [
+    "zh.city.hear-ni-qu-nar"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L03",
+   "level": 1,
+   "order": 248,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.zai-ka-fei-guan-deng-ni",
+   "cat": "city",
+   "kind": "say",
+   "en": "I'll wait for you at the café.",
+   "ja": "我在咖啡馆等你。",
+   "ruby": "我[wǒ]在[zài]咖啡馆[kā fēi guǎn]等[děng]你[nǐ]。",
+   "kana": "wo zai kafeiguan deng ni",
+   "romaji": "Wǒ zài kāfēiguǎn děng nǐ.",
+   "note": "3rd + 3rd tone: déng nǐ.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L03",
+   "level": 1,
+   "order": 249,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.zai-tu-shu-guan-kan-shu",
+   "cat": "city",
+   "kind": "say",
+   "en": "She's reading at the library.",
+   "ja": "她在图书馆看书。",
+   "ruby": "她[tā]在[zài]图书馆[tú shū guǎn]看[kàn]书[shū]。",
+   "kana": "ta zai tushuguan kan shu",
+   "romaji": "Tā zài túshūguǎn kàn shū.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L03",
+   "level": 1,
+   "order": 250,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.lai-wo-jia-wan",
+   "cat": "city",
+   "kind": "say",
+   "en": "Come over to my place!",
+   "ja": "来我家玩儿吧！",
+   "ruby": "来[lái]我[wǒ]家[jiā]玩儿[wán r]吧[ba]！",
+   "kana": "lai wo jia wanr ba",
+   "romaji": "Lái wǒ jiā wánr ba!",
+   "note": "来 = come (towards the speaker), 去 = go. 玩儿 = have fun, hang out.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L03",
+   "level": 1,
+   "order": 251,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.word-gong-yuan",
+   "cat": "city",
+   "kind": "say",
+   "en": "park",
+   "ja": "公园",
+   "ruby": "公园[gōng yuán]",
+   "kana": "gongyuan",
+   "romaji": "gōngyuán",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z05-L03",
+   "level": 1,
+   "order": 252,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.word-shang-dian",
+   "cat": "city",
+   "kind": "say",
+   "en": "shop",
+   "ja": "商店",
+   "ruby": "商店[shāng diàn]",
+   "kana": "shangdian",
+   "romaji": "shāngdiàn",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z05-L03",
+   "level": 1,
+   "order": 253,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.word-fan-guan",
+   "cat": "city",
+   "kind": "say",
+   "en": "restaurant",
+   "ja": "饭馆",
+   "ruby": "饭馆[fàn guǎn]",
+   "kana": "fanguan",
+   "romaji": "fànguǎn",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z05-L03",
+   "level": 1,
+   "order": 254,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.word-ji-chang",
+   "cat": "city",
+   "kind": "say",
+   "en": "airport",
+   "ja": "机场",
+   "ruby": "机场[jī chǎng]",
+   "kana": "jichang",
+   "romaji": "jīchǎng",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z05-L03",
+   "level": 1,
+   "order": 255,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.word-huo-che-zhan",
+   "cat": "city",
+   "kind": "say",
+   "en": "railway station",
+   "ja": "火车站",
+   "ruby": "火车站[huǒ chē zhàn]",
+   "kana": "huochezhan",
+   "romaji": "huǒchēzhàn",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z05-L03",
+   "level": 1,
+   "order": 256,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.hear-zhu-zai-nar",
+   "cat": "city",
+   "kind": "hear",
+   "en": "Where do you live?",
+   "ja": "你住在哪儿？",
+   "ruby": "你[nǐ]住[zhù]在[zài]哪儿[nǎ r]？",
+   "kana": "ni zhu zai nar",
+   "romaji": "Nǐ zhù zài nǎr?",
+   "replies": [
+    "zh.city.zhu-zai-bei-jing"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L03",
+   "level": 1,
+   "order": 257,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.zhu-zai-bei-jing",
+   "cat": "city",
+   "kind": "say",
+   "en": "I live in Beijing.",
+   "ja": "我住在北京。",
+   "ruby": "我[wǒ]住[zhù]在[zài]北京[Běi jīng]。",
+   "kana": "wo zhu zai beijing",
+   "romaji": "Wǒ zhù zài Běijīng.",
+   "note": "With 住 the place comes after the verb: 住在 + place.",
+   "replyTo": [
+    "zh.city.hear-zhu-zai-nar"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L03",
+   "level": 1,
+   "order": 258,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.li-zher-yuan-ma",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "Is the airport far from here?",
+   "ja": "机场离这儿远吗？",
+   "ruby": "机场[jī chǎng]离[lí]这儿[zhè r]远[yuǎn]吗[ma]？",
+   "kana": "jichang li zher yuan ma",
+   "romaji": "Jīchǎng lí zhèr yuǎn ma?",
+   "note": "离 measures distance from a point: A 离 B 远 = A is far from B.",
+   "pattern": "A 离 B 远 / 近",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L04",
+   "level": 2,
+   "order": 259,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.hear-yuan-bu-yuan",
+   "cat": "city",
+   "kind": "hear",
+   "en": "Is it far from here?",
+   "ja": "离这儿远不远？",
+   "ruby": "离[lí]这儿[zhè r]远[yuǎn]不[bu]远[yuǎn]？",
+   "kana": "li zher yuan bu yuan",
+   "romaji": "Lí zhèr yuǎn bu yuǎn?",
+   "note": "Verb or adjective + 不 + the same word is another yes / no question; 不 is neutral in it.",
+   "replies": [
+    "zh.city.bu-yuan-hen-jin",
+    "zh.city.ting-yuan-de"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L04",
+   "level": 2,
+   "order": 260,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.bu-yuan-hen-jin",
+   "cat": "city",
+   "kind": "say",
+   "en": "Not far, very close.",
+   "ja": "不远，很近。",
+   "ruby": "不[bù]远[yuǎn]，很[hěn]近[jìn]。",
+   "kana": "bu yuan hen jin",
+   "romaji": "Bù yuǎn, hěn jìn.",
+   "replyTo": [
+    "zh.city.hear-yuan-bu-yuan"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L04",
+   "level": 2,
+   "order": 261,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.ting-yuan-de",
+   "cat": "city",
+   "kind": "say",
+   "en": "It's quite far.",
+   "ja": "挺远的。",
+   "ruby": "挺[tǐng]远[yuǎn]的[de]。",
+   "kana": "ting yuan de",
+   "romaji": "Tǐng yuǎn de.",
+   "note": "3rd + 3rd tone: tíng yuǎn.",
+   "replyTo": [
+    "zh.city.hear-yuan-bu-yuan"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L04",
+   "level": 2,
+   "order": 262,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.zou-lu-wu-fen-zhong",
+   "cat": "city",
+   "kind": "say",
+   "en": "Five minutes on foot.",
+   "ja": "走路五分钟。",
+   "ruby": "走路[zǒu lù]五[wǔ]分钟[fēn zhōng]。",
+   "kana": "zoulu wu fenzhong",
+   "romaji": "Zǒulù wǔ fēnzhōng.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L04",
+   "level": 2,
+   "order": 263,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.jia-li-gong-si-hen-jin",
+   "cat": "city",
+   "kind": "say",
+   "en": "My home is close to the office.",
+   "ja": "我家离公司很近。",
+   "ruby": "我[wǒ]家[jiā]离[lí]公司[gōng sī]很[hěn]近[jìn]。",
+   "kana": "wo jia li gongsi hen jin",
+   "romaji": "Wǒ jiā lí gōngsī hěn jìn.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L04",
+   "level": 2,
+   "order": 264,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.zhe-li-ren-hen-duo",
+   "cat": "city",
+   "kind": "say",
+   "en": "There are a lot of people here.",
+   "ja": "这里人很多。",
+   "ruby": "这里[zhè lǐ]人[rén]很[hěn]多[duō]。",
+   "kana": "zheli ren hen duo",
+   "romaji": "Zhèlǐ rén hěn duō.",
+   "note": "这里 = 这儿, 那里 = 那儿, 哪里 = 哪儿.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L04",
+   "level": 2,
+   "order": 265,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.na-li-hen-an-jing",
+   "cat": "city",
+   "kind": "say",
+   "en": "It's very quiet there.",
+   "ja": "那儿很安静。",
+   "ruby": "那儿[nà r]很[hěn]安静[ān jìng]。",
+   "kana": "nar hen anjing",
+   "romaji": "Nàr hěn ānjìng.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L04",
+   "level": 2,
+   "order": 266,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.bei-jing-hen-da",
+   "cat": "city",
+   "kind": "say",
+   "en": "Beijing is very big.",
+   "ja": "北京很大。",
+   "ruby": "北京[Běi jīng]很[hěn]大[dà]。",
+   "kana": "beijing hen da",
+   "romaji": "Běijīng hěn dà.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L04",
+   "level": 2,
+   "order": 267,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.di-fang-hen-piao-liang",
+   "cat": "city",
+   "kind": "say",
+   "en": "This place is beautiful.",
+   "ja": "这个地方很漂亮。",
+   "ruby": "这个[zhè ge]地方[dì fang]很[hěn]漂亮[piào liang]。",
+   "kana": "zhege difang hen piaoliang",
+   "romaji": "Zhège dìfang hěn piàoliang.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z05-L04",
+   "level": 2,
+   "order": 268,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.word-fu-jin",
+   "cat": "city",
+   "kind": "say",
+   "en": "nearby; the area around",
+   "ja": "附近",
+   "ruby": "附近[fù jìn]",
+   "kana": "fujin",
+   "romaji": "fùjìn",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z05-L04",
+   "level": 2,
+   "order": 269,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.word-dui-mian",
+   "cat": "city",
+   "kind": "say",
+   "en": "opposite",
+   "ja": "对面",
+   "ruby": "对面[duì miàn]",
+   "kana": "duimian",
+   "romaji": "duìmiàn",
+   "note": "银行对面 = opposite the bank.",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z05-L04",
+   "level": 2,
+   "order": 270,
+   "src": "new"
+  },
+  {
+   "id": "zh.city.word-zhong-jian",
+   "cat": "city",
+   "kind": "say",
+   "en": "in the middle; between",
+   "ja": "中间",
+   "ruby": "中间[zhōng jiān]",
+   "kana": "zhongjian",
+   "romaji": "zhōngjiān",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z05-L04",
+   "level": 2,
+   "order": 271,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hear-ji-dian-qi-chuang",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "What time do you get up every day?",
+   "ja": "你每天几点起床？",
+   "ruby": "你[nǐ]每天[měi tiān]几[jǐ]点[diǎn]起床[qǐ chuáng]？",
+   "kana": "ni meitian ji dian qichuang",
+   "romaji": "Nǐ měitiān jǐ diǎn qǐchuáng?",
+   "replies": [
+    "zh.daily.qi-dian-qi-chuang"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L01",
+   "level": 2,
+   "order": 272,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.qi-dian-qi-chuang",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I get up at seven.",
+   "ja": "我七点起床。",
+   "ruby": "我[wǒ]七[qī]点[diǎn]起床[qǐ chuáng]。",
+   "kana": "wo qi dian qichuang",
+   "romaji": "Wǒ qī diǎn qǐchuáng.",
+   "replyTo": [
+    "zh.daily.hear-ji-dian-qi-chuang"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L01",
+   "level": 2,
+   "order": 273,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.chi-zao-fan",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I have breakfast at half past seven.",
+   "ja": "我七点半吃早饭。",
+   "ruby": "我[wǒ]七[qī]点[diǎn]半[bàn]吃[chī]早饭[zǎo fàn]。",
+   "kana": "wo qi dian ban chi zaofan",
+   "romaji": "Wǒ qī diǎn bàn chī zǎofàn.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L01",
+   "level": 2,
+   "order": 274,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.ba-dian-shang-ban",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I go to work at eight.",
+   "ja": "我八点去上班。",
+   "ruby": "我[wǒ]八[bā]点[diǎn]去[qù]上班[shàng bān]。",
+   "kana": "wo ba dian qu shangban",
+   "romaji": "Wǒ bā diǎn qù shàngbān.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L01",
+   "level": 2,
+   "order": 275,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.liu-dian-xia-ban",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I finish work at 6 p.m.",
+   "ja": "我下午六点下班。",
+   "ruby": "我[wǒ]下午[xià wǔ]六[liù]点[diǎn]下班[xià bān]。",
+   "kana": "wo xiawu liu dian xiaban",
+   "romaji": "Wǒ xiàwǔ liù diǎn xiàbān.",
+   "note": "上班 = start work / be at work; 下班 = finish work.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L01",
+   "level": 2,
+   "order": 276,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.xian-ran-hou",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "First I have a shower, then I have dinner.",
+   "ja": "我先洗澡，然后吃晚饭。",
+   "ruby": "我[wǒ]先[xiān]洗澡[xǐ zǎo]，然后[rán hòu]吃[chī]晚饭[wǎn fàn]。",
+   "kana": "wo xian xizao ranhou chi wanfan",
+   "romaji": "Wǒ xiān xǐzǎo, ránhòu chī wǎnfàn.",
+   "note": "3rd + 3rd tone: xí zǎo.",
+   "pattern": "先……然后……",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L01",
+   "level": 2,
+   "order": 277,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.shi-yi-dian-shui-jiao",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I go to bed at 11 p.m.",
+   "ja": "我晚上十一点睡觉。",
+   "ruby": "我[wǒ]晚上[wǎn shang]十一[shí yī]点[diǎn]睡觉[shuì jiào]。",
+   "kana": "wo wanshang shiyi dian shuijiao",
+   "romaji": "Wǒ wǎnshang shíyī diǎn shuìjiào.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L01",
+   "level": 2,
+   "order": 278,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.mei-tian-pao-bu",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I go running every morning.",
+   "ja": "我每天早上跑步。",
+   "ruby": "我[wǒ]每天[měi tiān]早上[zǎo shang]跑步[pǎo bù]。",
+   "kana": "wo meitian zaoshang paobu",
+   "romaji": "Wǒ měitiān zǎoshang pǎobù.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L01",
+   "level": 2,
+   "order": 279,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-shua-ya",
+   "cat": "daily",
+   "kind": "say",
+   "en": "brush your teeth",
+   "ja": "刷牙",
+   "ruby": "刷牙[shuā yá]",
+   "kana": "shuaya",
+   "romaji": "shuāyá",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z06-L01",
+   "level": 2,
+   "order": 280,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-xi-lian",
+   "cat": "daily",
+   "kind": "say",
+   "en": "wash your face",
+   "ja": "洗脸",
+   "ruby": "洗脸[xǐ liǎn]",
+   "kana": "xilian",
+   "romaji": "xǐliǎn",
+   "note": "3rd + 3rd tone: xí liǎn.",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z06-L01",
+   "level": 2,
+   "order": 281,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-chuan-yi-fu",
+   "cat": "daily",
+   "kind": "say",
+   "en": "get dressed",
+   "ja": "穿衣服",
+   "ruby": "穿[chuān]衣服[yī fu]",
+   "kana": "chuan yifu",
+   "romaji": "chuān yīfu",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z06-L01",
+   "level": 2,
+   "order": 282,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hear-zhong-wu-zai-nar-chi",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "Where do you have lunch?",
+   "ja": "你中午在哪儿吃饭？",
+   "ruby": "你[nǐ]中午[zhōng wǔ]在[zài]哪儿[nǎ r]吃饭[chī fàn]？",
+   "kana": "ni zhongwu zai nar chifan",
+   "romaji": "Nǐ zhōngwǔ zài nǎr chīfàn?",
+   "replies": [
+    "zh.daily.zai-gong-si-chi"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L01",
+   "level": 2,
+   "order": 283,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.zai-gong-si-chi",
+   "cat": "daily",
+   "kind": "say",
+   "en": "At the office.",
+   "ja": "在公司吃。",
+   "ruby": "在[zài]公司[gōng sī]吃[chī]。",
+   "kana": "zai gongsi chi",
+   "romaji": "Zài gōngsī chī.",
+   "replyTo": [
+    "zh.daily.hear-zhong-wu-zai-nar-chi"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L01",
+   "level": 2,
+   "order": 284,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hear-zai-gan-shen-me",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "What are you doing?",
+   "ja": "你在干什么？",
+   "ruby": "你[nǐ]在[zài]干[gàn]什么[shén me]？",
+   "kana": "ni zai gan shenme",
+   "romaji": "Nǐ zài gàn shénme?",
+   "note": "干 gàn (to do) is informal; 做 zuò is neutral.",
+   "replies": [
+    "zh.patterns.wo-zai-zuo-fan",
+    "zh.daily.zai-kan-dian-shi"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L02",
+   "level": 2,
+   "order": 285,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.wo-zai-zuo-fan",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "I'm cooking.",
+   "ja": "我在做饭。",
+   "ruby": "我[wǒ]在[zài]做饭[zuò fàn]。",
+   "kana": "wo zai zuofan",
+   "romaji": "Wǒ zài zuòfàn.",
+   "note": "在 before a verb = the action is going on.",
+   "pattern": "在 + verb",
+   "replyTo": [
+    "zh.daily.hear-zai-gan-shen-me"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L02",
+   "level": 2,
+   "order": 286,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.zai-kan-dian-shi",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I'm watching TV.",
+   "ja": "我在看电视呢。",
+   "ruby": "我[wǒ]在[zài]看[kàn]电视[diàn shì]呢[ne]。",
+   "kana": "wo zai kan dianshi ne",
+   "romaji": "Wǒ zài kàn diànshì ne.",
+   "note": "呢 at the end adds \"right now\".",
+   "replyTo": [
+    "zh.daily.hear-zai-gan-shen-me"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L02",
+   "level": 2,
+   "order": 287,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.zheng-zai-shui-jiao",
+   "cat": "daily",
+   "kind": "say",
+   "en": "He's asleep right now.",
+   "ja": "他正在睡觉。",
+   "ruby": "他[tā]正在[zhèng zài]睡觉[shuì jiào]。",
+   "kana": "ta zhengzai shuijiao",
+   "romaji": "Tā zhèngzài shuìjiào.",
+   "note": "正在 = right in the middle of.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L02",
+   "level": 2,
+   "order": 288,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.zai-da-dian-hua",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Mum is on the phone.",
+   "ja": "妈妈在打电话。",
+   "ruby": "妈妈[mā ma]在[zài]打[dǎ]电话[diàn huà]。",
+   "kana": "mama zai da dianhua",
+   "romaji": "Māma zài dǎ diànhuà.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L02",
+   "level": 2,
+   "order": 289,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.mei-zai-shui-jiao",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I'm not sleeping.",
+   "ja": "我没在睡觉。",
+   "ruby": "我[wǒ]没[méi]在[zài]睡觉[shuì jiào]。",
+   "kana": "wo mei zai shuijiao",
+   "romaji": "Wǒ méi zài shuìjiào.",
+   "note": "Negate 在 + verb with 没.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L02",
+   "level": 2,
+   "order": 290,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hai-zi-men-zai-wan",
+   "cat": "daily",
+   "kind": "say",
+   "en": "The children are playing outside.",
+   "ja": "孩子们在外面玩儿。",
+   "ruby": "孩子们[hái zi men]在[zài]外面[wài miàn]玩儿[wán r]。",
+   "kana": "haizimen zai waimian wanr",
+   "romaji": "Háizimen zài wàimiàn wánr.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L02",
+   "level": 2,
+   "order": 291,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.wai-mian-zai-xia-yu",
+   "cat": "daily",
+   "kind": "say",
+   "en": "It's raining outside.",
+   "ja": "外面在下雨。",
+   "ruby": "外面[wài miàn]在[zài]下雨[xià yǔ]。",
+   "kana": "waimian zai xiayu",
+   "romaji": "Wàimiàn zài xiàyǔ.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L02",
+   "level": 2,
+   "order": 292,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hear-ni-mang-ma",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "Are you busy?",
+   "ja": "你忙吗？",
+   "ruby": "你[nǐ]忙[máng]吗[ma]？",
+   "kana": "ni mang ma",
+   "romaji": "Nǐ máng ma?",
+   "replies": [
+    "zh.daily.bu-mang",
+    "zh.daily.you-dian-mang"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L02",
+   "level": 2,
+   "order": 293,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.bu-mang",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Not busy, go ahead.",
+   "ja": "不忙，你说吧。",
+   "ruby": "不[bù]忙[máng]，你[nǐ]说[shuō]吧[ba]。",
+   "kana": "bu mang ni shuo ba",
+   "romaji": "Bù máng, nǐ shuō ba.",
+   "replyTo": [
+    "zh.daily.hear-ni-mang-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L02",
+   "level": 2,
+   "order": 294,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.you-dian-mang",
+   "cat": "daily",
+   "kind": "say",
+   "en": "A bit busy.",
+   "ja": "有点儿忙。",
+   "ruby": "有点儿[yǒu diǎn r]忙[máng]。",
+   "kana": "youdianr mang",
+   "romaji": "Yǒudiǎnr máng.",
+   "note": "有点儿 + adjective = a bit (usually something unwelcome). 3rd + 3rd tone: yóu diǎnr.",
+   "replyTo": [
+    "zh.daily.hear-ni-mang-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L02",
+   "level": 2,
+   "order": 295,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.yi-hui-r-da-gei-ni",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I'll call you back in a little while.",
+   "ja": "我一会儿再打给你。",
+   "ruby": "我[wǒ]一会儿[yí huì r]再[zài]打[dǎ]给[gěi]你[nǐ]。",
+   "kana": "wo yihuir zai da gei ni",
+   "romaji": "Wǒ yíhuìr zài dǎ gěi nǐ.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L02",
+   "level": 2,
+   "order": 296,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-xi-yi-fu",
+   "cat": "daily",
+   "kind": "say",
+   "en": "do the laundry",
+   "ja": "洗衣服",
+   "ruby": "洗[xǐ]衣服[yī fu]",
+   "kana": "xi yifu",
+   "romaji": "xǐ yīfu",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z06-L02",
+   "level": 2,
+   "order": 297,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-da-sao",
+   "cat": "daily",
+   "kind": "say",
+   "en": "to clean (a room)",
+   "ja": "打扫",
+   "ruby": "打扫[dǎ sǎo]",
+   "kana": "dasao",
+   "romaji": "dǎsǎo",
+   "note": "3rd + 3rd tone: dá sǎo.",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z06-L02",
+   "level": 2,
+   "order": 298,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hear-zhou-mo-zuo-shen-me",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "What are you doing at the weekend?",
+   "ja": "你周末做什么？",
+   "ruby": "你[nǐ]周末[zhōu mò]做[zuò]什么[shén me]？",
+   "kana": "ni zhoumo zuo shenme",
+   "romaji": "Nǐ zhōumò zuò shénme?",
+   "replies": [
+    "zh.daily.yao-qu-kan-peng-you",
+    "zh.daily.zai-jia-xiu-xi"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L03",
+   "level": 2,
+   "order": 299,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.yao-qu-kan-peng-you",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I'm going to see a friend.",
+   "ja": "我要去看朋友。",
+   "ruby": "我[wǒ]要[yào]去[qù]看[kàn]朋友[péng you]。",
+   "kana": "wo yao qu kan pengyou",
+   "romaji": "Wǒ yào qù kàn péngyou.",
+   "note": "要 + verb = going to (a plan).",
+   "replyTo": [
+    "zh.daily.hear-zhou-mo-zuo-shen-me"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L03",
+   "level": 2,
+   "order": 300,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.zai-jia-xiu-xi",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I'm staying in to rest.",
+   "ja": "我在家休息。",
+   "ruby": "我[wǒ]在[zài]家[jiā]休息[xiū xi]。",
+   "kana": "wo zai jia xiuxi",
+   "romaji": "Wǒ zài jiā xiūxi.",
+   "replyTo": [
+    "zh.daily.hear-zhou-mo-zuo-shen-me"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L03",
+   "level": 2,
+   "order": 301,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.yi-qi-qu-ba",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "Let's go together!",
+   "ja": "我们一起去吧！",
+   "ruby": "我们[wǒ men]一起[yì qǐ]去[qù]吧[ba]！",
+   "kana": "women yiqi qu ba",
+   "romaji": "Wǒmen yìqǐ qù ba!",
+   "note": "一起 yìqǐ: 一 is yì before a 3rd tone.",
+   "pattern": "一起 + verb + 吧",
+   "tags": [
+    "core",
+    "sandhi"
+   ],
+   "lesson": "Z06-L03",
+   "level": 2,
+   "order": 302,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hao-a",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Sure! Sounds good!",
+   "ja": "好啊！",
+   "ruby": "好[hǎo]啊[a]！",
+   "kana": "hao a",
+   "romaji": "Hǎo a!",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L03",
+   "level": 2,
+   "order": 303,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.bu-hao-yi-si-you-shi",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Sorry, I have something on.",
+   "ja": "不好意思，我有事。",
+   "ruby": "不好意思[bù hǎo yì si]，我[wǒ]有[yǒu]事[shì]。",
+   "kana": "buhaoyisi wo you shi",
+   "romaji": "Bùhǎoyìsi, wǒ yǒu shì.",
+   "note": "不好意思 = sorry (light, everyday); 对不起 is stronger.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L03",
+   "level": 2,
+   "order": 304,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.cha-hai-shi-ka-fei",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "Tea or coffee?",
+   "ja": "你喝茶还是咖啡？",
+   "ruby": "你[nǐ]喝[hē]茶[chá]还是[hái shi]咖啡[kā fēi]？",
+   "kana": "ni he cha haishi kafei",
+   "romaji": "Nǐ hē chá háishi kāfēi?",
+   "note": "还是 = \"or\" in questions; no 吗 needed.",
+   "pattern": "A 还是 B？",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L03",
+   "level": 2,
+   "order": 305,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.xiang-qu-guang-jie",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I'd like to go shopping.",
+   "ja": "我想去逛街。",
+   "ruby": "我[wǒ]想[xiǎng]去[qù]逛街[guàng jiē]。",
+   "kana": "wo xiang qu guangjie",
+   "romaji": "Wǒ xiǎng qù guàngjiē.",
+   "note": "想 + verb = would like to. 逛街 = stroll around the shops. 3rd + 3rd tone: wó xiǎng.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L03",
+   "level": 2,
+   "order": 306,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.qu-kan-dian-ying-ba",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Let's go and see a film.",
+   "ja": "我们去看电影吧。",
+   "ruby": "我们[wǒ men]去[qù]看[kàn]电影[diàn yǐng]吧[ba]。",
+   "kana": "women qu kan dianying ba",
+   "romaji": "Wǒmen qù kàn diànyǐng ba.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L03",
+   "level": 2,
+   "order": 307,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hear-ji-dian-jian",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "What time shall we meet?",
+   "ja": "几点见？",
+   "ruby": "几[jǐ]点[diǎn]见[jiàn]？",
+   "kana": "ji dian jian",
+   "romaji": "Jǐ diǎn jiàn?",
+   "replies": [
+    "zh.daily.liang-dian-di-tie-zhan"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L03",
+   "level": 2,
+   "order": 308,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.liang-dian-di-tie-zhan",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Two o'clock at the metro station.",
+   "ja": "两点在地铁站见。",
+   "ruby": "两[liǎng]点[diǎn]在[zài]地铁站[dì tiě zhàn]见[jiàn]。",
+   "kana": "liang dian zai ditiezhan jian",
+   "romaji": "Liǎng diǎn zài dìtiězhàn jiàn.",
+   "replyTo": [
+    "zh.daily.hear-ji-dian-jian"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L03",
+   "level": 2,
+   "order": 309,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-shui-lan-jiao",
+   "cat": "daily",
+   "kind": "say",
+   "en": "sleep in",
+   "ja": "睡懒觉",
+   "ruby": "睡懒觉[shuì lǎn jiào]",
+   "kana": "shuilanjiao",
+   "romaji": "shuìlǎnjiào",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z06-L03",
+   "level": 2,
+   "order": 310,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-zuo-jia-wu",
+   "cat": "daily",
+   "kind": "say",
+   "en": "do the housework",
+   "ja": "做家务",
+   "ruby": "做[zuò]家务[jiā wù]",
+   "kana": "zuo jiawu",
+   "romaji": "zuò jiāwù",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z06-L03",
+   "level": 2,
+   "order": 311,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.chang-chang-zuo-fan",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I often cook for myself.",
+   "ja": "我常常自己做饭。",
+   "ruby": "我[wǒ]常常[cháng cháng]自己[zì jǐ]做饭[zuò fàn]。",
+   "kana": "wo changchang ziji zuofan",
+   "romaji": "Wǒ chángcháng zìjǐ zuòfàn.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L04",
+   "level": 2,
+   "order": 312,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.you-shi-hou-jian-shen",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Sometimes I go to the gym.",
+   "ja": "我有时候去健身房。",
+   "ruby": "我[wǒ]有时候[yǒu shí hou]去[qù]健身房[jiàn shēn fáng]。",
+   "kana": "wo youshihou qu jianshenfang",
+   "romaji": "Wǒ yǒushíhou qù jiànshēnfáng.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L04",
+   "level": 2,
+   "order": 313,
+   "src": "new"
+  },
+  {
+   "id": "zh.patterns.mei-tian-dou",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "He drinks coffee every day.",
+   "ja": "他每天都喝咖啡。",
+   "ruby": "他[tā]每天[měi tiān]都[dōu]喝[hē]咖啡[kā fēi]。",
+   "kana": "ta meitian dou he kafei",
+   "romaji": "Tā měitiān dōu hē kāfēi.",
+   "note": "每 ... 都: \"every ... without exception\".",
+   "pattern": "每 + time + 都 + verb",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L04",
+   "level": 2,
+   "order": 314,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.cong-lai-bu-he-jiu",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I never drink alcohol.",
+   "ja": "我从来不喝酒。",
+   "ruby": "我[wǒ]从来[cóng lái]不[bù]喝[hē]酒[jiǔ]。",
+   "kana": "wo conglai bu he jiu",
+   "romaji": "Wǒ cónglái bù hē jiǔ.",
+   "note": "从来不 = never (as a habit).",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L04",
+   "level": 2,
+   "order": 315,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.yi-ban-zuo-di-tie",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I usually take the metro to work.",
+   "ja": "我一般坐地铁上班。",
+   "ruby": "我[wǒ]一般[yì bān]坐[zuò]地铁[dì tiě]上班[shàng bān]。",
+   "kana": "wo yiban zuo ditie shangban",
+   "romaji": "Wǒ yìbān zuò dìtiě shàngbān.",
+   "note": "坐 + vehicle = go by (sit on) it.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L04",
+   "level": 2,
+   "order": 316,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.hear-chang-yun-dong-ma",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "Do you exercise often?",
+   "ja": "你常常运动吗？",
+   "ruby": "你[nǐ]常常[cháng cháng]运动[yùn dòng]吗[ma]？",
+   "kana": "ni changchang yundong ma",
+   "romaji": "Nǐ chángcháng yùndòng ma?",
+   "replies": [
+    "zh.daily.bu-tai-chang",
+    "zh.daily.yi-ge-xing-qi-liang-ci"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L04",
+   "level": 2,
+   "order": 317,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.bu-tai-chang",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Not very often.",
+   "ja": "不太常。",
+   "ruby": "不[bú]太[tài]常[cháng]。",
+   "kana": "bu tai chang",
+   "romaji": "Bú tài cháng.",
+   "replyTo": [
+    "zh.daily.hear-chang-yun-dong-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L04",
+   "level": 2,
+   "order": 318,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.yi-ge-xing-qi-liang-ci",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Twice a week.",
+   "ja": "每个星期两次。",
+   "ruby": "每[měi]个[ge]星期[xīng qī]两[liǎng]次[cì]。",
+   "kana": "mei ge xingqi liang ci",
+   "romaji": "Měi ge xīngqī liǎng cì.",
+   "note": "次 = time(s): 一次, 两次.",
+   "replyTo": [
+    "zh.daily.hear-chang-yun-dong-ma"
+   ],
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L04",
+   "level": 2,
+   "order": 319,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.yi-ding-yao-he-ka-fei",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I absolutely have to have coffee in the morning.",
+   "ja": "我早上一定要喝咖啡。",
+   "ruby": "我[wǒ]早上[zǎo shang]一定[yí dìng]要[yào]喝[hē]咖啡[kā fēi]。",
+   "kana": "wo zaoshang yiding yao he kafei",
+   "romaji": "Wǒ zǎoshang yídìng yào hē kāfēi.",
+   "note": "一定 yídìng: 一 rises before a 4th tone.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L04",
+   "level": 2,
+   "order": 320,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.shui-jiao-yi-qian-kan-shu",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I often read before going to sleep.",
+   "ja": "我睡觉以前常常看书。",
+   "ruby": "我[wǒ]睡觉[shuì jiào]以前[yǐ qián]常常[cháng cháng]看[kàn]书[shū]。",
+   "kana": "wo shuijiao yiqian changchang kan shu",
+   "romaji": "Wǒ shuìjiào yǐqián chángcháng kàn shū.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L04",
+   "level": 2,
+   "order": 321,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.zhou-mo-bu-shang-ban",
+   "cat": "daily",
+   "kind": "say",
+   "en": "I usually don't work at weekends.",
+   "ja": "周末我一般不上班。",
+   "ruby": "周末[zhōu mò]我[wǒ]一般[yì bān]不[bú]上班[shàng bān]。",
+   "kana": "zhoumo wo yiban bu shangban",
+   "romaji": "Zhōumò wǒ yìbān bú shàngbān.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L04",
+   "level": 2,
+   "order": 322,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-ping-shi",
+   "cat": "daily",
+   "kind": "say",
+   "en": "usually; on normal days",
+   "ja": "平时",
+   "ruby": "平时[píng shí]",
+   "kana": "pingshi",
+   "romaji": "píngshí",
+   "tags": [
+    "core",
+    "word"
+   ],
+   "lesson": "Z06-L04",
+   "level": 2,
+   "order": 323,
+   "src": "new"
+  },
+  {
+   "id": "zh.daily.word-zao-shui-zao-qi",
+   "cat": "daily",
+   "kind": "say",
+   "en": "early to bed, early to rise",
+   "ja": "早睡早起",
+   "ruby": "早睡早起[zǎo shuì zǎo qǐ]",
+   "kana": "zaoshuizaoqi",
+   "romaji": "zǎoshuìzǎoqǐ",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z06-L04",
+   "level": 2,
+   "order": 324,
    "src": "new"
   }
  ]
