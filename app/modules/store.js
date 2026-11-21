@@ -3,6 +3,8 @@
 import { migrateSrsKeys } from './srs.js';
 
 const PREFIX = 'jt.';
+export const LANG_PREFIXES = { zh: 'jt.zh.' };
+export const BACKUP_FORMAT = 3;
 export const KEYS = ['favs', 'srs', 'settings', 'cards', 'userItems', 'history', 'quizStats', 'lessons', 'learned', 'activity', 'dictFavs'];
 
 function memoryBackend() {
@@ -30,7 +32,7 @@ export function migrateValue(key, v) {
   return v;
 }
 
-export function createStore(backend) {
+export function createStore(backend, { prefix = PREFIX, langs = LANG_PREFIXES } = {}) {
   let be = backend;
   if (!be) {
     try {
@@ -43,10 +45,12 @@ export function createStore(backend) {
   }
   const cache = new Map();
 
+  const children = new Map();
+
   function get(key, fallback) {
     if (cache.has(key)) return cache.get(key);
     try {
-      const raw = be.getItem(PREFIX + key);
+      const raw = be.getItem(prefix + key);
       if (raw != null) {
         const v = JSON.parse(raw);
         cache.set(key, v); // cache only real stored values, never the caller's fallback
@@ -58,12 +62,12 @@ export function createStore(backend) {
 
   function set(key, value) {
     cache.set(key, value);
-    try { be.setItem(PREFIX + key, JSON.stringify(value)); return true; } catch { return false; }
+    try { be.setItem(prefix + key, JSON.stringify(value)); return true; } catch { return false; }
   }
 
   function remove(key) {
     cache.delete(key);
-    try { be.removeItem(PREFIX + key); } catch { /* ignore */ }
+    try { be.removeItem(prefix + key); } catch { /* ignore */ }
   }
 
   function update(key, fallback, fn) {
@@ -84,13 +88,43 @@ export function createStore(backend) {
     return changed;
   }
 
-  function exportAll() {
-    const out = { app: 'japan-trip', format: 2, exportedAt: new Date().toISOString(), data: {} };
+  function lang(id) {
+    if (!langs[id]) return api;
+    if (!children.has(id)) children.set(id, createStore(be, { prefix: langs[id], langs: {} }));
+    return children.get(id);
+  }
+
+  function exportData() {
+    const data = {};
     for (const k of KEYS) {
       const v = get(k, undefined);
-      if (v !== undefined) out.data[k] = v;
+      if (v !== undefined) data[k] = v;
     }
+    return data;
+  }
+
+  function exportAll() {
+    const out = { app: 'japan-trip', format: BACKUP_FORMAT, exportedAt: new Date().toISOString(), data: exportData(), langs: {} };
+    for (const id of Object.keys(langs)) out.langs[id] = lang(id).exportData();
     return out;
+  }
+
+  function importData(data, mode) {
+    const changed = [];
+    for (const k of KEYS) {
+      if (!(k in data)) continue;
+      if (!typeOk(k, data[k])) continue;
+      const incoming = migrateValue(k, data[k]);
+      if (mode === 'merge' && isPlainObject(incoming) && isPlainObject(get(k, undefined))) {
+        set(k, { ...get(k, {}), ...incoming });
+      } else if (mode === 'merge' && Array.isArray(incoming) && Array.isArray(get(k, undefined))) {
+        set(k, mergeArrays(get(k, []), incoming));
+      } else {
+        set(k, incoming);
+      }
+      changed.push(k);
+    }
+    return changed;
   }
 
   /**
@@ -104,24 +138,16 @@ export function createStore(backend) {
     if (!obj || obj.app !== 'japan-trip' || !obj.data || typeof obj.data !== 'object' || Array.isArray(obj.data)) {
       throw new Error('This file is not a Japan Trip backup');
     }
-    const changed = [];
-    for (const k of KEYS) {
-      if (!(k in obj.data)) continue;
-      if (!typeOk(k, obj.data[k])) continue;
-      const incoming = migrateValue(k, obj.data[k]);
-      if (mode === 'merge' && isPlainObject(incoming) && isPlainObject(get(k, undefined))) {
-        set(k, { ...get(k, {}), ...incoming });
-      } else if (mode === 'merge' && Array.isArray(incoming) && Array.isArray(get(k, undefined))) {
-        set(k, mergeArrays(get(k, []), incoming));
-      } else {
-        set(k, incoming);
-      }
-      changed.push(k);
+    const changed = importData(obj.data, mode);
+    for (const id of Object.keys(langs)) {
+      const part = obj.langs?.[id];
+      if (isPlainObject(part)) changed.push(...lang(id).importData(part, mode).map((k) => `${id}.${k}`));
     }
     return changed;
   }
 
-  return { get, set, remove, update, migrate, exportAll, importAll };
+  const api = { get, set, remove, update, migrate, exportData, importData, exportAll, importAll, lang, langIds: Object.keys(langs), prefix };
+  return api;
 }
 
 function isPlainObject(v) { return !!v && typeof v === 'object' && !Array.isArray(v); }

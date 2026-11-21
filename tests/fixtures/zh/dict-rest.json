@@ -1,0 +1,67 @@
+{
+ "format": "japan-trip-dict/1",
+ "lang": "zh",
+ "locale": "zh-CN",
+ "script": "Hans",
+ "part": "rest",
+ "fields": [
+  "id",
+  "ja",
+  "kana",
+  "romaji",
+  "en",
+  "pos",
+  "topic",
+  "rank",
+  "core",
+  "alt",
+  "hsk"
+ ],
+ "count": 3,
+ "total": 11,
+ "coreSize": 8,
+ "source": "CC-CEDICT 2026-11-20 (builder test fixture)",
+ "license": "CC BY-SA 4.0",
+ "attribution": "CC-CEDICT, MDBG, CC BY-SA 4.0 (fixture)",
+ "rows": [
+  [
+   2001,
+   "学习",
+   "xue xi",
+   "xuéxí",
+   "to learn; to study",
+   "",
+   "",
+   9,
+   0,
+   "學習",
+   1
+  ],
+  [
+   2002,
+   "学校",
+   "xue xiao",
+   "xuéxiào",
+   "school",
+   "",
+   "",
+   10,
+   0,
+   "學校",
+   1
+  ],
+  [
+   2003,
+   "旅行",
+   "lv xing",
+   "lǚxíng",
+   "to travel; journey",
+   "",
+   "",
+   11,
+   0,
+   "",
+   2
+  ]
+ ]
+}

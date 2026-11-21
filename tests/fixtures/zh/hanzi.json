@@ -1,0 +1,186 @@
+{
+ "format": 1,
+ "lang": "zh",
+ "locale": "zh-CN",
+ "script": "Hans",
+ "version": 1,
+ "generated": "2026-11-21",
+ "groups": [
+  {
+   "id": "radical",
+   "en": "Radicals (components)"
+  },
+  {
+   "id": "people",
+   "en": "People"
+  },
+  {
+   "id": "number",
+   "en": "Numbers"
+  }
+ ],
+ "items": [
+  {
+   "id": "zh.h.ren",
+   "group": "people",
+   "ja": "人",
+   "ruby": "人[rén]",
+   "kana": "ren",
+   "romaji": "rén",
+   "en": "person",
+   "hsk": 1,
+   "ex": {
+    "ja": "中国人",
+    "ruby": "中国人[Zhōng guó rén]",
+    "romaji": "Zhōngguó rén",
+    "en": "Chinese (person)"
+   },
+   "strokes": 2,
+   "radical": "人"
+  },
+  {
+   "id": "zh.h.ni",
+   "group": "people",
+   "ja": "你",
+   "ruby": "你[nǐ]",
+   "kana": "ni",
+   "romaji": "nǐ",
+   "en": "you",
+   "hsk": 1,
+   "ex": {
+    "ja": "你好",
+    "ruby": "你好[nǐ hǎo]",
+    "romaji": "nǐ hǎo",
+    "en": "hello"
+   }
+  },
+  {
+   "id": "zh.h.hao",
+   "group": "people",
+   "ja": "好",
+   "ruby": "好[hǎo]",
+   "kana": "hao",
+   "romaji": "hǎo",
+   "en": "good",
+   "hsk": 1,
+   "ex": {
+    "ja": "很好",
+    "ruby": "很好[hěn hǎo]",
+    "romaji": "hěn hǎo",
+    "en": "very good"
+   }
+  },
+  {
+   "id": "zh.h.xue",
+   "group": "people",
+   "ja": "学",
+   "ruby": "学[xué]",
+   "kana": "xue",
+   "romaji": "xué",
+   "en": "to study",
+   "hsk": 1,
+   "ex": {
+    "ja": "学生",
+    "ruby": "学生[xué sheng]",
+    "romaji": "xuésheng",
+    "en": "student"
+   }
+  },
+  {
+   "id": "zh.h.yi",
+   "group": "number",
+   "ja": "一",
+   "ruby": "一[yī]",
+   "kana": "yi",
+   "romaji": "yī",
+   "en": "one",
+   "hsk": 1,
+   "ex": {
+    "ja": "一天",
+    "ruby": "一天[yì tiān]",
+    "romaji": "yì tiān",
+    "en": "one day"
+   }
+  },
+  {
+   "id": "zh.h.er",
+   "group": "number",
+   "ja": "二",
+   "ruby": "二[èr]",
+   "kana": "er",
+   "romaji": "èr",
+   "en": "two",
+   "hsk": 1,
+   "ex": {
+    "ja": "二十",
+    "ruby": "二十[èr shí]",
+    "romaji": "èrshí",
+    "en": "twenty"
+   }
+  },
+  {
+   "id": "zh.h.san",
+   "group": "number",
+   "ja": "三",
+   "ruby": "三[sān]",
+   "kana": "san",
+   "romaji": "sān",
+   "en": "three",
+   "hsk": 1,
+   "ex": {
+    "ja": "三天",
+    "ruby": "三天[sān tiān]",
+    "romaji": "sān tiān",
+    "en": "three days"
+   }
+  },
+  {
+   "id": "zh.h.r-ren",
+   "group": "radical",
+   "ja": "亻",
+   "ruby": "亻[rén]",
+   "kana": "ren",
+   "romaji": "rén",
+   "en": "person (side form of 人)",
+   "hsk": 0,
+   "ex": {
+    "ja": "你",
+    "ruby": "你[nǐ]",
+    "romaji": "nǐ",
+    "en": "you"
+   }
+  },
+  {
+   "id": "zh.h.r-shui",
+   "group": "radical",
+   "ja": "氵",
+   "ruby": "氵[shuǐ]",
+   "kana": "shui",
+   "romaji": "shuǐ",
+   "en": "water (side form of 水)",
+   "hsk": 0,
+   "ex": {
+    "ja": "河",
+    "ruby": "河[hé]",
+    "romaji": "hé",
+    "en": "river"
+   }
+  },
+  {
+   "id": "zh.h.r-kou",
+   "group": "radical",
+   "ja": "口",
+   "ruby": "口[kǒu]",
+   "kana": "kou",
+   "romaji": "kǒu",
+   "en": "mouth",
+   "hsk": 0,
+   "ex": {
+    "ja": "吃",
+    "ruby": "吃[chī]",
+    "romaji": "chī",
+    "en": "to eat"
+   }
+  }
+ ]
+}

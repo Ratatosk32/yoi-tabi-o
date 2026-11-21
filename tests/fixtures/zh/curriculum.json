@@ -1,0 +1,576 @@
+{
+ "format": 1,
+ "lang": "zh",
+ "locale": "zh-CN",
+ "script": "Hans",
+ "version": 1,
+ "generated": "2026-11-21",
+ "source": "tests/fixtures/zh (builder test fixture, not course content)",
+ "categories": [
+  {
+   "id": "basics",
+   "en": "Basics",
+   "icon": "好"
+  },
+  {
+   "id": "people",
+   "en": "People",
+   "icon": "人"
+  },
+  {
+   "id": "shopping",
+   "en": "Shopping",
+   "icon": "买"
+  },
+  {
+   "id": "food",
+   "en": "Food and drink",
+   "icon": "吃"
+  },
+  {
+   "id": "numbers",
+   "en": "Numbers",
+   "icon": "数"
+  },
+  {
+   "id": "daily",
+   "en": "Daily life",
+   "icon": "日"
+  },
+  {
+   "id": "patterns",
+   "en": "Patterns",
+   "icon": "句"
+  },
+  {
+   "id": "feelings",
+   "en": "Feelings",
+   "icon": "心"
+  }
+ ],
+ "units": [
+  {
+   "id": "Z01",
+   "title": "First words",
+   "path": "core",
+   "hsk": 1
+  },
+  {
+   "id": "Z02",
+   "title": "Feelings",
+   "path": "ext",
+   "hsk": 2
+  }
+ ],
+ "lessons": [
+  {
+   "code": "Z01-L01",
+   "unit": "Z01",
+   "title": "Hello",
+   "goal": "Greet, thank and introduce yourself.",
+   "level": 1,
+   "path": "core",
+   "hsk": 1,
+   "patterns": [
+    "A 是 B"
+   ],
+   "count": 10,
+   "ids": [
+    "zh.basics.ni-hao",
+    "zh.basics.xie-xie",
+    "zh.basics.bu-keqi",
+    "zh.basics.zai-jian",
+    "zh.people.wo-shi-xuesheng",
+    "zh.basics.ni-hao-ma",
+    "zh.basics.wo-hen-hao",
+    "zh.people.ni-jiao-shenme",
+    "zh.people.wo-jiao",
+    "zh.basics.dui-bu-qi"
+   ]
+  },
+  {
+   "code": "Z01-L02",
+   "unit": "Z01",
+   "title": "How much?",
+   "goal": "Ask for things, prices and the time.",
+   "level": 1,
+   "path": "core",
+   "hsk": 1,
+   "patterns": [
+    "有没有"
+   ],
+   "count": 10,
+   "ids": [
+    "zh.shopping.duoshao-qian",
+    "zh.shopping.zhege",
+    "zh.shopping.tai-gui-le",
+    "zh.shopping.yao-shenme",
+    "zh.food.lv-cha",
+    "zh.numbers.liang-ge",
+    "zh.numbers.shi-kuai",
+    "zh.daily.ji-dian",
+    "zh.daily.liang-dian-ban",
+    "zh.patterns.you-mei-you"
+   ]
+  },
+  {
+   "code": "Z02-L01",
+   "unit": "Z02",
+   "title": "How you feel",
+   "goal": "Say how you feel.",
+   "level": 2,
+   "path": "ext",
+   "hsk": 2,
+   "patterns": [],
+   "count": 3,
+   "ids": [
+    "zh.feelings.gaoxing",
+    "zh.feelings.lei-le",
+    "zh.feelings.mei-guanxi"
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "zh.basics.ni-hao",
+   "cat": "basics",
+   "kind": "say",
+   "en": "Hello",
+   "ja": "你好！",
+   "ruby": "你好[nǐ hǎo]！",
+   "kana": "ni hao",
+   "romaji": "Nǐ hǎo!",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L01",
+   "level": 1,
+   "order": 1,
+   "src": "new",
+   "note": "3rd + 3rd tone: the first 3rd tone is spoken as a 2nd: ní hǎo.",
+   "replyTo": []
+  },
+  {
+   "id": "zh.basics.xie-xie",
+   "cat": "basics",
+   "kind": "say",
+   "en": "Thank you",
+   "ja": "谢谢！",
+   "ruby": "谢谢[xiè xie]！",
+   "kana": "xiexie",
+   "romaji": "Xièxie!",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L01",
+   "level": 1,
+   "order": 2,
+   "src": "new",
+   "replyTo": []
+  },
+  {
+   "id": "zh.basics.bu-keqi",
+   "cat": "basics",
+   "kind": "say",
+   "en": "You’re welcome",
+   "ja": "不客气。",
+   "ruby": "不[bú]客气[kè qi]。",
+   "kana": "bu keqi",
+   "romaji": "Bú kèqi.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L01",
+   "level": 1,
+   "order": 3,
+   "src": "new",
+   "replyTo": []
+  },
+  {
+   "id": "zh.basics.zai-jian",
+   "cat": "basics",
+   "kind": "say",
+   "en": "Goodbye",
+   "ja": "再见！",
+   "ruby": "再见[zài jiàn]！",
+   "kana": "zaijian",
+   "romaji": "Zàijiàn!",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L01",
+   "level": 1,
+   "order": 4,
+   "src": "new",
+   "replyTo": []
+  },
+  {
+   "id": "zh.people.wo-shi-xuesheng",
+   "cat": "people",
+   "kind": "say",
+   "en": "I am a student",
+   "ja": "我是学生。",
+   "ruby": "我[wǒ]是[shì]学生[xué sheng]。",
+   "kana": "wo shi xuesheng",
+   "romaji": "Wǒ shì xuésheng.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L01",
+   "level": 1,
+   "order": 5,
+   "src": "new",
+   "pattern": "A 是 B",
+   "replyTo": []
+  },
+  {
+   "id": "zh.basics.ni-hao-ma",
+   "cat": "basics",
+   "kind": "hear",
+   "en": "How are you?",
+   "ja": "你好吗？",
+   "ruby": "你[nǐ]好[hǎo]吗[ma]？",
+   "kana": "ni hao ma",
+   "romaji": "Nǐ hǎo ma?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L01",
+   "level": 1,
+   "order": 6,
+   "src": "new",
+   "replies": [
+    "zh.basics.wo-hen-hao"
+   ],
+   "replyTo": []
+  },
+  {
+   "id": "zh.basics.wo-hen-hao",
+   "cat": "basics",
+   "kind": "say",
+   "en": "I’m fine",
+   "ja": "我很好。",
+   "ruby": "我[wǒ]很[hěn]好[hǎo]。",
+   "kana": "wo hen hao",
+   "romaji": "Wǒ hěn hǎo.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L01",
+   "level": 1,
+   "order": 7,
+   "src": "new",
+   "replyTo": [
+    "zh.basics.ni-hao-ma"
+   ]
+  },
+  {
+   "id": "zh.people.ni-jiao-shenme",
+   "cat": "people",
+   "kind": "hear",
+   "en": "What is your name?",
+   "ja": "你叫什么名字？",
+   "ruby": "你[nǐ]叫[jiào]什么[shén me]名字[míng zi]？",
+   "kana": "ni jiao shenme mingzi",
+   "romaji": "Nǐ jiào shénme míngzi?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L01",
+   "level": 1,
+   "order": 8,
+   "src": "new",
+   "replies": [
+    "zh.people.wo-jiao"
+   ],
+   "replyTo": []
+  },
+  {
+   "id": "zh.people.wo-jiao",
+   "cat": "people",
+   "kind": "pattern",
+   "en": "My name is Anna",
+   "ja": "我叫安娜。",
+   "ruby": "我[wǒ]叫[jiào]安娜[Ān nà]。",
+   "kana": "wo jiao anna",
+   "romaji": "Wǒ jiào Ānnà.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L01",
+   "level": 1,
+   "order": 9,
+   "src": "new",
+   "pattern": "我叫 + name",
+   "replyTo": [
+    "zh.people.ni-jiao-shenme"
+   ]
+  },
+  {
+   "id": "zh.basics.dui-bu-qi",
+   "cat": "basics",
+   "kind": "say",
+   "en": "Sorry",
+   "ja": "对不起。",
+   "ruby": "对不起[duì bu qǐ]。",
+   "kana": "duibuqi",
+   "romaji": "Duìbuqǐ.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L01",
+   "level": 1,
+   "order": 10,
+   "src": "new",
+   "replyTo": []
+  },
+  {
+   "id": "zh.shopping.duoshao-qian",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "How much is it?",
+   "ja": "多少钱？",
+   "ruby": "多少[duō shao]钱[qián]？",
+   "kana": "duoshao qian",
+   "romaji": "Duōshao qián?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L02",
+   "level": 1,
+   "order": 11,
+   "src": "new",
+   "replyTo": []
+  },
+  {
+   "id": "zh.shopping.zhege",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "I want this one",
+   "ja": "我要这个。",
+   "ruby": "我[wǒ]要[yào]这个[zhè ge]。",
+   "kana": "wo yao zhege",
+   "romaji": "Wǒ yào zhège.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L02",
+   "level": 1,
+   "order": 12,
+   "src": "new",
+   "replyTo": [
+    "zh.shopping.yao-shenme"
+   ]
+  },
+  {
+   "id": "zh.shopping.tai-gui-le",
+   "cat": "shopping",
+   "kind": "say",
+   "en": "Too expensive!",
+   "ja": "太贵了！",
+   "ruby": "太[tài]贵[guì]了[le]！",
+   "kana": "tai gui le",
+   "romaji": "Tài guì le!",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L02",
+   "level": 1,
+   "order": 13,
+   "src": "new",
+   "replyTo": []
+  },
+  {
+   "id": "zh.shopping.yao-shenme",
+   "cat": "shopping",
+   "kind": "hear",
+   "en": "What would you like?",
+   "ja": "你要什么？",
+   "ruby": "你[nǐ]要[yào]什么[shén me]？",
+   "kana": "ni yao shenme",
+   "romaji": "Nǐ yào shénme?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L02",
+   "level": 1,
+   "order": 14,
+   "src": "new",
+   "replies": [
+    "zh.shopping.zhege",
+    "zh.food.lv-cha"
+   ],
+   "replyTo": []
+  },
+  {
+   "id": "zh.food.lv-cha",
+   "cat": "food",
+   "kind": "say",
+   "en": "I’d like green tea",
+   "ja": "我要绿茶。",
+   "ruby": "我[wǒ]要[yào]绿茶[lǜ chá]。",
+   "kana": "wo yao lvcha",
+   "romaji": "Wǒ yào lǜchá.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L02",
+   "level": 1,
+   "order": 15,
+   "src": "new",
+   "replyTo": [
+    "zh.shopping.yao-shenme"
+   ]
+  },
+  {
+   "id": "zh.numbers.liang-ge",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "Two (of them)",
+   "ja": "两个。",
+   "ruby": "两[liǎng]个[ge]。",
+   "kana": "liang ge",
+   "romaji": "Liǎng ge.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L02",
+   "level": 1,
+   "order": 16,
+   "src": "new",
+   "replyTo": []
+  },
+  {
+   "id": "zh.numbers.shi-kuai",
+   "cat": "numbers",
+   "kind": "say",
+   "en": "Ten yuan",
+   "ja": "十块钱。",
+   "ruby": "十[shí]块[kuài]钱[qián]。",
+   "kana": "shi kuai qian",
+   "romaji": "Shí kuài qián.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L02",
+   "level": 1,
+   "order": 17,
+   "src": "new",
+   "replyTo": []
+  },
+  {
+   "id": "zh.daily.ji-dian",
+   "cat": "daily",
+   "kind": "hear",
+   "en": "What time is it now?",
+   "ja": "现在几点？",
+   "ruby": "现在[xiàn zài]几[jǐ]点[diǎn]？",
+   "kana": "xianzai ji dian",
+   "romaji": "Xiànzài jǐ diǎn?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L02",
+   "level": 1,
+   "order": 18,
+   "src": "new",
+   "replies": [
+    "zh.daily.liang-dian-ban"
+   ],
+   "replyTo": []
+  },
+  {
+   "id": "zh.daily.liang-dian-ban",
+   "cat": "daily",
+   "kind": "say",
+   "en": "Half past two",
+   "ja": "两点半。",
+   "ruby": "两[liǎng]点[diǎn]半[bàn]。",
+   "kana": "liang dian ban",
+   "romaji": "Liǎng diǎn bàn.",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L02",
+   "level": 1,
+   "order": 19,
+   "src": "new",
+   "replyTo": [
+    "zh.daily.ji-dian"
+   ]
+  },
+  {
+   "id": "zh.patterns.you-mei-you",
+   "cat": "patterns",
+   "kind": "pattern",
+   "en": "Do you have coffee?",
+   "ja": "有没有咖啡？",
+   "ruby": "有[yǒu]没有[méi yǒu]咖啡[kā fēi]？",
+   "kana": "you meiyou kafei",
+   "romaji": "Yǒu méiyǒu kāfēi?",
+   "tags": [
+    "core"
+   ],
+   "lesson": "Z01-L02",
+   "level": 1,
+   "order": 20,
+   "src": "new",
+   "pattern": "有没有 + noun",
+   "replyTo": []
+  },
+  {
+   "id": "zh.feelings.gaoxing",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "I’m very happy",
+   "ja": "我很高兴。",
+   "ruby": "我[wǒ]很[hěn]高兴[gāo xìng]。",
+   "kana": "wo hen gaoxing",
+   "romaji": "Wǒ hěn gāoxìng.",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z02-L01",
+   "level": 1,
+   "order": 21,
+   "src": "new",
+   "replyTo": []
+  },
+  {
+   "id": "zh.feelings.lei-le",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "I’m tired",
+   "ja": "我累了。",
+   "ruby": "我[wǒ]累[lèi]了[le]。",
+   "kana": "wo lei le",
+   "romaji": "Wǒ lèi le.",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z02-L01",
+   "level": 1,
+   "order": 22,
+   "src": "new",
+   "replyTo": []
+  },
+  {
+   "id": "zh.feelings.mei-guanxi",
+   "cat": "feelings",
+   "kind": "say",
+   "en": "It doesn’t matter",
+   "ja": "没关系。",
+   "ruby": "没[méi]关系[guān xi]。",
+   "kana": "mei guanxi",
+   "romaji": "Méi guānxi.",
+   "tags": [
+    "ext"
+   ],
+   "lesson": "Z02-L01",
+   "level": 1,
+   "order": 23,
+   "src": "new",
+   "replyTo": []
+  }
+ ]
+}

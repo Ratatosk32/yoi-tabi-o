@@ -47,9 +47,9 @@ export async function takeDailySnapshot(store, kv, today, now = new Date()) {
   if (!kv) return [];
   let list = (await kv.all()) || [];
   if (!list.some((s) => s.day === today)) {
-    const { data } = store.exportAll();
-    if (hasProgress(data)) {
-      const rec = { day: today, at: now.toISOString(), data };
+    const { data, langs = {} } = store.exportAll();
+    if (hasProgress(data) || Object.values(langs).some(hasProgress)) {
+      const rec = { day: today, at: now.toISOString(), data, langs };
       await kv.put(rec);
       list = [...list, rec];
     }
@@ -66,8 +66,14 @@ export async function listSnapshots(kv) {
 
 /** Put the store back exactly as in the snapshot (keys missing from the snapshot are removed). */
 export function restoreSnapshot(store, snap, keys) {
+  restoreKeys(store, snap.data, keys);
+  if (!snap.langs) return;
+  for (const id of store.langIds || []) restoreKeys(store.lang(id), snap.langs[id] || {}, keys);
+}
+
+function restoreKeys(store, data, keys) {
   for (const k of keys) {
-    if (k in snap.data) store.set(k, snap.data[k]);
+    if (k in data) store.set(k, data[k]);
     else store.remove(k);
   }
 }

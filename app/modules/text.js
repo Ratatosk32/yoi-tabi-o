@@ -53,8 +53,9 @@ export function completeItem(item) {
 }
 
 /** Text for TTS. */
-export function ttsText(item) {
+export function ttsText(item, lang = 'ja') {
   const t = item.tts || item.ja || '';
+  if (lang !== 'ja') return t;
   // Japanese read the 〇〇 placeholder aloud as "marumaru", so template phrases sound complete
   return t.replace(/〇〇/g, 'まるまる').replace(/〇/g, 'まる');
 }
@@ -78,18 +79,18 @@ export function normalize(s) {
   return t;
 }
 
-export function searchFields(item) {
+export function searchFields(item, norm = normalize) {
   return [item.en, item.ja, item.kana, item.romaji, item.note, item.pattern, ...(item.tags || [])]
-    .filter(Boolean).map(normalize);
+    .filter(Boolean).map(norm);
 }
 
 /** Search: every query word must match; matches at the start of a field rank higher. */
-export function search(items, query, limit = 100) {
-  const words = String(query || '').split(/\s+/).map(normalize).filter(Boolean);
+export function search(items, query, limit = 100, norm = normalize) {
+  const words = String(query || '').split(/\s+/).map(norm).filter(Boolean);
   if (!words.length) return [];
   const scored = [];
   for (const it of items) {
-    const f = it._search || (it._search = searchFields(it));
+    const f = it._search || (it._search = searchFields(it, norm));
     let score = 0, ok = true;
     for (const w of words) {
       let best = -1;
@@ -204,4 +205,53 @@ export function romajiMatchesKana(romaji, kana) {
   if (r === raw || r === kanaComparable(kana)) return true;
   const src = [...r].map((c) => MACRON_ALT[c] || escapeRe(c)).join('');
   return new RegExp('^' + src + '$').test(raw);
+}
+
+const UMLAUT_U = /ü|ü|[ǖǘǚǜ]/g;
+const COMBINING_MARKS = /[̀-ͯ]/g;
+const ZH_PUNCTUATION = /[\s\-'’.,!?！？。，、：；:;"“”«»()（）…《》·]/g;
+
+export function normalizeZh(s) {
+  if (!s) return '';
+  return String(s).normalize('NFKC').toLowerCase().normalize('NFD').replace(UMLAUT_U, 'v').replace(COMBINING_MARKS, '').normalize('NFC')
+    .replace(ZH_PUNCTUATION, '');
+}
+
+export function pinyinSearchKey(pinyin) {
+  return String(pinyin || '').normalize('NFKC').toLowerCase().normalize('NFD').replace(UMLAUT_U, 'v').replace(COMBINING_MARKS, '')
+    .replace(/[^a-z0-9v\s]/g, ' ').replace(/[0-9]/g, '').replace(/\s+/g, ' ').trim();
+}
+
+const TONE_MARKS = {
+  a: 'āáǎà', e: 'ēéěè', i: 'īíǐì', o: 'ōóǒò', u: 'ūúǔù', v: 'ǖǘǚǜ',
+};
+
+function markSyllable(syllable, tone) {
+  const s = syllable.replace(/u:|v/g, 'v');
+  if (tone < 1 || tone > 4) return s.replace(/v/g, 'ü');
+  const lower = s.toLowerCase();
+  let at = lower.search(/[ae]/);
+  if (at < 0) at = lower.indexOf('ou');
+  if (at < 0) {
+    const vowels = [...lower].map((c, i) => ('iouv'.includes(c) ? i : -1)).filter((i) => i >= 0);
+    at = vowels.length ? vowels[vowels.length - 1] : -1;
+  }
+  if (at < 0) return s;
+  const base = lower[at];
+  const marked = TONE_MARKS[base][tone - 1];
+  const out = s.slice(0, at) + (s[at] === base ? marked : marked.toUpperCase()) + s.slice(at + 1);
+  return out.replace(/v/g, 'ü').replace(/V/g, 'Ü');
+}
+
+export function pinyinNumbersToMarks(input) {
+  return String(input || '').replace(/([a-zA-Z:]+)([0-5])/g, (_, syl, t) => markSyllable(syl, Number(t)));
+}
+
+const HAN_ONLY = /^[㐀-䶿一-鿿豈-﫿]+$/u;
+
+export function rubyPairs(base, rt) {
+  const chars = [...base];
+  const syllables = String(rt).trim().split(/\s+/);
+  if (chars.length > 1 && HAN_ONLY.test(base) && syllables.length === chars.length) return chars.map((c, i) => [c, syllables[i]]);
+  return [[base, rt]];
 }
